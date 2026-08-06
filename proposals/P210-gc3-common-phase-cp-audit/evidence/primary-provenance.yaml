@@ -1,0 +1,17 @@
+campaign: P210
+route: primary_exact_and_source_forensic
+artifact: proposals/P210-gc3-common-phase-cp-audit/verify.py
+sha256: 22f7be761c3285cec3e88d63eb22ad09d78709bfa66ac0f3236438628aec6ebf
+command: PYTHONPATH=src .venv/bin/python proposals/P210-gc3-common-phase-cp-audit/verify.py
+exit_status: 0
+runtime_checks: 42
+terminal_tally: ALL_42_CHECKS_PASS
+oracles:
+  - SymPy_exact_rectangular_Gram_cancellation
+  - SymPy_exact_commutator_and_quartet_invariants
+  - exact_Fourier_two_source_and_degenerate_countermodels
+  - canonical_API_phase_dimension_and_scale_relative_regressions
+  - hash_AST_authority_and_compatibility_forensics
+numeric_evidence_upgrades_exact_claim: false
+scientific_version_failures: 0
+verdict: pass

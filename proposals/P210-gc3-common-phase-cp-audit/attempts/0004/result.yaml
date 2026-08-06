@@ -1,0 +1,20 @@
+attempt: 0004
+campaign: P210
+timestamp_utc: '2026-08-06T06:41:00Z'
+kind: impact_tool_transport_repair
+artifact: gitnexus_index_and_cli_reports
+initial_route: refresh_index_then_MCP_impact_and_detect_changes
+initial_result: MCP_transport_closed_after_successful_index_refresh
+mechanism: local_MCP_transport_lifecycle_not_repository_graph_or_code_failure
+repair: run_the_same_indexed_impact_and_detect_changes_queries_through_the_GitNexus_CLI
+repaired_result:
+  common_phase_grams: {risk: LOW, direct_callers: 1, affected_processes: 0}
+  real_gram_relative_basis: {risk: LOW, direct_callers: 0, affected_processes: 0}
+  odd_antisymmetric_trace: {risk: LOW, direct_callers: 0, affected_processes: 0}
+  change_set: {risk: LOW, affected_processes: 0}
+generated_artifacts_removed:
+  - CLAUDE.md
+  - .claude/skills/gitnexus
+  - auto_appended_AGENTS_block
+scientific_candidate_rejected: false
+continuation: record_rg_consumer_inventory_and_run_focused_package_tests_before_commit

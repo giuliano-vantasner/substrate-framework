@@ -52,7 +52,7 @@ selection_criteria:
   - assumption and parameter economy
   - novelty beyond accepted matrix overlap and rephasing claims
   - physical-ceiling and source-graph closure
-claims_proposed: []
+claims_proposed: [C-MIX-003]
 reserved_unpromoted_claims: []
 comparators_blinded_until: >-
   The generated queue exposes GC3's headline, nine static check sites, one
@@ -86,6 +86,13 @@ post_source_authority_audit:
   FG4_physical_CP_interpretation: explicitly_not_accepted
   three_condensate_stability_and_count: pending_GC4_and_unavailable
   condensate_count_equals_matrix_dimension: declared_not_derived
+post_source_claim_delta:
+  C-MIX-003: >-
+    Exact globally-phased-real matrix Gram cancellation real relative-basis
+    quartet nullity odd commutator-trace identities and degeneracy caveats,
+    with no Yukawa CKM condensate or physical CP interpretation.
+  dependencies: [C-MIX-001, C-MIX-002]
+  canonical_module: src/substrate_framework/common_phase_matrices.py
 opened_source_corrections:
   - finite_random_samples_do_not_prove_bounded_away_from_zero
   - a_sum_of_differently_phased_real_matrices_can_still_be_removable_in_special_cases

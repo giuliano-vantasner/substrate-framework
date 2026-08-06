@@ -1,0 +1,20 @@
+campaign: P210
+stage: pre_promotion_implementation
+command: >-
+  .venv/bin/python -m pytest -q tests/test_common_phase_matrices.py
+  tests/test_matrix_decompositions.py tests/test_unitary_rephasing.py
+exit_status: 0
+tests_passed: 43
+tests_failed: 0
+coverage:
+  - common_phase_left_and_right_Grams
+  - independent_sector_phases
+  - all_relative_basis_quartets
+  - dimensions_two_through_five
+  - scale_relative_odd_trace_and_determinant_regressions
+  - complex_premise_mutation
+  - degenerate_complex_basis_counterexample
+  - input_validation
+  - existing_SVD_and_rephasing_consumers
+  - zero_mutable_quadrature_surface
+verdict: pass

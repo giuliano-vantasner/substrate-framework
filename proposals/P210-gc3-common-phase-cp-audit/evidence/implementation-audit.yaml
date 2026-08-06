@@ -1,0 +1,37 @@
+campaign: P210
+proposed_claim: C-MIX-003
+module: src/substrate_framework/common_phase_matrices.py
+module_sha256: a0bcbb23bf2b5b7b59d91ffd2d49832b976d8533052edcd025333e73ff5d66df
+public_surfaces:
+  CommonPhaseGrams: immutable_container_for_a_phased_matrix_and_both_Grams
+  common_phase_grams: explicit_phase_construction_and_left_right_Gram_evaluation
+  RealGramRelativeBasis: immutable_real_spectral_basis_commutator_ledger
+  real_gram_relative_basis: real_eigendecomposition_and_relative_orthogonal_basis
+  odd_antisymmetric_trace: scale_auditable_numeric_regression_of_an_exact_zero
+architecture:
+  pure_import: true
+  simulation_on_import: false
+  printing_on_import: false
+  duplicate_check_helper: false
+  shared_existing_APIs:
+    - matrix_decompositions.unitarity_residual
+    - unitary_rephasing.invariant_quartet
+  NumPy_quadrature_names: 0
+input_contract:
+  matrices: finite_nonempty_exactly_real_two_dimensional_arrays
+  pair_row_dimension: equal
+  phases: finite_real_scalars
+  tolerance: finite_positive
+  odd_trace_power: odd_positive_integer
+degeneracy_contract: >-
+  The eigensolver chooses one real representative. Repeated eigenspaces remain
+  noncanonical and the API does not claim that arbitrary complex bases inside
+  them are real or physically observable.
+error_model: >-
+  Exact identities are proved by SymPy in campaign verifiers. Floating-point
+  odd-trace and determinant regressions divide residuals by declared powers of
+  the matrix infinity norm; absolute thresholds are not used across scales.
+physical_ceiling: >-
+  The module assigns no Yukawa condensate CKM physical CP generation or
+  substrate interpretation.
+verdict: importable_exact_claim_consumer_with_numeric_regression_and_explicit_scope

@@ -1,0 +1,19 @@
+attempt: 0003
+campaign: P210
+timestamp_utc: '2026-08-06T06:36:00Z'
+kind: floating_point_error_metric_repair
+artifact: tests/test_common_phase_matrices.py
+command: >-
+  .venv/bin/python -m pytest -q tests/test_common_phase_matrices.py
+  tests/test_matrix_decompositions.py tests/test_unitary_rephasing.py
+initial_result: 3_failed_40_passed
+failed_cases: [commutator_dimension_3, commutator_dimension_4, commutator_dimension_5]
+mechanism: >-
+  The exact trace of every odd power of a real antisymmetric matrix is zero,
+  but fifth powers of the deliberately large integer commutators have entries
+  of order norm(C)^5. Absolute floating-point residual thresholds therefore
+  measured scale rather than identity error.
+repair: divide_trace_and_determinant_residuals_by_declared_matrix_norm_powers
+repaired_result: 43_passed
+scientific_candidate_rejected: false
+continuation: retain_exact_SymPy_oracle_and_scale_relative_numeric_regression

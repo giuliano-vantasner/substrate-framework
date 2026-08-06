@@ -1,0 +1,47 @@
+campaign: P210
+change_kind: additive_canonical_matrix_API_and_claim
+new_symbols:
+  - CommonPhaseGrams
+  - common_phase_grams
+  - RealGramRelativeBasis
+  - real_gram_relative_basis
+  - odd_antisymmetric_trace
+renamed_or_removed_symbols: []
+gitnexus:
+  index_refreshed_at_commit: e19ebf9
+  MCP_post_refresh_result: transport_closed
+  repaired_route: GitNexus_CLI_on_the_same_refreshed_index
+  common_phase_grams: {risk: LOW, direct_callers: 1, affected_processes: 0, affected_modules: 1}
+  real_gram_relative_basis: {risk: LOW, direct_callers: 0, affected_processes: 0, affected_modules: 0}
+  odd_antisymmetric_trace: {risk: LOW, direct_callers: 0, affected_processes: 0, affected_modules: 0}
+  detect_changes: {risk: LOW, affected_processes: 0}
+lexical_direct_consumers:
+  common_phase_grams:
+    - src/substrate_framework/common_phase_matrices.py
+    - tests/test_common_phase_matrices.py
+    - proposals/P210-gc3-common-phase-cp-audit/verify.py
+  real_gram_relative_basis:
+    - tests/test_common_phase_matrices.py
+    - proposals/P210-gc3-common-phase-cp-audit/verify.py
+  odd_antisymmetric_trace:
+    - tests/test_common_phase_matrices.py
+    - proposals/P210-gc3-common-phase-cp-audit/verify.py
+indirect_consumers:
+  - src/substrate_framework/__init__.py
+generated_documents:
+  - docs/generated/claim-index.md_after_promotion_only
+  - docs/generated/claim-dependencies.dot_after_promotion_only
+formal_theorems: []
+memory_consumers:
+  - memory/vantasner/proposals/P210-gc3-common-phase-cp-audit.md
+  - future_generated_memory/framework/claims/C-MIX-003.md
+host_specific_artifacts_removed:
+  - GitNexus_generated_CLAUDE.md
+  - GitNexus_generated_dot_claude_skill_copies
+  - GitNexus_generated_AGENTS_appendix
+risk: low_additive_surface
+replay_required:
+  - focused_matrix_overlap_qball_tests
+  - primary_and_independent_P210_verifiers
+  - registry_release_docs_and_memory_after_promotion
+  - pending_GC4_GC5_GC6_governance_graph

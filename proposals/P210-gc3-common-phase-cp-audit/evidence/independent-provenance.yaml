@@ -1,0 +1,18 @@
+campaign: P210
+route: independent_exact_rederivation
+artifact: proposals/P210-gc3-common-phase-cp-audit/reviews/independent_common_phase_review.py
+sha256: f82550743ba46816b21eed4d036d8e84d530fe951cf43cf6365802f17e9dacf6
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  proposals/P210-gc3-common-phase-cp-audit/reviews/independent_common_phase_review.py
+exit_status: 0
+runtime_checks: 27
+terminal_tally: ALL_27_CHECKS_PASS
+independence:
+  imports_canonical_common_phase_module: false
+  uses_fresh_exact_rational_bases: true
+  uses_fresh_quadratic_form_rederivation: true
+  uses_fresh_exact_Fourier_countermodels: true
+  separately_reads_accepted_claim_ceilings: true
+scientific_version_failures: 0
+verdict: pass

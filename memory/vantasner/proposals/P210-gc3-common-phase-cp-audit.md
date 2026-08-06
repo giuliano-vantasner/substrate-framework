@@ -76,11 +76,14 @@ and a clean committed freeze.
 
 ## Proposed Claim Delta
 
-P210 initially proposes no new claim or API because C-MIX-001 and C-MIX-002
-already own the abstract matrix machinery and C-OVL-001 owns the overlap form.
-A new identifier will be considered only if source inspection exposes a novel,
-positive, dependency-closed theorem rather than a composition or physical
-overread.
+P210 initially proposed no new claim or API because C-MIX-001 and C-MIX-002
+own the abstract matrix machinery and C-OVL-001 owns the overlap form. Opened
+source inspection exposed a compact theorem not stated at those ceilings:
+global-phase cancellation for both rectangular Grams, a real relative basis,
+all-real quartets, odd commutator-trace nullity, and the degenerate-basis
+caveat. P210 therefore proposes C-MIX-003 with dependencies C-MIX-001 and
+C-MIX-002 and a canonical `common_phase_matrices` module. It explicitly does
+not promote the source's Yukawa, condensate, CKM, or physical CP labels.
 
 ## Implementation and Oracle Plan
 

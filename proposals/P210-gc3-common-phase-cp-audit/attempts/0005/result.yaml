@@ -1,0 +1,10 @@
+attempt: 0005
+campaign: P210
+timestamp_utc: '2026-08-06T06:48:00Z'
+kind: source_forensics_string_match_repair
+artifact: proposals/P210-gc3-common-phase-cp-audit/verify.py
+initial_result: 32_primary_checks_pass_then_equal_spacing_prose_probe_fails
+mechanism: verifier_used_a_lowercase_paraphrase_instead_of_the_hash_pinned_source_wording
+repair: match_the_exact_uppercase_source_phrase_while_retaining_literal_geometry_checks
+scientific_candidate_rejected: false
+continuation: rerun_primary_exact_verifier_from_a_clean_process
