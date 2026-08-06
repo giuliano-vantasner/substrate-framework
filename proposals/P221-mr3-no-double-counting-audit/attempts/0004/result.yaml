@@ -1,0 +1,15 @@
+campaign: P221
+attempt: 0004
+timestamp_utc: '2026-08-06T12:55:08Z'
+status: failed_tool_target_repaired
+stage: precommit_change_impact
+command: gitnexus_detect_changes_default_repo
+exit_status: 1
+scientific_verdict_reached: false
+failure_class: invocation
+cause: multiple_indexed_repositories_require_explicit_repo
+diagnosis: >-
+  The local GitNexus backend cannot infer a target when several repositories
+  are indexed. No project file or scientific check was affected.
+repair: gitnexus_detect_changes_scope_all_repo_substrate_framework
+continuation: rerun_with_explicit_repository_then_record_scope

@@ -1,0 +1,18 @@
+campaign: P221
+claim: C-VAR-003
+verifier: verify.py
+sha256: b5545c5972d23659b95e01e41176eaf6badd1bb308ceb5e67436b7c17f4f3564
+oracle: exact_SymPy_algebra_plus_AST_registry_and_durable_source_scope_checks
+imports:
+  - substrate_framework.source_audit.audit_numpy_trapezoid_compatibility
+  - substrate_framework.variational.finite_functional_interaction_ledger
+  - substrate_framework.verification.CheckLedger
+result: {exit_status: 0, checks: 26, elapsed_seconds: 2.21, maximum_resident_kib: 154492}
+mutations:
+  optimizer_second_centers: [-1, 0, 1]
+  baseline_zero_center: 2_plus_sqrt_3
+counterexamples:
+  positive_interaction: A=x_squared_P=x_minus_1_squared_Q=x_plus_1_squared_I=1
+  negative_interaction: A=x_squared_P=Q=x_minus_1_squared_I=-1_over_3
+  zero_without_common_minimizer: Q=x_minus_2_minus_sqrt_3_squared
+claim_scope: dependency_free_exact_variational_interaction_only

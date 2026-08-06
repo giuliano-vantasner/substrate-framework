@@ -1,0 +1,14 @@
+campaign: P221
+attempt: 0006
+timestamp_utc: '2026-08-06T12:56:29Z'
+status: failed_command_shape_repaired
+stage: focused_record_validation
+command: memory_validate_relative_memory_path
+exit_status: 1
+scientific_verdict_reached: false
+failure_class: invocation
+cause: CLI_resolved_relative_path_against_its_installed_project_root
+repair: memory_validate_absolute_framework_memory_path
+repaired_result: {exit_status: 0, files_valid: 896}
+repository_validation: {exit_status: 0, claims: 201, accepted: 201, proposals: 1, pending_units: 4}
+continuation: commit_verified_implementation_boundary

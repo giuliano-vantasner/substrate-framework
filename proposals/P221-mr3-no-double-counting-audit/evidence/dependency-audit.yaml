@@ -1,0 +1,14 @@
+campaign: P221
+claim: C-VAR-003
+accepted_claim_dependencies: []
+mathematical_inputs:
+  - one_nonempty_common_domain
+  - real_functionals_A_P_Q
+  - finite_real_infima_of_A_A_plus_P_A_plus_Q_A_plus_P_plus_Q
+imports_excluded:
+  - electron_pion_rho_or_nucleon_masses
+  - color_count_or_Skyrme_couplings
+  - MR3_BVP_outputs
+  - pending_MR4_MR5_MR6
+  - physical_action_state_or_sector_map
+dependency_closure: exact_and_empty

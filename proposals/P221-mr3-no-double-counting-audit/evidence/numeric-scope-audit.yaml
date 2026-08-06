@@ -1,0 +1,22 @@
+campaign: P221
+source_unit: MR3
+reported_source_values:
+  b_classical: 1.23163
+  b_L0_only: 1.30285
+  b_L6_only: 1.32613
+  b_full: 1.43600
+  b_full_L6_L0_term: 0.18545
+  b_declared_floor: 0.13072
+derived_reported_mixed_difference: 0.03865
+reported_sign: positive
+accepted_scope: single_unrefined_stationary_branch_example
+excluded:
+  - proven_infimum
+  - universal_positive_sign
+  - physical_nonadditivity_or_double_counting_diagnosis
+  - independently_validated_floor_agreement
+reason: >-
+  The source checks solve_bvp status but supplies one mesh, domain, tolerance,
+  boundary wall, continuation path, and quadrature grid. It has no refinement,
+  residual norm, independent method, or global-minimizer oracle. C-VAR-003
+  proves independently that the mixed interaction can have either sign or zero.

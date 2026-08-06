@@ -1,0 +1,7 @@
+campaign: P221
+tests: [tests/test_variational.py]
+package_export_probe: substrate_framework.finite_functional_interaction_ledger
+result: {exit_status: 0, passed: 14, elapsed_seconds: 1.85}
+failed_predecessor: attempts/0003/result.yaml
+full_suite_required_at_promotion: true
+reason: package_API_tests_claim_release_and_generated_consumers_change

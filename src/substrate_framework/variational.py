@@ -35,6 +35,40 @@ class FiniteFunctionalInfimumLedger:
         )
 
 
+@dataclass(frozen=True)
+class FiniteFunctionalInteractionLedger:
+    """Exact mixed difference of four supplied variational infima.
+
+    For a base functional ``A`` and additions ``P`` and ``Q`` on one common
+    nonempty domain, callers supply the true finite infima of ``A``, ``A+P``,
+    ``A+Q``, and ``A+P+Q``.  The interaction is the joint increment minus the
+    two separate increments.  Its sign is not inferred: optimization can make
+    it positive, negative, or zero even when all three functionals are
+    nonnegative continuous coercive quadratics.
+
+    The ledger does not infer any infimum, minimizer, field decomposition, or
+    physical sector interpretation.
+    """
+
+    base_infimum: sp.Expr
+    first_augmented_infimum: sp.Expr
+    second_augmented_infimum: sp.Expr
+    joint_augmented_infimum: sp.Expr
+    first_increment: sp.Expr
+    second_increment: sp.Expr
+    joint_increment: sp.Expr
+    interaction: sp.Expr
+
+    @property
+    def identity_residual(self) -> sp.Expr:
+        """Return the mixed-increment identity residual."""
+
+        return sp.simplify(
+            self.interaction
+            - (self.joint_increment - self.first_increment - self.second_increment)
+        )
+
+
 def _nonempty_expressions(values: Iterable[Any], name: str) -> tuple[sp.Expr, ...]:
     result = tuple(sp.sympify(value) for value in values)
     if not result:
@@ -70,6 +104,55 @@ def finite_functional_infimum_ledger(
         summed_value=summed_value,
         separate_infimum_sum=separate_sum,
         total_excess=sp.simplify(summed_value - separate_sum),
+    )
+
+
+def finite_functional_interaction_ledger(
+    base_infimum: Any,
+    first_augmented_infimum: Any,
+    second_augmented_infimum: Any,
+    joint_augmented_infimum: Any,
+) -> FiniteFunctionalInteractionLedger:
+    """Return the exact mixed interaction of four supplied finite infima.
+
+    Writing the inputs as ``m_A``, ``m_AP``, ``m_AQ``, and ``m_APQ``, the
+    result is ``m_APQ + m_A - m_AP - m_AQ``.  Additive constants in any one of
+    ``A``, ``P``, or ``Q`` cancel when callers transform all four infima
+    consistently.
+    """
+
+    infima = tuple(
+        sp.sympify(value)
+        for value in (
+            base_infimum,
+            first_augmented_infimum,
+            second_augmented_infimum,
+            joint_augmented_infimum,
+        )
+    )
+    if any(
+        value.is_finite is False
+        or value.is_real is False
+        or value in {sp.oo, -sp.oo, sp.zoo, sp.nan}
+        for value in infima
+    ):
+        raise ValueError("all supplied infima must be finite real expressions")
+    base, first_augmented, second_augmented, joint_augmented = infima
+    first_increment = sp.simplify(first_augmented - base)
+    second_increment = sp.simplify(second_augmented - base)
+    joint_increment = sp.simplify(joint_augmented - base)
+    interaction = sp.simplify(
+        joint_augmented + base - first_augmented - second_augmented
+    )
+    return FiniteFunctionalInteractionLedger(
+        base_infimum=base,
+        first_augmented_infimum=first_augmented,
+        second_augmented_infimum=second_augmented,
+        joint_augmented_infimum=joint_augmented,
+        first_increment=first_increment,
+        second_increment=second_increment,
+        joint_increment=joint_increment,
+        interaction=interaction,
     )
 
 

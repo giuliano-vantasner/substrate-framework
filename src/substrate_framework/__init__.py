@@ -1164,8 +1164,10 @@ from .wilson_loops import (
 )
 from .variational import (
     FiniteFunctionalInfimumLedger,
+    FiniteFunctionalInteractionLedger,
     euler_lagrange_expression,
     finite_functional_infimum_ledger,
+    finite_functional_interaction_ledger,
     solve_euler_lagrange_acceleration,
 )
 
@@ -1783,8 +1785,10 @@ __all__ = [
     "u1_holonomy",
     "uniform_tube_field",
     "FiniteFunctionalInfimumLedger",
+    "FiniteFunctionalInteractionLedger",
     "euler_lagrange_expression",
     "finite_functional_infimum_ledger",
+    "finite_functional_interaction_ledger",
     "fundamental_generators",
     "fundamental_commutant_basis",
     "brownian_mean_phasor_window_average",

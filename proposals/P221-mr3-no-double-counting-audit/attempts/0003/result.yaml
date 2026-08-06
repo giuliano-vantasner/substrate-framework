@@ -1,0 +1,19 @@
+campaign: P221
+attempt: 0003
+timestamp_utc: '2026-08-06T12:50:30Z'
+status: failed_command_shape_repaired
+stage: focused_package_tests
+command: .venv/bin/python -m pytest -q tests/test_variational.py tests/test_public_api.py
+exit_status: 4
+tests_collected: 0
+scientific_verdict_reached: false
+failure_class: invocation
+cause: tests/test_public_api.py does not exist
+diagnosis: >-
+  The requested public-API test path was guessed rather than discovered. Pytest
+  rejected the nonexistent path before collection, so this is not evidence
+  against the interaction theorem or implementation.
+repair: >-
+  Discover the actual focused test surface, run tests/test_variational.py, and
+  exercise the package-root export with a direct import assertion.
+continuation: run_repaired_focused_tests_then_build_primary_verifier

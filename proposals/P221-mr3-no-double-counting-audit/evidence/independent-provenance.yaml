@@ -1,0 +1,12 @@
+campaign: P221
+claim: C-VAR-003
+reviewer: reviews/independent_variational_interaction_review.py
+sha256: 9bc022e289debcb84de2a4464efb3c7d655bdea5114e07e8442145df02c56229
+independence:
+  imports_source: false
+  imports_canonical_variational_API: false
+  imports_primary_verifier: false
+  shared_framework_surface: substrate_framework.verification.CheckLedger_only
+method: fresh_quadratic_completing_square_and_direct_inclusion_exclusion
+result: {exit_status: 0, checks: 18, elapsed_seconds: 1.52, maximum_resident_kib: 144072}
+scope: exact_theorem_additive_invariance_sign_reach_common_minimizer_and_counterexample

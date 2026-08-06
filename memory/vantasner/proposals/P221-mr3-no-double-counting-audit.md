@@ -2,7 +2,7 @@
 description: Audit MR3 shared-functional and no-double-counting claims
 author: vantasner
 created: '2026-08-06T12:40:27Z'
-updated: '2026-08-06T12:40:27Z'
+updated: '2026-08-06T12:55:34Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -103,6 +103,18 @@ interaction is generalized to universal nonadditivity; the floor cross-check
 is dependent; and MR3.6 never recomputes its solved outputs. The opened source
 also reveals the distinct C-VAR-003 exact interaction object.
 
+Attempt 0003 preserves a malformed focused-test invocation that named a
+nonexistent public-API test file; no test collected. The discovered
+`test_variational.py` surface then passes 14 tests, and a direct package-root
+import confirms the new export. Attempt 0004 preserves a GitNexus invocation
+that omitted the repository selector; the repaired all-diff query reports low
+risk and no affected execution flow. Attempt 0005 implements the pure exact
+four-infimum ledger and passes 26 primary checks plus 18 fresh completing-
+square checks without importing the canonical variational API. Positive,
+negative, and zero coercive quadratics, arbitrary positive scaling, a common-
+minimizer sufficient case, and a zero-without-common-minimizer counterexample
+all pass. The MR3 BVP values remain one unrefined stationary-branch example.
+
 ## Debt Ledger
 
 The ledger tracks every source predicate, common configuration, component
@@ -112,11 +124,11 @@ compatibility surface, consumer, and governed record.
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
 | MR3 body and predicates remain unopened | Open only after committed freeze | discharged: native reproduction and six-predicate audit |
-| One-functional prose may duplicate C-VAR-002 | Exact nonduplication audit | distinct C-VAR-003 mixed interaction retained; implementation open |
-| Bound or term values may be called sector masses | Slack and attainment audit | diagnosed and excluded; exact verifier open |
+| One-functional prose may duplicate C-VAR-002 | Exact nonduplication audit | discharged: C-VAR-003 is the distinct four-infimum interaction theorem |
+| Bound or term values may be called sector masses | Slack and attainment audit | discharged: exact slack check passes and physical reading is excluded |
 | Supplied numerics may be called physical contributions | Dependency and comparator audit | diagnosed as unaccepted; review open |
 | Numeric solver evidence may be under-specified | Solver and refinement audit | diagnosed: no refinement or minimizer proof; no numeric claim retained |
-| Lexical absence may be treated as a theorem | Counterexample and scope audit | diagnosed: source itself forms naive_sum; exact counterexamples open |
+| Lexical absence may be treated as a theorem | Counterexample and scope audit | discharged: source forms naive_sum and exact both-sign/zero counterexamples pass |
 | Later MR units may grant backward authority | Pinned graph replay | open |
 | Governed records remain unresolved | Terminal disposition and synchronization | open |
 

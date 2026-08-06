@@ -1,0 +1,28 @@
+campaign: P221
+claim: C-VAR-003
+canonical_module: src/substrate_framework/variational.py
+public_API:
+  - FiniteFunctionalInteractionLedger
+  - finite_functional_interaction_ledger
+purity:
+  import_time_execution: false
+  simulations: false
+  printing: false
+  empirical_constants: false
+API_contract: >-
+  The caller supplies the actual finite real infima of A, A+P, A+Q, and
+  A+P+Q on one common nonempty domain. The ledger derives the three increments
+  and their mixed difference. It does not infer infima, minimizers, a field
+  decomposition, coefficients, states, or physical sector meanings.
+tests:
+  path: tests/test_variational.py
+  additions:
+    - exact_four_infimum_identity
+    - additive_constant_invariance
+    - positive_and_negative_coercive_quadratic_examples
+    - common_minimizer_sufficiency
+    - zero_interaction_converse_counterexample
+    - arbitrary_real_scaling
+    - invalid_nonfinite_or_nonreal_input_rejection
+duplicate_local_helpers: false
+sampled_integration_surface: none

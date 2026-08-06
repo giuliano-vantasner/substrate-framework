@@ -1,0 +1,22 @@
+campaign: P221
+claim_delta: [C-VAR-003]
+pre_edit_symbol_query:
+  target: finite_functional_infimum_ledger
+  result: {risk: low, direct_consumers: 0, affected_processes: 0, affected_modules: 0}
+  note: local_index_has_no_dynamic_Python_import_edges_for_the_known_test_and_public_export_consumers
+direct_text_consumers_found:
+  - src/substrate_framework/__init__.py
+  - tests/test_variational.py
+  - campaigns/P219-mk6-confrontation-tension-audit/verify.py
+change_strategy: add_adjacent_symbols_without_changing_existing_signatures
+precommit_detect_changes:
+  scope: all
+  repository: substrate-framework
+  files: 3
+  mapped_symbols: 3
+  affected_processes: 0
+  risk: low
+  stale_index_mapping_note: new_symbols_map_to_adjacent_existing_hunks_until_reindex
+failed_predecessor: attempts/0004/result.yaml
+release_change_required: true
+full_integrated_gate_required: true

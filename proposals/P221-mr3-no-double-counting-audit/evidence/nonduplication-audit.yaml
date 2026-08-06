@@ -1,0 +1,21 @@
+campaign: P221
+claim: C-VAR-003
+registry_collision: false
+nearest_owners:
+  C-VAR-002: >-
+    Owns infimum of a finite sum versus the sum of component infima and its
+    equality criterion. It does not compare the four infima obtained by adding
+    P and Q separately and jointly to a base A, does not determine the mixed
+    interaction sign, and has no zero-converse counterexample.
+  C-GSK-001: >-
+    Owns one conditional generalized radial density. It supplies no theorem
+    about the four separate minimization problems.
+  C-RDIFF-001: >-
+    Owns a signed difference between upper estimates in a radial calculation,
+    not an exact mixed difference of variational infima.
+search_surface:
+  - governance/claims.yaml
+  - src/substrate_framework
+  - campaigns
+  - memory/vantasner
+decision: distinct_compatible_extension
