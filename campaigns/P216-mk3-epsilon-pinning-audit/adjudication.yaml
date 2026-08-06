@@ -1,0 +1,88 @@
+campaign: P216
+title: MK3 scale-product epsilon pinning audit
+source_baseline: substrate@6d1f4e0
+source_units: [MK3]
+base_release: v0.156.0
+accepted_release: v0.156.0
+freeze_commit: 482be21
+implementation_commit: baf04b8
+review_commit: 82e1f2e
+adjudicated_at: '2026-08-06T10:54:05Z'
+selected_candidates:
+  - {id: A, reason: Exact_supplied_input_quotient_identity_survives.}
+  - {id: B, reason: Scale_product_reconstruction_is_exact_but_conditional.}
+  - {id: C, reason: Pi_squared_BPS_convention_conversion_is_load_bearing.}
+  - {id: D, reason: C_SK_scale_composition_retains_all_premises_and_empirical_input.}
+  - {id: E, reason: Positive_product_and_normalization_families_defeat_selection.}
+  - {id: F, reason: Local_ratio_has_no_C_BPS_003_epsilon_map.}
+  - {id: G, reason: Physical_dependency_firewall_rejects_the_headline_closure.}
+  - {id: I, reason: MK3_receives_an_individual_terminal_qualified_disposition.}
+competing_candidates:
+  - {id: H, decision: rejected_because_no_distinct_claim_or_package_API_survives_nonduplication}
+claims:
+  - {id: C-BPS-001, decision: unchanged_positive_coupling_family_and_pi_four_convention}
+  - {id: C-BPS-003, decision: unchanged_abstract_epsilon_without_local_ratio_map}
+  - {id: C-SK-001, decision: unchanged_conditional_scale_equality_with_empirical_input}
+  - {id: C-VEC-002, decision: unchanged_lambda_A_to_lambda_BPS_convention_map}
+unpromoted_claims:
+  - {id: physical_epsilon_value, reason: No_accepted_product_normalization_or_physical_map_exists.}
+  - {id: broken_KI2_family, reason: MK1_and_MK2_physical_coupling_relations_are_unaccepted.}
+  - {id: near_BPS_self_consistency, reason: No_C_BPS_003_map_or_less_than_one_theorem_and_the_convention_mutation_reverses_the_source_guard.}
+  - {id: zero_import_mass_prediction, reason: Electron_and_pion_masses_and_N_c_remain_inputs.}
+  - {id: comparator_absence, reason: Executable_code_reconstructs_and_reads_0_929_inside_the_guard.}
+evidence:
+  primary_verifier: verify.py
+  independent_rederivation: reviews/independent_epsilon_review.py
+  source_graph_replay: reviews/replay_source_graph.py
+  source_disposition_review: reviews/MK3-disposition-review.md
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  source_reproduction: evidence/source-reproduction.yaml
+  compatibility_audit: evidence/compatibility-audit.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  formula_freeze: evidence/formula-freeze.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  source_graph_inventory: evidence/source-graph-inventory.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  implementation_audit: evidence/implementation-audit.yaml
+  impact_record: evidence/impact-analysis.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  independent_provenance: evidence/independent-provenance.yaml
+  focused_test_replay: evidence/focused-test-replay.yaml
+source_disposition: {MK3: qualified}
+accepted_mappings: [C-BPS-001, C-SK-001, C-VEC-002]
+compatibility:
+  MK3_surface: none
+  inherited_version_events: [B1, E3]
+  scientific_failures_from_version_events: 0
+release_change: none
+validation_commands:
+  - PYTHONPATH=src_python_campaign_verify
+  - PYTHONPATH=src_python_independent_epsilon_review
+  - PYTHONPATH=src_python_source_graph_replay
+  - pytest_focused_bps_skyrme_hls_source_audit
+  - record_sensitive_repository_generated_memory_skill_YAML_and_diff_checks
+integrated_gate:
+  status: passed
+  workflow_claims: 198
+  workflow_accepted_claims: 198
+  active_proposals: 0
+  migration_total: 218
+  migration_pending: 8
+  migration_partial: 0
+  memory_records: 879
+  generated_docs_current: true
+  generated_memory_current: true
+  physics_skill_valid: true
+  affected_yaml_files_valid: 30
+  diff_check: passed
+  reused_full_suite:
+    tests: 1901
+    boundary: P215_v0.156.0
+    unchanged_inputs: [accepted_claims, package_APIs, package_files, tests, release]
+debt: []
+status: accepted

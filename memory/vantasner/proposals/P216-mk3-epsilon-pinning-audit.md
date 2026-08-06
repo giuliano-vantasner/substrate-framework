@@ -2,15 +2,15 @@
 description: Audit MK3 scale-product epsilon pinning and dependency closure
 author: vantasner
 created: '2026-08-06T10:35:36Z'
-updated: '2026-08-06T10:35:36Z'
+updated: '2026-08-06T10:54:05Z'
 tags:
 - substrate-framework
 - campaign-proposal
 - migration-MK3
 - epsilon-identifiability
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P216 MK3 Epsilon Pinning Audit
 
@@ -153,6 +153,13 @@ terminal qualified disposition through C-BPS-001, C-SK-001, and C-VEC-002.
 No accepted claim, canonical symbol, package file, test, or release changes;
 the remaining work is the governed record transaction and narrow closeout.
 
+Attempt 0009 synchronizes the qualified disposition and closes the
+record-sensitive gate with 198 accepted claims, eight pending and zero partial
+units, 879 valid memory records, current generated docs and memory, a valid
+physics skill, 30 valid affected YAML files, and clean diff hygiene. It reuses
+P215's 1,901-test v0.156.0 boundary because every accepted claim, package,
+test, and release input is unchanged.
+
 ## Debt Ledger
 
 The P216 ledger tracks the local definition and normalization, BPS convention,
@@ -169,7 +176,7 @@ predicates, compatibility, consumers, novelty, and generated state.
 | KI2 and C-BPS-003 epsilons may be silently identified | Require an explicit definition map or reject the identification | discharged by attempts 0006 and 0007 |
 | Later consumers may grant backward authority | Replay the terminal graph without later imports | discharged by attempt 0007 |
 | Compatibility may masquerade as science | Audit every executable integration-name access before native replay | discharged by attempts 0003 and 0007 |
-| Novelty and governed records remain unresolved | Complete nonduplication, disposition, generation, and closeout | open |
+| Novelty and governed records remain unresolved | Complete nonduplication, disposition, generation, and closeout | discharged by attempt 0009 |
 
 ## Review and Promotion Plan
 
@@ -187,6 +194,9 @@ normalization, and identifiability ledger exists; primary and independent
 mutation-sensitive verification passes; every MK3 predicate is adjudicated;
 downstream and compatibility replay agree; governed records are synchronized;
 and the campaign debt ledger is empty.
+The scientific gates and synchronized terminal records satisfy those
+conditions at unchanged v0.156.0; no accepted-surface mutation requires a new
+release or repeat of the byte-identical full suite.
 
 ## Cross-References
 

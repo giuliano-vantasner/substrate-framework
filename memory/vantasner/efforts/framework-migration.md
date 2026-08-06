@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-06T10:32:25Z'
+updated: '2026-08-06T10:54:05Z'
 tags:
 - substrate-framework
 - effort
@@ -2491,27 +2491,44 @@ The integrated boundary validates 877 memory records and passes all 1,901
 tests in 189.70 pytest seconds and 204.35 seconds total wall time, at 218,884
 KiB peak RSS and exit zero.
 
+P216 qualifies MK3 at unchanged v0.156.0 through C-BPS-001, C-SK-001, and
+C-VEC-002. The exact positive object is the supplied-input identity
+`epsilon=(F_pi/e)/(lambda_BPS*mu)` plus conditional scale-product
+reconstruction. The MK2 source coefficient is `lambda_A`, so the accepted
+conversion divides its product by `pi^2` and multiplies MK3's all-premise
+epsilon by `pi^2`, reversing the source's `<1` guard from about 0.496 to about
+4.90. Neither number is an accepted physical epsilon: MK1/MK2 lack physical
+coupling closure, NY1 retains empirical input, `N_c` and pion mass are
+supplied, and C-BPS-003 provides no map or less-than-one theorem. The source's
+factor-of-two prose, t-free flow derivative, incomplete dependency guard, and
+executable 0.929 comparator reconstruction are also recorded. Twenty-nine
+primary, 16 independent, 9 graph checks, and 61 focused tests pass. The graph
+pins 108 predicates and 16 assertions; MK3 has no integration-name surface,
+and unchanged expensive later consumers reuse P215's hash-guarded execution
+evidence.
+
 ## Canonicalization
 The registry, `v0.156.0` manifest, current release, generated claim index, and
 generated framework memory agree on one hundred ninety-eight accepted claims.
-P001 through P215 are frozen under `campaigns/`; proposal,
+P001 through P216 are frozen under `campaigns/`; proposal,
 attempt, review-work, and effort memory remain distinct from accepted-state
-memory. The regenerated migration queue agrees on 9 pending, 0 partial, 3
-migrated, 196 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope
-unit. P215 is the most recent accepted-surface change and full integrated
-release boundary.
+memory. The regenerated migration queue agrees on 8 pending, 0 partial, 3
+migrated, 197 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope
+unit. P215 remains the most recent accepted-surface change and full integrated
+release boundary; P216 is a record-sensitive closeout.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 9
-pending, 3 migrated, 196 qualified, 8 duplicate-evidence, 1 refuted, and 1
+The effort remains active. D4 is discharged, but D1 remains open with 8
+pending, 3 migrated, 197 qualified, 8 duplicate-evidence, 1 refuted, and 1
 out-of-scope bridge unit. GK3D5 and GK3D6 are terminal without accepting a
 quantum determinant particle, universal matching, independent physical scale,
 absolute coupling accuracy, physical weak angle, or substrate mechanism.
 
-The WM7-WM10 source cycle, GC1-GC6, MK1, and MK2 are terminal without backward
-authority. P216 next audits MK3's claimed epsilon pinning without importing
-MK1's rejected physical medium map, MK2's rejected physical coupling closure,
-or refuted KI1. The remaining order is MK3 through MK6, then MR2 through MR6.
+The WM7-WM10 source cycle, GC1-GC6, and MK1-MK3 are terminal without backward
+authority. P217 next audits MK4's compacton and perturbation-failure claims
+without importing MK1-MK3's rejected physical closure or treating a failed
+perturbative route as completion. The remaining order is MK4 through MK6, then
+MR2 through MR6.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.

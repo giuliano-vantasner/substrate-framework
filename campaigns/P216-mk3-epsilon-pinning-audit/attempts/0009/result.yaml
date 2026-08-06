@@ -1,0 +1,32 @@
+campaign: P216
+attempt: 0009
+timestamp_utc: '2026-08-06T10:54:05Z'
+status: passed
+stage: terminal_record_synchronization
+release: v0.156.0
+source_unit: MK3
+planned_gates:
+  - migration disposition and regenerated queue agree
+  - campaign adjudication and terminal decision memory agree
+  - proposal and effort memory agree
+  - repository generated-doc generated-memory memory skill YAML and diff checks pass
+  - unchanged P215 full-suite evidence is reused rather than repeated
+result:
+  workflow:
+    claims: 198
+    accepted_claims: 198
+    active_proposals: 0
+    migration_total: 218
+    migration_pending: 8
+    migration_partial: 0
+  generated_docs_current: true
+  generated_memory_current: true
+  memory_records_valid: 879
+  physics_skill_valid: true
+  affected_yaml_files_valid: 30
+  diff_check: passed
+  full_suite_reuse:
+    release_boundary: v0.156.0
+    source_attempt: campaigns/P215-mk2-vector-sextic-matching-audit/attempts/0008/result.yaml
+    tests_passed: 1901
+    reason: No accepted claim package API package file test or release input changed after that gate.

@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 8
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 9
-  qualified: 196
+  pending_adjudication: 8
+  qualified: 197
   refuted: 1
 phase_counts:
   phase-1: 6
@@ -13761,8 +13761,59 @@ units:
   dynamic_check_calls: 0
   assert_statements: 1
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-BPS-001
+  - C-SK-001
+  - C-VEC-002
+  qualification: MK3's exact surviving content is the supplied-input identity epsilon=(F_pi/e)/(lambda_BPS*mu),
+    the fact that a supplied positive scale and product pin only their quotient, and its all-premise source-convention
+    substitutions. C-VEC-002 requires lambda_A=pi^2*lambda_BPS, so the source product lambda_A*mu=N_c*m_pi/8
+    would instead give the accepted conditional product lambda_BPS*mu=N_c*m_pi/(8*pi^2) and multiply the
+    claimed epsilon by pi^2. MK1 and MK2 do not supply accepted physical couplings; NY1 retains two supplied
+    mass formulas and empirical electron energy; N_c=3 and m_pi remain inputs; and no accepted map identifies
+    the local ratio with C-BPS-003 epsilon. The corrected all-premise numeric value is above one, but
+    C-BPS-003 supplies no less-than-one self-consistency criterion in either convention. The source also
+    contains a factor-of-two prose contradiction, drops t before its flow derivative, and reconstructs
+    the nominally absent 0.929 comparator inside a case-sensitive guard. No physical epsilon value, broken
+    KI2 family, near-BPS self-consistency, no-import mass prediction, paid parameter debt, or substrate
+    mechanism is accepted.
+  evidence:
+  - campaigns/P216-mk3-epsilon-pinning-audit/reviews/source_adjudication.md
+  - campaigns/P216-mk3-epsilon-pinning-audit/reviews/MK3-disposition-review.md
+  - campaigns/P216-mk3-epsilon-pinning-audit/reviews/impact_analysis.md
+  - campaigns/P216-mk3-epsilon-pinning-audit/evidence/source-reproduction.yaml
+  - campaigns/P216-mk3-epsilon-pinning-audit/evidence/compatibility-audit.yaml
+  - campaigns/P216-mk3-epsilon-pinning-audit/evidence/source-audit.yaml
+  - campaigns/P216-mk3-epsilon-pinning-audit/evidence/check-adjudication.yaml
+  - campaigns/P216-mk3-epsilon-pinning-audit/evidence/formula-freeze.yaml
+  - campaigns/P216-mk3-epsilon-pinning-audit/evidence/input-provenance.yaml
+  - campaigns/P216-mk3-epsilon-pinning-audit/evidence/post-source-claim-delta.yaml
+  - campaigns/P216-mk3-epsilon-pinning-audit/evidence/dependency-audit.yaml
+  - campaigns/P216-mk3-epsilon-pinning-audit/evidence/consumer-audit.yaml
+  - campaigns/P216-mk3-epsilon-pinning-audit/evidence/source-graph-inventory.yaml
+  - campaigns/P216-mk3-epsilon-pinning-audit/evidence/nonduplication-audit.yaml
+  - campaigns/P216-mk3-epsilon-pinning-audit/evidence/candidate-comparison.yaml
+  - campaigns/P216-mk3-epsilon-pinning-audit/evidence/implementation-audit.yaml
+  - campaigns/P216-mk3-epsilon-pinning-audit/evidence/impact-analysis.yaml
+  - campaigns/P216-mk3-epsilon-pinning-audit/evidence/primary-provenance.yaml
+  - campaigns/P216-mk3-epsilon-pinning-audit/evidence/independent-provenance.yaml
+  - campaigns/P216-mk3-epsilon-pinning-audit/evidence/focused-test-replay.yaml
+  - campaigns/P216-mk3-epsilon-pinning-audit/verify.py
+  - campaigns/P216-mk3-epsilon-pinning-audit/reviews/independent_epsilon_review.py
+  - campaigns/P216-mk3-epsilon-pinning-audit/reviews/replay_source_graph.py
+  - campaigns/P216-mk3-epsilon-pinning-audit/attempts/0003/result.yaml
+  - campaigns/P216-mk3-epsilon-pinning-audit/attempts/0004/result.yaml
+  - campaigns/P216-mk3-epsilon-pinning-audit/attempts/0005/result.yaml
+  - campaigns/P216-mk3-epsilon-pinning-audit/attempts/0006/result.yaml
+  - campaigns/P216-mk3-epsilon-pinning-audit/attempts/0007/result.yaml
+  - campaigns/P216-mk3-epsilon-pinning-audit/attempts/0008/result.yaml
+  - memory/vantasner/decisions/MK3-qualified-review.md
+  note: P216 closes 29 primary, 16 fresh independent, and 9 aggregate graph checks plus 61 focused tests.
+    The 15-node graph pins 108 predicates and 16 assertions. MK3 is native with no integration-name surface;
+    inherited immutable B1 and E3 version shapes remain compatibility provenance only. Hash-identical
+    expensive reverse consumers reuse P215 execution evidence. Accepted claims, package APIs, tests, and
+    v0.156.0 remain unchanged.
 - source_unit: MK4
   phase: phase-43
   path: merged-framework/bridges/phase-43/bridge_MK4_bps_compacton_and_pt_failure.py
