@@ -1,0 +1,15 @@
+campaign: P222
+attempt: 0006
+timestamp_utc: '2026-08-06T13:22:40Z'
+status: passed
+stage: individual_source_disposition_and_impact_review
+reviews:
+  - reviews/source_adjudication.md
+  - reviews/MR4-disposition-review.md
+  - reviews/impact_analysis.md
+source_axes: every_MR4_predicate_reviewed_individually
+claim_delta: []
+source_disposition: duplicate_evidence
+accepted_mappings: [C-VEC-001, C-SK-001]
+remaining_debt: governed_terminal_records_only
+next_action: commit_review_boundary_then_terminalize_MR4_without_release_change

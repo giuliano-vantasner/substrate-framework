@@ -49,5 +49,5 @@ comparators_blinded_until: >-
   equation, predicate, guard, exact value, and consumer conclusion stays
   unopened until this contract, formula freeze, provenance record, validation
   record, and freeze commit exist.
-status: active
-revision: 0001
+status: in_review
+revision: 0002

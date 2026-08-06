@@ -92,6 +92,11 @@ factor, or the common-unit coefficient changes the verdict. With `a` unfixed,
 every positive coupling is realizable, so the two source convention readings
 are not a bound. Existing package, claims, release, and tests remain unchanged.
 
+Attempt 0006 individually reviews all seven predicates and selects terminal
+`duplicate_evidence` through C-VEC-001 and C-SK-001. The review retains the
+conditional algebra and dimensional repair while rejecting full-vector,
+physical KSRF, parameter-free, convention-bound, and complete-guard readings.
+
 ## Debt Ledger
 
 The ledger tracks every exact identity, declared coefficient, physical import,
@@ -105,7 +110,7 @@ derivative-order ceiling, compatibility surface, consumer, and governed record.
 | A dimensionless value may be called parameter-free | Scaling and import inventory | discharged: m_V m_e a and scaling orbit remain visible |
 | Leading reduction may be called a full-vector theorem | Derivative-order and EOM scope audit | discharged: canonical p4/p6 ceiling passes |
 | Later units may grant backward authority | Pinned MR5-MR6 replay | discharged: eight graph checks retain both pending |
-| Governed records remain unresolved | Terminal disposition and synchronization | open |
+| Governed records remain unresolved | Terminal disposition and synchronization | open: record-only terminal transaction |
 
 ## Review, Promotion, and Done Gate
 
