@@ -1,0 +1,13 @@
+campaign: P223
+reviewer: reviews/independent_derived_coupling_review.py
+sha256: afcf0057c2571982517ddbc41a7d477716e779e3b0139829bd3f4036298d848c
+independence:
+  canonical_GSK_imports: none
+  source_module_imports: none
+  equation: fresh_symbolic_variation
+  representation: vacuum_complement_DOP853_amplitude_shooting
+  boundary: independently_derived_massive_tail_Robin
+  quadrature: scipy_Simpson
+result: {exit_status: 0, checks: 11, elapsed_seconds: 27.73, maximum_resident_kib: 156584}
+preserved_failures: [attempt_0004_degree_four_tail_residual, attempt_0005_registry_literal]
+status: passed

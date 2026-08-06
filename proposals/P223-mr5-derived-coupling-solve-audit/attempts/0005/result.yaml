@@ -1,0 +1,13 @@
+campaign: P223
+attempt: 0005
+timestamp_utc: '2026-08-06T13:52:00Z'
+status: failed_then_repaired
+stage: independent_review_claim_ceiling_literal
+failure:
+  passed_checks_before_stop: 9
+  check: accepted_owners_exclude_minimum_state_and_physical_interpretations
+  cause: The_independent_reviewer_repeated_attempt_0003s_C_RDIFF_001_phrase_mismatch.
+repair:
+  action: Match_derives_no_mass_formula_in_the_accepted_registry_statement.
+scientific_effect: none
+next_action: rerun_complete_independent_review_without_threshold_changes

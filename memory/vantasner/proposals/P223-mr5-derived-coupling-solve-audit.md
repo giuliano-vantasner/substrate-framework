@@ -92,6 +92,33 @@ The executable guard omits numerous comparator literals and physical inputs
 that directly reach pass predicates. A distinct supplied-parameter numeric
 surface remains open only to the stronger preregistered oracle.
 
+Attempt 0003 preserves the first primary-verifier stop after eight passes. The
+registry ceiling search expected the phrase `physical mass`, while C-RDIFF-001
+states the equivalent exact ceiling as `derives no mass formula`. Matching the
+actual accepted wording repairs the implementation-only check without changing
+the scientific predicate or any tolerance.
+
+Attempt 0004 preserves the fresh shooting review's stop after four passes. The
+degree-four separatrix left a tail residual near `6e-5`, above the reviewer's
+`2e-5` ceiling even though the energy agreed. The repair tightens DOP853
+relative and absolute tolerances, maximum step, and amplitude-root resolution;
+the boundary threshold is unchanged and the numeric candidate remains open.
+
+Attempt 0005 preserves a later independent-review stop after nine passes. The
+fresh reviewer repeated attempt 0003's C-RDIFF-001 wording mismatch after all
+shooting gates passed. Matching `derives no mass formula` repairs the registry
+literal check; no numerical method, result, or threshold changes.
+
+Attempt 0006 passes 21 primary, 11 fresh independent, and eight graph checks
+plus 87 focused tests. Exact angular data, Robin boundaries, isolated
+refinements, and independent shooting give `kappa=11.53644` at MR5's supplied
+coupling point, materially repairing the source's `11.490`. A bounded scalar
+search confirms one continuation-selected branch minimum near `e=4.3263` on
+`[3,7]`, and a coefficient mutation moves both its location and value. This is
+not an all-positive-coupling theorem, a global profile minimum, or a physical
+mass floor. Every exact survivor is already C-GSK-001 or C-RDIFF-001; no claim,
+API, test, or release change is warranted.
+
 ## Debt Ledger
 
 The ledger tracks every supplied coefficient, coupling premise, branch-control
@@ -101,12 +128,12 @@ governed record.
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
 | MR5 body and predicates remain unopened | Open only after committed freeze | discharged: six-predicate source audit |
-| MR5 may duplicate C-GSK-001/002 | Exact and numerical nonduplication audit | open |
+| MR5 may duplicate C-GSK-001/002 | Exact and numerical nonduplication audit | discharged: exact duplicate and noncanonical parameter regression |
 | MR4 coupling may be laundered into an accepted input | Dependency and scaling audit | discharged: remains a supplied nonphysical coordinate |
-| Source stationary branches may lack numerical controls | Status residual boundary and refinement audit | open |
+| Source stationary branches may lack numerical controls | Status residual boundary and refinement audit | discharged: canonical and fresh shooting controls pass |
 | Kappa may be called a bound or physical binding | C-RDIFF typing and counterexample audit | discharged: exact signed coordinate only |
 | Degree labels may be called nuclei or masses | State action scale and correction firewall | discharged: no accepted map or mass normalization |
-| MR6 may grant backward authority | Pinned consumer replay | open |
+| MR6 may grant backward authority | Pinned consumer replay | discharged: eight graph checks retain MR6 pending |
 | Governed records remain unresolved | Terminal disposition and synchronization | open |
 
 ## Review and Promotion Plan

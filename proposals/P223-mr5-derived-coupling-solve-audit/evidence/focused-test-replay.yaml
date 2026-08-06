@@ -1,0 +1,12 @@
+campaign: P223
+command: >-
+  python -m pytest -q tests/test_generalized_skyrme_radial.py
+  tests/test_energy_differences.py tests/test_rational_maps.py
+  tests/test_rational_map_radial.py tests/test_hls_reduction.py
+result: {exit_status: 0, tests: 87, pytest_seconds: 11.84, elapsed_seconds: 12.24, maximum_resident_kib: 161064}
+coverage:
+  - exact_and_numeric_generalized_radial_owner
+  - signed_difference_owner_and_bound_counterexamples
+  - exact_angular_inputs_and_stationary_baseline
+  - MR4_conditional_HLS_owner
+status: passed

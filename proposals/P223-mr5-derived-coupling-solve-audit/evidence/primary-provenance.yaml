@@ -1,0 +1,12 @@
+campaign: P223
+verifier: verify.py
+sha256: cc6da46aadf7da21e20eba7f228449ec5df968ab345c8415bdf4c348dbc65164
+command: PYTHONPATH_src_python_verify
+result: {exit_status: 0, checks: 21, elapsed_seconds: 7.27, maximum_resident_kib: 161704}
+mutations:
+  - source_comparator_guard_is_required_to_fail_its_completeness_claim
+  - c6_prefactor_scale_1_25_moves_the_interval_branch_optimum_and_value
+  - exact_angular_and_Robin_conventions_move_source_kappa_by_more_than_0_04
+  - coupling_changes_c6_and_c0_in_opposite_directions_while_their_product_retains_supplied_prefactors
+refinements: [outer_domain, solver_tolerance, output_quadrature, continuous_interval_optimizer]
+status: passed

@@ -1,0 +1,18 @@
+campaign: P223
+change_class: no_canonical_symbol_API_claim_test_or_release_change
+direct_consumers:
+  canonical_generalized_radial: unchanged
+  canonical_signed_difference: unchanged
+  MR6: pending
+indirect_consumers:
+  generated_docs: unchanged
+  generated_accepted_memory: unchanged
+  migration_inventory: terminal_record_pending
+formal_consumers: []
+required_replay:
+  - primary_21_checks
+  - independent_11_checks
+  - graph_8_checks
+  - focused_87_tests
+full_suite_policy: reuse_P221_v0_159_0_1929_tests_if_terminal_transaction_remains_record_only
+debt: []

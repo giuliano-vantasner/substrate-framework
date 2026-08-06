@@ -1,0 +1,52 @@
+campaign: P223
+inputs:
+  e: 4.619774866381011
+  c6: 0.32878825565855035
+  c0: 0.5071917782762795
+  product: 0.16675870006381616
+  angular: {B1: 1.0, B2: 5.80825932025646, B4: 20.6496264884189}
+method:
+  solver: canonical_adaptive_collocation_continuation
+  boundary: regular_origin_and_massive_tail_Robin
+  tolerance: 1.0e-6
+  initial_points: 401
+  continuation_steps: 8
+  maximum_nodes: 200000
+domains:
+  R14:
+    samples: 6001
+    b: {B1: 1.4359986779977556, B2: 2.812805894441693, B4: 5.2359832391396885}
+    kappa: 11.53643894802139
+  R20:
+    samples: 8001
+    b: {B1: 1.435998787155452, B2: 2.812806050268519, B4: 5.23598337140261}
+    kappa: 11.536444259568
+    maximum_solver_residual: 9.870421694295315e-7
+    maximum_boundary_residual: 4.0891344322316096e-16
+    maximum_Derrick_residual: 7.770648314273602e-10
+  R26:
+    samples: 10001
+    b: {B1: 1.4359987873566664, B2: 2.8128060502731453, B4: 5.235983371618447}
+    kappa: 11.53644425345129
+tolerance_refinement_B2:
+  - {tolerance: 2.0e-6, b: 2.8128060501327043, max_residual: 1.9950421852286523e-6}
+  - {tolerance: 1.0e-6, b: 2.8128060502386187, max_residual: 9.870421694295315e-7}
+  - {tolerance: 5.0e-7, b: 2.8128060503673105, max_residual: 4.955762262308698e-7}
+quadrature_refinement_B2:
+  - {samples: 2001, b: 2.8128060501684584}
+  - {samples: 4001, b: 2.8128060502386187}
+  - {samples: 8001, b: 2.8128060502685193}
+interval_stationary_branch_scan:
+  domain_e: [3.0, 7.0]
+  optimizer: bounded_scalar_in_log_e
+  tolerance_log_e: 2.0e-4
+  result: {e: 4.326298738741842, b1: 1.4333949534606327, evaluations: 8}
+  c6_prefactor_1_25_mutation: {e: 4.199971282848504, b1: 1.454874114256967, evaluations: 7}
+interpretation:
+  status: noncanonical_regression_evidence
+  accepted_claim_delta: none
+  ceiling: >-
+    The values describe one continuation-selected stationary branch for
+    supplied coefficients on finite domains. They establish neither a global
+    profile minimum nor a floor for all positive e and have no accepted
+    particle nucleus mass or observation map.

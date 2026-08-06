@@ -1,0 +1,17 @@
+campaign: P223
+attempt: 0004
+timestamp_utc: '2026-08-06T13:50:00Z'
+status: failed_method_under_repair
+stage: independent_shooting_tail_residual
+failure:
+  passed_checks_before_stop: 4
+  degree_four_tail_residual: -5.9930244887340716e-5
+  preregistered_reviewer_ceiling: 2.0e-5
+diagnosis: >-
+  The degree-four vacuum-complement shooting separatrix is more sensitive to
+  IVP and amplitude resolution at the new coefficient point than at P218's
+  benchmark. Energies agree, but that cannot waive the boundary oracle.
+repair:
+  action: Tighten_DOP853_rtol_atol_max_step_and_Brent_amplitude_resolution.
+  threshold_change: none
+next_action: rerun_degree_four_probe_then_complete_independent_review

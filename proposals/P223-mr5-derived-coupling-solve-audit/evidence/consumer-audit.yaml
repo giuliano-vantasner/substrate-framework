@@ -1,0 +1,10 @@
+campaign: P223
+canonical_consumers:
+  src_substrate_framework_generalized_skyrme_radial: unchanged
+  src_substrate_framework_energy_differences: unchanged
+  tests_generalized_and_difference_owners: 87_focused_tests_pass
+source_consumer:
+  MR6: pending_ledger_use_without_backward_authority
+generated_consumers: terminal_migration_disposition_and_campaign_index_only
+release_change: none
+broken_consumers: []

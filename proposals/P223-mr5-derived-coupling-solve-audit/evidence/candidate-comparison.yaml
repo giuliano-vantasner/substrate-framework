@@ -1,0 +1,20 @@
+campaign: P223
+criteria_order:
+  - equation_and_normalization_match
+  - novelty
+  - dependency_closure
+  - numerical_controls
+  - independent_agreement
+  - mutation_sensitivity
+  - physical_typing
+decisions:
+  A: {decision: selected, reason: exact_model_maps_to_C_GSK_001}
+  B: {decision: selected_as_regression, reason: canonical_and_independent_branches_agree_at_the_supplied_point}
+  C: {decision: selected, reason: exact_opposite_coefficient_scaling_and_supplied_product_are_exposed}
+  D: {decision: rejected, reason: new_parameter_point_has_no_nonduplicate_invariant_or_accepted_predictive_reach}
+  E: {decision: selected, reason: exact_signed_difference_maps_to_C_RDIFF_001_without_a_bound}
+  F: {decision: selected, reason: MR4_particle_state_mass_and_binding_dependencies_do_not_close}
+  G: {decision: selected, reason: no_new_claim_or_API_is_warranted}
+  H: {decision: selected, reason: terminal_duplicate_evidence_and_MR6_replay_remain_required}
+selection: [A, B, C, E, F, G, H]
+comparator_role: post_selection_regression_and_rejection_evidence_only

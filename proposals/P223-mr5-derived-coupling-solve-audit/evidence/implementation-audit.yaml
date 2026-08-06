@@ -1,0 +1,16 @@
+campaign: P223
+package_changes: []
+test_changes: []
+claim_registry_changes: []
+release_changes: []
+reason: >-
+  Canonical generalized-radial and signed-difference APIs already express every
+  exact survivor. The new supplied numeric point has no accepted physical input
+  closure or nonduplicate reusable invariant.
+verification_only_files:
+  - verify.py
+  - reviews/independent_derived_coupling_review.py
+  - reviews/replay_source_graph.py
+canonical_integration_policy: trapezoid_integral
+source_integration_policy: current_scipy_trapezoid
+debt: []

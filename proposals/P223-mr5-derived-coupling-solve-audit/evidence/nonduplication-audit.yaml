@@ -1,0 +1,30 @@
+campaign: P223
+targets:
+  C-GSK-001:
+    relation: exact_duplicate
+    reason: MR5_uses_the_same_density_equation_coefficient_map_and_public_solver_surface.
+  C-GSK-002:
+    relation: parameter_point_regression_not_claim_extension
+    reason: >-
+      MR5 changes supplied coefficients but adds no new equation method invariant
+      state map or predictive reach; the canonical solver already accepts those
+      inputs and stronger P223 controls do not make the empirical point canonical.
+  C-RDIFF-001:
+    relation: exact_duplicate
+    reason: three_pi_squared_times_two_b2_minus_b4_is_the_declared_positive_normalization_specialization.
+  C-RDIFF-002:
+    relation: baseline_regression_only
+    reason: The_zero_extra_coefficient_result_repeats_the_accepted_classical_coordinate.
+  C-VEC-001_and_P222:
+    relation: no_physical_extension
+    reason: MR4s_parameter_value_does_not_extend_the_conditional_HLS_theorem.
+continuous_floor:
+  source_claim: every_e_global_floor
+  actual_oracle: one_continuation_selected_branch_minimum_on_e_in_3_to_7
+  relation: not_an_accepted_claim
+  missing: [all_positive_domain, branch_uniqueness, global_profile_minimum, rigorous_numeric_enclosure, accepted_parameter_origin]
+decision:
+  new_claim: false
+  new_API: false
+  release_change: false
+  terminal_candidate: duplicate_evidence

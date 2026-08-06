@@ -1,0 +1,13 @@
+campaign: P223
+attempt: 0003
+timestamp_utc: '2026-08-06T13:46:00Z'
+status: failed_then_repaired
+stage: primary_verifier_claim_ceiling_literal
+failure:
+  passed_checks_before_stop: 8
+  check: accepted_owners_preserve_supplied_input_and_nonphysical_ceilings
+  cause: The_verifier_searched_C_RDIFF_001_for_physical_mass_while_the_registry_uses_derives_no_mass_formula.
+repair:
+  action: Match_the_exact_registry_ceiling_without_changing_the_scientific_predicate.
+scientific_effect: none
+next_action: rerun_the_complete_primary_verifier

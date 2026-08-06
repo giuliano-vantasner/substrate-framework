@@ -1,0 +1,28 @@
+campaign: P223
+source_unit: MR5
+accepted_dependencies:
+  C-GSK-001: exact_declared_density_equation_coefficients_and_solver_API
+  C-GSK-002: numerical_method_and_interpretation_ceiling_only_not_the_new_parameter_point
+  C-RMAP-001: exact_B1_B2_angular_inputs
+  C-RMAP-002: resolution_bounded_declared_B4_angular_input
+  C-RPROF-002: zero_extra_coefficient_baseline_only
+  C-RDIFF-001: exact_signed_difference_coordinate
+  C-RDIFF-002: classical_baseline_regression_only
+  C-VEC-001: conditional_e_equals_g_and_mass_coordinate_ceiling_only
+rejected_or_supplied_dependencies:
+  MR4_physical_e: rejected_by_P222_and_retained_as_supplied_numeric_coordinate
+  electron_mass: empirical_input
+  pion_mass: empirical_input
+  rho_mass: empirical_input
+  N_c_three: supplied_integer_without_state_action_map
+  ANW_e_5_45: empirical_fit_used_in_an_executable_regression_predicate
+  E2_E3_MK5_decimals: comparators_used_in_executable_predicates
+  MR3_double_counting_narrative: not_a_consequence_of_C_VAR_003
+  MR6: pending_and_nonauthoritative
+closure:
+  exact_model_and_signed_difference: accepted
+  supplied_stationary_branch_regression: attempt_evidence_only
+  derived_physical_coupling: rejected
+  parameter_free_mass_or_ratio: rejected
+  physical_binding_or_nucleus: rejected
+debt: []

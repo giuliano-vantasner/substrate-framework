@@ -1,0 +1,17 @@
+campaign: P223
+root: MR5
+nodes: 2
+lexical_predicates: 12
+assertions: 4
+aggregate_checks: 8
+verifier_sha256: b2c30e1d51d96564f325b7392964ca23fbe239377d23c0320f3195c8a3a2bda0
+result: {exit_status: 0, checks: 8, elapsed_seconds: 2.34, maximum_resident_kib: 157440}
+direct_reverse_consumer: MR6
+execution_policy:
+  MR5: reused_P174_hash_identical_fresh_clean
+  MR6: reused_P215_hash_identical_clean_noncanonical
+compatibility:
+  current_scipy_trapezoid: [MR5, MR6]
+  legacy_access: []
+  scientific_version_failures: 0
+debt: []

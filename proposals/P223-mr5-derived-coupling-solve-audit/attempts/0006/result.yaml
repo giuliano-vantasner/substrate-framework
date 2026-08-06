@@ -1,0 +1,19 @@
+campaign: P223
+attempt: 0006
+timestamp_utc: '2026-08-06T13:55:00Z'
+status: passed
+stage: canonical_independent_graph_and_focused_verification
+results:
+  primary: {checks: 21, elapsed_seconds: 7.27, maximum_resident_kib: 161704}
+  independent: {checks: 11, elapsed_seconds: 27.73, maximum_resident_kib: 156584}
+  graph: {checks: 8, elapsed_seconds: 2.34, maximum_resident_kib: 157440}
+  focused: {tests: 87, pytest_seconds: 11.84, maximum_resident_kib: 161064}
+scientific_outcome:
+  exact_owner: [C-GSK-001, C-RDIFF-001]
+  numeric_point: noncanonical_supplied_input_regression
+  continuous_result: one_stationary_branch_minimum_on_e_3_to_7_not_a_global_floor
+  new_claim: false
+  new_API: false
+  release_change: false
+compatibility: current_scipy_trapezoid_no_version_failure
+next_action: individual_source_review_and_terminal_duplicate_evidence_transaction
