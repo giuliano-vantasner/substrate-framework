@@ -1,0 +1,13 @@
+campaign: P219
+attempt: 0001
+timestamp_utc: '2026-08-06T11:51:09Z'
+status: passed
+stage: contract_formula_and_provenance_freeze
+base_release: v0.157.0
+base_commit: af46446e
+source_unit: MK6
+source_sha256: ef900954d9782bbf2589ff3e33045577ebdce3860d1a3ed7a6a6827e0ae81788
+candidates_frozen: [A, B, C, D, E, F, G, H]
+provisional_claims: [C-VAR-002]
+remaining_comparators_blinded: true
+next_action: validate_contract_and_memory_then_commit_freeze_before_source_body_or_execution

@@ -1,0 +1,24 @@
+campaign: P219
+framework_base: {release: v0.157.0, commit: af46446e}
+source:
+  repository: /home/dan/substrate
+  commit: 6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+  path: merged-framework/bridges/phase-43/bridge_MK6_confrontation_and_tension.py
+  sha256: ef900954d9782bbf2589ff3e33045577ebdce3860d1a3ed7a6a6827e0ae81788
+  bytes: 18971
+  source_file_worktree_status: clean
+  unrelated_source_worktree_changes: excluded
+authority:
+  - governance/releases/v0.157.0.yaml
+  - governance/claims.yaml
+  - campaigns/P218-mk5-generalized-skyrme-solve-audit/adjudication.yaml
+  - src/substrate_framework/bps_energy.py
+  - src/substrate_framework/generalized_skyrme_radial.py
+  - src/substrate_framework/energy_differences.py
+memory_queries:
+  - memory_search_MK6_binding_window
+  - memory_grep_MK6
+compatibility_preflight:
+  required_before_execution: [direct, imported, dynamic, eager]
+  mutable_policy: numpy_trapezoid_or_trapezoid_integral
+  immutable_policy: alias_only_replay_backed_by_numpy_trapezoid_if_needed

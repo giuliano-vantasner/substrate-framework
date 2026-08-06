@@ -1,0 +1,26 @@
+campaign: P219
+base_release: v0.157.0
+source_unit: MK6
+source_sha256: ef900954d9782bbf2589ff3e33045577ebdce3860d1a3ed7a6a6827e0ae81788
+exposed_before_freeze:
+  - six_static_and_literal_checks_one_assertion_and_terminal_tally_literal
+  - source_claimed_kappa_12_point_34
+  - source_claimed_BPS_mass_981_point_2_MeV
+  - source_claimed_pure_pion_formula_and_double_counting_diagnosis
+frozen_exact_surfaces:
+  lambda_conversion: lambda_A=pi^2*lambda_BPS
+  accepted_bps_bound: 2*lambda_BPS*mu*pi^2*abs(B)*W
+  equivalent_lambda_A_bound: 2*lambda_A*mu*abs(B)*W
+  joint_functional_inequality: inf_x_sum_i_E_i(x)>=sum_i_inf_x_E_i(x)
+  equality_requirement: simultaneous_or_common_minimizing_sequence_conditions_must_be_declared
+  signed_difference: alpha*U*(n*b_A-b_nA)
+frozen_claim_candidate:
+  id: C-VAR-002
+  scope: exact_infimum_of_sum_and_common_minimizer_criterion_for_finite_real_functional_families
+frozen_mutations:
+  - substitute_lambda_A_directly_into_lambda_BPS_bound_without_conversion
+  - remove_pi_squared_from_the_coordinate_map
+  - add_separately_minimized_sector_values_as_if_their_minimizers_were_common
+  - identify_a_lower_bound_with_an_attained_energy_without_attainment
+  - identify_a_reduced_signed_difference_with_physical_binding_without_a_state_and_scale_map
+comparator_policy: structural_selection_precedes_any_further_source_or_empirical_value
