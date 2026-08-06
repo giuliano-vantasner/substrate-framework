@@ -1,0 +1,12 @@
+campaign: P217
+attempt: 0001
+timestamp_utc: '2026-08-06T10:58:08Z'
+status: passed
+stage: pre_source_freeze
+base_release: v0.156.0
+base_commit: 794d397d391a9400a10d392033c1430830afd0b1
+source_unit: MK4
+source_sha256: 9f2e299032aace53c3ac2c2d1d5626372e4bdf1aa3b7b0650f574a9f7b8f7295
+frozen_candidates: [A, B, C, D, E, F, G, H]
+next_action: Validate and commit the freeze before inspecting or executing MK4.
+

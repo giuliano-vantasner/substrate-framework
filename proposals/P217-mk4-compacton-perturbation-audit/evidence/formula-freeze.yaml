@@ -1,0 +1,35 @@
+campaign: P217
+timestamp_utc: '2026-08-06T10:58:08Z'
+conditional_compacton:
+  potential: V(F)=1-cos(F)=2*sin(F/2)^2
+  interior_profile: cos(F(r)/2)=r/R for 0<=r<=R
+  exterior_profile: F(r)=0 for r>R
+  radius_relation: R^3=2*sqrt(2)*lambda*B/mu
+  authority: conditional_on_declared_radial_BPS_equation_and_normalization
+edge_coordinate:
+  x: 1-r/R
+  profile_leading: F~2*sqrt(2)*sqrt(x)
+  first_derivative_order: x^-1/2
+  second_derivative_order: x^-3/2
+  audit_requirement: Source derivative labels and energy density must be checked exactly rather than inferred from prose.
+accepted_P107_counterexample:
+  dimensionless_edge_integrand: 4*y^2/(1-y^2)
+  pole_coefficient_at_y=1: 2
+  cutoff_integral_growth: 2*log(1/delta)+O(1)
+  L4_edge_limit: 16/R^2
+  consequence: naive_L2_first_order_coefficient_is_not_finite
+candidate_replacements:
+  - explicit edge cutoff with divergent coefficient recorded rather than hidden
+  - smooth-potential or boundary-layer problem opened separately with new equations and remainder control
+  - direct full-model solve deferred to its own numerical campaign and not inferred from the no-go
+mutations:
+  - change the radius coefficient and require the BPS residual to become nonzero
+  - change the edge exponent and require pole classification to change
+  - omit the cutoff and reject any finite L2 coefficient
+  - conflate the finite L4 factor with the divergent L2 term and require failure
+  - import MK1-MK3 physical premises and require dependency closure to fail
+selection_exclusions:
+  - treating divergence as the requested finite correction
+  - tuning a cutoff to a comparator
+  - using pending MK5 or MK6 results as authority
+

@@ -1,0 +1,55 @@
+id: P217
+base_release: v0.156.0
+base_commit: 794d397d391a9400a10d392033c1430830afd0b1
+source_baseline: substrate@6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+source_units: [MK4]
+question: >-
+  What exact compacton follows conditionally from the declared BPS equation
+  with V=1-cos(F), which perturbing energy terms are finite on it, and does the
+  failure of naive first-order evaluation supply a controlled replacement or
+  only an already-known obstruction?
+invariants:
+  - C-BPS-001 supplies a conditional square equation and bound but no existence theorem potential selection coupling value or physical state map.
+  - C-BPS-003 requires a controlled expansion and remainder; an uninterpreted correction or formal first-order expectation is insufficient.
+  - P107 independently derives the standard-potential compacton balance and logarithmically divergent naive L2 edge correction while the L4 edge factor stays finite.
+  - MK1 through MK3 supply no accepted physical potential coupling product or epsilon value.
+  - A failed perturbative route is obstruction evidence and cannot complete a request for a controlled correction or full-model solution.
+  - Pending MK5 MK6 and MR units grant no backward authority.
+  - Mutable integration uses numpy.trapezoid or trapezoid_integral and immutable compatibility events never count as scientific failure.
+allowed_imports:
+  - C-BPS-001 through C-BPS-003 at their exact conditional and controlled-asymptotic ceilings
+  - C-RDIFF-001 and C-RDIFF-002 only for exact signed-difference bookkeeping
+  - P107 compacton and edge evidence after direct hash and formula verification
+  - qualified E2 E4 KI3 MK1 MK2 and MK3 only at their governed mappings
+  - exact SymPy ODE substitution asymptotics limits and cutoff dependence
+  - NumPy only for hash-pinned reproduction after compatibility preflight
+  - hash-pinned MK4 only after the committed freeze
+candidates:
+  - {id: A, description: Derive and substitute the conditional standard-potential radial compacton including its exact radius and domain.}
+  - {id: B, description: Reproduce the exact compacton-edge asymptotics and separate divergent L2 from finite L4 behavior.}
+  - {id: C, description: Introduce an explicit edge cutoff or smoothing family and determine whether a regulator-independent first-order coefficient exists.}
+  - {id: D, description: Require C-BPS-003 remainder control and reject a formal expectation value that diverges on the reference field.}
+  - {id: E, description: Test alternative smooth potentials or boundary-layer formalisms only as separately declared candidates rather than repairs retrofitted to MK4.}
+  - {id: F, description: Remove rejected MK1-MK3 coupling and physical maps while retaining exact conditional field mathematics.}
+  - {id: G, description: Add no claim or API if P107 already owns every exact survivor and obstruction.}
+  - {id: H, description: Give MK4 an individual terminal disposition and replay later consumers without backward authority.}
+uniqueness_evidence: null
+selection_criteria:
+  - exact BPS density radial and derivative conventions
+  - accepted dependency closure and potential/coupling provenance
+  - domain boundary regularity and edge asymptotics
+  - regulator dependence and controlled remainder behavior
+  - separation of finite L4 and divergent L2 contributions
+  - mutation sensitivity to radius potential derivative and cutoff powers
+  - novelty beyond P107 and accepted BPS claims
+  - positive continuation after perturbative obstruction
+  - terminal consumer queue and memory closure
+claims_proposed: []
+comparators_blinded_until: >-
+  The generated queue exposes six checks, one assertion, the conditional
+  compacton cos(F/2)=r/R_B with R_B^3=2*sqrt(2)*lambda*B/mu, and the claimed
+  logarithmic L2 edge divergence. Remaining equations, predicates, numerical
+  probes, imports, output, and consumer details stay unopened until the
+  contract, formula freeze, provenance record, validation, and freeze commit.
+status: draft
+

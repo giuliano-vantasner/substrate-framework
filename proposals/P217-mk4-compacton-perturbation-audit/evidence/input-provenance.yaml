@@ -1,0 +1,21 @@
+campaign: P217
+timestamp_utc: '2026-08-06T10:58:08Z'
+framework_base: {release: v0.156.0, commit: 794d397d391a9400a10d392033c1430830afd0b1, accepted_claims: 198, pending_units: 8}
+source_checkout: {root: /home/dan/substrate, commit: 6d1f4e02f87a0bd1dc326cb68af01872d1e88c64, dirty_outside_pinned_file: true, pinned_file_clean: true}
+source_unit:
+  id: MK4
+  path: merged-framework/bridges/phase-43/bridge_MK4_bps_compacton_and_pt_failure.py
+  absolute_path: /home/dan/substrate/merged-framework/bridges/phase-43/bridge_MK4_bps_compacton_and_pt_failure.py
+  sha256: 9f2e299032aace53c3ac2c2d1d5626372e4bdf1aa3b7b0650f574a9f7b8f7295
+  bytes: 18532
+  candidate_dependencies: [E2, E4, KI3, MK1, MK2, MK3, MK5]
+preexposed_metadata: {checks: 6, assertions: 1, symbolic_hint: true, numeric_hint: true}
+authority_read:
+  - governance/releases/current.yaml
+  - governance/claims.yaml C-BPS-001 through C-BPS-003 and C-RDIFF-001 through C-RDIFF-002
+  - src/substrate_framework/bps_energy.py
+  - campaigns/P107-e4-bps-zero-binding-audit
+  - campaigns/P214 through P216 MK1-MK3 adjudications
+memory_queries: [MK4 BPS compacton first order perturbation L2 L4 divergence 1-cos]
+memory_rule: navigation_only_every_reused_fact_resourced
+
