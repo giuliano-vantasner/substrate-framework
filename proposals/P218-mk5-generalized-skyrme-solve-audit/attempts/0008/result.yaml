@@ -1,0 +1,15 @@
+campaign: P218
+attempt: 0008
+timestamp_utc: '2026-08-06T11:50:00Z'
+status: passed
+stage: claim_level_source_review_and_impact_analysis
+decision:
+  source_unit: MK5
+  disposition: qualified
+  claims_to_promote: [C-GSK-001, C-GSK-002]
+  physical_claims_promoted: []
+reviewed_predicates: [MK5.1, MK5.2, MK5.3, MK5.4, MK5.5, MK5.6, MK5.7, MK5.8]
+impact: {claims_added: 2, package_modules_added: 1, tests_added: 1, release_change: required}
+pending_consumers: [MK6, MR2, MR3, MR4, MR5, MR6]
+next_action: commit review boundary then execute promotion transaction and full integrated gate
+

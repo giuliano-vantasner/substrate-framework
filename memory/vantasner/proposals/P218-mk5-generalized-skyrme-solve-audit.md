@@ -129,6 +129,12 @@ difference. Attempt 0007 completes nine graph checks and 65 focused tests. The
 twenty-node graph pins 133 predicates and 24 assertions with proportional
 reuse of unchanged expensive source executions.
 
+Attempt 0008 reviews C-GSK-001, C-GSK-002, and MK5.1 through MK5.8
+individually. It accepts the exact conditional model and resolution-bounded
+supplied-coefficient branches, rejects all source physical closure, records the
+additive package/release impact, and requires one full integrated promotion
+gate.
+
 ## Debt Ledger
 
 The ledger tracks equations, coefficients, angular factors, endpoint laws,
@@ -147,7 +153,7 @@ premises, compatibility, consumers, novelty, and generated records.
 | Numeric agreement may become a physical claim | Keep claims conditional and comparator-blind | discharged by attempts 0003 and 0006 |
 | Compatibility may masquerade as science | Audit direct imported dynamic and eager integration access | discharged by attempts 0002 and 0007 |
 | Later consumers may grant backward authority | Replay terminal source graph | discharged by attempt 0007 |
-| Novelty and governed records remain unresolved | Nonduplication review implementation release and record gate | implementation complete; claim review open |
+| Novelty and governed records remain unresolved | Nonduplication review implementation release and record gate | claim review complete; promotion synchronization open |
 
 ## Review and Promotion Plan
 
