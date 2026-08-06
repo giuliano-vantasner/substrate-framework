@@ -1,0 +1,16 @@
+campaign: P222
+source_unit: MR4
+source_commit: 6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+path: merged-framework/bridges/phase-44/bridge_MR4_e_from_rho_saturation.py
+sha256: cefe7192b935ec18992e9cd76fd348ef81934ed9d20843ced3627973cec9d3d7
+bytes: 21181
+lines: 401
+inventory: {static_check_calls: 7, runtime_check_executions: 7, assert_statements: 1}
+execution_reuse:
+  source: campaigns/P215-mk2-vector-sextic-matching-audit/evidence/source-graph-inventory.yaml
+  source_hash_identical: true
+  elapsed_seconds: 7.953
+  exit_status: 0
+  verdict: clean_noncanonical
+reason_not_rerun: hash_identical_execution_is_stronger_than_a_ceremonial_duplicate
+interpretation: clean_noncanonical_reproduction_not_acceptance

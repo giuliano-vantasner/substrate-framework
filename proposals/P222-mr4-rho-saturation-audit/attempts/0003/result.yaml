@@ -1,0 +1,22 @@
+campaign: P222
+attempt: 0003
+timestamp_utc: '2026-08-06T13:17:11Z'
+status: passed_with_source_claim_corrections
+stage: compatibility_preflight_reused_native_execution_body_audit_and_claim_delta
+source_sha256: cefe7192b935ec18992e9cd76fd348ef81934ed9d20843ced3627973cec9d3d7
+compatibility: {sampled_integration: false, legacy_references: 0, version_events: 0, scientific_failure: false}
+execution:
+  reuse_source: P215_hash_identical_graph_execution
+  exit_status: 0
+  runtime_checks: 7
+  assertions: 1
+  elapsed_seconds: 7.953
+source_corrections:
+  - first_two_exact_claims_are_numeric_one_point_residuals
+  - e_equals_g_is_only_the_leading_p4_reduction_already_C_VEC_001
+  - KSRF_a_two_physical_rho_and_particle_masses_are_supplied
+  - free_symbols_m_V_m_e_refute_parameter_free_language
+  - inconsistent_convention_readings_do_not_form_a_physical_bound
+  - ANW_fit_enters_MR4_6_despite_the_no_comparator_headline
+positive_claim_delta: {provisional_claims: [], expected_disposition: duplicate_evidence}
+next_action: commit_source_audit_then_verify_exact_nonduplication_and_consumers

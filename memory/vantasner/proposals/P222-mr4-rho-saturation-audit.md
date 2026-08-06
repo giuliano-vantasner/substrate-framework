@@ -75,6 +75,15 @@ before search, first for an unsupported option and then for a positional path.
 The repaired project-configured grep found no direct MR4/KSRF record. Direct
 registry audit identifies C-VEC-001 as the load-bearing owner.
 
+Attempt 0002 preserves and repairs the freeze memory section that began
+directly with a table. Attempt 0003 opens MR4 after the committed freeze and
+reuses P215's hash-identical clean seven-check execution. The audit finds that
+MR4.1/2 are numeric one-point residuals; MR4.3/4 reproduce C-VEC-001; MR4.5 is
+the direct conditional composition of C-VEC-001 and C-SK-001 with supplied
+`a=2`, rho mass, and electron mass; MR4.6 combines inconsistent convention
+readings; and MR4.7 omits selected needles while the ANW fit is load-bearing.
+No distinct claim or API remains.
+
 ## Debt Ledger
 
 The ledger tracks every exact identity, declared coefficient, physical import,
@@ -82,11 +91,11 @@ derivative-order ceiling, compatibility surface, consumer, and governed record.
 
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
-| MR4 body and predicates remain unopened | Open only after committed freeze | open |
-| HLS algebra may duplicate C-VEC-001 | Exact nonduplication and convention audit | open |
-| KSRF may be laundered from premise to derivation | Dependency and mutation audit | open |
-| A dimensionless value may be called parameter-free | Scaling and import inventory | open |
-| Leading reduction may be called a full-vector theorem | Derivative-order and EOM scope audit | open |
+| MR4 body and predicates remain unopened | Open only after committed freeze | discharged: seven-predicate source audit |
+| HLS algebra may duplicate C-VEC-001 | Exact nonduplication and convention audit | duplicate found; exact verifier open |
+| KSRF may be laundered from premise to derivation | Dependency and mutation audit | diagnosed as supplied; exact verifier open |
+| A dimensionless value may be called parameter-free | Scaling and import inventory | diagnosed: m_V m_e and a remain; exact verifier open |
+| Leading reduction may be called a full-vector theorem | Derivative-order and EOM scope audit | diagnosed: C-VEC-001 p4/p6 ceiling; exact verifier open |
 | Later units may grant backward authority | Pinned MR5-MR6 replay | open |
 | Governed records remain unresolved | Terminal disposition and synchronization | open |
 

@@ -1,0 +1,21 @@
+campaign: P222
+source_unit: MR4
+lexical_check_calls: 7
+runtime_checks: 7
+assertion_nodes: 1
+checks:
+  - {id: MR4.1, scientific_surface: unitary_gauge_one_form_relation, decision: numeric_one_point_specialization_of_accepted_C_VEC_001_context}
+  - {id: MR4.2, scientific_surface: Maurer_Cartan_and_on_shell_field_strength, decision: numeric_one_point_identity_with_declared_leading_EOM_duplicate_C_VEC_001}
+  - {id: MR4.3, scientific_surface: one_sixteenth_trace_factor, decision: exact_consequence_of_assumed_one_form_duplicate_C_VEC_001}
+  - {id: MR4.4, scientific_surface: leading_e_equals_g_and_dimension, decision: exact_duplicate_C_VEC_001}
+  - {id: MR4.5, scientific_surface: square_root_KSRF_common_unit_closure, decision: exact_conditional_composition_not_parameter_free}
+  - {id: MR4.6, scientific_surface: two_convention_numeric_bracket, decision: declared_inconsistent_readings_not_physical_bound}
+  - {id: MR4.7, scientific_surface: comparator_guard, decision: narrow_needle_guard_while_ANW_fit_is_load_bearing_comparator}
+headline_failures:
+  - e_equals_g_is_leading_order_not_exact_full_vector_elimination
+  - KSRF_a_two_and_physical_rho_identification_are_imported_not_derived
+  - m_V_and_m_e_remain_free_supplied_physical_inputs
+  - replacing_e_with_a_mass_ratio_does_not_make_the_model_parameter_free
+  - two_inconsistent_F_conventions_do_not_form_an_accepted_uncertainty_interval
+  - ANW_fit_5_45_enters_the_MR4_6_pass_predicate
+terminal_tally_interpretation: all_seven_source_predicates_execute_but_do_not_validate_physical_parameter_free_closure

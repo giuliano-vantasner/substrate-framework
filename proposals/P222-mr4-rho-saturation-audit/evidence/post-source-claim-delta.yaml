@@ -1,0 +1,17 @@
+campaign: P222
+source_unit: MR4
+provisional_claims: []
+decision: retain_no_claim_or_canonical_API
+nonduplication:
+  C-VEC-001: owns_exact_leading_e_equals_g_conditional_mass_relation_dimension_and_derivative_order_ceiling
+  C-SK-001: owns_exact_conditional_common_unit_iff
+  composed_square_root: direct_elimination_of_the_two_accepted_conditional_relations_plus_supplied_a_m_V_E_e
+excluded_source_surfaces:
+  - exact_full_vector_elimination
+  - derived_KSRF_or_a_two
+  - physical_rho_or_pion_identification
+  - parameter_free_generalized_model
+  - convention_uncertainty_bound
+  - comparator_free_complete_guard
+expected_disposition: duplicate_evidence
+next_gate: exact_primary_fresh_independent_nonduplication_and_MR5_MR6_graph_replay

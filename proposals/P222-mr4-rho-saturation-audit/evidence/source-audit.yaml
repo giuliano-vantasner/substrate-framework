@@ -1,0 +1,64 @@
+campaign: P222
+source_unit: MR4
+predicates:
+  MR4.1:
+    source_verdict: forty_digit_numeric_identity_at_one_substitution_point
+    framework_verdict: duplicate_context_not_an_exact_source_proof
+    owners: [C-VEC-001, C-CHI-001]
+    reason: >-
+      The bridge substitutes x=0.37 and y=-0.53 before checking the one-form.
+      The generic relation is algebraically valid in the declared convention,
+      but its accepted exact owner is C-VEC-001's half-connection reduction,
+      not this one-point residual.
+  MR4.2:
+    source_verdict: forty_digit_numeric_Maurer_Cartan_residual_at_one_point
+    framework_verdict: duplicate_leading_declared_action_context
+    owners: [C-VEC-001]
+    reason: >-
+      The differential identity is evaluated at one point, while V=alpha_par
+      is asserted as the heavy-vector equation rather than derived from a full
+      kinetic-vector action. C-VEC-001 owns the declared leading p4 theorem and
+      records p6 backreaction.
+  MR4.3:
+    source_verdict: exact_scalar_factor_given_the_one_form_plus_one_numeric_trace
+    framework_verdict: duplicate_C_VEC_001_normalization
+    owners: [C-VEC-001]
+    reason: >-
+      The constant (1/(2i))^4 equals 1/16 exactly, but the bridge does not
+      independently prove its assumed generic conjugation. Canonical ordered
+      sums and Pauli trace normalization already give the same coefficient.
+  MR4.4:
+    source_verdict: exact_positive_solve_e_equals_g_and_dimension_audit
+    framework_verdict: duplicate_C_VEC_001
+    owners: [C-VEC-001]
+    reason: >-
+      Matching identical 1/32-normalized p4 densities gives e=g and excludes
+      dimensionful e=F/2. The accepted claim already states this only at
+      leading derivative order under declared action data.
+  MR4.5:
+    source_verdict: exact_conditional_square_root_then_supplied_substitution
+    framework_verdict: dependent_composition_not_physical_or_parameter_free
+    owners: [C-VEC-001, C-SK-001]
+    reason: >-
+      Combining e=g, m_V^2=a*g^2*F^2, and U=F/e gives
+      e^2=m_V/(sqrt(a)*U). The source fixes a=2, U=16*pi*m_e, and imported
+      m_V,m_e. Eliminating symbols g and F does not eliminate these supplied
+      premises or derive KSRF, the rho identity, or a physical state.
+  MR4.6:
+    source_verdict: supplied_values_4_6198_and_6_5333_enclose_imported_fit_5_45
+    framework_verdict: declared_convention_collision_not_an_accepted_bound
+    reason: >-
+      The alternative changes the F convention inside KSRF while retaining the
+      same common-unit substitution. Without one accepted conversion for every
+      occurrence, the endpoints are inconsistent readings rather than a
+      physical uncertainty interval. Proximity to the ANW fit cannot select one.
+  MR4.7:
+    source_verdict: selected_nucleon_ratio_and_kappa_needles_absent
+    framework_verdict: incomplete_comparator_and_dependency_guard
+    reason: >-
+      The executable AST contains M_RHO, M_E, and E_ANW_IMPORTED=5.45; the last
+      enters the MR4.6 inside-bracket pass condition. Free symbols {m_V,m_e}
+      show retained inputs rather than parameter-free closure. Selected needle
+      absence cannot establish full provenance.
+headline_verdict: exact_leading_and_conditional_algebra_is_already_owned_while_physical_parameter_free_coupling_is_rejected
+positive_replacement: no_new_claim_or_API_exact_survivors_map_to_C_VEC_001_and_C_SK_001
