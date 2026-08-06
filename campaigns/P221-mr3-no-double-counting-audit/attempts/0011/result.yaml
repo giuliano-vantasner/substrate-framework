@@ -1,0 +1,13 @@
+campaign: P221
+attempt: 0011
+timestamp_utc: '2026-08-06T13:13:09Z'
+status: failed_commit_pathspec_repaired
+stage: promotion_commit
+command: git_add_explicit_campaign_and_removed_proposal_paths_then_commit
+exit_status: 128
+scientific_verdict_reached: false
+failure_class: staging_invocation
+cause: explicit_pathspec_named_the_already_moved_proposal_directory
+effects: campaign_renames_staged_but_content_and_generated_records_remained_unstaged
+repair: stage_the_complete_known_clean_transaction_with_git_add_A_then_commit
+continuation: commit_the_already_validated_v0_159_0_transaction

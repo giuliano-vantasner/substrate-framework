@@ -1,13 +1,13 @@
 campaign: P221
 claim: C-VAR-003
 verifier: verify.py
-sha256: b5545c5972d23659b95e01e41176eaf6badd1bb308ceb5e67436b7c17f4f3564
+sha256: 9036a19c4563cc8a01f7f78c134a877879c5cab85d0553f88a19efa1eaf5bd27
 oracle: exact_SymPy_algebra_plus_AST_registry_and_durable_source_scope_checks
 imports:
   - substrate_framework.source_audit.audit_numpy_trapezoid_compatibility
   - substrate_framework.variational.finite_functional_interaction_ledger
   - substrate_framework.verification.CheckLedger
-result: {exit_status: 0, checks: 26, elapsed_seconds: 2.21, maximum_resident_kib: 154492}
+result: {exit_status: 0, checks: 26, elapsed_seconds: 2.12, maximum_resident_kib: 154024}
 mutations:
   optimizer_second_centers: [-1, 0, 1]
   baseline_zero_center: 2_plus_sqrt_3

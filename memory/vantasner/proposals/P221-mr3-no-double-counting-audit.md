@@ -2,7 +2,7 @@
 description: Audit MR3 shared-functional and no-double-counting claims
 author: vantasner
 created: '2026-08-06T12:40:27Z'
-updated: '2026-08-06T13:00:15Z'
+updated: '2026-08-06T13:03:40Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -10,8 +10,8 @@ tags:
 - variational-composition
 - nonduplication
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P221 MR3 No-Double-Counting Audit
 
@@ -64,12 +64,12 @@ and physical state closure rank before numerical proximity. Queue-exposed values
 cannot be blinded; every remaining equation, solver detail, predicate, output,
 and consumer conclusion remains unopened through the validated freeze commit.
 
-## Proposed Claim Delta
+## Accepted Claim Delta
 
 The committed freeze proposed no identifier. After source inspection, P221
-provisionally reserves C-VAR-003 for the mixed variational interaction
+reserves C-VAR-003 for the accepted mixed variational interaction
 `inf(A+P+Q)+inf(A)-inf(A+P)-inf(A+Q)`. C-VAR-002 does not fix this four-infimum
-mixed difference. C-VAR-003 will prove its pointwise cancellation, both signs
+mixed difference. C-VAR-003 proves its pointwise cancellation, both signs
 and arbitrary real reach with nonnegative coercive quadratics, a common-
 minimizer sufficient condition, and failure of the converse. It imports no
 physical model or parameter.
@@ -123,6 +123,14 @@ MR4 is a pending input sibling. Review selects C-VAR-003 as
 terminalizing MR3 as qualified and rejecting its physical and universal
 overreach.
 
+Attempt 0008 promotes C-VAR-003 in v0.159.0 and terminally qualifies MR3.
+Canonical generation first stopped in preserved Attempt 0009 because a release
+clone accidentally included a `wc` output line before `schema_version`; removing
+that one non-YAML line repaired the transaction. The exact final state passes
+26 primary, 18 independent, and 10 graph checks, then the single integrated
+boundary passes all 1,929 tests in 220.61 pytest seconds and 234.62 seconds
+total, with 900 valid memory records and zero debt.
+
 ## Debt Ledger
 
 The ledger tracks every source predicate, common configuration, component
@@ -134,28 +142,25 @@ compatibility surface, consumer, and governed record.
 | MR3 body and predicates remain unopened | Open only after committed freeze | discharged: native reproduction and six-predicate audit |
 | One-functional prose may duplicate C-VAR-002 | Exact nonduplication audit | discharged: C-VAR-003 is the distinct four-infimum interaction theorem |
 | Bound or term values may be called sector masses | Slack and attainment audit | discharged: exact slack check passes and physical reading is excluded |
-| Supplied numerics may be called physical contributions | Dependency and comparator audit | diagnosed as unaccepted; review open |
-| Numeric solver evidence may be under-specified | Solver and refinement audit | diagnosed: no refinement or minimizer proof; no numeric claim retained |
+| Supplied numerics may be called physical contributions | Dependency and comparator audit | discharged: supplied and pending inputs are excluded from the accepted claim |
+| Numeric solver evidence may be under-specified | Solver and refinement audit | discharged: missing oracles recorded and no numeric claim retained |
 | Lexical absence may be treated as a theorem | Counterexample and scope audit | discharged: source forms naive_sum and exact both-sign/zero counterexamples pass |
 | Later MR units may grant backward authority | Pinned graph replay | discharged: 10 checks retain MR4-MR6 as pending |
-| Governed records remain unresolved | Terminal disposition and synchronization | open: promotion and one integrated gate |
+| Governed records remain unresolved | Terminal disposition and synchronization | discharged: v0.159.0 registry release docs memory and migration records agree |
 
-## Review and Promotion Plan
+## Review and Promotion Outcome
 
-Every MR3 predicate receives an individual four-axis review. A distinct claim
-requires fresh independent exact proof, an importable API, tests, claim review,
-release promotion, docs, memory, and full downstream replay. If nothing novel
-survives, MR3 still needs exact owners, durable rejected surfaces, a terminal
-qualified or duplicate disposition, generated queue, archived campaign, and
-record-sensitive validation proportional to the actual change.
+Every MR3 predicate received an individual four-axis review. C-VAR-003 has a
+fresh independent exact proof, importable API, tests, claim review, release,
+generated docs and memory, and downstream replay. MR3 is terminally qualified;
+rejected surfaces remain durable attempt and review evidence.
 
 ## Done Gate
 
-P221 closes only when the positive typed ledger exists, nonduplication and
-physical firewalls are proved, every consumer is replayed, all records agree,
-and the campaign debt ledger is empty.
+P221 closes with the positive typed ledger, proved nonduplication and physical
+firewalls, replayed consumers, synchronized records, and an empty debt ledger.
 
 ## Cross-References
 
-See v0.158.0, C-VAR-002, C-GSK-001, C-BPS-001/002, C-SK-001, P017, P107,
-P218-P220, MK5, MK6, MR1-MR6, NY1, and the framework migration effort.
+See v0.159.0, C-VAR-002/003, C-GSK-001, C-BPS-001/002, C-SK-001, P017, P107,
+P218-P221, MK5, MK6, MR1-MR6, NY1, and the framework migration effort.

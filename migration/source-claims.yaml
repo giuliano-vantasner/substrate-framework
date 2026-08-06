@@ -10,8 +10,8 @@ disposition_counts:
   duplicate_evidence: 9
   migrated: 3
   out_of_scope: 1
-  pending_adjudication: 4
-  qualified: 200
+  pending_adjudication: 3
+  qualified: 201
   refuted: 1
 phase_counts:
   phase-1: 6
@@ -14262,8 +14262,41 @@ units:
   dynamic_check_calls: 0
   assert_statements: 3
   terminal_tally_literal_present: true
-  disposition: pending_adjudication
-  accepted_claims: []
+  disposition: qualified
+  accepted_claims:
+  - C-VAR-003
+  - C-VAR-002
+  - C-BPS-001
+  - C-BPS-002
+  - C-GSK-001
+  - C-SK-001
+  qualification: MR3's distinct exact survivor is C-VAR-003, the sign-indefinite mixed difference of four
+    variational infima. Existing accepted claims type its joint-functional, lower-bound, conditional radial-density,
+    and common- unit surfaces. Its supplied physical masses, pending derived coupling, actual-minimizer
+    language, universal nonadditivity, additive-observable absence, double-counting diagnosis, and complete
+    comparator guard are not accepted.
+  evidence:
+  - campaigns/P221-mr3-no-double-counting-audit/verify.py
+  - campaigns/P221-mr3-no-double-counting-audit/reviews/independent_variational_interaction_review.py
+  - campaigns/P221-mr3-no-double-counting-audit/reviews/replay_source_graph.py
+  - campaigns/P221-mr3-no-double-counting-audit/reviews/C-VAR-003-claim-review.md
+  - campaigns/P221-mr3-no-double-counting-audit/reviews/source_adjudication.md
+  - campaigns/P221-mr3-no-double-counting-audit/reviews/MR3-disposition-review.md
+  - campaigns/P221-mr3-no-double-counting-audit/evidence/source-reproduction.yaml
+  - campaigns/P221-mr3-no-double-counting-audit/evidence/source-audit.yaml
+  - campaigns/P221-mr3-no-double-counting-audit/evidence/check-adjudication.yaml
+  - campaigns/P221-mr3-no-double-counting-audit/evidence/numeric-scope-audit.yaml
+  - campaigns/P221-mr3-no-double-counting-audit/evidence/nonduplication-audit.yaml
+  - campaigns/P221-mr3-no-double-counting-audit/evidence/dependency-audit.yaml
+  - campaigns/P221-mr3-no-double-counting-audit/evidence/consumer-audit.yaml
+  - campaigns/P221-mr3-no-double-counting-audit/evidence/compatibility-audit.yaml
+  - memory/vantasner/decisions/MR3-qualified-review.md
+  note: P221 closes 26 primary, 18 independent, and 10 graph checks plus 14 focused tests. MR3's reported
+    positive mixed surrogate is one unrefined finite-domain solve_bvp stationary-branch example, while
+    exact nonnegative coercive quadratics realize both signs and zero. The source forms naive_sum after
+    claiming no bridge forms the sum, and its guard never consumes derived_snapshot or recomputes the
+    four solved branches. MR3, MR5, and MR6 use current SciPy trapezoid; no version event is a scientific
+    failure.
 - source_unit: MR4
   phase: phase-44
   path: merged-framework/bridges/phase-44/bridge_MR4_e_from_rho_saturation.py

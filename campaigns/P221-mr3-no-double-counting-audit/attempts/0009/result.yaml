@@ -1,0 +1,21 @@
+campaign: P221
+attempt: 0009
+timestamp_utc: '2026-08-06T13:06:27Z'
+status: failed_generation_repaired
+stage: canonical_consumer_generation
+commands:
+  - inventory_claims
+  - render_docs
+  - render_memory
+exit_status: 1
+scientific_verdict_reached: false
+failure_class: release_manifest_construction
+cause: >-
+  The apply-patch payload used to clone the prior release accidentally included
+  the preceding wc output line, leaving an invalid scalar before schema_version.
+effects:
+  migration_inventory: generated
+  documentation: generated
+  accepted_memory: stopped_before_write
+repair: remove_the_single_extraneous_line_then_rerun_all_three_generators
+continuation: regenerate_and_validate_the_exact_final_transaction

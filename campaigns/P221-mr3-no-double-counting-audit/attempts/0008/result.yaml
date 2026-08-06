@@ -1,0 +1,35 @@
+campaign: P221
+attempt: 0008
+timestamp_utc: '2026-08-06T13:03:40Z'
+status: passed_after_repaired_generation_attempt
+stage: governed_promotion_and_integrated_gate
+claim: C-VAR-003
+release: v0.159.0
+source_disposition: {MR3: qualified}
+expected_gate:
+  claims: 202
+  accepted_claims: 202
+  active_proposals: 0
+  migration: {total: 218, pending: 3, partial: 0, qualified: 201, duplicate_evidence: 9}
+targeted_post_promotion:
+  generation: passed_after_attempt_0009_repair
+  primary: {checks: 26, exit_status: 0, elapsed_seconds: 2.12}
+  independent: {checks: 18, exit_status: 0, elapsed_seconds: 1.51}
+  graph: {checks: 10, exit_status: 0, elapsed_seconds: 2.29}
+  record_preflight: {claims: 202, accepted: 202, proposals: 0, pending_units: 3}
+validation:
+  command: scripts/validate.sh
+  workflow_claims: 202
+  workflow_accepted_claims: 202
+  active_proposals: 0
+  migration: {total: 218, pending: 3, partial: 0, qualified: 201, duplicate_evidence: 9}
+  memory_records: 900
+  tests: 1929
+  pytest_seconds: 220.61
+  total_wall_seconds: 234.62
+  maximum_resident_kib: 243384
+  exit_status: 0
+  terminal_tally: ALL_REPOSITORY_WORKFLOW_CHECKS_PASS
+scientific_verdict: C_VAR_003_accepted_and_MR3_qualified_with_physical_overreach_excluded
+debt: []
+continuation: commit_v0_159_0_promotion_then_freeze_MR4

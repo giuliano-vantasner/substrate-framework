@@ -1,0 +1,16 @@
+campaign: P221
+attempt: 0010
+timestamp_utc: '2026-08-06T13:12:36Z'
+status: failed_command_shape_repaired
+stage: post_gate_affected_memory_validation
+command: memory_validate_four_positional_paths
+exit_status: 2
+scientific_verdict_reached: false
+failure_class: invocation
+cause: memory_validate_accepts_exactly_one_path_per_invocation
+already_passed_before_failure:
+  repository_validation: {claims: 202, accepted: 202, proposals: 0, pending_units: 3}
+  generated_docs_check: passed
+  generated_memory_check: passed
+repair: invoke_memory_validate_once_per_affected_record
+continuation: finish_record_only_checks_without_rerunning_the_full_suite

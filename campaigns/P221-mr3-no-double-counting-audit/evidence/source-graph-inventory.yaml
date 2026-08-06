@@ -5,7 +5,7 @@ lexical_predicates: 25
 assertions: 8
 aggregate_checks: 10
 verifier_sha256: a8372369642618588f080a73a2241117434aa447f47bf69b310a8933dfb9eaba
-result: {exit_status: 0, checks: 10, elapsed_seconds: 2.35, maximum_resident_kib: 157664}
+result: {exit_status: 0, checks: 10, elapsed_seconds: 2.29, maximum_resident_kib: 157884}
 pending_sibling: MR4
 direct_reverse_consumers: [MR5, MR6]
 execution_policy:

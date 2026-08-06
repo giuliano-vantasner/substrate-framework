@@ -10,9 +10,9 @@ statement: >-
   scaling of exact positive negative or zero examples. A common minimizer of A
   P Q implies I=0, but I=0 does not imply a common minimizer.
 verification: symbolic_verified
-review: audited
+review: accepted
 compatibility: compatible_extension
-epistemic: proposed
+epistemic: active
 dependencies: []
 excluded:
   - existence_or_attainment_for_any_field_model

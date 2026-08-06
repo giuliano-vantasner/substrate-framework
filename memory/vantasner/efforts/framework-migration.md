@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-06T10:54:05Z'
+updated: '2026-08-06T13:03:40Z'
 tags:
 - substrate-framework
 - effort
@@ -23,7 +23,7 @@ The effort began from the null release at framework commit `6220237`: at that co
 
 The predecessor evidence baseline is `/home/dan/substrate` commit `6d1f4e0`, which is also its recorded `origin/main` at effort start. The predecessor worktree is dirty with later Phase 47/48 and memory artifacts; those uncommitted files are excluded from the source baseline unless admitted later through a separately recorded source-baseline revision. A source commit supplies provenance and candidate evidence, never authority.
 
-The current accepted frontier is `v0.156.0`, containing one hundred ninety-eight
+The current accepted frontier is `v0.159.0`, containing two hundred two
 claims. The campaign ledger below preserves the sequential additions. P145 adds
 C-MED-005's exact SI electromagnetic-to-mechanical conversion
 dimensions, speed-matching iff, free calibration orbit, and amplitude-aware
@@ -138,7 +138,7 @@ Candidate strategies are ranked by accepted-dependency closure, assumption and p
 Work proceeds dependency-first and continues after failed source claims.
 
 1. [x] Establish framework authority, predecessor commit boundary, git state, tool availability, and memory state.
-2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 17 pending, 0 partially migrated, 3 migrated, 188 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope unit.
+2. [ ] Adjudicate the generated 218-unit bridge queue from commit `6d1f4e0`; the scope and candidate-unit inventory are complete, while exact claim decomposition has 3 pending, 0 partially migrated, 3 migrated, 201 qualified, 9 duplicate-evidence, 1 refuted, and 1 out-of-scope unit.
 3. [x] Freeze and adjudicate the first claim ladder and matching P001 campaign proposal.
 4. [x] Implement the first selected construction through importable APIs.
 5. [x] Audit the first exact claims and their mutation sensitivity.
@@ -2566,28 +2566,42 @@ focused tests pass. The graph pins 15 nodes, 99 predicates, and 20 assertions;
 MR2 has no integration surface, and pending MR3/MR5/MR6 use current SciPy
 `trapezoid`. The unchanged P219 1,922-test boundary is reused.
 
+P221 qualifies MR3 and adds C-VAR-003 in v0.159.0. The exact theorem defines
+the mixed difference among the infima of `A`, `A+P`, `A+Q`, and `A+P+Q` on one
+common domain. Its pointwise counterpart cancels, but separate optimization
+gives no universal sign: nonnegative coercive quadratics realize positive,
+negative, and zero values and positive scaling reaches every real value. A
+common minimizer is sufficient for zero but not necessary. MR3's one positive
+solve_bvp surrogate lacks refinement and minimizer proof; its physical inputs
+and pending MR4 coupling lack accepted closure; it forms `naive_sum` despite
+its absence claim; and its final guard does not recompute solved branches.
+Twenty-six primary, 18 fresh independent, 10 graph checks, and 14 focused tests
+pass. MR3, MR5, and MR6 use current SciPy `trapezoid`, and no version-only event
+is treated as scientific failure. The integrated boundary validates 900 memory
+records and passes all 1,929 tests in 220.61 pytest seconds and 234.62 seconds
+total wall time, at 243,384 KiB peak RSS and exit zero.
+
 ## Canonicalization
-The registry, `v0.158.0` manifest, current release, generated claim index, and
-generated framework memory agree on two hundred one accepted claims.
-P001 through P220 are frozen under `campaigns/`; proposal,
+The registry, `v0.159.0` manifest, current release, generated claim index, and
+generated framework memory agree on two hundred two accepted claims.
+P001 through P221 are frozen under `campaigns/`; proposal,
 attempt, review-work, and effort memory remain distinct from accepted-state
-memory. The regenerated migration queue agrees on 4 pending, 0 partial, 3
-migrated, 200 qualified, 9 duplicate-evidence, 1 refuted, and 1 out-of-scope
-unit. P219 remains the most recent accepted-surface and full integrated release
-boundary; P220 is the most recent no-release record boundary.
+memory. The regenerated migration queue agrees on 3 pending, 0 partial, 3
+migrated, 201 qualified, 9 duplicate-evidence, 1 refuted, and 1 out-of-scope
+unit. P221 is the most recent accepted-surface and full integrated release
+boundary.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 4
-pending, 3 migrated, 200 qualified, 9 duplicate-evidence, 1 refuted, and 1
+The effort remains active. D4 is discharged, but D1 remains open with 3
+pending, 3 migrated, 201 qualified, 9 duplicate-evidence, 1 refuted, and 1
 out-of-scope bridge unit. GK3D5 and GK3D6 are terminal without accepting a
 quantum determinant particle, universal matching, independent physical scale,
 absolute coupling accuracy, physical weak angle, or substrate mechanism.
 
 The WM7-WM10 source cycle, GC1-GC6, and MK1-MK6 are terminal without backward
-authority. P220 closes MR2 without duplicating accepted convention algebra or
-promoting its physical mass narrative. P221 next audits MR3's no-double-counting
-claim against C-VAR-002 and the terminal MR1/MR2 evidence. The remaining order
-is MR3 through MR6.
+authority. P221 closes MR3 with the exact sign-indefinite interaction theorem
+without promoting its physical mass narrative. P222 next audits MR4's proposed
+rho-saturation coupling derivation. The remaining order is MR4 through MR6.
 
 ## Cross-References
 The governing sources are `AGENTS.md`, `.agents/skills/physics-erdos-loop/SKILL.md`, `governance/claims.yaml`, `governance/releases/current.yaml`, and the proposal and claim-review contracts under `memory-templates/`.

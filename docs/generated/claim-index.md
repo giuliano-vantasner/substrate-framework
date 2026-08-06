@@ -1713,6 +1713,15 @@ Let X be a nonempty set, let n be a positive integer, and let E_1,...,E_n be rea
 - Compatibility: `compatible_extension`
 - Dependencies: none
 
+## C-VAR-003
+
+Let X be a nonempty set and let A, P, and Q be real-valued functionals on X such that the infima m_A=inf_X A, m_AP=inf_X(A+P), m_AQ=inf_X(A+Q), and m_APQ=inf_X(A+P+Q) are finite real numbers. Define the mixed variational interaction I=m_APQ+m_A-m_AP-m_AQ, equivalently the joint increment above A minus the two separate increments. The corresponding pointwise expression (A+P+Q)+A-(A+P)-(A+Q) vanishes identically, so I is entirely an effect of the four separate optimizations. It is symmetric under P and Q and invariant under consistent additive constants in A, P, or Q. It has no universal sign: even continuous nonnegative coercive quadratics on the real line realize positive, negative, and zero values, and positive scaling realizes every real value. A common minimizer of A, P, and Q implies I=0, but I=0 does not imply such a common minimizer. This theorem infers no infimum, existence, attainment, or interaction for a particular field model and supplies no physical decomposition, coefficient, state, sector mass, binding energy, double-counting diagnosis, observation, or substrate mechanism.
+
+- Accepted in: `v0.159.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: none
+
 ## C-VEC-001
 
 Let x be a nonempty exact real matrix with three columns, define L_i=i*x_i^a*sigma_a using the Pauli convention of C-CHI-001, let G_ij=x_i dot x_j, I1=Tr(G)^2, and I2=Tr(G^2), and use ordered sums over i,j. Then sum_ij |x_i cross x_j|^2=I1-I2 and sum_ij Tr([L_i,L_j]^2)=-8*(I1-I2). Separately declare positive exact kappa and dimensionless g. The quadratic density kappa*sum_ia(v_i^a-x_i^a/2)^2 has the unique stationary point v=x/2 and positive Hessian 2*kappa*I. If L obeys Maurer-Cartan flatness, the half connection Gamma_i=L_i/2 has F_ij(Gamma)=-[L_i,L_j]/4. Substitution into the separately declared curvature density -sum_ij Tr(F_ij*F_ij)/(2*g^2) gives -sum_ij Tr([L_i,L_j]^2)/(32*g^2)=(I1-I2)/(4*g^2), so the equally normalized leading Skyrme coupling is e=g. With L=O(p), this density is order p^4; the kinetic vector equation changes the field at order p^3/M^2 and first changes the action at order p^6/M^2 under the supplied heavy-scale counting. Conditional on the separately declared relation m_V^2=a*g^2*F^2 with positive dimensionless a and equal mass dimensions for m_V and F, e=g=m_V/(sqrt(a)*F) is dimensionless. This is an exact current-algebra and conditional leading-connection theorem. It does not derive HLS field content, a physical rho or pion, the KSRF premise or a=2, B1, c4, J1, a full-vector solution, Skyrmion stabilization, a medium response, particle values, or a substrate realization.

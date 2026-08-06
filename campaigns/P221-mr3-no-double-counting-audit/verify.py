@@ -265,11 +265,18 @@ def main() -> int:
     )
     registry = yaml.safe_load((ROOT / "governance/claims.yaml").read_text())
     claims = {entry["id"]: entry for entry in registry["claims"]}
+    proposal = yaml.safe_load((CAMPAIGN / "proposal.yaml").read_text())
+    interaction_claim_state_ok = (
+        claims["C-VAR-003"]["review"] == "accepted"
+        and claims["C-VAR-003"]["dependencies"] == []
+        if proposal["status"] == "accepted"
+        else "C-VAR-003" not in claims
+    )
     checks.check(
         "C-VAR-002 owns joint order but not the four-infimum interaction",
         claims["C-VAR-002"]["review"] == "accepted"
         and "inf_{x in X} sum_i E_i(x)" in claims["C-VAR-002"]["statement"]
-        and "C-VAR-003" not in claims,
+        and interaction_claim_state_ok,
     )
     checks.check(
         "the exact interaction API adds no physical field parameter or comparator",

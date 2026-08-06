@@ -1,0 +1,92 @@
+campaign: P221
+title: MR3 no-double-counting and variational interaction audit
+source_baseline: substrate@6d1f4e0
+source_units: [MR3]
+base_release: v0.158.0
+accepted_release: v0.159.0
+freeze_commit: 1ab0369
+source_audit_commit: 65aabfd
+implementation_commit: e348b07
+review_commit: 1717f17
+adjudicated_at: '2026-08-06T13:03:40Z'
+selected_candidates:
+  - {id: A, reason: Corrected_threshold_change_is_retained_only_as_conditional_convention_evidence.}
+  - {id: B, reason: Shared_profile_typing_separates_one_functional_from_separate_infima.}
+  - {id: C, reason: Exact_four_infimum_interaction_is_the_distinct_positive_object.}
+  - {id: D, reason: Bound_and_profile_term_slack_prevents_sector_mass_conflation.}
+  - {id: E, reason: Accepted_dependency_firewall_rejects_the_physical_double_counting_story.}
+  - {id: G, reason: MR3_receives_an_individual_terminal_qualified_disposition.}
+competing_candidates:
+  - {id: F, decision: rejected_after_nonduplication_found_C_VAR_003_distinct}
+claims:
+  - {id: C-VAR-003, decision: accepted_symbolic_verified_compatible_extension_active}
+unpromoted_surfaces:
+  - {id: physical_sector_masses, reason: Supplied_inputs_pending_MR4_and_no_accepted_state_map.}
+  - {id: universal_positive_interaction, reason: One_unrefined_stationary_branch_and_exact_both_sign_counterexamples.}
+  - {id: actual_full_minimizer, reason: Solve_bvp_stationarity_without_global_minimization_or_refinement_oracle.}
+  - {id: additive_observable_absence, reason: Lexical_absence_is_not_a_theorem_and_source_forms_naive_sum.}
+  - {id: double_counting_diagnosis, reason: No_two_accepted_physical_masses_or_additive_observable.}
+  - {id: complete_comparator_guard, reason: Solved_branches_are_not_recomputed_and_derived_snapshot_is_unused.}
+evidence:
+  primary_verifier: verify.py
+  independent_rederivation: reviews/independent_variational_interaction_review.py
+  source_graph_replay: reviews/replay_source_graph.py
+  claim_review: reviews/C-VAR-003-claim-review.md
+  source_disposition_review: reviews/MR3-disposition-review.md
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  source_reproduction: evidence/source-reproduction.yaml
+  compatibility_audit: evidence/compatibility-audit.yaml
+  source_audit: evidence/source-audit.yaml
+  check_adjudication: evidence/check-adjudication.yaml
+  numeric_scope_audit: evidence/numeric-scope-audit.yaml
+  formula_freeze: evidence/formula-freeze.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  source_graph_inventory: evidence/source-graph-inventory.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  implementation_audit: evidence/implementation-audit.yaml
+  impact_record: evidence/impact-analysis.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  independent_provenance: evidence/independent-provenance.yaml
+  focused_test_replay: evidence/focused-test-replay.yaml
+source_disposition: {MR3: qualified}
+accepted_mappings: [C-VAR-003, C-VAR-002, C-BPS-001, C-BPS-002, C-GSK-001, C-SK-001]
+compatibility:
+  MR3_surface: current_scipy_trapezoid
+  MR4_surface: no_sampled_integration
+  MR5_MR6_surfaces: current_scipy_trapezoid
+  scientific_failures_from_version_events: 0
+release_change: v0.159.0
+validation_commands:
+  - PYTHONPATH_src_python_campaign_verify
+  - PYTHONPATH_src_python_independent_variational_interaction_review
+  - PYTHONPATH_src_python_source_graph_replay
+  - pytest_14_focused_variational_tests_and_package_export_probe
+  - scripts_validate_sh_single_integrated_boundary
+  - git_diff_check
+integrated_gate:
+  status: passed
+  workflow_claims: 202
+  workflow_accepted_claims: 202
+  active_proposals: 0
+  migration_total: 218
+  migration_pending: 3
+  migration_partial: 0
+  migration_qualified: 201
+  migration_duplicate_evidence: 9
+  memory_records: 900
+  generated_docs_current: true
+  generated_memory_current: true
+  physics_skill_valid: true
+  tests: 1929
+  pytest_seconds: 220.61
+  total_wall_seconds: 234.62
+  maximum_resident_kib: 243384
+  exit_status: 0
+  terminal_tally: ALL_REPOSITORY_WORKFLOW_CHECKS_PASS
+  diff_check: passed
+debt: []
+status: accepted
