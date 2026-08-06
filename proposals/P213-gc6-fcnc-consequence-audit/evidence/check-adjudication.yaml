@@ -1,0 +1,31 @@
+campaign: P213
+source_unit: GC6
+checks:
+  GC6.1:
+    source_result: pass
+    decision: qualified_corrected_numeric_model_evidence
+    promoted_claims: [C-MIX-004]
+    exclusions: [source_left_basis_transform, monotone_suppression, physical_FCNC_discharge, derived_three_doublets]
+  GC6.2:
+    source_result: pass
+    decision: accepted_composition_only
+    promoted_claims: []
+    retained: supplied_WM7_table_boundary_27_over_70_at_counts_3_3
+  GC6.3:
+    source_result: pass
+    decision: accepted_composition_only
+    promoted_claims: []
+    retained: supplied_WM7_table_fermion_only_3_over_8
+  GC6.4:
+    source_result: pass
+    decision: record_only_no_new_evidence
+    promoted_claims: []
+  GC6.5:
+    source_result: pass
+    decision: finite_lexical_software_evidence
+    promoted_claims: []
+  GC6.6:
+    source_result: pass
+    decision: rejected_as_scientific_dependency_guard
+    promoted_claims: []
+terminal_disposition: qualified

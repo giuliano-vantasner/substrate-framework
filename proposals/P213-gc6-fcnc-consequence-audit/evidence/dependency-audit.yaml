@@ -1,0 +1,9 @@
+campaign: P213
+claims:
+  C-MIX-004:
+    dependencies: [C-MIX-001]
+    imported_inputs: [finite_nonempty_square_complex_matrices, complex_scalar_weights, declared_unitary_left_basis, declared_unitary_right_basis, exact_diagonal_mass_basis]
+    excluded_inputs: [physical_Yukawa_interaction, scalar_field_content, vacuum_expectation_values, generation_map, observed_flavor_bound, localization_geometry]
+pending_dependencies: []
+hidden_fitted_constants: []
+result: closed_at_v0.154.0

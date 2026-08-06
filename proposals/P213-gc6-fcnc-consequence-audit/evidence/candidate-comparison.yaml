@@ -1,0 +1,19 @@
+campaign: P213
+criteria_order:
+  - exact_field_interaction_and_basis_typing
+  - accepted_invariant_compatibility
+  - assumption_and_parameter_economy
+  - basis_covariance_dimensions_signs_and_limits
+  - load_bearing_mutation_sensitivity
+  - novelty
+  - terminal_closure
+decisions:
+  A: selected_exact_multi_scalar_mass_basis_ledger
+  B: rejected_as_new_claim_because_C_OVL_002_owns_the_conditional_tail_surface
+  C: retained_as_conditional_numeric_model_evidence_not_a_physical_construction
+  D: rejected_because_C_MIX_004_is_a_minimum_novel_exact_surface
+  E: selected_as_exact_supplied_table_composition
+  F: selected_to_expose_incoherent_boundary_only_mutations
+  G: selected_as_finite_software_guard_scope_audit
+  H: selected_pending_terminal_disposition_and_promotion
+comparator_values_used_for_selection: false

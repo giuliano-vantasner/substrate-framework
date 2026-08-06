@@ -2,7 +2,7 @@
 description: Audit GC6 neutral-scalar flavor consequence and final GC verdict
 author: vantasner
 created: '2026-08-06T08:39:21Z'
-updated: '2026-08-06T08:58:09Z'
+updated: '2026-08-06T09:07:14Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -199,6 +199,16 @@ Pöschl modes plus adaptive quadrature. All 192 focused package and accepted-
 consumer tests pass, and the new canonical module has no NumPy or quadrature
 surface.
 
+Attempt 0010 refreshes the GitNexus index at implementation commit `8f5c8fb`
+and falls back to its project-local CLI after the MCP transport closes. Both
+new functions are low risk with no affected execution process. The exported
+dataclass receives a medium graph label only because its package-root export
+fans out conservatively to unrelated importers; static symbol search narrows
+the actual consumers to the new module, package export, P213 verifier, and
+focused tests. The 16-node terminal source graph pins 133 predicates and 22
+assertions, passes 39 checks, imports no later unit, and has zero quadrature
+surface.
+
 ## Debt Ledger
 
 The P213 ledger tracks field species, scalar profiles, doublet labels, fermion
@@ -210,15 +220,15 @@ generated state.
 
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
-| Source predicates remain blinded | Reproduce once after committed freeze | open |
-| Small off-diagonal entries may be mistaken for no FCNC | Derive the exact mass-basis coupling criterion | open |
-| Free geometry may manufacture suppression | Enumerate and mutate every load-bearing overlap input | open |
-| Three scalar doublets and generations may be imported from rejected GC claims | Audit every field and count map against accepted authority | open |
-| A gauge trace may change incoherently with count | Rebuild representation rows and coefficients together | open |
-| Gauge-only running may be presented as flavor-complete | Preserve C-RGE-005's Yukawa and matching omissions | open |
-| A finite anti-fit guard may masquerade as science | Audit reachable value paths and counterexamples | open |
-| Later units may grant backward authority | Replay the terminal graph without MK or MR imports | open |
-| Compatibility may masquerade as science | Audit every executable legacy access shape | open |
+| Source predicates remain blinded | Reproduce once after committed freeze | discharged by attempts 0002 and 0003 |
+| Small off-diagonal entries may be mistaken for no FCNC | Derive the exact mass-basis coupling criterion | discharged by C-MIX-004 and attempts 0008-0009 |
+| Free geometry may manufacture suppression | Enumerate and mutate every load-bearing overlap input | discharged as conditional model evidence by attempts 0003 and 0009 |
+| Three scalar doublets and generations may be imported from rejected GC claims | Audit every field and count map against accepted authority | discharged by individual source review |
+| A gauge trace may change incoherently with count | Rebuild representation rows and coefficients together | discharged by coherent trace counterfactual |
+| Gauge-only running may be presented as flavor-complete | Preserve C-RGE-005's Yukawa and matching omissions | discharged by source and claim reviews |
+| A finite anti-fit guard may masquerade as science | Audit reachable value paths and counterexamples | discharged as finite lexical evidence only |
+| Later units may grant backward authority | Replay the terminal graph without MK or MR imports | discharged by attempt 0010 |
+| Compatibility may masquerade as science | Audit every executable legacy access shape | discharged with zero surface and zero scientific version failures |
 | Promotion and generated state remain open | Complete reviews, disposition, generation, and integrated gate if required | open |
 
 ## Review and Promotion Plan

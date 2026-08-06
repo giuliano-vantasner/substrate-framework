@@ -1,0 +1,16 @@
+campaign: P213
+timestamp_utc: '2026-08-06T09:07:14Z'
+artifact: reviews/replay_source_graph.py
+sha256: 1483e7a0151f371e8de8593eb8ed1714ab69e65f3f13fa203eace6480bbea5c0
+runtime_checks: 39
+static_check_calls: 39
+mutation_sensitive_calls: 0
+assert_statements: 0
+source_nodes: 16
+source_static_predicates: 133
+source_assertions: 22
+native_predecessor_executions: 0
+quadrature_surface_nodes: 0
+terminal_tally: ALL_39_CHECKS_PASS
+exit_status: 0
+status: passed

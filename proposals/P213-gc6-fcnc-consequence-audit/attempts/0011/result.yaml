@@ -1,0 +1,32 @@
+attempt: 11
+campaign: P213
+stage: narrow_review_validation
+status: passed_after_invocation_repair
+failed_invocations:
+  - command: validate_skill.py_without_skill_directory
+    exit_status: 1
+    classification: procedural_CLI_usage
+  - command: memory_validate_without_path
+    exit_status: 2
+    classification: procedural_CLI_usage
+  - command: memory_validate_repository_relative_path_without_base
+    exit_status: 1
+    classification: procedural_CLI_base_resolution
+repair:
+  skill_command: .venv/bin/python_validate_skill.py_.agents/skills/physics-erdos-loop
+  skill_exit_status: 0
+  memory_command: memory_validate_--base_/home/dan/substrate-framework_memory/vantasner
+  memory_files_validated: 516
+  memory_exit_status: 0
+other_narrow_results:
+  repository_claims: 196
+  accepted_claims: 196
+  migration_units: 218
+  pending_units: 12
+  proposal_count: 1
+  P213_yaml_files_parsed: 30
+  docs_current: true
+  generated_memory_current: true
+  git_diff_check: passed
+scientific_claim_or_threshold_changed: false
+continuation: commit_review_and_terminal_graph_evidence_then_open_promotion_transaction

@@ -1,0 +1,21 @@
+campaign: P213
+direct_consumers:
+  - src/substrate_framework/__init__.py
+  - tests/test_multi_scalar_flavor.py
+  - proposals/P213-gc6-fcnc-consequence-audit/verify.py
+independent_nonconsumer:
+  - proposals/P213-gc6-fcnc-consequence-audit/reviews/independent_flavor_review.py
+accepted_adjacent_consumers_replayed:
+  - tests/test_matrix_decompositions.py
+  - tests/test_overlap_compressions.py
+  - tests/test_normalized_overlaps.py
+  - tests/test_translated_localization.py
+  - tests/test_translated_overlap_matrices.py
+  - tests/test_common_phase_matrices.py
+  - tests/test_phase_interactions.py
+  - tests/test_gauge_beta.py
+  - tests/test_gauge_running.py
+  - tests/test_source_audit.py
+source_reverse_consumers: [GC5]
+later_MK_or_MR_consumers: []
+existing_consumer_breakage: none

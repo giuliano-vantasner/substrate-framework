@@ -1,0 +1,23 @@
+attempt: 10
+campaign: P213
+stage: impact_and_terminal_graph_materialization
+status: passed
+gitnexus:
+  indexed_commit: 8f5c8fb
+  mcp_transport: closed
+  fallback: project_local_CLI
+  function_risk: low
+  exported_dataclass_risk: medium_package_root_fanout
+  affected_processes: 0
+static_consumer_result: additive_API_with_no_existing_symbol_change
+source_graph:
+  nodes: 16
+  direct_authority_dependencies: 15
+  reverse_consumers: [GC5]
+  static_check_calls: 133
+  assertions: 22
+  quadrature_surface_nodes: 0
+  replay_checks: 39
+  replay_exit_status: 0
+scientific_version_failures: 0
+continuation: complete_individual_reviews_and_governance

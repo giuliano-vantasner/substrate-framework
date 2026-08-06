@@ -1,0 +1,21 @@
+campaign: P213
+root: GC6
+nodes: [EM6, FG2, FG4, GC1, GC2, GC3, GC4, GC5, GC6, MH2, WM10, WM2, WM3, WM7, WM8, WM9]
+direct_authority_dependencies: [EM6, FG2, FG4, GC1, GC2, GC3, GC4, GC5, MH2, WM10, WM2, WM3, WM7, WM8, WM9]
+reverse_consumers: [GC5]
+node_count: 16
+static_check_calls: 133
+assert_statements: 22
+native_source_executions_by_graph_replay: 0
+compatibility_confirmation_executions: []
+cycle_policy: >-
+  GC5 is a terminal direct authority input to GC6 only at its qualified mapping.
+  GC5's earlier candidate edge back to then-future GC6 remains nonauthoritative
+  and supplied no accepted GC5 premise.
+future_status_policy: >-
+  No later MK or MR unit depends on GC6 in the generated candidate graph. The
+  single GC5 reverse edge is frozen without granting backward authority.
+quadrature_policy: >-
+  Every node is AST scanned for direct imported dynamic and eager NumPy
+  trapezoidal-integration access. All sixteen nodes have zero surface, so no
+  compatibility execution or alias replay is required.
