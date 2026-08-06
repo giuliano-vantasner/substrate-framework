@@ -1,0 +1,12 @@
+attempt: 0008
+campaign: P212
+timestamp_utc: '2026-08-06T08:21:37Z'
+kind: source_graph_assertion_total_repair
+initial_result: node_set_passed_then_graph_total_check_failed
+recorded_assertions: 18
+recomputed_assertions: 19
+mechanism: manual_sum_omitted_one_assertion_while_all_per_node_values_were_correct
+native_source_executions: 0
+scientific_candidate_rejected: false
+status: repaired
+continuation: replay_the_corrected_13_node_107_predicate_19_assertion_graph

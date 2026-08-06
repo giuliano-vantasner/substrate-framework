@@ -160,6 +160,15 @@ fresh independent exact checks pass, followed by 135 focused package and
 accepted-consumer tests. The canonical surfaces execute no quadrature and add
 no legacy NumPy compatibility path.
 
+Attempt 0008 preserves a pre-replay graph inventory typo: all per-node values
+were correct, but their assertion total is 19 rather than 18. The graph stopped
+after the node-set check and executed no predecessor source.
+
+Attempt 0009 closes 34 terminal graph checks over 13 hash-pinned nodes, 107
+static predicates, and 19 assertions. Ten authority dependencies are terminal,
+GC6 remains nonauthoritative, six reverse consumers retain independent future
+status, and all nodes have zero quadrature surface.
+
 ## Debt Ledger
 
 The P212 ledger tracks density, multiplier, translation, amplitude, width,
@@ -175,7 +184,7 @@ counts, compatibility, consumers, and generated state.
 | A stability label may import an absent theorem | Audit EM6 and every accepted dependency at source | discharged; the quote is nonauthoritative prose and C-QBL-001 withholds stability |
 | Field species, solutions, charges, and roles may be conflated | Materialize typed sets and incidence countermodels | discharged by three incompatible finite role models |
 | Capacity may be mistaken for occupied count | Test smaller counts and absent-selection models | discharged by all-N surrogate minima and the N=4 square |
-| Pending GC6 may grant backward authority | Replay without importing GC6 | open |
+| Pending GC6 may grant backward authority | Replay without importing GC6 | discharged by the 34-check frozen graph |
 | Compatibility may masquerade as science | Audit every executable access shape | discharged; GC5 has zero quadrature surface |
 | Promotion and generated state remain open | Complete reviews, disposition, generation, and integrated gate if required | open |
 

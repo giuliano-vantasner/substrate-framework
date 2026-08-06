@@ -1,0 +1,20 @@
+campaign: P212
+root: GC5
+nodes: [EL2, EM6, FG4, GC1, GC2, GC3, GC4, GC5, GC6, MH2, WM10, WM7, WM9]
+direct_authority_dependencies: [EM6, FG4, GC1, GC2, GC3, GC4, MH2, WM10, WM7, WM9]
+nonauthoritative_cycle_dependencies: [GC6]
+reverse_consumers: [EL2, GC1, GC2, GC3, GC4, GC6]
+node_count: 13
+static_check_calls: 107
+assert_statements: 19
+native_source_executions_by_graph_replay: 0
+compatibility_confirmation_executions: []
+future_status_policy: >-
+  The GC6 cycle and all reverse-consumer roles are frozen, but their future
+  terminal dispositions are not asserted. Direct authority dependencies must
+  remain terminal. The root may be active before promotion and qualified
+  afterward.
+quadrature_policy: >-
+  Every node is AST scanned for direct imported dynamic and eager NumPy
+  trapezoidal-integration access. All thirteen nodes have zero surface, so no
+  compatibility execution or alias replay is required.
