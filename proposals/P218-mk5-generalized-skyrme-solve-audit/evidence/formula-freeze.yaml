@@ -1,0 +1,37 @@
+campaign: P218
+timestamp_utc: '2026-08-06T11:12:42Z'
+declared_model:
+  domain: r_in_(0,infinity)
+  boundary_data: f(0)=pi_and_f(infinity)=0
+  parameters: {B: positive_integer, I: positive_angular_integral, c6: nonnegative_dimensionless, c0: nonnegative_dimensionless}
+  radial_density: >-
+    r^2*f_r^2 + 2*B*sin(f)^2*(1+f_r^2)
+    + I*sin(f)^4/r^2 + c6*I*sin(f)^4*f_r^2/r^2
+    + c0*r^2*(1-cos(f))
+  total_energy: E=4*pi*integral_0^infinity_radial_density_dr
+  coefficient: b=E/(12*pi^2)
+  signed_difference: kappa=3*pi^2*(2*b(2)-b(4))
+exact_obligations:
+  - derive Euler-Lagrange residual from the density rather than copying source code
+  - prove density nonnegative for the declared parameter domain
+  - recover C-RPROF-001 exactly at c6=c0=0
+  - derive whether squared rational-map Jacobian contributes I or B squared
+  - derive both lambda conventions before evaluating c6
+numeric_obligations:
+  equations: derived_second_order_stationary_radial_equation
+  domain_family: at_least_three_outer_radii_and_two_inner_cutoffs
+  boundary_data: regular_origin_and_massive_or_massless_asymptotic_tail_as_c0_requires
+  methods: [checked_collocation, independent_shooting_or_variational_route]
+  precision: IEEE_754_binary64_with_exact_symbolic_coefficients_frozen_first
+  solver_status: mandatory_before_any_output_use
+  residuals: [equation_residual, inner_boundary_residual, outer_boundary_residual]
+  refinements: [initial_mesh, output_quadrature, outer_domain, inner_cutoff, solver_tolerance]
+  energy_checks: [positivity, virial_or_scaling_identity, baseline_limit, independent_quadrature]
+  mutations: [c6_zero, c0_zero, I_to_B_squared, coefficient_rescaling, wrong_tail_law, nonlinear_degree_energy]
+selection_exclusions:
+  - selecting a branch because kappa is close to a comparator
+  - using MK1 through MK4 rejected physical couplings as accepted premises
+  - using source solver success without inspecting its status and residuals
+  - conflating a finite-wall stationary branch with a half-line minimum or full_3d_solution
+  - converting a failed numerical route into campaign completion
+

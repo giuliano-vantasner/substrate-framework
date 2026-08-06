@@ -1,0 +1,14 @@
+campaign: P218
+attempt: 0001
+timestamp_utc: '2026-08-06T11:12:42Z'
+status: passed
+stage: preregistration_and_blinding
+result:
+  candidates_frozen: 11
+  provisional_claims: [C-GSK-001, C-GSK-002]
+  source_hash_pinned: true
+  source_body_opened: false
+  comparator_values_opened: false
+  numeric_contract_frozen: true
+next_action: validate and commit freeze before source compatibility preflight and execution
+

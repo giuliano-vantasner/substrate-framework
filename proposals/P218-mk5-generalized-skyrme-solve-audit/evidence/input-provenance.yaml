@@ -1,0 +1,25 @@
+campaign: P218
+timestamp_utc: '2026-08-06T11:12:42Z'
+framework_base: {release: v0.156.0, commit: fc6a03675f6335a68ede73e52dbe0e86d0533852, accepted_claims: 198, pending_units: 7}
+source_checkout: {root: /home/dan/substrate, commit: 6d1f4e02f87a0bd1dc326cb68af01872d1e88c64, dirty_outside_pinned_file: true, pinned_file_clean: true}
+source_unit:
+  id: MK5
+  path: merged-framework/bridges/phase-43/bridge_MK5_generalized_solve_kappa.py
+  absolute_path: /home/dan/substrate/merged-framework/bridges/phase-43/bridge_MK5_generalized_solve_kappa.py
+  sha256: a5ecb5d0d2ba96cf8083a9cfb32ddb44c2a4f4841bf776ebbccb91bc12b246f8
+  bytes: 26426
+  candidate_dependencies: [E1, E2, E3, E4, HE4, KI3, KI4, KI5, MK1, MK2, MK3, MK4]
+preexposed_metadata: {checks: 8, assertions: 1, symbolic_hint: true, numeric_hint: true}
+authority_read:
+  - governance/releases/current.yaml
+  - governance/claims.yaml C-RMAP-001 through C-RMAP-002 C-RPROF-001 through C-RPROF-002 C-RDIFF-001 through C-RDIFF-002 C-BPS-001 through C-BPS-003 and C-VEC-002
+  - src/substrate_framework/rational_map_radial.py
+  - src/substrate_framework/numerics.py
+  - src/substrate_framework/bps_energy.py
+  - campaigns/P105-e2-rational-map-radial-profiles
+  - campaigns/P214 through P217 MK1-MK4 adjudications
+memory_queries:
+  - MK5 generalized solve kappa L2 L4 L6 L0 rational map numerical BVP
+  - generalized Skyrme full model sextic potential solver refinement
+memory_rule: navigation_only_every_reused_fact_resourced
+
