@@ -1,0 +1,13 @@
+campaign: P224
+verifier: verify.py
+sha256: a21d10387ccc87c6d2a4bbdf507345e9d90f73da2d1110d3055d693201549840
+command: PYTHONPATH_src_python_verify
+result: {exit_status: 0, checks: 21, elapsed_seconds: 2.43, maximum_resident_kib: 156504}
+mutations:
+  - omitting_the_pi_squared_lambda_conversion_breaks_the_same_current_bound_identity
+  - replacing_three_executable_overturn_proxies_with_the_prose_count_four_breaks_the_ledger_tally
+  - substituting_the_stale_MR5_kappa_breaks_current_governed_value_agreement
+  - treating_one_common_scale_as_two_independent_parameters_breaks_the_rank_test
+  - requiring_strict_infimum_increase_breaks_on_a_finite_counterexample
+  - excluding_comparator_data_flow_and_omitted_solved_branches_breaks_the_completeness_guard
+status: passed

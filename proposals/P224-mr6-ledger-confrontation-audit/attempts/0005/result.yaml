@@ -1,0 +1,21 @@
+attempt: 0005
+status: passed
+classification: verification
+result:
+  primary: {checks: 21, exit_status: 0}
+  independent: {checks: 12, exit_status: 0}
+  source_graph: {checks: 8, exit_status: 0}
+  focused_tests: {tests: 88, exit_status: 0}
+survivors:
+  - exact_same_current_pi_squared_conversion_owned_by_C_VEC_002
+  - normalized_BPS_bound_owned_by_C_BPS_001
+  - common_scale_coefficient_path_and_rank_one_parameterization
+  - nonstrict_common_domain_infimum_order_owned_by_C_VAR_002
+rejections:
+  - exactly_four_complete_overturn_ledger
+  - physical_current_confrontation
+  - two_parameter_localization_from_one_scale_path
+  - strict_infimum_increase_from_positivity_somewhere
+  - complete_comparator_and_solved_value_guard
+decision: {new_claim: false, new_API: false, release_change: false}
+continuation: claim_level_review_and_terminal_global_synchronization

@@ -1,0 +1,33 @@
+campaign: P224
+inputs:
+  e: 4.619774866381011
+  c6: 0.32878825565855035
+  c0: 0.5071917782762795
+method:
+  solver: canonical_adaptive_collocation_continuation
+  boundary: regular_origin_and_massive_tail_Robin
+  domain: [0.0001, 20.0]
+  tolerance: 1.0e-6
+  initial_points: 401
+  output_samples: 8001
+  continuation_steps: 8
+common_scale_stationary_branches:
+  - {scale: 0.0, b1: 1.2313219792351653, max_residual: 4.901391058882159e-7}
+  - {scale: 0.25, b1: 1.2464420926501738, max_residual: 4.3792854566479404e-7}
+  - {scale: 0.5, b1: 1.2881651223666937, max_residual: 3.673119705136484e-7}
+  - {scale: 0.75, b1: 1.352333525816066, max_residual: 4.4220665709534863e-7}
+  - {scale: 1.0, b1: 1.435998787155452, max_residual: 6.187720291896834e-7}
+L0_only_stationary_branch:
+  b1: 1.3028463293781263
+  max_residual: 7.851055576277204e-7
+conditional_ratios:
+  scale_zero: 1832.578078593596
+  L0_only: 1939.027860509338
+  full: 2137.1988339416116
+interpretation:
+  status: noncanonical_regression_evidence
+  accepted_claim_delta: none
+  ceiling: >-
+    Five monotone samples of one continuation-selected stationary branch do not
+    prove continuous monotonicity, minimum status, strict infimum order, or a
+    two-parameter localization. The ratios retain unaccepted physical inputs.

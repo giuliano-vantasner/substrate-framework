@@ -1,0 +1,20 @@
+campaign: P224
+change_class: no_canonical_symbol_API_claim_test_or_release_change
+direct_consumers:
+  canonical_BPS_and_vector_convention: unchanged
+  canonical_variational_order: unchanged
+  canonical_generalized_radial_and_signed_difference: unchanged
+  source_dependents: none
+indirect_consumers:
+  generated_docs: unchanged
+  generated_accepted_memory: unchanged
+  migration_inventory: final_terminal_record_pending
+  framework_effort_memory: zero_pending_completion_pending
+formal_consumers: []
+required_replay:
+  - primary_21_checks
+  - independent_12_checks
+  - graph_8_checks
+  - focused_88_tests
+full_suite_policy: reuse_P221_v0_159_0_1929_tests_until_final_zero_pending_transaction
+debt: []

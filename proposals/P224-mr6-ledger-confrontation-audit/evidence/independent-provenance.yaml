@@ -1,0 +1,13 @@
+campaign: P224
+reviewer: reviews/independent_ledger_review.py
+sha256: 4ed759c2420ff8bbcd76a18f7d91e3b41dbf1d78bd8fda85fa040a348ce6a737
+independence:
+  canonical_MR6_imports: none
+  source_module_imports: none
+  normalization: fresh_symbolic_same_current_conversion
+  variational_order: finite_common_domain_counterexamples
+  data_flow: Python_AST_identifier_inventory
+  numeric_replay: canonical_public_BPS_and_generalized_radial_APIs
+result: {exit_status: 0, checks: 12, elapsed_seconds: 1.73, maximum_resident_kib: 149684}
+preserved_failures: [attempt_0004_substring_identifier_collision]
+status: passed

@@ -1,0 +1,31 @@
+campaign: P224
+source_unit: MR6
+accepted_dependencies:
+  C-BPS-001: normalized_density_bound_only
+  C-BPS-002: existence_attainment_ceiling_only
+  C-BPS-003: controlled_remainder_ceiling_only
+  C-VEC-002: same_current_lambda_A_equals_pi_squared_lambda_BPS_only
+  C-GSK-001: supplied_coefficient_generalized_radial_API_only
+  C-RDIFF-001: exact_signed_difference_coordinate_only
+  C-VAR-002: common_domain_nonstrict_infimum_order_only
+  C-VAR-003: exact_common_domain_separation_identity_only
+adjudicated_context:
+  P217: MK6_3_physical_double_counting_diagnosis_rejected
+  P219: MK6_5_physical_confrontation_rejected
+  P220: MR1_bound_normalization_owner_identified
+  P221: MR2_current_normalization_owner_identified
+  P222: MR4_physical_parameter_binding_rejected
+  P223: MR5_exact_model_duplicate_and_current_supplied_point_recomputed
+rejected_or_supplied_dependencies:
+  pion_mass: empirical_input_without_accepted_action_or_state_map
+  electron_mass: empirical_comparator
+  rho_mass: empirical_comparator
+  lambda_mu_physical_values: supplied_without_accepted_origin
+  source_kappa_11_49: stale_uncomputed_MR5_value
+  stationary_BVP_branches: not_proven_global_minima
+closure:
+  exact_normalization_and_nonstrict_order: accepted_existing_owners
+  source_numeric_regressions: attempt_evidence_only
+  physical_confrontation_and_localization: rejected
+  complete_correction_ledger: refuted
+debt: []

@@ -1,0 +1,20 @@
+campaign: P224
+criteria_order:
+  - accepted_authority
+  - exact_convention
+  - novelty
+  - dependency_closure
+  - mutation_sensitivity
+  - physical_typing
+  - global_closure
+decisions:
+  A: {decision: selected, reason: claim_level_authority_ledger_exposes_zero_accepted_changes}
+  B: {decision: selected, reason: exact_pi_squared_same_current_conversion_maps_to_existing_owners}
+  C: {decision: selected, reason: structural_scale_rank_and_parameter_dependent_values_are_separated}
+  D: {decision: selected, reason: current_governed_values_replace_stale_source_context_without_promotion}
+  E: {decision: selected, reason: overturn_language_is_provenance_only}
+  F: {decision: selected, reason: AST_and_data_flow_counterexamples_refute_guard_completeness}
+  G: {decision: selected, reason: no_new_claim_or_API_is_warranted}
+  H: {decision: selected, reason: terminal_duplicate_evidence_closes_the_final_queue_unit}
+selection: [A, B, C, D, E, F, G, H]
+comparator_role: post_selection_regression_and_rejection_evidence_only

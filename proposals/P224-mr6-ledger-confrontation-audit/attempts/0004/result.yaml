@@ -1,0 +1,13 @@
+campaign: P224
+attempt: 0004
+timestamp_utc: '2026-08-06T14:15:00Z'
+status: failed_then_repaired
+stage: independent_guard_data_flow_identifier_scan
+failure:
+  passed_checks_before_stop: 10
+  check: fresh_guard_review_confirms_solved_branches_are_not_recomputed
+  cause: Raw_substring_search_for_bs_collided_with_the_builtin_name_abs.
+repair:
+  action: Inspect_the_AST_names_in_the_indep_assignment_value_and_test_exact_identifier_disjointness.
+scientific_effect: strengthens_the_data_flow_oracle_without_changing_the_verdict
+next_action: rerun_complete_independent_review

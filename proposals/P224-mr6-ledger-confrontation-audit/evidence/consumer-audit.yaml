@@ -1,0 +1,15 @@
+campaign: P224
+canonical_consumers:
+  src_substrate_framework_bps_energy: unchanged
+  src_substrate_framework_variational: unchanged
+  src_substrate_framework_generalized_skyrme_radial: unchanged
+  src_substrate_framework_energy_differences: unchanged
+  focused_owner_tests: 88_pass
+source_consumers: []
+generated_consumers:
+  - terminal_migration_disposition
+  - campaign_index
+  - source_claim_inventory
+  - proposal_and_effort_memory
+release_change: none
+broken_consumers: []

@@ -94,6 +94,24 @@ branches are not minima, positivity somewhere does not prove a strict infimum
 gap, and the guard omits all solved values while comparators drive several pass
 predicates.
 
+Attempt 0003 preserves the first primary-verifier stop after six passes. A
+manually transcribed corrected BPS decimal differed from direct 30-digit SymPy
+evaluation. Replacing only that expected decimal with `99.41652889533228`
+repairs the implementation check; the exact expression and `1e-12` tolerance
+are unchanged.
+
+Attempt 0004 preserves the fresh review's stop after ten passes. Its raw search
+for the short identifier `bs` collided with the characters inside `abs`.
+Replacing substring matching with exact AST names from the `indep` assignment
+repairs and strengthens the data-flow oracle without changing the verdict.
+
+Attempt 0005 passes 21 primary checks, 12 fresh independent checks, eight final
+source-graph checks, and 88 focused canonical tests. Zero accepted claims
+change. Exact pi-squared normalization and the rank-one common-scale path
+survive; finite counterexamples restrict the variational conclusion to the
+nonstrict order already owned by C-VAR-002. Canonical values bound the stale
+source context, but no claim, API, test, or release change is warranted.
+
 ## Debt Ledger
 
 The ledger tracks every MR6 row, accepted owner, convention conversion,
@@ -103,12 +121,12 @@ compatibility event, governed record, and global consumer.
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
 | MR6 body predicates and assertions remain unopened | Open only after committed freeze | discharged: six-predicate and three-assertion audit |
-| Four-overturn count may mix source history with accepted truth | Enumerated claim-level ledger | open |
+| Four-overturn count may mix source history with accepted truth | Enumerated claim-level ledger | discharged: three executable proxies and zero accepted changes |
 | Pi-squared corrections may mix lambda conventions | Exact same-current conversion audit | discharged: accepted conversion and ratio identified |
-| Structural survival may depend on hidden normalization | Rescaling and dependency mutations | open |
+| Structural survival may depend on hidden normalization | Rescaling and dependency mutations | discharged: exact conversion rank and strictness counterexamples |
 | Numeric rows may be stale after P223 | Recompute from current governed evidence | discharged: source kappa is stale and uncomputed in MR6 |
 | Physical confrontation may import masses or state maps | Parameter and interpretation firewall | discharged: all particle inputs remain supplied and unclosed |
-| Completeness guard may scan only selected needles | AST and data-flow counterexamples | open |
+| Completeness guard may scan only selected needles | AST and data-flow counterexamples | discharged: comparators reach predicates and solved branches are omitted |
 | Global migration records and debt remain open | Terminal synchronization and full done gate | open |
 
 ## Review and Promotion Plan

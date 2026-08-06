@@ -1,0 +1,16 @@
+campaign: P224
+package_changes: []
+test_changes: []
+claim_registry_changes: []
+release_changes: []
+reason: >-
+  Every exact survivor is already expressed by accepted BPS, vector-convention,
+  variational, generalized-radial, or signed-difference owners. MR6 adds only a
+  partly incorrect historical ledger and noncanonical supplied regressions.
+verification_only_files:
+  - verify.py
+  - reviews/independent_ledger_review.py
+  - reviews/replay_source_graph.py
+canonical_integration_policy: trapezoid_integral
+source_integration_policy: current_scipy_trapezoid
+debt: []

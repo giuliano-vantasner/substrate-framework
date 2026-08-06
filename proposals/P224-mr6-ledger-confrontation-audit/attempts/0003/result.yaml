@@ -1,0 +1,15 @@
+campaign: P224
+attempt: 0003
+timestamp_utc: '2026-08-06T14:12:00Z'
+status: failed_then_repaired
+stage: primary_verifier_expected_decimal
+failure:
+  passed_checks_before_stop: 6
+  check: conditional_numeric_substitution_reproduces_the_governed_correction
+  transcribed_expected: 99.4165132934202
+  exact_evaluation: 99.41652889533228
+repair:
+  action: Replace_only_the_transcribed_decimal_with_direct_30_digit_SymPy_evaluation.
+  tolerance_change: none
+scientific_effect: none
+next_action: rerun_the_complete_primary_verifier

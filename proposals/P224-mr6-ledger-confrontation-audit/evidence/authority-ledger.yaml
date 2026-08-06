@@ -1,0 +1,58 @@
+campaign: P224
+principle: accepted_registry_and_adjudicated_campaigns_not_source_chronology
+rows:
+  MK4_6:
+    source_disposition: qualified
+    accepted_owner: C-BPS-002
+    governed_result: conditional_degree_linear_cancellation_survives_only_with_attainment
+    MR6_effect: no_accepted_claim_change
+    source_numeric_formula: wrong_lambda_coordinate
+  MK6_1:
+    source_disposition: qualified
+    accepted_owners: [C-BPS-001, C-VEC-002]
+    governed_result: convention_correct_conditional_expression_already_recorded_by_P219_and_P220
+    MR6_effect: duplicate_evidence
+  MK6_2:
+    source_disposition: qualified
+    governed_result: rejected_physical_mass_comparison
+    MR6_effect: none
+  MK6_3:
+    source_disposition: qualified
+    accepted_owner: C-VAR-002
+    governed_result: physical_double_counting_diagnosis_rejected_not_later_overturned
+    MR6_effect: source_proxy_is_not_the_claim
+  MK6_4:
+    source_disposition: qualified
+    governed_result: conditional_power_counting_only_without_controlled_family_or_remainder
+    MR6_effect: no_blanket_survival_statement
+  MK6_5:
+    source_disposition: qualified
+    governed_result: rejected_physical_confrontation
+    MR6_effect: none
+  MK1_through_MK5:
+    dispositions: [qualified, qualified, qualified, qualified, qualified]
+    governed_result: individually_scoped_mixed_units_not_28_blanket_surviving_claims
+  NY1:
+    source_disposition: duplicate_evidence
+    accepted_owner: C-SK-001
+    governed_result: conditional_common_unit_only
+  KI3:
+    source_disposition: qualified
+    governed_result: exact_interpolation_range_with_universal_sharp_bracket_rejected
+  MR6_2:
+    governed_result: no_accepted_physical_confrontation_and_source_kappa_stale_after_P223
+  MR6_3:
+    governed_result: exact_common_scale_coefficient_map_plus_five_point_stationary_branch_regression_only
+  MR6_4:
+    governed_result: supplied_L0_only_stationary_branch_regression_without_physical_map
+  MR6_5:
+    accepted_owner: C-VAR-002
+    governed_result: nonstrict_infimum_order_only
+  MR6_6:
+    governed_result: selected_needle_scan_and_partial_recomputation_refuted_at_complete_scope
+counts:
+  source_claimed_overturns: 4
+  executable_overturn_rows_actually_recomputed: 3
+  executable_double_counting_predicates_recomputed: 0
+  accepted_claims_changed_by_MR6: 0
+decision: duplicate_evidence

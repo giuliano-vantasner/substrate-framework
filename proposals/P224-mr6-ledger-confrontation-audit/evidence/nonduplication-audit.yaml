@@ -1,0 +1,19 @@
+campaign: P224
+targets:
+  C-BPS-001_and_C-VEC-002:
+    relation: exact_duplicate
+    reason: MR6_repeats_the_same_current_pi_squared_conversion_and_normalized_bound.
+  C-VAR-002:
+    relation: exact_duplicate_at_nonstrict_scope
+    reason: Pointwise_nonnegative_additions_imply_only_the_existing_common_domain_infimum_order.
+  C-GSK-001_and_C-RDIFF-001:
+    relation: supplied_numeric_context_only
+    reason: MR6_adds_no_equation_API_or_exact_signed_difference_invariant.
+  earlier_MK_and_MR_campaigns:
+    relation: provenance_summary_only
+    reason: Later_ledger_prose_cannot_reopen_or_replace_individual_adjudications.
+decision:
+  new_claim: false
+  new_API: false
+  release_change: false
+  terminal_candidate: duplicate_evidence
