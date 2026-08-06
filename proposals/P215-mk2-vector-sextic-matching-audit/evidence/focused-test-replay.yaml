@@ -1,0 +1,18 @@
+campaign: P215
+tests:
+  command: PYTHONPATH=src .venv/bin/python -m pytest tests/test_hls_reduction.py tests/test_effective_actions.py tests/test_bps_energy.py tests/test_wzw.py tests/test_source_audit.py -q
+  passed: 80
+  seconds: 7.59
+predecessor_verifiers:
+  P059_primary: 25 passed
+  P059_independent: 23 passed
+  P140_primary: 36 passed
+  P140_independent: 25 passed
+initial_cli_failure:
+  status: preserved_in_attempt_0007
+  cause: required evidence arguments were omitted before the historical commands were re-sourced
+P215_verifiers:
+  primary: 29 passed
+  independent: 15 passed
+result: passed
+debt: []

@@ -1,0 +1,20 @@
+campaign: P215
+attempt: 0007
+timestamp_utc: '2026-08-06T10:25:00Z'
+status: repaired_and_passed
+stage: focused_consumer_replay
+initial_failure:
+  P059: exited_2_before_execution_missing_required_evidence_arguments
+  P140: exited_2_before_execution_missing_required_source_and_dossier_arguments
+diagnosis: predecessor_cli_commands_not_re_sourced_before_invocation
+scientific_state_changed: false
+repair: Read each accepted campaign's adjudication validation_commands and rerun the exact historical command shape.
+results:
+  focused_tests: 80 passed
+  P059_primary: 25 passed
+  P059_independent: 23 passed
+  P140_primary: 36 passed
+  P140_independent: 25 passed
+  P215_primary: 29 passed
+  P215_independent: 15 passed
+next_action: Materialize governance claim release migration documentation and memory records, then run one integrated promotion gate.

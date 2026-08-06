@@ -1,0 +1,21 @@
+campaign: P215
+change_type: additive_claim_api_and_source_disposition
+direct_code:
+  - src/substrate_framework/hls_reduction.py
+  - src/substrate_framework/__init__.py
+  - tests/test_hls_reduction.py
+direct_claim_dependencies: [C-EFT-001, C-BPS-001, C-CHI-001]
+unchanged_related_claims: [C-VEC-001, C-WZW-002, C-TOP-002]
+reverse_source_consumers: [MK3, MK4, MK5, MK6, MR2, MR4, MR6]
+generated_consumers:
+  - governance/releases/v0.156.0.yaml
+  - governance/releases/current.yaml
+  - docs/generated/claim-index.md
+  - memory/framework/claims/C-VEC-002.md
+  - migration/source-claims.yaml
+formal_consumers: []
+canonical_symbol_renames: []
+numeric_consumers: []
+out_of_baseline_dirty_sources: [phase47_BM, phase48_CE]
+result: additive_no_existing_claim_truth_change
+debt: []

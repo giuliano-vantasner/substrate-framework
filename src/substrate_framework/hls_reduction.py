@@ -1,12 +1,17 @@
 """Exact SU(2) current algebra and conditional leading HLS reduction.
 
-This module separates three statements that are often conflated.  The
+This module separates statements that are often conflated.  The
 current-wedge and Maurer--Cartan identities are exact.  Minimizing a declared
 quadratic hidden-connection mass term is exact at leading derivative order.
 Substituting that connection into a separately declared kinetic-curvature term
 then gives the order-``p**4`` Skyrme density, while the full kinetic-vector
 equation generally changes the field at order ``p**3 / M**2`` and the action at
-order ``p**6 / M**2``.
+order ``p**6 / M**2``.  A declared algebraic singlet vector can likewise be
+eliminated exactly, but its local squared-current term is only the leading
+term when a kinetic differential operator is restored.  Finally, ``U(2)``
+invariance permits independent positive singlet and triplet quadratic
+coefficients; equality follows from the additional single-trace premise, not
+from the group name alone.
 
 No API here derives an HLS sector, a physical rho meson, KSRF, a value of a
 coupling, a hedgehog coefficient, an in-medium response, or a substrate map.
@@ -18,6 +23,8 @@ from dataclasses import dataclass
 from typing import Any
 
 import sympy as sp
+
+from .effective_actions import eliminate_quadratic_field
 
 
 _PAULI = (
@@ -147,6 +154,55 @@ class HLSKSRFMatching:
     skyrme_coupling: sp.Expr
     inverse_skyrme_coupling_squared: sp.Expr
     relation_residual: sp.Expr
+
+
+@dataclass(frozen=True)
+class U2InvariantMetric:
+    r"""General positive invariant metric in the Pauli-half ``u(2)`` basis.
+
+    With ``T_0=I/2`` and ``T_a=sigma_a/2``, every real symmetric
+    adjoint-invariant form is
+
+    ``2*alpha*Tr(X*Y) + (beta-alpha)*Tr(X)*Tr(Y)``.
+
+    Its component Gram matrix is ``diag(beta,alpha,alpha,alpha)``.  Thus
+    ``alpha>0`` and ``beta>0`` give a positive metric, while the single-trace
+    specialization and singlet--triplet degeneracy require ``alpha=beta``.
+    """
+
+    triplet_coefficient: sp.Expr
+    singlet_coefficient: sp.Expr
+    generators: tuple[sp.ImmutableMatrix, ...]
+    fundamental_trace_gram: sp.ImmutableMatrix
+    single_trace_coefficient: sp.Expr
+    double_trace_coefficient: sp.Expr
+    invariant_gram: sp.ImmutableMatrix
+    singlet_triplet_degenerate: bool
+
+
+@dataclass(frozen=True)
+class VectorCurrentSexticMatching:
+    r"""Conditional algebraic vector-current elimination and convention map.
+
+    The declared algebraic action is
+    ``m**2*w**2/2 + g*w*B``.  Exact stationary elimination gives
+    ``-g**2*B**2/(2*m**2)``.  This matches ``-lambda_A**2*B**2`` with
+    ``lambda_A=g/(sqrt(2)*m)``.  In C-BPS-001's convention
+    ``-lambda_BPS**2*pi**4*B**2``, the same coefficient is
+    ``lambda_BPS=lambda_A/pi**2``.
+
+    The result supplies no vector field, current interpretation, mass,
+    coupling, kinetic operator, or low-momentum power counting.
+    """
+
+    vector_mass: sp.Expr
+    current_coupling: sp.Expr
+    stationary_field_per_current: sp.Expr
+    effective_current_coefficient: sp.Expr
+    source_sextic_coupling: sp.Expr
+    bps_sextic_coupling: sp.Expr
+    convention_ratio: sp.Expr
+    stationarity_residual: sp.ImmutableMatrix
 
 
 def su2_current_quartic(current_components: Any) -> SU2CurrentQuartic:
@@ -316,4 +372,97 @@ def conditional_hls_ksrf_matching(
         skyrme_coupling=coupling,
         inverse_skyrme_coupling_squared=inverse_squared,
         relation_residual=residual,
+    )
+
+
+def u2_invariant_metric(
+    triplet_coefficient: Any,
+    singlet_coefficient: Any,
+) -> U2InvariantMetric:
+    r"""Return the general positive adjoint-invariant ``u(2)`` metric.
+
+    The two inputs are the component coefficients of the three traceless
+    generators and the central generator.  Keeping them separate prevents a
+    selected fundamental single trace from masquerading as a consequence of
+    ``U(2)`` invariance.
+    """
+
+    alpha = _positive_exact(triplet_coefficient, "triplet_coefficient")
+    beta = _positive_exact(singlet_coefficient, "singlet_coefficient")
+    identity = sp.ImmutableMatrix(sp.eye(2))
+    generators = (identity / 2,) + tuple(pauli / 2 for pauli in _PAULI)
+    trace_gram = sp.ImmutableMatrix(
+        4,
+        4,
+        lambda first, second: sp.simplify(
+            sp.trace(generators[first] * generators[second])
+        ),
+    )
+    if trace_gram != sp.ImmutableMatrix(sp.eye(4) / 2):
+        raise AssertionError("Pauli-half u(2) trace normalization changed")
+
+    single_trace = sp.simplify(2 * alpha)
+    double_trace = sp.simplify(beta - alpha)
+    invariant_gram = sp.ImmutableMatrix(sp.diag(beta, alpha, alpha, alpha))
+    reconstructed = sp.ImmutableMatrix(
+        4,
+        4,
+        lambda first, second: sp.simplify(
+            single_trace * trace_gram[first, second]
+            + double_trace
+            * sp.trace(generators[first])
+            * sp.trace(generators[second])
+        ),
+    )
+    if reconstructed != invariant_gram:
+        raise AssertionError("u(2) invariant-form reconstruction failed")
+    return U2InvariantMetric(
+        triplet_coefficient=alpha,
+        singlet_coefficient=beta,
+        generators=generators,
+        fundamental_trace_gram=trace_gram,
+        single_trace_coefficient=single_trace,
+        double_trace_coefficient=double_trace,
+        invariant_gram=invariant_gram,
+        singlet_triplet_degenerate=sp.simplify(beta - alpha) == 0,
+    )
+
+
+def conditional_vector_current_sextic_matching(
+    vector_mass: Any,
+    current_coupling: Any,
+) -> VectorCurrentSexticMatching:
+    r"""Eliminate one declared algebraic vector component exactly.
+
+    Restoring a vector kinetic operator replaces the scalar kernel ``m**2``
+    by a differential kernel.  Callers must then use the inverse-expansion
+    residuals in :mod:`substrate_framework.effective_actions`; this function
+    does not label the local term an exact full-field result.
+    """
+
+    mass = _positive_exact(vector_mass, "vector_mass")
+    coupling = _positive_exact(current_coupling, "current_coupling")
+    current = sp.Symbol("B_current", real=True)
+    elimination = eliminate_quadratic_field(
+        sp.Matrix([[mass**2]]),
+        sp.Matrix([coupling * current]),
+    )
+    source_coupling = sp.simplify(coupling / (sp.sqrt(2) * mass))
+    bps_coupling = sp.simplify(source_coupling / sp.pi**2)
+    expected_effective = sp.simplify(-source_coupling**2 * current**2)
+    if sp.simplify(elimination.effective_term - expected_effective) != 0:
+        raise AssertionError("vector-current elimination coefficient changed")
+    return VectorCurrentSexticMatching(
+        vector_mass=mass,
+        current_coupling=coupling,
+        stationary_field_per_current=sp.simplify(
+            elimination.stationary_field[0] / current
+        ),
+        effective_current_coefficient=sp.simplify(
+            elimination.effective_term / current**2
+        ),
+        source_sextic_coupling=source_coupling,
+        bps_sextic_coupling=bps_coupling,
+        convention_ratio=sp.simplify(source_coupling / bps_coupling),
+        stationarity_residual=elimination.stationarity_residual,
     )

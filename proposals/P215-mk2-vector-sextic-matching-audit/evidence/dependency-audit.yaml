@@ -1,0 +1,31 @@
+campaign: P215
+accepted_dependencies:
+  C-EFT-001:
+    supplies: exact conditional quadratic elimination and finite inverse residual
+    withholds: HLS field content source kernel mass coupling current and physical map
+  C-BPS-001:
+    supplies: lambda_BPS^2*pi^4*B0^2 convention and dimensional ledger
+    withholds: coupling value potential selection physical baryon vector or substrate map
+  C-VEC-001:
+    supplies: exact SU2 current identity conditional leading connection reduction and optional KSRF-style algebra
+    withholds: KSRF a=2 HLS omega rho pion baryon current N_c and physical values
+  C-WZW-002:
+    supplies: integer mathematical sphere-filling level
+    withholds: k=N_c physical WZW action baryon number and vector coupling
+  C-TOP-002:
+    supplies: normalized mathematical winding current and integer charge
+    withholds: physical baryon current N_c and gauged-WZW response
+source_predecessors:
+  KI1: refuted_absence_inventory_no_authority
+  KI2: qualified_positive_parameter_family_remains
+  MK1: qualified_conditional_match_without_physical_medium_map
+  S4: qualified_conditional_SU2_HLS_reduction_KSRF_unaccepted
+  WZ2: qualified_through_C_WZW_002_without_N_c
+  WZ3: qualified_through_C_TOP_002_without_baryon_or_N_c
+  WZ4: qualified_through_C_EFT_001_without_g_omega_or_KSRF
+backward_authority_excluded: [MK3, MK4, MK5, MK6, MR2, MR4, MR6]
+closure_result: >-
+  C-VEC-002 may depend on C-EFT-001 C-BPS-001 and C-CHI-001 for the
+  declared algebraic elimination convention map and Pauli basis. No accepted
+  chain derives the physical MK2 headline.
+debt: []

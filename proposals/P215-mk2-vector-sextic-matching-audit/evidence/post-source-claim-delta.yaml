@@ -1,0 +1,23 @@
+campaign: P215
+base_release: v0.155.0
+claim_decision:
+  promoted_new_claims: [C-VEC-002]
+  dependencies: [C-EFT-001, C-BPS-001, C-CHI-001]
+  generic_elimination_owner: C-EFT-001
+  new_surface: U2_invariant_metric_classification_single_trace_degeneracy_condition_and_BPS_sextic_convention_map
+  rejected_extensions:
+    - physical_HLS_U2_vector_sector
+    - forced_omega_rho_mass_degeneracy_from_group_name
+    - universal_g_omega_equals_N_c_g_over_2
+    - accepted_N_c_equals_3
+    - physical_baryon_current_map
+    - derived_KSRF_a_equals_2
+    - medium_supplied_F_pi_or_vector_parameters
+    - lambda_A_equals_lambda_BPS
+    - paid_BPS_parameter_debt
+    - broken_KI2_family
+source_disposition: qualified
+canonical_implementation:
+  module: src/substrate_framework/hls_reduction.py
+  apis: [u2_invariant_metric, conditional_vector_current_sextic_matching]
+  tests: tests/test_hls_reduction.py

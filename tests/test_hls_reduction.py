@@ -5,8 +5,10 @@ import sympy as sp
 
 from substrate_framework.hls_reduction import (
     conditional_hls_ksrf_matching,
+    conditional_vector_current_sextic_matching,
     leading_hls_connection_reduction,
     su2_current_quartic,
+    u2_invariant_metric,
 )
 
 
@@ -161,6 +163,85 @@ def test_hls_parameter_is_a_visible_conditional_input() -> None:
     assert at_one.gauge_coupling == 5
     assert at_two.gauge_coupling == 5 * sp.sqrt(2) / 2
     assert at_one.gauge_coupling != at_two.gauge_coupling
+
+
+def test_u2_fundamental_trace_is_only_the_degenerate_metric_specialization() -> None:
+    coefficient = sp.symbols("a", positive=True)
+    metric = u2_invariant_metric(coefficient, coefficient)
+    assert metric.fundamental_trace_gram == sp.eye(4) / 2
+    assert metric.invariant_gram == coefficient * sp.eye(4)
+    assert metric.single_trace_coefficient == 2 * coefficient
+    assert metric.double_trace_coefficient == 0
+    assert metric.singlet_triplet_degenerate
+
+
+def test_u2_invariance_allows_a_positive_unequal_singlet_coefficient() -> None:
+    metric = u2_invariant_metric(sp.Integer(2), sp.Integer(5))
+    assert metric.invariant_gram == sp.diag(5, 2, 2, 2)
+    assert metric.single_trace_coefficient == 4
+    assert metric.double_trace_coefficient == 3
+    assert not metric.singlet_triplet_degenerate
+
+    theta = sp.symbols("theta", real=True)
+    triplet_rotation = sp.diag(
+        1,
+        1,
+        sp.cos(theta),
+        sp.cos(theta),
+    )
+    triplet_rotation[2, 3] = -sp.sin(theta)
+    triplet_rotation[3, 2] = sp.sin(theta)
+    assert (
+        triplet_rotation.T * metric.invariant_gram * triplet_rotation
+        - metric.invariant_gram
+    ).applyfunc(sp.simplify) == sp.zeros(4)
+
+
+def test_vector_current_elimination_maps_both_sextic_conventions() -> None:
+    mass, coupling = sp.symbols("m g", positive=True)
+    matching = conditional_vector_current_sextic_matching(mass, coupling)
+    assert matching.stationary_field_per_current == -coupling / mass**2
+    assert matching.stationarity_residual == sp.zeros(1)
+    assert matching.effective_current_coefficient == -coupling**2 / (2 * mass**2)
+    assert matching.source_sextic_coupling == coupling / (sp.sqrt(2) * mass)
+    assert matching.bps_sextic_coupling == coupling / (
+        sp.sqrt(2) * sp.pi**2 * mass
+    )
+    assert matching.convention_ratio == sp.pi**2
+
+
+def test_vector_matching_keeps_mass_and_coupling_visible() -> None:
+    first = conditional_vector_current_sextic_matching(3, 2)
+    same_ratio = conditional_vector_current_sextic_matching(6, 4)
+    different_ratio = conditional_vector_current_sextic_matching(6, 2)
+    assert first.source_sextic_coupling == same_ratio.source_sextic_coupling
+    assert first.vector_mass != same_ratio.vector_mass
+    assert first.current_coupling != same_ratio.current_coupling
+    assert first.source_sextic_coupling != different_ratio.source_sextic_coupling
+
+
+@pytest.mark.parametrize(
+    ("triplet", "singlet"),
+    [(0, 1), (1, 0), (-1, 1), (1, -1), (1.0, 1)],
+)
+def test_invalid_u2_metric_coefficients_are_rejected(
+    triplet: object,
+    singlet: object,
+) -> None:
+    with pytest.raises(ValueError):
+        u2_invariant_metric(triplet, singlet)
+
+
+@pytest.mark.parametrize(
+    ("mass", "coupling"),
+    [(0, 1), (1, 0), (-1, 1), (1, -1), (1.0, 1)],
+)
+def test_invalid_vector_current_inputs_are_rejected(
+    mass: object,
+    coupling: object,
+) -> None:
+    with pytest.raises(ValueError):
+        conditional_vector_current_sextic_matching(mass, coupling)
 
 
 @pytest.mark.parametrize(

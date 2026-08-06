@@ -1,0 +1,38 @@
+source_unit: MK2
+audit_status: native_tally_reproduced_headline_dependency_closure_rejected
+exact_conditional_core:
+  algebraic_action: L=m_omega^2*w^2/2+g_omega*w*B
+  stationary_solution: w=-g_omega*B/m_omega^2
+  reduced_term: L_eff=-g_omega^2*B^2/(2*m_omega^2)
+  source_convention_match: lambda_A=abs(g_omega)/(sqrt(2)*m_omega)
+  accepted_convention_match: lambda_BPS=lambda_A/pi^2
+  local_scope: exact_for_declared_algebraic_kernel_and_leading_only_for_a_kinetic_vector
+u2_metric_result:
+  source_trace_identity: Tr(T_A*T_B)=delta_AB/2 for T0=I/2 and Ta=sigma_a/2
+  general_invariant_form: Q(X,Y)=2*alpha*Tr(X*Y)+(beta-alpha)*Tr(X)*Tr(Y)
+  component_gram: diag(beta,alpha,alpha,alpha)
+  positivity: alpha>0_and_beta>0
+  degeneracy_condition: alpha=beta
+  correction: U2_invariance_does_not_force_the_single_trace_specialization
+conditional_cancellation:
+  premises:
+    - m_omega=m_V
+    - g_omega=N_c*g/2
+    - m_V^2=a*g^2*F_pi^2
+  general_result_lambda_A: N_c/(2*sqrt(2*a)*F_pi)
+  a_equals_two_specialization: N_c/(4*F_pi)
+  accepted_lambda_BPS: N_c/(4*pi^2*F_pi)
+  status: exact_algebra_after_unaccepted_physical_premises
+dependency_failures:
+  - C-VEC-001 treats KSRF and a=2 as separately declared premises and supplies no physical rho pion omega or HLS sector.
+  - C-WZW-002 quantizes a mathematical level but expressly does not identify it with N_c.
+  - C-TOP-002 constructs a mathematical winding current but expressly does not identify it as a physical baryon current or with N_c.
+  - WZ3's n=N_c=3 and physical baryon readings were rejected in P058.
+  - WZ4's g_omega and KSRF steps were rejected in P059; its homogeneous HLS coefficients remain free.
+  - MK1 supplies a conditional q=2 K=1 coefficient identity but no accepted physical F_pi pion or medium map.
+  - KI1 is refuted and later MK/MR sources have no backward authority.
+headline_verdict: >-
+  MK2 does not derive a medium-supplied BPS sextic coupling or pay the
+  parameter debt. It derives conditional algebra only. Its claimed fixed BPS
+  product additionally uses lambda_A where C-BPS-001 requires
+  lambda_BPS=lambda_A/pi^2.

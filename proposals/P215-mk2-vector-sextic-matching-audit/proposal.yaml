@@ -59,7 +59,7 @@ selection_criteria:
   - sensitivity to source sign current normalization singlet metric mass coupling and pi-squared convention mutations
   - novelty beyond C-EFT-001 C-VEC-001 C-BPS-001 and C-WZW-001 through C-WZW-002
   - terminal authority consumer generated-state and memory closure
-claims_proposed: []
+claims_proposed: [C-VEC-002]
 reserved_unpromoted_claims: [C-VEC-002]
 comparators_blinded_until: >-
   The generated queue exposes MK2's headline, seven static literal check sites,
@@ -70,4 +70,20 @@ comparators_blinded_until: >-
   parameter values, exact predicates, rejection guards, imports, native output,
   and consumer details remain unopened until this manifest, prose contract,
   formula freeze, provenance record, validation record, and freeze commit exist.
-status: draft
+status: review
+revision: 0002
+opened_source_equations:
+  algebraic_vector_action: m_omega^2*w^2/2+g_omega*w*B
+  source_sextic_match: lambda_A=abs(g_omega)/(sqrt(2)*m_omega)
+  displayed_trace_metric: Tr(T_A*T_B)=delta_AB/2
+  claimed_omega_coupling: g_omega=N_c*g/2
+  imported_ksrf: m_V^2=2*g^2*F_pi^2
+  claimed_source_lambda: lambda_A=N_c/(4*F_pi)
+  claimed_source_product: lambda_A*mu=N_c*m_pi/8
+claim_refinement:
+  C_VEC_002: >-
+    Promote the complete positive U2 invariant-metric classification, exact
+    single-trace degeneracy condition, algebraic vector-current elimination,
+    and lambda_A=pi^2*lambda_BPS convention map. Exclude every physical HLS,
+    omega, rho, baryon, N_c, KSRF, decay-scale, medium, or parameter-value
+    interpretation.

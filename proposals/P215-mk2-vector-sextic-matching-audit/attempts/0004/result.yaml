@@ -1,0 +1,10 @@
+campaign: P215
+attempt: 0004
+timestamp_utc: '2026-08-06T10:12:00Z'
+status: repaired
+stage: independent_verifier_construction
+failure: The independent verifier stopped at check one because the eliminated vector symbol had been declared positive and its negative stationary solution was excluded.
+diagnosis: verifier_symbol_domain
+scientific_state_changed: false
+repair: Declare only mass and coupling positive while keeping the current and eliminated vector real, exactly matching the frozen algebraic model.
+next_action: Rerun the full independent route from the beginning and preserve any later failure separately.

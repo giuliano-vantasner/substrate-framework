@@ -1,0 +1,21 @@
+campaign: P215
+selection_criteria_frozen_before_source: true
+selected:
+  - {candidate: A, result: exact conditional algebraic match in source convention}
+  - {candidate: B, result: full inverse separates exact field elimination from local low-q term}
+  - {candidate: C, result: pi-squared BPS convention map is load bearing}
+  - {candidate: D, result: general U2 invariant metric has independent positive singlet and triplet coefficients}
+  - {candidate: F, result: exact parameter families prove ratio and pair underidentification}
+  - {candidate: G, result: novel U2 metric and convention surface extracted as C-VEC-002}
+  - {candidate: I, result: terminal qualified disposition required}
+conditional_only:
+  - {candidate: E, result: HLS KSRF universality baryon N_c and physical maps remain premises}
+  - {candidate: H, result: generic elimination maps C-EFT-001 but does not cover the novel U2 classification}
+rejected_source_objects:
+  - {object: U2_forces_single_trace_mass_degeneracy, reason: independent invariant singlet coefficient is allowed}
+  - {object: g_omega_equals_N_c_g_over_2_is_framework_derived, reason: no accepted physical current or N_c map and HLS homogeneous coefficients remain free}
+  - {object: lambda_BPS_equals_N_c_over_4Fpi, reason: source relation is lambda_A and accepted convention divides by pi squared}
+  - {object: KI2_family_is_broken, reason: dependency-closed coupling relation is absent}
+  - {object: lambda_mu_debt_is_paid, reason: both physical maps and the convention composition fail}
+comparator_use: none_selected_by_numerical_agreement
+debt: []

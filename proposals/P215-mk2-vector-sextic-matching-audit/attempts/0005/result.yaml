@@ -1,0 +1,10 @@
+campaign: P215
+attempt: 0005
+timestamp_utc: '2026-08-06T10:14:00Z'
+status: repaired
+stage: independent_registry_oracle
+failure: The independent verifier passed fourteen checks and stopped because the KSRF ceiling check searched the C-VEC-001 statement for wording stored in its assumptions.
+diagnosis: brittle_registry_prose_location
+scientific_state_changed: false
+repair: Require both the statement's explicit KSRF/a=2 exclusion and the assumption's direct declaration that neither the relation nor a=2 follows.
+next_action: Rerun all independent checks and then execute the primary route against materialized evidence.

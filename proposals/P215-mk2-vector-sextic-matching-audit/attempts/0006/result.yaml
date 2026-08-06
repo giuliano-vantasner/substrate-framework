@@ -1,0 +1,21 @@
+campaign: P215
+attempt: 0006
+timestamp_utc: '2026-08-06T10:20:00Z'
+status: passed
+stage: exact_verification_and_source_graph
+primary_checks: 29
+independent_checks: 15
+graph:
+  nodes: 15
+  lexical_predicates: 107
+  assertions: 17
+  aggregate_checks: 7
+  expected_refutations: [KI1]
+  alias_only_compatibility: [WZ3]
+  clean_nonrefuted_nodes: 14
+scientific_result:
+  promote: C-VEC-002
+  source_disposition: qualified
+  exact_positive_object: general_positive_U2_invariant_metric_and_conditional_vector_current_BPS_convention_map
+  rejected_headline: medium_supplied_lambda_and_paid_parameter_debt
+next_action: Run affected canonical tests and predecessor verifiers, complete claim review and impact analysis, then promote through one integrated release gate.

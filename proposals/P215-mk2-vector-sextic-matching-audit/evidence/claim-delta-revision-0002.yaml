@@ -1,0 +1,24 @@
+campaign: P215
+revision: 0002
+timestamp_utc: '2026-08-06T10:25:00Z'
+trigger: post_source_nonduplication_and_exact_verification
+claim_delta:
+  add: [C-VEC-002]
+  dependencies: [C-EFT-001, C-BPS-001, C-CHI-001]
+  verification: symbolic_verified
+  compatibility: compatible_extension
+exact_surface:
+  - every real symmetric U2-adjoint-invariant bilinear form has independent singlet and triplet coefficients
+  - positivity and single-trace degeneracy have sharp exact conditions
+  - algebraic vector-current elimination derives the source sextic coefficient
+  - lambda_A=pi^2*lambda_BPS converts to C-BPS-001's convention
+excluded:
+  - physical HLS omega rho pion baryon current and quark-current maps
+  - N_c and WZW-level identification
+  - universality and KSRF a=2 derivation
+  - mass coupling decay-scale or medium values
+  - paid parameter debt and broken KI2 family
+reason: >-
+  Generic elimination is already C-EFT-001, but the complete reductive U2
+  invariant-form classification, sharp degeneracy condition, and
+  convention-complete vector-to-BPS match are novel and reusable.

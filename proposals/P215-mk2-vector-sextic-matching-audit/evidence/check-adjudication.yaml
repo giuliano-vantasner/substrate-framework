@@ -1,0 +1,38 @@
+source_unit: MK2
+checks:
+  MK2.1:
+    verdict: qualified_exact
+    surviving_object: lambda_A=abs(g_omega)/(sqrt(2)*m_omega) for the declared algebraic vector-current action
+    correction: The full kinetic-vector inverse is nonlocal and the displayed local term is only its low-q leading term under separate power counting.
+    accepted_mapping: [C-EFT-001, C-VEC-002]
+  MK2.2:
+    verdict: qualified_exact
+    surviving_object: the displayed Pauli-half basis has fundamental trace Gram identity/2 and a single-trace mass term is degenerate
+    correction: The general U2-invariant positive form has independent singlet and triplet coefficients; group invariance alone does not force degeneracy.
+    accepted_mapping: [C-VEC-002]
+  MK2.3:
+    verdict: rejected_dependency
+    source_claim: g_omega=N_c*g/2 is forced and N_c=3 is framework-derived
+    reason: No accepted claim supplies vector universality with one U2 coupling the quark-number-to-winding-current map a physical baryon current or N_c=3; WZ4's homogeneous coefficients remain free.
+    rejected_predicate: accepted_N_c_equals_3_and_physical_baryon_current_map
+  MK2.4:
+    verdict: qualified_conditional
+    surviving_object: all-premise substitution at a=2 simplifies lambda_A to N_c/(4*F_pi)
+    correction: KSRF a=2 singlet-triplet equality coupling universality baryon current N_c and physical F_pi are unaccepted premises; accepted lambda_BPS has an additional 1/pi^2.
+    accepted_mapping: [C-VEC-001, C-VEC-002, C-BPS-001]
+  MK2.5:
+    verdict: qualified_exact
+    surviving_object: both lambda_A and lambda_BPS have inverse-energy dimension in natural units
+    correction: Dimensional agreement neither identifies the coefficient nor derives a medium vector sector.
+    accepted_mapping: [C-BPS-001]
+  MK2.6:
+    verdict: rejected_dependency
+    source_claim: the accepted KI2 family is broken because N_c is a fixed integer three
+    reason: The proposed lambda relation lacks accepted dependency closure and accepted WZW claims deliberately do not identify their integer with N_c; therefore the accepted positive BPS parameter family remains.
+    rejected_predicate: accepted_N_c_equals_3_breaks_KI2_family
+  MK2.7:
+    verdict: qualified_conditional
+    surviving_object: lambda_A=N_c/(4*F_pi) and mu=m_pi*F_pi/2 algebraically give lambda_A*mu=N_c*m_pi/8
+    correction: Neither input has the claimed physical derivation and C-BPS-001's convention instead gives lambda_BPS*mu=N_c*m_pi/(8*pi^2).
+    accepted_mapping: [C-BPS-001, C-VEC-002]
+terminal_source_disposition: qualified

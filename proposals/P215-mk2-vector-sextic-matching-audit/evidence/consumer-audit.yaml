@@ -1,0 +1,26 @@
+campaign: P215
+canonical_consumers:
+  - {consumer: src/substrate_framework/__init__.py, effect: exports two new pure APIs}
+  - {consumer: tests/test_hls_reduction.py, effect: exact positive metric elimination convention and invalid-input coverage}
+  - {consumer: C-EFT-001, effect: unchanged_generic_owner_reused_by_new_specialization}
+  - {consumer: C-VEC-001, effect: unchanged_SU2_leading_connection_claim}
+  - {consumer: C-BPS-001, effect: unchanged_pi4_sextic_convention}
+source_consumers:
+  MK3: depends_on_unaccepted_lambda_mu_closure_and_receives_no_authority
+  MK4: compacton_shape_claim_may_survive_conditionally_but_parameter_closure_does_not
+  MK5: numerical_model_imports_unaccepted_MK2_coupling_and_remains_pending
+  MK6: mass_and_tension_conclusions_import_unaccepted_MK2_product_and_remain_pending
+  MR2: correctly_exposes_the_pi_squared_convention_conflict_but_remains_pending
+  MR4: imports_MK2_HLS_and_KSRF_premises_and_remains_pending
+  MR6: ledger_imports_pending_MK2_and_later_results_and_remains_pending
+out_of_baseline_worktree_consumers:
+  paths: [phase47_BM, phase48_CE]
+  status: untracked_in_source_checkout_and_absent_from_pinned_inventory
+generated_consumers:
+  - docs/generated/claim-index.md after registry promotion
+  - memory/framework/claims/C-VEC-002.md after accepted-memory synchronization
+result: >-
+  No existing accepted claim changes truth value. Later pinned source units
+  replay cleanly only as noncanonical evidence and receive no backward
+  authority. The new API surface is additive.
+debt: []

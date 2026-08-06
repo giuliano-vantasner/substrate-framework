@@ -1,0 +1,29 @@
+campaign: P215
+provisional_claim: C-VEC-002
+decision: promote
+direct_search:
+  identifiers_searched: [C-VEC-002]
+  concepts_searched:
+    - U2 invariant quadratic form independent singlet triplet metric
+    - double trace singlet vector mass
+    - omega current elimination BPS sextic pi-squared convention
+  identifier_result: no_pre_P215_hit
+nearest_claims:
+  - {claim: C-EFT-001, distinction: owns generic supplied-kernel elimination and inverse residual but not U2 invariant-form classification or BPS convention map}
+  - {claim: C-VEC-001, distinction: owns SU2 current quartic and leading half-connection reduction but explicitly has no singlet omega sector}
+  - {claim: C-BPS-001, distinction: owns the pi-four sextic convention but not vector-current elimination or U2 metrics}
+  - {claim: C-CHI-001, distinction: owns Pauli trace normalization but not the reductive U2 invariant-form family}
+module_search:
+  existing_module: src/substrate_framework/hls_reduction.py
+  exact_pre_P215_surface: no U2 singlet metric or vector-to-BPS convention API
+  reuse: C-EFT-001's eliminate_quadratic_field is called rather than duplicated
+novel_surface: >-
+  C-VEC-002 is the first importable classification of every positive
+  adjoint-invariant U2 quadratic form into independent singlet and triplet
+  coefficients, the sharp single-trace degeneracy condition, and the
+  convention-complete conditional vector-current sextic match.
+scope_control: >-
+  The claim adds no HLS field content physical vector baryon N_c KSRF pion
+  decay scale coefficient value or substrate map. Generic elimination remains
+  owned by C-EFT-001.
+debt: []

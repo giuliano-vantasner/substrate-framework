@@ -1,0 +1,27 @@
+source_unit: MK2
+source_commit: 6d1f4e02f87a0bd1dc326cb68af01872d1e88c64
+path: merged-framework/bridges/phase-43/bridge_MK2_lambda_from_medium_omega.py
+sha256: 351136bca28e413ddd54f1b15bf7084dffe32af565fc87e7220d1437a525eb07
+bytes: 22413
+environment:
+  python: .venv/bin/python
+  numpy: 2.5.1
+  execution: native_unmodified
+result:
+  exit_code: 0
+  runtime_checks: 7
+  assertions: 1
+  terminal_tally: ALL 7 CHECKS PASS
+  elapsed_seconds: 0.49
+  max_rss_kib: 53304
+compatibility:
+  legacy_references: 0
+  current_references: 0
+  eager_legacy_default_fallbacks: 0
+  alias_used: false
+scope: >-
+  Reproduction establishes source provenance and the native tally only. It
+  does not promote the headline, make one selected trace metric mandatory,
+  derive KSRF universality N_c baryon-current or physical-field premises,
+  convert lambda_A into C-BPS-001's lambda_BPS, or make a low-q truncation an
+  exact full kinetic-vector elimination.

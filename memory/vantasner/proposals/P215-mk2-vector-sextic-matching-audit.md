@@ -2,7 +2,7 @@
 description: Audit MK2 vector-current elimination and BPS sextic-coupling closure
 author: vantasner
 created: '2026-08-06T10:01:44Z'
-updated: '2026-08-06T10:01:44Z'
+updated: '2026-08-06T10:25:00Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -129,6 +129,34 @@ Attempt 0002 preserves the freeze commit stopping on four trailing YAML EOF
 blank lines. The repair removes only those blank lines and reruns diff hygiene;
 it changes no formula, candidate, premise, threshold, or scientific state.
 
+Attempt 0003 finds no direct NumPy integration surface and reproduces all
+seven MK2 checks natively in 0.49 seconds. The exact algebraic match and
+single-trace specialization survive, while the full kinetic inverse, general
+U(2) metric, accepted BPS convention, and dependency audit expose the
+headline's missing premises.
+
+Attempt 0004 preserves the independent verifier stopping immediately because
+its eliminated vector had been declared positive, excluding the negative
+stationary solution. Restricting positivity to mass and coupling repairs the
+symbol domain without changing the frozen action.
+
+Attempt 0005 preserves the repaired independent route reaching fourteen
+checks before a brittle registry check searched the claim statement for a
+KSRF ceiling stored in its assumptions. The corrected oracle requires both
+authoritative locations and changes no scientific result.
+
+Attempt 0006 completes twenty-nine primary and fifteen fresh independent exact
+checks. The fifteen-node source graph pins 107 predicates and 17 assertions;
+fourteen nonrefuted nodes replay cleanly, KI1 alone stops at its governed
+refutation, and immutable WZ3 receives an alias-only `np.trapezoid` replay.
+C-VEC-002 is selected for the novel invariant-metric and convention surface.
+
+Attempt 0007 preserves two predecessor CLI usage stops caused by omitted
+required evidence arguments. After re-sourcing their adjudication commands,
+eighty focused tests, twenty-five P059 primary, twenty-three P059 independent,
+thirty-six P140 primary, twenty-five P140 independent, twenty-nine P215
+primary, and fifteen P215 independent checks pass.
+
 ## Debt Ledger
 
 The P215 ledger tracks vector and current field types, kernel and source signs,
@@ -139,14 +167,14 @@ generated state.
 
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
-| MK2 predicates remain blinded | Reproduce once after committed freeze | open |
-| Algebraic and kinetic elimination may be conflated | Compare exact kernels and finite inverse residuals | open |
-| U(2) may be mistaken for a unique trace metric | Classify invariant forms and test a positive unequal-mass countermodel | open |
-| Source and accepted BPS lambdas differ by convention | Verify `lambda_A=pi^2*lambda_BPS` through every consumer | open |
-| A ratio may be presented as two derived parameters | Construct exact identifiability families | open |
-| Inserted HLS, KSRF, `N_c`, baryon, or physical maps may propagate circularly | Audit every dependency and premise-removal mutation | open |
-| Later units may grant backward authority | Replay the terminal graph without later imports | open |
-| Compatibility may masquerade as science | Audit every executable integration-name access before native replay | open |
+| MK2 predicates remain blinded | Reproduce once after committed freeze | discharged by attempt 0003 |
+| Algebraic and kinetic elimination may be conflated | Compare exact kernels and finite inverse residuals | discharged by attempts 0006 and 0007 |
+| U(2) may be mistaken for a unique trace metric | Classify invariant forms and test a positive unequal-mass countermodel | discharged by attempts 0006 and 0007 |
+| Source and accepted BPS lambdas differ by convention | Verify `lambda_A=pi^2*lambda_BPS` through every consumer | discharged by attempts 0006 and 0007 |
+| A ratio may be presented as two derived parameters | Construct exact identifiability families | discharged by attempt 0006 |
+| Inserted HLS, KSRF, `N_c`, baryon, or physical maps may propagate circularly | Audit every dependency and premise-removal mutation | discharged by attempts 0006 and 0007 |
+| Later units may grant backward authority | Replay the terminal graph without later imports | discharged by attempt 0006 |
+| Compatibility may masquerade as science | Audit every executable integration-name access before native replay | discharged by attempts 0003 and 0006 |
 | Claim novelty and generated state remain unresolved | Complete nonduplication, review, disposition, generation, and proper closeout gate | open |
 
 ## Review and Promotion Plan

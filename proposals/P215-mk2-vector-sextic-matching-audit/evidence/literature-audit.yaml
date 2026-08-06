@@ -1,0 +1,24 @@
+scope: HLS assumptions and source citations
+sources:
+  - title: Composite Gauge Bosons and Low Energy Theorems of Hidden Local Symmetries
+    authors: [Masako Bando, Taichiro Kugo, Koichi Yamawaki]
+    year: 1985
+    url: https://academic.oup.com/ptp/article/73/6/1541/1889910
+    primary_scope: >-
+      The abstract makes the vector kinetic term an assumption, describes an
+      arbitrary nonlinear-sigma-model parameter, and obtains the second KSRF
+      form only when that parameter is selected for universality. This supports
+      treating KSRF and universality as premises rather than consequences of a
+      trace identity.
+  - title: Non-Abelian Anomaly and Vector Mesons as Dynamical Gauge Bosons of Hidden Local Symmetries
+    authors: [Takanori Fujiwara, Taichiro Kugo, Haruhiko Terao, Shozo Uehara, Koichi Yamawaki]
+    year: 1985
+    url: https://academic.oup.com/ptp/article/73/4/926/1873501
+    primary_scope: >-
+      The paper presents general solutions of the Wess-Zumino anomaly equation
+      with HLS vectors and rejects automatic complete vector dominance. P059's
+      accepted audit further records the free homogeneous coefficients; MK2
+      cannot replace them by minimal universality without a new premise.
+selection_use: >-
+  Literature fixes scope only. C-VEC-002 is independently derived by exact
+  invariant-form and stationary algebra and imports no phenomenological value.

@@ -1,0 +1,33 @@
+campaign: P215
+nodes: 15
+lexical_predicates: 107
+assertions: 17
+aggregate_checks: 7
+root: MK2
+predecessors: [S4, WZ2, WZ3, WZ4, KI1, KI2, MK1]
+reverse_consumers: [MK3, MK4, MK5, MK6, MR2, MR4, MR6]
+replay:
+  - {label: S4, runtime_checks: 11, assertions: 1, seconds: 0.603, verdict: clean}
+  - {label: WZ2, runtime_checks: 8, assertions: 1, seconds: 26.846, verdict: clean}
+  - {label: WZ3, runtime_checks: 7, assertions: 1, seconds: 38.808, verdict: clean_alias_only_np_trapezoid}
+  - {label: WZ4, runtime_checks: 9, assertions: 1, seconds: 0.486, verdict: clean}
+  - {label: KI1, runtime_checks: null, assertions: 1, seconds: 10.476, verdict: expected_governed_refutation}
+  - {label: KI2, runtime_checks: 6, assertions: 1, seconds: 0.508, verdict: clean}
+  - {label: MK1, runtime_checks: 7, assertions: 1, seconds: 1.427, verdict: clean}
+  - {label: MK2, runtime_checks: 7, assertions: 1, seconds: 0.527, verdict: clean}
+  - {label: MK3, runtime_checks: 6, assertions: 1, seconds: 0.521, verdict: clean_noncanonical}
+  - {label: MK4, runtime_checks: 6, assertions: 1, seconds: 2.629, verdict: clean_noncanonical}
+  - {label: MK5, runtime_checks: 8, assertions: 1, seconds: 67.053, verdict: clean_noncanonical}
+  - {label: MK6, runtime_checks: 6, assertions: 1, seconds: 0.472, verdict: clean_noncanonical}
+  - {label: MR2, runtime_checks: 8, assertions: 1, seconds: 1.076, verdict: clean_noncanonical}
+  - {label: MR4, runtime_checks: 7, assertions: 1, seconds: 7.953, verdict: clean_noncanonical}
+  - {label: MR6, runtime_checks: 6, assertions: 3, seconds: 5.931, verdict: clean_noncanonical}
+compatibility:
+  numpy_has_trapezoid: true
+  numpy_has_trapz: false
+  direct_legacy_nodes: [WZ3]
+  eager_legacy_nodes: []
+  alias_only_nodes: [WZ3]
+excluded_dirty_untracked_consumers: [phase47_BM, phase48_CE]
+reason_for_exclusion: absent_from_substrate_commit_6d1f4e0_and_pinned_source_inventory
+debt: []

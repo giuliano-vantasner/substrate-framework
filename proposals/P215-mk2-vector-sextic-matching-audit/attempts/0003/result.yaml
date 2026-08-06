@@ -1,0 +1,34 @@
+campaign: P215
+attempt: 0003
+timestamp_utc: '2026-08-06T10:10:00Z'
+status: passed
+stage: source_preflight_and_native_reproduction
+source:
+  sha256: 351136bca28e413ddd54f1b15bf7084dffe32af565fc87e7220d1437a525eb07
+  imports: [sympy]
+  static_check_calls: 7
+  runtime_checks: 7
+  assertions: 1
+  native_exit: 0
+  native_terminal_tally: ALL 7 CHECKS PASS
+  elapsed_seconds: 0.49
+  max_rss_kib: 53304
+compatibility:
+  direct_legacy_references: 0
+  direct_current_references: 0
+  eager_legacy_default_fallbacks: 0
+  alias_used: false
+scientific_decomposition:
+  exact_survivors:
+    - conditional algebraic elimination gives lambda_A=abs(g_omega)/(sqrt(2)*m_omega)
+    - the displayed Pauli-half u2 basis has fundamental trace Gram identity/2
+    - under all displayed equality universality and KSRF premises the source lambda_A simplifies to N_c/(4*F_pi)
+    - lambda_A has inverse-energy dimension in natural units
+  corrections:
+    - the local term is not the exact full kinetic-vector inverse
+    - U2 invariance alone admits an independent singlet quadratic coefficient
+    - accepted BPS convention has lambda_A=pi^2*lambda_BPS
+    - accepted WZ2 and WZ3 do not identify a level with N_c=3 or the winding current with physical baryon number
+    - KSRF a=2 vector universality and the omega-current coupling are premises rather than accepted derived facts
+    - MK1 supplies only a conditional coefficient identity and no accepted physical F_pi or pion map
+next_action: Complete canonical and independent exact verification, individual predicate adjudication, and claim-level review.

@@ -1,0 +1,23 @@
+campaign: P215
+canonical_module: src/substrate_framework/hls_reduction.py
+new_apis:
+  u2_invariant_metric:
+    role: construct the general positive U2-invariant singlet-triplet metric
+    exact: true
+    parameters: [triplet_coefficient, singlet_coefficient]
+  conditional_vector_current_sextic_matching:
+    role: specialize C-EFT-001 elimination and map source lambda_A to accepted lambda_BPS
+    exact: true_for_declared_algebraic_kernel
+    parameters: [vector_mass, current_coupling]
+reuse:
+  - conditional_vector_current_sextic_matching calls eliminate_quadratic_field from effective_actions.py
+  - low-momentum kinetic-vector scope remains owned by low_momentum_inverse_expansion
+validation:
+  focused_tests_initial: 41 passed
+  invalid_inputs: exact_positive_parameters_required
+  import_side_effects: none
+  simulations_on_import: none
+scope_ceiling: >-
+  APIs derive no physical HLS vector baryon current N_c KSRF pion decay scale
+  coefficient value or substrate mechanism.
+debt: []
