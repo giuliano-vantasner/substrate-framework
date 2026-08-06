@@ -1,0 +1,99 @@
+campaign: P212
+title: GC5 translated-overlap degeneracy and two-role count audit
+source_baseline: substrate@6d1f4e0
+source_units: [GC5]
+base_release: v0.153.0
+accepted_release: v0.154.0
+implementation_commit: 363b7ab880417664758aaabcf04a278afdcff31f
+adjudicated_at: '2026-08-06T08:24:51Z'
+selected_candidates:
+  - {id: A, reason: Translation_covariance_gives_the_exact_common_self_overlap_diagonal.}
+  - {id: B, reason: Operator_norm_convergence_gives_uniform_singular_value_and_condition_bounds.}
+  - {id: D, reason: Typed_role_countermodels_expose_the_missing_species_solution_charge_and_role_maps.}
+  - {id: G, reason: Two_minimum_novel_exact_surfaces_are_importable_and_additive.}
+  - {id: H, reason: Claim_source_consumer_release_documentation_memory_and_debt_close_together.}
+competing_candidates:
+  - {id: C, decision: retained_as_unequal_input_countermodel_not_selected_hierarchy}
+  - {id: E, decision: rejected_because_accepted_claims_supply_neither_role_occupancy_nor_counts}
+  - {id: F, decision: rejected_after_nonduplication_audit_found_two_novel_surfaces}
+claims:
+  - {id: C-OVL-005, decision: accepted, verification: symbolic_verified, review: accepted, compatibility: compatible_extension, epistemic: active}
+  - {id: C-PHS-002, decision: accepted, verification: symbolic_verified, review: accepted, compatibility: compatible_extension, epistemic: active}
+accepted_composition:
+  - {id: C-QBL-001, decision: unchanged_conditional_profile_and_no_stability_or_ontology_ceiling}
+  - {id: C-OVL-001, decision: unchanged_normalized_overlap_and_no_Yukawa_generation_ceiling}
+  - {id: C-OVL-002, decision: unchanged_translated_external_well_and_free_spacing_ceiling}
+  - {id: C-MIX-002, decision: unchanged_abstract_phase_count_and_no_physical_CP_or_generation_ceiling}
+  - {id: C-MIX-003, decision: unchanged_common_phase_reality_and_independent_source_count_matrix_dimension_ceiling}
+  - {id: C-QBL-006, decision: unchanged_finite_trial_pair_energy_and_no_dynamics_or_stability_ceiling}
+  - {id: C-PHS-001, decision: unchanged_scalar_circle_capacity_and_no_occupancy_ceiling}
+unpromoted_claims:
+  - {id: EM6_stability_disjunction_theorem, reason: The_accepted_EM6_mapping_explicitly_withholds_stability_and_the_source_only_checks_prose_tokens.}
+  - {id: topological_anchor_has_no_complex_field_or_scalar_contribution, reason: No_required_U1_charge_does_not_imply_absence_of_a_complex_field_order_parameter_or_species.}
+  - {id: MH2_wells_are_topological_generation_anchors, reason: They_are_separately_declared_translated_external_wells_with_free_parameters.}
+  - {id: phases_relax_by_the_source_surrogate, reason: The_surrogate_is_not_C_QBL_006_finite_energy_and_no_dynamics_is_supplied.}
+  - {id: imaginary_entries_establish_physical_CP, reason: No_quartet_or_physical_CP_operation_is_computed.}
+  - {id: stable_condensate_count_exactly_three, reason: GC4_supplies_no_stability_and_the_four_phase_square_refutes_the_source_positive_pair_step.}
+  - {id: generation_count_exactly_three, reason: FG4_supplies_no_physical_floor_and_source_count_is_independent_of_matrix_dimension.}
+  - {id: N_H_over_N_gen_equals_one, reason: Both_physical_counts_and_their_role_map_are_unestablished.}
+  - {id: Standard_Model_or_substrate_mechanism, reason: Required_fields_actions_interactions_maps_scales_and_oracles_are_absent.}
+evidence:
+  primary_verifier: verify.py
+  independent_rederivation: reviews/independent_two_role_review.py
+  source_graph_replay: reviews/replay_source_graph.py
+  overlap_claim_review: reviews/C-OVL-005-claim-review.md
+  phase_claim_review: reviews/C-PHS-002-claim-review.md
+  source_disposition_review: reviews/GC5-disposition-review.md
+  source_adjudication: reviews/source_adjudication.md
+  impact_analysis: reviews/impact_analysis.md
+  source_reproduction: evidence/source-reproduction.yaml
+  compatibility_audit: evidence/compatibility-audit.yaml
+  source_audit: evidence/source-audit.yaml
+  formula_freeze: evidence/formula-freeze.yaml
+  input_provenance: evidence/input-provenance.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  source_graph_inventory: evidence/source-graph-inventory.yaml
+  terminal_graph_replay: evidence/terminal-graph-replay.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  implementation_audit: evidence/implementation-audit.yaml
+  impact_record: evidence/impact-analysis.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  independent_provenance: evidence/independent-provenance.yaml
+  focused_test_replay: evidence/focused-test-replay.yaml
+  attempts:
+    - attempts/0001/result.yaml
+    - attempts/0002/result.yaml
+    - attempts/0003/result.yaml
+    - attempts/0004/result.yaml
+    - attempts/0005/result.yaml
+    - attempts/0006/result.yaml
+    - attempts/0007/result.yaml
+    - attempts/0008/result.yaml
+    - attempts/0009/result.yaml
+    - attempts/0010/result.yaml
+source_disposition: {GC5: qualified}
+accepted_mappings: [C-QBL-001, C-OVL-001, C-OVL-002, C-MIX-002, C-MIX-003, C-QBL-006, C-PHS-001, C-OVL-005, C-PHS-002]
+compatibility:
+  GC5_surface: none
+  graph_zero_surface_nodes: 13
+  native_version_stops: []
+  scientific_failures_from_version_events: 0
+release_change: v0.154.0
+validation_commands:
+  - PYTHONPATH=src_python_campaign_verify
+  - PYTHONPATH=src_python_independent_two_role_review
+  - PYTHONPATH=src_python_source_graph_replay
+  - pytest_focused_overlap_phase_QBL_MIX_source_audit_tests
+  - scripts_validate_sh
+  - git_diff_check
+integrated_gate:
+  tests_passed: 1873
+  pytest_seconds: 183.37
+  memory_files_validated: 865
+  wall_seconds: 196.76
+  maximum_resident_kib: 218336
+  exit_status: 0
+debt: []
+status: accepted

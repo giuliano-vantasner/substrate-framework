@@ -63,8 +63,8 @@ comparators_blinded_until: >-
   values, count logic, remaining predicates, guards, and native output remain
   unopened until this contract, formula freeze, provenance record, memory
   validation, clean repository validation, and freeze commit exist.
-status: active
-revision: 0003
+status: accepted
+revision: 0005
 opened_source_equations:
   naive_matrix: Y=sum_c_exp(i*theta_c)*I_c_with_(I_c)_ab=integral_eta_a*eta_b*Phi_c_dx
   wells: H_R=-d_x^2-depth*sech((x-R)/width)^2_on_a_truncated_Dirichlet_interval

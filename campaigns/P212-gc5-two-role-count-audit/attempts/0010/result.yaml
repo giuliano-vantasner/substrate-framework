@@ -1,0 +1,29 @@
+attempt: 0010
+campaign: P212
+timestamp_utc: '2026-08-06T08:29:55Z'
+kind: promotion_boundary_in_progress
+implementation_commit: 363b7ab880417664758aaabcf04a278afdcff31f
+claims: [C-OVL-005, C-PHS-002]
+release: v0.154.0
+source_disposition: {GC5: qualified}
+pre_gate_results:
+  primary_checks: 44
+  independent_checks: 25
+  source_graph_checks: 34
+  focused_tests: 135
+  graph_nodes: 13
+  graph_static_predicates: 107
+  graph_assertions: 19
+  graph_zero_quadrature_nodes: 13
+  version_only_scientific_failures: 0
+integrated_gate:
+  command: /usr/bin/time_-v_scripts_validate_sh
+  tests_passed: 1873
+  pytest_seconds: 183.37
+  memory_files_validated: 865
+  wall_seconds: 196.76
+  maximum_resident_kib: 218336
+  exit_status: 0
+  status: passed
+status: passed
+continuation: finalize_record_only_promotion_state_with_narrow_consistency_checks

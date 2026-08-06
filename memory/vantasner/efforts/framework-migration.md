@@ -2,7 +2,7 @@
 description: Migrate the committed Substrate corpus into a self-consistent accepted framework release
 author: vantasner
 created: '2026-08-01T10:31:34Z'
-updated: '2026-08-06T07:57:27Z'
+updated: '2026-08-06T08:34:20Z'
 tags:
 - substrate-framework
 - effort
@@ -23,7 +23,7 @@ The effort began from the null release at framework commit `6220237`: at that co
 
 The predecessor evidence baseline is `/home/dan/substrate` commit `6d1f4e0`, which is also its recorded `origin/main` at effort start. The predecessor worktree is dirty with later Phase 47/48 and memory artifacts; those uncommitted files are excluded from the source baseline unless admitted later through a separately recorded source-baseline revision. A source commit supplies provenance and candidate evidence, never authority.
 
-The current accepted frontier is `v0.153.0`, containing one hundred ninety-four
+The current accepted frontier is `v0.154.0`, containing one hundred ninety-six
 claims. The campaign ledger below preserves the sequential additions. P145 adds
 C-MED-005's exact SI electromagnetic-to-mechanical conversion
 dimensions, speed-matching iff, free calibration orbit, and amplitude-aware
@@ -2425,26 +2425,42 @@ changes a scientific verdict. The integrated boundary validates 858 memory
 files and passes all 1,856 tests in 177.67 pytest seconds and 191.08 seconds
 total wall time with exit zero.
 
+P212 promotes C-OVL-005 and C-PHS-002 in v0.154.0 and qualifies GC5 through
+those claims plus the accepted quartic, overlap, matrix, and phase-capacity
+ceilings. Identical translated mode and multiplier families converge to a
+phase-weighted diagonal overlap matrix with an explicit singular-value cluster
+bound; this is not a hierarchy or generation theorem. The complete equal-
+weight cosine surrogate is exactly `(abs(sum exp(i*theta))^2-N)/2`, so its
+minima are all zero-resultant configurations and the four-phase square refutes
+the source's universal positive-pair step. No accepted premise forces two
+physical roles, stable three-condensate occupancy, physical CP, scalar or
+generation count, multiplicity ratio, Standard-Model map, or substrate
+mechanism. Forty-four primary, 25 independent, 34 terminal-graph checks, and
+135 focused tests pass. The 13-node graph pins 107 predicates and 19 assertions
+with zero quadrature surface. The integrated boundary validates 865 memory
+files and passes all 1,873 tests in 183.37 pytest seconds and 196.76 seconds
+total wall time with exit zero.
+
 ## Canonicalization
-The registry, `v0.153.0` manifest, current release, generated claim index, and
-generated framework memory agree on one hundred ninety-four accepted claims.
-P001 through P211 are frozen under `campaigns/`; proposal,
+The registry, `v0.154.0` manifest, current release, generated claim index, and
+generated framework memory agree on one hundred ninety-six accepted claims.
+P001 through P212 are frozen under `campaigns/`; proposal,
 attempt, review-work, and effort memory remain distinct from accepted-state
-memory. The regenerated migration queue agrees on 13 pending, 0 partial, 3
-migrated, 192 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope
-unit. P211 changes the accepted scientific surface and therefore runs the most
+memory. The regenerated migration queue agrees on 12 pending, 0 partial, 3
+migrated, 193 qualified, 8 duplicate-evidence, 1 refuted, and 1 out-of-scope
+unit. P212 changes the accepted scientific surface and therefore runs the most
 recent full integrated release boundary.
 
 ## Done Gate
-The effort remains active. D4 is discharged, but D1 remains open with 13
-pending, 3 migrated, 192 qualified, 8 duplicate-evidence, 1 refuted, and 1
+The effort remains active. D4 is discharged, but D1 remains open with 12
+pending, 3 migrated, 193 qualified, 8 duplicate-evidence, 1 refuted, and 1
 out-of-scope bridge unit. GK3D5 and GK3D6 are terminal without accepting a
 quantum determinant particle, universal matching, independent physical scale,
 absolute coupling accuracy, physical weak angle, or substrate mechanism.
 
-The WM7-WM10 source cycle and GC1-GC4 are terminal without backward authority.
-The next campaign audits GC5 against the accepted soliton, overlap, common-
-phase, and scalar phase-capacity ceilings. The remaining condensation order is GC5 through GC6 on one branch and
+The WM7-WM10 source cycle and GC1-GC5 are terminal without backward authority.
+The next campaign audits GC6 against the accepted soliton, overlap, matrix,
+phase, and count ceilings. The remaining condensation order is GC6 on one branch and
 MK3 through MK6 then MR2 through MR6 on the other.
 
 ## Cross-References

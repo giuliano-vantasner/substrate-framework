@@ -1,8 +1,0 @@
-campaign: P212
-artifact: proposals/P212-gc5-two-role-count-audit/reviews/independent_two_role_review.py
-sha256: af35699ca6e8416e9d509649850b4bee728c770b3cc0291250c1ab038fb3b607
-command: PYTHONPATH=src_.venv/bin/python_proposals/P212-gc5-two-role-count-audit/reviews/independent_two_role_review.py
-exit_status: 0
-runtime_checks: 25
-static_check_calls: 21
-terminal_tally: ALL_25_CHECKS_PASS

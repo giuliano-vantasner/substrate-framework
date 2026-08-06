@@ -2,7 +2,7 @@
 description: Audit GC5 translated overlap degeneracy and two-role count claims
 author: vantasner
 created: '2026-08-06T08:01:44Z'
-updated: '2026-08-06T08:06:25Z'
+updated: '2026-08-06T08:34:20Z'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -10,8 +10,8 @@ tags:
 - translated-overlap
 - role-count
 category: proposals
-confidence: exploratory
-status: active
+confidence: established
+status: archived
 ---
 # P212 GC5 Translated-Overlap and Two-Role Count Audit
 
@@ -169,6 +169,10 @@ static predicates, and 19 assertions. Ten authority dependencies are terminal,
 GC6 remains nonauthoritative, six reverse consumers retain independent future
 status, and all nodes have zero quadrature surface.
 
+Attempt 0010 records the single integrated v0.154.0 boundary: 865 memory files
+and all 1,873 tests pass in 183.37 pytest seconds and 196.76 seconds total wall
+time with exit zero.
+
 ## Debt Ledger
 
 The P212 ledger tracks density, multiplier, translation, amplitude, width,
@@ -186,7 +190,7 @@ counts, compatibility, consumers, and generated state.
 | Capacity may be mistaken for occupied count | Test smaller counts and absent-selection models | discharged by all-N surrogate minima and the N=4 square |
 | Pending GC6 may grant backward authority | Replay without importing GC6 | discharged by the 34-check frozen graph |
 | Compatibility may masquerade as science | Audit every executable access shape | discharged; GC5 has zero quadrature surface |
-| Promotion and generated state remain open | Complete reviews, disposition, generation, and integrated gate if required | open |
+| Promotion and generated state remain open | Complete reviews, disposition, generation, and integrated gate if required | discharged by v0.154.0 and the 1,873-test boundary |
 
 ## Review and Promotion Plan
 
@@ -199,8 +203,8 @@ evidence and a record-sensitive closeout.
 
 ## Done Gate
 
-P212 closes only when the overlap matrix, singular-value result, role and count
+P212 is complete. The overlap matrix, singular-value result, role and count
 ceilings, countermodels, source-predicate adjudication, authority graph,
-compatibility audit, source disposition, generated state, and durable memory
-agree with an empty debt ledger. A numerical ratio near one or a prose
-two-role table is not the requested derivation.
+compatibility audit, qualified GC5 disposition, generated state, and durable
+memory agree with an empty debt ledger. No numerical ratio near one or prose
+two-role table was substituted for the requested derivation.

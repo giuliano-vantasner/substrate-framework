@@ -867,6 +867,15 @@ Let {eta_i}_{i=1}^N be one declared ordered orthonormal family in a complex L2 s
 - Compatibility: `compatible_extension`
 - Dependencies: C-QBL-003, C-MIX-001, C-MIX-002, C-OVL-001
 
+## C-OVL-005
+
+Let n>=1, let psi be a complex L2(R) mode normalized by integral_R |psi|^2 dx=1, and let phi be a bounded real continuous multiplier that vanishes at spatial infinity. For each separation parameter t, let R_1(t),...,R_n(t) be real centers whose minimum pairwise distance tends to infinity, define psi_a(x)=psi(x-R_a(t)) and phi_c(x)=phi(x-R_c(t)), choose fixed real phases theta_c, and set Y_ab(t)=sum_c exp(i*theta_c)*integral_R conjugate(psi_a)*psi_b*phi_c dx. If the common matched self-overlap alpha=integral_R |psi|^2*phi dx is positive, then Y(t) tends in every finite matrix norm to alpha*diag(exp(i*theta_1),...,exp(i*theta_n)). Consequently every singular value tends to alpha. More sharply, whenever epsilon(t)=||Y(t)-alpha*diag(exp(i*theta_c))||_2 is less than alpha, every singular value lies in [alpha-epsilon,alpha+epsilon] and the spectral condition number is at most (alpha+epsilon)/(alpha-epsilon). The limit follows because matched self-overlaps are translation invariant, displaced density-multiplier convolutions vanish, and off-diagonal translated L2 correlations vanish. Unequal profiles, amplitudes, widths, nonunit weights, nonseparating centers, or a nondecaying multiplier change the conclusion. This theorem establishes no Yukawa interaction, physical mass or hierarchy, field species, role, generation, selected center or count, Standard-Model map, or substrate realization.
+
+- Accepted in: `v0.154.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: C-OVL-001
+
 ## C-PDE-001
 
 Adopt the C-SG-001 normalized sine-Gordon potential as a declared dimensionless 3+1 flat-space radial model with action S=4*pi*integral dt dr r^2[u_t^2/2-u_r^2/2-(1-cos(u))]. Its equation is u_tt-u_rr-2*u_r/r+sin(u)=0, with even regularity u_r(0,t)=0. For initial data u(r,0)=3*exp(-(r/4)^2), u_t(r,0)=0, a direct-radial centered leapfrog on 0<=r<=200 and 0<=t<=450 with dr=0.05, dt=0.02, outer Dirichlet data, and a quadratic velocity sponge over 150<r<=200 gives finite-time simulation evidence for a localized oscillatory core. The mean energy inside r<=30 over 360<=t<=430 is more than 0.9318 of its mean over 120<=t<=180, and the late center half-range is greater than 4.34. Hann-FFT and rising-crossing estimates on windows beginning at t=220 and t=300 all give 0.90<omega<0.94, below the linear threshold one. Center traces on dr=0.1, 0.05, and 0.025 self-converge at approximately second order; closed-box total-energy relative ranges decrease from 1.179e-3 to 2.940e-4 to 7.344e-5. Timestep halving, domains 160/200/240, core-radius diagnostics, a regular soluble linear mode, and an independent DOP853 evolution of v=r*u with Simpson energy preserve the verdict. Changing the radial geometric coefficient or using the A=4, width-three dispersive seed breaks the relevant verdict. This is resolution-bounded evidence for the specified finite-time IVP, not an exact or eternal breather, exponential lifetime law, family-wide stability result, gravitational source or radiation statement, absolute-scale prediction, particle model, or substrate realization.
@@ -992,6 +1001,15 @@ Let N>=2 scalar phases theta_1,...,theta_N be points on one circle and let W=max
 - Verification: `symbolic_verified`
 - Compatibility: `compatible_extension`
 - Dependencies: none
+
+## C-PHS-002
+
+For N>=2 real scalar phases theta_1,...,theta_N, define the equal-weight complete-graph surrogate S=sum_{a<b} cos(theta_a-theta_b) and the phasor resultant Z=sum_a exp(i*theta_a). Exact expansion gives S=(|Z|^2-N)/2, hence S>=-N/2 with equality exactly when Z=0. A regular N-gon attains the minimum for every N>=2. For N=2 the relative phase at the minimum is pi, and for N=3 the zero-resultant unit phasors form the regular Z3 configuration up to global phase and permutation. For N=4 there is a continuous antipodal-pair family (0,pi,beta,beta+pi) of global minima; the square beta=pi/2 has every pairwise cosine nonpositive and worst cosine zero, while a generic member has a positive pair. Thus one numerically selected positive-pair four-phase minimum is not universal. The identity concerns a static equal-weight complete scalar-phase surrogate. It establishes no physical interaction energy, phase dynamics or relaxation, equilibrium, merger, stability, CP operation or violation, occupied condensate or generation count, multiplicity ratio, Standard-Model map, or substrate realization.
+
+- Accepted in: `v0.154.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: C-PHS-001
 
 ## C-PRB-001
 

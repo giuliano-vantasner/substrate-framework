@@ -1,7 +1,7 @@
 campaign: P212
-artifact: proposals/P212-gc5-two-role-count-audit/reviews/replay_source_graph.py
+artifact: campaigns/P212-gc5-two-role-count-audit/reviews/replay_source_graph.py
 sha256: d34ec5e94769328626fce9bf94d74660dfb6de6bcd155e338b31904749848285
-command: PYTHONPATH=src_.venv/bin/python_proposals/P212-gc5-two-role-count-audit/reviews/replay_source_graph.py
+command: PYTHONPATH=src_.venv/bin/python_campaigns/P212-gc5-two-role-count-audit/reviews/replay_source_graph.py
 exit_status: 0
 runtime_checks: 34
 terminal_tally: ALL_34_CHECKS_PASS

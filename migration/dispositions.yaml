@@ -1599,6 +1599,85 @@ units:
       integrated v0.153.0 boundary validates 858 memory files and passes all
       1,856 tests in 177.67 pytest seconds and 191.08 seconds total wall time
       with exit zero.
+  GC5:
+    disposition: qualified
+    accepted_claims:
+      - C-QBL-001
+      - C-OVL-001
+      - C-OVL-002
+      - C-MIX-002
+      - C-MIX-003
+      - C-QBL-006
+      - C-PHS-001
+      - C-OVL-005
+      - C-PHS-002
+    qualification: >-
+      GC5's self-centered identical translated-family result is replaced by
+      C-OVL-005's exact matrix limit and singular-value residual bound. Equal
+      limiting singular values follow only from identical translated modes and
+      multipliers with mutually separating centers; unequal profiles,
+      amplitudes, widths, weights, or nonseparating centers change the result.
+      Its displaced one-profile hierarchy is C-OVL-002 composition with
+      supplied external wells, spacing, width, depth, profile, and scale, not
+      topological anchors, generations, or an observed hierarchy. C-PHS-002
+      retains the exact equal-weight complete-graph cosine/resultant identity,
+      but that surrogate is not C-QBL-006's finite interaction and supplies no
+      dynamics. Its four-phase minima are nonunique and include the square with
+      worst pair cosine zero. EM6's accepted mapping contains no stability
+      disjunction theorem; no required U1 charge does not imply no complex
+      field or scalar species. Imaginary matrix entries are not a nonzero
+      rephasing invariant or physical CP operation. Source-count phases and
+      matrix dimension remain independent, and FG4 supplies no physical
+      generation lower bound. No two forced roles, topological-fermion map,
+      stable three-condensate occupancy, exact scalar or generation count,
+      N_H/N_gen ratio, Standard-Model, observation, or substrate conclusion is
+      accepted.
+    evidence:
+      - campaigns/P212-gc5-two-role-count-audit/reviews/source_adjudication.md
+      - campaigns/P212-gc5-two-role-count-audit/reviews/C-OVL-005-claim-review.md
+      - campaigns/P212-gc5-two-role-count-audit/reviews/C-PHS-002-claim-review.md
+      - campaigns/P212-gc5-two-role-count-audit/reviews/GC5-disposition-review.md
+      - campaigns/P212-gc5-two-role-count-audit/reviews/impact_analysis.md
+      - campaigns/P212-gc5-two-role-count-audit/evidence/source-reproduction.yaml
+      - campaigns/P212-gc5-two-role-count-audit/evidence/compatibility-audit.yaml
+      - campaigns/P212-gc5-two-role-count-audit/evidence/source-audit.yaml
+      - campaigns/P212-gc5-two-role-count-audit/evidence/formula-freeze.yaml
+      - campaigns/P212-gc5-two-role-count-audit/evidence/input-provenance.yaml
+      - campaigns/P212-gc5-two-role-count-audit/evidence/dependency-audit.yaml
+      - campaigns/P212-gc5-two-role-count-audit/evidence/consumer-audit.yaml
+      - campaigns/P212-gc5-two-role-count-audit/evidence/source-graph-inventory.yaml
+      - campaigns/P212-gc5-two-role-count-audit/evidence/terminal-graph-replay.yaml
+      - campaigns/P212-gc5-two-role-count-audit/evidence/nonduplication-audit.yaml
+      - campaigns/P212-gc5-two-role-count-audit/evidence/candidate-comparison.yaml
+      - campaigns/P212-gc5-two-role-count-audit/evidence/implementation-audit.yaml
+      - campaigns/P212-gc5-two-role-count-audit/evidence/impact-analysis.yaml
+      - campaigns/P212-gc5-two-role-count-audit/evidence/primary-provenance.yaml
+      - campaigns/P212-gc5-two-role-count-audit/evidence/independent-provenance.yaml
+      - campaigns/P212-gc5-two-role-count-audit/evidence/focused-test-replay.yaml
+      - campaigns/P212-gc5-two-role-count-audit/verify.py
+      - campaigns/P212-gc5-two-role-count-audit/reviews/independent_two_role_review.py
+      - campaigns/P212-gc5-two-role-count-audit/reviews/replay_source_graph.py
+      - campaigns/P212-gc5-two-role-count-audit/attempts/0001/result.yaml
+      - campaigns/P212-gc5-two-role-count-audit/attempts/0002/result.yaml
+      - campaigns/P212-gc5-two-role-count-audit/attempts/0003/result.yaml
+      - campaigns/P212-gc5-two-role-count-audit/attempts/0004/result.yaml
+      - campaigns/P212-gc5-two-role-count-audit/attempts/0005/result.yaml
+      - campaigns/P212-gc5-two-role-count-audit/attempts/0006/result.yaml
+      - campaigns/P212-gc5-two-role-count-audit/attempts/0007/result.yaml
+      - campaigns/P212-gc5-two-role-count-audit/attempts/0008/result.yaml
+      - campaigns/P212-gc5-two-role-count-audit/attempts/0009/result.yaml
+      - campaigns/P212-gc5-two-role-count-audit/attempts/0010/result.yaml
+      - memory/vantasner/decisions/C-OVL-005-review.md
+      - memory/vantasner/decisions/C-PHS-002-review.md
+      - memory/vantasner/decisions/GC5-qualified-review.md
+    note: >-
+      P212 closes 44 primary, 25 independent, and 34 terminal source-graph
+      checks plus 135 focused accepted-API tests. The graph pins 13 nodes with
+      107 static predicates and 19 assertions. GC5, mutable P212, canonical
+      APIs, and every graph node have zero quadrature surface and create zero
+      scientific version failures. The single integrated v0.154.0 boundary
+      validates 865 memory files and passes all 1,873 tests in 183.37 pytest
+      seconds and 196.76 seconds total wall time with exit zero.
   NY1:
     disposition: duplicate_evidence
     accepted_claims:
