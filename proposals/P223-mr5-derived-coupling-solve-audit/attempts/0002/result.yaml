@@ -1,0 +1,15 @@
+campaign: P223
+attempt: 0002
+timestamp_utc: '2026-08-06T13:38:00Z'
+status: passed
+stage: source_open_reproduction_and_claim_audit
+source_reproduction: reused_P174_hash_identical_fresh_clean_execution
+source_runtime: {checks: 6, assertions: 1, exit_status: 0}
+source_audit:
+  exact_survivors: [C_GSK_001_equation_and_density, coefficient_product, C_RDIFF_001_signed_difference]
+  possible_numeric_survivor: supplied_parameter_stationary_branch_only
+  rejected_now: [derived_physical_e, continuous_global_floor, physical_mass_ratio, convention_bracket, complete_guard]
+compatibility:
+  source: current_scipy_trapezoid
+  legacy_version_failure: false
+next_action: build_sensitive_canonical_and_fresh_independent_oracles

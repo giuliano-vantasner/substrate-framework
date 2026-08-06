@@ -1,0 +1,62 @@
+campaign: P223
+source_unit: MR5
+scope:
+  lines: 431
+  static_check_calls: 6
+  literal_check_calls: 6
+  dynamic_check_calls: 0
+  assertions: 1
+  oracle: numeric
+exact_surfaces:
+  rhs: matches_the_C_GSK_001_stationary_equation_subject_to_source_floor_clips
+  energy_density: matches_C_GSK_001
+  coefficient_map:
+    c6: N_c_squared_times_e_fourth_over_128_pi_fourth
+    c0: eight_times_m_pi_squared_over_e_fourth_U_squared
+    product: N_c_squared_times_m_pi_squared_over_16_pi_fourth_U_squared
+  signed_difference: three_pi_squared_times_two_b2_minus_b4
+source_inputs:
+  electron_mass_MeV: 0.511
+  pion_mass_MeV: 138.03
+  rho_mass_MeV: 775.26
+  N_c: 3
+  common_unit: sixteen_pi_times_electron_mass
+  proposed_coupling: supplied_MR4_KSRF_specialization
+  alternative_coupling: supplied_MR4_convention_specialization
+  imported_ANW_coupling: 5.45
+numerical_method:
+  angular: biased_midpoint_nodes_followed_by_endpoint_trapezoid_weights
+  radial_boundary: hard_Dirichlet_values_at_1e_minus_4_and_rmax
+  radial_solver: solve_bvp_coefficient_continuation
+  solver_tolerance: 1e-6
+  maximum_nodes: 200000
+  source_status_gate: every_stage_status_zero
+  equation_residual_reported: false
+  boundary_residual_reported: false
+  Derrick_residual_reported: false
+  independent_method: absent
+  domain_replay: kappa_only_at_rmax_20_30_40
+  mesh_quadrature_replay: coupled_3000_40000_to_6000_80000
+  sweep: nine_discrete_e_values_between_3_and_7
+headline_limits:
+  - MR4_is_duplicate_evidence_and_supplies_no_accepted_derived_physical_coupling.
+  - The_three_particle_masses_or_labels_and_N_c_are_supplied_inputs_not_framework_predictions.
+  - A_nine_point_sweep_is_not_a_continuous_interval_or_all_positive_e_lower_bound.
+  - The_source_minimum_is_the_smallest_sample_not_a_scalar_optimization_or_enclosure.
+  - Fixed_product_only_prevents_both_coefficients_vanishing_at_fixed_inputs_and_does_not_prove_the_reported_energy_floor.
+  - Hard_walls_and_coupled_mesh_quadrature_changes_do_not_supply_isolated_refinements_or_an_independent_route.
+  - Successful_stationary_collocation_does_not_prove_local_or_global_minimality_or_a_full_field_solution.
+  - Mathematical_degree_has_no_accepted_baryon_nucleus_or_particle_state_map.
+  - The_mass_and_ratio_formulas_import_the_electron_scale_and_an_unaccepted_physical_normalization.
+  - MR4s_two_convention_values_are_parameter_choices_not_a_rigorous_bracket.
+guard_audit:
+  claimed_surface: no_comparator_value_or_identifier_in_executable_AST
+  contradiction: >-
+    Executable pass predicates directly contain E2 values 1.232 1.208 1.137,
+    E3 value 8.46, MK5 values 1.46534 and 12.343, imported 5.45, three particle
+    masses, and comparison tolerances. The guard tests only three different
+    forbidden values and selected names, so it certifies neither comparator
+    absence nor dependency closure.
+  result: false_completeness_claim
+compatibility: native_current_scipy_trapezoid
+provisional_disposition: qualified_or_duplicate_evidence_pending_stronger_oracle

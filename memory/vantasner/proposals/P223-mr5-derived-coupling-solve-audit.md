@@ -82,6 +82,16 @@ and current integration policy. Memory recall finds prior MR5 consumer and
 compatibility records but no direct light-nucleus record; each reused statement
 was checked at its campaign or accepted registry source.
 
+Attempt 0002 opens MR5 after the committed freeze and reuses P174's
+hash-identical clean six-check execution. The exact density, equation,
+coefficient product, and signed difference map to C-GSK-001 and C-RDIFF-001.
+The source uses biased angular quadrature, hard finite walls, no reported
+equation or Derrick residuals, coupled rather than isolated refinements, and no
+independent method. Its nine-point scan cannot prove an every-coupling floor.
+The executable guard omits numerous comparator literals and physical inputs
+that directly reach pass predicates. A distinct supplied-parameter numeric
+surface remains open only to the stronger preregistered oracle.
+
 ## Debt Ledger
 
 The ledger tracks every supplied coefficient, coupling premise, branch-control
@@ -90,12 +100,12 @@ governed record.
 
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
-| MR5 body and predicates remain unopened | Open only after committed freeze | open |
+| MR5 body and predicates remain unopened | Open only after committed freeze | discharged: six-predicate source audit |
 | MR5 may duplicate C-GSK-001/002 | Exact and numerical nonduplication audit | open |
-| MR4 coupling may be laundered into an accepted input | Dependency and scaling audit | open |
+| MR4 coupling may be laundered into an accepted input | Dependency and scaling audit | discharged: remains a supplied nonphysical coordinate |
 | Source stationary branches may lack numerical controls | Status residual boundary and refinement audit | open |
-| Kappa may be called a bound or physical binding | C-RDIFF typing and counterexample audit | open |
-| Degree labels may be called nuclei or masses | State action scale and correction firewall | open |
+| Kappa may be called a bound or physical binding | C-RDIFF typing and counterexample audit | discharged: exact signed coordinate only |
+| Degree labels may be called nuclei or masses | State action scale and correction firewall | discharged: no accepted map or mass normalization |
 | MR6 may grant backward authority | Pinned consumer replay | open |
 | Governed records remain unresolved | Terminal disposition and synchronization | open |
 

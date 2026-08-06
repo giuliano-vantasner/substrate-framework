@@ -1,0 +1,20 @@
+campaign: P223
+source_unit: MR5
+source_path: /home/dan/substrate/merged-framework/bridges/phase-44/bridge_MR5_solve_at_derived_e.py
+source_sha256: 0da10adafe3badb7f3eab225543bc601996df45b142f2d59b5d0ddd6dd9117d7
+native_execution:
+  disposition: reused_hash_identical_clean_execution
+  evidence_campaign: P174
+  evidence_commit: 184e1b6
+  graph_attempt: campaigns/P174-ki4-backsolve-circularity-audit/attempts/0005/result.yaml
+  graph_inventory: campaigns/P174-ki4-backsolve-circularity-audit/evidence/source-graph-inventory.yaml
+  execution_classification: fresh_clean
+  runtime_checks: 6
+  assertions: 1
+  exit_status: 0
+  graph_terminal_tally: ALL_32_CHECKS_PASS
+reuse_reason: >-
+  The source bytes, interpreter environment policy, six check sites, and one
+  assertion are unchanged. Repeating the documented 15-to-30-minute solve
+  would add no evidence before the canonical and independent audits.
+authority: noncanonical_source_reproduction_only

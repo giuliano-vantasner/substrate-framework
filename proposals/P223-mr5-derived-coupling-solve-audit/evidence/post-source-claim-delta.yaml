@@ -1,0 +1,18 @@
+campaign: P223
+reserved_identifiers: []
+unchanged_exact_owners: [C-GSK-001, C-RDIFF-001]
+unchanged_numeric_owners: [C-GSK-002, C-RDIFF-002]
+possible_distinct_surface:
+  description: supplied_one_parameter_stationary_branch_family_or_new_parameter_point
+  promotion_gate: continuous_parameter_control_numeric_refinement_independent_route_and_nonduplicate_reach
+  status: under_test
+rejected_without_further_oracle:
+  - accepted_derived_physical_coupling
+  - parameter_free_nucleon_or_light_nucleus
+  - physical_mass_or_mass_ratio
+  - every_positive_e_floor
+  - physical_binding_or_kappa_bound
+  - convention_bracket
+  - complete_comparator_guard
+package_change: none_pending_nonduplication
+release_change: none_pending_distinct_claim

@@ -1,0 +1,19 @@
+campaign: P223
+installed_numpy: {version: 2.5.1, preferred_function: numpy.trapezoid}
+source_unit:
+  sha256: 0da10adafe3badb7f3eab225543bc601996df45b142f2d59b5d0ddd6dd9117d7
+  scipy_import: from_scipy_integrate_import_solve_bvp_trapezoid
+  scipy_trapezoid_call_sites: [100, 169]
+  numpy_legacy_trapz_references: 0
+  dynamic_legacy_access: 0
+  eager_legacy_fallbacks: 0
+  classification: native_current_scipy_trapezoid
+canonical_surface:
+  module: src/substrate_framework/generalized_skyrme_radial.py
+  integration: trapezoid_integral
+  direct_numpy_legacy_or_current_calls: 0
+policy:
+  mutable_new_code: numpy_trapezoid_or_canonical_wrapper
+  immutable_source: no_alias_needed
+  version_only_events_are_scientific_failures: false
+scientific_failures_from_version_events: 0

@@ -1,0 +1,52 @@
+campaign: P223
+source_unit: MR5
+checks:
+  MR5.1:
+    verification: numeric_regression
+    review: unaudited
+    compatibility: compatible_extension
+    epistemic: proposed
+    survives: only_as_low_accuracy_regression_against_C_RPROF_002_and_C_RDIFF_002
+    excluded: independent_validation_or_trust_of_all_later_numbers
+    reason: The_pass_thresholds_are_executable_source_comparators_and_the_angular_and_wall_conventions_are_weaker_than_the_accepted_oracles.
+  MR5.2:
+    verification: source_numeric_evidence
+    review: unaudited
+    compatibility: unassessed
+    epistemic: proposed
+    survives: possible_supplied_coefficient_stationary_branch_regression
+    excluded: derived_physical_coupling_mass_ratio_nucleus_or_converged_claim
+    reason: MR4_has_no_accepted_physical_coupling_and_the_source_lacks_residual_Derrick_isolated_refinement_and_independent_method_gates.
+  MR5.3:
+    verification: unverified
+    review: unaudited
+    compatibility: unassessed
+    epistemic: proposed
+    survives: exact_fixed_coefficient_product_and_a_discrete_branch_scan
+    excluded: every_e_floor_admissible_range_structural_falsification_and_global_minimum
+    reason: Nine_samples_do_not_bound_a_continuum_or_define_the_domain_and_fixed_product_does_not_derive_the_reported_energy_floor.
+  MR5.4:
+    verification: source_numeric_evidence
+    review: unaudited
+    compatibility: conflict
+    epistemic: proposed
+    survives: conditional_evaluation_at_a_second_supplied_parameter
+    excluded: convention_bracket_or_physical_resolution_bound
+    reason: P222_proves_the_two_values_are_unordered_parameter_choices_without_a_bracket_theorem.
+  MR5.5:
+    verification: numeric_regression
+    review: unaudited
+    compatibility: compatible_extension
+    epistemic: proposed
+    survives: same_source_equation_regression_at_a_supplied_coupling
+    excluded: independent_cross_implementation_or_solver_identity
+    reason: Both_routes_share_the_model_inputs_and_the_pass_predicate_hard_codes_MK5_comparators.
+  MR5.6:
+    verification: refuted_by_AST_audit
+    review: unaudited
+    compatibility: conflict
+    epistemic: refuted
+    survives: selected_three_number_and_identifier_scan_only
+    excluded: comparator_free_data_gate_or_complete_dependency_firewall
+    reason: Multiple_executable_comparators_and_physical_inputs_are_outside_the_selected_needles_and_reach_pass_predicates.
+terminal_tally_claim: execution_success_only_not_headline_validation
