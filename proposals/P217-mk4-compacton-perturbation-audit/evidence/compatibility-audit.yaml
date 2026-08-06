@@ -1,0 +1,3 @@
+campaign: P217
+MK4: {numpy_legacy: 0, scipy_trapezoid: 1, alias_needed: false}
+scientific_version_failures: 0

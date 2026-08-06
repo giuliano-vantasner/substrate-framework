@@ -1,0 +1,25 @@
+campaign: P217
+accepted_dependencies:
+  C-BPS-001:
+    supplies: conditional square equation pi-four convention bound and positive coupling family
+    withholds: equality attainment potential selection physical coupling state map and arbitrary-degree radial existence
+  C-BPS-002:
+    supplies: exact additivity when sector energies attain their linear bounds
+    withholds: attainment for the MK4 profile and any supplied physical couplings
+  C-BPS-003:
+    supplies: controlled expansion architecture with explicit remainders
+    withholds: permission to assign a divergent first-order expectation a finite coefficient
+  P107:
+    supplies: independently verified standard-potential compacton balance simple L2 pole logarithmic cutoff divergence and finite L4 edge
+    withholds: a controlled L2 correction or full generalized-model solution
+source_predecessors:
+  E2: qualified_radial_and_numeric_evidence_only
+  E4: qualified_BPS_zero_binding_mapping_only
+  KI3: qualified_interpolation_obstruction_only
+  MK1: qualified_without_physical_mu
+  MK2: qualified_without_physical_lambda_product
+  MK3: qualified_without_physical_epsilon
+backward_authority_excluded: [MK5, MK6, MR2, MR6]
+closure_result: Exact conditional field mathematics closes, but neither physical coupling closure nor a controlled perturbative correction does.
+debt: []
+

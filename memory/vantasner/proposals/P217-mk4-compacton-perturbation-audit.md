@@ -90,6 +90,29 @@ explicit regulator tests, the P107 nonduplication boundary, physical
 firewalls, compatibility policy, and positive continuation requirement before
 source inspection.
 
+Attempt 0002 reproduces all six source checks natively in 2.46 seconds. MK4
+already imports SciPy's current `trapezoid` and has no legacy NumPy integration
+surface. Source inspection corrects the generated queue's `F''^2` transcription:
+the executable energy density and oracle use the first radial derivative
+squared.
+
+Attempt 0003 completes nineteen primary exact checks. The compacton satisfies
+the declared radial equation only at the frozen radius, the L2 edge term has
+simple-pole coefficient two, and the cutoff integral grows as
+`2*R*log(1/delta)`. Its finite remainder still depends on the explicit
+regulator, so no cutoff-independent first-order coefficient is manufactured.
+
+Attempt 0004 completes eight fresh independent and nine source-graph checks.
+The independent route does not import MK4, the primary verifier, or a
+canonical compacton API; a nonlinear degree mutation also defeats the balanced
+linear cancellation. The eleven-node graph pins 70 predicates and 13
+assertions, reruns MK4, and hash-reuses only unchanged expensive later
+executions from P215.
+
+Attempt 0005 completes 22 focused BPS and source-audit tests. Exact survivors
+duplicate P107 and accepted conditional BPS ledgers; physical coupling closure,
+a controlled correction, and a full-model solution remain outside MK4.
+
 ## Debt Ledger
 
 The ledger tracks the radial convention, profile domain, radius, edge
@@ -98,13 +121,13 @@ consumers, novelty, and generated records.
 
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
-| Remaining MK4 predicates are blinded | Reproduce after committed freeze | open |
-| Compacton normalization may be wrong | Independent ODE substitution and mutations | open |
-| Divergent and finite terms may be conflated | Exact termwise limits and cutoff asymptotics | open |
-| A no-go may masquerade as a correction | Record viable continuation class and reject finite coefficient | open |
-| P107 duplication is unresolved | Claim/API/evidence comparison | open |
-| Physical and later-source authority may leak | Dependency and terminal graph replay | open |
-| Compatibility may masquerade as science | Full executable access preflight | open |
+| Remaining MK4 predicates are blinded | Reproduce after committed freeze | discharged by attempt 0002 |
+| Compacton normalization may be wrong | Independent ODE substitution and mutations | discharged by attempts 0003 and 0004 |
+| Divergent and finite terms may be conflated | Exact termwise limits and cutoff asymptotics | discharged by attempts 0003 and 0004 |
+| A no-go may masquerade as a correction | Record viable continuation class and reject finite coefficient | discharged by attempts 0003 and 0004 |
+| P107 duplication is unresolved | Claim/API/evidence comparison | discharged by attempts 0003 through 0005 |
+| Physical and later-source authority may leak | Dependency and terminal graph replay | discharged by attempt 0004 |
+| Compatibility may masquerade as science | Full executable access preflight | discharged by attempts 0002 and 0004 |
 | Governed records remain open | Terminal disposition and record gate | open |
 
 ## Review and Promotion Plan

@@ -1,0 +1,9 @@
+source_unit: MK4
+checks:
+  MK4.1: {verdict: qualified_conditional, mapping: [C-BPS-001], correction: reduced_radial_normalization_not_general_existence}
+  MK4.2: {verdict: qualified_exact_conditional, mapping: [C-BPS-001], correction: declared_standard_potential_and_radial_equation_only}
+  MK4.3: {verdict: duplicate_exact, mapping: [C-BPS-003], correction: already_P107_counterevidence}
+  MK4.4: {verdict: duplicate_exact_with_numeric_regression, mapping: [C-BPS-003], correction: exact_cutoff_formula_is_oracle}
+  MK4.5: {verdict: duplicate_exact, mapping: [C-BPS-003], correction: finite_L4_does_not_cancel_positive_divergent_L2}
+  MK4.6: {verdict: qualified_conditional, mapping: [C-BPS-002], correction: energy_linearity_requires_attainment_and_physical_maps_are_absent}
+terminal_source_disposition: qualified

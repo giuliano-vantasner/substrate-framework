@@ -1,0 +1,19 @@
+campaign: P217
+claim_delta: none
+independent_review: proposals/P217-mk4-compacton-perturbation-audit/reviews/independent_compacton_review.py
+checks: 8
+elapsed_seconds: 2.45
+max_rss_kib: 154704
+canonical_compacton_api_imported: false
+primary_verifier_imported: false
+source_MK4_imported: false
+route:
+  - fresh compacton radius substitution
+  - fresh edge residue and cutoff logarithm
+  - fresh termwise L4 limits
+  - nonlinear degree counterexample to balanced cancellation
+  - direct accepted-registry existence and controlled-expansion ceilings
+  - fresh positive-continuation decision
+precision: SymPy exact
+debt: []
+

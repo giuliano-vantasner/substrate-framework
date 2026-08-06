@@ -1,0 +1,10 @@
+campaign: P217
+attempt: 0004
+timestamp_utc: '2026-08-06T11:03:03Z'
+status: passed
+stage: independent_rederivation_and_source_graph
+independent: {checks: 8, elapsed_seconds: 2.45, max_rss_kib: 154704}
+source_graph: {nodes: 11, lexical_predicates: 70, assertions: 13, aggregate_checks: 9, elapsed_seconds: 4.19, max_rss_kib: 154900}
+execution_policy: MK4_fresh_later_hash_identical_expensive_consumers_reused_from_P215
+next_action: focused canonical consumer replay and individual review
+

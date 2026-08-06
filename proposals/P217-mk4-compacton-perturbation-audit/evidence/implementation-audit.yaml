@@ -1,0 +1,10 @@
+campaign: P217
+new_package_apis: []
+new_tests: []
+reason: >-
+  P107 already owns the exact compacton balance and edge obstruction, while
+  canonical BPS and source-audit modules own the accepted equations and
+  compatibility policy. A duplicate compacton API would create no new
+  accepted consumer and would misrepresent obstruction evidence as closure.
+canonical_consumers_replayed: [src/substrate_framework/bps_energy.py, src/substrate_framework/source_audit.py]
+

@@ -1,0 +1,17 @@
+campaign: P217
+canonical_symbols_changed: []
+accepted_claims_changed: []
+package_files_changed: []
+tests_changed: []
+release_change: none
+direct_record_consumers:
+  - migration/dispositions.yaml
+  - migration/source-claims.yaml
+  - memory/vantasner/decisions/MK4-qualified-review.md
+  - memory/vantasner/proposals/P217-mk4-compacton-perturbation-audit.md
+  - memory/vantasner/efforts/framework-migration.md
+pending_scientific_consumers: [MK5, MK6, MR2, MR6]
+targeted_evidence: {primary_checks: 19, independent_checks: 8, graph_checks: 9, focused_tests: 22}
+full_suite_policy: reuse_P215_1901_test_gate_because_package_claim_test_and_release_inputs_are_unchanged
+risk: record_only_after_scientific_adjudication
+debt: []

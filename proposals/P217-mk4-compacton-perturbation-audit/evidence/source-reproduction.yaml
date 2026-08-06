@@ -1,0 +1,6 @@
+campaign: P217
+source_unit: MK4
+sha256: 9f2e299032aace53c3ac2c2d1d5626372e4bdf1aa3b7b0650f574a9f7b8f7295
+native: {exit: 0, checks: 6, elapsed_seconds: 2.46, max_rss_kib: 154504}
+compatibility: scipy_trapezoid_current_no_legacy_numpy_surface
+scope: native_tally_is_reproduction_not_headline_authority

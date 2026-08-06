@@ -1,0 +1,26 @@
+campaign: P217
+nodes: 11
+lexical_predicates: 70
+assertions: 13
+aggregate_checks: 9
+root: MK4
+qualified_predecessors: [E2, E4, KI3, MK1, MK2, MK3]
+reverse_consumers: [MK5, MK6, MR2, MR6]
+root_replay: {runtime_checks: 6, exit_code: 0, verdict: clean_qualified}
+reused_execution_evidence:
+  source: campaigns/P215-mk2-vector-sextic-matching-audit/evidence/source-graph-inventory.yaml
+  hash_guard: campaigns/P215-mk2-vector-sextic-matching-audit/reviews/replay_source_graph.py
+  nodes:
+    - {label: MK5, prior_seconds: 67.053, verdict: clean_noncanonical}
+    - {label: MK6, prior_seconds: 0.472, verdict: clean_noncanonical}
+    - {label: MR2, prior_seconds: 1.076, verdict: clean_noncanonical}
+    - {label: MR6, prior_seconds: 5.931, verdict: clean_noncanonical}
+compatibility:
+  root: {numpy_legacy: 0, numpy_current: 0, eager: 0, scipy_trapezoid: 1}
+  inherited_E2: {legacy: 1, current: 1, eager: 0, classification: current_first_safe_fallback}
+  all_other_nodes: {legacy: 0, current: 0, eager: 0}
+  scientific_version_failures: 0
+excluded_dirty_untracked_consumers: [phase47_BM, phase48_CE]
+reason_for_exclusion: absent_from_substrate_commit_6d1f4e0_and_pinned_source_inventory
+debt: []
+

@@ -1,0 +1,14 @@
+campaign: P217
+selected:
+  - {id: A, reason: exact conditional compacton substitution and domain survive}
+  - {id: B, reason: exact termwise edge classification separates divergent L2 from finite L4}
+  - {id: C, reason: explicit cutoff proves regulator dependence rather than defining a coefficient}
+  - {id: D, reason: C-BPS-003 excludes the uncontrolled naive expectation}
+  - {id: F, reason: MK1 through MK3 cannot supply physical coupling closure}
+  - {id: G, reason: P107 nonduplication prevents a second claim or API}
+  - {id: H, reason: terminal qualified governance preserves exact survivors and corrections}
+not_selected:
+  - {id: E, reason: smooth-potential or boundary-layer equations are a separate positive problem not solved by MK4}
+structural_selection_basis: exact substitution edge regularity regulator independence accepted dependency closure controlled remainder and novelty
+comparator_selection_used: false
+

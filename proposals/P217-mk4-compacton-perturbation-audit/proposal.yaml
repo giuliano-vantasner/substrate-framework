@@ -52,4 +52,18 @@ comparators_blinded_until: >-
   probes, imports, output, and consumer details stay unopened until the
   contract, formula freeze, provenance record, validation, and freeze commit.
 status: draft
-
+revision: 0002
+opened_source_equations:
+  radial_density: b0=-(2*B/pi)*sin(F)^2*dF/dr/(4*pi*r^2)
+  declared_radial_BPS_equation: lambda*pi^2*b0=mu*sqrt(1-cos(F))
+  compacton: cos(F/2)=r/R_for_0_le_r_le_R_and_F=0_outside
+  radius: R^3=2*sqrt(2)*lambda*B/mu
+  edge_L2: r^2*(dF/dr)^2_has_simple_pole_with_residue_2R
+  cutoff_integral: 4*R*(atanh(1-delta)-(1-delta))
+  L4_edge_limits: [16/R^2, 0]
+claim_refinement:
+  decision: no_new_claim_or_API
+  reason: >-
+    P107 already owns the exact compacton balance, L2 pole, logarithmic cutoff
+    divergence, and finite L4 edge. MK4 constructs no regulator-independent
+    first-order coefficient or controlled full-model replacement.

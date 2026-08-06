@@ -1,0 +1,14 @@
+campaign: P217
+root: MK4
+accepted_consumers: []
+pending_reverse_consumers:
+  MK5: cites_MK4_as_reason_to_replace_perturbation_by_full_solve
+  MK6: reuses_MK4_structural_and_energy_narrative
+  MR2: corrects_the_lambda_convention_used_in_MK4_6
+  MR6: claims_structural_MK4_results_survive_while_MK4_6_normalization_changes
+consumer_decision: >-
+  Later units remain pending and grant no backward authority. Their pinned
+  hashes and unchanged P215 executions are reused, while P217 freshly executes
+  MK4 and audits every direct narrative edge.
+generated_consumers: [migration/source-claims.yaml, memory/vantasner/efforts/framework-migration.md]
+

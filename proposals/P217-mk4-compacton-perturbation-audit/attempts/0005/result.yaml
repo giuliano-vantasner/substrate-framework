@@ -1,0 +1,14 @@
+campaign: P217
+attempt: 0005
+timestamp_utc: '2026-08-06T11:04:47Z'
+status: passed
+stage: focused_canonical_consumer_replay
+command: .venv/bin/python -m pytest -q tests/test_bps_energy.py tests/test_source_audit.py
+result: {tests_passed: 22, elapsed_seconds: 1.51, total_wall_seconds: 1.84, max_rss_kib: 153928}
+review_readiness:
+  source_predicates: [MK4.1, MK4.2, MK4.3, MK4.4, MK4.5, MK4.6]
+  promoted_claims: []
+  new_package_apis: []
+  proposed_disposition: qualified
+next_action: commit implementation boundary and conduct individual source review
+

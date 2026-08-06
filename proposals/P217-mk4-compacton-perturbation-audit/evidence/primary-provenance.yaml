@@ -1,0 +1,22 @@
+campaign: P217
+source_unit: MK4
+base_release: v0.156.0
+freeze_commit: bab7a05
+claim_delta: none
+primary_verifier: proposals/P217-mk4-compacton-perturbation-audit/verify.py
+checks: 19
+elapsed_seconds: 5.34
+max_rss_kib: 155980
+route:
+  - pinned source and formula freeze hashes
+  - executable integration-name preflight and native six-check reproduction
+  - exact radial density endpoint normalization
+  - exact compacton substitution and radius mutation
+  - exact edge orders pole residue cutoff integral and regulator dependence
+  - separate finite L4 limits and degree-linearity mutation
+  - accepted BPS claim ceilings P107 nonduplication and positive continuation
+precision: SymPy exact with positive assumption-bearing symbols
+numeric_role: native source reproduction only; source quadrature is regression rather than the oracle
+compatibility: current_scipy_trapezoid_no_legacy_numpy_surface
+debt: []
+

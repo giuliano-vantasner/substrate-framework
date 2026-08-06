@@ -1,0 +1,7 @@
+campaign: P217
+attempt: 0002
+timestamp_utc: '2026-08-06T10:58:08Z'
+status: passed
+stage: native_reproduction
+result: {checks: 6, elapsed_seconds: 2.46, max_rss_kib: 154504, compatibility_event: none}
+next_action: exact primary independent and nonduplication review
