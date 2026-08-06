@@ -68,7 +68,7 @@ comparators_blinded_until: >-
   exact predicates, guards, imports, output, comparator residuals, and consumer
   details remain unopened until this manifest, prose contract, formula freeze,
   provenance record, validation record, and freeze commit exist.
-status: draft
+status: in_review
 revision: 0002
 opened_source_equations:
   local_ratio: epsilon=(F_pi/e)/(lambda*mu)

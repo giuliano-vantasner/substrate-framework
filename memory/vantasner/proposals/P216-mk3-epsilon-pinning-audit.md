@@ -148,6 +148,11 @@ MK3 replays freshly, while unchanged expensive later consumers reuse P215's
 hash-guarded executions. MK3 has no integration surface, and inherited B1/E3
 version shapes remain compatibility provenance only.
 
+Attempt 0008 individually adjudicates MK3.1 through MK3.6 and selects a
+terminal qualified disposition through C-BPS-001, C-SK-001, and C-VEC-002.
+No accepted claim, canonical symbol, package file, test, or release changes;
+the remaining work is the governed record transaction and narrow closeout.
+
 ## Debt Ledger
 
 The P216 ledger tracks the local definition and normalization, BPS convention,
