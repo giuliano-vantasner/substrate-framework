@@ -1,0 +1,14 @@
+campaign: P224
+attempt: 0002
+timestamp_utc: '2026-08-06T14:07:00Z'
+status: passed
+stage: source_open_reproduction_and_claim_audit
+source_reproduction: reused_P215_hash_identical_clean_noncanonical_execution
+source_runtime: {checks: 6, assertions: 3, elapsed_seconds: 5.931, exit_status: 0}
+source_audit:
+  exact_survivors: [pi_squared_formula_ratio, common_scale_coefficient_map, pointwise_nonnegative_additions, nonstrict_infimum_order]
+  rejected_now: [complete_ledger, physical_double_counting_refutation, current_confrontation, universal_monotonicity, strict_minimum_gap, complete_guard]
+compatibility:
+  source: current_scipy_trapezoid
+  legacy_version_failure: false
+next_action: build_sensitive_claim_level_ledger_and_fresh_independent_oracles

@@ -83,6 +83,17 @@ sources. A pre-freeze module read used the nonexistent name
 `variational_composition.py`; registry search repaired it to `variational.py`
 and the actual module was read in full before source inspection.
 
+Attempt 0002 opens MR6 after the committed freeze and reuses P215's
+hash-identical clean six-check execution. Exact audit retains the pi-squared
+formula ratio, common-scale coefficient map, pointwise nonnegative additions,
+and only a nonstrict infimum order already owned by accepted claims. Most
+ledger rows and the count of four occur only in check prose; the MK6.3 proxy
+tests comparator thresholds rather than double counting. The confrontation is
+stale after P223, five samples do not prove continuous monotonicity, stationary
+branches are not minima, positivity somewhere does not prove a strict infimum
+gap, and the guard omits all solved values while comparators drive several pass
+predicates.
+
 ## Debt Ledger
 
 The ledger tracks every MR6 row, accepted owner, convention conversion,
@@ -91,12 +102,12 @@ compatibility event, governed record, and global consumer.
 
 | Debt | Discharge condition | Status |
 | --- | --- | --- |
-| MR6 body predicates and assertions remain unopened | Open only after committed freeze | open |
+| MR6 body predicates and assertions remain unopened | Open only after committed freeze | discharged: six-predicate and three-assertion audit |
 | Four-overturn count may mix source history with accepted truth | Enumerated claim-level ledger | open |
-| Pi-squared corrections may mix lambda conventions | Exact same-current conversion audit | open |
+| Pi-squared corrections may mix lambda conventions | Exact same-current conversion audit | discharged: accepted conversion and ratio identified |
 | Structural survival may depend on hidden normalization | Rescaling and dependency mutations | open |
-| Numeric rows may be stale after P223 | Recompute from current governed evidence | open |
-| Physical confrontation may import masses or state maps | Parameter and interpretation firewall | open |
+| Numeric rows may be stale after P223 | Recompute from current governed evidence | discharged: source kappa is stale and uncomputed in MR6 |
+| Physical confrontation may import masses or state maps | Parameter and interpretation firewall | discharged: all particle inputs remain supplied and unclosed |
 | Completeness guard may scan only selected needles | AST and data-flow counterexamples | open |
 | Global migration records and debt remain open | Terminal synchronization and full done gate | open |
 

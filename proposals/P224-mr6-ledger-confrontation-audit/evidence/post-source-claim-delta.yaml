@@ -1,0 +1,15 @@
+campaign: P224
+reserved_identifiers: []
+unchanged_exact_owners: [C-BPS-001, C-VEC-002, C-VAR-002]
+context_owners: [C-BPS-002, C-BPS-003, C-GSK-001, C-RDIFF-001, C-VAR-003]
+possible_distinct_surface: none
+rejected_without_further_oracle:
+  - complete_exactly_four_overturn_ledger
+  - refuted_physical_double_counting
+  - current_corrected_confrontation
+  - monotone_all_scale_or_two_parameter_localization
+  - universal_physical_pion_mass_degradation
+  - strict_infimum_increase_from_positivity_somewhere
+  - complete_comparator_and_dependency_guard
+package_change: none
+release_change: none

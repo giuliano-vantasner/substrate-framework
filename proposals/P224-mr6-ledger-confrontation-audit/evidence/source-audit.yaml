@@ -1,0 +1,68 @@
+campaign: P224
+source_unit: MR6
+scope:
+  lines: 394
+  static_check_calls: 6
+  literal_check_calls: 6
+  dynamic_check_calls: 0
+  assertions: 3
+  oracles: [symbolic, numeric]
+exact_surfaces:
+  BPS_formula_ratio: source_MK6_value_over_corrected_same_current_value_equals_pi_squared
+  coefficient_scaling: common_lambda_mu_scale_s_sends_c6_c0_to_s_squared_times_each
+  added_density_sign: L6_and_L0_terms_are_pointwise_nonnegative_under_declared_inputs
+  infimum_ceiling: nonnegative_addition_implies_only_a_nonstrict_infimum_inequality_without_extra_hypotheses
+source_inputs:
+  electron_mass_MeV: 0.511
+  pion_mass_MeV: 138.03
+  rho_mass_MeV: 775.26
+  N_c: 3
+  nucleon_mass_comparator_MeV: 938.92
+  proton_electron_ratio_comparator: 1836.15
+numerical_method:
+  radial_boundary: hard_Dirichlet_values_at_1e_minus_4_and_dynamic_rmax
+  radial_solver: solve_bvp_coefficient_continuation
+  solver_tolerance: 1e-6
+  maximum_nodes: 200000
+  source_status_gate: assertions_at_every_stage
+  equation_residual_reported: false
+  boundary_residual_reported: false
+  Derrick_residual_reported: false
+  independent_method: absent
+  refinement: absent
+  scale_scan: five_discrete_common_scale_points
+ledger_audit:
+  actually_recomputed:
+    - MK6_1_pi_squared_formula_ratio
+    - MK6_2_comparator_threshold_before_and_after
+    - a_proxy_for_MK6_3_using_two_comparator_thresholds
+    - MK6_5_source_ratio_degradation
+  asserted_only_in_check_prose:
+    - MK4_6_is_the_fourth_overturn
+    - exactly_four_total_overturns
+    - all_28_MK1_MK2_MK3_MK5_checks_survive
+    - all_9_NY1_checks_survive
+    - MK4_structural_results_survive
+    - KI3_status_is_unchanged
+  semantic_mismatch:
+    MK6_3: The_boolean_proxy_tests_two_five_percent_comparator_matches_not_double_counting_or_C_VAR_003.
+headline_limits:
+  - Accepted_campaigns_already_correct_the_pi_squared_conversion_and_individually_adjudicate_every_named_source.
+  - MR3_does_not_refute_or_remove_physical_double_counting_it_proves_a_sign_indefinite_abstract_interaction.
+  - MR4_supplies_no_accepted_derived_physical_coupling_and_MR5_is_duplicate_regression_evidence.
+  - MR6s_11_49_kappa_is_stale_relative_to_P223s_stronger_11_53644_regression_and_is_not_computed_in_MR6.
+  - Five_common_scale_samples_do_not_prove_monotonicity_for_all_s_or_localize_two_independent_parameters.
+  - Source_stationary_branches_are_not_proven_minima_and_cannot_support_strict_infimum_language.
+  - Pointwise_nonnegative_additions_imply_a_nonstrict_infimum_order_only; positivity_somewhere_does_not_prove_a_strict_gap.
+  - A_41_point_potential_sample_is_not_the_exact_continuum_sign_proof_though_the_sign_is_true_analytically.
+  - No_accepted_action_state_or_scale_map_turns_the_source_values_into_particle_masses_or_observed_ratios.
+  - Claims_about_every_Skyrme_model_and_uncontroversial_terms_are_unverified_external_prose.
+guard_audit:
+  claimed_surface: derived_chain_and_all_four_b1_values_recompute_without_comparator_scope
+  actual_independent_expression: only_e_c6_c0_and_E_BPS_are_recomputed
+  omitted_from_independent_expression: [B_CL, B_FULL, B_L0, scale_scan_values]
+  comparator_data_flow: Comparator_values_directly_determine_MK6_2_MK6_3_MK6_5_MR6_2_and_MR6_4_pass_predicates.
+  forbidden_needles: only_two_unrelated_empirical_kappa_values_and_selected_identifiers
+  result: false_completeness_claim
+compatibility: native_current_scipy_trapezoid
+provisional_disposition: duplicate_evidence_pending_stronger_ledger_oracle

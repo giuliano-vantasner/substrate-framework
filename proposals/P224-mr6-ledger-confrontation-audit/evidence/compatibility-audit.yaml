@@ -1,0 +1,18 @@
+campaign: P224
+installed_numpy: {version: 2.5.1, preferred_function: numpy.trapezoid}
+source_unit:
+  sha256: 9443373f412cfe86b26bec6c35eb245ee83cd5dd5b65c76a5b3bb1c6d2106d9d
+  scipy_import: from_scipy_integrate_import_solve_bvp_trapezoid
+  scipy_trapezoid_call_sites: [149]
+  numpy_legacy_trapz_references: 0
+  dynamic_legacy_access: 0
+  eager_legacy_fallbacks: 0
+  classification: native_current_scipy_trapezoid
+canonical_surfaces:
+  generalized_radial_integration: trapezoid_integral
+  BPS_and_variational_algebra: no_sampled_integration
+policy:
+  mutable_new_code: numpy_trapezoid_or_canonical_wrapper
+  immutable_source: no_alias_needed
+  version_only_events_are_scientific_failures: false
+scientific_failures_from_version_events: 0

@@ -1,0 +1,18 @@
+campaign: P224
+source_unit: MR6
+source_path: /home/dan/substrate/merged-framework/bridges/phase-44/bridge_MR6_ledger_and_confrontation.py
+source_sha256: 9443373f412cfe86b26bec6c35eb245ee83cd5dd5b65c76a5b3bb1c6d2106d9d
+native_execution:
+  disposition: reused_hash_identical_clean_execution
+  evidence_campaign: P215
+  graph_inventory: campaigns/P215-mk2-vector-sextic-matching-audit/evidence/source-graph-inventory.yaml
+  execution_classification: clean_noncanonical
+  runtime_checks: 6
+  assertions: 3
+  elapsed_seconds: 5.931
+  exit_status: 0
+reuse_reason: >-
+  Exact source bytes, current SciPy trapezoid compatibility, six runtime checks,
+  and three assertions are pinned by P215. Reexecution would add no evidence
+  before the stronger claim-level ledger audit.
+authority: noncanonical_source_reproduction_only
