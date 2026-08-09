@@ -741,6 +741,14 @@ from .induced_gravity import (
     newton_dimension_ledger,
     normalized_gravity_source_coupling,
 )
+from .scalar_induced_newton import (
+    FOUR_DIMENSIONAL_CONFORMAL_COUPLING,
+    SHARP_PROPER_TIME_REGULATOR,
+    LeadingScalarNewtonShiftCoefficient,
+    ScalarHeatKernelA2,
+    leading_scalar_newton_shift_coefficient,
+    scalar_heat_kernel_a2,
+)
 from .flux_tube import (
     charge_for_slope_equality,
     endpoint_force_slope,
@@ -1583,6 +1591,12 @@ __all__ = [
     "homogeneous_dirichlet_sine_gordon_energy",
     "index_from_potential",
     "induced_inverse_newton_ledger",
+    "FOUR_DIMENSIONAL_CONFORMAL_COUPLING",
+    "SHARP_PROPER_TIME_REGULATOR",
+    "LeadingScalarNewtonShiftCoefficient",
+    "ScalarHeatKernelA2",
+    "leading_scalar_newton_shift_coefficient",
+    "scalar_heat_kernel_a2",
     "induced_scaling_log_constraint",
     "induced_scaling_null_rescaling",
     "invariant_quartet",
