@@ -1205,6 +1205,21 @@ from .thermal import (
     two_level_upper_occupation,
 )
 from .topological_labels import combined_winding_parity, winding_parity
+from .flux_tube_ensemble import (
+    isotropic_average_equation_of_state,
+    orientation_average_nn,
+    tube_longitudinal_pressure,
+    tube_transverse_pressure,
+)
+from .lattice_gauge import (
+    covariant_laplacian_spectrum,
+    cycle_holonomy,
+    plaquette_holonomies,
+)
+from .lorentz_orbits import (
+    unit_timelike_vector_orbit_metric,
+    unit_timelike_vector_orbit_volume,
+)
 from .twisted_casimir import (
     CORRECTED_DELTA_V_COEFFICIENT,
     PREPRINT_DELTA_V_COEFFICIENT,
@@ -1906,17 +1921,26 @@ __all__ = [
     "TORON_ADJOINT_TWISTS",
     "adjoint_twists",
     "analytic_twist_spectrum",
+    "covariant_laplacian_spectrum",
+    "cycle_holonomy",
     "dirichlet_beta",
     "dual_s_sum",
     "epstein_square",
     "epstein_square_derivative_minus_one",
     "epstein_square_value_minus_one",
     "higgs_quartic_from_gap_ansatz",
+    "isotropic_average_equation_of_state",
     "lattice_adjoint_transverse_spectrum",
     "matrix_commutant_basis",
     "one_loop_density_scalar",
+    "orientation_average_nn",
+    "plaquette_holonomies",
     "regulated_mode_sum_difference",
     "transition_matrices",
+    "tube_longitudinal_pressure",
+    "tube_transverse_pressure",
+    "unit_timelike_vector_orbit_metric",
+    "unit_timelike_vector_orbit_volume",
     "vacuum_energy_difference",
     "wilson_loop_commutator",
     "temporal_coefficient_rank",
