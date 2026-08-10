@@ -111,15 +111,25 @@ Verified outcomes (reproduce with the commands in Validation).
    Euclidean Gr(2,4) contrast); no stationary point in L under either sign.
 
 ## Post-Task Refinement
-Pending.
+The task exposed one process defect and one environment friction.
+
+1. Defect: the referee verdict was first delivered from ad-hoc pure-Python
+   numerics outside the substrate workflow. Corrected in place: ~/AGENTS.md
+   Team-operations section now forbids hand-rolled math and requires
+   SymPy/SciPy/Lean-backed, issue+PR-recorded verification before any
+   quantitative answer is delivered (Dan directive 2026-08-10).
+2. Friction: system python3 has no pip/numpy; the repo .venv has the full
+   stack. Recorded in long-term memory; no template change needed.
 
 ## Done Gate
 Each condition checked individually before closing.
 
-- [ ] Positive object exists and is verified (not just attempted)
-- [ ] Debt ledger empty or explicitly carried to the PR
-- [ ] Memory synchronized with landed state
-- [ ] Post-task refinement answered
+- [x] Positive object exists and is verified (modules + 29 targeted tests + full suite 2031 passed)
+- [x] Debt ledger empty or explicitly carried to the PR (fermion-on-flux frontier recorded on issue #26 and in the PR)
+- [x] Memory synchronized with landed state (P225 proposal, this effort, branch pushed)
+- [x] Post-task refinement answered
+
+Status stays active until independent review disposes PR #27 (no self-merge).
 
 ## Cross-References
 Issue #26 (vantasnerdan/substrate-framework); referee report artifact at
