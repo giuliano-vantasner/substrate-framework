@@ -36,18 +36,20 @@ gh pr list --state open --limit 30
 Otherwise inspect the repository's Issues and Pull requests pages before
 claiming work, and record any access limitation in the handoff.
 
-For a durable research campaign, claim change, migration, or multi-step
-implementation, work from one canonical goal issue. Before substantive work,
-comment there with:
+Every intended pull request must have exactly one canonical issue before even a
+draft PR is submitted. A contributing agent may create the issue itself. This
+requirement applies without exception to documentation, tooling, compatibility,
+harvest, and scientific work. Do not open a standalone PR.
+
+The issue must state the positive objective, scope, success gate, dependencies,
+and coordination boundary. Before substantive work, comment there with:
 
 - the exact slice you are taking and the positive deliverable;
 - your branch name and intended write surfaces;
 - claim identifiers, proposal identifiers, and dependencies in play;
 - anything another contributor should avoid editing concurrently.
 
-Small documentation or isolated tooling fixes may use a standalone PR, but its
-scope still must be explicit. Issue comments coordinate ownership; they do not
-grant scientific authority.
+Issue comments coordinate ownership; they do not grant scientific authority.
 
 Use focused branch names such as `research/<proposal>-<topic>`,
 `harvest/<issue-or-pr>-<topic>`, `fix/<topic>`, or `docs/<topic>`. One agent owns
@@ -196,10 +198,12 @@ is not a review.
 
 ## 8. Open the pull request
 
-Use [the repository PR template](.github/pull_request_template.md). Link the
-canonical issue with `Advances #N` while any part of the positive objective
+Use [the repository PR template](.github/pull_request_template.md). Record the
+pre-existing canonical issue, authoring agent, and intended independent merger.
+Link the issue with `Advances #N` while any part of the positive objective
 remains and reserve `Fixes #N` for complete success. A draft PR is appropriate
-while the merge boundary or evidence is still changing.
+while the merge boundary or evidence is still changing, but the issue must exist
+before that draft is opened.
 
 The author must state separately:
 
@@ -207,11 +211,12 @@ The author must state separately:
 2. whether any scientific claim is proposed for promotion;
 3. whether the canonical goal is actually complete.
 
-The default is not to self-review or self-merge scientific work. An independent
-reviewer or maintainer decides the disposition. A review agent explicitly
-handed a PR may carry out the authorized lifecycle in `AGENTS.md` and the
-harvest skill, but still may not force-push the contributor branch or promote an
-unsupported claim.
+An agent may not merge a PR that it opened, authored a commit for, or materially
+implemented. This applies to every PR type. A distinct reviewing agent or
+repository owner decides the disposition and performs the merge. If the
+authoring agent makes substantive review repairs, another actor still must
+merge. When no distinct merger is available, leave the validated PR ready for
+handoff. Explicit PR-lifecycle authorization never overrides this separation.
 
 ## 9. Review the pull request
 
@@ -220,17 +225,19 @@ only the PR narrative or treat all files as one indivisible story.
 
 1. Establish the base release, linked goal, diff, accepted boundary, proposal,
    memory, checks, and review discussion.
-2. Split the PR into the smallest coherent units. For each, name its local
+2. Confirm the canonical issue predates the PR and identify the authoring agent
+   and a distinct merger. Do not review an issue-less PR toward merge.
+3. Split the PR into the smallest coherent units. For each, name its local
    claim, dependencies, outputs, tests, consumers, and whether it survives if
    the headline hypothesis is removed.
-3. Audit correctness and scope. Independently rederive or reimplement the
+4. Audit correctness and scope. Independently rederive or reimplement the
    load-bearing step; inspect mutations, counterexamples, limits, numerical
    refinement, and wrong-convention probes as applicable.
-4. Audit framework fit and architecture. Check declared imports, units,
+5. Audit framework fit and architecture. Check declared imports, units,
    conventions, dependency closure, duplication, GitNexus impact, generated
    consumers, the authority status of every public symbol, and debt created
    inside each unit.
-5. Make three independent decisions:
+6. Make three independent decisions:
 
    - **Artifact merge:** is a correct, novel, reusable unit worth maintaining?
    - **Claim promotion:** has a specific statement passed claim-level governance?
@@ -256,9 +263,10 @@ Next decisive action: one concrete step
 
 ## 10. Merge and hand off
 
-The reviewer or maintainer merges only the accepted unit boundary. A merge
-creates provenance and reusable code; it does not automatically promote a claim
-or close the parent issue.
+The distinct reviewer or repository owner—not the authoring or implementing
+agent—merges only the accepted unit boundary. A merge creates provenance and
+reusable code; it does not automatically promote a claim or close the parent
+issue.
 
 After the final disposition:
 

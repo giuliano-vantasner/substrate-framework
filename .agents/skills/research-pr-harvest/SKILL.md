@@ -17,9 +17,9 @@ A PR may merge useful progress while its claims remain proposed and its goal iss
 
 Read the PR, linked goal, base release, accepted claim boundary, diff, tests, and review discussion. For physics work, also load `physics-erdos-loop`; for code impact, use the available PR-review or dependency-graph workflow.
 
-Identify one canonical goal issue before deciding the disposition. The PR must mention that issue explicitly: use `Advances #N` while the goal remains incomplete and reserve `Fixes #N` for full completion.
+Identify one canonical goal issue and confirm that it existed before the PR was submitted, including before a draft PR. The PR must mention that issue explicitly: use `Advances #N` while the goal remains incomplete and reserve `Fixes #N` for full completion. If the source PR has no pre-existing issue, do not merge it. Create the canonical issue, preserve the source PR as provenance, and place any selected units in a new compliant harvest PR opened after the issue.
 
-In this repository, treat the user's act of supplying a PR URL or number as standing authorization to complete the normal PR lifecycle without further operator prompts: review and comment, edit PR metadata, create a focused harvest branch or follow-up PR, merge or close according to the evidence, and update the linked issue. Do not force-push a contributor's branch, delete unrelated branches, broaden the issue objective, or promote unsupported claims. If an external permission or branch rule blocks an action, preserve the exact next action and report the actual blocker.
+In this repository, treat the user's act of supplying a PR URL or number to an agent that did not open, commit to, or materially implement that PR as standing authorization to complete the normal PR lifecycle without further operator prompts: review and comment, edit PR metadata, create a focused harvest branch or follow-up PR, merge or close according to the evidence, and update the linked issue. An agent must not merge any PR it opened, committed to, or materially implemented. If the reviewing agent performs substantive repairs or creates a follow-up harvest PR, a distinct agent or repository owner must execute that merge. Leave a validated handoff when no distinct merger is available. Do not force-push a contributor's branch, delete unrelated branches, broaden the issue objective, or promote unsupported claims. If an external permission or branch rule blocks an action, preserve the exact next action and report the actual blocker.
 
 ## Slice the PR into harvest atoms
 
@@ -55,7 +55,8 @@ Classify every unit as one of:
 Prefer a focused harvest commit or follow-up PR over merging an inseparable campaign dump. Include only the selected implementation, tests, and minimal API documentation.
 
 - Keep accepted-claim authority in the registry; do not promote a headline because related code merges.
-- Name the canonical goal issue in the PR using `Advances #N` for partial progress. Use `Fixes #N` only after the full goal passes its completion gate.
+- Create or confirm the canonical goal issue before opening the focused PR. Name it using `Advances #N` for partial progress and use `Fixes #N` only after the full goal passes its completion gate.
+- Record the authoring or implementing agent and a distinct intended merger. The authoring agent may prepare, validate, and hand off the PR but may not merge it.
 - Keep the goal issue open when the campaign remains incomplete.
 - Remove campaign memory, attempt directories, debt ledgers, stale generated output, and proof-shaped narrative unless one is itself the reviewed durable artifact.
 - Preserve a failed route in main only when it yields a reusable theorem, counterexample, oracle, fixture, or compatibility repair. Merge that object, not its diary.
@@ -128,7 +129,7 @@ Do not generate parallel memory files, multi-attempt archives, or an active debt
 
 Treat the goal as long-lived and each agent run or PR as bounded.
 
-- Open a draft PR early enough to preserve reviewable milestones.
+- After the canonical issue exists, open a draft PR early enough to preserve reviewable milestones.
 - Keep foundation utilities, verified local results, and speculative composition in separate commits.
 - Harvest a unit as soon as it becomes locally complete; do not hold all value hostage to the capstone.
 - Maintain a short PR frontier with `landed`, `current hypothesis`, and `next decisive test` rather than expanding narrative state.
@@ -159,6 +160,9 @@ Use this compact structure:
 ### Authority and goal state
 - Claims promoted: <none or ids>
 - Goal issue: <number/link and open or complete>
+- Issue predates PR: <yes/no and timestamp evidence>
+- Authoring or implementing agent: <identity>
+- Distinct merger: <identity or handoff pending>
 - Issue handoff: <posted link or ready-to-post pending>
 - PR disposition: <progress merge, harvest split, request changes, or close>
 - Campaign frontier: <next decisive question>

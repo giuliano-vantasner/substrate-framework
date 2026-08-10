@@ -32,7 +32,10 @@ Describe the importable object, claim, or dependency closure this PR must add. D
 Use `$research-pr-harvest` whenever a local unit becomes complete. Keep utilities, verified local results, and speculative composition in separable commits so later context fade cannot erase earlier value.
 
 - Canonical goal issue: <number/link>
+- Issue created before PR: <yes and timestamp/link evidence>
 - PR issue reference: <`Advances #N` or `Fixes #N`>
+- Authoring or implementing agent: <identity>
+- Distinct intended merger: <identity or handoff pending>
 - Final issue handoff: <posted comment link or ready-to-post pending>
 
 | Unit | Local claim | Headline-independent? | Evidence | Merge disposition |
@@ -42,7 +45,7 @@ Use `$research-pr-harvest` whenever a local unit becomes complete. Keep utilitie
 After the merge boundary is known, update the canonical issue with three unit-level lists: merged and rationale, requires refactor and rationale plus exact required change, and left in PR history and rationale. Link landed paths/commits, the reviewed PR, and the next decisive action. If GitHub mutation is not authorized, preserve the exact ready-to-post comment and mark the handoff pending.
 
 ## Decomposition and Ownership
-List dependency-ordered local work and one child contract per authorized worker. Give workers disjoint write surfaces and raw sourced inputs.
+List dependency-ordered local work and one child contract per authorized worker. Give workers disjoint write surfaces and raw sourced inputs. The agent that opens, commits to, or materially implements the PR may not merge it; reserve merge authority for the named distinct reviewer or repository owner.
 
 ## Finding Intake
 Every finding becomes a repair, candidate rejection, new candidate, targeted foundation proposal, or promotion action.
@@ -85,7 +88,7 @@ List individually accepted claims, source API/tests, immutable campaign record, 
 Record the verified positive result and every harvested unit. If the parent objective is incomplete, use `Advances #N`, preserve the exact next decisive action, and leave the goal active. A clean harvest handoff may end this PR or agent run without pretending the campaign is complete.
 
 ## Done Gate
-For full campaign completion, check all success conditions from `AGENTS.md`, targeted checks, downstream replay, generated-state consistency, one `scripts/validate.sh` run at the unchanged promotion boundary, and empty debt. For a progress merge, require only that each harvested unit passes its local claim, dependency, convention, consumer, and validation gates; keep the campaign open and do not promote unsupported headline claims.
+For full campaign completion, check all success conditions from `AGENTS.md`, targeted checks, downstream replay, generated-state consistency, one `scripts/validate.sh` run at the unchanged promotion boundary, and empty debt. For a progress merge, require that the canonical issue predates the PR, a distinct merger is identified, and each harvested unit passes its local claim, dependency, convention, consumer, and validation gates; keep the campaign open and do not promote unsupported headline claims.
 
 ## Cross-References
 Link parent/child contracts, proposal, claims, campaigns, source, tests, release, generated docs, and PR.

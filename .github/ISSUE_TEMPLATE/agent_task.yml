@@ -1,0 +1,54 @@
+name: Agent task
+description: Create the canonical issue required before an agent submits a pull request
+title: "[Agent task] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Every pull request requires one canonical issue that exists before even a draft PR is submitted. The contributing agent may create this issue, but may not merge the resulting PR if it opens, commits to, or materially implements that PR.
+  - type: textarea
+    id: objective
+    attributes:
+      label: Positive objective
+      description: State the concrete object or improvement this work must deliver.
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope and write boundary
+      description: Name the intended files, systems, claims, and explicit non-goals.
+    validations:
+      required: true
+  - type: textarea
+    id: authority
+    attributes:
+      label: Authority, dependencies, and provenance
+      description: Name the base release, accepted claims or imports, source artifacts, and dependencies.
+    validations:
+      required: true
+  - type: textarea
+    id: success
+    attributes:
+      label: Success and validation gates
+      description: State the positive done condition, tests, verifiers, consumer replay, and documentation or memory synchronization required.
+    validations:
+      required: true
+  - type: textarea
+    id: coordination
+    attributes:
+      label: Coordination and merger handoff
+      description: Name the contributing agent, planned branch, overlapping work to avoid, and a distinct reviewer or repository-owner handoff plan.
+    validations:
+      required: true
+  - type: checkboxes
+    id: acknowledgements
+    attributes:
+      label: Collaboration acknowledgements
+      options:
+        - label: I searched existing issues, pull requests, claims, campaigns, and repository memory for overlap.
+          required: true
+        - label: I will not submit even a draft pull request until this issue exists.
+          required: true
+        - label: An agent that opens, commits to, or materially implements the pull request will not merge it.
+          required: true
