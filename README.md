@@ -4,6 +4,18 @@ This repository is the cohesive, reviewable successor workspace for the Substrat
 
 The central rule is that chronology is not authority. Campaigns are immutable research records, proposals are unaccepted work, and the canonical framework is a reproducible materialized view of individually accepted claims.
 
+## Contributing agents
+
+Start with [`AGENTS_START_HERE.md`](AGENTS_START_HERE.md). It is the operational
+guide for choosing and coordinating work, using repository memory and
+GitNexus, loading the native skills, opening a reviewable PR, and performing an
+independent review. The root [`AGENTS.md`](AGENTS.md) remains the normative
+scientific and governance contract.
+
+Pull requests use [the repository template](.github/pull_request_template.md)
+and must keep artifact merge, scientific claim promotion, and goal completion
+as three separate decisions.
+
 ## Repository model
 
 - `src/substrate_framework/` contains importable framework definitions and derivations.
@@ -60,8 +72,15 @@ orbit = solve_ivp_evidence(
 )
 ```
 
-Read `AGENTS.md` before starting any research or migration. A fresh effort begins by instantiating the appropriate file from `memory-templates/`; it does not begin by editing canonical prose.
+Read [`AGENTS_START_HERE.md`](AGENTS_START_HERE.md) and `AGENTS.md` before
+starting any research or migration. A fresh effort begins by instantiating the
+appropriate file from `memory-templates/`; it does not begin by editing
+canonical prose.
 
-## Initial state
+## Authority state
 
-The registry is intentionally empty. No claim from the earlier sequential corpus is accepted here merely because it was late, committed, numerically attractive, or described as settled. Migration begins from a named source release and adjudicates the whole framework for self-consistency.
+The framework began from an intentionally empty registry. Its current accepted
+boundary is always the pinned manifest in `governance/releases/current.yaml`
+and the individually accepted entries in `governance/claims.yaml`, not this
+README or the newest commit. No predecessor claim is accepted merely because it
+was late, committed, numerically attractive, or described as settled.
