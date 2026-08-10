@@ -46,7 +46,7 @@ no fitted constant.
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import Any
+from typing import Any, cast
 
 import sympy as sp
 from sympy.calculus.euler import euler_equations
@@ -74,8 +74,30 @@ def _metric_matrix(metric: Any) -> sp.Matrix:
     result = sp.Matrix(metric)
     if result.shape != (_SPACETIME_DIMENSION, _SPACETIME_DIMENSION):
         raise ValueError("metric must be a 4 by 4 matrix")
+    # Exact-only contract: no floating-point entry may enter this reusable
+    # geometry atom, matching the module's exact-symbolic declaration.  A generic
+    # coordinate function (e.g. an FLRW scale ``a(t)``) is exact and allowed; a
+    # ``Float`` such as ``-1.0`` is not (it is the ``diag(-1.0, 1, 1, 1)``
+    # counterexample this contract now rejects).
+    if result.has(sp.Float):
+        raise ValueError("metric entries must be exact rather than floating")
     if sp.simplify(result - result.T) != sp.zeros(_SPACETIME_DIMENSION):
         raise ValueError("metric must be symmetric")
+    # Mostly-plus Lorentzian premise.  For a DECIDABLE (constant, no free symbol)
+    # metric the signature must be exactly (-,+,+,+): one negative and three
+    # positive eigenvalues.  This rejects a Euclidean ``eye(4)`` (whose
+    # ``sqrt(-det g)`` would be the imaginary ``I``) and any other decidably
+    # non-Lorentzian or degenerate constant metric.  A coordinate-dependent
+    # metric cannot be decided symbolically, so its mostly-plus signature is the
+    # caller's documented premise and is not rejected here.
+    if not result.free_symbols:
+        eigenvalues = cast("dict[sp.Expr, int]", result.eigenvals())
+        negative = sum(mult for value, mult in eigenvalues.items() if value.is_negative)
+        positive = sum(mult for value, mult in eigenvalues.items() if value.is_positive)
+        if negative != 1 or positive != _SPACETIME_DIMENSION - 1:
+            raise ValueError(
+                "constant metric must have mostly-plus Lorentzian signature (-,+,+,+)"
+            )
     return result
 
 

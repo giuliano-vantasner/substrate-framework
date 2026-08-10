@@ -230,3 +230,104 @@ def test_input_contracts_reject_ill_posed_arguments():
     with pytest.raises(ValueError):
         foreign = sp.Function("phi")(sp.Symbol("w"))
         covariant_sine_gordon_action(foreign, MINKOWSKI, COORDS)  # foreign coordinate
+
+
+def test_fluctuation_operator_is_field_equation_linearization():
+    """F1 verifier closure (independent, non-circular).
+
+    The operator's endomorphism is proven to BE the second variation, rather
+    than compared against its own declared formula.  Substitute
+    ``phi = phi_bg + eps*eta`` into the action-verified field-equation residual
+    ``F``, take the term linear in ``eps`` (the Gateaux derivative at eps=0), and
+    require it to equal ``-(D eta)`` with ``D = -box_g + (V''(phi_bg) + xi R)``.
+    The ``V''(phi_bg) = m^2 cos(phi_bg)`` factor in the linearization is produced
+    by differentiating the potential term ``m^2 sin(phi)`` of ``F`` -- not read
+    from the operator -- so the identity is an independent check, not a tautology.
+    """
+    metric, _ = _flrw_metric()
+    xi = sp.Rational(1, 5)
+    mass = sp.Rational(7, 4)
+    eps = sp.Symbol("eps", real=True)
+    background = sp.Function("phi0")(T)  # non-vacuum background: cos(phi_bg) != 1
+    perturbation = sp.Function("eta")(T)
+
+    residual = covariant_sine_gordon_field_equation(
+        background + eps * perturbation,
+        metric,
+        COORDS,
+        non_minimal_coupling=xi,
+        mass_squared=mass,
+    )
+    linearized = sp.simplify(sp.diff(residual, eps).subs(eps, 0))
+
+    fluctuation = covariant_sine_gordon_fluctuation_operator(
+        background, metric, COORDS, non_minimal_coupling=xi, mass_squared=mass
+    )
+    box_eta = laplace_beltrami(perturbation, metric, COORDS)
+    d_eta = -box_eta + fluctuation.endomorphism * perturbation
+
+    # linearized(F) == -(D eta): the operator is exactly the second variation.
+    assert sp.simplify(linearized + d_eta) == 0
+    # The linearization is non-trivial (carries both the Laplacian and the
+    # endomorphism), so the identity above is not vacuously satisfied.
+    assert sp.simplify(linearized) != 0
+
+
+def test_fluctuation_linearization_mutations_break():
+    """F1: load-bearing sign/normalization mutations must each break the identity."""
+    metric, _ = _flrw_metric()
+    xi = sp.Rational(1, 5)
+    mass = sp.Rational(7, 4)
+    eps = sp.Symbol("eps", real=True)
+    background = sp.Function("phi0")(T)
+    perturbation = sp.Function("eta")(T)
+
+    linearized = sp.simplify(
+        sp.diff(
+            covariant_sine_gordon_field_equation(
+                background + eps * perturbation,
+                metric,
+                COORDS,
+                non_minimal_coupling=xi,
+                mass_squared=mass,
+            ),
+            eps,
+        ).subs(eps, 0)
+    )
+    fluctuation = covariant_sine_gordon_fluctuation_operator(
+        background, metric, COORDS, non_minimal_coupling=xi, mass_squared=mass
+    )
+    box_eta = laplace_beltrami(perturbation, metric, COORDS)
+    curvature = ricci_scalar(metric, COORDS)
+
+    # The correct operator closes the identity...
+    assert sp.simplify(linearized + (-box_eta + fluctuation.endomorphism * perturbation)) == 0
+    # ...and each mutation opens it again.
+    wrong_curvature_sign = -box_eta + (mass * sp.cos(background) - xi * curvature) * perturbation
+    assert sp.simplify(linearized + wrong_curvature_sign) != 0
+    wrong_potential_sign = -box_eta + (-mass * sp.cos(background) + xi * curvature) * perturbation
+    assert sp.simplify(linearized + wrong_potential_sign) != 0
+    wrong_normalization = -box_eta + 2 * fluctuation.endomorphism * perturbation
+    assert sp.simplify(linearized + wrong_normalization) != 0
+    wrong_laplacian_sign = box_eta + fluctuation.endomorphism * perturbation
+    assert sp.simplify(linearized + wrong_laplacian_sign) != 0
+
+
+def test_metric_contract_rejects_inexact_and_non_lorentzian():
+    """F2: the geometry input contract enforces exact-only entries and, for a
+    constant metric, a mostly-plus Lorentzian signature."""
+    field = sp.Function("phi")(*COORDS)
+    # Inexact (floating) entry is rejected though shape and symmetry are fine.
+    with pytest.raises(ValueError):
+        covariant_sine_gordon_field_equation(field, sp.diag(-1.0, 1, 1, 1), COORDS)
+    # Euclidean constant metric (+,+,+,+): sqrt(-det g) would be imaginary.
+    with pytest.raises(ValueError):
+        covariant_sine_gordon_field_equation(field, sp.eye(4), COORDS)
+    # Mostly-minus constant metric is the wrong declared convention -> rejected.
+    with pytest.raises(ValueError):
+        covariant_sine_gordon_field_equation(field, sp.diag(1, -1, -1, -1), COORDS)
+    # The exact mostly-plus Minkowski metric is accepted (no raise).
+    covariant_sine_gordon_field_equation(field, MINKOWSKI, COORDS)
+    # A coordinate-dependent (FLRW) metric cannot be decided and is accepted.
+    flrw_metric, _ = _flrw_metric()
+    covariant_sine_gordon_field_equation(sp.Function("psi")(T), flrw_metric, COORDS)
