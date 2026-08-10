@@ -14,7 +14,9 @@ scientific and governance contract.
 
 Pull requests use [the repository template](.github/pull_request_template.md)
 and must keep artifact merge, scientific claim promotion, and goal completion
-as three separate decisions.
+as three separate decisions. Every PR requires a canonical issue created before
+submission, and an agent may not merge a PR it opened, committed to, or
+materially implemented.
 
 ## Repository model
 

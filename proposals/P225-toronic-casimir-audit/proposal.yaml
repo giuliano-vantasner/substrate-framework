@@ -3,8 +3,8 @@ base_release: v0.159.0
 source_baseline: substrate-framework@5dc6d4db
 question: >-
   Does the toronic-condensate preprint's one-loop vacuum-energy computation
-  survive oracle verification, and can the single-tube T^2 x R x R structure
-  be extended to a Lorentz-invariant flux-tube vacuum in Minkowski space?
+  survive two-route oracle verification, and do the named Sec. 5-7 algebraic
+  statements survive exact checks within issue #26's audit-core scope?
 invariants:
   - no edits to accepted claims, campaigns, generated docs, or migration queues
   - T_a = sigma_a/2 normalization; twists in R^2/Z^2; Tr ln one-loop measure
@@ -19,7 +19,7 @@ candidates:
 uniqueness_evidence: null
 selection_criteria:
   - exactness
-  - regularization independence
+  - twist-difference agreement across independent regulator routes
   - convergence control
 claims_proposed: []
 comparators_blinded_until: both routes frozen in tests
