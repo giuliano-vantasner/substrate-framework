@@ -34,7 +34,7 @@ materially implemented.
 
 ```bash
 scripts/bootstrap.sh
-scripts/validate.sh
+scripts/validate.sh --full
 ```
 
 Bootstrap creates `.venv` for the importable physics package and its NumPy,
@@ -46,6 +46,17 @@ activating `.venv`:
 memory --version
 .venv/bin/python -c "import substrate_framework"
 ```
+
+For a bounded pull request, keep the fixed repository checks and restrict only
+the pytest stage to the affected tests identified by change-impact analysis:
+
+```bash
+scripts/validate.sh --pytest-scope tests/test_affected_module.py
+```
+
+Use `--full` for promotion, release, periodic integrated-main replay,
+cross-cutting changes, or an uncertain dependency boundary. Invoking
+`scripts/validate.sh` without arguments remains an alias for the full suite.
 
 The bundled CLI is the code-only `agent-memory` v0.2.0 release; no user or
 agent memory entries are included. See

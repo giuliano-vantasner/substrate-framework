@@ -180,21 +180,30 @@ Before requesting review:
    and debt inside the proposed merge unit.
 2. Run targeted tests, scientific verifiers, mutations, and affected consumers.
 3. Inspect the diff and GitNexus change impact.
-4. Run the full repository workflow once at the final unchanged boundary:
+4. Run the fixed repository checks and the pytest scope justified by the diff
+   and impact analysis once at the final unchanged PR boundary:
 
    ```bash
-   scripts/validate.sh
+   scripts/validate.sh --pytest-scope tests/test_affected_module.py [more selectors ...]
    ```
 
+   Use `scripts/validate.sh --full` instead when the change reaches shared
+   numerics, verification machinery, claim or release governance semantics,
+   public exports, dependencies, conventions, multiple framework sectors, or
+   has an uncertain dependency boundary. Claim promotions and releases always
+   require `--full`.
 5. In a separate invocation, run:
 
    ```bash
    git diff --check
    ```
 
-Do not repeat the full suite at the same unchanged boundary. Record exact
-commands, status codes, and meaningful verdicts in the PR; a pass count alone
-is not a review.
+Record the exact pytest selectors, commands, status codes, and meaningful
+verdicts in the PR; a scoped pass is not a repository-wide pass. A bounded PR
+can remain scoped through merge when its impact boundary is still valid against
+the current base. Do not repeat an equivalent validation at the same unchanged
+boundary. Run the full suite periodically on integrated `main` as a backstop; a
+pass count alone is not a review.
 
 ## 8. Open the pull request
 

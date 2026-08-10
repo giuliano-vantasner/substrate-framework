@@ -182,14 +182,32 @@ Do not copy personal or historical memory into this repository. The bundled CLI 
 
 ## Required validation before commit or promotion
 
-Run:
+For a bounded commit or pull request, run all fixed repository checks plus the
+pytest files or node IDs selected from the diff, GitNexus impact analysis,
+direct imports, named scientific verifiers, and affected consumers:
 
 ```bash
-scripts/validate.sh
+scripts/validate.sh --pytest-scope tests/test_affected_module.py [more selectors ...]
 git diff --check
 ```
 
-`scripts/validate.sh` runs the complete pytest suite. Do not run that suite a second time at the same unchanged boundary; use targeted tests while developing, then one full workflow validation before commit or promotion.
+The non-pytest repository, generated-state, memory, skill, import, and compile
+checks run in both modes. A scoped pass is evidence only for the declared
+pytest scope; record the exact selectors in the PR. Use
+`scripts/validate.sh --full` for a claim promotion or release and whenever the
+change reaches shared numerics, verification machinery, claim or release
+governance semantics, public exports, dependencies, conventions, multiple
+framework sectors, or has an uncertain dependency boundary. Calling
+`scripts/validate.sh` without arguments remains a backward-compatible alias for
+`--full`.
+
+Do not run the full suite a second time at the same unchanged boundary. Use
+targeted tests while developing, then run the appropriate scoped or full
+workflow validation once before commit, review, or promotion. A bounded PR can
+remain scoped through merge when the impact boundary is still valid against
+the current base. Do not duplicate an equivalent validation independently by
+the author, reviewer, and merger. Run the full suite periodically on integrated
+`main` as an additional backstop, not as a substitute for PR impact analysis.
 
 Run validation and commit as separate process invocations. An unguarded multi-command shell can continue after a failed validator and let a later successful commit mask the failure; never treat the combined process's final status as proof that every earlier gate passed.
 
