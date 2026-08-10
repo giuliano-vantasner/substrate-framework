@@ -1,0 +1,26 @@
+id: P225
+base_release: v0.159.0
+source_baseline: substrate-framework@5dc6d4db
+question: >-
+  Does the toronic-condensate preprint's one-loop vacuum-energy computation
+  survive oracle verification, and can the single-tube T^2 x R x R structure
+  be extended to a Lorentz-invariant flux-tube vacuum in Minkowski space?
+invariants:
+  - no edits to accepted claims, campaigns, generated docs, or migration queues
+  - T_a = sigma_a/2 normalization; twists in R^2/Z^2; Tr ln one-loop measure
+allowed_imports:
+  - sympy/mpmath/numpy/scipy stack in .venv
+  - preprint numbered equations as the object under test
+candidates:
+  - id: A
+    description: functional-equation route for E2'(-1; alpha) with special-value identities
+  - id: B
+    description: direct Gaussian-regulated lambda ln lambda mode sums with refinement
+uniqueness_evidence: null
+selection_criteria:
+  - exactness
+  - regularization independence
+  - convergence control
+claims_proposed: []
+comparators_blinded_until: both routes frozen in tests
+status: draft
