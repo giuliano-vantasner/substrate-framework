@@ -2,7 +2,16 @@
 
 Describe the positive deliverable and the smallest coherent merge boundary.
 
-Issue: <!-- Use `Advances #N` while work remains; use `Fixes #N` only when the full goal is complete. -->
+Canonical issue: <!-- Required. The issue must exist before even a draft PR is submitted. -->
+
+Issue relationship: <!-- Use `Advances #N` while work remains; use `Fixes #N` only when the full goal is complete. -->
+
+Authoring agent:
+
+Intended independent merger: <!-- Must be a distinct agent or repository owner. -->
+
+- [ ] The canonical issue existed before this PR was submitted.
+- [ ] I will not merge this PR because I opened it, authored a commit, or materially implemented it.
 
 ## Change classification
 
@@ -101,6 +110,10 @@ and the next decisive action if this PR advances rather than completes the goal.
 Review the actual head commit and complete this section or provide the same
 fields in a formal review.
 
+- Canonical issue predates PR: <!-- yes/no -->
+- Authoring or implementing agent:
+- Distinct merger:
+
 - Artifact merge: <!-- yes/no with unit-level rationale -->
 - Claim promotion: <!-- none or exact claim IDs and review evidence -->
 - Goal completion: <!-- yes/no and still-open gate -->
@@ -112,6 +125,8 @@ fields in a formal review.
 ### Reviewer checks
 
 - [ ] Base release, issue, accepted boundary, diff, memory, and discussion inspected.
+- [ ] The canonical issue existed before the PR was submitted.
+- [ ] The designated merger did not open, author a commit for, or materially implement the PR.
 - [ ] Load-bearing result independently rederived or reproduced.
 - [ ] Dependencies, conventions, imports, consumers, and GitNexus impact audited.
 - [ ] Every new public symbol has an explicit authority status and owning issue.
