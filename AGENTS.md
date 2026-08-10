@@ -2,6 +2,11 @@
 
 This repository turns a sequential physics corpus into a self-consistent, importable, review-governed framework. Apply these rules to the entire framework. They are not a special cleanup rule for any particular late campaign.
 
+New contributors begin with [`AGENTS_START_HERE.md`](AGENTS_START_HERE.md) for
+the operational collaboration, memory, GitNexus, skill-selection, PR, and
+review workflow. This file remains the normative scientific and governance
+contract when the two documents differ.
+
 ## Definition of success
 
 Honesty is mandatory, but honesty about failure is not completion. A failed candidate, no-go, contradiction, residual, bound, inconclusive simulation, or well-documented obstruction is attempt evidence. Preserve it and continue; never present it as the victory requested by the user.
