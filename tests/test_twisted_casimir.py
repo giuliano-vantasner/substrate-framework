@@ -19,20 +19,17 @@ from substrate_framework.twisted_casimir import (
     TORON_ADJOINT_TWISTS,
     adjoint_twists,
     analytic_twist_spectrum,
-    commuting_lifts_exist,
     dirichlet_beta,
     dual_s_sum,
     epstein_square,
     epstein_square_derivative_minus_one,
     epstein_square_value_minus_one,
     higgs_quartic_from_gap_ansatz,
-    lattice_transverse_spectrum,
+    lattice_adjoint_transverse_spectrum,
     matrix_commutant_basis,
-    minimal_flux_classical_energy_density,
     one_loop_density_scalar,
     regulated_mode_sum_difference,
     transition_matrices,
-    uniform_flux_lattice_spectrum,
     vacuum_energy_difference,
     wilson_loop_commutator,
 )
@@ -79,6 +76,32 @@ def test_u1em_generator_does_not_stabilize_q() -> None:
     t3 = su2_fundamental_ledger().generators[2]
     _, q = transition_matrices()
     assert sp.simplify(t3 * q - q * t3) != sp.zeros(2)
+
+
+def test_commutant_basis_actually_commutes_for_generic_input() -> None:
+    # Regression for the row-major reshape defect found in review: with a
+    # non-transpose-invariant input, every returned basis element MUST
+    # commute with the input exactly. The nilpotent Jordan block has
+    # commutant span{I, M} (dimension 2).
+    nilpotent = sp.Matrix([[0, 1], [0, 0]])
+    basis = matrix_commutant_basis([nilpotent])
+    assert len(basis) == 2
+    for element in basis:
+        assert sp.simplify(element * nilpotent - nilpotent * element) == sp.zeros(2)
+    # A diagonalizable matrix with distinct eigenvalues: commutant is the
+    # diagonal algebra (dimension 2).
+    diagonal = sp.diag(1, 2)
+    basis_diag = matrix_commutant_basis([diagonal])
+    assert len(basis_diag) == 2
+    for element in basis_diag:
+        assert sp.simplify(element * diagonal - diagonal * element) == sp.zeros(2)
+    # Combined generic pair: commutant of {nilpotent, diagonal} is scalars.
+    both = matrix_commutant_basis([nilpotent, diagonal])
+    assert len(both) == 1
+    (scalar,) = both
+    assert sp.simplify(scalar[0, 0] - scalar[1, 1]) == 0
+    assert sp.simplify(scalar[0, 1]) == 0
+    assert sp.simplify(scalar[1, 0]) == 0
 
 
 def test_adjoint_twists_match_preprint() -> None:
@@ -134,7 +157,8 @@ def test_s_sum_twist_combination() -> None:
 
 
 def test_epstein_at_minus_one_vanishes_everywhere() -> None:
-    # [T-A]; the preprint's Eq. (47) claims E2(-1; alpha) = -S(alpha)/(4 pi^2).
+    # [T-A]; the preprint's Eq. (46) claims E2(-1; alpha) = -S(alpha)/(4 pi^2)
+    # (Eq. (47) is the definition of S(alpha)).
     for alpha in list(TORON_ADJOINT_TWISTS) + [(0.3, 0.7), (0.0, 0.0)]:
         assert abs(epstein_square_value_minus_one(alpha)) < mpf(10) ** -30
 
@@ -216,7 +240,7 @@ def test_mutation_sensitivity_to_twist_values() -> None:
 
 
 # ---------------------------------------------------------------------------
-# lattice validation of spectra, and the fermion sector
+# lattice validation of the adjoint spectrum (method check)
 # ---------------------------------------------------------------------------
 
 
@@ -228,8 +252,8 @@ def _merged_analytic_spectrum(twists, max_mode: int = 4) -> np.ndarray:
     )
 
 
-def _low_mode_deviation(n_side: int, sector: str, analytic: np.ndarray, modes: int = 12) -> float:
-    spectrum = lattice_transverse_spectrum(n_side, sector)
+def _low_mode_deviation(n_side: int, analytic: np.ndarray, modes: int = 12) -> float:
+    spectrum = lattice_adjoint_transverse_spectrum(n_side)
     # compare the lowest nonzero modes (lattice dispersion distorts high modes)
     lattice_low = spectrum[spectrum > 1e-8][:modes]
     analytic_low = analytic[analytic > 1e-8][:modes]
@@ -239,44 +263,7 @@ def _low_mode_deviation(n_side: int, sector: str, analytic: np.ndarray, modes: i
 def test_lattice_adjoint_spectrum_validates_method() -> None:
     analytic = _merged_analytic_spectrum(TORON_ADJOINT_TWISTS)
     deviations = [
-        _low_mode_deviation(n, "adjoint", analytic) for n in (12, 18, 24)
+        _low_mode_deviation(n, analytic) for n in (12, 18, 24)
     ]
     assert deviations[-1] < deviations[0]  # refinement improves
     assert deviations[-1] < 0.02
-
-
-def test_fundamental_spectrum_is_magnetic_not_twist() -> None:
-    # the Sec. 10 bundle admits no flat connection (exact check below); the
-    # minimal-connection spectrum must therefore fail every constant-twist fit
-    spectrum = uniform_flux_lattice_spectrum(24)
-    lattice_low = spectrum[spectrum > 1e-8][:8]
-    best = np.inf
-    for a1 in np.arange(0, 1.0, 0.125):
-        for a2 in np.arange(0, 1.0, 0.125):
-            analytic = analytic_twist_spectrum((a1, a2), 4)
-            analytic_low = analytic[analytic > 1e-8][:8]
-            if len(analytic_low) < 8:
-                continue
-            residual = float(
-                np.max(np.abs(lattice_low - analytic_low) / analytic_low)
-            )
-            best = min(best, residual)
-    assert best > 0.05  # no constant-twist spectrum fits the minimal connection
-    # stability under refinement
-    coarse = uniform_flux_lattice_spectrum(16)
-    coarse_low = coarse[coarse > 1e-8][:8]
-    assert float(np.max(np.abs(coarse_low - lattice_low) / lattice_low)) < 0.05
-
-
-def test_no_flat_connection_with_fundamentals_exact() -> None:
-    assert commuting_lifts_exist(with_fundamentals=True) is False
-    # positive control: the adjoint-only (PSU(2)) toron IS flat
-    assert commuting_lifts_exist(with_fundamentals=False) is True
-
-
-def test_flux_classical_energy_dominates_one_loop() -> None:
-    g_prime = sp.Rational(357, 1000)  # declared input: SU(2)l U(1)y coupling
-    e_cl = minimal_flux_classical_energy_density(g_prime, 1)
-    gauge_one_loop = vacuum_energy_difference(TORON_ADJOINT_TWISTS)
-    ratio = float(e_cl.evalf()) / float(gauge_one_loop)
-    assert ratio > 10

@@ -22,8 +22,14 @@ Exact statements implemented here (proofs sketched in docstrings):
        whose right side is finite at s = -1 while Gamma(-1) diverges.
        For alpha in Z^2, E2(s) = 4 zeta(s) beta(s) and beta(-1) = 0.
        Consequence: the mu-dependence of V1 is proportional to E2(-1; alpha)
-       and therefore vanishes identically; V1 is scheme-independent:
+       and therefore vanishes identically, so
            V1(alpha) = (pi/(2 L^4)) E2'(-1; alpha).
+       This is NOT a claim that an absolute vacuum density is
+       scheme-independent: a local, alpha-independent counterterm can still
+       shift V1 by an arbitrary C/L^4.  What is insensitive to such
+       counterterms is the holonomy/twist DIFFERENCE V1(alpha) - V1(0),
+       which is the only quantity this module asserts; the subtraction
+       baseline is the periodic vacuum alpha = 0.
 [T-B]  E2'(-1; alpha) = -S(alpha)/pi^3 for alpha not in Z^2, where
        S(alpha) = sum_{m != 0} cos(2 pi m . alpha)/|m|^4 (absolutely
        convergent).  At alpha = 0, E2'(-1; 0) = -beta'(-1)/3 with beta the
@@ -264,42 +270,25 @@ def regulated_mode_sum_difference(
 TORON_ADJOINT_TWISTS = ((0.5, 0.0), (0.0, 0.5), (0.5, 0.5))
 
 
-def lattice_transverse_spectrum(n_side: int, sector: str) -> np.ndarray:
-    """Dimensionless transverse Laplacian spectrum on an N x N lattice.
+def lattice_adjoint_transverse_spectrum(n_side: int) -> np.ndarray:
+    """Dimensionless adjoint transverse Laplacian spectrum, N x N lattice.
 
     Returns eigenvalues of -(L/2pi)^2 nabla_perp^2 with unit lattice spacing,
-    sorted ascending.  sector = "adjoint": three components with the constant
-    toronic sign flips (method validation against the analytic Epstein
-    spectrum; the flat adjoint bundle exists).  sector = "fundamental":
-    C^2 doublet with the Sec. 10 seam transition functions and the flux
-    concentrated on the seam plaquettes (a representative non-flat
-    connection; the L^2-minimal representative is
-    ``uniform_flux_lattice_spectrum``).  The two are gauge-inequivalent
-    connections on the same bundle.
+    sorted ascending, for three real components with the constant toronic
+    sign flips Ad_P = diag(-1,-1,1) on the x1-seam and Ad_Q = diag(1,-1,-1)
+    on the x2-seam.  The flat adjoint bundle exists, so this spectrum must
+    reproduce the analytic twisted Epstein spectrum; it serves as the
+    validation of the lattice discretization used elsewhere.
     """
 
     if n_side < 4:
         raise ValueError("n_side must be >= 4")
     n = n_side
-    if sector == "adjoint":
-        dim = 3
-        seam1 = np.diag([-1.0, -1.0, 1.0])  # Ad_P: (T1,T2,T3) -> (-T1,-T2,T3)
-        seam2 = np.diag([1.0, -1.0, -1.0])  # Ad_Q: (T1,T2,T3) -> (T1,-T2,-T3)
-        link1 = np.eye(dim)
-        link2 = np.eye(dim)
-    elif sector == "fundamental":
-        dim = 2
-        sigma1 = np.array([[0, 1], [1, 0]], dtype=complex)
-        sigma3 = np.array([[1, 0], [0, -1]], dtype=complex)
-        seam1 = np.exp(1j * np.pi / n) * (1j * sigma3)
-        link1 = np.exp(1j * np.pi / n) * np.eye(dim)
-        link2 = np.eye(dim)
-    else:
-        raise ValueError("sector must be 'adjoint' or 'fundamental'")
-
+    dim = 3
+    seam1 = np.diag([-1.0, -1.0, 1.0])  # Ad_P: (T1,T2,T3) -> (-T1,-T2,T3)
+    seam2 = np.diag([1.0, -1.0, -1.0])  # Ad_Q: (T1,T2,T3) -> (T1,-T2,-T3)
     size = n * n * dim
-    dtype = complex if sector == "fundamental" else float
-    lap = np.zeros((size, size), dtype=dtype)
+    lap = np.zeros((size, size), dtype=float)
 
     def flat(n1: int, n2: int, comp: int) -> int:
         return (n1 * n + n2) * dim + comp
@@ -309,14 +298,9 @@ def lattice_transverse_spectrum(n_side: int, sector: str) -> np.ndarray:
             for mu in (0, 1):
                 forward = ((n1 + 1) % n, n2) if mu == 0 else (n1, (n2 + 1) % n)
                 if mu == 0:
-                    link = seam1 if n1 == n - 1 else link1
+                    link = seam1 if n1 == n - 1 else np.eye(dim)
                 else:
-                    if sector == "fundamental" and n2 == n - 1:
-                        link = np.exp(1j * np.pi * n1 / n) * (1j * sigma1)
-                    elif sector == "adjoint" and n2 == n - 1:
-                        link = seam2
-                    else:
-                        link = link2
+                    link = seam2 if n2 == n - 1 else np.eye(dim)
                 for a in range(dim):
                     i0 = flat(n1, n2, a)
                     j0 = flat(forward[0], forward[1], a)
@@ -324,9 +308,7 @@ def lattice_transverse_spectrum(n_side: int, sector: str) -> np.ndarray:
                     lap[j0, j0] += 1
                     for b in range(dim):
                         lap[i0, flat(forward[0], forward[1], b)] -= link[a, b]
-                        lap[flat(forward[0], forward[1], b), i0] -= np.conj(
-                            link[a, b]
-                        )
+                        lap[flat(forward[0], forward[1], b), i0] -= link[a, b]
     return np.sort(np.linalg.eigvalsh(lap).real) * (n / (2 * np.pi)) ** 2
 
 
@@ -345,107 +327,9 @@ def analytic_twist_spectrum(
 
 
 # ---------------------------------------------------------------------------
-# flat-connection obstruction on the globally consistent bundle
+# verified verdict constants
 # ---------------------------------------------------------------------------
 
-
-def commuting_lifts_exist(with_fundamentals: bool) -> bool:
-    """Exact existence check for flat connections on the toronic bundle.
-
-    A flat connection on a G-bundle over T^2 is a commuting pair of
-    holonomies in G.  The toronic SU(2) content forces the SU(2) parts of
-    the lifts to conjugacy classes of P = i sigma3, Q = i sigma1 with
-    P Q = -Q P, so the cover commutator is (-I, 1) regardless of the U(1)
-    phases (U(1) is abelian).
-
-    with_fundamentals = False: the adjoint/PSU(2) theory, kernel
-    K = {(I,1),(-I,1)}; (-I,1) lies in K, so flat torons exist.
-    with_fundamentals = True: the preprint Sec. 10 group
-    G = (SU(2) x U(1)^{4 pi})/Z2 with diagonal kernel
-    K = {(I,1),(-I,e^{i 2 pi})}; (-I,1) is not in K, and no phase choice
-    repairs it, so no flat connection exists.  Without the Z2 quotient the
-    cocycle must hold exactly in SU(2) x U(1), which P Q = -Q P forbids
-    directly.  Either way: fundamental matter plus nonzero Z2 flux
-    obstructs flatness.
-    """
-
-    p, q = transition_matrices()
-    cover_commutator = sp.simplify(p * q * p.inv() * q.inv())
-    minus_i = -sp.eye(2)
-    if cover_commutator != minus_i:
-        raise ValueError("toronic SU(2) content is not z12 = -I")
-    if not with_fundamentals:
-        # kernel of SU(2) -> PSU(2) is {+-I}: the commutator is trivial there
-        return True
-    # K contains (I,1) and (-I, e^{i 2 pi}); the cover commutator (-I,1)
-    # matches neither: (-I,1) = (I,1)*(-I,1) would need (-I,1) in K, and
-    # (-I,1) = (-I,e^{i2pi})*(u-phase) cannot hold since the SU(2) parts
-    # differ.  No U(1) phase can change the SU(2) part -I.
-    return False
-
-
-def minimal_flux_classical_energy_density(g_prime: Any, L: Any = 1) -> sp.Expr:
-    """Classical energy density of the minimal connection with fundamentals.
-
-    The doublet cocycle requires the hypercharge holonomy mismatch
-    exp(i g' Y F_B L^2) = -1 with Y = 1/2, hence the quantized curvature
-    F_B = 2 pi/(g' L^2) and density (1/2) F_B^2 = 2 pi^2/(g'^2 L^4) > 0.
-    """
-
-    g_val = sp.sympify(g_prime)
-    L_val = sp.sympify(L)
-    if g_val.is_number and g_val.is_positive is not True:
-        raise ValueError("g_prime must be positive")
-    if L_val.is_number and L_val.is_positive is not True:
-        raise ValueError("L must be positive")
-    flux_b = 2 * sp.pi / (g_val * L_val**2)
-    return sp.simplify(flux_b**2 / 2)
-
-
-def uniform_flux_lattice_spectrum(n_side: int) -> np.ndarray:
-    """Dimensionless spectrum of the minimal (uniform-flux) connection.
-
-    Bulk plaquettes carry the quantized hypercharge flux (phase e^{i pi/N^2}
-    per plaquette, total pi over the cell, set by the doublet cocycle); the
-    SU(2) seam holonomies are i sigma3 and i sigma1.  This is the
-    L^2-minimizing (harmonic) representative of the bundle's connection
-    moduli, replacing the flat representative that does not exist.
-    """
-
-    if n_side < 4:
-        raise ValueError("n_side must be >= 4")
-    n = n_side
-    dim = 2
-    sigma1 = np.array([[0, 1], [1, 0]], dtype=complex)
-    sigma3 = np.array([[1, 0], [0, -1]], dtype=complex)
-    size = n * n * dim
-    lap = np.zeros((size, size), dtype=complex)
-
-    def flat(n1: int, n2: int, comp: int) -> int:
-        return (n1 * n + n2) * dim + comp
-
-    for n1 in range(n):
-        for n2 in range(n):
-            for mu in (0, 1):
-                forward = ((n1 + 1) % n, n2) if mu == 0 else (n1, (n2 + 1) % n)
-                if mu == 0:
-                    link = (1j * sigma3) if n1 == n - 1 else np.eye(dim)
-                else:
-                    phase = np.exp(1j * np.pi * n1 / n**2)
-                    link = phase * (
-                        (1j * sigma1) if n2 == n - 1 else np.eye(dim)
-                    )
-                for a in range(dim):
-                    i0 = flat(n1, n2, a)
-                    j0 = flat(forward[0], forward[1], a)
-                    lap[i0, i0] += 1
-                    lap[j0, j0] += 1
-                    for b in range(dim):
-                        lap[i0, flat(forward[0], forward[1], b)] -= link[a, b]
-                        lap[flat(forward[0], forward[1], b), i0] -= np.conj(
-                            link[a, b]
-                        )
-    return np.sort(np.linalg.eigvalsh(lap).real) * (n / (2 * np.pi)) ** 2
 
 #: Preprint Eq. (63)/(64): DeltaV = -(5 pi G/8) L_EW^-4 (claimed, negative).
 PREPRINT_DELTA_V_COEFFICIENT = -5 * sp.pi * sp.Catalan / 8
@@ -471,20 +355,27 @@ def wilson_loop_commutator() -> sp.ImmutableMatrix:
 def matrix_commutant_basis(
     matrices: Sequence[sp.MatrixBase],
 ) -> tuple[sp.ImmutableMatrix, ...]:
-    """Exact basis of {V : [V, M] = 0 for every M in matrices} (2x2)."""
+    """Exact basis of {V : [V, M] = 0 for every M in matrices} (2x2).
 
-    rows = []
+    Solves the entrywise linear system [V, M] = 0 with
+    V = [[a, b], [c, d]] directly; no vec/Kronecker ordering conventions
+    are involved, so the result is independent of reshape choices.
+    """
+
+    a, b, c, d = sp.symbols("a b c d")
+    unknown = sp.Matrix([[a, b], [c, d]])
+    equations: list[sp.Expr] = []
     for matrix in matrices:
-        matrix = sp.Matrix(matrix)
-        comm = sp.kronecker_product(matrix.T, sp.eye(2)) - sp.kronecker_product(
-            sp.eye(2), matrix
-        )
-        rows.extend(comm.tolist())
-    system = sp.Matrix(rows)
+        m = sp.Matrix(matrix)
+        if m.shape != (2, 2):
+            raise ValueError("matrix_commutant_basis handles 2x2 matrices")
+        for row in (unknown * m - m * unknown).tolist():
+            equations.extend(sp.expand(entry) for entry in row)
+    system, _ = sp.linear_eq_to_matrix(equations, [a, b, c, d])
     basis = []
     for vector in system.nullspace():
         basis.append(
-            sp.ImmutableMatrix([[vector[0], vector[1]], [vector[2], vector[3]]])
+            sp.ImmutableMatrix(2, 2, lambda i, j: sp.expand(vector[2 * i + j]))
         )
     return tuple(basis)
 

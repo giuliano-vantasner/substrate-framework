@@ -26,7 +26,7 @@ premise; the positive objects are the reusable verified modules.
 Accepted release v0.159.0, baseline commit 5dc6d4db (main). Modules read:
 `verification.py`, `su2_doublets.py` (generators reused), `wilson_loops.py`
 (convention reference). Preprint source: PDF received 2026-08-10 (L.
-Gamberale), archived at ~/downloads/prl-ref-2026-08-10/.
+Gamberale); durable copy attached to issue #26 (comment 5243581613).
 
 ## Invariants, Conventions, and Allowed Imports
 No edits to accepted claims, campaigns, generated docs, or migration queues.
@@ -54,21 +54,24 @@ issue #26; no registry or release change is requested. Refuted preprint
 statements are external claims and do not enter the registry.
 
 ## Implementation and Oracle Plan
-Modules `src/substrate_framework/twisted_casimir.py` and
-`flux_tube_ensemble.py`; tests `tests/test_twisted_casimir.py`,
-`tests/test_flux_tube_ensemble.py`. Oracles: SymPy exact algebra (transition
-matrices, centralizer, cocycle, coefficient matching, ensemble stress),
-mpmath special values (E2, beta, S sums), NumPy lattice Laplacians
-(adjoint validation, fundamental magnetic spectrum), regulator refinement,
+Module `src/substrate_framework/twisted_casimir.py`; tests
+`tests/test_twisted_casimir.py`. Oracles: SymPy exact algebra (transition
+matrices, entrywise centralizer, Sec. 7 coefficient matching), mpmath
+special values (E2, beta, S sums), NumPy adjoint lattice Laplacian (method
+validation against the analytic Epstein spectrum), regulator refinement,
 mutation probes (twist mutations change DeltaV as predicted; preprint
-coefficient measurably fails). Replay: targeted pytest plus one full
-`scripts/validate.sh` at the final boundary (run as a background process per
-the long-running-script convention).
+coefficient measurably fails; nilpotent counterexample verifies the generic
+commutant). Replay: targeted pytest plus one full `scripts/validate.sh` at
+the final boundary (run as a background process per the long-running-script
+convention). Scope note (harvest review 2026-08-10): the fundamental-bundle
+obstruction, flux lattice, and flux-tube ensemble were split out of this
+campaign into a separate issue-first extension effort.
 
 ## Verdicts (verified results of the audit)
 Each verdict names its oracle route.
 
-1. Preprint Eq. (47) E2(-1;alpha) = -S(alpha)/(4 pi^2) is false:
+1. Preprint Eq. (46) E2(-1;alpha) = -S(alpha)/(4 pi^2) is false (Eq. (47)
+   merely defines S(alpha)):
    E2(-1;alpha) = 0 identically (FE argument; E2 = 4 zeta beta factorization
    with beta(-1) = 0; direct tests to 1e-30).
 2. The kept term in Eq. (51) is the one that cancels between sectors; the
@@ -81,21 +84,12 @@ Each verdict names its oracle route.
 3. Sec. 7: the paper's own gap ansatz gives lambda_eff = -c g^4/4 (negative,
    unbounded below), not +c g^4/8 (exact SymPy matching).
 4. Sec. 6: the stabilizer of {i sigma3, i sigma1} is Z2, not U(1)_em (exact
-   commutant computation); the orbit is a gauge orbit.
-5. Structural obstruction: with fundamental matter on the Sec. 10 bundle,
-   no flat connection exists (exact: the cover commutator (-I,1) is not in
-   the diagonal Z2 kernel, and no U(1) phase can repair it; without the
-   quotient, PQ = -QP forbids the exact cocycle directly). The minimal
-   connection carries quantized hypercharge flux with classical density
-   2 pi^2/(g'^2 L^4) ~ 155/L^4 at g' = 0.357, exceeding the one-loop terms
-   by ~two orders of magnitude. Lattice spectra confirm the fundamental
-   sector is magnetic (no constant-twist fit; stable under refinement).
-6. Minkowski extension: the isotropic static-tube ensemble has w = +1/3
-   (exact stress average for rho_t ~ L^-4), not -1; no normalizable
-   boost-invariant measure exists on timelike tube orientations (divergent
-   rapidity integral; the compact Euclidean Gr(2,4) contrast is finite but
-   is not a static vacuum); the modulus L has no stationary point under
-   either sign.
+   entrywise commutant, verified on the nilpotent counterexample); the orbit
+   is a gauge orbit.
+
+(The fundamental-bundle obstruction, flux-energy estimate, and Minkowski
+tube-ensemble analysis moved to the extension campaign per the 2026-08-10
+harvest review; they are not part of this campaign's mergeable scope.)
 
 ## Attempts and Continuation
 Append-only attempt record.
@@ -103,26 +97,25 @@ Append-only attempt record.
 | Attempt | Route | Verdict | Mechanism | Next |
 | --- | --- | --- | --- | --- |
 | 0001 | ad-hoc pure-Python sums (outside workflow) | numeric indication only | no oracle governance | canonical module |
-| 0002 | naive matrix commutant index map | wrong rank (3 vs 1) | hand-rolled vec map | Kronecker formulation (landed) |
-| 0003 | candidate fundamental twists (1/4,1/2) from secular truncation | refuted by lattice | bundle admits no flat frame; magnetic spectrum | obstruction theorem + uniform-flux lattice (landed) |
-| 0004 | fermion DeltaV via candidate twists | withdrawn | premise (flat fundamental spectrum) false | frontier: one-loop on the flux background needs a renormalization condition |
+| 0002 | naive matrix commutant index map | wrong rank (3 vs 1) | hand-rolled vec map | Kronecker formulation |
+| 0003 | Kronecker vec commutant | wrong for generic input | column-major vec reshaped row-major (harvest review, nilpotent counterexample) | entrywise linear-system formulation (landed) |
+| 0004 | extension scope inside this campaign | split per harvest review | out of issue #26's predeclared scope | separate extension campaign |
 
 ## Debt Ledger
 Campaign debt tracked here.
 
 | Debt | Introduced by | Why it is real | Discharge artifact | Status |
 | --- | --- | --- | --- | --- |
-| beta'(-1) = 2G/pi numeric evidence only | route A closed form | no symbolic derivative oracle | route B agreement without special-value input | discharged by cross-route test |
-| fermion one-loop on flux background uncomputed | obstruction finding | needs renormalization condition on a magnetic background | issue #26 frontier | open frontier, not merged-scope debt |
+| beta'(-1) = 2G/pi numeric evidence only | route A closed form | no symbolic derivative oracle | route B agreement without special-value input | discharged for the verdict by the cross-route test; the symbolic identity itself is open mathematical frontier (non-blocking, out of scope) |
 
 ## Review and Promotion Plan
 No claim promotion requested. PR inventory states the conditional status of
-every public symbol. Reviewer focus: the two-route agreement, the exact
-obstruction check, and the lattice validation. Full-suite validation runs
-once at the final boundary.
+every public symbol. Reviewer focus: the two-route agreement, the entrywise
+commutant (with nilpotent counterexample), and the lattice method
+validation. Full-suite validation runs once at the final boundary.
 
 ## Done Gate
-This audit is complete when the PR is open with targeted tests green and one
-clean full-suite validation recorded. The fermion-on-flux one-loop
-computation and any rescue of the toronic vacuum remain open frontier on
-issue #26.
+This audit is complete when PR #27 is open with targeted tests green and one
+clean full-suite validation recorded, and the harvest-review findings are
+disposed. The fundamental-bundle obstruction, flux-background one-loop, and
+Minkowski ensemble questions live in the extension campaign, not here.

@@ -44,12 +44,13 @@ Dependency-ordered steps for the effort.
 1. [x] Recall and source verification (preflight, governance, module search).
 2. [x] Route preregistration (see below).
 3. [x] Canonical module + proposal record (P225).
-4. [x] Two-route verification with mutation and refinement evidence (29 tests green).
+4. [x] Two-route verification with mutation and refinement evidence.
 5. [x] Preprint algebra checks (SymPy): Wilson commutator, centralizer, Sec. 7 coefficient matching.
-6. [x] Scope extension per L. Gamberale 2026-08-10: fermion-sector question resolved structurally (no flat connection with fundamentals; magnetic spectrum on the minimal flux connection; classical flux energy 2 pi^2/(g'^2 L^4) dominates); Minkowski tube-ensemble analysis landed (`flux_tube_ensemble`: w = 1/3, boost-measure obstruction, modulus instability).
-7. [ ] Targeted tests green; one full `scripts/validate.sh` at the final boundary (running as background process `sf-validate`).
-8. [ ] PR against issue #26; report back to Luca/Dan; send email addendum only with Luca's consent.
-9. [ ] Post-task refinement.
+6. [x] Harvest review 2026-08-10 (PR #27): extension scope (fundamental-bundle obstruction, flux lattice, tube ensemble) moved to its own issue-first effort; this effort narrowed to the audit core.
+7. [x] Review fixes: entrywise commutant rewrite (+ nilpotent counterexample test), Eq. (46)/(47) citations, scheme-independence narrowed to the twist difference with periodic-vacuum baseline, durable PDF provenance, beta'(-1) debt reconciled.
+8. [ ] Targeted tests green (22 passed); one full `scripts/validate.sh` re-run at the final boundary; push and reply on PR #27.
+9. [ ] Report back to Luca/Dan; send email addendum only with Luca's consent.
+10. [ ] Post-task refinement.
 
 ## Preregistered Routes
 Two independent computational routes, frozen before comparison. Route 1
@@ -67,48 +68,48 @@ Append-only record of attempts.
 | --- | --- | --- | --- | --- | --- |
 | 0001 | Ad-hoc pure-Python sums (outside workflow) | chat session 2026-08-10 | numeric indication only | no oracle governance; not a deliverable | 0002 canonical module |
 | 0002 | Canonical two-route module + tests | this branch | landed |  |  |
-| 0003 | Naive commutant index map | matrix_commutant_basis | wrong rank (3 vs 1) | hand-rolled vec map | Kronecker formulation (landed) |
-| 0004 | Candidate fundamental twists (1/4,1/2) | secular truncation | refuted by lattice spectra | bundle admits no flat frame | obstruction theorem + uniform-flux lattice (landed) |
-| 0005 | Fermion DeltaV via candidate twists | withdrawn | premise false | flat fundamental bundle does not exist | frontier: flux-background one-loop with renormalization condition |
+| 0003 | Naive commutant index map | matrix_commutant_basis | wrong rank (3 vs 1) | hand-rolled vec map | Kronecker formulation |
+| 0004 | Kronecker vec formulation | matrix_commutant_basis | wrong for generic input | column-major vec reshaped row-major (found in harvest review; nilpotent counterexample) | entrywise linear-system formulation (landed) |
+| 0005 | Extension scope inside this PR | flux_tube_ensemble, obstruction/flux helpers | split per harvest review | out of issue #26's predeclared scope | new issue-first extension effort |
+| 0006 | Candidate fundamental twists (1/4,1/2); fermion DeltaV via flat twists | extension effort | withdrawn | premise false (no flat fundamental bundle) | carried to extension effort frontier |
 
 ## Validation
 Validation covers the actual objective, not an exit code.
 
-- `PYTHONPATH=src .venv/bin/python -m pytest tests/test_twisted_casimir.py tests/test_flux_tube_ensemble.py -q` -> 29 passed (5.8s).
+- `PYTHONPATH=src .venv/bin/python -m pytest tests/test_twisted_casimir.py -q` -> 22 passed (4.3s) after the review split.
 - `PYTHONPATH=src .venv/bin/python scripts/validate_repository.py` -> WORKFLOW VALID: 202 claims, 202 accepted, 1 proposals.
-- Sensitivity: twist mutation changes DeltaV as both routes predict; the preprint coefficient -5piG/8 fails by O(1) in both routes; adjoint lattice validates the lattice method (refinement 12/18/24, max low-mode deviation < 0.02 and decreasing); fundamental spectrum fits no constant-twist candidate (best residual > 0.05) and is stable under refinement.
-- Consumer replay: full suite via `scripts/validate.sh` (background `sf-validate`), recorded at PR time.
+- Sensitivity: twist mutation changes DeltaV as both routes predict; the preprint coefficient -5piG/8 fails by O(1) in both routes; adjoint lattice validates the lattice method (refinement 12/18/24, max low-mode deviation < 0.02 and decreasing); nilpotent counterexample verifies the generic commutant.
+- Consumer replay: full suite via `scripts/validate.sh` (background `sf-validate`) at the final boundary: 2031 passed pre-split; re-run post-split recorded at push time.
 
 ## Debt Ledger
 Assumptions and shortcuts introduced by this effort.
 
 | Debt | Introduced by | Why it is real | Discharge artifact | Status |
 | --- | --- | --- | --- | --- |
-| beta'(-1) = 2G/pi is numeric evidence, not symbolic proof | route 1 closed form | no symbolic oracle available for the derivative identity | cross-check vs route 2 which needs no special-value input | open |
+| beta'(-1) = 2G/pi is numeric evidence, not symbolic proof | route 1 closed form | no symbolic oracle available for the derivative identity | route 2 needs no special-value input and agrees with route 1 under refinement | discharged for the verdict by the cross-route test; a symbolic proof of the identity itself remains open mathematical frontier (non-blocking, out of campaign scope) |
 
 ## Results
 Verified outcomes (reproduce with the commands in Validation).
 
-1. E2(-1; alpha) = 0 identically (preprint Eq. 47 refuted); verified to 1e-30
-   via the functional-equation route and the 4 zeta(s) beta(s) factorization.
+1. E2(-1; alpha) = 0 identically (preprint Eq. 46 refuted; Eq. 47 defines
+   S(alpha)); verified to 1e-30 via the functional-equation route and the
+   4 zeta(s) beta(s) factorization.
 2. Corrected gauge-sector one-loop difference: DeltaV = +5G/(2 L^4) > 0
    (route A closed form; route B regulated sums converge to D = -5G/(2 pi);
    agreement 2e-4 at regulator 900 and improving). The toronic sector is
    energetically disfavored; the periodic vacuum is preferred. The preprint's
-   -5piG/8 is an artifact of the false Eq. (47) and the dropped
-   lambda ln lambda term.
+   -5piG/8 (Eq. 63) is an artifact of the false Eq. (46) and the dropped
+   lambda ln lambda term. The asserted quantity is the twist difference with
+   the periodic vacuum as subtraction baseline; an alpha-independent local
+   counterterm can shift any absolute density by C/L^4.
 3. Sec. 7 gap ansatz yields lambda_eff = -c g^4/4 (negative; unbounded
-   below), not the asserted +c g^4/8 (exact SymPy matching).
-4. Stabilizer of {i sigma3, i sigma1} is Z2, not U(1)_em (exact commutant);
-   the coset in Eq. (66) is a gauge orbit.
-5. No flat connection exists on the Sec. 10 bundle with fundamental matter
-   (exact: cover commutator (-I,1) not in the diagonal Z2 kernel); minimal
-   connection carries quantized flux with classical density
-   2 pi^2/(g'^2 L^4) (~155/L^4 at g' = 0.357), dwarfing one-loop terms.
-   Lattice confirms the fundamental spectrum is magnetic, not twisted-flat.
-6. Minkowski tube ensemble: w = +1/3 exactly (not a Lorentz vacuum); no
-   normalizable boost-invariant measure (divergent rapidity volume; compact
-   Euclidean Gr(2,4) contrast); no stationary point in L under either sign.
+   below), not the asserted Eq. (83) +c g^4/8 (exact SymPy matching).
+4. Stabilizer of {i sigma3, i sigma1} is Z2, not U(1)_em (exact entrywise
+   commutant, incl. nilpotent counterexample); the coset in Eq. (66) is a
+   gauge orbit.
+(Items on the fundamental-bundle obstruction, flux energy, and the Minkowski
+tube ensemble moved to the extension effort per the 2026-08-10 harvest
+review.)
 
 ## Post-Task Refinement
 The task exposed one process defect and one environment friction.
@@ -124,14 +125,14 @@ The task exposed one process defect and one environment friction.
 ## Done Gate
 Each condition checked individually before closing.
 
-- [x] Positive object exists and is verified (modules + 29 targeted tests + full suite 2031 passed)
-- [x] Debt ledger empty or explicitly carried to the PR (fermion-on-flux frontier recorded on issue #26 and in the PR)
-- [x] Memory synchronized with landed state (P225 proposal, this effort, branch pushed)
+- [x] Positive object exists and is verified (narrowed core module + 22 targeted tests; full suite green pre-split 2031 passed, post-split re-run pending)
+- [x] Debt ledger reconciled (beta'(-1) discharged for the verdict by cross-route independence; symbolic identity noted as out-of-scope frontier)
+- [x] Memory synchronized with landed state (P225 narrowed to audit scope; extension carried to its own effort)
 - [x] Post-task refinement answered
 
 Status stays active until independent review disposes PR #27 (no self-merge).
 
 ## Cross-References
-Issue #26 (vantasnerdan/substrate-framework); referee report artifact at
-~/downloads/prl-ref-2026-08-10/referee-report.md; email thread in Waiting
-(Luca, 2026-08-10).
+Issue #26 (vantasnerdan/substrate-framework); the preprint PDF is durably
+attached to issue #26 (comment 5243581613); referee report draft emailed
+2026-08-10, thread in Waiting (Luca).
