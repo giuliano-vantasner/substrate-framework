@@ -1,8 +1,8 @@
 ---
-description: 'P225: oracle-backed referee verification of the toronic-condensate preprint one-loop energetics, flat-connection obstruction, and flux-tube ensemble analysis (issue #26)'
+description: 'P225: oracle-backed referee verification of the toronic-condensate preprint one-loop energetics and named Sec. 5-7 algebra (issue #26)'
 author: giuliano
 created: '2026-08-10T16:05:00+00:00'
-updated: '2026-08-10T16:05:00+00:00'
+updated: '2026-08-10T19:20:41+00:00'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -14,13 +14,13 @@ status: active
 
 ## Question and Positive Deliverable
 Does the toronic-condensate preprint's one-loop vacuum-energy computation
-survive oracle verification, and can the single-tube T^2 x R x R structure be
-extended to a Lorentz-invariant flux-tube vacuum in Minkowski space? The
-deliverable is the canonical two-route verification module
-`twisted_casimir`, the ensemble module `flux_tube_ensemble`, focused tests,
-and this adjudicated record. The verdicts (negative for the preprint's
-central claims) are verified results of the audit, not the campaign's
-premise; the positive objects are the reusable verified modules.
+survive two-route oracle verification, and do the named Sec. 5-7 algebraic
+statements survive exact checks within issue #26's audit-core scope? The
+positive deliverable is the canonical `twisted_casimir` verification module,
+its focused tests, and this active unpromoted proposal record. The verdicts
+(negative for the preprint's central claims) are verified results of the
+audit, not the campaign's premise. The fundamental-bundle, flux-background,
+and Minkowski tube-ensemble questions belong to issue #28 and P226.
 
 ## Base Release and Provenance
 Accepted release v0.159.0, baseline commit 5dc6d4db (main). Modules read:
@@ -44,9 +44,11 @@ oracle independence, not about the physics verdict.
 | B | Direct Gaussian-regulated lambda ln lambda mode sums | translational invariance of the regulator | regulator Lambda | converges to A | refinement series 100/400/900 |
 
 ## Selection Criteria and Blinding
-Criteria: exactness, regularization independence, convergence control. The
-two routes were implemented from independent formulas (no shared
-intermediate); comparison happened only after both were frozen in tests.
+Criteria: exactness, agreement of the twist/periodic-vacuum difference across
+independent regulator routes, and convergence control. The two routes were
+implemented from independent formulas (no shared intermediate); comparison
+happened only after both were frozen in tests. This does not assert
+regularization independence of an absolute vacuum density.
 
 ## Proposed Claim Delta
 None. All public symbols are conditional, unpromoted infrastructure linked to

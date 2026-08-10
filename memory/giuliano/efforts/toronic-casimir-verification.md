@@ -2,7 +2,7 @@
 description: 'Oracle-backed verification of twisted-torus one-loop vacuum energetics (issue #26): Epstein zeta values, corrected toronic DeltaV sign, preprint algebra checks'
 author: giuliano
 created: '2026-08-10T15:30:00+00:00'
-updated: '2026-08-10T15:30:00+00:00'
+updated: '2026-08-10T19:20:41+00:00'
 tags:
 - effort
 - toronic-casimir
@@ -24,7 +24,7 @@ open against issue #26. No claim promotion is requested.
 
 ## Baseline
 Existing state, verified at source. No Epstein/Casimir primitive exists in
-`src/substrate_framework/` (grepped: only representation-theory Casimir
+`src/substrate_framework/` (source search found only representation-theory Casimir
 operators). Reusable: `verification.py` CheckLedger, `numerics.py`.
 Release v0.159.0 is the accepted baseline. Ad-hoc pure-Python numerics
 (outside the workflow, 2026-08-10) indicated DeltaV = +5G/(2L^4) > 0 vs the
@@ -36,7 +36,7 @@ mpmath 1.3.0. Lean unavailable; no formal claim is registered.
 Write surfaces: `src/substrate_framework/twisted_casimir.py`,
 `tests/test_twisted_casimir.py`, `src/substrate_framework/__init__.py`,
 `memory/giuliano/`. No edits to accepted claims, campaigns, generated docs.
-Branch `research/toronic-casimir-verification`. Issue-first per repo #23.
+Branch `research/toronic-casimir-verification`. Canonical goal: issue #26.
 
 ## Decomposition
 Dependency-ordered steps for the effort.
@@ -48,7 +48,7 @@ Dependency-ordered steps for the effort.
 5. [x] Preprint algebra checks (SymPy): Wilson commutator, centralizer, Sec. 7 coefficient matching.
 6. [x] Harvest review 2026-08-10 (PR #27): extension scope (fundamental-bundle obstruction, flux lattice, tube ensemble) moved to its own issue-first effort; this effort narrowed to the audit core.
 7. [x] Review fixes: entrywise commutant rewrite (+ nilpotent counterexample test), Eq. (46)/(47) citations, scheme-independence narrowed to the twist difference with periodic-vacuum baseline, durable PDF provenance, beta'(-1) debt reconciled.
-8. [ ] Targeted tests green (22 passed); one full `scripts/validate.sh` re-run at the final boundary; push and reply on PR #27.
+8. [x] Integrated current `main`; 22 targeted tests and one final repository validation passed. `git diff --check` passed separately after this result was finalized.
 9. [ ] Report back to Luca/Dan; send email addendum only with Luca's consent.
 10. [ ] Post-task refinement.
 
@@ -76,10 +76,11 @@ Append-only record of attempts.
 ## Validation
 Validation covers the actual objective, not an exit code.
 
-- `PYTHONPATH=src .venv/bin/python -m pytest tests/test_twisted_casimir.py -q` -> 22 passed (4.3s) after the review split.
+- `PYTHONPATH=src .venv/bin/python -m pytest tests/test_twisted_casimir.py -q` -> 22 passed in 8.59s after current-`main` integration and the review split.
 - `PYTHONPATH=src .venv/bin/python scripts/validate_repository.py` -> WORKFLOW VALID: 202 claims, 202 accepted, 1 proposals.
 - Sensitivity: twist mutation changes DeltaV as both routes predict; the preprint coefficient -5piG/8 fails by O(1) in both routes; adjoint lattice validates the lattice method (refinement 12/18/24, max low-mode deviation < 0.02 and decreasing); nilpotent counterexample verifies the generic commutant.
-- Consumer replay: full suite via `scripts/validate.sh` (background `sf-validate`) at the final boundary: 2031 passed pre-split; re-run post-split recorded at push time.
+- Consumer replay: `PYTHON=<repo-managed virtualenv python> scripts/validate.sh` -> 2042 passed in 462.35s, exit 0, followed by `ALL REPOSITORY WORKFLOW CHECKS PASS`. The explicit `PYTHON` selects the same repository virtualenv from the primary checkout because this isolated worktree has no duplicated `.venv`; an initial system-Python invocation failed before validation on an incompatible SymPy installation and supplied no scientific verdict.
+- `git diff --check` -> clean, run separately after the final record update.
 
 ## Debt Ledger
 Assumptions and shortcuts introduced by this effort.
@@ -112,20 +113,14 @@ tube ensemble moved to the extension effort per the 2026-08-10 harvest
 review.)
 
 ## Post-Task Refinement
-The task exposed one process defect and one environment friction.
-
-1. Defect: the referee verdict was first delivered from ad-hoc pure-Python
-   numerics outside the substrate workflow. Corrected in place: ~/AGENTS.md
-   Team-operations section now forbids hand-rolled math and requires
-   SymPy/SciPy/Lean-backed, issue+PR-recorded verification before any
-   quantitative answer is delivered (Dan directive 2026-08-10).
-2. Friction: system python3 has no pip/numpy; the repo .venv has the full
-   stack. Recorded in long-term memory; no template change needed.
+No host-local process change is part of this merge unit. The repository-local
+repair is the source-auditable module, focused tests, proposal manifest, and
+final repository validation recorded here.
 
 ## Done Gate
 Each condition checked individually before closing.
 
-- [x] Positive object exists and is verified (narrowed core module + 22 targeted tests; full suite green pre-split 2031 passed, post-split re-run pending)
+- [x] Positive object exists and is verified (narrowed core module + 22 targeted tests; current-`main` full suite 2042 passed)
 - [x] Debt ledger reconciled (beta'(-1) discharged for the verdict by cross-route independence; symbolic identity noted as out-of-scope frontier)
 - [x] Memory synchronized with landed state (P225 narrowed to audit scope; extension carried to its own effort)
 - [x] Post-task refinement answered
@@ -134,5 +129,4 @@ Status stays active until independent review disposes PR #27 (no self-merge).
 
 ## Cross-References
 Issue #26 (vantasnerdan/substrate-framework); the preprint PDF is durably
-attached to issue #26 (comment 5243581613); referee report draft emailed
-2026-08-10, thread in Waiting (Luca).
+attached to issue #26 (comment 5243581613).

@@ -163,7 +163,7 @@ def test_epstein_at_minus_one_vanishes_everywhere() -> None:
         assert abs(epstein_square_value_minus_one(alpha)) < mpf(10) ** -30
 
 
-def test_preprint_eq47_is_refuted() -> None:
+def test_preprint_eq46_is_refuted() -> None:
     # sensitivity: the preprint's claimed value is measurably nonzero, so the
     # vanishing above is not a trivially-passing predicate.
     claimed = -dual_s_sum((0.5, 0.0)) / (4 * mp.pi**2)
