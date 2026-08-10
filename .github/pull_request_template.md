@@ -94,7 +94,8 @@ section; do not claim it passed.
 - [ ] Targeted tests and named scientific verifiers pass.
 - [ ] Load-bearing mutations, counterexamples, or wrong-convention probes fail as expected.
 - [ ] Affected downstream consumers replay.
-- [ ] `scripts/validate.sh` passes once at the final unchanged boundary.
+- [ ] `scripts/validate.sh --pytest-scope ...` passes with the exact selectors recorded, or the full-suite trigger is explained and `scripts/validate.sh --full` passes.
+- [ ] The pytest scope remains valid against the merge base; an equivalent unchanged validation is not duplicated.
 - [ ] `git diff --check` passes in a separate invocation.
 - [ ] No unrelated, generated-by-hand, or host-specific artifacts are included.
 
