@@ -52,8 +52,8 @@ Dependency-ordered steps for the effort.
 3. [x] Flux background: su(2) and u(1)_Y candidates, minimum at SM couplings, dominance over the one-loop gauge term.
 4. [x] Lattice construction checks: exactly uniform interior plaquettes, O(1/N) wrap defect, Wilson winding to -I, gauge covariance, ground-state convergence to the Landau ground 1/(4 pi), continuous no-twist falsifier (differential evolution).
 5. [x] Ensemble: pressures, w = 1/3, orientation average; derived H^3 induced-metric measure (divergent volume); derived Gr~(2,4) = S^2 x S^2 volume 16 pi^2 via the self-dual split; modulus instability.
-6. [ ] Full suite at the boundary; stacked PR against issue #28.
-7. [ ] Report; post-task refinement.
+6. [x] Full suite at the boundary (2044 passed); stacked PR #29 against issue #28 (base research/toronic-casimir-verification; retarget to main after #27 merges).
+7. [x] Report; post-task refinement.
 
 ## Preregistered Routes
 The obstruction is exact (symbolic cocycle + membership); the lattice is
@@ -77,7 +77,7 @@ Validation covers the actual objective, not an exit code.
 
 - `PYTHONPATH=src .venv/bin/python -m pytest tests/test_toron_bundle.py tests/test_flux_tube_ensemble.py -q` -> 20 passed (5.8s).
 - Structural gates: cocycle and commutator exact and phase-independent; kernel membership with mutation sensitivity (wrong kernel flips the verdict); plaquettes uniform to 1e-12 interior with O(1/N) wrap defect decreasing 8/16/24; Wilson holonomy winding to -I under refinement; spectrum exactly gauge-covariant (1e-8); ground converges to 1/(4 pi) with decreasing deviation; continuous twist falsifier residual > 0.05.
-- Consumer replay: full suite via `scripts/validate.sh` at the boundary, recorded at push time.
+- Consumer replay: full suite via `scripts/validate.sh` at the boundary: 2044 passed in 367.24s, exit 0.
 
 ## Debt Ledger
 Assumptions and shortcuts introduced by this effort.
@@ -117,12 +117,12 @@ records.
 ## Done Gate
 Each condition checked individually before closing.
 
-- [x] Positive object exists and is verified (two modules, 20 targeted tests)
+- [x] Positive object exists and is verified (two modules, 20 targeted tests; full suite 2044 passed)
 - [x] Debt ledger carried to the PR (two open frontiers recorded)
-- [ ] Memory synchronized with landed state (this effort + P226; at push)
+- [x] Memory synchronized with landed state (this effort + P226, pushed)
 - [x] Post-task refinement answered
 
-Status stays active until independent review disposes the extension PR.
+Status stays active until independent review disposes PR #29.
 
 ## Cross-References
 Issue #28 (vantasnerdan/substrate-framework); parent audit issue #26 / PR #27;
