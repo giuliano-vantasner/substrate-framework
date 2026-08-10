@@ -1,0 +1,29 @@
+id: P226
+base_release: v0.159.0
+source_baseline: substrate-framework@bf68ee1f
+question: >-
+  With fundamental matter on the Sec. 10 bundle, does a flat connection
+  exist, what is the minimal background's classical energy, and can the
+  single-tube structure extend to a Lorentz-invariant static tube ensemble
+  in Minkowski space?
+invariants:
+  - no edits to accepted claims or the issue-26 core beyond reuse
+  - no hard-coded booleans; construction claims need construction-level checks
+  - measure statements only with derived invariant measures
+allowed_imports:
+  - sympy/mpmath/numpy/scipy stack in .venv
+  - preprint Eqs. (106)-(120) as the object under test
+  - twisted_casimir module from the issue-26 core
+candidates:
+  - id: A
+    description: exact cocycle + kernel membership; su(2) minimal flux representative
+  - id: B
+    description: u(1)_Y-carried flux representative
+uniqueness_evidence: null
+selection_criteria:
+  - exact symbolic results first
+  - construction-level lattice checks
+  - both flux carriers enumerated (no unexamined case split)
+claims_proposed: []
+comparators_blinded_until: both candidates frozen in tests
+status: draft
