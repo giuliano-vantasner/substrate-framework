@@ -2,7 +2,7 @@
 description: Keep fixed repository validation mandatory while scoping pytest to affected PR tests
 author: codex
 created: '2026-08-10T19:39:35Z'
-updated: '2026-08-10T19:39:35Z'
+updated: '2026-08-10T19:42:49Z'
 tags:
 - substrate-framework
 - effort
@@ -43,7 +43,7 @@ or uncertain changes, and periodic integrated-main replay.
 3. [x] Add `--pytest-scope` and explicit `--full` behavior with honest verdicts.
 4. [x] Add interface regression tests and align contributor documentation.
 5. [x] Exercise the real scoped workflow and run the diff audit.
-6. [ ] Submit the issue-linked PR for independent review and merge disposition.
+6. [x] Submit the issue-linked PR for independent review and merge disposition.
 
 ## Attempts
 Rejected designs remain recorded so later workflow work does not reintroduce
@@ -92,3 +92,4 @@ disposition from an actor who did not author or materially implement it.
 ## Cross-References
 Canonical issue: https://github.com/vantasnerdan/substrate-framework/issues/30.
 Implementation branch: `tooling/scoped-pytest-validation`.
+Independent-review handoff: https://github.com/vantasnerdan/substrate-framework/pull/31.
