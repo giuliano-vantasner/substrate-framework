@@ -2,7 +2,7 @@
 description: Require a pre-existing canonical issue for every pull request and prohibit agent self-merge
 author: codex
 created: '2026-08-10T09:16:31Z'
-updated: '2026-08-10T09:25:41Z'
+updated: '2026-08-10T09:27:24Z'
 tags:
 - substrate-framework
 - effort
@@ -30,7 +30,7 @@ Work proceeds through one process-only policy transaction.
 3. [x] Make issue-first and non-self-merge rules normative in `AGENTS.md`.
 4. [x] Align the start guide, PR template, harvest skill, continuation template, and agent issue intake form.
 5. [x] Run GitNexus, link, schema, memory, generated-state, and repository validation.
-6. [ ] Open a PR linked to #23 and hand merge authority to a distinct reviewer or owner.
+6. [x] Open PR #24 linked to #23 and hand merge authority to a distinct reviewer or owner.
 
 ## Candidate Selection
 The selected route combines explicit normative text, operational instructions, required PR fields, and a structured agent-task issue form. Editing only the start guide would leave the root contract ambiguous; editing only the PR template would be advisory without defining authorship and merge separation; a remote ruleset alone would not teach agents how to create and hand off compliant work.
@@ -45,7 +45,7 @@ Attempts are append-only and record any policy or validation defect before corre
 | 0003 | First generic quick-validator invocation | Execute `quick_validate.py` directly | environment permission failure | The installed script lacks its executable permission bit | Run the unchanged validator through the repository Python interpreter |
 
 ## Validation
-The issue form passed targeted YAML and required-field validation. The edited harvest skill passed the skill-creator `quick_validate.py` check after attempts 0002 and 0003 identified the correct validator and invocation. The effort memory passed an absolute-path repository-local `memory validate`; `scripts/validate_repository.py` passed with 202 accepted claims and no active proposals; GitNexus classified the documentation/process change as low impact with no affected consumers or processes; and direct path and policy-consistency checks passed. The one full `scripts/validate.sh` boundary completed with `2002 passed` and `ALL REPOSITORY WORKFLOW CHECKS PASS`. A separate `git diff --check` invocation passed afterward. The final PR still must reference #23 and name a merger other than the authoring agent.
+The issue form passed targeted YAML and required-field validation. The edited harvest skill passed the skill-creator `quick_validate.py` check after attempts 0002 and 0003 identified the correct validator and invocation. The effort memory passed an absolute-path repository-local `memory validate`; `scripts/validate_repository.py` passed with 202 accepted claims and no active proposals; GitNexus classified the documentation/process change as low impact with no affected consumers or processes; and direct path and policy-consistency checks passed. The one full `scripts/validate.sh` boundary completed with `2002 passed` and `ALL REPOSITORY WORKFLOW CHECKS PASS`. A separate `git diff --check` invocation passed afterward. PR #24 references the pre-existing issue #23, identifies Codex (`/root`) as its author and implementer, and leaves merge authority to a distinct reviewing agent or repository owner.
 
 ## Debt Ledger
 The ledger tracks only defects introduced inside this policy transaction.
@@ -65,4 +65,4 @@ This is a process-only effort. It changes no claim registry entry, release manif
 The effort remains active until the universal rules and intake surfaces agree, the validation boundary passes, the PR links #23, and a distinct reviewer or owner performs the merge.
 
 ## Cross-References
-Canonical work item: https://github.com/vantasnerdan/substrate-framework/issues/23. Predecessor process record: `memory/vantasner/efforts/agent-collaboration-onboarding.md`.
+Canonical work item: https://github.com/vantasnerdan/substrate-framework/issues/23. Independent-merge handoff: https://github.com/vantasnerdan/substrate-framework/pull/24. Predecessor process record: `memory/vantasner/efforts/agent-collaboration-onboarding.md`.
