@@ -37,6 +37,10 @@ Append-only; failures name mechanism and next materially different attempt.
 
 | Attempt | Candidate or repair | Artifact and command | Verdict | Mechanism | Next attempt |
 | --- | --- | --- | --- | --- | --- |
+| 0001 | 2+1D tutorial draft with hand-written null-rotation generator M | docs/tutorials/einbein_2plus1D/einbein_2plus1D_tutorial.md | Failed (caught pre-review) | Hand-written 3x3 matrix did not annihilate k0; M k0 = (0,0,-kappa) != 0. Wrong generator guessed instead of derived. | 0002: derive M = K2 + J from the boost/rotation basis and verify e^{tM} k0 = k0 symbolically |
+| 0002 | Corrected generator M = K2 + J; SymPy check test_eq071 | tests/test_einbein_2plus1d_tutorial.py | Passed | Generator derived from basis, not guessed; exponential verified with sp.exp | - |
+| 0003 | 3+1D Christoffel appendix via generator script | docs/tutorials/einbein_3plus1D/generate_christoffel_block.py | Failed on first output (self-caught) | Parenthesization keyed on "+" only; "2 d g - d g" brackets (rho = nu, lam != rho) contain " - " and escaped unwrapped, corrupting the sum scoping | 0004: wrap on " + " or " - "; block-regeneration diff test added |
+| 0004 | Regenerated block + test_appendixA_document_block_matches_generator | tests/test_einbein_3plus1d_tutorial.py | Passed | MD block is byte-identical to generator output; 40/40 components match the general formula numerically | - |
 
 ## Validation
 Validation is document-level: every displayed equation either derived in-line or cited; dimensional claims (little groups, Christoffel counts, null-cone structure) checked against cited sources; LaTeX compiles clean; PDF page-count and structure inspected.
