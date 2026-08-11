@@ -342,16 +342,17 @@ action (10) is invariant under the reparametrizations
 
 \[\tau \longmapsto f(\tau), \qquad e(\tau) \longmapsto \frac{e(\tau)}{\dot{f}(\tau)} \qquad (\dot{f} > 0), \tag{12}\]
 
-because the measure \(d\tau / e(\tau)\) and the weight
-\(e(\tau)\, d\tau\) are each invariant under the combined
-transformation: under \(\tau \to f(\tau)\) one has
-\(d\tau \to \dot{f}\, d\tau\), the first term of the integrand picks up
-\(1/\dot{f}\) from the two velocities and \(\dot{f}\) from the measure,
-and the einbein's transformation law is exactly what makes the two
-contributions cancel and match. The einbein is thus not an optional
-trick but the required compensating field: it is the degree-one object
-on the world-line whose transformation law absorbs the Jacobian
-\(\dot{f}\) so that a quadratic action can remain
+because under the combined transformation the first term of the
+integrand picks up \(1/\dot{f}^{2}\) from the two velocities and
+\(\dot{f}\) from the measure, for a net \(1/\dot{f}\) --- which is
+exactly cancelled by the einbein's law \(1/e \to \dot{f}/e\); the second
+term picks up \(1/\dot{f}\) from \(e \to e/\dot{f}\) and \(\dot{f}\)
+from the measure, and is invariant as it stands. The invariant
+combination is \(e(\tau)\, d\tau\), the world-line volume element
+\(\sqrt{g_{\mathrm{worldline}}}\, d\tau\) of (9). The einbein is thus
+not an optional trick but the required compensating field: it is the
+degree-one object on the world-line whose transformation law absorbs the
+Jacobian \(\dot{f}\) so that a quadratic action can remain
 reparametrization-invariant.
 
 \hypertarget{eulerlagrange-equation-for-the-einbein}{%
@@ -930,8 +931,10 @@ rotation \(J\) in the \(1\)-\(2\) plane and boost \(K_{2}\) along
 \(x^{2}\), \(M = K_{2} + J\): the boost and the rotation act oppositely
 on \(k^{(0)}\) and cancel.) Third, the action on a general momentum is a
 translation-like shear of the transverse coordinate driven by the null
-combination: \(p_{2} \mapsto p_{2} + t\,(p_{0} - p_{1}) + O(t^{2})\),
-which vanishes exactly on the rays with \(p_{0} = p_{1}\) --- a
+combination: \((e^{tM} p)_{2} = p_{2} + t\,(p_{0} - p_{1})\) ---
+exactly, with no higher-order terms, because \(M^{3} = 0\) and
+\((M^{2} p)_{2} = 0\) (both verified symbolically in the companion
+suite) --- which vanishes exactly on the rays with \(p_{0} = p_{1}\). A
 non-compact action rather than a rotation. The stabilizer is therefore
 the non-compact one-parameter group
 
@@ -970,13 +973,13 @@ its double cover) restricts the corresponding label to integers and
 half-integers. In 2 + 1 dimensions the fundamental group of the Lorentz
 group is \(\pi_{1}(SO(2,1)) = \mathbb{Z}\) --- as opposed to
 \(\mathbb{Z}_{2}\) for \(SO(3,1)\) (both statements follow from the
-deformation retract of \(SO(n,1)\) onto its maximal compact subgroup
-\(SO(n)\), together with \(\pi_{1}(SO(2)) = \mathbb{Z}\) and
-\(\pi_{1}(SO(3)) = \mathbb{Z}_{2}\); see e.g.~M. Nakahara,
+standard deformation retract of \(SO(n,1)\) onto its maximal compact
+subgroup \(SO(n)\), with \(\pi_{1}(SO(2)) = \mathbb{Z}\) and
+\(\pi_{1}(SO(3)) = \mathbb{Z}_{2}\) tabulated in M. Nakahara,
 \emph{Geometry, Topology and Physics}, IOP Publishing, 2nd ed.~2003,
-§4.6 and Table 4.1) --- so the universal cover imposes no quantization
-at all: a massive particle can carry \textbf{anyonic spin}, any real
-\(s\) (F. Wilczek, ``Quantum Mechanics of Fractional-Spin Particles'',
+§4.7, Table 4.1) --- so the universal cover imposes no quantization at
+all: a massive particle can carry \textbf{anyonic spin}, any real \(s\)
+(F. Wilczek, ``Quantum Mechanics of Fractional-Spin Particles'',
 \emph{Physical Review Letters} \textbf{49} (1982) 957--959, DOI:
 10.1103/PhysRevLett.49.957; relativistic wave equations for anyonic
 particles are treated in R. Jackiw and V. P. Nair, ``Relativistic wave
@@ -1132,14 +1135,14 @@ spacetime is timelike-geodesically complete.
 \textbf{Difference from 1 + 1 dimensions.} In 1 + 1 dimensions the
 constraint (78) determines \(\dot{x}^{1}\) from \(\dot{x}^{0}\) up to a
 sign, so the system closes on one unknown. In 2 + 1 dimensions the
-constraint is one relation among the two independent velocity ratios:
-the direction of the initial velocity in the
-\((\dot{x}^{1}, \dot{x}^{2})\) plane --- an angle \(\theta_{0}\) --- is
-free initial data, and (77) remains a genuine system of coupled
-second-order equations that the constraint alone cannot reduce to a
-single first-order ODE. If the metric admits a Killing vector
-field\footnote{A Killing vector field is a vector field \(\xi^{\mu}\)
-  along whose flow the metric is invariant, equivalently
+constraint fixes only the overall scale of the tangent vector; the two
+independent ratios of the three velocity components --- the direction
+angle \(\theta_{0}\) in the \((\dot{x}^{1}, \dot{x}^{2})\) plane and the
+speed ratio --- are free initial data, and (77) remains a genuine system
+of coupled second-order equations that the constraint alone cannot
+reduce to a single first-order ODE. If the metric admits a Killing
+vector field\footnote{A Killing vector field is a vector field
+  \(\xi^{\mu}\) along whose flow the metric is invariant, equivalently
   \(\nabla_{(\mu} \xi_{\nu)} = 0\). The inner product of a Killing
   vector with the tangent vector of a geodesic is constant along the
   geodesic; see R. M. Wald, \emph{General Relativity} (University of
@@ -1334,7 +1337,7 @@ https://www-th.bo.infn.it/people/bastianelli/2-Mechanics-RQMPI-23-24.pdf
 (accessed August 2026). (Explicit treatment of the einbein action.)
 
 {[}13{]} M. Nakahara, \emph{Geometry, Topology and Physics}, IOP
-Publishing, 2nd ed.~2003. (§4.6 and Table 4.1: fundamental groups of the
+Publishing, 2nd ed.~2003. (§4.7, Table 4.1: fundamental groups of the
 classical groups.) ISBN: 9780750306065.
 
 \emph{End of tutorial notes.}
