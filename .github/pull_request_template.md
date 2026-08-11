@@ -122,6 +122,7 @@ fields in a formal review.
 - Refactor or harvest: <!-- exact units and required changes -->
 - Leave in PR history: <!-- exact units and rationale -->
 - Next decisive action: <!-- one concrete step -->
+- Head branch disposition: <!-- auto-delete after merge; preserve if closed-unmerged/failed; name any explicit owner exception -->
 
 ### Reviewer checks
 
@@ -134,3 +135,4 @@ fields in a formal review.
 - [ ] Verification sensitivity and applicable numerical/formal limits audited.
 - [ ] Merge, claim-promotion, and goal-completion decisions kept independent.
 - [ ] Canonical issue handoff is posted or preserved ready to post.
+- [ ] The exact same-repository head will be deleted after merge; open or closed-unmerged/failed heads are preserved unless an owner explicitly retires them.
