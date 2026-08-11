@@ -1,0 +1,47 @@
+id: P227
+base_release: v0.159.0
+source_baseline: substrate-framework@0b79c54443ed79e51b112dab9c26d10c2a102d49
+question: >-
+  Can the exact reusable worldline, Lorentz-orbit, stabilizer-algebra, and
+  generic-geometry atoms in the merged 2+1D and 3+1D einbein tutorials be
+  extracted into importable mutation-sensitive framework APIs without
+  promoting their cited representation-theory or field-theory narrative?
+invariants:
+  - mostly-plus Lorentzian signature with contravariant Lorentz-vector action
+  - positive einbein and signal speed; positive mass for elimination and a separate zero-mass specialization
+  - accepted claims and releases remain unchanged until independent claim adjudication
+  - worldline Weyl invariance is not a field-theory conformal-symmetry derivation
+allowed_imports:
+  - SymPy exact algebra and the repository exact-input conventions
+  - merged PR 38 and PR 39 tutorial equations as source objects under audit
+  - existing unpromoted lorentz_orbits and covariant_sine_gordon_action geometry APIs as refactor inputs
+  - C-SG-008 C-GW-002 C-MAX-001 C-GOR-001 and C-KIN-001 as scope and convention cross-checks only
+candidates:
+  - id: A
+    description: >-
+      A dimension-aware scalar-contraction worldline ledger composed with
+      generic exact local metric and Lorentz-algebra APIs.
+  - id: B
+    description: >-
+      A fully coordinate-indexed SymPy action builder that derives each result
+      by differentiating applied coordinate functions.
+  - id: C
+    description: >-
+      Retain document-local formulas and tests without creating a canonical API.
+uniqueness_evidence: null
+selection_criteria:
+  - accepted convention compatibility and exact branch separation
+  - fewest hidden assumptions and no new fitted parameters
+  - dimension-aware reuse across both tutorials and existing consumers
+  - mutation sensitivity and independent exact rederivability
+  - minimal public API and maintenance cost
+claims_proposed:
+  - C-WLN-001
+  - C-WLN-002
+  - C-WLN-003
+  - C-LOR-001
+  - C-LOR-002
+comparators_blinded_until: >-
+  Not applicable: there is no empirical comparator; structural selection is
+  frozen in this manifest before implementation.
+status: in_review

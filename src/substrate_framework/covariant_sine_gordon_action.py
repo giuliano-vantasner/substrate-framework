@@ -53,6 +53,9 @@ from sympy.calculus.euler import euler_equations
 
 from .exact_symbolic import exact_real as _exact_real
 from .exact_symbolic import positive_exact as _positive_exact
+from .pseudo_riemannian import metric_christoffel_symbols as _metric_christoffel
+from .pseudo_riemannian import metric_ricci_scalar as _metric_ricci_scalar
+from .pseudo_riemannian import metric_ricci_tensor as _metric_ricci_tensor
 from .sine_gordon import sine_gordon_potential
 
 _SPACETIME_DIMENSION = 4
@@ -157,58 +160,24 @@ def christoffel_symbols(metric: Any, coordinates: Any) -> list[list[list[sp.Expr
 
     coords = _coordinates(coordinates)
     metric_matrix = _metric_matrix(metric)
-    inverse = inverse_metric(metric_matrix)
-    dimension = _SPACETIME_DIMENSION
-    gamma = [
-        [[sp.Integer(0) for _ in range(dimension)] for _ in range(dimension)]
-        for _ in range(dimension)
-    ]
-    for upper in range(dimension):
-        for mu in range(dimension):
-            for nu in range(dimension):
-                total = sp.Integer(0)
-                for sigma in range(dimension):
-                    total += inverse[upper, sigma] * (
-                        sp.diff(metric_matrix[nu, sigma], coords[mu])
-                        + sp.diff(metric_matrix[mu, sigma], coords[nu])
-                        - sp.diff(metric_matrix[mu, nu], coords[sigma])
-                    )
-                gamma[upper][mu][nu] = sp.simplify(total / 2)
-    return gamma
+    gamma = _metric_christoffel(metric_matrix, coords)
+    return [[list(row) for row in plane] for plane in gamma]
 
 
 def ricci_tensor(metric: Any, coordinates: Any) -> sp.Matrix:
     """Return the exact Ricci tensor in the declared convention."""
 
     coords = _coordinates(coordinates)
-    gamma = christoffel_symbols(metric, coords)
-    dimension = _SPACETIME_DIMENSION
-    tensor = sp.zeros(dimension, dimension)
-    for mu in range(dimension):
-        for nu in range(dimension):
-            entry = sp.Integer(0)
-            for upper in range(dimension):
-                entry += sp.diff(gamma[upper][mu][nu], coords[upper])
-                entry -= sp.diff(gamma[upper][mu][upper], coords[nu])
-                for sigma in range(dimension):
-                    entry += gamma[upper][upper][sigma] * gamma[sigma][mu][nu]
-                    entry -= gamma[upper][nu][sigma] * gamma[sigma][mu][upper]
-            tensor[mu, nu] = sp.simplify(entry)
-    return tensor
+    metric_matrix = _metric_matrix(metric)
+    return _metric_ricci_tensor(metric_matrix, coords)
 
 
 def ricci_scalar(metric: Any, coordinates: Any) -> sp.Expr:
     """Return ``R = g^{mu nu} R_{mu nu}`` for a declared metric."""
 
+    coords = _coordinates(coordinates)
     metric_matrix = _metric_matrix(metric)
-    inverse = inverse_metric(metric_matrix)
-    tensor = ricci_tensor(metric_matrix, coordinates)
-    dimension = _SPACETIME_DIMENSION
-    scalar = sp.Integer(0)
-    for mu in range(dimension):
-        for nu in range(dimension):
-            scalar += inverse[mu, nu] * tensor[mu, nu]
-    return sp.simplify(scalar)
+    return _metric_ricci_scalar(metric_matrix, coords)
 
 
 def sine_gordon_potential_scaled(field: Any, mass_squared: Any = 1) -> sp.Expr:
