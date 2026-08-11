@@ -41,13 +41,19 @@ Append-only; failures name mechanism and next materially different attempt.
 | 0002 | Corrected generator M = K2 + J; SymPy check test_eq071 | tests/test_einbein_2plus1d_tutorial.py | Passed | Generator derived from basis, not guessed; exponential verified with sp.exp | - |
 | 0003 | 3+1D Christoffel appendix via generator script | docs/tutorials/einbein_3plus1D/generate_christoffel_block.py | Failed on first output (self-caught) | Parenthesization keyed on "+" only; "2 d g - d g" brackets (rho = nu, lam != rho) contain " - " and escaped unwrapped, corrupting the sum scoping | 0004: wrap on " + " or " - "; block-regeneration diff test added |
 | 0004 | Regenerated block + test_appendixA_document_block_matches_generator | tests/test_einbein_3plus1d_tutorial.py | Passed | MD block is byte-identical to generator output; 40/40 components match the general formula numerically | - |
+| 0005 | Eq. (12) reparametrization justification prose (both docs) | docs/tutorials/einbein_*/: measure/velocity power counting | Failed (caught by 3+1D independent review) | Prose claimed d tau/e invariant (false: picks up f-dot^2) and 1/f-dot from two velocities (correct: 1/f-dot^2) | Fixed in both docs: velocities 1/f-dot^2, measure f-dot, net 1/f-dot cancelled by 1/e -> f-dot/e; invariant combination is e d tau |
+| 0006 | Constraint-counting sentences in Sec. 12.1 (both docs) | same | Failed (3+1D review; 2+1D fixed by analogy) | Massive constraint fixes the scale (inhomogeneous), not a ratio; the null-case counting was wrongly imported | Corrected: constraint fixes scale; ratios are free data |
+| 0007 | PR #39 pushed after failing test run (twice) | tests/test_einbein_3plus1d_tutorial.py flat-solution check | Failed (self-caught post-push) | Vacuous np.gradient assertion, then marginally tight tolerance (roundoff eps/h^2 > atol); committed on a red run both times | Amended twice with verified green (4 consecutive full runs); rule retained: never commit after a failing run |
+| 0008 | 2+1D files accidentally committed to main inside memory commit 60d701ed | main history | Failed (self-caught) | stash pop restored the index; git add of one file + commit swept staged tutorial files | Removal commit on main; rule retained: no cross-branch stash; commit WIP on feature branches |
 
 ## Validation
 Validation is document-level: every displayed equation either derived in-line or cited; dimensional claims (little groups, Christoffel counts, null-cone structure) checked against cited sources; LaTeX compiles clean; PDF page-count and structure inspected.
 
-- Symbolic spot-check of key algebra (SymPy where tractable):
-- Independent reviewer pass (axis/reviewer agent) before PR:
-- `scripts/validate.sh` at promotion boundary only (long-running, per team convention):
+- Symbolic spot-check of key algebra (SymPy): done — einbein chain, square-root recovery, Hamiltonian (general 3x3 and 4x4 metric), all 18 (2+1D) Christoffels symbolic + all 40 (3+1D) numeric plus byte-identical generator block, null-rotation exponentials (sp.exp), Weyl and reparametrization invariance, exact induced metric diag(1, sinh^2 a).
+- Independent reviewer passes: two reviewer agents recomputed independently (own derivations, own parser for Appendix A). Verdicts: approve-with-fixes (both). All findings applied and re-verified.
+- Targeted suites during implementation: `pytest tests/test_einbein_2plus1d_tutorial.py` 29/29 green (two consecutive runs on the pushed tree); `pytest tests/test_einbein_3plus1d_tutorial.py` 25/25 green (four consecutive runs on the pushed tree).
+- `scripts/validate.sh` at promotion boundary only (long-running, per team convention): deferred to merge time per Dan (pre-merge runs are the merger's responsibility; run in background if needed).
+- `git diff --check`: clean on every commit.
 
 ## Debt Ledger
 Assumptions, residuals, and narrative inconsistencies; empty at close.
