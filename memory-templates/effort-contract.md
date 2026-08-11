@@ -17,7 +17,7 @@ status: active
 ---
 
 ## Goal and Success Contract
-This effort delivers <exact positive result>. It is complete only when the object exists, accepted dependencies close, framework fit is established, the strongest practical verifier and sensitivity audit pass, downstream consumers replay, implementation is importable, canonical records agree, and the debt ledger is empty. A failed attempt, no-go, residual, bound, or obstruction is not completion.
+This effort delivers <exact positive result>. It is complete only when the object exists, accepted dependencies close, framework fit is established, the strongest practical verifier and sensitivity audit pass, downstream consumers replay, implementation is importable, canonical records agree, and the debt ledger is empty. A failed attempt, no-go, residual, bound, or obstruction is not completion. Delivery to the requester happens only after the PRs are reviewed and merged; pre-merge, send status updates only, never a delivery claim.
 
 ## Accepted Baseline
 The work starts from release <id and commit>. Record accepted claims and source artifacts actually read; chronology and memory prose are not authority.
@@ -48,7 +48,7 @@ Do not use memory prose or a generic external method as substitute authority.
 | 0001 |  |  |  |  |  |
 
 ## Validation
-Validation covers the actual objective, verifier sensitivity, limits, conventions, dependencies, consumers, and generated state—not merely an exit code or check count.
+Validation covers the actual objective, verifier sensitivity, limits, conventions, dependencies, consumers, and generated state—not merely an exit code or check count. No freestyle writing: every claim in any produced document is backed by a machine check (SymPy, Lean, SciPy, or numerical) or by an explicit citation, and check/test names map to the document's equation or claim numbers so text-to-proof agreement is auditable.
 
 - Targeted scientific command and claim-appropriate oracle (SymPy, Lean, SciPy, or simulation), with process status zero, terminal tally, lexical check-call sites, runtime check executions, and assertion nodes recorded as distinct inventories rather than forced-equal counts:
 - Mutation/counterexample command, including shared-variable elimination for any allegedly independent downstream check and explicit field/measure/coefficient maps for cross-sector matches:
