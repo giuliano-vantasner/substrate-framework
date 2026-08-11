@@ -56,6 +56,8 @@ Append-only; failures name mechanism and next materially different attempt.
 
 | Attempt | Approach or repair | Artifact and command | Verdict | Mechanism | Next attempt |
 | --- | --- | --- | --- | --- | --- |
+| 0001 | One-loop Savvidy: three routes (cutoff proper time, Landau mode sum, operator zeta) | src/substrate_framework/chromomagnetic_background.py, tests/test_chromomagnetic_background.py, PR #51; pytest 21 passed | Passed after repairs | First-pass mode sum had wrong dof counting (zeta per-charge vs complex-field normalization factor 2, caught by cross-route disagreement); MS-bar constant extraction initially scheme-confused (fixed IR mass makes V analytic in gB — ln gB only forms when m2 tracks gB); final: C = 11/(48 pi^2) pinned 1e-10, Im V = (gB)^2/8pi two routes, Savvidy minimum + V_min match literature exactly | #46 |
+| 0002 | Two-loop T=0 potential from Bordag-Skalozub defining sums | src/substrate_framework/chromomagnetic_two_loop.py, tests/test_chromomagnetic_two_loop.py, PR #52; pytest 11 passed | Passed | B2 tadpole exact via zeta: G(1)=0 cancellation, B2 = -b(ln2 - i pi)/(16 pi^2); printed eq.(57) two-loop term fails against its own definitions: derived 3g^2 b^2(ln^2 2 - pi^2)/(512 pi^4) vs printed g^2 ln^2 2 b^2/(128 pi^4) (F3); 98 vs 88 exponent typo (F1); Im 8 pi^2 vs 8 pi (F2) | #47, #48, then report #50 |
 
 ## Validation
 Per child issue: strongest practical verifier, shown sensitive by mutation;
