@@ -71,7 +71,7 @@
 Particle for a Smooth Massless Limit: The Einbein Formulation in 3 + 1
 Dimensions}\label{transforming-the-canonical-lagrangian-of-a-relativistic-particle-for-a-smooth-massless-limit-the-einbein-formulation-in-3-1-dimensions}}
 
-Version 1.0 --- 11 August 2026
+Version 1.1 --- 11 August 2026
 
 Giuliano (Vantasner AG), extending the 1 + 1 tutorial of Tiziano Fulceri
 (DOI: 10.5281/zenodo.21879560)
@@ -95,8 +95,10 @@ directions form the celestial sphere \(S^{2}\), the mass shell is the
 hyperbolic space \(H^{3}\), the massive little group is the rotation
 group \(SO(3)\) with its \(2s+1\)-dimensional spin representations, the
 massless little group is the Euclidean group \(ISO(2)\), and physical
-massless particles are characterized by a single helicity whose allowed
-values pair up as \(\pm|\lambda|\) --- so that the state counting jumps
+massless particles are characterized by a single helicity \(\lambda\)
+--- one helicity per irreducible representation, the two values
+\(\pm|\lambda|\) appearing together in parity-complete field theories
+such as the photon and the graviton --- so that the state counting jumps
 discontinuously at \(m = 0\) even though the classical limit is
 perfectly smooth. The presentation is self-contained for a reader
 already familiar with the principles of general relativity, the
@@ -170,16 +172,21 @@ Here the massless limit acquires its full physical content:
   the massless little group is the two-dimensional Euclidean group
   \(ISO(2)\); its translation subgroup must act trivially on physical
   states, and what remains is a single \textbf{helicity} \(\lambda\),
-  with \(\lambda \in \{0, \pm\tfrac{1}{2}, \pm1, \ldots\}\) and the two
-  values \(\pm|\lambda|\) paired for any massless field;
+  with \(\lambda \in \{0, \pm\tfrac{1}{2}, \pm1, \ldots\}\). One
+  irreducible massless representation carries exactly one helicity; the
+  two values \(\pm|\lambda|\) are paired only when a discrete spacetime
+  symmetry such as parity (or a comparable reality condition) supplies
+  the pairing --- as it does for the photon and the graviton;
 \item
   consequently the massless limit, while smooth at the level of the
   action and of the geodesics, \textbf{cannot} be smooth at the level of
-  state counting: a massive spin-\(s\) particle carries \(2s+1\)
-  polarization states, a massless one carries two. For interacting
-  theories this kinematic fact becomes a genuine discontinuity of
+  state counting: for \(s \geq 1\), a massive spin-\(s\) particle
+  carries \(2s+1\) polarization states, while a parity-complete massless
+  field of helicity \(|\lambda| = s\) carries two. For interacting
+  theories this kinematic fact can become a genuine discontinuity of
   physical observables (the van Dam--Veltman--Zakharov phenomenon for
-  massive gravity, Section 10.4).
+  massive gravity --- an interacting realization, not a kinematic
+  implication; Section 10.4).
 \end{itemize}
 
 The einbein device itself is indifferent to the dimension: the same
@@ -775,23 +782,27 @@ are in the companion suite.
 \subsubsection{10.1 The mass shell as a homogeneous
 space}\label{the-mass-shell-as-a-homogeneous-space}}
 
-Work in flat 3 + 1-dimensional Minkowski space with the momentum
-\(p_{\mu} = (p_{0}, p_{1}, p_{2}, p_{3})\) and mass shell (derived in
-Section 11 below)
+Work in flat 3 + 1-dimensional Minkowski space with the contravariant
+momentum \(p^{\mu} = (p^{0}, p^{1}, p^{2}, p^{3})\) --- the
+positive-energy vector on which the Lorentz matrices below act --- and
+mass shell (derived in Section 11 below, in the canonical covector
+variables \(p_{\mu} = g_{\mu\nu}\, p^{\nu}\))
 
-\[g^{\mu\nu} p_{\mu} p_{\nu} = - (mc_{0})^{2}. \tag{63}\]
+\[g_{\mu\nu}\, p^{\mu} p^{\nu} = - (mc_{0})^{2}. \tag{63}\]
 
 For \(m > 0\) the future sheet of this two-sheeted hyperboloid is the
 hyperbolic three-space \(H^{3}\): the restriction of the Minkowski
 quadratic form to the shell's tangent spaces is positive-definite (the
 hyperboloid model; J. G. Ratcliffe, \emph{Foundations of Hyperbolic
 Manifolds}, Springer, 2nd ed.~2006, Chapter 3 --- verified numerically
-in the companion suite). The Lorentz group \(SO(3, 1)\) acts
-transitively\footnote{A group \(G\) acts transitively on a set \(X\) if
-  any point of \(X\) can be carried to any other by some group element.
-  The set \(X\) is then a single orbit, identifiable with the coset
-  space \(G / G_{x}\) for the stabilizer \(G_{x}\) of any chosen point
-  \(x\).} on this sheet: any future-directed timelike \(p\) can be
+in the companion suite). The proper orthochronous Lorentz group
+\(SO^{+}(3, 1)\) --- the connected component of the identity, which
+preserves the future sheet; parity and time reversal lie outside it ---
+acts transitively\footnote{A group \(G\) acts transitively on a set
+  \(X\) if any point of \(X\) can be carried to any other by some group
+  element. The set \(X\) is then a single orbit, identifiable with the
+  coset space \(G / G_{x}\) for the stabilizer \(G_{x}\) of any chosen
+  point \(x\).} on this sheet: any future-directed timelike \(p\) can be
 rotated and boosted to the rest-frame value
 \(p^{(0)} = (mc_{0}, 0, 0, 0)\). The stabilizer of \(p^{(0)}\) consists
 of the spatial rotations: the \textbf{little group}\footnote{The little
@@ -804,15 +815,15 @@ of the spatial rotations: the \textbf{little group}\footnote{The little
 \[G_{\mathrm{massive}} = SO(3). \tag{64}\]
 
 For \(m = 0\) the shell degenerates to the future null cone with the
-origin removed. The Lorentz group still acts transitively (any
-future-null vector can be brought to the standard form
-\(k^{(0)} = (\kappa, 0, 0, \kappa)\), \(\kappa > 0\)), but the
+origin removed. The proper orthochronous group \(SO^{+}(3, 1)\) still
+acts transitively (any future-null vector can be brought to the standard
+form \(k^{(0)} = (\kappa, 0, 0, \kappa)\), \(\kappa > 0\)), but the
 stabilizer is now three-dimensional: it is generated by the rotation
 about the direction of motion and by two null rotations. With the
 conventions fixed in the companion suite (boosts \(K_{i}\) with
 \((K_{i})^{0}{}_{i} = (K_{i})^{i}{}_{0} = 1\), rotations \(J_{i}\) with
 \((J_{3})^{1}{}_{2} = +1 = -(J_{3})^{2}{}_{1}\) and cyclic images,
-matrices acting on \((p_{0}, p_{1}, p_{2}, p_{3})^{T}\)), the three
+matrices acting on \((p^{0}, p^{1}, p^{2}, p^{3})^{T}\)), the three
 generators are
 
 \[T_{1} := K_{1} + J_{2} = \begin{pmatrix} 0 & 1 & 0 & 0 \\ 1 & 0 & 0 & -1 \\ 0 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \end{pmatrix}, \qquad
@@ -881,18 +892,26 @@ single number
 the \textbf{helicity} --- the spin component along the direction of
 motion. The allowed values are again quantized to integers and
 half-integers by the \(\mathbb{Z}_{2}\) topology. (The helicity is
-Lorentz-invariant for a massless particle: no Lorentz transformation can
-reverse the direction of motion relative to the spin without leaving the
-null cone, which is why a single \(\lambda\) labels the whole orbit.
-This is the group-theoretic content of (66)--(68); see Weinberg, §2.5.)
+invariant under the proper orthochronous group for a massless particle:
+no element of \(SO^{+}(3,1)\) can reverse the direction of motion
+relative to the spin without leaving the null cone, which is why a
+single \(\lambda\) labels the whole orbit. This is the group-theoretic
+content of (66)--(68); see Weinberg, §2.5.)
 
-A massless \emph{field} furthermore comes with both helicities
-\(\pm |\lambda|\): the discrete spacetime symmetries relate the two, and
-any local massless field theory that respects them contains both
+One irreducible massless representation therefore carries exactly
+\textbf{one} helicity. A massless \emph{field} comes with both
+helicities \(\pm |\lambda|\) only when an additional, discrete input
+pairs them: parity (or a comparable discrete-symmetry or reality
+assumption), which lies outside the connected group \(SO^{+}(3,1)\) and
+is precisely the operation that exchanges the two helicities. Any local
+massless field theory that respects such a symmetry contains both
 polarizations (Weinberg, §5.9, where this is the starting point of the
 construction of the electromagnetic and gravitational fields). The
-photon is the case \(|\lambda| = 1\): two polarization states. The
-graviton is the case \(|\lambda| = 2\): two polarization states.
+pairing is not universal: a massless scalar (\(\lambda = 0\)) carries a
+single state, and a chiral massless field need not carry the opposite
+helicity. The parity-complete nonzero-helicity examples are the photon,
+\(|\lambda| = 1\), and the graviton, \(|\lambda| = 2\): two polarization
+states each.
 
 \hypertarget{the-smooth-classical-limit-and-the-non-smooth-state-counting}{%
 \subsubsection{10.3 The smooth classical limit and the non-smooth state
@@ -920,11 +939,14 @@ aiming at.
   \(m > 0\), \(ISO(2)\) at \(m = 0\) exactly.
 \item
   \textbf{Quantum-mechanically non-smooth.} The internal-state counting
-  jumps: \(2s + 1\) massive spin states versus two massless helicity
-  states (one helicity value \(\lambda\) for a particle, paired to
-  \(\pm|\lambda|\) in any massless field). This is Wigner kinematics,
-  not a dynamical pathology --- but for \emph{interacting} theories it
-  has dynamical teeth, as the next subsection records.
+  jumps: for \(s \geq 1\), \(2s + 1\) massive spin states versus the two
+  helicity states \(\pm|\lambda| = \pm s\) of a parity-complete massless
+  field --- one helicity value \(\lambda\) per irreducible massless
+  representation, paired to \(\pm|\lambda|\) only when parity (or a
+  comparable discrete input) supplies the pairing; a scalar has one
+  state on both sides. This is Wigner kinematics, not a dynamical
+  pathology --- but for \emph{interacting} theories it can acquire
+  dynamical teeth, as the next subsection records.
 \end{itemize}
 
 \hypertarget{the-vdvz-discontinuity-when-the-state-counting-jump-becomes-observable}{%
@@ -947,13 +969,14 @@ not reduce to general relativity (H. van Dam and M. J. G. Veltman,
 theory and the graviton mass'', \emph{JETP Letters} \textbf{12} (1970)
 312--314; a modern review is K. Hinterbichler, ``Theoretical aspects of
 massive gravity'', \emph{Reviews of Modern Physics} \textbf{84} (2012)
-671--710, DOI: 10.1103/RevModPhys.84.671). The discontinuity is
-precisely the interacting shadow of the little-group jump
-\(SO(3) \to ISO(2)\) of Section 10.1. For spin 1, by contrast, the extra
-longitudinal mode decouples from conserved currents as \(m \to 0\), and
-the limit is smooth (van Dam--Veltman, loc. cit.) --- current
-conservation, not kinematics alone, decides whether the state-counting
-jump is observable.
+671--710, DOI: 10.1103/RevModPhys.84.671). The discontinuity is an
+interacting realization of the state-counting jump of Sections
+10.1--10.3 --- a realization, not a consequence: the little-group jump
+\(SO(3) \to ISO(2)\) alone does not imply any observable discontinuity.
+For spin 1, by contrast, the extra longitudinal mode decouples from
+conserved currents as \(m \to 0\), and the limit is smooth (van
+Dam--Veltman, loc. cit.) --- current conservation, not kinematics alone,
+decides whether the state-counting jump is observable.
 
 This tutorial's subject is the free particle, where the einbein delivers
 a perfectly smooth massless limit; Sections 10.2--10.4 exist to mark
@@ -969,6 +992,17 @@ coordinates are
 
 \[p_{\lambda} = \frac{\partial L}{\partial \dot{x}^{\lambda}} = \frac{1}{e}\, g_{\lambda\nu}\, \dot{x}^{\nu}. \tag{71}\]
 
+This canonical momentum is a covector. It is related to the
+contravariant momentum \(p^{\mu} = \frac{1}{e}\, \dot{x}^{\mu}\) used in
+Section 10.1 by index lowering, \(p_{\mu} = g_{\mu\nu}\, p^{\nu}\); with
+the signature \((-, +, +, +)\) this means that in an inertial frame
+\(p_{0} = -p^{0}\) and \(p_{i} = p^{i}\), so the component \(p_{0}\) of
+the canonical covector is \emph{negative} for a positive-energy
+particle. The two index placements give one and the same mass shell,
+since \(g^{\mu\nu} p_{\mu} p_{\nu} = g_{\mu\nu} p^{\mu} p^{\nu}\); the
+matrices of Section 10.1 act on the contravariant representative
+\(p^{\mu}\).
+
 Inverting for the velocities,
 \(\dot{x}^{\nu} = e\, g^{\nu\lambda} p_{\lambda}\). The Hamiltonian
 (after a Legendre transform) is pure constraint:
@@ -981,11 +1015,12 @@ mass-shell condition
 \[g^{\mu\nu} p_{\mu} p_{\nu} + (mc_{0})^{2} = 0. \tag{73}\]
 
 In an inertial frame this reads
-\(p_{0}^{2} = |\mathbf{p}|^{2} + (mc_{0})^{2}\), and in the massless
-case \(p_{0} = |\mathbf{p}|\) --- with \(p_{0} = E/c_{0}\) the familiar
-\(E = |\mathbf{p}|\, c_{0}\) of the photon. In 3 + 1 dimensions the
-massive shell is the hyperbolic three-space \(H^{3}\) of Section 10.1
-and the massless shell is the punctured null cone; both are
+\(p_{0}^{2} = |\mathbf{p}|^{2} + (mc_{0})^{2}\), with the physical
+energy given by \(E = -p_{0}\, c_{0} > 0\) (recall \(p_{0} = -p^{0}\) in
+our signature), and in the massless case \(-p_{0} = |\mathbf{p}|\) ---
+the familiar \(E = |\mathbf{p}|\, c_{0}\) of the photon. In 3 + 1
+dimensions the massive shell is the hyperbolic three-space \(H^{3}\) of
+Section 10.1 and the massless shell is the punctured null cone; both are
 three-dimensional surfaces in the four-dimensional momentum space, so
 the constraint surface keeps its dimension across the limit while
 changing its geometry and its stabilizer structure. This constrained
@@ -1075,11 +1110,13 @@ combined transformation
 
 the massless Lagrangian (56) is invariant pointwise, while the mass term
 \(-\frac{e}{2}(mc_{0})^{2}\) picks up a factor \(\Omega^{2}\) (both
-statements checked symbolically in the companion suite). This conformal
-invariance is the classical root of the conformal symmetry of the free
-Maxwell and Yang--Mills actions in 3 + 1 dimensions --- the
-field-theoretic descendants of the massless particle --- though
-establishing the field-theoretic statement is beyond our present scope.
+statements checked symbolically in the companion suite). This world-line
+conformal invariance is analogous to the conformal symmetry of the free
+Maxwell and Yang--Mills actions in 3 + 1 dimensions --- the shared
+conformal behavior reflects the common null kinematics of massless
+excitations --- but the world-line statement does not derive the
+field-theoretic one: there is no field map here, and establishing the
+field-theoretic statement is beyond our present scope.
 
 \hypertarget{summary-of-the-trajectories}{%
 \subsubsection{12.3 Summary of the
@@ -1134,14 +1171,18 @@ is kinematic and group-theoretic:
 \item
   the massless little group is the Euclidean group \(ISO(2)\), exhibited
   explicitly by the generators (65) and their algebra (67); physical
-  massless states carry a single helicity \(\lambda\), paired as
-  \(\pm|\lambda|\) in any massless field --- two polarization states for
-  the photon and the graviton (Section 10.2);
+  massless states carry a single helicity \(\lambda\) --- one per
+  irreducible representation --- with the pair \(\pm|\lambda|\)
+  appearing in parity-complete nonzero-helicity fields such as the
+  photon and the graviton, which carry two polarization states each
+  (Section 10.2);
 \item
   the massless limit is smooth at the level of the action and the
-  geodesics, while the state counting jumps from \(2s+1\) to two; for
-  interacting massive spin-2 the jump is observable as the van
-  Dam--Veltman--Zakharov discontinuity (Sections 10.3--10.4);
+  geodesics, while the state counting jumps from \(2s+1\) (massive,
+  \(s \geq 1\)) to the two states of a parity-complete massless field;
+  for interacting massive spin-2 the jump can become observable as the
+  van Dam--Veltman--Zakharov discontinuity --- an interacting
+  realization, not a kinematic implication (Sections 10.3--10.4);
 \item
   the massless einbein action is Weyl-invariant, exposing the conformal
   nature of unparametrized null geodesics (Section 12.2).
