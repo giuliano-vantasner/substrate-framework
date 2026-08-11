@@ -1,6 +1,6 @@
 # L'instabilità essenziale del vuoto di Yang–Mills: riproduzione machine-checked del programma di Preparata
 
-Versione 1.0 — 11 agosto 2026
+Versione 1.1 — 11 agosto 2026 (v1.1: testo primario di Preparata acquisito e verificato a livello di equazioni — Sezione 8)
 
 Giuliano (Vantasner AG), per Luca Gamberale
 
@@ -8,20 +8,20 @@ Rapporto tecnico con verifica automatica (substrate-framework, tracker #44)
 
 ## Sommario
 
-Questo rapporto riproduce, con oracoli macchina (SymPy/SciPy/mpmath, 50 test automatici), il programma di Giuliano Preparata sull'instabilità del vuoto perturbativo di Yang–Mills: il potenziale efficace a un loop nel fondo cromomagnetico costante (vuoto di Savvidy), il potenziale a due loop in funzione di $b/\Lambda^2$ (con $b = gH$), l'analisi di stabilità rispetto alle fluttuazioni, la decomposizione per colori e per modi trasversi, e una configurazione classica migliore di quella di Savvidy (il vuoto "spaghetti" di Ambjørn–Olesen) con la riquantizzazione attorno ad essa. Ogni affermazione quantitativa è prodotta da codice eseguibile nel repository `vantasnerdan/substrate-framework` (issue #44–#50, PR #51–#54) o citata esplicitamente dalla letteratura. Risultato principale: il risultato a un loop di Savvidy si riproduce esattamente; il risultato a due loop pubblicato (Bordag–Skalozub 2022) contiene tre errori tipografici/sostanziali che documentiamo con valori esatti; la configurazione di Savvidy è instabile alle fluttuazioni a ogni ordine perturbativo accessibile, e il condensato di tubi di flusso (reticolo triangolare, parametro di Abrikosov $\beta = 1.159595$) è energeticamente preferito.
+Questo rapporto riproduce, con oracoli macchina (SymPy/SciPy/mpmath, 61 test automatici), il programma di Giuliano Preparata sull'instabilità del vuoto perturbativo di Yang–Mills: il potenziale efficace a un loop nel fondo cromomagnetico costante (vuoto di Savvidy), il potenziale a due loop in funzione di $b/\Lambda^2$ (con $b = gH$), l'analisi di stabilità rispetto alle fluttuazioni, la decomposizione per colori e per modi trasversi, una configurazione classica migliore di quella di Savvidy (il vuoto "spaghetti" di Ambjørn–Olesen) con la riquantizzazione attorno ad essa, e la verifica equazione per equazione del testo primario del 1986 (Sezione 8). Ogni affermazione quantitativa è prodotta da codice eseguibile nel repository `vantasnerdan/substrate-framework` (issue #44–#50 e #56, PR #51–#55 e #57) o citata esplicitamente dalla letteratura. Risultato principale: il risultato a un loop di Savvidy si riproduce esattamente; il risultato a due loop pubblicato (Bordag–Skalozub 2022) contiene tre errori tipografici/sostanziali che documentiamo con valori esatti; la configurazione di Savvidy è instabile alle fluttuazioni a ogni ordine perturbativo accessibile, e il condensato di tubi di flusso (reticolo triangolare, parametro di Abrikosov $\beta = 1.159595$) è energeticamente preferito.
 
 ## 1. Fonti e accessibilità
 
 Dichiariamo esattamente cosa è stato verificato e da dove.
 
-- G. Preparata, *Essential Quantum Instability of the Perturbative Yang–Mills Vacuum*, Nuovo Cim. A **96** (1986) 366, DOI 10.1007/BF02833896 — **testo completo non accessibile** (paywall Springer; l'archivio Sapienza è solo fisico). Del paper centrale citiamo solo il livello dell'abstract: un argomento variazionale con cut-off UV per cui $\Delta E \sim -b\,\Lambda_{UV}^4$ con $b$ finito per $g \to 0$ — instabilità "essenziale", cioè non riparabile perturbativamente. Se ci fornisci il PDF, la verifica equazione per equazione entra nel workflow.
+- G. Preparata, *Essential Quantum Instability of the Perturbative Yang–Mills Vacuum*, Nuovo Cim. A **96** (1986) 366, DOI 10.1007/BF02833896 — **in nostro possesso** (PDF di 28 pp. con testo estraibile, md5 34f8efc4c056837869cfbe63906ea14d), acquisito l'11 agosto 2026 e fissato come provenance della campagna in `proposals/P229-preparata-qcd-vacuum-audit/sources/`. La scansione del 1986 degrada le formule in esposizione: nessuna equazione è trascritta dall'OCR come verità; ogni affermazione verificabile è codificata dal suo enunciato testuale più chiaro e poi controllata con oracoli (Sezione 8).
 - G.K. Savvidy, Phys. Lett. B **71** (1977) 133 — il risultato a un loop, ripreso dalle sue riesposizioni aperte (EPJC **80** (2020) 165, arXiv:1910.00654; la rassegna EPJC 2026). Verificato interamente.
 - N.K. Nielsen, P. Olesen, Nucl. Phys. B **144** (1978) 376 — paywalled; il modo instabile e la parte immaginaria sono stati verificati indipendentemente dal nostro calcolo (zeta dell'operatore e integrale di modo).
 - M. Bordag, V. Skalozub, EPJC **82** (2022) 390, arXiv:2112.01043 — **aperto**; è la fonte del due loop a $T=0$ (eq. 57–58). Verificato; tre discrepanze documentate (Sezione 5).
 - M. Bordag, *Symmetry* **15** (2023) 1137 — rassegna aperta; fonte della costruzione del reticolo di tubi di flusso (eq. 146–152).
 - P. Cea, arXiv:2311.14791 — aperto; settori tachiometrici $SU(3)$.
 
-Metodo: nessun passaggio "a mano". Ogni coefficiente è prodotto da codice; ogni check ha una mutazione che lo rompe. I moduli: `chromomagnetic_background.py` (21 test), `chromomagnetic_two_loop.py` (13 test), `chromomagnetic_sectors.py` (10 test), `spaghetti_vacuum.py` (8 test).
+Metodo: nessun passaggio "a mano". Ogni coefficiente è prodotto da codice; ogni check ha una mutazione che lo rompe. I moduli: `chromomagnetic_background.py` (21 test), `chromomagnetic_two_loop.py` (13 test), `chromomagnetic_sectors.py` (10 test), `spaghetti_vacuum.py` (8 test), `preparata_1986.py` (11 test).
 
 ## 2. Il potenziale a un loop (Savvidy), verificato
 
@@ -99,10 +99,23 @@ e il minimo è più profondo di Savvidy del fattore $\exp\left(\frac{48\pi^2}{11
 
 Nota di convenzione (documentata, non risolta): la eq. (152) della rassegna quota $\vartheta_3(0, q_0) \simeq 1.2713$ per $q_0 = e^{-\pi}$; nella convenzione standard $\vartheta_3(0, e^{-\pi}) = 1.086434$, mentre $1.2713 = \vartheta_3(0, e^{-2})$. La loro eliminazione dei parametri non è ricostruibile dal testo aperto; i nostri numeri sono derivati, non trascritti.
 
-## 8. Risultati dichiarati
+## 8. Verifica del testo primario: Preparata 1986 equazione per equazione
+
+Modulo `preparata_1986.py` (11 test; issue #56, PR #57). Ogni affermazione verificabile del paper è codificata dal suo enunciato testuale più chiaro e ricontrollata con oracoli SymPy, in incrocio con le primitive verificate delle Sezioni 2–6.
+
+1. **Spettro (1.2).** $E^2 = p_z^2 + gH(2n+1) - 2gH\,S_z$: coincide con lo spettro verificato della Sezione 2 (controllo numerico su quattro settori); il settore instabile è $n=0$, $S_z=1$ con $p_z^2 < gH$, come da testo.
+2. **Risultato centrale (5.1).** $\Delta E = -\frac{11}{48\pi^2}g^2H^2\ln(\Lambda^2/gH) + O(g^2H^2)$. Il segno **non è trascritto**: è derivato — solo il segno negativo produce il minimo locale con $a, b > 0$ delle (5.2)/(5.3) (il segno positivo dà un massimo, in contraddizione con l'abstract). Il coefficiente del logaritmo è identico al $C = 11/(48\pi^2)$ verificato alla Sezione 2.
+3. **Minimo (5.2)/(5.3), derivato.** Dalla (5.1) codificata: $gH^* = a\Lambda^2$ con $a = e^{-1/2}$ e $\Delta E^* = -b\Lambda^4$ con $b = \frac{11}{96\pi^2 e}$ — entrambi finiti per $g \to 0$. Con il termine sotto-leading simbolico $\kappa g^2H^2$: $a = e^{-1/2 - 48\pi^2\kappa/11}$, ancora finito — l'instabilità "essenziale" è robusta, come asserito nel paper.
+4. **Algebra AF della Sezione 1.** La (1.1) di Savvidy risolta per $1/g^2$ dà esattamente il running a un loop ($b_0 = 22/3$; residuo nullo). Inserendo il running AF nella variazionale del 1985 (1.3) [$gH^* = \Lambda^2 e^{-12\pi^2/11g^2}$] l'esponente è esattamente $-\ln(\Lambda/\Lambda_{\rm QCD})$, quindi $gH^* = \Lambda\cdot\Lambda_{\rm QCD}$: campo divergente e gap $\sim\Lambda^2$, come affermato.
+5. **Distinzione di scala (onestà di convenzione).** La $\Lambda$ di Preparata è il **cut-off UV**; la $\Lambda$ della Sezione 6 è la **scala RG**. I due enunciati ($gH^* = a\Lambda_{\rm UV}^2$ e $b_{\min} = \Lambda_{\rm RG}^2$) non vanno confusi: sono compatibili ma non identici.
+6. **Frontiera dichiarata.** La macchina variazionale completa (funzionali d'onda gaussiani, appendici B–F, il modello $\lambda\phi^4$ dell'appendice F) non è riprodotta: è un possibile modulo successivo. Le affermazioni sopra coprono la catena logica portante: spettro → (5.1) → minimo → divergenza del gap → sopravvivenza della conclusione.
+
+**Verdetto:** l'algebra verificabile di Preparata 1986 è internamente consistente e coerente con il coefficiente a un loop verificato indipendentemente; la tesi dell'instabilità essenziale segue dalla (5.1) codificata.
+
+## 9. Risultati dichiarati
 
 1. Il potenziale di Savvidy a un loop è confermato in ogni coefficiente: $C = 11/(48\pi^2)$, minimo a $b = \Lambda^2$, $V_{\min} = -11\Lambda^4/(96\pi^2)$.
-2. Il vuoto di Savvidy è **instabile**: tachione per ogni $b>0$, $\mathrm{Im}\,V \neq 0$ a uno e due loop; la tesi di Preparata dell'instabilità essenziale è confermata nel senso perturbativo accessibile (il suo testo completo non è accessibile: la conferma copre la struttura pubblicata da Savvidy/Nielsen–Olesen/Bordag–Skalozub, non le sue equazioni specifiche).
+2. Il vuoto di Savvidy è **instabile**: tachione per ogni $b>0$, $\mathrm{Im}\,V \neq 0$ a uno e due loop. Il testo primario di Preparata è ora verificato a livello di equazioni (Sezione 8): l'algebra portante è consistente, il minimo $gH^* = e^{-1/2}\Lambda^2$ con $\Delta E^* = -\frac{11}{96\pi^2 e}\Lambda^4$ è derivato dalla sua (5.1), e l'instabilità essenziale ($a$, $b$ finiti per $g \to 0$) ne segue. Frontiera dichiarata: la macchina variazionale completa delle appendici B–F.
 3. Il due loop pubblicato (Bordag–Skalozub) contiene tre errori (F1, F2, F3) con i valori corretti esatti sopra; la correzione F3 cambia il coefficiente del termine a due loop e l'esponente del minimo.
 4. Il logaritmo a un loop è interamente trasverso-paramagnetico ($2 \times 11/6$); longitudinale e fantasma si cancellano.
 5. La configurazione classica più vicina al vuoto quantistico è il reticolo triangolare di tubi di flusso ($\beta = 1.159595$), con energia classica ridotta del fattore $(1 - 1/\beta) = 0.1376$ e minimo esponenzialmente più profondo; la riquantizzazione a un loop attorno ad esso è calcolata sopra.
@@ -118,6 +131,6 @@ Nota di convenzione (documentata, non risolta): la eq. (152) della rassegna quot
 [6] M. Bordag, V. Skalozub, EPJC **82** (2022) 390, arXiv:2112.01043 (aperto).
 [7] M. Bordag, Symmetry **15** (2023) 1137 (aperto).
 [8] P. Cea, arXiv:2311.14791 (aperto).
-[9] Repository: vantasnerdan/substrate-framework — tracker #44, issue #45–#50, PR #51–#54; moduli `chromomagnetic_background.py`, `chromomagnetic_two_loop.py`, `chromomagnetic_sectors.py`, `spaghetti_vacuum.py` con 50 test.
+[9] Repository: vantasnerdan/substrate-framework — tracker #44, issue #45–#50 e #56, PR #51–#55 e #57; moduli `chromomagnetic_background.py`, `chromomagnetic_two_loop.py`, `chromomagnetic_sectors.py`, `spaghetti_vacuum.py`, `preparata_1986.py` con 61 test; testo primario fissato in `proposals/P229-preparata-qcd-vacuum-audit/sources/`.
 
 *Fine del rapporto.*

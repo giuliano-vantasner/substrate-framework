@@ -71,7 +71,8 @@
 machine-checked del programma di
 Preparata}\label{linstabilituxe0-essenziale-del-vuoto-di-yangmills-riproduzione-machine-checked-del-programma-di-preparata}}
 
-Versione 1.0 --- 11 agosto 2026
+Versione 1.1 --- 11 agosto 2026 (v1.1: testo primario di Preparata
+acquisito e verificato a livello di equazioni --- Sezione 8)
 
 Giuliano (Vantasner AG), per Luca Gamberale
 
@@ -81,18 +82,19 @@ Rapporto tecnico con verifica automatica (substrate-framework, tracker
 \hypertarget{sommario}{%
 \subsection{Sommario}\label{sommario}}
 
-Questo rapporto riproduce, con oracoli macchina (SymPy/SciPy/mpmath, 50
+Questo rapporto riproduce, con oracoli macchina (SymPy/SciPy/mpmath, 61
 test automatici), il programma di Giuliano Preparata sull'instabilità
 del vuoto perturbativo di Yang--Mills: il potenziale efficace a un loop
 nel fondo cromomagnetico costante (vuoto di Savvidy), il potenziale a
 due loop in funzione di \(b/\Lambda^2\) (con \(b = gH\)), l'analisi di
 stabilità rispetto alle fluttuazioni, la decomposizione per colori e per
-modi trasversi, e una configurazione classica migliore di quella di
+modi trasversi, una configurazione classica migliore di quella di
 Savvidy (il vuoto ``spaghetti'' di Ambjørn--Olesen) con la
-riquantizzazione attorno ad essa. Ogni affermazione quantitativa è
-prodotta da codice eseguibile nel repository
-\texttt{vantasnerdan/substrate-framework} (issue \#44--\#50, PR
-\#51--\#54) o citata esplicitamente dalla letteratura. Risultato
+riquantizzazione attorno ad essa, e la verifica equazione per equazione
+del testo primario del 1986 (Sezione 8). Ogni affermazione quantitativa
+è prodotta da codice eseguibile nel repository
+\texttt{vantasnerdan/substrate-framework} (issue \#44--\#50 e \#56, PR
+\#51--\#55 e \#57) o citata esplicitamente dalla letteratura. Risultato
 principale: il risultato a un loop di Savvidy si riproduce esattamente;
 il risultato a due loop pubblicato (Bordag--Skalozub 2022) contiene tre
 errori tipografici/sostanziali che documentiamo con valori esatti; la
@@ -111,14 +113,14 @@ Dichiariamo esattamente cosa è stato verificato e da dove.
 \item
   G. Preparata, \emph{Essential Quantum Instability of the Perturbative
   Yang--Mills Vacuum}, Nuovo Cim. A \textbf{96} (1986) 366, DOI
-  10.1007/BF02833896 --- \textbf{testo completo non accessibile}
-  (paywall Springer; l'archivio Sapienza è solo fisico). Del paper
-  centrale citiamo solo il livello dell'abstract: un argomento
-  variazionale con cut-off UV per cui
-  \(\Delta E \sim -b\,\Lambda_{UV}^4\) con \(b\) finito per \(g \to 0\)
-  --- instabilità ``essenziale'', cioè non riparabile perturbativamente.
-  Se ci fornisci il PDF, la verifica equazione per equazione entra nel
-  workflow.
+  10.1007/BF02833896 --- \textbf{in nostro possesso} (PDF di 28 pp.~con
+  testo estraibile, md5 34f8efc4c056837869cfbe63906ea14d), acquisito
+  l'11 agosto 2026 e fissato come provenance della campagna in
+  \texttt{proposals/P229-preparata-qcd-vacuum-audit/sources/}. La
+  scansione del 1986 degrada le formule in esposizione: nessuna
+  equazione è trascritta dall'OCR come verità; ogni affermazione
+  verificabile è codificata dal suo enunciato testuale più chiaro e poi
+  controllata con oracoli (Sezione 8).
 \item
   G.K. Savvidy, Phys. Lett. B \textbf{71} (1977) 133 --- il risultato a
   un loop, ripreso dalle sue riesposizioni aperte (EPJC \textbf{80}
@@ -146,7 +148,8 @@ codice; ogni check ha una mutazione che lo rompe. I moduli:
 \texttt{chromomagnetic\_background.py} (21 test),
 \texttt{chromomagnetic\_two\_loop.py} (13 test),
 \texttt{chromomagnetic\_sectors.py} (10 test),
-\texttt{spaghetti\_vacuum.py} (8 test).
+\texttt{spaghetti\_vacuum.py} (8 test), \texttt{preparata\_1986.py} (11
+test).
 
 \hypertarget{il-potenziale-a-un-loop-savvidy-verificato}{%
 \subsection{2. Il potenziale a un loop (Savvidy),
@@ -321,8 +324,69 @@ rassegna quota \(\vartheta_3(0, q_0) \simeq 1.2713\) per
 non è ricostruibile dal testo aperto; i nostri numeri sono derivati, non
 trascritti.
 
+\hypertarget{verifica-del-testo-primario-preparata-1986-equazione-per-equazione}{%
+\subsection{8. Verifica del testo primario: Preparata 1986 equazione per
+equazione}\label{verifica-del-testo-primario-preparata-1986-equazione-per-equazione}}
+
+Modulo \texttt{preparata\_1986.py} (11 test; issue \#56, PR \#57). Ogni
+affermazione verificabile del paper è codificata dal suo enunciato
+testuale più chiaro e ricontrollata con oracoli SymPy, in incrocio con
+le primitive verificate delle Sezioni 2--6.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Spettro (1.2).} \(E^2 = p_z^2 + gH(2n+1) - 2gH\,S_z\):
+  coincide con lo spettro verificato della Sezione 2 (controllo numerico
+  su quattro settori); il settore instabile è \(n=0\), \(S_z=1\) con
+  \(p_z^2 < gH\), come da testo.
+\item
+  \textbf{Risultato centrale (5.1).}
+  \(\Delta E = -\frac{11}{48\pi^2}g^2H^2\ln(\Lambda^2/gH) + O(g^2H^2)\).
+  Il segno \textbf{non è trascritto}: è derivato --- solo il segno
+  negativo produce il minimo locale con \(a, b > 0\) delle (5.2)/(5.3)
+  (il segno positivo dà un massimo, in contraddizione con l'abstract).
+  Il coefficiente del logaritmo è identico al \(C = 11/(48\pi^2)\)
+  verificato alla Sezione 2.
+\item
+  \textbf{Minimo (5.2)/(5.3), derivato.} Dalla (5.1) codificata:
+  \(gH^* = a\Lambda^2\) con \(a = e^{-1/2}\) e
+  \(\Delta E^* = -b\Lambda^4\) con \(b = \frac{11}{96\pi^2 e}\) ---
+  entrambi finiti per \(g \to 0\). Con il termine sotto-leading
+  simbolico \(\kappa g^2H^2\): \(a = e^{-1/2 - 48\pi^2\kappa/11}\),
+  ancora finito --- l'instabilità ``essenziale'' è robusta, come
+  asserito nel paper.
+\item
+  \textbf{Algebra AF della Sezione 1.} La (1.1) di Savvidy risolta per
+  \(1/g^2\) dà esattamente il running a un loop (\(b_0 = 22/3\); residuo
+  nullo). Inserendo il running AF nella variazionale del 1985 (1.3)
+  {[}\(gH^* = \Lambda^2 e^{-12\pi^2/11g^2}\){]} l'esponente è
+  esattamente \(-\ln(\Lambda/\Lambda_{\rm QCD})\), quindi
+  \(gH^* = \Lambda\cdot\Lambda_{\rm QCD}\): campo divergente e gap
+  \(\sim\Lambda^2\), come affermato.
+\item
+  \textbf{Distinzione di scala (onestà di convenzione).} La \(\Lambda\)
+  di Preparata è il \textbf{cut-off UV}; la \(\Lambda\) della Sezione 6
+  è la \textbf{scala RG}. I due enunciati
+  (\(gH^* = a\Lambda_{\rm UV}^2\) e \(b_{\min} = \Lambda_{\rm RG}^2\))
+  non vanno confusi: sono compatibili ma non identici.
+\item
+  \textbf{Frontiera dichiarata.} La macchina variazionale completa
+  (funzionali d'onda gaussiani, appendici B--F, il modello
+  \(\lambda\phi^4\) dell'appendice F) non è riprodotta: è un possibile
+  modulo successivo. Le affermazioni sopra coprono la catena logica
+  portante: spettro → (5.1) → minimo → divergenza del gap →
+  sopravvivenza della conclusione.
+\end{enumerate}
+
+\textbf{Verdetto:} l'algebra verificabile di Preparata 1986 è
+internamente consistente e coerente con il coefficiente a un loop
+verificato indipendentemente; la tesi dell'instabilità essenziale segue
+dalla (5.1) codificata.
+
 \hypertarget{risultati-dichiarati}{%
-\subsection{8. Risultati dichiarati}\label{risultati-dichiarati}}
+\subsection{9. Risultati dichiarati}\label{risultati-dichiarati}}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -333,12 +397,14 @@ trascritti.
   \(V_{\min} = -11\Lambda^4/(96\pi^2)\).
 \item
   Il vuoto di Savvidy è \textbf{instabile}: tachione per ogni \(b>0\),
-  \(\mathrm{Im}\,V \neq 0\) a uno e due loop; la tesi di Preparata
-  dell'instabilità essenziale è confermata nel senso perturbativo
-  accessibile (il suo testo completo non è accessibile: la conferma
-  copre la struttura pubblicata da
-  Savvidy/Nielsen--Olesen/Bordag--Skalozub, non le sue equazioni
-  specifiche).
+  \(\mathrm{Im}\,V \neq 0\) a uno e due loop. Il testo primario di
+  Preparata è ora verificato a livello di equazioni (Sezione 8):
+  l'algebra portante è consistente, il minimo
+  \(gH^* = e^{-1/2}\Lambda^2\) con
+  \(\Delta E^* = -\frac{11}{96\pi^2 e}\Lambda^4\) è derivato dalla sua
+  (5.1), e l'instabilità essenziale (\(a\), \(b\) finiti per
+  \(g \to 0\)) ne segue. Frontiera dichiarata: la macchina variazionale
+  completa delle appendici B--F.
 \item
   Il due loop pubblicato (Bordag--Skalozub) contiene tre errori (F1, F2,
   F3) con i valori corretti esatti sopra; la correzione F3 cambia il
@@ -371,11 +437,13 @@ elettriche). {[}5{]} J. Ambjørn, P. Olesen, Nucl. Phys. B \textbf{170}
 Skalozub, EPJC \textbf{82} (2022) 390, arXiv:2112.01043 (aperto).
 {[}7{]} M. Bordag, Symmetry \textbf{15} (2023) 1137 (aperto). {[}8{]} P.
 Cea, arXiv:2311.14791 (aperto). {[}9{]} Repository:
-vantasnerdan/substrate-framework --- tracker \#44, issue \#45--\#50, PR
-\#51--\#54; moduli \texttt{chromomagnetic\_background.py},
+vantasnerdan/substrate-framework --- tracker \#44, issue \#45--\#50 e
+\#56, PR \#51--\#55 e \#57; moduli
+\texttt{chromomagnetic\_background.py},
 \texttt{chromomagnetic\_two\_loop.py},
-\texttt{chromomagnetic\_sectors.py}, \texttt{spaghetti\_vacuum.py} con
-50 test.
+\texttt{chromomagnetic\_sectors.py}, \texttt{spaghetti\_vacuum.py},
+\texttt{preparata\_1986.py} con 61 test; testo primario fissato in
+\texttt{proposals/P229-preparata-qcd-vacuum-audit/sources/}.
 
 \emph{Fine del rapporto.}
 
