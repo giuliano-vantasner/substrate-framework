@@ -109,3 +109,28 @@ def test_mutation_wrong_combinatoric_factor_moves_minimum():
     corr_mut = c2.minimum_exponent(w_mut)
     corr_true = c2.minimum_exponent(c2.W_two_loop_derived())
     assert sp.simplify(corr_mut - corr_true) != 0
+
+
+# ---------------------------------------------------------------------------
+# RG-improved potential in Lambda units
+# ---------------------------------------------------------------------------
+
+
+def test_rg_improved_one_loop_minimum_at_x1():
+    """With one-loop running, the Savvidy minimum sits at b = Lambda^2 exactly."""
+    x = sp.symbols("x", positive=True)
+    w = c2.rg_improved_potential("none")
+    dw = sp.diff(w, x)
+    assert sp.simplify(dw.subs(x, 1)) == 0
+    assert sp.simplify(w.subs(x, 1) - (-sp.Rational(11) / (96 * sp.pi**2))) == 0
+
+
+def test_rg_improved_two_loop_coefficients():
+    """The x^2/ln x coefficients for the printed and derived two-loop terms."""
+    x = sp.symbols("x", positive=True)
+    w_p = c2.rg_improved_potential("printed")
+    w_d = c2.rg_improved_potential("derived")
+    coef_p = sp.simplify((w_p - c2.rg_improved_potential("none")) * sp.log(x) / x**2)
+    coef_d = sp.simplify((w_d - c2.rg_improved_potential("none")) * sp.log(x) / x**2)
+    assert sp.simplify(coef_p - 3 * sp.log(2) ** 2 / (176 * sp.pi**2)) == 0
+    assert sp.simplify(coef_d - 9 * (sp.log(2) ** 2 - sp.pi**2) / (704 * sp.pi**2)) == 0

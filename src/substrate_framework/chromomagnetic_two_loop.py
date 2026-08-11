@@ -155,3 +155,34 @@ def minimum_exponent(w_total) -> sp.Expr:
     # resid must be cancelled by (11 g^2/(24 pi^2)) g^2 X1 -> X1 = -resid*24 pi^2/(11 g^4)
     x1 = sp.simplify(-resid * 24 * sp.pi**2 / (11 * g**4))
     return sp.simplify(g**2 * x1)
+
+
+# ---------------------------------------------------------------------------
+# The potential as a function of b/Lambda^2 (RG-improved, one-loop running)
+# ---------------------------------------------------------------------------
+
+
+def rg_improved_potential(two_loop: str = "derived"):
+    """W/Lambda^4 as a function of x = b/Lambda^2, one-loop running coupling.
+
+    One-loop running for SU(2), b0 = 22/3: 1/g^2(mu) = (b0/8 pi^2) ln(mu/Lambda).
+    Setting mu^2 = b (RG improvement) turns the tree term into
+    b^2/2 * 1/g^2 = (11/(48 pi^2)) b^2 ln(b/Lambda^2), so with x = b/Lambda^2:
+
+        W/Lambda^4 = (11/(48 pi^2)) x^2 [ln x - 1/2] + (two-loop) x^2 / ln x
+
+    with the two-loop coefficient 3 ln^2 2 /(176 pi^2) (printed) or
+    9 (ln^2 2 - pi^2)/(704 pi^2) (derived) — see tests.  One-loop minimum at
+    x = 1 exactly: b_min = Lambda^2 (Savvidy's scheme-independent statement).
+    """
+    x = sp.symbols("x", positive=True)
+    one_loop = sp.Rational(11, 1) / (48 * sp.pi**2) * x**2 * (sp.log(x) - sp.Rational(1, 2))
+    if two_loop == "derived":
+        coef = 9 * (sp.log(2) ** 2 - sp.pi**2) / (704 * sp.pi**2)
+    elif two_loop == "printed":
+        coef = 3 * sp.log(2) ** 2 / (176 * sp.pi**2)
+    elif two_loop == "none":
+        coef = sp.Integer(0)
+    else:
+        raise ValueError(two_loop)
+    return one_loop + coef * x**2 / sp.log(x)
