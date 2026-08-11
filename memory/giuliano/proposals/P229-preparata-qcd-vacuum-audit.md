@@ -38,6 +38,27 @@ surfaces read: C-VAC-001..004, C-NAG-001, C-NVP-001/002, C-GAU-001 (via
 claims.yaml), and the unpromoted conditional modules twisted_casimir.py,
 lattice_gauge.py, flux_tube_ensemble.py, lorentz_orbits.py.
 
+## Source Inventory and Access Gate
+Retrofitted 2026-08-11 after Dan's process review: this gate did not exist
+when the campaign started; the campaign proceeded with the primary source
+unchecked and while the extraction agent (PreparataLit) was still running
+(AP-14/AP-15, skill quantitative-verification). The verified inventory:
+
+| Source | Access status | What is extracted from it |
+| --- | --- | --- |
+| Preparata 1986, Nuovo Cim. A 96, 366 (DOI 10.1007/BF02833896) | IN HAND since 2026-08-11 17:26 UTC: `~/sources/preparata-qcd-vacuum/preparata1986-nuovo-cim-a96-366.pdf` (28 pp, text layer OK, full text extracted to `preparata1986.txt`); two byte-identical provenances — Dan's email (UID 68, Processed) and the DOI mirror | full paper available for equation-level verification (follow-up slice; the merged-pending PRs #51-#55 predate access and cover secondary sources) |
+| Savvidy 1977, Phys. Lett. B 71, 133 | paywalled; open restatement in hand: arXiv:1910.00654 | one-loop potential, minimum, V_min formulas (equation level) |
+| Nielsen-Olesen 1978, Nucl. Phys. B 144, 376 | paywalled; quoted via open review | unstable mode E^2 = p_z^2 - gB; Im V = (gB)^2/8 pi (independently re-derived, both routes agree) |
+| Nielsen-Olesen 1978, Phys. Lett. B 79, 304 | paywalled; quoted via open review | electric vortex lines construction (motivation for C-CMV-004) |
+| Ambjorn-Olesen 1980, Nucl. Phys. B 170, 60 and 265 | paywalled; quoted via open review eqs. (146)-(152) | spaghetti condensate ansatz, lattice minimization, eq. (152) minimum (convention mismatch documented) |
+| Bordag-Skalozub 2022, EPJC 82, 390 | open, in hand: arXiv:2112.01043 | eq. (3) definitions, eqs. (57)-(58) T=0 result — the two-loop source |
+| Bordag 2023, Symmetry 15, 1137 | open, in hand: MDPI full text | eqs. (146)-(152) flux-tube lattice construction |
+| Cea 2023, arXiv:2311.14791 | open, in hand | SU(3) tachyon sectors (gH, gH/2, gH/2) |
+
+Consequence recorded honestly: the objective as written ("the Preparata
+program") is only partially verifiable until the Preparata PDF arrives; all
+merged-pending artifacts are labeled conditional and secondary-source.
+
 ## Invariants, Conventions, and Allowed Imports
 Frozen conventions, declared once for the whole campaign: Lorentzian
 mostly-plus signature; background-field gauge with the gauge parameter

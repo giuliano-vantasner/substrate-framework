@@ -74,10 +74,43 @@ Assumptions, residuals, and narrative inconsistencies; empty at close.
 | --- | --- | --- | --- | --- |
 
 ## Results
-Positive verified outcomes with reproduction commands.
+- One-loop Savvidy potential reproduced exactly by three independent routes
+  (PR #51): C = 11/(48 pi^2), b_min = Lambda^2, V_min = -11 Lambda^4/(96 pi^2),
+  Im V = b^2/(8 pi).
+- Two-loop T=0 from defining sums (PR #52): B2 = -b(ln2 - i pi)/(16 pi^2)
+  exact; three errata to arXiv:2112.01043 documented; RG-improved W(b/Lambda^2).
+- Sectors + stability (PR #53): log fully transverse-paramagnetic (2 x 11/6);
+  longitudinal/ghost cancel; SU(3) roots (1, 1/2, 1/2); unstable verdict.
+- Spaghetti improved background (PR #54): triangular lattice beta = 1.159595
+  optimal; deeper minimum by exp(48 pi^2/(11 g^2 beta)).
+- Report for Luca (PR #55): MD/TeX/PDF via the landed pipeline.
+Replay: `pytest tests/test_chromomagnetic_*.py tests/test_spaghetti_vacuum.py`
+(50 tests) on the respective PR branches.
 
 ## Post-Task Refinement
-Answer at close.
+Triggered early by Dan's process review (2026-08-11): the campaign started
+before the primary source's access was verified (Preparata 1986 paywalled)
+and before the extraction agent finished — planning and execution raced
+their grounding. Corrections made in place:
+
+1. `~/AGENTS.md`: sufficiency gate now names source-material access
+   explicitly and requires escalation BEFORE building on surrogates; the
+   substrate workflow bullet now fixes the order grounding → campaign plan →
+   preregistration → execution, with declared delegation waves and
+   complete-not-partial review deliverables.
+2. Skill `quantitative-verification`: ordering gains step 0 (grounding and
+   source access before any plan); anti-patterns AP-14 (surrogate
+   verification with unchecked primary) and AP-15 (dependent slices racing
+   the research wave) added with this campaign as the cited instance.
+3. `~/templates/effort-contract.md`: new required sections Source Inventory
+   and Access Gate + wave-ordered Decomposition (research is wave 0, a hard
+   prerequisite).
+4. `memory-templates/campaign-proposal.md`: new Source Inventory and Access
+   Gate section, wave discipline in Attempts, `source_inventory` in the
+   manifest example.
+5. This campaign retrofitted: source inventory added to the proposal memory
+   and `proposal.yaml`; objective noted as partially verifiable until the
+   Preparata PDF arrives.
 
 ## Done Gate
 - [ ] Positive object exists and is verified (not just attempted)
@@ -86,6 +119,8 @@ Answer at close.
 - [ ] Post-task refinement answered
 
 ## Cross-References
-Issues vantasnerdan/substrate-framework#44 (tracker), #45-#50; Luca thread
-("Physical Review Letters referral", Processed UID 67); PreparataLit
-extraction report (pending).
+Issues vantasnerdan/substrate-framework#44 (tracker), #45-#50; PRs #51-#55;
+Luca thread ("Physical Review Letters referral", Processed UID 67);
+PreparataLit extraction (raced by execution — see Post-Task Refinement);
+Preparata 1986 PDF IN HAND 2026-08-11 (Dan email UID 68 + DOI mirror,
+byte-identical): ~/sources/preparata-qcd-vacuum/.

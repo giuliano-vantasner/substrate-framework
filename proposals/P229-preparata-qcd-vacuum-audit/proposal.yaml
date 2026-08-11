@@ -9,6 +9,31 @@ question: >-
   color/transverse energy decomposition, and an improved classical
   background with requantization; and which statements promote to exact
   conditional framework claims?
+source_inventory:
+  - source: Preparata 1986 Nuovo Cim A 96 366 (DOI 10.1007/BF02833896)
+    access: in hand since 2026-08-11 — ~/sources/preparata-qcd-vacuum/preparata1986-nuovo-cim-a96-366.pdf (Dan email UID 68 + DOI mirror, byte-identical)
+    extracted: full text extracted to preparata1986.txt; equation-level verification is the follow-up slice
+  - source: Savvidy 1977 Phys Lett B 71 133
+    access: paywalled; open restatement arXiv:1910.00654 in hand
+    extracted: one-loop potential, minimum, V_min at equation level
+  - source: Nielsen-Olesen 1978 Nucl Phys B 144 376
+    access: paywalled; quoted via open review
+    extracted: unstable mode and Im V claims; independently re-derived
+  - source: Nielsen-Olesen 1978 Phys Lett B 79 304
+    access: paywalled; quoted via open review
+    extracted: electric vortex line construction
+  - source: Ambjorn-Olesen 1980 Nucl Phys B 170 60 and 265
+    access: paywalled; quoted via open review eqs 146-152
+    extracted: spaghetti condensate ansatz and lattice minimization
+  - source: Bordag-Skalozub 2022 EPJC 82 390
+    access: open — arXiv:2112.01043 in hand
+    extracted: eq (3) definitions and eqs (57)-(58); three errata documented
+  - source: Bordag 2023 Symmetry 15 1137
+    access: open — MDPI full text in hand
+    extracted: eqs (146)-(152) flux-tube lattice construction
+  - source: Cea 2023 arXiv:2311.14791
+    access: open — in hand
+    extracted: SU(3) tachyon sectors (gH, gH/2, gH/2)
 invariants:
   - mostly-plus Lorentzian signature with declared background-field gauge and explicit gauge parameter
   - the background enters only through the covariant combination gB
