@@ -8,7 +8,7 @@ Rapporto tecnico con verifica automatica (substrate-framework, tracker #44)
 
 ## Sommario
 
-Questo rapporto riproduce, con oracoli macchina (SymPy/SciPy/mpmath, 61 test automatici), il programma di Giuliano Preparata sull'instabilità del vuoto perturbativo di Yang–Mills: il potenziale efficace a un loop nel fondo cromomagnetico costante (vuoto di Savvidy), il potenziale a due loop in funzione di $b/\Lambda^2$ (con $b = gH$), l'analisi di stabilità rispetto alle fluttuazioni, la decomposizione per colori e per modi trasversi, una configurazione classica migliore di quella di Savvidy (il vuoto "spaghetti" di Ambjørn–Olesen) con la riquantizzazione attorno ad essa, e la verifica equazione per equazione del testo primario del 1986 (Sezione 8). Ogni affermazione quantitativa è prodotta da codice eseguibile nel repository `vantasnerdan/substrate-framework` (issue #44–#50 e #56, PR #51–#55 e #57) o citata esplicitamente dalla letteratura. Risultato principale: il risultato a un loop di Savvidy si riproduce esattamente; il risultato a due loop pubblicato (Bordag–Skalozub 2022) contiene tre errori tipografici/sostanziali che documentiamo con valori esatti; la configurazione di Savvidy è instabile alle fluttuazioni a ogni ordine perturbativo accessibile, e il condensato di tubi di flusso (reticolo triangolare, parametro di Abrikosov $\beta = 1.159595$) è energeticamente preferito.
+Questo rapporto riproduce, con oracoli macchina (SymPy/SciPy/mpmath, 63 test automatici), il programma di Giuliano Preparata sull'instabilità del vuoto perturbativo di Yang–Mills: il potenziale efficace a un loop nel fondo cromomagnetico costante (vuoto di Savvidy), il potenziale a due loop in funzione di $b/\Lambda^2$ (con $b = gH$), l'analisi di stabilità rispetto alle fluttuazioni, la decomposizione per colori e per modi trasversi, una configurazione classica migliore di quella di Savvidy (il vuoto "spaghetti" di Ambjørn–Olesen) con la riquantizzazione attorno ad essa, e la verifica equazione per equazione del testo primario del 1986 (Sezione 8). Ogni affermazione quantitativa è prodotta da codice eseguibile nel repository `vantasnerdan/substrate-framework` (issue #44–#50 e #56, PR #51–#55 e #57) o citata esplicitamente dalla letteratura. Risultato principale: il risultato a un loop di Savvidy si riproduce esattamente; il risultato a due loop pubblicato (Bordag–Skalozub 2022) contiene tre errori tipografici/sostanziali che documentiamo con valori esatti; la configurazione di Savvidy è instabile alle fluttuazioni a ogni ordine perturbativo accessibile, e il condensato di tubi di flusso (reticolo triangolare, parametro di Abrikosov $\beta = 1.159595$) è energeticamente preferito.
 
 ## 1. Fonti e accessibilità
 
@@ -21,7 +21,7 @@ Dichiariamo esattamente cosa è stato verificato e da dove.
 - M. Bordag, *Symmetry* **15** (2023) 1137 — rassegna aperta; fonte della costruzione del reticolo di tubi di flusso (eq. 146–152).
 - P. Cea, arXiv:2311.14791 — aperto; settori tachiometrici $SU(3)$.
 
-Metodo: nessun passaggio "a mano". Ogni coefficiente è prodotto da codice; ogni check ha una mutazione che lo rompe. I moduli: `chromomagnetic_background.py` (21 test), `chromomagnetic_two_loop.py` (13 test), `chromomagnetic_sectors.py` (10 test), `spaghetti_vacuum.py` (8 test), `preparata_1986.py` (11 test).
+Metodo: nessun passaggio "a mano". Ogni coefficiente è prodotto da codice; ogni check ha una mutazione che lo rompe. I moduli: `chromomagnetic_background.py` (21 test), `chromomagnetic_two_loop.py` (13 test), `chromomagnetic_sectors.py` (10 test), `spaghetti_vacuum.py` (8 test), `preparata_1986.py` (11 test) — 63 in totale.
 
 ## 2. Il potenziale a un loop (Savvidy), verificato
 
@@ -131,6 +131,6 @@ Modulo `preparata_1986.py` (11 test; issue #56, PR #57). Ogni affermazione verif
 [6] M. Bordag, V. Skalozub, EPJC **82** (2022) 390, arXiv:2112.01043 (aperto).
 [7] M. Bordag, Symmetry **15** (2023) 1137 (aperto).
 [8] P. Cea, arXiv:2311.14791 (aperto).
-[9] Repository: vantasnerdan/substrate-framework — tracker #44, issue #45–#50 e #56, PR #51–#55 e #57; moduli `chromomagnetic_background.py`, `chromomagnetic_two_loop.py`, `chromomagnetic_sectors.py`, `spaghetti_vacuum.py`, `preparata_1986.py` con 61 test; testo primario fissato in `proposals/P229-preparata-qcd-vacuum-audit/sources/`.
+[9] Repository: vantasnerdan/substrate-framework — tracker #44, issue #45–#50 e #56, PR #51–#55 e #57; moduli `chromomagnetic_background.py`, `chromomagnetic_two_loop.py`, `chromomagnetic_sectors.py`, `spaghetti_vacuum.py`, `preparata_1986.py` con 63 test; testo primario fissato in `proposals/P229-preparata-qcd-vacuum-audit/sources/`.
 
 *Fine del rapporto.*
