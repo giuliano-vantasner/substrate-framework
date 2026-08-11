@@ -14,6 +14,16 @@ from pathlib import Path
 import numpy as np
 import sympy as sp
 
+from substrate_framework.lorentz_little_groups import little_group_algebra_3plus1
+from substrate_framework.lorentz_orbits import unit_timelike_vector_orbit_metric
+from substrate_framework.relativistic_particle import (
+    einbein_hamiltonian_ledger,
+    massive_einbein_ledger,
+    massive_mass_term_weyl_change,
+    massless_worldline_weyl_residual,
+    worldline_reparametrization_residual,
+)
+
 DIM = 4  # 3+1 spacetime dimensions
 
 TUTORIAL_DIR = (
@@ -87,6 +97,10 @@ def test_eq027_030_sqrt_recovery():
     assert sp.simplify(L_on_shell - (-e * (m * c0) ** 2)) == 0
     L_recovered = L_on_shell.subs(e, sp.sqrt(-sigma_s) / (m * c0))
     assert sp.simplify(L_recovered - (-m * c0 * sp.sqrt(-sigma_s))) == 0
+    canonical = massive_einbein_ledger(sigma_s, e, m, c0)
+    assert sp.simplify(
+        canonical.recovered_square_root_lagrangian - L_recovered
+    ) == 0
 
 
 # ---------------------------------------------------------------------------
@@ -303,6 +317,9 @@ def test_eq065_printed_matrices_match_definitions():
     np.testing.assert_allclose(T1_printed, _T1, atol=1e-15)
     np.testing.assert_allclose(T2_printed, _T2, atol=1e-15)
     np.testing.assert_allclose(J3_printed, _J3, atol=1e-15)
+    canonical = little_group_algebra_3plus1().massless_generators
+    for printed, generated in zip((T1_printed, T2_printed, J3_printed), canonical):
+        np.testing.assert_array_equal(printed, np.array(generated, dtype=float))
 
 
 def test_eq066_generators_fix_standard_null_vector():
@@ -394,6 +411,11 @@ def test_eq071_073_hamiltonian_pure_constraint():
     H = (p.T * xd_from_p)[0] - L.subs({xd[i]: xd_from_p[i] for i in range(DIM)})
     H_claimed = e / 2 * ((p.T * gi * p)[0] + (m * c0) ** 2)
     assert sp.simplify(H - H_claimed) == 0
+    concrete_p = sp.Matrix(sp.symbols("q0:4", real=True))
+    canonical = einbein_hamiltonian_ledger(
+        sp.diag(-1, 2, 3, 4), concrete_p, e, m, c0
+    )
+    assert canonical.legendre_transform == canonical.hamiltonian
 
 
 # ---------------------------------------------------------------------------
@@ -408,6 +430,9 @@ def test_eq012_reparametrization_invariance():
         ((sigma / fdot**2) / (2 * e / fdot) - (e / fdot) * (m * c0) ** 2 / 2) * fdot
     )
     assert sp.simplify(integrand_new_times_jac - integrand_old) == 0
+    assert worldline_reparametrization_residual(
+        sigma, e, m, c0, fdot
+    ) == 0
 
 
 def test_eq079_weyl_invariance():
@@ -418,6 +443,8 @@ def test_eq079_weyl_invariance():
     ) == 0
     mass_term = -e * (m * c0) ** 2 / 2
     assert sp.simplify(mass_term.subs(e, Om**2 * e) - Om**2 * mass_term) == 0
+    assert massless_worldline_weyl_residual(sigma, e, Om) == 0
+    assert massive_mass_term_weyl_change(e, m, c0, Om) != 0
 
 
 # ---------------------------------------------------------------------------
@@ -426,6 +453,12 @@ def test_eq079_weyl_invariance():
 
 
 def test_sec101_hyperboloid_induced_metric_positive_definite_3plus1():
+    eta_symbol, theta_symbol = sp.symbols("eta theta", positive=True)
+    assert unit_timelike_vector_orbit_metric(4) == sp.diag(
+        1,
+        sp.sinh(eta_symbol) ** 2,
+        sp.sinh(eta_symbol) ** 2 * sp.sin(theta_symbol) ** 2,
+    )
     rng = np.random.default_rng(7)
     eta = np.diag([-1.0, 1, 1, 1])
     for _ in range(20):
