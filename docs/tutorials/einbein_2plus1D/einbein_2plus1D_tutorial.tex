@@ -71,7 +71,7 @@
 Particle for a Smooth Massless Limit: The Einbein Formulation in 2 + 1
 Dimensions}\label{transforming-the-canonical-lagrangian-of-a-relativistic-particle-for-a-smooth-massless-limit-the-einbein-formulation-in-2-1-dimensions}}
 
-Version 1.0 --- 11 August 2026
+Version 1.1 --- 11 August 2026
 
 Giuliano (Vantasner AG), extending the 1 + 1 tutorial of Tiziano Fulceri
 (DOI: 10.5281/zenodo.21879560)
@@ -95,13 +95,16 @@ directions form a circle rather than a pair of rays, the mass-shell
 constraint underdetermines the velocity, the little groups are \(SO(2)\)
 (massive) and \(\mathbb{R}\) (massless) rather than the trivial group,
 and massive particles in 2 + 1 dimensions may carry any real spin
-(anyons) while massless particles carry no spin degree of freedom at
-all. The presentation is self-contained for a reader already familiar
-with the principles of general relativity, the Lagrangian formalism, and
-the Euler--Lagrange equations; familiarity with the companion 1 +
-1-dimensional notes is helpful but not assumed. References to standard
-textbooks and original papers are provided with author names, titles,
-publication years and, where available, stable URLs.
+(anyons) while massless particles --- in the conventional physical
+sector, where the translation-like massless little group is taken to act
+trivially --- carry no spin degree of freedom at all (the mathematically
+allowed alternative is discussed in Section 10.2). The presentation is
+self-contained for a reader already familiar with the principles of
+general relativity, the Lagrangian formalism, and the Euler--Lagrange
+equations; familiarity with the companion 1 + 1-dimensional notes is
+helpful but not assumed. References to standard textbooks and original
+papers are provided with author names, titles, publication years and,
+where available, stable URLs.
 
 \hypertarget{contents}{%
 \subsection{Contents}\label{contents}}
@@ -156,8 +159,10 @@ physically interesting, because in 1 + 1 dimensions
   the null cone consists of exactly two rays, so a massless particle is
   characterized by a single discrete bit (left- or right-moving);
 \item
-  the mass-shell condition determines the velocity up to that discrete
-  choice, so the constraint analysis is almost trivial;
+  the null condition fixes a massless velocity up to its scale and that
+  discrete choice, and even the massive mass shell retains only
+  \textbf{one} continuous parameter (a rapidity), so the constraint
+  analysis is almost trivial;
 \item
   there is no transverse space, so no rotation group can act on the
   internal state of a particle, and spin in the ordinary sense does not
@@ -181,8 +186,11 @@ and instructive way:
   universal cover has irreducible unitary representations labeled by any
   real number, so massive particles in 2 + 1 dimensions can carry
   \textbf{anyonic spin}; the massless little group collapses to the
-  translation group \(\mathbb{R}\), and physical massless states carry
-  \textbf{no spin degree of freedom} at all.
+  translation group \(\mathbb{R}\), and in the conventional physical
+  sector --- where this translation-like action is taken to be trivial
+  --- massless states carry \textbf{no spin degree of freedom} at all
+  (the nontrivial representations are mathematically allowed; see
+  Section 10.2).
 \end{itemize}
 
 The einbein device itself, however, is indifferent to the dimension: the
@@ -882,11 +890,13 @@ literature; the derivations we give are elementary.
 \subsubsection{10.1 The mass shell as a homogeneous
 space}\label{the-mass-shell-as-a-homogeneous-space}}
 
-Work in flat 2 + 1-dimensional Minkowski space with the momentum
-\(p_{\mu} = (p_{0}, p_{1}, p_{2})\) and mass shell (derived in Section
-11 below)
+Work in flat 2 + 1-dimensional Minkowski space with the contravariant
+momentum \(p^{\mu} = (p^{0}, p^{1}, p^{2})\) --- the positive-energy
+vector on which the Lorentz matrices below act --- and mass shell
+(derived in Section 11 below, in the canonical covector variables
+\(p_{\mu} = g_{\mu\nu} p^{\nu}\))
 
-\[g^{\mu\nu} p_{\mu} p_{\nu} = - (mc_{0})^{2}, \qquad \text{i.e. in an inertial frame} \qquad - p_{0}^{2} + p_{1}^{2} + p_{2}^{2} = - (mc_{0})^{2}. \tag{69}\]
+\[g_{\mu\nu}\, p^{\mu} p^{\nu} = - (mc_{0})^{2}, \qquad \text{i.e. in an inertial frame} \qquad - (p^{0})^{2} + (p^{1})^{2} + (p^{2})^{2} = - (mc_{0})^{2}. \tag{69}\]
 
 For \(m > 0\) the future sheet of this two-sheeted hyperboloid is the
 hyperbolic plane \(H^{2}\): the restriction of the Minkowski quadratic
@@ -931,10 +941,10 @@ rotation \(J\) in the \(1\)-\(2\) plane and boost \(K_{2}\) along
 \(x^{2}\), \(M = K_{2} + J\): the boost and the rotation act oppositely
 on \(k^{(0)}\) and cancel.) Third, the action on a general momentum is a
 translation-like shear of the transverse coordinate driven by the null
-combination: \((e^{tM} p)_{2} = p_{2} + t\,(p_{0} - p_{1})\) ---
+combination: \((e^{tM} p)^{2} = p^{2} + t\,(p^{0} - p^{1})\) ---
 exactly, with no higher-order terms, because \(M^{3} = 0\) and
-\((M^{2} p)_{2} = 0\) (both verified symbolically in the companion
-suite) --- which vanishes exactly on the rays with \(p_{0} = p_{1}\). A
+\((M^{2} p)^{2} = 0\) (both verified symbolically in the companion
+suite) --- which vanishes exactly on the rays with \(p^{0} = p^{1}\). A
 non-compact action rather than a rotation. The stabilizer is therefore
 the non-compact one-parameter group
 
@@ -949,10 +959,10 @@ Unitary Representations of the Inhomogeneous Lorentz Group'',
 Quantum Theory of Fields}, Vol. 1, Cambridge University Press, 1995,
 §2.5).
 
-\hypertarget{spin-in-2-1-dimensions-anyons-for-massive-nothing-for-massless}{%
+\hypertarget{spin-in-2-1-dimensions-anyons-for-massive-nothing-for-massless-in-the-conventional-sector}{%
 \subsubsection{10.2 Spin in 2 + 1 dimensions: anyons for massive,
-nothing for
-massless}\label{spin-in-2-1-dimensions-anyons-for-massive-nothing-for-massless}}
+nothing for massless in the conventional
+sector}\label{spin-in-2-1-dimensions-anyons-for-massive-nothing-for-massless-in-the-conventional-sector}}
 
 The representation theory of the two little groups is completely
 different.
@@ -988,18 +998,22 @@ equation for anyons'', \emph{Physical Review D} \textbf{43} (1991)
 
 \textbf{Massless.} The little group \(\mathbb{R}\) is non-compact; its
 unitary irreducible representations are all one-dimensional
-(\(t \mapsto e^{i\rho t}\), \(\rho \in \mathbb{R}\)), but a nonzero
-\(\rho\) would label a ``continuous-spin''-type internal degree of
-freedom with no localization on any compact direction --- the 2 +
-1-dimensional analogue of the continuous-spin representations that
-Wigner already discarded as unphysical in 3 + 1 dimensions. The standard
-physical assumption, going back to Wigner's 1939 paper, is that the
-translation-like part of the massless little group acts trivially on
-physical states (\(\rho = 0\)). In 2 + 1 dimensions, unlike 3 + 1, there
-is no residual compact rotation factor left in the little group at all
-(the group \(SO(1)\) is trivial), so after this assumption a massless
-particle carries \textbf{no internal degree of freedom whatsoever}: its
-state is unique once its momentum is fixed.
+(\(t \mapsto e^{i\rho t}\), \(\rho \in \mathbb{R}\)). A nonzero \(\rho\)
+is mathematically allowed: it labels a ``continuous-spin''-type internal
+degree of freedom with no localization on any compact direction --- the
+2 + 1-dimensional analogue of the continuous-spin representations of the
+3 + 1-dimensional Poincaré group --- and explicit 2 + 1-dimensional
+field realizations of these nontrivial representations exist (Binegar,
+loc. cit. below). The conventional physical choice, going back to
+Wigner's 1939 treatment of the 3 + 1-dimensional case, restricts
+attention to the \textbf{trivial-translation (finite-spin) sector} in
+which the translation-like part of the massless little group acts
+trivially on physical states (\(\rho = 0\)); nothing in the
+representation theory itself rules the alternative out. In 2 + 1
+dimensions, unlike 3 + 1, there is no residual compact rotation factor
+left in the little group at all (the group \(SO(1)\) is trivial), so in
+this conventional sector a massless particle carries \textbf{no internal
+degree of freedom}: its state is unique once its momentum is fixed.
 
 The little-group analysis of relativistic systems in 2 + 1 dimensions is
 treated systematically in B. Binegar, ``Relativistic field theories in
@@ -1037,8 +1051,9 @@ construction was invented to answer.
 \item
   \textbf{Quantum-mechanically non-smooth.} Because the internal states
   are representations of the little group, the state counting jumps at
-  \(m = 0\): a massive particle may carry any real anyonic spin \(s\), a
-  massless particle carries nothing. This is not a defect of the
+  \(m = 0\): a massive particle may carry any real anyonic spin \(s\),
+  while a massless particle in the conventional trivial-translation
+  sector of Section 10.2 carries nothing. This is not a defect of the
   massless theory; it is Wigner kinematics. In 3 + 1 dimensions the same
   phenomenon appears as the jump from \(2s + 1\) massive spin states to
   at most two massless helicity states --- the subject of the companion
@@ -1055,8 +1070,13 @@ independent components --- six for \(n = 3\) --- exactly as many as the
 Ricci tensor, so the Riemann tensor is algebraically determined by the
 Ricci tensor and carries no propagating (traceless) part (see e.g.~S. M.
 Carroll, \emph{Spacetime and Geometry}, Chapter 3, for the component
-counting). A consequence: every vacuum solution of the Einstein
-equations in 2 + 1 dimensions is locally flat, and all gravitational
+counting). A consequence: with vanishing cosmological constant
+(\(\Lambda = 0\)) every vacuum solution of the Einstein equations in 2 +
+1 dimensions is locally flat (with \(\Lambda \neq 0\) the vacuum
+solutions are instead spacetimes of constant curvature, locally de
+Sitter or anti-de Sitter). Independently of \(\Lambda\), pure 2 +
+1-dimensional Einstein gravity has no local, propagating graviton
+degrees of freedom; in the \(\Lambda = 0\) theory all gravitational
 effects are global --- conical defects around point masses and the
 scattering of geodesics off them (S. Deser, R. Jackiw, G. 't Hooft,
 ``Three-dimensional Einstein gravity: dynamics of flat space'',
@@ -1075,6 +1095,17 @@ the einbein Lagrangian. The canonical momenta conjugate to the
 coordinates are
 
 \[p_{\lambda} = \frac{\partial L}{\partial \dot{x}^{\lambda}} = \frac{1}{e}\, g_{\lambda\nu}\, \dot{x}^{\nu}. \tag{74}\]
+
+This canonical momentum is a covector. It is related to the
+contravariant momentum \(p^{\mu} = \frac{1}{e}\, \dot{x}^{\mu}\) used in
+Section 10.1 by index lowering, \(p_{\mu} = g_{\mu\nu}\, p^{\nu}\); with
+the signature \((-, +, +)\) this means that in an inertial frame
+\(p_{0} = -p^{0}\) and \(p_{i} = p^{i}\), so the component \(p_{0}\) of
+the canonical covector is \emph{negative} for a positive-energy
+particle. The two index placements give one and the same mass shell,
+since \(g^{\mu\nu} p_{\mu} p_{\nu} = g_{\mu\nu} p^{\mu} p^{\nu}\); the
+matrices of Section 10.1 act on the contravariant representative
+\(p^{\mu}\).
 
 Inverting for the velocities,
 \(\dot{x}^{\nu} = e\, g^{\nu\lambda} p_{\lambda}\). The Hamiltonian
@@ -1133,16 +1164,20 @@ The solution extends to a maximal interval and is global if the
 spacetime is timelike-geodesically complete.
 
 \textbf{Difference from 1 + 1 dimensions.} In 1 + 1 dimensions the
-constraint (78) determines \(\dot{x}^{1}\) from \(\dot{x}^{0}\) up to a
-sign, so the system closes on one unknown. In 2 + 1 dimensions the
-constraint fixes only the overall scale of the tangent vector; the two
-independent ratios of the three velocity components --- the direction
-angle \(\theta_{0}\) in the \((\dot{x}^{1}, \dot{x}^{2})\) plane and the
-speed ratio --- are free initial data, and (77) remains a genuine system
-of coupled second-order equations that the constraint alone cannot
-reduce to a single first-order ODE. If the metric admits a Killing
-vector field\footnote{A Killing vector field is a vector field
-  \(\xi^{\mu}\) along whose flow the metric is invariant, equivalently
+constraint (78) restricts the velocity to a one-parameter family ---
+explicitly
+\(\dot{x}^{1} = \pm \sqrt{(\dot{x}^{0})^{2} - e^{2}(mc_{0})^{2}}\),
+equivalently a single continuous rapidity --- so \textbf{one} continuous
+shell parameter remains. In 2 + 1 dimensions the shell is
+two-dimensional: the constraint fixes only the overall scale of the
+tangent vector; the \textbf{two} independent ratios of the three
+velocity components --- the direction angle \(\theta_{0}\) in the
+\((\dot{x}^{1}, \dot{x}^{2})\) plane and the speed ratio --- are free
+initial data, and (77) remains a genuine system of coupled second-order
+equations that the constraint alone cannot reduce to a single
+first-order ODE. If the metric admits a Killing vector field\footnote{A
+  Killing vector field is a vector field \(\xi^{\mu}\) along whose flow
+  the metric is invariant, equivalently
   \(\nabla_{(\mu} \xi_{\nu)} = 0\). The inner product of a Killing
   vector with the tangent vector of a geodesic is constant along the
   geodesic; see R. M. Wald, \emph{General Relativity} (University of
@@ -1258,9 +1293,10 @@ is kinematic and group-theoretic:
   group \(SO(2)\), whose representations allow any real spin --- anyons
   (Section 10.2);
 \item
-  the massless little group is the non-compact group \(\mathbb{R}\), and
-  physical massless particles carry no spin degree of freedom (Section
-  10.2);
+  the massless little group is the non-compact group \(\mathbb{R}\),
+  whose nontrivial unitary representations are mathematically allowed;
+  in the conventional trivial-translation sector, physical massless
+  particles carry no spin degree of freedom (Section 10.2);
 \item
   the massless limit is smooth at the level of the action and the
   geodesics, while the internal-state counting jumps --- a
