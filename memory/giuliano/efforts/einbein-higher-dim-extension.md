@@ -66,11 +66,25 @@ Assumptions, residuals, and narrative inconsistencies; empty at close.
 ## Results
 Positive verified outcomes with reproduction commands.
 
+- 2+1D tutorial merged via PR #38 (merge commit 5071e14f6ded5ef072a4d03f2a9446250a8a7f68), closing issue #34. Reproduce: `pytest tests/test_einbein_2plus1d_tutorial.py` (29 passed); `docs/tutorials/build.sh docs/tutorials/einbein_2plus1D` regenerates MD -> TeX -> PDF.
+- 3+1D tutorial merged via PR #39 (merge commit 6b836fa52f543fc463aa57df01eaa4b17731d000), closing issue #35. Reproduce: `pytest tests/test_einbein_3plus1d_tutorial.py` (25 passed); `docs/tutorials/build.sh docs/tutorials/einbein_3plus1D`.
+- Dan's final corrected-head reviews approved both PRs; harvest dispositions recorded on issues #34/#35; tracker #32 closed 2026-08-11 with all three child issues closed.
+- Delivered to Tiziano by email 2026-08-11 (Message-ID 8482ad9e-17fc-3699-d3c5-e325a04ab075@vantasner.io): work summary, repo links (no attachments), invite notice (vantasner-T invited by Dan), workflow onboarding, Zwiebach DOI erratum.
+
 ## Canonicalization
 PR, merged docs paths, generated PDFs, memory sync. No proposal prose into canonical memory.
 
+- Merged docs: docs/tutorials/einbein_2plus1D/ (MD/TeX/PDF), docs/tutorials/einbein_3plus1D/ (MD/TeX/PDF + generate_christoffel_block.py); pipeline docs/tutorials/build.sh + README.md (PR #36, 4a837128); effort-contract rules (PR #37, 62baea91).
+- Claim promotion: none (per reviewer disposition — tutorial/test provenance only, no governance/claims.yaml changes).
+- Memory sync: session-state.md updated 2026-08-11; base + repo memory trees validate clean.
+
 ## Done Gate
 Artifacts exist, reviewed, merged, delivered; Tiziano acknowledged.
+
+- [x] Artifacts exist and are machine-checked (29 + 25 suites green on merged heads)
+- [x] Reviewed (two independent passes + owner final review) and merged (PRs #38/#39)
+- [x] Delivered to Tiziano (2026-08-11, with repo invite and onboarding)
+- [ ] Tiziano acknowledged — awaiting his reply/invite acceptance
 
 ## Cross-References
 Issue vantasnerdan/substrate-framework#32; preprint incoming/einbein_1plus1D_tutorial.pdf.
