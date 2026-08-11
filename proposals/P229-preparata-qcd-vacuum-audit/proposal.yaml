@@ -1,0 +1,45 @@
+id: P229
+base_release: v0.159.0
+source_baseline: substrate-framework@6d1f4e0
+question: >-
+  Does the Preparata essential-instability program for the perturbative
+  Yang-Mills vacuum reproduce under machine-checked recomputation: the
+  one-loop Savvidy effective potential, the two-loop effective potential as
+  a function of Lambda/gB, the fluctuation-stability verdict, the
+  color/transverse energy decomposition, and an improved classical
+  background with requantization; and which statements promote to exact
+  conditional framework claims?
+invariants:
+  - mostly-plus Lorentzian signature with declared background-field gauge and explicit gauge parameter
+  - the background enters only through the covariant combination gB
+  - the renormalization scheme and Lambda definition are declared before any coefficient comparison
+  - accepted claims and releases remain unchanged until independent claim adjudication
+allowed_imports:
+  - SymPy exact algebra and SciPy numerics under repository conventions
+  - C-GAU-001 C-VAC-001 C-VAC-002 C-VAC-003 C-VAC-004 C-NAG-001 C-NVP-001 C-NVP-002 as convention cross-checks only
+  - conditional unpromoted twisted_casimir lattice_gauge flux_tube_ensemble lorentz_orbits APIs as refactor inputs with declared conditional status
+  - Savvidy 1977 Phys Lett B 71 133, Nielsen Olesen 1978 Nucl Phys B 144 376, Preparata 1986 Nuovo Cim A 96 366, and the two-loop source fixed by independent extraction, all as source objects under audit
+candidates:
+  - id: A
+    description: >-
+      Schwinger proper-time determinant in the covariantly constant
+      background with zeta/proper-time renormalization; two-loop from
+      published master integrals once sourced.
+  - id: B
+    description: >-
+      Direct Landau-level mode sum with declared heat-kernel/smooth
+      regularization in the twisted_casimir numeric-symbolic hybrid style.
+uniqueness_evidence: null
+selection_criteria:
+  - frozen convention compatibility
+  - exactness and independence from regulator artifacts
+  - mutation sensitivity
+  - reuse value as importable primitives
+  - maintenance cost
+claims_proposed:
+  - C-CMV-001
+  - C-CMV-002
+  - C-CMV-003
+  - C-CMV-004
+comparators_blinded_until: both one-loop routes frozen and in agreement
+status: draft

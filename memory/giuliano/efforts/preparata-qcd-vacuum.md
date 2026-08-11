@@ -63,6 +63,8 @@ records synchronized at push time. Report-level: build.sh byte-clean
 regeneration; PDF inspected.
 
 ## Debt Ledger
+Assumptions, residuals, and narrative inconsistencies; empty at close.
+
 | Debt | Introduced by | Why it is real | Discharge artifact | Status |
 | --- | --- | --- | --- | --- |
 
