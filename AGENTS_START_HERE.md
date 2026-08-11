@@ -57,6 +57,16 @@ the contributor branch unless collaboration is explicitly agreed. Reviewers do
 not force-push or silently rewrite that branch; they request changes or create a
 focused follow-up or harvest branch.
 
+Treat a merged topic branch as disposable transport, not durable memory. The
+repository automatically deletes same-repository pull-request head branches
+after merge; the merge commit, PR, issue handoff, and landed `main` history are
+the durable discovery paths. If automatic cleanup does not occur, the merger
+deletes that exact merged head after verifying the PR state and target. Preserve
+open heads and closed-unmerged or failed heads by default so unresolved work is
+not erased; retire those only through an explicit owner decision. Never delete
+`main`, a protected branch, another open contributor branch, or an unverified
+head merely because it appears old.
+
 Before allocating a claim ID, search the registry, campaigns, proposals, and
 memory. Rejected and provisional IDs remain reserved. Refresh the issue, PR,
 Git status, and shared canonical files before editing them; never overwrite a
@@ -281,6 +291,10 @@ After the final disposition:
 
 - update the canonical issue with unit-level lists for merged, requires
   refactor, and history-only work, including landed links and rationales;
+- after a successful merge, confirm the exact same-repository PR head was
+  automatically deleted and delete it explicitly if the repository setting did
+  not do so; retain closed-unmerged or failed heads unless their owner explicitly
+  retires them;
 - leave the issue open with the next decisive action when the PR only advances
   it;
 - synchronize durable effort or decision memory with the landed commit and
