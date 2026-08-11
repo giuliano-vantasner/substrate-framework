@@ -1,0 +1,100 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Build-chain smoke document},
+  pdfauthor={docs pipeline (issue \#33)},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Build-chain smoke document}
+\author{docs pipeline (issue \#33)}
+\date{2026-08-11}
+
+\begin{document}
+\maketitle
+
+\hypertarget{purpose}{%
+\section{Purpose}\label{purpose}}
+
+This document exists only to prove the MD -\textgreater{} LaTeX
+-\textgreater{} PDF chain end to end: YAML metadata, section headings,
+inline math \(e^{i\pi} + 1 = 0\), display math with explicit tags,
+footnotes,\footnote{A pandoc footnote, rendered by LaTeX.} and a table.
+
+\hypertarget{math}{%
+\section{Math}\label{math}}
+
+\[\Gamma^{\sigma}{}_{\rho\nu} = \frac{1}{2}\, g^{\sigma\lambda}\left( \partial_{\rho} g_{\lambda\nu} + \partial_{\nu} g_{\lambda\rho} - \partial_{\lambda} g_{\rho\nu} \right). \tag{1}\]
+
+\hypertarget{table}{%
+\section{Table}\label{table}}
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Chain step & Tool \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+MD -\textgreater{} LaTeX & pandoc \\
+LaTeX -\textgreater{} PDF & xelatex \\
+\end{longtable}
+
+\end{document}
