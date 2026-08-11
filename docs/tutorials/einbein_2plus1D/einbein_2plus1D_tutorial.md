@@ -1,0 +1,625 @@
+# Transforming the Canonical Lagrangian of a Relativistic Particle for a Smooth Massless Limit: The Einbein Formulation in 2 + 1 Dimensions
+
+Version 1.1 — 11 August 2026
+
+Giuliano (Vantasner AG), extending the 1 + 1 tutorial of Tiziano Fulceri (DOI: 10.5281/zenodo.21879560)
+
+Technical Tutorial Notes for Mathematical Physics Students (General Relativity, Lagrangian Mechanics, and the Massless Limit)
+
+## Abstract
+
+This tutorial extends, step by step and without omitting intermediate algebraic manipulations, the einbein reformulation of the relativistic point-particle action from 1 + 1 to 2 + 1 spacetime dimensions. The variational core of the construction is dimension-independent and is re-derived in full: all Euler–Lagrange equations are computed explicitly, the algebraic solution for the einbein is substituted back into the action, and the recovery of the original square-root form is verified by direct calculation. The genuinely new content of the 2 + 1-dimensional setting is then isolated and developed: the null directions form a circle rather than a pair of rays, the mass-shell constraint underdetermines the velocity, the little groups are $SO(2)$ (massive) and $\mathbb{R}$ (massless) rather than the trivial group, and massive particles in 2 + 1 dimensions may carry any real spin (anyons) while massless particles — in the conventional physical sector, where the translation-like massless little group is taken to act trivially — carry no spin degree of freedom at all (the mathematically allowed alternative is discussed in Section 10.2). The presentation is self-contained for a reader already familiar with the principles of general relativity, the Lagrangian formalism, and the Euler–Lagrange equations; familiarity with the companion 1 + 1-dimensional notes is helpful but not assumed. References to standard textbooks and original papers are provided with author names, titles, publication years and, where available, stable URLs.
+
+## Contents
+
+1. Introduction and Motivation
+2. Notation and Geometric Setup in 2 + 1 Dimensions
+3. The Canonical Square-Root Action
+4. Difficulties with the Massless Limit
+5. The Einbein Reformulation
+6. Euler–Lagrange Equation for the Einbein
+7. Substitution and Recovery of the Square-Root Action
+8. Euler–Lagrange Equations for the Coordinates (Massive Case)
+9. The Massless Case: Euler–Lagrange Equations and Null Geodesics
+10. Where the Dimension Enters: Null Directions, Mass Shells, and Little Groups
+11. Brief Hamiltonian Perspective
+12. Resolution of the Equations of Motion and the Resulting Trajectories
+13. Summary
+
+## 1 Introduction and Motivation
+
+The companion tutorial [0] carried out the einbein reformulation of the relativistic point particle in 1 + 1 spacetime dimensions, deriving every algebraic step explicitly. The present notes perform the same construction in 2 + 1 dimensions. The motivation for doing so is not merely to add an index. In 1 + 1 dimensions the construction works, but it never has to answer the questions that make the massless limit physically interesting, because in 1 + 1 dimensions
+
+- the null cone consists of exactly two rays, so a massless particle is characterized by a single discrete bit (left- or right-moving);
+- the null condition fixes a massless velocity up to its scale and that discrete choice, and even the massive mass shell retains only **one** continuous parameter (a rapidity), so the constraint analysis is almost trivial;
+- there is no transverse space, so no rotation group can act on the internal state of a particle, and spin in the ordinary sense does not exist.
+
+In 2 + 1 dimensions each of these simplifications fails, in a controlled and instructive way:
+
+- the null directions form a **circle** $S^{1}$ — a continuous family — rather than two points;
+- the mass-shell condition is one equation for two independent velocity ratios, so it **underdetermines** the velocity: the direction of motion is genuine initial data;
+- the massive little group is the rotation group $SO(2)$, whose universal cover has irreducible unitary representations labeled by any real number, so massive particles in 2 + 1 dimensions can carry **anyonic spin**; the massless little group collapses to the translation group $\mathbb{R}$, and in the conventional physical sector — where this translation-like action is taken to be trivial — massless states carry **no spin degree of freedom** at all (the nontrivial representations are mathematically allowed; see Section 10.2).
+
+The einbein device itself, however, is indifferent to the dimension: the same auxiliary world-line field $e(\tau) > 0$ converts the square-root action into a quadratic one, the same algebraic constraint appears, and the same reparametrization gauge $e = \mathrm{const}$ restores the affine geodesic equation. The first half of these notes (Sections 2–9) therefore re-derives the construction with all steps displayed, so that the present document remains self-contained in the style of [0]. The second half (Sections 10–12) develops the dimensional novelties listed above, with references to the original literature.
+
+A roadmap for the reader who has already studied [0]: Sections 2–9 are the 1 + 1 derivation with three indices instead of two, and can be skimmed except for Section 8.4, where the eighteen independent Christoffel components of a general 2 + 1 metric are written out. Sections 10 and 12 contain the new material.
+
+## 2 Notation and Geometric Setup in 2 + 1 Dimensions
+
+We work on a three-dimensional Lorentzian manifold $M$ equipped with a metric tensor $g_{\mu\nu}$ of signature $(-, +, +)$. Local coordinates are denoted $x^{\mu} = (x^{0}, x^{1}, x^{2})$. A world-line is a smooth map
+
+$$x^{\mu} : I \subset \mathbb{R} \longrightarrow M, \qquad \tau \longmapsto x^{\mu}(\tau), \tag{1}$$
+
+where $\tau$ is an arbitrary parameter (not necessarily proper time). Derivatives with respect to $\tau$ are written with a dot: $\dot{x}^{\mu}(\tau) := \dfrac{dx^{\mu}}{d\tau}$.
+
+The induced interval on the world-line is
+
+$$ds^{2} = g_{\mu\nu}(x(\tau))\, dx^{\mu} dx^{\nu} = g_{\mu\nu}(x)\, \dot{x}^{\mu} \dot{x}^{\nu}\, d\tau^{2}. \tag{2}$$
+
+We adopt the convention that a future-directed timelike vector $v^{\mu}$ satisfies
+
+$$g_{\mu\nu} v^{\mu} v^{\nu} < 0. \tag{3}$$
+
+Consequently the quantity
+
+$$\sigma := g_{\mu\nu}(x)\, \dot{x}^{\mu} \dot{x}^{\nu} \tag{4}$$
+
+is negative for a timelike world-line. Because the signature is $(-,+,+)$, the metric has one negative and two positive eigenvalues; the determinant, being the product of the eigenvalues, is negative:
+
+$$\det(g_{\mu\nu}) = g_{00}g_{11}g_{22} + 2\, g_{01}g_{12}g_{02} - g_{00}g_{12}^{2} - g_{11}g_{02}^{2} - g_{22}g_{01}^{2} < 0, \tag{5}$$
+
+where the explicit expression is the Leibniz (cofactor) expansion of the $3 \times 3$ determinant: the three even permutations of the columns contribute with a plus sign and the three odd permutations with a minus sign, with the symmetry $g_{\mu\nu} = g_{\nu\mu}$ used to collect the two mixed products $g_{01}g_{12}g_{20}$ and $g_{02}g_{21}g_{10}$ into the single term $2\,g_{01}g_{12}g_{02}$.
+
+Throughout we keep the speed of light $c_{0}$ explicit. Rest mass is denoted $m \geq 0$.
+
+## 3 The Canonical Square-Root Action
+
+The action that extremizes proper time is
+
+$$S_{\mathrm{sqrt}}[x] = -mc_{0} \int_{\tau_{i}}^{\tau_{f}} \sqrt{-g_{\mu\nu}(x)\, \dot{x}^{\mu} \dot{x}^{\nu}}\; d\tau = -mc_{0} \int \sqrt{-\sigma}\; d\tau. \tag{6}$$
+
+The associated Lagrangian density (with respect to the parameter $\tau$) is therefore
+
+$$L_{\mathrm{sqrt}} = -mc_{0}\sqrt{-g_{\mu\nu}\, \dot{x}^{\mu} \dot{x}^{\nu}} = -mc_{0}\sqrt{-\sigma}. \tag{7}$$
+
+Because $L_{\mathrm{sqrt}}$ is homogeneous of degree one in the velocities, the action is invariant under arbitrary reparametrizations $\tau \to f(\tau)$ with $\dot{f} > 0$.[^reparam] The Euler–Lagrange equations obtained from $L_{\mathrm{sqrt}}$ are equivalent to the geodesic equation
+
+$$\frac{D \dot{x}^{\mu}}{d\tau} = 0 \tag{8}$$
+
+when the parameter is chosen to be an affine parameter[^affine] (or, more generally, proportional to proper time). None of these statements involves the dimension of $M$; the proofs given in [0], Section 3, apply verbatim.
+
+[^reparam]: "Reparametrization invariance" means that the value of the action does not change if the world-line is relabeled by any strictly increasing function $f$: the curve as a geometric object is unchanged, only its parametrization. Homogeneity of degree one, $L(x, \lambda \dot{x}) = \lambda L(x, \dot{x})$ for $\lambda > 0$, is precisely the property that makes the integral parameter-independent by the change-of-variables formula.
+
+[^affine]: A parameter $\tau$ along a geodesic is called affine if the tangent vector is parallel-transported without rescaling: $D\dot{x}^{\mu}/d\tau = 0$. Any other parameter produces an extra term proportional to $\dot{x}^{\mu}$; such a parameter is called non-affine. Affine parameters along a given geodesic are unique up to affine changes $\tau \to a\tau + b$; see S. M. Carroll, *Spacetime and Geometry* (Cambridge University Press, 2019), §3.3.
+
+## 4 Difficulties with the Massless Limit
+
+If one attempts to set $m = 0$ directly in (7), the action vanishes for every trajectory that satisfies the null condition $\sigma = 0$. The variational principle then ceases to select a preferred class of curves: every null curve yields the same (zero) value of the action. Moreover, the square-root Lagrangian becomes non-differentiable on the light cone. Consequently a different formulation is required if one wishes a single action principle that covers both the massive and the massless cases continuously.
+
+In 2 + 1 dimensions there is an additional, kinematic hint that the massless theory must be approached with care. For a massive particle the tangent vector is confined to the interior of the future light cone, a connected open set in each tangent space. As $m \to 0$ the tangent vector is pushed onto the boundary of that cone. In 1 + 1 dimensions the boundary of the future cone is a discrete set of two rays, and the massive theory prepares the discrete label continuously: a timelike velocity with $\dot{x}^{1}/\dot{x}^{0} > 0$ tends to the right-moving ray. In 2 + 1 dimensions the boundary of the future cone is a two-dimensional cone, whose space of directions is a circle; the continuous angular label survives the limit. Section 10 makes this precise.
+
+## 5 The Einbein Reformulation
+
+Introduce a real auxiliary field $e(\tau) > 0$, called the einbein. Geometrically, $e$ may be viewed as defining an intrinsic metric on the one-dimensional world-line via
+
+$$ds^{2}_{\mathrm{worldline}} = e(\tau)^{2}\, d\tau^{2}. \tag{9}$$
+
+Consider the new action functional that depends on both the embedding $x^{\mu}(\tau)$ and the einbein $e(\tau)$:
+
+$$S[x, e] = \int_{\tau_{i}}^{\tau_{f}} \left[ \frac{1}{2e}\, g_{\mu\nu}(x)\, \dot{x}^{\mu} \dot{x}^{\nu} - \frac{e}{2}(mc_{0})^{2} \right] d\tau. \tag{10}$$
+
+The corresponding Lagrangian is
+
+$$L(x, \dot{x}, e) = \frac{1}{2e}\, \sigma - \frac{e}{2}(mc_{0})^{2}, \tag{11}$$
+
+where $\sigma = g_{\mu\nu} \dot{x}^{\mu} \dot{x}^{\nu}$ as before. Note that $L$ is quadratic in the velocities and contains no derivative of $e$; the einbein is therefore an auxiliary (non-dynamical) field.[^auxiliary] The action (10) is invariant under the reparametrizations
+
+$$\tau \longmapsto f(\tau), \qquad e(\tau) \longmapsto \frac{e(\tau)}{\dot{f}(\tau)} \qquad (\dot{f} > 0), \tag{12}$$
+
+because under the combined transformation the first term of the integrand picks up $1/\dot{f}^{2}$ from the two velocities and $\dot{f}$ from the measure, for a net $1/\dot{f}$ — which is exactly cancelled by the einbein's law $1/e \to \dot{f}/e$; the second term picks up $1/\dot{f}$ from $e \to e/\dot{f}$ and $\dot{f}$ from the measure, and is invariant as it stands. The invariant combination is $e(\tau)\, d\tau$, the world-line volume element $\sqrt{g_{\mathrm{worldline}}}\, d\tau$ of (9). The einbein is thus not an optional trick but the required compensating field: it is the degree-one object on the world-line whose transformation law absorbs the Jacobian $\dot{f}$ so that a quadratic action can remain reparametrization-invariant.
+
+[^auxiliary]: An auxiliary (or non-dynamical) field is one whose equation of motion contains no derivatives of the field itself and can therefore be solved algebraically in terms of the other fields. Substituting the algebraic solution back into the action returns an equivalent description of the same classical theory.
+
+## 6 Euler–Lagrange Equation for the Einbein
+
+The general Euler–Lagrange equation associated with any variable $\varphi(\tau)$ is
+
+$$\frac{d}{d\tau} \frac{\partial L}{\partial \dot{\varphi}} - \frac{\partial L}{\partial \varphi} = 0. \tag{13}$$
+
+We now specialise this equation to the einbein by a sequence of purely logical steps, exactly as in [0], Section 6.
+
+**Step 1.** Start from the general Euler–Lagrange equation (13).
+
+**Step 2.** Choose the variable $\varphi = e(\tau)$. The equation becomes
+
+$$\frac{d}{d\tau} \frac{\partial L}{\partial \dot{e}} - \frac{\partial L}{\partial e} = 0. \tag{14}$$
+
+**Step 3.** Inspection of the explicit Lagrangian
+
+$$L = \frac{1}{2e}\, g_{\mu\nu} \dot{x}^{\mu} \dot{x}^{\nu} - \frac{e}{2}(mc_{0})^{2} \tag{15}$$
+
+shows that the derivative $\dot{e}$ never appears. Consequently the partial derivative with respect to that velocity vanishes identically:
+
+$$\frac{\partial L}{\partial \dot{e}} \equiv 0. \tag{16}$$
+
+**Step 4.** The ordinary derivative of the zero function is zero:
+
+$$\frac{d}{d\tau} \frac{\partial L}{\partial \dot{e}} = \frac{d}{d\tau}(0) = 0. \tag{17}$$
+
+**Step 5.** Substituting the result of Step 4 into the specialised equation of Step 2 leaves only
+
+$$- \frac{\partial L}{\partial e} = 0. \tag{18}$$
+
+**Step 6.** Multiplying both sides by $-1$ yields the equivalent statement
+
+$$\frac{\partial L}{\partial e} = 0. \tag{19}$$
+
+Thus equation (19) is nothing but the general Euler–Lagrange equation after the observation that $\partial L / \partial \dot{e}$ is identically zero has been used. No further dynamical assumption is required; the reduction is purely formal.
+
+We now compute the partial derivative $\partial L / \partial e$ term by term. The Lagrangian is the sum of two pieces:
+
+$$L = \underbrace{\frac{1}{2e}\, \sigma}_{L_{1}} + \underbrace{\left( - \frac{e}{2}(mc_{0})^{2} \right)}_{L_{2}}.$$
+
+Differentiating each piece separately with respect to $e$ (treating the velocity combination $\sigma$ as independent of $e$) yields
+
+$$\frac{\partial L_{1}}{\partial e} = \frac{\partial}{\partial e} \left( \frac{1}{2e} \sigma \right) = \sigma \cdot \frac{\partial}{\partial e}\left( \frac{1}{2e} \right) = \sigma \cdot \left( - \frac{1}{2e^{2}} \right) = - \frac{1}{2e^{2}}\, \sigma, \tag{20}$$
+
+$$\frac{\partial L_{2}}{\partial e} = \frac{\partial}{\partial e} \left( - \frac{e}{2}(mc_{0})^{2} \right) = - \frac{1}{2}(mc_{0})^{2}. \tag{21}$$
+
+Because differentiation is a linear operation,
+
+$$\frac{\partial L}{\partial e} = \frac{\partial L_{1}}{\partial e} + \frac{\partial L_{2}}{\partial e} = - \frac{1}{2e^{2}}\, \sigma - \frac{1}{2}(mc_{0})^{2}. \tag{22}$$
+
+The Euler–Lagrange condition $\partial L / \partial e = 0$ (already established in equation (19)) therefore requires
+
+$$- \frac{1}{2e^{2}}\, \sigma - \frac{1}{2}(mc_{0})^{2} = 0. \tag{23}$$
+
+To solve the algebraic equation we multiply both sides by the nowhere-vanishing factor $-2e^{2}$:
+
+$$\left( -2e^{2} \right) \left( - \frac{1}{2e^{2}}\, \sigma \right) + \left( -2e^{2} \right) \left( - \frac{1}{2}(mc_{0})^{2} \right) = 0
+\quad \Longrightarrow \quad \sigma + e^{2}(mc_{0})^{2} = 0. \tag{24}$$
+
+Equivalently,
+
+$$g_{\mu\nu}\, \dot{x}^{\mu} \dot{x}^{\nu} = - e^{2} (mc_{0})^{2}. \tag{25}$$
+
+Solving for the positive root $e > 0$ gives
+
+$$e(\tau) = \frac{\sqrt{-\sigma}}{mc_{0}} = \frac{\sqrt{-g_{\mu\nu}(x)\, \dot{x}^{\mu} \dot{x}^{\nu}}}{mc_{0}}. \tag{26}$$
+
+(The negative root would correspond to a time-reversed parametrization and is discarded by the orientation convention $e > 0$.)
+
+Observe that the dimension of the spacetime has entered this section only through the index range of $\mu$ in $\sigma$. Every step is valid for any dimension, in particular for 2 + 1.
+
+## 7 Substitution and Recovery of the Square-Root Action
+
+We now substitute the algebraic solution (26) back into the Lagrangian (11) and verify that the original square-root Lagrangian is recovered exactly.
+
+From the constraint (25) we have
+
+$$\sigma = - e^{2} (mc_{0})^{2}. \tag{27}$$
+
+Insert this expression into the first term of $L$:
+
+$$\frac{1}{2e}\, \sigma = \frac{-e^{2}(mc_{0})^{2}}{2e} = - \frac{e}{2}(mc_{0})^{2}. \tag{28}$$
+
+Therefore the whole Lagrangian becomes
+
+$$L = - \frac{e}{2}(mc_{0})^{2} - \frac{e}{2}(mc_{0})^{2} = - e\, (mc_{0})^{2}. \tag{29}$$
+
+Now replace $e$ by its explicit solution (26):
+
+$$L = - \left( \frac{\sqrt{-\sigma}}{mc_{0}} \right) (mc_{0})^{2} = - mc_{0} \sqrt{-\sigma} = - mc_{0} \sqrt{-g_{\mu\nu}\, \dot{x}^{\mu} \dot{x}^{\nu}}. \tag{30}$$
+
+This is precisely $L_{\mathrm{sqrt}}$ of equation (7). Consequently the two action principles are classically equivalent for $m > 0$: every critical point of $S[x, e]$ that satisfies the einbein equation of motion projects to a critical point of $S_{\mathrm{sqrt}}[x]$, and vice versa. The equivalence holds in any spacetime dimension; the 2 + 1-dimensional case needed no modification.
+
+## 8 Euler–Lagrange Equations for the Coordinates (Massive Case)
+
+We next derive the equations of motion for the embedding coordinates $x^{\lambda}(\tau)$ in the massive case $m > 0$. The Lagrangian
+
+$$L(x, \dot{x}, e) = \frac{1}{2e}\, g_{\mu\nu}(x)\, \dot{x}^{\mu} \dot{x}^{\nu} - \frac{e}{2}(mc_{0})^{2} \tag{31}$$
+
+depends on the coordinates both through the metric coefficients $g_{\mu\nu}(x)$ and through the velocities $\dot{x}^{\mu}$. The Euler–Lagrange equation for each component $x^{\lambda}$ ($\lambda = 0, 1, 2$) is
+
+$$\frac{d}{d\tau} \frac{\partial L}{\partial \dot{x}^{\lambda}} = \frac{\partial L}{\partial x^{\lambda}}. \tag{32}$$
+
+Throughout this section the einbein $e(\tau)$ is treated as an independent field (its own equation of motion will be imposed afterwards).
+
+### 8.1 Partial derivative with respect to the velocity
+
+Differentiate $L$ with respect to $\dot{x}^{\lambda}$. Only the first term contributes:
+
+$$\frac{\partial L}{\partial \dot{x}^{\lambda}} = \frac{\partial}{\partial \dot{x}^{\lambda}} \left( \frac{1}{2e}\, g_{\mu\nu}(x)\, \dot{x}^{\mu} \dot{x}^{\nu} \right)
+= \frac{1}{2e}\, g_{\mu\nu}(x) \left( \delta^{\mu}{}_{\lambda} \dot{x}^{\nu} + \dot{x}^{\mu} \delta^{\nu}{}_{\lambda} \right)
+= \frac{1}{2e} \left( g_{\lambda\nu} \dot{x}^{\nu} + g_{\mu\lambda} \dot{x}^{\mu} \right)
+= \frac{1}{e}\, g_{\lambda\nu}(x)\, \dot{x}^{\nu}, \tag{33}$$
+
+where the last equality follows from the symmetry $g_{\mu\lambda} = g_{\lambda\mu}$. Consequently the left-hand side of the Euler–Lagrange equation is the total $\tau$-derivative
+
+$$\frac{d}{d\tau} \frac{\partial L}{\partial \dot{x}^{\lambda}} = \frac{d}{d\tau} \left( \frac{1}{e}\, g_{\lambda\nu}(x)\, \dot{x}^{\nu} \right). \tag{34}$$
+
+### 8.2 Partial derivative with respect to the coordinate
+
+At fixed velocities the only dependence of $L$ on the coordinate $x^{\lambda}$ comes from the metric tensor:
+
+$$\frac{\partial L}{\partial x^{\lambda}} = \frac{1}{2e} \left( \partial_{\lambda} g_{\mu\nu}(x) \right) \dot{x}^{\mu} \dot{x}^{\nu}. \tag{35}$$
+
+(The second term of $L$ does not depend on $x$.)
+
+### 8.3 The Euler–Lagrange equation before imposing the einbein constraint
+
+Equating (34) and (35) yields the explicit Euler–Lagrange equation
+
+$$\frac{d}{d\tau} \left( \frac{1}{e}\, g_{\lambda\nu} \dot{x}^{\nu} \right) = \frac{1}{2e} \left( \partial_{\lambda} g_{\mu\nu} \right) \dot{x}^{\mu} \dot{x}^{\nu}. \tag{36}$$
+
+We now convert (36) into an equivalent form by a sequence of elementary calculus steps.
+
+**Step 1.** The left-hand side of (36) is the ordinary derivative of a product of two $\tau$-dependent factors, $\dfrac{1}{e(\tau)}$ and $g_{\lambda\nu}(x(\tau))\, \dot{x}^{\nu}(\tau)$. Apply the ordinary product rule:
+
+$$\frac{d}{d\tau} \left( \frac{1}{e}\, g_{\lambda\nu} \dot{x}^{\nu} \right) = \left( \frac{d}{d\tau} \frac{1}{e} \right) \left( g_{\lambda\nu} \dot{x}^{\nu} \right) + \frac{1}{e}\, \frac{d}{d\tau} \left( g_{\lambda\nu} \dot{x}^{\nu} \right). \tag{37}$$
+
+**Step 2.** Differentiate the reciprocal of the einbein by the chain rule:
+
+$$\frac{d}{d\tau} \frac{1}{e} = \frac{d}{d\tau} \left( e^{-1} \right) = - e^{-2}\, \dot{e} = - \frac{\dot{e}}{e^{2}}. \tag{38}$$
+
+**Step 3.** Substitute the result of Step 2 back into the product rule of Step 1:
+
+$$\frac{d}{d\tau} \left( \frac{1}{e}\, g_{\lambda\nu} \dot{x}^{\nu} \right) = - \frac{\dot{e}}{e^{2}}\, \left( g_{\lambda\nu} \dot{x}^{\nu} \right) + \frac{1}{e}\, \frac{d}{d\tau} \left( g_{\lambda\nu} \dot{x}^{\nu} \right). \tag{39}$$
+
+**Step 4.** Equation (36) therefore reads
+
+$$- \frac{\dot{e}}{e^{2}}\, g_{\lambda\nu} \dot{x}^{\nu} + \frac{1}{e}\, \frac{d}{d\tau} \left( g_{\lambda\nu} \dot{x}^{\nu} \right) = \frac{1}{2e} \left( \partial_{\lambda} g_{\mu\nu} \right) \dot{x}^{\mu} \dot{x}^{\nu}. \tag{40}$$
+
+**Step 5.** Multiply every term of the equation by the positive factor $e$ (which never vanishes by definition of the einbein). The first term becomes $- \dfrac{\dot{e}}{e}\, g_{\lambda\nu} \dot{x}^{\nu}$, the second term becomes $\dfrac{d}{d\tau} \left( g_{\lambda\nu} \dot{x}^{\nu} \right)$, and the right-hand side becomes $\dfrac{1}{2} \left( \partial_{\lambda} g_{\mu\nu} \right) \dot{x}^{\mu} \dot{x}^{\nu}$.
+
+**Step 6.** Rearrange the resulting terms to obtain
+
+$$\frac{d}{d\tau} \left( g_{\lambda\nu} \dot{x}^{\nu} \right) - \frac{\dot{e}}{e}\, g_{\lambda\nu} \dot{x}^{\nu} = \frac{1}{2} \left( \partial_{\lambda} g_{\mu\nu} \right) \dot{x}^{\mu} \dot{x}^{\nu}. \tag{41}$$
+
+All six steps are ordinary calculus (product rule and chain rule) together with multiplication by a nowhere-vanishing positive function; no geometric identity is required for this particular transition, and no step refers to the spacetime dimension.
+
+### 8.4 Expansion of the total derivative and introduction of the Christoffel symbols
+
+Expand the total derivative that appears on the left-hand side of (41). Write the product as $g_{\lambda\nu}(x(\tau))\, \dot{x}^{\nu}(\tau)$ and apply the ordinary product rule of one-variable calculus:
+
+$$\frac{d}{d\tau} \left( g_{\lambda\nu} \dot{x}^{\nu} \right) = \left( \frac{d}{d\tau} g_{\lambda\nu} \right) \dot{x}^{\nu} + g_{\lambda\nu}\, \ddot{x}^{\nu}. \tag{42}$$
+
+The second term is immediate. The first term requires care because the metric components are functions of the spacetime coordinates, which themselves depend on $\tau$. In 2 + 1 dimensions this dependence may be written explicitly:
+
+$$g_{\lambda\nu} = g_{\lambda\nu}\left( x^{0}(\tau), x^{1}(\tau), x^{2}(\tau) \right).$$
+
+The ordinary chain rule of multivariable calculus then states
+
+$$\frac{d}{d\tau} g_{\lambda\nu} = \frac{\partial g_{\lambda\nu}}{\partial x^{0}}\, \dot{x}^{0} + \frac{\partial g_{\lambda\nu}}{\partial x^{1}}\, \dot{x}^{1} + \frac{\partial g_{\lambda\nu}}{\partial x^{2}}\, \dot{x}^{2}. \tag{43}$$
+
+In index notation the sum over the three coordinates is abbreviated
+
+$$\frac{d}{d\tau} g_{\lambda\nu} = \left( \partial_{\rho} g_{\lambda\nu} \right) \dot{x}^{\rho}, \tag{44}$$
+
+where $\partial_{\rho} = \partial / \partial x^{\rho}$ and the repeated index $\rho$ is summed over $0, 1, 2$. Multiplying by the remaining velocity $\dot{x}^{\nu}$ produces the quadratic term
+
+$$\left( \frac{d}{d\tau} g_{\lambda\nu} \right) \dot{x}^{\nu} = \left( \partial_{\rho} g_{\lambda\nu} \right) \dot{x}^{\rho} \dot{x}^{\nu}. \tag{45}$$
+
+Collecting both contributions yields the expansion
+
+$$\frac{d}{d\tau} \left( g_{\lambda\nu} \dot{x}^{\nu} \right) = \left( \partial_{\rho} g_{\lambda\nu} \right) \dot{x}^{\rho} \dot{x}^{\nu} + g_{\lambda\nu}\, \ddot{x}^{\nu}. \tag{46}$$
+
+Substitution of this expansion into (41) produces
+
+$$\left( \partial_{\rho} g_{\lambda\nu} \right) \dot{x}^{\rho} \dot{x}^{\nu} + g_{\lambda\nu}\, \ddot{x}^{\nu} - \frac{\dot{e}}{e}\, g_{\lambda\nu} \dot{x}^{\nu} = \frac{1}{2} \left( \partial_{\lambda} g_{\mu\nu} \right) \dot{x}^{\mu} \dot{x}^{\nu}. \tag{47}$$
+
+We now raise the free (covariant) index $\lambda$ by a sequence of purely algebraic steps that use only the inverse metric.
+
+**Step 1.** Move every term of (47) to the left-hand side:
+
+$$g_{\lambda\nu}\, \ddot{x}^{\nu} + \left( \partial_{\rho} g_{\lambda\nu} \right) \dot{x}^{\rho} \dot{x}^{\nu} - \frac{1}{2} \left( \partial_{\lambda} g_{\mu\nu} \right) \dot{x}^{\mu} \dot{x}^{\nu} - \frac{\dot{e}}{e}\, g_{\lambda\nu} \dot{x}^{\nu} = 0. \tag{48}$$
+
+**Step 2.** Multiply the entire equation by the inverse-metric component $g^{\sigma\lambda}$ and sum over $\lambda$:
+
+$$g^{\sigma\lambda} \left( g_{\lambda\nu}\, \ddot{x}^{\nu} + \left( \partial_{\rho} g_{\lambda\nu} \right) \dot{x}^{\rho} \dot{x}^{\nu} - \frac{1}{2} \left( \partial_{\lambda} g_{\mu\nu} \right) \dot{x}^{\mu} \dot{x}^{\nu} - \frac{\dot{e}}{e}\, g_{\lambda\nu} \dot{x}^{\nu} \right) = 0. \tag{49}$$
+
+**Step 3.** Distribute the factor $g^{\sigma\lambda}$ term by term.
+
+- First term (second derivatives): $g^{\sigma\lambda} g_{\lambda\nu}\, \ddot{x}^{\nu} = \delta^{\sigma}{}_{\nu}\, \ddot{x}^{\nu} = \ddot{x}^{\sigma}$ (by the defining property of the inverse metric).
+- Last term (einbein derivative): $g^{\sigma\lambda} \left( - \dfrac{\dot{e}}{e}\, g_{\lambda\nu} \dot{x}^{\nu} \right) = - \dfrac{\dot{e}}{e}\, \delta^{\sigma}{}_{\nu}\, \dot{x}^{\nu} = - \dfrac{\dot{e}}{e}\, \dot{x}^{\sigma}$.
+- The two middle terms that involve derivatives of the metric remain $g^{\sigma\lambda} \left( \left( \partial_{\rho} g_{\lambda\nu} \right) \dot{x}^{\rho} \dot{x}^{\nu} - \frac{1}{2} \left( \partial_{\lambda} g_{\mu\nu} \right) \dot{x}^{\mu} \dot{x}^{\nu} \right)$.
+
+**Step 4.** Because the velocity bilinears are symmetric, the combination of metric derivatives that multiplies $\dot{x}^{\rho} \dot{x}^{\nu}$ may be rewritten
+
+$$\frac{1}{2}\, g^{\sigma\lambda} \left( 2\, \partial_{\rho} g_{\lambda\nu} - \partial_{\lambda} g_{\rho\nu} \right) \dot{x}^{\rho} \dot{x}^{\nu}. \tag{50}$$
+
+The two index placements are equal because renaming the summed indices $\rho \leftrightarrow \nu$ maps $\partial_{\nu} g_{\lambda\rho}\, \dot{x}^{\rho} \dot{x}^{\nu}$ onto $\partial_{\rho} g_{\lambda\nu}\, \dot{x}^{\rho} \dot{x}^{\nu}$; the symmetrized combination is exactly what the Christoffel symbol requires.
+
+**Step 5.** Collecting all pieces yields
+
+$$\ddot{x}^{\sigma} + \frac{1}{2}\, g^{\sigma\lambda} \left( \partial_{\rho} g_{\lambda\nu} + \partial_{\nu} g_{\lambda\rho} - \partial_{\lambda} g_{\rho\nu} \right) \dot{x}^{\rho} \dot{x}^{\nu} - \frac{\dot{e}}{e}\, \dot{x}^{\sigma} = 0. \tag{51}$$
+
+Every step above is ordinary linear algebra with the inverse metric together with the symmetry of the velocity bilinears; no geometric identity beyond the existence of the inverse metric is required.
+
+The combination of metric derivatives in (51) is the Christoffel symbol of the Levi-Civita connection,
+
+$$\Gamma^{\sigma}{}_{\rho\nu} = \frac{1}{2}\, g^{\sigma\lambda} \left( \partial_{\rho} g_{\lambda\nu} + \partial_{\nu} g_{\lambda\rho} - \partial_{\lambda} g_{\rho\nu} \right). \tag{52}$$
+
+Because the lower indices are symmetric, $\Gamma^{\sigma}{}_{\rho\nu} = \Gamma^{\sigma}{}_{\nu\rho}$, the number of independent components in $n$ spacetime dimensions is $n$ (choices of $\sigma$) times $n(n+1)/2$ (symmetric pairs $(\rho, \nu)$), i.e. $n^{2}(n+1)/2$: six components in 1 + 1 dimensions, **eighteen in 2 + 1 dimensions**. For completeness, and because the component bookkeeping is where higher-dimensional explicit calculations most often go wrong, we list all eighteen, organized by the upper index. For $\sigma = 0$:
+
+$$\begin{aligned}
+\Gamma^{0}{}_{00} &= \tfrac{1}{2} g^{00}\, \partial_{0} g_{00} + \tfrac{1}{2} g^{01} \left( 2 \partial_{0} g_{10} - \partial_{1} g_{00} \right) + \tfrac{1}{2} g^{02} \left( 2 \partial_{0} g_{20} - \partial_{2} g_{00} \right), \\
+\Gamma^{0}{}_{01} &= \tfrac{1}{2} g^{00}\, \partial_{1} g_{00} + \tfrac{1}{2} g^{01}\, \partial_{0} g_{11} + \tfrac{1}{2} g^{02} \left( \partial_{0} g_{12} + \partial_{1} g_{02} - \partial_{2} g_{01} \right), \\
+\Gamma^{0}{}_{02} &= \tfrac{1}{2} g^{00}\, \partial_{2} g_{00} + \tfrac{1}{2} g^{01} \left( \partial_{0} g_{12} + \partial_{2} g_{01} - \partial_{1} g_{02} \right) + \tfrac{1}{2} g^{02}\, \partial_{0} g_{22}, \\
+\Gamma^{0}{}_{11} &= \tfrac{1}{2} g^{00} \left( 2 \partial_{1} g_{01} - \partial_{0} g_{11} \right) + \tfrac{1}{2} g^{01}\, \partial_{1} g_{11} + \tfrac{1}{2} g^{02} \left( 2 \partial_{1} g_{21} - \partial_{2} g_{11} \right), \\
+\Gamma^{0}{}_{12} &= \tfrac{1}{2} g^{00} \left( \partial_{1} g_{02} + \partial_{2} g_{01} - \partial_{0} g_{12} \right) + \tfrac{1}{2} g^{01}\, \partial_{2} g_{11} + \tfrac{1}{2} g^{02}\, \partial_{1} g_{22}, \\
+\Gamma^{0}{}_{22} &= \tfrac{1}{2} g^{00} \left( 2 \partial_{2} g_{02} - \partial_{0} g_{22} \right) + \tfrac{1}{2} g^{01} \left( 2 \partial_{2} g_{12} - \partial_{1} g_{22} \right) + \tfrac{1}{2} g^{02}\, \partial_{2} g_{22}.
+\end{aligned} \tag{53}$$
+
+For $\sigma = 1$:
+
+$$\begin{aligned}
+\Gamma^{1}{}_{00} &= \tfrac{1}{2} g^{10}\, \partial_{0} g_{00} + \tfrac{1}{2} g^{11} \left( 2 \partial_{0} g_{10} - \partial_{1} g_{00} \right) + \tfrac{1}{2} g^{12} \left( 2 \partial_{0} g_{20} - \partial_{2} g_{00} \right), \\
+\Gamma^{1}{}_{01} &= \tfrac{1}{2} g^{10}\, \partial_{1} g_{00} + \tfrac{1}{2} g^{11}\, \partial_{0} g_{11} + \tfrac{1}{2} g^{12} \left( \partial_{0} g_{12} + \partial_{1} g_{02} - \partial_{2} g_{01} \right), \\
+\Gamma^{1}{}_{02} &= \tfrac{1}{2} g^{10}\, \partial_{2} g_{00} + \tfrac{1}{2} g^{11} \left( \partial_{0} g_{12} + \partial_{2} g_{01} - \partial_{1} g_{02} \right) + \tfrac{1}{2} g^{12}\, \partial_{0} g_{22}, \\
+\Gamma^{1}{}_{11} &= \tfrac{1}{2} g^{10} \left( 2 \partial_{1} g_{01} - \partial_{0} g_{11} \right) + \tfrac{1}{2} g^{11}\, \partial_{1} g_{11} + \tfrac{1}{2} g^{12} \left( 2 \partial_{1} g_{21} - \partial_{2} g_{11} \right), \\
+\Gamma^{1}{}_{12} &= \tfrac{1}{2} g^{10} \left( \partial_{1} g_{02} + \partial_{2} g_{01} - \partial_{0} g_{12} \right) + \tfrac{1}{2} g^{11}\, \partial_{2} g_{11} + \tfrac{1}{2} g^{12}\, \partial_{1} g_{22}, \\
+\Gamma^{1}{}_{22} &= \tfrac{1}{2} g^{10} \left( 2 \partial_{2} g_{02} - \partial_{0} g_{22} \right) + \tfrac{1}{2} g^{11} \left( 2 \partial_{2} g_{12} - \partial_{1} g_{22} \right) + \tfrac{1}{2} g^{12}\, \partial_{2} g_{22}.
+\end{aligned} \tag{54}$$
+
+For $\sigma = 2$:
+
+$$\begin{aligned}
+\Gamma^{2}{}_{00} &= \tfrac{1}{2} g^{20}\, \partial_{0} g_{00} + \tfrac{1}{2} g^{21} \left( 2 \partial_{0} g_{10} - \partial_{1} g_{00} \right) + \tfrac{1}{2} g^{22} \left( 2 \partial_{0} g_{20} - \partial_{2} g_{00} \right), \\
+\Gamma^{2}{}_{01} &= \tfrac{1}{2} g^{20}\, \partial_{1} g_{00} + \tfrac{1}{2} g^{21}\, \partial_{0} g_{11} + \tfrac{1}{2} g^{22} \left( \partial_{0} g_{12} + \partial_{1} g_{02} - \partial_{2} g_{01} \right), \\
+\Gamma^{2}{}_{02} &= \tfrac{1}{2} g^{20}\, \partial_{2} g_{00} + \tfrac{1}{2} g^{21} \left( \partial_{0} g_{12} + \partial_{2} g_{01} - \partial_{1} g_{02} \right) + \tfrac{1}{2} g^{22}\, \partial_{0} g_{22}, \\
+\Gamma^{2}{}_{11} &= \tfrac{1}{2} g^{20} \left( 2 \partial_{1} g_{01} - \partial_{0} g_{11} \right) + \tfrac{1}{2} g^{21}\, \partial_{1} g_{11} + \tfrac{1}{2} g^{22} \left( 2 \partial_{1} g_{21} - \partial_{2} g_{11} \right), \\
+\Gamma^{2}{}_{12} &= \tfrac{1}{2} g^{20} \left( \partial_{1} g_{02} + \partial_{2} g_{01} - \partial_{0} g_{12} \right) + \tfrac{1}{2} g^{21}\, \partial_{2} g_{11} + \tfrac{1}{2} g^{22}\, \partial_{1} g_{22}, \\
+\Gamma^{2}{}_{22} &= \tfrac{1}{2} g^{20} \left( 2 \partial_{2} g_{02} - \partial_{0} g_{22} \right) + \tfrac{1}{2} g^{21} \left( 2 \partial_{2} g_{12} - \partial_{1} g_{22} \right) + \tfrac{1}{2} g^{22}\, \partial_{2} g_{22}.
+\end{aligned} \tag{55}$$
+
+Each line is equation (52) with the sum over $\lambda$ written out and the trivial cancellations carried through (for instance, in $\Gamma^{\sigma}{}_{01}$ the $\lambda = 0$ contribution $\partial_{0}g_{01} + \partial_{1}g_{00} - \partial_{0}g_{01}$ collapses to $\partial_{1}g_{00}$, and the $\lambda = 1$ contribution $\partial_{0}g_{11} + \partial_{1}g_{10} - \partial_{1}g_{01}$ collapses to $\partial_{0}g_{11}$). The remaining nine components with $\rho > \nu$ (the pairs $(1,0)$, $(2,0)$, $(2,1)$ for each of the three values of $\sigma$) are fixed by the symmetry $\Gamma^{\sigma}{}_{\rho\nu} = \Gamma^{\sigma}{}_{\nu\rho}$.
+
+With these symbols the Euler–Lagrange equation takes the compact form
+
+$$\ddot{x}^{\sigma} + \Gamma^{\sigma}{}_{\rho\nu}\, \dot{x}^{\rho} \dot{x}^{\nu} - \frac{\dot{e}}{e}\, \dot{x}^{\sigma} = 0, \tag{56}$$
+
+or, equivalently,
+
+$$\frac{D}{d\tau} \left( \frac{\dot{x}^{\sigma}}{e} \right) = 0. \tag{57}$$
+
+Here the symbol $\dfrac{D}{d\tau}$ denotes the covariant (or absolute) derivative along the world-line. By definition,
+
+$$\frac{D V^{\sigma}}{d\tau} := \frac{d V^{\sigma}}{d\tau} + \Gamma^{\sigma}{}_{\rho\nu}\, \dot{x}^{\rho} V^{\nu} \tag{58}$$
+
+for any vector field $V^{\sigma}$ defined along the curve.
+
+Equation (56) is the geodesic equation written with respect to a non-affine parameter. The term proportional to $\dot{e}/e$ does not disappear automatically; it is the precise measure of the failure of $\tau$ to be an affine parameter. The resolution is identical to the 1 + 1-dimensional case, and we record it in the same five-step form:
+
+**Step 1 — Residual reparametrization freedom.** The pair $(x(\tau), e(\tau))$ is defined only up to the transformations (12). This residual freedom has not yet been fixed.
+
+**Step 2 — The algebraic (einbein) constraint.** Independently of the choice of parameter, the einbein equation of motion is the purely algebraic relation (25).
+
+**Step 3 — Imposing a convenient gauge condition.** Because of the residual freedom one is allowed to impose one additional condition on the variables. The most convenient choice is the gauge condition[^gauge]
+
+$$e(\tau) = \mathrm{const} \quad \Longrightarrow \quad \dot{e} = 0. \tag{59}$$
+
+(This gauge is always attainable: given any positive function $e(\tau)$ one can solve the ordinary differential equation that defines the new parameter $f$ so that the transformed einbein is constant.)
+
+**Step 4 — Disappearance of the non-affine term.** Once the gauge condition of Step 3 is imposed, the coefficient of the unwanted term vanishes identically, and equation (56) collapses to the canonical affine geodesic equation
+
+$$\frac{D \dot{x}^{\sigma}}{d\tau} = \ddot{x}^{\sigma} + \Gamma^{\sigma}{}_{\rho\nu}\, \dot{x}^{\rho} \dot{x}^{\nu} = 0. \tag{60}$$
+
+**Step 5 — Interpretation after the gauge choice.** With $e$ now a constant, the algebraic constraint (25) becomes a simple normalisation of the tangent vector,
+
+$$g_{\mu\nu}\, \dot{x}^{\mu} \dot{x}^{\nu} = - e^{2} (mc_{0})^{2} = \mathrm{const} < 0, \tag{61}$$
+
+which identifies the parameter $\tau$ with a multiple of the proper time.
+
+[^gauge]: In the language of constrained systems a gauge condition is an extra equation that one is free to impose in order to remove the redundancy associated with a local symmetry. It is not an equation of motion; it is a choice of representative inside each equivalence class of reparametrizations.
+
+Thus the Euler–Lagrange equations of the einbein action, after the einbein constraint is taken into account and a convenient gauge is chosen, are exactly the geodesic equations of the background metric — in 2 + 1 dimensions exactly as in 1 + 1.
+
+## 9 The Massless Case: Euler–Lagrange Equations and Null Geodesics
+
+We now set the rest mass to zero, $m = 0$. The Lagrangian simplifies to
+
+$$L = \frac{1}{2e}\, g_{\mu\nu}(x)\, \dot{x}^{\mu} \dot{x}^{\nu}. \tag{62}$$
+
+### 9.1 Euler–Lagrange equation for the einbein (massless)
+
+Because $L$ still does not depend on $\dot{e}$, the equation $\partial L / \partial e = 0$ reduces to
+
+$$- \frac{1}{2e^{2}}\, g_{\mu\nu}\, \dot{x}^{\mu} \dot{x}^{\nu} = 0, \tag{63}$$
+
+which immediately implies the null constraint
+
+$$g_{\mu\nu}\, \dot{x}^{\mu} \dot{x}^{\nu} = 0. \tag{64}$$
+
+### 9.2 Euler–Lagrange equations for the coordinates (massless)
+
+The partial derivatives with respect to velocity and coordinate are identical in form to those of the massive case (the mass term is absent, but it never contributed to these derivatives). Consequently one obtains again (36), and exactly the same algebraic steps that led from (36) to (56) now produce
+
+$$\ddot{x}^{\sigma} + \Gamma^{\sigma}{}_{\rho\nu}\, \dot{x}^{\rho} \dot{x}^{\nu} - \frac{\dot{e}}{e}\, \dot{x}^{\sigma} = 0, \tag{65}$$
+
+where the Christoffel symbols are still given by the explicit expressions (53)–(55). The residual reparametrization freedom is identical, the gauge $e = \mathrm{const}$ is still available, and in that gauge (65) collapses to the affine null-geodesic equation
+
+$$\frac{D \dot{x}^{\sigma}}{d\tau} = 0, \qquad g_{\mu\nu}\, \dot{x}^{\mu} \dot{x}^{\nu} = 0. \tag{66}$$
+
+The massless limit is therefore completely regular: the action with Lagrangian (62) is well-defined, the constraint (64) is enforced dynamically by the variation of the einbein, and the resulting trajectories are exactly the null geodesics.
+
+### 9.3 What the null constraint does and does not fix in 2 + 1 dimensions
+
+Here the dimension begins to matter. Write the null constraint (64) in a locally inertial frame at a point, where $g_{\mu\nu} = \eta_{\mu\nu} = \mathrm{diag}(-1, +1, +1)$:
+
+$$- \left( \dot{x}^{0} \right)^{2} + \left( \dot{x}^{1} \right)^{2} + \left( \dot{x}^{2} \right)^{2} = 0. \tag{67}$$
+
+For a future-directed world-line $\dot{x}^{0} > 0$, and we may parametrize all solutions by an angle $\theta \in [0, 2\pi)$:
+
+$$\dot{x}^{1} = \dot{x}^{0} \cos\theta, \qquad \dot{x}^{2} = \dot{x}^{0} \sin\theta. \tag{68}$$
+
+The null constraint is **one** equation for the **two** independent ratios of the three velocity components (the overall scale is fixed by the choice of parameter, or equivalently by $e$). It therefore leaves a continuous one-parameter family of null directions: the circle $S^{1}$ of equation (68). In 1 + 1 dimensions the analogous computation gives $\dot{x}^{1} = \pm \dot{x}^{0}$: a discrete set of two points (formally, the zero-dimensional sphere $S^{0}$). In $n$ spacetime dimensions the space of null directions is the sphere $S^{n-2}$; this counting is developed systematically in Section 10.
+
+The practical consequence for the initial-value problem: in 1 + 1 dimensions the null constraint plus the choice of chirality determine the velocity up to scale, so the geodesic equation closes on a single unknown. In 2 + 1 dimensions the direction $\theta_{0}$ of the initial null vector is genuine continuous initial data that the equations of motion cannot supply.
+
+## 10 Where the Dimension Enters: Null Directions, Mass Shells, and Little Groups
+
+This section collects the structural facts that distinguish the 2 + 1-dimensional massless limit from its 1 + 1-dimensional counterpart. The einbein mechanism is dimension-blind; the kinematics of the constraints is not. Everything in this section is standard and is cited to the literature; the derivations we give are elementary.
+
+### 10.1 The mass shell as a homogeneous space
+
+Work in flat 2 + 1-dimensional Minkowski space with the contravariant momentum $p^{\mu} = (p^{0}, p^{1}, p^{2})$ — the positive-energy vector on which the Lorentz matrices below act — and mass shell (derived in Section 11 below, in the canonical covector variables $p_{\mu} = g_{\mu\nu} p^{\nu}$)
+
+$$g_{\mu\nu}\, p^{\mu} p^{\nu} = - (mc_{0})^{2}, \qquad \text{i.e. in an inertial frame} \qquad - (p^{0})^{2} + (p^{1})^{2} + (p^{2})^{2} = - (mc_{0})^{2}. \tag{69}$$
+
+For $m > 0$ the future sheet of this two-sheeted hyperboloid is the hyperbolic plane $H^{2}$: the restriction of the Minkowski quadratic form to the tangent spaces of the shell is positive-definite, which is precisely the definition of the hyperboloid model of hyperbolic geometry (see e.g. J. G. Ratcliffe, *Foundations of Hyperbolic Manifolds*, Springer, 2nd ed. 2006, Chapter 3). The Lorentz group $SO(2, 1)$ acts transitively[^transitive] on this sheet: any future-directed timelike $p$ can be boosted and rotated to the rest-frame value $p^{(0)} = (mc_{0}, 0, 0)$. The subgroup that leaves $p^{(0)}$ fixed consists of the spatial rotations: the **little group**[^little] of a massive particle in 2 + 1 dimensions is
+
+$$G_{\mathrm{massive}} = SO(2). \tag{70}$$
+
+For $m = 0$ the shell degenerates to the future null cone with the origin removed. The Lorentz group still acts transitively on it (any future-null vector can be brought to the standard form $k^{(0)} = (\kappa, \kappa, 0)$, $\kappa > 0$), but the stabilizer changes character. The Lorentz transformations that leave $k^{(0)}$ fixed form a one-parameter group, generated by the null rotation
+
+$$M = \begin{pmatrix} 0 & 0 & 1 \\ 0 & 0 & 1 \\ 1 & -1 & 0 \end{pmatrix}, \qquad e^{tM} k^{(0)} = k^{(0)} \;\; \forall\, t \in \mathbb{R}, \tag{71}$$
+
+as one checks by direct exponentiation. First, $M k^{(0)} = (0,\; 0,\; \kappa - \kappa)^{T} = 0$, so the whole series collapses to the identity on $k^{(0)}$. Second, $M$ is Lie-algebra-valued for $SO(2,1)$: with $\eta = \mathrm{diag}(-1,+1,+1)$ the condition for a generator is that $\eta M$ be antisymmetric, and indeed $\eta M$ has the nonzero entries $(\eta M)_{02} = -1 = -(\eta M)_{20}$ and $(\eta M)_{12} = +1 = -(\eta M)_{21}$. (In the standard basis of rotation $J$ in the $1$-$2$ plane and boost $K_{2}$ along $x^{2}$, $M = K_{2} + J$: the boost and the rotation act oppositely on $k^{(0)}$ and cancel.) Third, the action on a general momentum is a translation-like shear of the transverse coordinate driven by the null combination: $(e^{tM} p)^{2} = p^{2} + t\,(p^{0} - p^{1})$ — exactly, with no higher-order terms, because $M^{3} = 0$ and $(M^{2} p)^{2} = 0$ (both verified symbolically in the companion suite) — which vanishes exactly on the rays with $p^{0} = p^{1}$. A non-compact action rather than a rotation. The stabilizer is therefore the non-compact one-parameter group
+
+$$G_{\mathrm{massless}} = \mathbb{R} \; (\cong ISO(1)), \tag{72}$$
+
+the degenerate case $ISO(n-2)$ with $n = 3$ of the general result that the little group of a nonzero null vector in $n$-dimensional Minkowski space is the Euclidean group $ISO(n-2)$ (E. Wigner, "On Unitary Representations of the Inhomogeneous Lorentz Group", *Annals of Mathematics* **40** (1939) 149–204, DOI: 10.2307/1968551; a modern textbook account is S. Weinberg, *The Quantum Theory of Fields*, Vol. 1, Cambridge University Press, 1995, §2.5).
+
+[^transitive]: A group $G$ acts transitively on a set $X$ if any point of $X$ can be carried to any other by some group element. The set $X$ is then a single orbit, and can be identified with the coset space $G / G_{x}$, where $G_{x}$ is the stabilizer (little group) of any chosen point $x$.
+
+[^little]: The little group (or stabilizer) of a particle's momentum $p$ is the subgroup of the Lorentz group that leaves $p$ unchanged. Wigner's classification (1939) identifies the internal states of an elementary particle with the irreducible unitary representations of the little group of its momentum.
+
+### 10.2 Spin in 2 + 1 dimensions: anyons for massive, nothing for massless in the conventional sector
+
+The representation theory of the two little groups is completely different.
+
+**Massive.** $SO(2)$ is abelian. Its single-valued irreducible unitary representations are one-dimensional and labeled by an integer ($R(\varphi) = e^{i s \varphi}$ with $s \in \mathbb{Z}$, since $R(\varphi + 2\pi) = R(\varphi)$); but the object that acts on the internal state of a relativistic particle is the universal cover of the Lorentz group, whose rotation subgroup is the universal cover $\mathbb{R}$ of $SO(2)$, and its irreducible unitary representations are one-dimensional, labeled by any real number $s$:
+
+$$R(\varphi) \longmapsto e^{i s \varphi}, \qquad \varphi \in \mathbb{R}, \quad s \in \mathbb{R}. \tag{73}$$
+
+In 3 + 1 dimensions single-valuedness for the rotation group (or rather its double cover) restricts the corresponding label to integers and half-integers. In 2 + 1 dimensions the fundamental group of the Lorentz group is $\pi_{1}(SO(2,1)) = \mathbb{Z}$ — as opposed to $\mathbb{Z}_{2}$ for $SO(3,1)$ (both statements follow from the standard deformation retract of $SO(n,1)$ onto its maximal compact subgroup $SO(n)$, with $\pi_{1}(SO(2)) = \mathbb{Z}$ and $\pi_{1}(SO(3)) = \mathbb{Z}_{2}$ tabulated in M. Nakahara, *Geometry, Topology and Physics*, IOP Publishing, 2nd ed. 2003, §4.7, Table 4.1) — so the universal cover imposes no quantization at all: a massive particle can carry **anyonic spin**, any real $s$ (F. Wilczek, "Quantum Mechanics of Fractional-Spin Particles", *Physical Review Letters* **49** (1982) 957–959, DOI: 10.1103/PhysRevLett.49.957; relativistic wave equations for anyonic particles are treated in R. Jackiw and V. P. Nair, "Relativistic wave equation for anyons", *Physical Review D* **43** (1991) 1933–1942, DOI: 10.1103/PhysRevD.43.1933).
+
+**Massless.** The little group $\mathbb{R}$ is non-compact; its unitary irreducible representations are all one-dimensional ($t \mapsto e^{i\rho t}$, $\rho \in \mathbb{R}$). A nonzero $\rho$ is mathematically allowed: it labels a "continuous-spin"-type internal degree of freedom with no localization on any compact direction — the 2 + 1-dimensional analogue of the continuous-spin representations of the 3 + 1-dimensional Poincaré group — and explicit 2 + 1-dimensional field realizations of these nontrivial representations exist (Binegar, loc. cit. below). The conventional physical choice, going back to Wigner's 1939 treatment of the 3 + 1-dimensional case, restricts attention to the **trivial-translation (finite-spin) sector** in which the translation-like part of the massless little group acts trivially on physical states ($\rho = 0$); nothing in the representation theory itself rules the alternative out. In 2 + 1 dimensions, unlike 3 + 1, there is no residual compact rotation factor left in the little group at all (the group $SO(1)$ is trivial), so in this conventional sector a massless particle carries **no internal degree of freedom**: its state is unique once its momentum is fixed.
+
+The little-group analysis of relativistic systems in 2 + 1 dimensions is treated systematically in B. Binegar, "Relativistic field theories in three dimensions", *Journal of Mathematical Physics* **23** (1982) 1511–1517, DOI: 10.1063/1.525524.
+
+### 10.3 The smooth classical limit and the non-smooth state counting
+
+We can now state precisely in what sense the massless limit is smooth, and in what sense it is not — the question that the einbein construction was invented to answer.
+
+- **Classically smooth.** The einbein action (10) depends analytically on $m$ through the single term $- \frac{e}{2}(mc_{0})^{2}$. At $m = 0$ nothing degenerates: the variational principle, the constraint, and the geodesic equation all persist, and the massive trajectories approach null geodesics as $m \to 0$ with the initial velocity pushed onto the cone. This is the content of Sections 5–9, and it is dimension-independent.
+- **Kinematically continuous, with a change of type.** The space of null directions $S^{1}$ is the boundary of the space of timelike directions: the mass shell $H^{2}$ has the circle as its ideal (conformal) boundary at infinity in the hyperboloid model (Ratcliffe, loc. cit.). Every null direction is a limit of timelike directions and vice versa; no direction is created or destroyed in the limit. What changes is the *stabilizer type*: $SO(2)$ for every $m > 0$, $\mathbb{R}$ at $m = 0$ exactly. Group actions are not required to vary continuously in their stabilizer type, and here they do not.
+- **Quantum-mechanically non-smooth.** Because the internal states are representations of the little group, the state counting jumps at $m = 0$: a massive particle may carry any real anyonic spin $s$, while a massless particle in the conventional trivial-translation sector of Section 10.2 carries nothing. This is not a defect of the massless theory; it is Wigner kinematics. In 3 + 1 dimensions the same phenomenon appears as the jump from $2s + 1$ massive spin states to at most two massless helicity states — the subject of the companion 3 + 1 tutorial.
+
+### 10.4 A remark on 2 + 1-dimensional gravity
+
+In three spacetime dimensions the Weyl tensor vanishes identically: in $n$ dimensions the Riemann tensor has $n^{2}(n^{2}-1)/12$ independent components — six for $n = 3$ — exactly as many as the Ricci tensor, so the Riemann tensor is algebraically determined by the Ricci tensor and carries no propagating (traceless) part (see e.g. S. M. Carroll, *Spacetime and Geometry*, Chapter 3, for the component counting). A consequence: with vanishing cosmological constant ($\Lambda = 0$) every vacuum solution of the Einstein equations in 2 + 1 dimensions is locally flat (with $\Lambda \neq 0$ the vacuum solutions are instead spacetimes of constant curvature, locally de Sitter or anti-de Sitter). Independently of $\Lambda$, pure 2 + 1-dimensional Einstein gravity has no local, propagating graviton degrees of freedom; in the $\Lambda = 0$ theory all gravitational effects are global — conical defects around point masses and the scattering of geodesics off them (S. Deser, R. Jackiw, G. 't Hooft, "Three-dimensional Einstein gravity: dynamics of flat space", *Annals of Physics* **152** (1984) 220–235, DOI: 10.1016/0003-4916(84)90085-X). The einbein formalism of these notes applies to such backgrounds without modification; the null geodesics of a conical defect are a clean illustration of Section 9.3's continuous direction data.
+
+## 11 Brief Hamiltonian Perspective
+
+For completeness we record the Hamiltonian formulation that follows from the einbein Lagrangian. The canonical momenta conjugate to the coordinates are
+
+$$p_{\lambda} = \frac{\partial L}{\partial \dot{x}^{\lambda}} = \frac{1}{e}\, g_{\lambda\nu}\, \dot{x}^{\nu}. \tag{74}$$
+
+This canonical momentum is a covector. It is related to the contravariant momentum $p^{\mu} = \frac{1}{e}\, \dot{x}^{\mu}$ used in Section 10.1 by index lowering, $p_{\mu} = g_{\mu\nu}\, p^{\nu}$; with the signature $(-, +, +)$ this means that in an inertial frame $p_{0} = -p^{0}$ and $p_{i} = p^{i}$, so the component $p_{0}$ of the canonical covector is *negative* for a positive-energy particle. The two index placements give one and the same mass shell, since $g^{\mu\nu} p_{\mu} p_{\nu} = g_{\mu\nu} p^{\mu} p^{\nu}$; the matrices of Section 10.1 act on the contravariant representative $p^{\mu}$.
+
+Inverting for the velocities, $\dot{x}^{\nu} = e\, g^{\nu\lambda} p_{\lambda}$. The Hamiltonian (after a Legendre transform) is pure constraint:
+
+$$H = \frac{e}{2} \left( g^{\mu\nu} p_{\mu} p_{\nu} + (mc_{0})^{2} \right). \tag{75}$$
+
+The einbein itself acts as a Lagrange multiplier enforcing the mass-shell condition
+
+$$g^{\mu\nu} p_{\mu} p_{\nu} + (mc_{0})^{2} = 0. \tag{76}$$
+
+In the massless case this reduces to the light-like condition $p^{2} = 0$. In 2 + 1 dimensions the massive shell is the hyperboloid $H^{2}$ of Section 10.1 and the massless shell is the punctured null cone; both are two-dimensional surfaces in the three-dimensional momentum space, so the constraint surface keeps its dimension across the limit while changing its geometry (and, with the origin excluded, its causal character). This constrained Hamiltonian system is the starting point for the canonical quantization of the relativistic particle; the little-group representation theory of Section 10 is precisely the quantum theory of the degrees of freedom that remain after the constraint (76) is imposed.
+
+## 12 Resolution of the Equations of Motion and the Resulting Trajectories
+
+After the residual reparametrization freedom has been used to set $e = \mathrm{const}$, the dynamical content of the theory is completely determined. We summarise the final system of equations and the nature of its solutions for both the massive and the massless particle.
+
+### 12.1 Massive particle ($m > 0$)
+
+In the gauge $e = \mathrm{const}$ the Euler–Lagrange equations reduce to the pair
+
+$$\frac{D \dot{x}^{\sigma}}{d\tau} = \ddot{x}^{\sigma} + \Gamma^{\sigma}{}_{\rho\nu}\, \dot{x}^{\rho} \dot{x}^{\nu} = 0, \tag{77}$$
+
+$$g_{\mu\nu}\, \dot{x}^{\mu} \dot{x}^{\nu} = - e^{2}(mc_{0})^{2} = \mathrm{const} < 0. \tag{78}$$
+
+Equation (77) is the affine geodesic equation; equation (78) is the mass-shell constraint.
+
+**Well-posedness.** Given data $x^{\mu}(0) = x^{\mu}_{0}$, $\dot{x}^{\mu}(0) = u^{\mu}_{0}$ satisfying the mass-shell condition at $\tau = 0$, the Picard–Lindelöf theorem guarantees a unique local solution; the constraint is preserved by (77) because the Levi-Civita connection is metric-compatible: $\frac{d}{d\tau}\left(g_{\mu\nu}\dot{x}^{\mu}\dot{x}^{\nu}\right) = 2\, g_{\mu\nu}\, \dot{x}^{\mu} \frac{D\dot{x}^{\nu}}{d\tau} = 0$. The solution extends to a maximal interval and is global if the spacetime is timelike-geodesically complete.
+
+**Difference from 1 + 1 dimensions.** In 1 + 1 dimensions the constraint (78) restricts the velocity to a one-parameter family — explicitly $\dot{x}^{1} = \pm \sqrt{(\dot{x}^{0})^{2} - e^{2}(mc_{0})^{2}}$, equivalently a single continuous rapidity — so **one** continuous shell parameter remains. In 2 + 1 dimensions the shell is two-dimensional: the constraint fixes only the overall scale of the tangent vector; the **two** independent ratios of the three velocity components — the direction angle $\theta_{0}$ in the $(\dot{x}^{1}, \dot{x}^{2})$ plane and the speed ratio — are free initial data, and (77) remains a genuine system of coupled second-order equations that the constraint alone cannot reduce to a single first-order ODE. If the metric admits a Killing vector field[^killing] $\xi^{\mu}$, the quantity $E = g_{\mu\nu} \xi^{\mu} \dot{x}^{\nu}$ is conserved and supplies one further independent relation; each additional independent commuting Killing vector supplies another first integral of the same form.
+
+[^killing]: A Killing vector field is a vector field $\xi^{\mu}$ along whose flow the metric is invariant, equivalently $\nabla_{(\mu} \xi_{\nu)} = 0$. The inner product of a Killing vector with the tangent vector of a geodesic is constant along the geodesic; see R. M. Wald, *General Relativity* (University of Chicago Press, 1984), Appendix C, or Carroll, *Spacetime and Geometry*, Appendix B.
+
+**Flat-space illustration.** When $g_{\mu\nu} = \eta_{\mu\nu}$ the Christoffel symbols vanish and the equations become $\ddot{x}^{\sigma} = 0$ with $\eta_{\mu\nu} \dot{x}^{\mu} \dot{x}^{\nu} = -e^{2}(mc_{0})^{2}$. The general solution is the straight line
+
+$$x^{\sigma}(\tau) = x^{\sigma}_{0} + u^{\sigma}_{0}\, \tau, \qquad \eta_{\mu\nu} u^{\mu}_{0} u^{\nu}_{0} = - e^{2} (mc_{0})^{2}, \tag{79}$$
+
+with the free data $(x^{\mu}_{0}, u^{\mu}_{0})$ including the direction angle $\theta_{0}$ of Section 9.3. This is the exponential map of a vector space, $x(\tau) = \exp_{x_{0}}(\tau u_{0}) = x_{0} + \tau u_{0}$.
+
+### 12.2 Massless particle ($m = 0$)
+
+In the same gauge the equations reduce to
+
+$$\frac{D \dot{x}^{\sigma}}{d\tau} = 0, \qquad g_{\mu\nu}\, \dot{x}^{\mu} \dot{x}^{\nu} = 0. \tag{80}$$
+
+Any solution is a null geodesic of the background metric, affinely parametrized. The initial-value problem is well-posed given data $(x^{\mu}_{0}, k^{\mu}_{0})$ with $k_{0}$ future-null; the direction of $k_{0}$ — a point of the circle $S^{1}$ of null directions — is part of the data, not fixed by any constraint. In Minkowski space the solutions are the straight null lines
+
+$$x^{\sigma}(\tau) = x^{\sigma}_{0} + k^{\sigma}_{0}\, \tau, \qquad \eta_{\mu\nu} k^{\mu}_{0} k^{\nu}_{0} = 0, \qquad k^{0}_{0} > 0. \tag{81}$$
+
+A useful conformal fact, true in every dimension but first visible as a nontrivial statement here: the *unparametrized* null geodesics of a metric depend only on its conformal class. Under a Weyl rescaling $g_{\mu\nu} \to \Omega^{2}(x)\, g_{\mu\nu}$ the null cone is unchanged pointwise, and the null geodesic equation is preserved up to a change of parameter (R. M. Wald, *General Relativity*, Appendix D). The einbein makes this transparent at the level of the action: under the combined transformation
+
+$$g_{\mu\nu} \longmapsto \Omega^{2}(x)\, g_{\mu\nu}, \qquad e \longmapsto \Omega^{2}(x(\tau))\, e(\tau) \tag{82}$$
+
+— the second being a Weyl rescaling of the world-line metric (9) by the pullback of the same factor — the massless Lagrangian (62) is invariant pointwise. For $m > 0$ no such invariance exists: the mass term $-\frac{e}{2}(mc_{0})^{2}$ picks up a factor $\Omega^{2}$. This is the action-level shadow of the fact that timelike geodesics are not conformally invariant while unparametrized null geodesics are.
+
+### 12.3 Summary of the trajectories
+
+| Case | Final equations | Geometric character | Free direction data |
+| --- | --- | --- | --- |
+| Massive ($m > 0$) | affine geodesic eq. + mass shell | future-directed timelike geodesic | angle $\theta_{0} \in S^{1}$ |
+| Massless ($m = 0$) | affine geodesic eq. + null condition | null geodesic | angle $\theta_{0} \in S^{1}$ |
+
+In both cases the einbein formulation has achieved its purpose: the equations of motion are well-defined, the massless limit is continuous, and the solutions are precisely the geodesics of the appropriate causal type. What 2 + 1 dimensions add to the 1 + 1 story is the continuous circle of directions and the little-group analysis of Section 10.
+
+## 13 Summary
+
+We have shown, by completely explicit algebraic manipulations, that the einbein reformulation of the relativistic point particle extends from 1 + 1 to 2 + 1 dimensions without any modification of its variational core: the auxiliary-field equation (25), the recovery of the square-root action (Section 7), the geodesic equation with its non-affine term (56), and the gauge $e = \mathrm{const}$ that removes it are all dimension-independent. The new content of the 2 + 1-dimensional theory is kinematic and group-theoretic:
+
+- the null directions form a circle $S^{1}$ (Section 9.3), so the direction of a massless particle is continuous initial data rather than a discrete chirality;
+- the massive mass shell is the hyperbolic plane $H^{2}$ with little group $SO(2)$, whose representations allow any real spin — anyons (Section 10.2);
+- the massless little group is the non-compact group $\mathbb{R}$, whose nontrivial unitary representations are mathematically allowed; in the conventional trivial-translation sector, physical massless particles carry no spin degree of freedom (Section 10.2);
+- the massless limit is smooth at the level of the action and the geodesics, while the internal-state counting jumps — a Wigner-kinematic fact, not a dynamical pathology (Section 10.3);
+- the massless einbein action is Weyl-invariant, exposing the conformal nature of unparametrized null geodesics (Section 12.2).
+
+The 3 + 1-dimensional case — in which the little groups become $SO(3)$ and $ISO(2)$, the null directions form the celestial sphere $S^{2}$, and the helicity structure of massless particles appears — is treated in the companion tutorial.
+
+## References
+
+[0] T. Fulceri, "Transforming the Canonical Lagrangian of a Relativistic Particle for a Smooth Massless Limit: The Einbein Formulation in 1 + 1 Dimensions", Zenodo technical tutorial notes, 11 August 2026. DOI: 10.5281/zenodo.21879560.
+
+[1] J. Polchinski, *String Theory, Volume 1: An Introduction to the Bosonic String*, Cambridge University Press, Cambridge, 1998. (Chapter 1: the einbein formulation as preparation for the Polyakov action.) DOI: 10.1017/CBO9780511816079.
+
+[2] B. Zwiebach, *A First Course in String Theory*, Cambridge University Press, Cambridge, 2nd ed. 2009. (Chapter 5: relativistic point-particle action and reparametrization invariance.) DOI: 10.1017/CBO9780511841682.
+
+[3] E. Wigner, "On Unitary Representations of the Inhomogeneous Lorentz Group", *Annals of Mathematics* **40** (1939) 149–204. DOI: 10.2307/1968551.
+
+[4] S. Weinberg, *The Quantum Theory of Fields, Volume 1: Foundations*, Cambridge University Press, 1995. (Chapter 2: little groups; §2.5: massless particles.) DOI: 10.1017/CBO9781139644167.
+
+[5] F. Wilczek, "Quantum Mechanics of Fractional-Spin Particles", *Physical Review Letters* **49** (1982) 957–959. DOI: 10.1103/PhysRevLett.49.957.
+
+[6] R. Jackiw and V. P. Nair, "Relativistic wave equation for anyons", *Physical Review D* **43** (1991) 1933–1942. DOI: 10.1103/PhysRevD.43.1933.
+
+[7] B. Binegar, "Relativistic field theories in three dimensions", *Journal of Mathematical Physics* **23** (1982) 1511–1517. DOI: 10.1063/1.525524.
+
+[8] S. Deser, R. Jackiw, G. 't Hooft, "Three-dimensional Einstein gravity: dynamics of flat space", *Annals of Physics* **152** (1984) 220–235. DOI: 10.1016/0003-4916(84)90085-X.
+
+[9] R. M. Wald, *General Relativity*, University of Chicago Press, 1984. (Chapter 3: curvature; Appendix C: Killing vectors; Appendix D: conformal transformations and null geodesics.) ISBN: 9780226870335.
+
+[10] S. M. Carroll, *Spacetime and Geometry: An Introduction to General Relativity*, Cambridge University Press, 2019. (Chapter 3: geodesics, Christoffel symbols, curvature component counting.) ISBN: 9781108488396.
+
+[11] J. G. Ratcliffe, *Foundations of Hyperbolic Manifolds*, Springer, 2nd ed. 2006. (Chapter 3: the hyperboloid model and its ideal boundary.) DOI: 10.1007/978-0-387-47322-2.
+
+[12] F. Bastianelli, *Relativistic Quantum Mechanics and Path Integrals*, lecture notes, University of Bologna, 2023–2024. https://www-th.bo.infn.it/people/bastianelli/2-Mechanics-RQMPI-23-24.pdf (accessed August 2026). (Explicit treatment of the einbein action.)
+
+[13] M. Nakahara, *Geometry, Topology and Physics*, IOP Publishing, 2nd ed. 2003. (§4.7, Table 4.1: fundamental groups of the classical groups.) ISBN: 9780750306065.
+
+*End of tutorial notes.*
