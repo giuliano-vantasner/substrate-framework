@@ -2,15 +2,15 @@
 description: Promote the ingested historical Lean corpus claims for issue #92 - census, corroboration evidence, fixed-theorem and synthesis promotions in the single merge unit
 author: prime-agent
 created: '2026-08-18T21:00:00+02:00'
-updated: '2026-08-18T21:55:00+02:00'
+updated: '2026-08-18T23:10:00+02:00'
 tags:
 - substrate-framework
 - effort
 - lean
 - claim-promotion
 category: efforts
-confidence: working
-status: active
+confidence: established
+status: archived
 ---
 
 ## Goal and Success Contract
@@ -57,9 +57,10 @@ The binding constraints for this effort are the following.
 
 ## Decomposition
 
-1. [x] Census: classify all 60 files / 467 theorems (46 corroboration
-   attachments to 35 claims, 11 fixed-theorem promotions, 2 synthesized
-   capstones, class-4 dispositions for the remainder).
+1. [x] Census: classify all 60 files / 467 manifest theorems / 506 parsed
+   theorem-lemma names (46 corroboration attachments on 43 accepted claims,
+   10 fixed-theorem promotions, 2 synthesized capstones, class-4 dispositions
+   for the remainder; C-SG-021 was reclassified class 4 during review).
 2. [x] Instantiate contracts: this effort memory plus P232-P235 proposal
    manifests, validated before registry edits.
 3. [x] P232 evidence transaction: 46 lean verification_evidence records on 43
@@ -70,11 +71,13 @@ The binding constraints for this effort are the following.
    digamma object - recorded in the adjudication as a preliminary-scan
    correction).
 5. [x] P234/P235 synthesis promotions: C-GW-013, C-GW-014.
-6. [x] Release v0.163.0 (222 accepted claims), regenerated docs and accepted
-   memory, 13 decision memories, 2 synthesis contract memories,
+6. [x] Release v0.163.0 (224 accepted claims: the branch's 222 after merging
+   main's PR #89, which added C-IGR-004 and C-GRV-002), regenerated docs and
+   accepted memory, 13 decision memories, 2 synthesis contract memories,
    tests/test_lean_claim_census.py (4 checks).
-7. [ ] Final-boundary validation once, commit, PR update, owner-authorized
-   merge, issue closure.
+7. [x] Final-boundary validation once (scripts/validate.sh --full, 2,336
+   tests green, git diff --check clean), commit, PR #93 updated and merged to
+   main as c864f33 (owner-authorized; issue #92 closed by the merge).
 
 ## Attempts
 
@@ -108,10 +111,14 @@ The single inherited debt from the ingestion workstream is discharged by this ef
 
 ## Results
 
-Census complete and machine-checked (test_lean_claim_census.py: 60 files, all
-506 parsed theorem/lemma names classified); registry 222 claims valid; release
-v0.163.0 pinned; docs/memory regenerated; campaign records P232-P235 immutable.
-Final-boundary validation and merge remain.
+Complete. Merged to main as c864f33 (PR #93, owner-authorized issue-scoped
+self-merge; issue #92 closed). Census machine-checked (test_lean_claim_census.py:
+60 files, all 506 parsed theorem/lemma names classified); registry 224 claims
+valid at v0.163.0 with 46 lean evidence attachments on 43 accepted claims and
+12 new claims (10 fixed-theorem, 2 synthesized); docs, accepted memory, and
+campaign records P232-P235 immutable on main; scripts/validate.sh --full green
+(2,336 tests) and git diff --check clean at the merge boundary; the formal
+Lean surface is byte-identical to the gate commit 63fa769 (no rebuild).
 
 ## Canonicalization
 
