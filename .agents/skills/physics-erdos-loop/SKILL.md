@@ -119,11 +119,19 @@ construction and selection logic that actually worked, and record the
 transferable assumptions and the present mismatch. External research may
 supplement this step but does not replace framework-context reconciliation.
 
-Do not stop because routes are difficult or numerous. Generate another materially different route.
+Persistence applies to the scientific objective, not to unbounded expansion of
+one review or PR. At the frozen task boundary, try materially different routes;
+when a clean milestone is ready or the user narrows the task, land or hand off
+that boundary and leave other questions on the campaign frontier.
 
-## Phase 5 — audit the verifier
+## Phase 5 — audit the verifier once at the frozen boundary
 
-Choose the strongest practical oracle using [oracles.md](references/oracles.md). Then audit the audit:
+Choose the strongest practical oracle using [oracles.md](references/oracles.md), then audit it against the named claim:
+
+The audit asks whether the verifier establishes the named claim. Do not create
+a second meta-verifier for the audit, add checks for review prose or reviewer
+identity, or reopen unrelated accepted claims. A discovered adjacent concern is
+a follow-up unless it directly breaks the named claim or its dependency closure.
 
 Do not count a weaker oracle as independent evidence when a stronger result already fixes its input. In particular, after exact algebra removes a parameter from an ODE right-hand side, local uniqueness proves same-initial-data trajectory independence; integrating that identical right-hand side twice is only regression coverage. Likewise, eliminate shared intermediate variables before calling a downstream tail, dispersion, or normalization check independent: if it yields the same equation or positive solution set, record it as a dependent regression. Cross-sector matching additionally requires explicit field, kinetic-metric, action-measure, and coefficient maps; equal names, shapes, or dimensions do not supply them. Use exact sensitivity or initial Taylor coefficients for analytically accessible counterexamples, and reserve simulation for behavior the exact result does not decide.
 
@@ -166,6 +174,12 @@ Local success with broken downstream consumers is failure.
 
 Use `memory-templates/claim-review.md`. Review claims individually, not the proposal as a single package. The reviewer must have the raw artifacts and acceptance criteria, not the proposing agent's preferred conclusion.
 
+Pin the review boundary to the proposed claim delta and its declared
+dependencies. Review an evidence attachment at the exact scope it claims; do
+not require it to rederive the parent claim or share every parent object when
+it is explicitly labeled as a narrower corollary. After requested corrections,
+recheck only the corrected statements and affected dependency edges.
+
 Assign each claim independent verification, review, compatibility, and epistemic statuses. Unaccepted work stays under `proposals/`. Use `challenges` until a replacement claim is accepted; only then add `supersedes`.
 
 ## Phase 9 — promote and materialize
@@ -178,7 +192,7 @@ For accepted claims:
 3. Move the adjudicated campaign record into the immutable `campaigns/` log.
 4. Run `scripts/render_docs.py`; never hand-edit `docs/generated/`.
 5. Generate or synchronize accepted claim/release memory. Keep proposal and attempt memory separate.
-6. Run targeted scientific checks, the scope selected by `scripts/validate_changed.py`, and `git diff --check`. An append-only synthesized leaf theorem may remain scoped when it changes no existing claim or contract and its exact proof, registry/rendering, direct consumers, and formal surface replay; shared machinery, altered existing claims, foundational revisions, or uncertain impact require `scripts/validate.sh --full`. Do not repeat an unchanged suite. Run validation and commit in separate process invocations so an unguarded shell cannot continue past a failed gate and mask it with a later successful command.
+6. Run targeted scientific checks, the scope selected by `scripts/validate_changed.py`, and `git diff --check` once at the final frozen boundary. An append-only synthesized leaf theorem may remain scoped when it changes no existing claim or contract and its exact proof, registry/rendering, direct consumers, and formal surface replay; shared machinery, altered existing claims, foundational revisions, or uncertain impact require `scripts/validate.sh --full`. Record the command and boundary commit and reuse that result; documentation-only review records do not stale a scientific gate. Run validation and commit in separate process invocations so an unguarded shell cannot continue past a failed gate and mask it with a later successful command.
 
 ## Phase 10 — done gate
 
@@ -186,4 +200,4 @@ Declare the campaign objective complete only when every item in the success cont
 
 ## Working with delegated agents
 
-When delegation is authorized, give each worker one child contract and a disjoint write surface. Fresh reviewers receive sourced inputs, the claim, and criteria—not the parent agent's interpretation or expected answer. Reconcile worker findings into the parent contract and rerun the same promotion gates.
+When delegation is authorized, give each worker one child contract and a disjoint write surface. Fresh reviewers receive sourced inputs, the claim, and criteria—not the parent agent's interpretation or expected answer. Classify each finding as an in-boundary blocker or a follow-up, reconcile blockers once, and rerun only checks invalidated by the resulting edits.

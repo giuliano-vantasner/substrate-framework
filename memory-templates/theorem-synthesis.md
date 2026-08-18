@@ -74,7 +74,9 @@ Record the exact theorem verifier, statement/axiom audit, affected tests and
 consumers, GitNexus impact, and the `scripts/validate_changed.py` decision. An
 additive leaf theorem may use scoped validation when no existing contract is
 changed; use full replay for cross-cutting or uncertain impact. Do not repeat an
-equivalent validation at the same unchanged boundary.
+equivalent validation at the same unchanged boundary. Freeze the composition
+boundary before review; adjacent defects become follow-up unless they directly
+invalidate the new glue, and review prose never triggers another oracle run.
 
 ## Attempts and Frontier
 

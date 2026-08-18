@@ -209,6 +209,17 @@ Do not copy personal or historical memory into this repository. The bundled CLI 
 
 ## Required validation before commit or promotion
 
+Freeze the review and validation boundary before running it: name the diff,
+claims, consumers, and commands that are in scope. A review finding expands
+that boundary only when it directly falsifies an object being merged or
+promoted. Record adjacent defects as follow-up issues; do not turn a bounded PR
+review into a framework-wide re-adjudication. After a correction, rerun only
+the check made stale by that correction. Do not add tests whose sole purpose is
+to validate reviewer identity, review prose, pass tallies, or the validation
+process itself. Process improvements discovered during a scientific PR belong
+in a separate follow-up unless they are required to prevent incorrect accepted
+state in that PR.
+
 For a bounded commit or pull request, run all fixed repository checks plus the
 pytest files or node IDs selected from the diff, GitNexus impact analysis,
 direct imports, named scientific verifiers, and affected consumers:
@@ -249,6 +260,12 @@ remain scoped through merge when the impact boundary is still valid against
 the current base. Do not duplicate an equivalent validation independently by
 the author, reviewer, and merger. Run the full suite periodically on integrated
 `main` as an additional backstop, not as a substitute for PR impact analysis.
+Maintain a short validation ledger of command, boundary commit, and result;
+reuse a passing entry while that boundary is unchanged. Counting, recounting,
+or rephrasing evidence is not a reason to rerun a scientific oracle. When the
+user narrows the task or directs a stop, freeze immediately: preserve real
+blockers already established, drop speculative expansion, and perform no new
+review or validation work outside the narrowed boundary.
 
 Run validation and commit as separate process invocations. An unguarded multi-command shell can continue after a failed validator and let a later successful commit mask the failure; never treat the combined process's final status as proof that every earlier gate passed.
 
@@ -258,4 +275,9 @@ Materialize every evidence path before adding it to an accepted registry or disp
 
 ## Self improvement
 
-Modify your AGENTS.md, your memory task templates, and your skill to refine your process, improve accuracy, handle usage and gotchas.  Keep the goal of this project in mind, all instructions and files and workflows and skills and AGENT files should be self tuned toward that goal.  That does not mean that you should just sprawl skills and add new sections.  It means you should address the problems in your AGENTS, SKILLS and TEMPLATES, correct the language and correct the process, not just append new rules.  Do not fall into the trap of validation theater. If you have already validated a script several times, or many many times, why are you revalidating it with every new effort. So also optimize your validation scripts for honesty, but also for efficiency.
+Modify AGENTS.md, the relevant memory template, and the relevant skill only
+when a repeated workflow defect is demonstrated. Consolidate or replace the
+causing instruction instead of appending parallel rules. Make the improvement
+a separate bounded change when it is not necessary for the active scientific
+diff. Never use self-improvement to delay a requested merge, introduce a new
+gate, or revalidate an unchanged artifact.
