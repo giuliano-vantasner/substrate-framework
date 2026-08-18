@@ -225,8 +225,9 @@ accepted_claims:
 - C-SG-020
 - C-SG-022
 - C-VIR-002
-note: 'Closes the #92 promotion gap: attaches 55 independently reviewed Lean theorem records to 39 accepted
-  claims from the ingested historical corpus (campaign P232 census, 60 files / 467 manifest theorems, every
+note: 'Closes the #92 promotion gap: attaches 55 independently reviewed Lean artifact-claim evidence records,
+  spanning 176 theorem entrypoints, to 39 accepted claims from the ingested historical corpus (campaign P232
+  census, 60 files / 467 manifest theorems, every
   theorem classified with a reviewed disposition) and promotes ten new standalone exact facts at their encoded
   domains (campaign P233). P234/P235 record rejected dispositions for the proposed C-GW-013/C-GW-014 lookup-table
   syntheses, which do not enter the registry or release. The historical source statements and proofs are unchanged;

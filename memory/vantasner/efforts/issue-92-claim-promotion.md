@@ -55,8 +55,9 @@ The corrected transaction preserves these boundaries.
 ## Decomposition
 
 1. [x] Classify all 60 files and every declared theorem/lemma.
-2. [x] Correct P232 to 55 Lean theorem records attached to 39 accepted claims;
-   classify the Phase13, Phase14, and Phase16 answer tables as artifact-only.
+2. [x] Correct P232 to 55 artifact-claim evidence records spanning 176 named
+   theorem entrypoints and attached to 39 accepted claims; classify the Phase13,
+   Phase14, and Phase16 answer tables as artifact-only.
 3. [x] Correct P233 to ten fixed-theorem promotions: C-GW-011, C-GW-012,
    C-EW-001, C-WK-001, C-CF-001, C-ROT-002, C-GSK-003, C-SG-020, C-SG-022,
    and C-VIR-002.

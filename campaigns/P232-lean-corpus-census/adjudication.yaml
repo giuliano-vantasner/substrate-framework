@@ -8,7 +8,8 @@ deliverable: Census of all 60 ingested files / 467 manifest theorems against the
 census_counts:
   files: 60
   manifest_theorems: 467
-  corroboration_theorem_records: 55
+  corroboration_artifact_claim_records: 55
+  corroborated_theorem_entrypoints: 176
   claims_receiving_lean_evidence: 39
   new_standalone_exact_facts: 10
   composed_theorems: 0
