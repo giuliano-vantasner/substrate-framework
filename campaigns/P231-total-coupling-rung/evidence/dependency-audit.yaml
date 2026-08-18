@@ -1,0 +1,29 @@
+campaign: P231
+accepted_dependencies:
+  C-GRV-001:
+    reused: dimensional permission, E_cut=hbar*c/a cutoff ontology, independent additive baseline ledger with B free
+    not_reused: [field_spectrum, regulator_selection, physical_value_of_G]
+  C-IGR-001:
+    reused: sharp exact I2/I3 families, determinant/heat-kernel/EH conventions, local-coefficient ceiling
+    not_reused: [full_determinant, nonlocal_terms]
+  C-IGR-002:
+    reused: smooth exact I2/I3 families
+    not_reused: [regulator_preference]
+  C-IGR-003:
+    reused: power-subtracted exact families as scale-dependence ledger
+    not_reused: [finite_counterterm_selection, physical_mu]
+approved_nonclaim_imports:
+  - declared one-real-scalar determinant, heat-kernel, and Einstein-Hilbert conventions (Vassilevich hep-th/0306138v3, carried forward from P230)
+  - cutoff effective-action sector organization (Visser gr-qc/0204062v1, carried forward from P230)
+  - exact special-function identities and positive-integrand integral representations
+implementation_only_inputs:
+  scalar_one_loop_mass:
+    role: accepted-canon implementation of C-IGR-001..003 families
+    reused_as: exact_mass_inverse_newton_shift and exact_mass_vacuum_density_shift calls
+    independently_rederived: reviews/independent_total_coupling_review.py (imports no substrate_framework scientific module)
+  scalar_induced_newton:
+    reused: SHARP_PROPER_TIME_REGULATOR string tag
+    scientific_outputs_imported: []
+dependency_closure: pass
+hidden_parameters: []
+debt: []

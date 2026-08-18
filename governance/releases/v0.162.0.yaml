@@ -1,10 +1,9 @@
 schema_version: 1
 release: v0.162.0
-source_baseline: substrate-framework@db082ec
-released_at: '2026-08-18T21:45:00+02:00'
+source_baseline: substrate-framework@7dfe89b
+released_at: '2026-08-18T15:48:27+00:00'
 accepted_claims:
 - C-SG-001
-- C-SKY-001
 - C-SG-002
 - C-SG-003
 - C-SG-004
@@ -53,7 +52,6 @@ accepted_claims:
 - C-QBL-003
 - C-MIX-001
 - C-MIX-002
-- C-MIX-003
 - C-MOM-001
 - C-GW-001
 - C-GW-002
@@ -101,7 +99,6 @@ accepted_claims:
 - C-GLS-001
 - C-CHR-001
 - C-SPN-001
-- C-SPN-002
 - C-DEF-001
 - C-LAT-001
 - C-OVL-001
@@ -123,20 +120,21 @@ accepted_claims:
 - C-MED-003
 - C-SG-017
 - C-SG-018
-- C-SG-019
 - C-LAT-002
 - C-MED-004
 - C-COL-001
 - C-FPT-001
 - C-RMAP-001
+- C-RMAP-002
 - C-RPROF-001
 - C-RPROF-002
-- C-RMAP-002
 - C-RDIFF-001
 - C-RDIFF-002
 - C-BPS-001
 - C-BPS-002
 - C-BPS-003
+- C-SG-019
+- C-SPN-002
 - C-RES-001
 - C-SCR-001
 - C-CMP-001
@@ -147,10 +145,12 @@ accepted_claims:
 - C-MAX-001
 - C-VAC-001
 - C-KRN-002
+- C-SKY-001
 - C-IRR-001
 - C-VEC-001
 - C-RAD-001
 - C-GOR-001
+- C-GOR-002
 - C-STG-001
 - C-RR-001
 - C-MED-005
@@ -169,7 +169,6 @@ accepted_claims:
 - C-REP-003
 - C-ANO-001
 - C-DIM-009
-- C-GOR-002
 - C-STG-002
 - C-PDE-013
 - C-RMOM-001
@@ -177,9 +176,9 @@ accepted_claims:
 - C-GW-009
 - C-GW-010
 - C-FLO-001
-- C-SKY-002
 - C-ROT-001
 - C-RMAP-003
+- C-SKY-002
 - C-VAC-002
 - C-VAC-003
 - C-VAC-004
@@ -195,11 +194,12 @@ accepted_claims:
 - C-BRN-002
 - C-QBL-004
 - C-QBL-005
+- C-MIX-003
 - C-QBL-006
 - C-PHS-001
 - C-OVL-005
-- C-MIX-004
 - C-PHS-002
+- C-MIX-004
 - C-VEC-002
 - C-GSK-001
 - C-GSK-002
@@ -213,23 +213,20 @@ accepted_claims:
 - C-IGR-001
 - C-IGR-002
 - C-IGR-003
-- C-GW-011
-- C-GW-012
-- C-EW-001
-- C-WK-001
-- C-CF-001
-- C-ROT-002
-- C-GSK-003
-- C-SG-020
-- C-SG-022
-- C-VIR-002
-- C-GW-013
-- C-GW-014
-note: 'Closes the #92 promotion gap: attaches reviewed Lean verification evidence to 43 accepted claims
-  from the ingested historical corpus (campaign P231 census, 60 files / 467 theorems, every theorem classified
-  with a reviewed disposition), promotes ten new standalone exact facts with no registry counterpart (campaign
-  P232: TT graviton polarization count, lowest radiating multipole order, unbroken electroweak generator,
-  V-A parity violation, Z3 colour centre, rigid-top band splitting, generalized-Skyrme weights, kink exchange
-  phase, ionization basin, Comparsi virial certificate) and two composed theorems (campaigns P233/P234).
-  The formal surface is unchanged from the gate commit; no existing claim statement, dependency, or status
-  axis is altered.'
+- C-IGR-004
+- C-GRV-002
+note: >-
+  Promotes the first derived usable total gravitational coupling. C-IGR-004 composes
+  the accepted constant-mass one-loop families C-IGR-001..003 with C-GRV-001's
+  independent additive-baseline ledger into the governed renormalization condition
+  1/G_total = B + N*(1-6*xi)*Lambda^2*J(z)/(12*pi), deriving the usable scheme
+  set {sharp, smooth} from three exact selection legs (spectral positivity, monotone
+  large-mass decoupling, cutoff ontology) with the power-subtracted family excluded
+  and retained only as the exact scale-dependence ledger, and quoting the unbounded
+  scheme spread R(z) as the exact downstream ceiling. C-GRV-002 states the exact
+  necessary-and-sufficient total-sign map across the full declared parameter domain,
+  the declared-premise baseline provenance including the purely-induced reading,
+  and the reciprocal total Newton constant. The release derives no unique numeric
+  normalization, no physical regulator selection, no sourced nonflat geometry,
+  no radiative prediction, and imports no empirical gravity comparator; the additive
+  baseline B stays an independent declared premise.

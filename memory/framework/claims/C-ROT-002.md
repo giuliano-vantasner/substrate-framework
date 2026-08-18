@@ -1,8 +1,8 @@
 ---
 description: Accepted framework claim C-ROT-002
 author: framework-registry
-created: '2026-08-18T21:45:00+02:00'
-updated: '2026-08-18T21:45:00+02:00'
+created: '2026-08-18T22:40:00+02:00'
+updated: '2026-08-18T22:40:00+02:00'
 tags:
 - substrate-framework
 - accepted-claim
@@ -31,9 +31,9 @@ Dependencies: none. Assumptions: The band formulas, the J=1/2 and J=3/2 assignme
 ## Provenance and Evidence
 The accepted release and immutable campaign evidence are the authoritative pointers.
 
-Accepted in `v0.162.0` with provenance `campaigns/P232-lean-discrete-facts/adjudication.yaml`.
+Accepted in `v0.163.0` with provenance `campaigns/P233-lean-discrete-facts/adjudication.yaml`.
 
 - `formal/SubstrateFramework/Ingested/Phase47BM_RigidTopSpectrum.lean`
 - `formal/SubstrateFramework/Ingested/Phase48CE_OperatorAndGap.lean`
-- `campaigns/P232-lean-discrete-facts/attempts/0001/result.yaml`
-- `campaigns/P231-lean-corpus-census/census.yaml`
+- `campaigns/P233-lean-discrete-facts/attempts/0001/result.yaml`
+- `campaigns/P232-lean-corpus-census/census.yaml`

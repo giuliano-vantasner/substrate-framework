@@ -1,0 +1,12 @@
+campaign: P231
+position: no new primary import is required; P231 composes accepted claims
+carried_forward_from_P230:
+  - source: Vassilevich arXiv:hep-th/0306138v3
+    equations: 1.16-1.20, 2.2, 4.27
+    use: determinant weight, proper-time sign, Laplace-type convention, heat-kernel class organization (a0/a2/a4); P231 additionally uses only the class organization for the tau^-1 control sector slot
+  - source: Visser arXiv:gr-qc/0204062v1
+    equations: 7-15
+    use: cutoff effective-action organization and the requirement to retain cosmological and higher-curvature sectors (control ledger motivation)
+independent_of_literature:
+  - selection legs, sign map, squeeze bounds, spread structure, baseline provenance: derived from accepted framework claims and defining integrals only
+external_comparator_use: none
