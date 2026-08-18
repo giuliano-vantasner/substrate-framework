@@ -1,0 +1,37 @@
+campaign: P230
+direct_consumers:
+  - src/substrate_framework/__init__.py
+  - tests/test_scalar_one_loop_mass.py
+  - campaigns/P230-exact-mass-regulator-rung/verify.py
+indirect_consumers:
+  - docs/generated/claim-index.md
+  - memory/framework/claims/C-IGR-001.md
+  - memory/framework/claims/C-IGR-002.md
+  - memory/framework/claims/C-IGR-003.md
+  - memory/framework/releases/v0.161.0.md
+existing_runtime_callers_outside_module: []
+gitnexus_final_impact:
+  risk: low
+  affected_execution_flows: 0
+  direct_internal_callers:
+    curvature_proper_time_integral: [exact_mass_vacuum_density_shift]
+    vacuum_proper_time_integral: [exact_mass_vacuum_density_shift]
+  upstream_runtime_callers:
+    exact_mass_inverse_newton_shift: []
+    exact_mass_vacuum_density_shift: []
+    regulator_scheme_ledger: []
+  note: >-
+    detect-changes reported seven indexed files and one false-positive AGENTS
+    instruction symbol caused by GitNexus injection; source git diff confirmed
+    AGENTS unchanged after the injected block was removed. Governance files
+    exceed the graph size cap and are covered by repository validation.
+replay:
+  targeted_tests: 42_passed
+  campaign_verifier: pass_27
+  independent_rederivation: pass_21
+  package_import: pass
+  governance_and_generated_consumers: pass
+  full_repository_validation: 2263_passed_in_288_80_seconds
+  final_record_validation: pass
+  git_diff_check: pass
+debt: []

@@ -1,0 +1,33 @@
+campaign: P230
+primary_sources:
+  - citation: D.V. Vassilevich, Heat kernel expansion user's manual, arXiv:hep-th/0306138v3
+    url: https://arxiv.org/abs/hep-th/0306138
+    checked_equations: [1.16, 1.17, 1.18, 1.20, 2.2, 4.26, 4.27]
+    imported_scope:
+      - real_scalar_one_loop_determinant_weight
+      - proper_time_sign_and_cutoff_representation
+      - Laplace_type_operator_convention
+      - boundaryless_a0_and_a2_coefficients
+    nonimports:
+      - physical_scalar_identification
+      - regulator_selection
+      - full_determinant_from_a_finite_heat_kernel_truncation
+  - citation: M. Visser, Sakharov's induced gravity a modern perspective, arXiv:gr-qc/0204062v1
+    url: https://arxiv.org/abs/gr-qc/0204062
+    checked_equations: [7, 8, 9, 11, 13, 14, 15]
+    imported_scope:
+      - cutoff_effective_action_organization
+      - curvature_vacuum_and_higher_curvature_sector_separation
+      - independent_cosmological_and_higher_curvature_obligations
+    nonimports:
+      - zero_tree_level_gravity
+      - Planck_cutoff_identification
+      - physical_spectrum
+      - ignored_cosmological_or_higher_curvature_terms
+source_consistency:
+  result: pass
+  note: >-
+    Vassilevich uses D=-(nabla^2+E), so D=-nabla^2+xi*R+m^2
+    corresponds to E=-xi*R-m^2 and a2 density E+R/6=(1/6-xi)R-m^2.
+    P230 instead factors constant exp(-tau*m^2), leaving curvature weight
+    (1/6-xi)R and the exact derivative bridge to the unresummed mass term.

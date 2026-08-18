@@ -1,0 +1,78 @@
+id: P230
+base_release: v0.160.0
+source_baseline: substrate-framework@0beaac3
+question: >-
+  For a declared positive self-adjoint boundaryless four-dimensional
+  Euclidean real-scalar Laplace-type operator
+  D_E=-nabla_E^2+xi*R_E+m^2 with constant
+  nonnegative m^2, what are the exact tau^-2 curvature-class and tau^-3
+  vacuum-class one-loop proper-time coefficients under three preregistered
+  regulator prescriptions, and what conditional additive inverse-Newton and
+  vacuum shifts follow in the declared determinant and Einstein-Hilbert
+  conventions?
+source_inventory:
+  - source: accepted C-GRV-001
+    access: governance/claims.yaml and campaigns/P074-as3-induced-gravity-scaling
+    extracted: conditional additive inverse-coupling ledger, independent baseline, and the explicit ceiling that field content, coefficient, regulator, and cutoff identification remain premises
+  - source: landed conditional module src/substrate_framework/scalar_induced_newton.py
+    access: repository source at 0beaac3; PR #14 promoted no claims
+    extracted: reusable regulator tag and convention ledger only; all load-bearing coefficients are independently rederived for P230
+  - source: landed conditional module src/substrate_framework/covariant_sine_gordon_action.py
+    access: repository source at 0beaac3; PR #25 promoted no claims
+    extracted: optional constant-vacuum composition V''(0)=m^2 only; no arbitrary-background mass factorization is imported
+  - source: Vassilevich arXiv:hep-th/0306138v3 equations 1.16-1.20, 2.2, and 4.27
+    access: public primary source, independently checked
+    extracted: real-scalar determinant weight, proper-time sign, Laplace-type convention, and boundaryless a0/a2 heat-kernel coefficients
+  - source: Visser arXiv:gr-qc/0204062v1 equations 7-15
+    access: public primary source, independently checked
+    extracted: cutoff effective-action organization, curvature and vacuum classes, and the need to retain cosmological and higher-curvature sectors
+invariants:
+  - the determinant reading assumes a positive self-adjoint operator and the required infrared convergence or reference subtraction; only the displayed local coefficient families are claimed, not the full nonlocal determinant
+  - m^2 is a spacetime-constant nonnegative exact input; a varying V''(phi_bg(x)) is outside the factorized theorem
+  - the operator, real-scalar determinant weight 1/2, four-dimensional heat-kernel prefactor (4*pi)^-2, and Euclidean Einstein-Hilbert matching convention are declared conditional inputs
+  - mass is retained exactly in exp(-tau*m^2); the unresummed -m^2 coefficient is not added again
+  - regulator, cutoff, subtraction scale, field count, xi, additive baseline, and any physical scale identification remain explicit inputs
+  - no observed G, Planck scale, or empirical gravity comparator enters selection, formulas, tolerances, or tests
+  - accepted C-GRV-001 supplies only dimensional and additive-baseline closure; no landed-but-unpromoted API is treated as scientific authority
+  - accepted claims, releases, and generated docs change only in one reviewed promotion transaction
+allowed_imports:
+  - C-GRV-001
+  - a separately declared positive self-adjoint boundaryless four-dimensional Euclidean real-scalar Laplace-type operator with constant nonnegative mass and adequate infrared/reference treatment
+  - the one-real-scalar determinant, heat-kernel, and Einstein-Hilbert coefficient conventions stated in source_inventory
+  - SymPy exact algebra, expint E1, modified Bessel K, limits, and series
+  - mpmath high-precision adaptive quadrature as independent regression evidence
+  - substrate_framework.exact_symbolic input contracts
+  - the scalar_induced_newton regulator tag and API only as implementation reuse checked against an independent derivation
+candidates:
+  - id: A
+    description: >-
+      Sharp proper-time lower cutoff tau_0=Lambda^-2 with exact mass,
+      I2=Lambda^2*(exp(-z)-z*E1(z)) and its linked I3 tail integral.
+  - id: B
+    description: >-
+      Smooth essential-singularity weight exp(-1/(Lambda^2*tau)) with exact
+      mass, giving the convergent modified-Bessel integral family.
+  - id: C
+    description: >-
+      Power-divergence-subtracted cutoff finite parts with declared scale mu,
+      preserving the logarithmic I2/I3 family and its scale dependence.
+selection_criteria:
+  - exact agreement with the defining integrals or declared subtraction limits
+  - constant-mass and convention consistency without hidden background dependence
+  - dimensional consistency and exact massless, large-mass, and derivative limits
+  - independent rederivation without importing scalar_one_loop_mass
+  - sensitivity to prefactor, sign, special-function order or branch, double counting, and scale mutations
+  - explicit regulator and baseline provenance with no physical selection by numerical closeness
+  - importable API reuse and complete consumer/governance replay
+claims_proposed:
+  - C-IGR-001
+  - C-IGR-002
+  - C-IGR-003
+comparators_blinded_until: >-
+  No empirical gravitational comparator belongs to P230. Existing PR #77 and
+  #82 text exposed internal exact values such as z=1 scheme ratios before this
+  promotion review; those are formula evaluations, not empirical comparators,
+  and they do not select a regulator or tolerance. Physical comparators remain
+  closed until a later renormalization-condition proposal freezes regulator,
+  scale, cutoff identification, baseline, and field content.
+status: accepted

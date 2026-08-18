@@ -21,7 +21,6 @@ import sympy as sp
 import substrate_framework as framework
 from substrate_framework.scalar_induced_newton import (
     SHARP_PROPER_TIME_REGULATOR,
-    leading_scalar_newton_shift_coefficient,
 )
 from substrate_framework.scalar_one_loop_mass import (
     KNOWN_ONE_LOOP_REGULATORS,
@@ -164,7 +163,7 @@ def test_zeta_closed_forms_are_the_power_subtraction_limits() -> None:
     assert sp.simplify(zeta3 + (m2**2 / 2) * (sp.log(m2 / mu**2) + sp.EulerGamma - sp.Rational(3, 2))) == 0
 
 
-def test_massless_sharp_limit_reproduces_the_landed_conditional_shift() -> None:
+def test_massless_sharp_limit_reproduces_the_independent_leading_shift() -> None:
     N, xi = sp.Integer(3), sp.Rational(1, 12)
     shift = exact_mass_inverse_newton_shift(
         N,
@@ -173,10 +172,16 @@ def test_massless_sharp_limit_reproduces_the_landed_conditional_shift() -> None:
         cutoff=Lam,
         mass_squared=0,
     )
-    landed = leading_scalar_newton_shift_coefficient(
-        N, xi, regulator=SHARP_PROPER_TIME_REGULATOR
+    independently_derived_coefficient = sp.simplify(
+        N
+        * (16 * sp.pi)
+        * sp.Rational(1, 2)
+        * (4 * sp.pi) ** -2
+        * (sp.Rational(1, 6) - xi)
     )
-    assert sp.simplify(shift.value - landed.coefficient * Lam**2) == 0
+    assert sp.simplify(
+        shift.value - independently_derived_coefficient * Lam**2
+    ) == 0
     assert sp.simplify(shift.finite_mass_factor - 1) == 0
 
     smooth = exact_mass_inverse_newton_shift(
@@ -187,7 +192,9 @@ def test_massless_sharp_limit_reproduces_the_landed_conditional_shift() -> None:
         mass_squared=0,
     )
     # The smooth weight also integrates to exactly Lambda^2 when massless.
-    assert sp.simplify(smooth.value - landed.coefficient * Lam**2) == 0
+    assert sp.simplify(
+        smooth.value - independently_derived_coefficient * Lam**2
+    ) == 0
 
     zeta = exact_mass_inverse_newton_shift(
         N,
@@ -227,7 +234,7 @@ def test_scheme_ledger_reports_exact_contrasts() -> None:
     assert abs(factor - sp.Float("0.1484955068", 10)) < sp.Float("1e-9")
 
 
-def test_exact_mass_shift_composes_the_landed_conditional_scheme_factor() -> None:
+def test_exact_mass_shift_rederives_the_conditional_scheme_factor() -> None:
     N, xi = sp.Integer(2), sp.Rational(1, 12)
     shift = exact_mass_inverse_newton_shift(
         N,
@@ -236,11 +243,51 @@ def test_exact_mass_shift_composes_the_landed_conditional_scheme_factor() -> Non
         cutoff=Lam,
         mass_squared=m2,
     )
-    landed = leading_scalar_newton_shift_coefficient(
-        1, xi, regulator=SHARP_PROPER_TIME_REGULATOR
+    independently_derived_per_field = sp.simplify(
+        (16 * sp.pi)
+        * sp.Rational(1, 2)
+        * (4 * sp.pi) ** -2
+        * (sp.Rational(1, 6) - xi)
     )
-    assert sp.simplify(shift.coefficient_per_field - landed.coefficient_per_field) == 0
-    assert sp.simplify(shift.value - N * landed.coefficient_per_field * shift.proper_time_value) == 0
+    assert sp.simplify(
+        shift.coefficient_per_field - independently_derived_per_field
+    ) == 0
+    assert sp.simplify(
+        shift.value
+        - N * independently_derived_per_field * shift.proper_time_value
+    ) == 0
+
+
+def test_cutoff_families_have_exact_large_mass_and_massless_limits() -> None:
+    sharp2 = sp.exp(-z) - z * sp.expint(1, z)
+    smooth2 = 2 * sp.sqrt(z) * sp.besselk(1, 2 * sp.sqrt(z))
+    smooth3 = 2 * z * sp.besselk(2, 2 * sp.sqrt(z))
+    assert sp.limit(sharp2, z, 0, "+") == 1
+    assert sp.limit(smooth2, z, 0, "+") == 1
+    assert sp.limit(smooth3, z, 0, "+") == 1
+    # SymPy leaves the E1 cancellation limit unevaluated.  Use the defining
+    # integral instead: after t=1+u, t^-2<=1 for u>=0, so
+    # 0<I2/Lambda^2<=integral_1^infty exp(-z*t)dt=exp(-z)/z -> 0.
+    u = sp.Symbol("u", nonnegative=True)
+    assert sp.factor(1 - 1 / (1 + u) ** 2).is_nonnegative is True
+    assert sp.limit(sp.exp(-z) / z, z, sp.oo) == 0
+    assert sp.limit(smooth2, z, sp.oo) == 0
+    assert sp.limit(smooth3, z, sp.oo) == 0
+
+
+def test_power_subtracted_scale_derivatives_are_exact() -> None:
+    i2 = curvature_proper_time_integral(
+        ZETA_POWER_SUBTRACTED_REGULATOR,
+        mass_squared=m2,
+        renormalization_scale=mu,
+    )
+    i3 = vacuum_proper_time_integral(
+        ZETA_POWER_SUBTRACTED_REGULATOR,
+        mass_squared=m2,
+        renormalization_scale=mu,
+    )
+    assert sp.simplify(mu * sp.diff(i2, mu) + 2 * m2) == 0
+    assert sp.simplify(mu * sp.diff(i3, mu) - m2**2) == 0
 
 
 def test_vacuum_shift_is_the_mass_resummed_determinant_integrand() -> None:
@@ -431,6 +478,9 @@ def test_module_is_target_blind() -> None:
     source = inspect.getsource(scalar_one_loop_mass)
     for forbidden in ("6.674", "Planck", "M_pl", "6.708", "observed"):
         assert forbidden not in source
+    assert "spacetime-constant nonnegative" in source
+    assert "varying effective mass" in source
+    assert "leading_scalar_newton_shift_coefficient" not in source
 
 
 def test_known_regulators_are_the_three_preregistered_schemes() -> None:

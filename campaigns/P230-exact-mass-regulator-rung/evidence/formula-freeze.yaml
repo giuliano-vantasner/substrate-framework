@@ -1,0 +1,50 @@
+campaign: P230
+scope: exact_constant_mass_local_one_loop_coefficient_families
+domains:
+  cutoff: positive_exact
+  subtraction_scale: positive_exact
+  mass_squared: nonnegative_spacetime_constant_exact
+  field_count: positive_integer
+  non_minimal_coupling: exact_real_with_decidable_relation_to_one_sixth
+operator_contract:
+  dimension: 4
+  signature: Euclidean
+  type: positive_self_adjoint_boundaryless_real_scalar_Laplace_type
+  expression: D_E=-nabla_E^2+xi*R_E+m^2
+  infrared_contract: adequate_convergence_or_declared_reference_subtraction
+  claim_ceiling: local_heat_kernel_coefficient_families_not_full_nonlocal_determinant
+conventions:
+  effective_action: Gamma_E=(1/2)*ln(det(D_E))
+  proper_time_sign: ln(lambda)=-integral_0^infinity exp(-tau*lambda)*d_tau/tau_up_to_input_independent_constant
+  heat_kernel_prefactor: (4*pi)^-2
+  curvature_weight: 1/6-xi
+  determinant_weight: 1/2
+  inverse_newton_matching_factor: 16*pi
+  per_field_inverse_newton_factor: (1-6*xi)/(12*pi)
+families:
+  C-IGR-001:
+    regulator: sharp_lower_cutoff_tau0=Lambda^-2
+    I2: Lambda^2*(exp(-z)-z*E1(z))
+    I3: Lambda^4*exp(-z)/2-m^2*I2/2
+  C-IGR-002:
+    regulator: smooth_weight_exp(-1/(Lambda^2*tau))
+    I2: 2*Lambda^2*sqrt(z)*K1(2*sqrt(z))
+    I3: 2*Lambda^4*z*K2(2*sqrt(z))
+  C-IGR-003:
+    regulator: declared_power_subtracted_cutoff_finite_part_at_mu
+    I2: m^2*(log(m^2/mu^2)+EulerGamma-1)
+    I3: -(m^4/2)*(log(m^2/mu^2)+EulerGamma-3/2)
+common_identities:
+  - dI3/d(m^2)=-I2
+  - Delta(1/G)=N*((1-6*xi)/(12*pi))*I2
+  - Delta(rho)=-(N/2)*(4*pi)^-2*I3
+  - 1/G_total=B+Delta(1/G)_with_B_independent
+exclusions:
+  - varying_V_double_prime_background_factorization
+  - full_determinant_or_nonlocal_action
+  - regulator_or_subtraction_condition_selection
+  - cutoff_to_substrate_scale_identification
+  - additive_baseline_selection
+  - total_Newton_constant_or_attractive_gravity
+  - tau_minus_one_higher_curvature_sector
+  - empirical_gravity_comparator

@@ -1,0 +1,26 @@
+campaign: P230
+criteria_frozen_before_empirical_comparators:
+  - defining_integral_or_subtraction_correctness
+  - constant_mass_and_convention_consistency
+  - exact_dimensions_limits_and_derivative_identity
+  - independent_rederivation
+  - mutation_sensitivity
+  - assumption_and_parameter_economy
+  - importable_consumer_and_governance_closure
+candidates:
+  A:
+    decision: retain_as_C-IGR-001
+    strengths: [literal_positive_tail_integral, exact_E1_form, sharp_cutoff_compatibility]
+    premises: [positive_cutoff]
+  B:
+    decision: retain_as_C-IGR-002
+    strengths: [convergent_smooth_weight, exact_Bessel_family, no_hard_step]
+    premises: [positive_cutoff, declared_smooth_weight]
+  C:
+    decision: retain_as_C-IGR-003
+    strengths: [explicit_power_subtraction, exact_scale_dependence, no_power_term]
+    premises: [positive_subtraction_scale, declared_finite_part]
+selection: parallel_exposure_not_physical_regulator_choice
+exact_scheme_falsifier:
+  massless_I3_at_unit_cutoff: {sharp: 1/2, smooth: 1, power_subtracted: 0}
+comparator_gate: closed_no_empirical_comparator_used

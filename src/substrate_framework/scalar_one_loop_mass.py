@@ -1,15 +1,20 @@
-"""Exact-mass one-loop proper-time coefficients for preregistered regulators.
+"""Exact constant-mass one-loop coefficients for declared regulators.
 
-This is the Route 1 (induced / Sakharov gravity) rung that follows
-``covariant_sine_gordon_action``.  The landed action rung hands the
-fluctuation operator
+Claims ``C-IGR-001`` through ``C-IGR-003`` concern the local coefficient
+families of a declared positive self-adjoint, boundaryless,
+four-dimensional Euclidean real-scalar operator
 
     D_E = -nabla_E**2 + xi*R_E + m**2,      m**2 = V''(phi_bg),
 
-to the determinant.  This module evaluates the two leading proper-time
-integral classes of ``Gamma_E = (1/2)*ln(det(D_E))`` with the mass retained
-exactly --- no expansion of ``exp(-tau*m**2)`` inside the regulated integral
---- for three preregistered regulators:
+only when ``m**2`` is a spacetime-constant nonnegative exact input.  The
+displayed ``V''`` equality is therefore an optional constant-vacuum
+composition, not permission to factor a varying background endomorphism out
+of the heat kernel.  The module evaluates the two leading proper-time integral
+classes of ``Gamma_E = (1/2)*ln(det(D_E))`` with the constant mass retained
+exactly---no expansion of ``exp(-tau*m**2)`` inside the regulated integral---
+for three preregistered prescriptions.  These are exact coefficient
+integrals within the displayed heat-kernel organization, not an exact
+truncation of the full determinant or its nonlocal terms:
 
 ``SHARP_PROPER_TIME_REGULATOR`` (reused from ``scalar_induced_newton``)
     A sharp lower proper-time cutoff ``tau_0 = Lambda**-2``.  Writing
@@ -32,20 +37,20 @@ exactly --- no expansion of ``exp(-tau*m**2)`` inside the regulated integral
         I_3 = 2*Lambda**4*z*BesselK_2(2*sqrt(z)).
 
 ``ZETA_POWER_SUBTRACTED_REGULATOR``
-    The Mellin finite-part scheme in which the power divergences are
-    subtracted; it requires a declared renormalization scale ``mu`` (the
-    cutoff argument is rejected) and yields the pure logarithmic running
+    A declared power-subtracted cutoff finite-part prescription, compatible
+    with the corresponding Mellin/zeta family.  It requires a declared scale
+    ``mu`` (the cutoff argument is rejected) and yields
 
         I_2 = m**2*(ln(m**2/mu**2) + EulerGamma - 1),
         I_3 = -(m**4/2)*(ln(m**2/mu**2) + EulerGamma - 3/2).
 
-Authority note: ``scalar_induced_newton`` and
-``covariant_sine_gordon_action`` are landed conditional (unpromoted)
-prior-work APIs -- the PR #14 and PR #25 harvests promoted no claims -- and
-the accepted ``C-GRV-001`` supplies only the conditional dimensional and
-additive-baseline ledger, leaving the coefficient, field content, and
-regulator as premises.  Every public symbol in this module is likewise
-conditional, unpromoted infrastructure linked to open goal #76.
+Authority note: accepted ``C-GRV-001`` supplies only the conditional
+dimensional and additive-baseline ledger.  ``C-IGR-001..003`` independently
+derive the coefficient families here while leaving the scalar field content,
+determinant convention, regulator, cutoff or subtraction scale, and any
+physical scale identification as explicit premises.  The previously landed
+``scalar_induced_newton`` and ``covariant_sine_gordon_action`` APIs promoted no
+claims and are not used as scientific authority.
 
 Composition with that landed conditional scheme factor (one real scalar,
 determinant weight 1/2, heat-kernel prefactor ``(4*pi)**-2``,
@@ -54,19 +59,18 @@ inverse-Newton shift
 
     Delta(1/G) = N * coefficient_per_field(xi) * I_2(regulator),
 
-where ``coefficient_per_field`` is taken from the landed conditional
-``scalar_induced_newton.leading_scalar_newton_shift_coefficient`` API, so
-the massless sharp limit reproduces that conditional API's
+where ``coefficient_per_field`` is rederived in this module from the declared
+determinant, heat-kernel, curvature, and Einstein-Hilbert matching factors.
+The massless sharp limit also reproduces the earlier conditional API's
 ``s*Lambda**2 = N*(1-6*xi)*Lambda**2/(12*pi)`` exactly.  The vacuum sector
 of the same mass-resummed expansion is
 
     Delta(rho_Gamma) = -(N/2)*(4*pi)**-2 * I_3(m**2)
 
-per scheme.  The ``-m**2`` entry of the landed conditional
-``scalar_heat_kernel_a2`` weights belongs to the *unresummed* organization,
-in which the exponential is expanded and the mass survives only as that
-coefficient; applying it on top of the resummed ``I_3`` double-counts the
-mass.  The two organizations agree to first order through the exact
+per scheme.  A separate ``-m**2`` coefficient belongs to the *unresummed*
+organization, in which the exponential is expanded; applying it on top of the
+resummed ``I_3`` double-counts the mass.  The two organizations agree to first
+order through the exact
 derivative identity ``d I_3/d m**2 = -I_2`` (which holds for all three
 schemes and is tested), i.e. ``I_3(m**2) = I_3(0) - m**2*I_2(0) + O(m**4)``.
 
@@ -85,11 +89,12 @@ Declared derivation oracles (all exact, SymPy):
   ``lim_{tau_0 -> 0} [I(tau_0) - power terms - log terms]`` evaluated
   symbolically.
 
-This module does NOT identify the cutoff with any substrate scale, choose a
-renormalization condition among the three schemes, derive a total Newton
-constant (the accepted C-GRV-001 additive baseline remains independent),
-evaluate the tau**-1 class (curvature-squared and m**2*R structures), or
-confront any empirical comparator.  Those are later rungs of issue #76.
+This module does NOT handle a varying effective mass, identify the cutoff with
+any substrate scale, choose a renormalization condition among the three
+schemes, derive a total Newton constant (the accepted C-GRV-001 additive
+baseline remains independent), evaluate the tau**-1 class
+(curvature-squared and m**2*R structures), or confront an empirical
+comparator.  Those are later rungs of issue #76.
 Scheme differences are the deliverable: at z = 1 the smooth regulator
 induces about 1.88 times the sharp curvature coefficient, and the
 power-subtracted scheme changes both the parametric structure and the sign
@@ -113,7 +118,6 @@ import sympy as sp
 from .exact_symbolic import exact_real as _exact_real
 from .exact_symbolic import positive_exact as _positive_exact
 from .scalar_induced_newton import SHARP_PROPER_TIME_REGULATOR
-from .scalar_induced_newton import leading_scalar_newton_shift_coefficient  # conditional landed API
 
 SMOOTH_PROPER_TIME_REGULATOR = "proper_time_smooth_essential"
 ZETA_POWER_SUBTRACTED_REGULATOR = "zeta_power_subtracted"
@@ -125,6 +129,13 @@ KNOWN_ONE_LOOP_REGULATORS = (
 )
 
 _FOUR_DIMENSIONAL_HEAT_KERNEL_PREFACTOR = (4 * sp.pi) ** -2
+_REAL_SCALAR_DETERMINANT_WEIGHT = sp.Rational(1, 2)
+_EINSTEIN_HILBERT_INVERSE_COUPLING_FACTOR = 16 * sp.pi
+_INVERSE_NEWTON_SCHEME_FACTOR = sp.simplify(
+    _EINSTEIN_HILBERT_INVERSE_COUPLING_FACTOR
+    * _REAL_SCALAR_DETERMINANT_WEIGHT
+    * _FOUR_DIMENSIONAL_HEAT_KERNEL_PREFACTOR
+)
 
 
 def _nonnegative_exact(value: Any, name: str) -> sp.Expr:
@@ -248,9 +259,9 @@ def curvature_proper_time_integral(
 ) -> sp.Expr:
     """Return the exact tau**-2-class proper-time integral for one scheme.
 
-    This is the integral that multiplies the declared heat-kernel weights
-    ``((1/6 - xi)*R_E - m**2)`` in ``Gamma_E``; with the landed conditional
-    scheme factor it also multiplies the induced inverse-Newton shift.
+    For constant ``mass_squared`` this is the integral that multiplies the
+    declared curvature weight ``(1/6-xi)*R_E`` in ``Gamma_E``.  The mass is
+    already retained in the exponential and is not an additional weight.
     """
 
     resolved_cutoff, scale = _resolve_regulator(regulator, cutoff, renormalization_scale)
@@ -286,7 +297,7 @@ def vacuum_proper_time_integral(
 
 @dataclass(frozen=True)
 class ExactMassNewtonShift:
-    """Exact-mass induced inverse-Newton shift data for one scheme."""
+    """Conditional constant-mass inverse-Newton shift for one scheme."""
 
     regulator: str
     field_count: sp.Expr
@@ -314,12 +325,9 @@ def exact_mass_inverse_newton_shift(
 ) -> ExactMassNewtonShift:
     """Return ``Delta(1/G) = N * coefficient_per_field * I_2`` exactly.
 
-    ``coefficient_per_field`` is the per-field scheme factor
-    ``scheme_factor*(1/6 - xi)`` read from the landed conditional
-    ``scalar_induced_newton.leading_scalar_newton_shift_coefficient`` API
-    (its massless sharp regulator tag is used only to read that factor,
-    which is regulator-independent).  The massless sharp limit reproduces
-    that module's ``N*(1-6*xi)*Lambda**2/(12*pi)`` exactly.
+    ``coefficient_per_field`` is rederived here as
+    ``16*pi*(1/2)*(4*pi)**-2*(1/6-xi)``.  The massless sharp limit reproduces
+    ``N*(1-6*xi)*Lambda**2/(12*pi)`` exactly.
 
     ``curvature_weight_sign`` is the decidable sign of ``1/6 - xi`` only.
     ``value_sign`` is the decidable sign of the full returned value, or
@@ -333,10 +341,9 @@ def exact_mass_inverse_newton_shift(
     count = _positive_integer(field_count, "field_count")
     xi = _exact_real(non_minimal_coupling, "non_minimal_coupling")
 
-    landed = leading_scalar_newton_shift_coefficient(
-        1, xi, regulator=SHARP_PROPER_TIME_REGULATOR
+    coefficient_per_field = sp.simplify(
+        _INVERSE_NEWTON_SCHEME_FACTOR * (sp.Rational(1, 6) - xi)
     )
-    coefficient_per_field = landed.coefficient_per_field
 
     if regulator == SHARP_PROPER_TIME_REGULATOR:
         proper_time_value = _sharp_curvature_integral(resolved_cutoff, mass)
@@ -396,7 +403,7 @@ def exact_mass_inverse_newton_shift(
 
 @dataclass(frozen=True)
 class ExactMassVacuumShift:
-    """Exact-mass one-loop vacuum-sector data for one scheme."""
+    """Conditional constant-mass vacuum-sector data for one scheme."""
 
     regulator: str
     field_count: sp.Expr
@@ -425,10 +432,9 @@ def exact_mass_vacuum_density_shift(
     action density in the mass-resummed organization: the trace integrand is
     ``exp(-tau*m**2)*[tau**-2 + tau**-1*(1/6-xi)*R_E + ...]``, so the vacuum
     sector is the tau**-3 class with the exponential retained.  The
-    ``-m**2`` heat-kernel weight of the landed conditional
-    ``scalar_heat_kernel_a2`` is the first-order remnant of that same
-    exponential in the unresummed organization and must not be added again;
-    the exact bridge is the derivative identity ``d I_3/d m**2 = -I_2``.
+    A separate ``-m**2`` heat-kernel weight is the first-order remnant of that
+    same exponential in the unresummed organization and must not be added
+    again; the exact bridge is ``d I_3/d m**2 = -I_2``.
     The sector is exhibited rather than omitted whenever the curvature-sector
     shift is quoted.
     """

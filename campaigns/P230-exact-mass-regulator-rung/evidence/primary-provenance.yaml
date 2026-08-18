@@ -1,0 +1,19 @@
+campaign: P230
+canonical_issue: 76
+source_prs: [77, 82]
+promotion_branch: research/p230-exact-mass-promotion
+base_commit: 0beaac3
+implementation_source_commit: d415caf
+implementation_cherry_pick: a309008
+reviewed_failure_commit: 04f26f2
+repaired_source_commit: a8a47f8
+formula_freeze: evidence/formula-freeze.yaml
+proposal: proposal.yaml
+primary_verifier: verify.py
+independent_rederivation: reviews/independent_exact_mass_review.py
+claim_ids: [C-IGR-001, C-IGR-002, C-IGR-003]
+authorship:
+  original_implementation: prime-agent
+  promotion_scope_and_oracles: root-agent
+  distinct_merger: pending_handoff
+non_self_merge: enforced
