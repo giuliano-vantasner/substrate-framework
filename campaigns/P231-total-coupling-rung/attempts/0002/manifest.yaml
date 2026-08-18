@@ -1,0 +1,38 @@
+id: attempt-0002
+campaign: P231
+branch: research/p231-total-coupling-rung
+base_release: v0.161.0
+source_baseline: substrate-framework@7dfe89b
+command: >
+  PYTHONPATH=src .venv/bin/python -m pytest tests/test_total_gravitational_coupling.py -q;
+  PYTHONPATH=src .venv/bin/python proposals/P231-total-coupling-rung/verify.py;
+  PYTHONPATH=src .venv/bin/python proposals/P231-total-coupling-rung/reviews/independent_total_coupling_review.py;
+  bash scripts/validate.sh --full
+working_directory: /home/dan/substrate-framework
+status: complete
+verdict: crash_recovery_and_F7_repair_complete
+self_adversarial_findings_and_repairs:
+  F7_symbolic_half_line_baseline_undecidable: >
+    The attempt-0001 three-tier sign classifier could not certify symbolic
+    baselines constrained to the closed half-line of the shift sign
+    (B >= 0 with sub-conformal xi), contradicting the F2 uniform threshold
+    and the F4 decidable-structure statement. Repair: half-line leg in the
+    derived-structure tier; boundary tests on both sides added.
+  test_file_recovery: >
+    The session crashed while rewriting tests after the F1-F6 repairs,
+    truncating the test file to zero bytes. Recovered from the session
+    kernel snapshot (pre-repair 23-test base), F2/F3 repair deltas
+    re-applied, defining-integral oracles restated as closed-form
+    derivative identities plus 50-digit mpmath quadrature (unevaluated
+    Integral differences do not simplify in SymPy).
+evidence:
+  primary_verifier: ALL_26_CHECKS_PASS
+  independent_rederivation: ALL_17_CHECKS_PASS
+  targeted_tests: 28_passed
+  consumer_replay: scalar_one_loop_mass_25_and_induced_gravity_58_passed
+  full_validation: 2291_passed_ALL_REPOSITORY_WORKFLOW_CHECKS_PASS
+  trapz_preflight: no_new_hits_vs_legacy_inventory
+  comparator_blinding: no_empirical_comparator_exists
+  proposal_schema: validated_by_scripts/validate_repository.py
+  memory_contract: validated_by_memory_cli
+next_materially_different_route: none required; hand to independent review and the later promotion transaction

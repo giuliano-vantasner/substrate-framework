@@ -1,0 +1,15 @@
+campaign: P231
+new_public_surface:
+  module: src/substrate_framework/total_gravitational_coupling.py
+  exports: [USABLE_TOTAL_COUPLING_SCHEMES, EXCLUDED_TOTAL_COUPLING_SCHEMES, scheme_selection_ledger, curvature_scale_factor, scheme_spread_ratio, total_inverse_gravity_coupling, attractive_sign_map, purely_induced_attractive_verdict, baseline_provenance, higher_curvature_control_ledger]
+existing_consumers:
+  scalar_one_loop_mass: unchanged; called, not modified
+  scalar_induced_newton: unchanged; tag imported only
+  covariant_sine_gordon_action: unchanged; not imported here
+  package __init__: additive exports only; no existing export altered
+downstream_replay:
+  - tests/test_scalar_one_loop_mass.py: 25 passed (accepted suite unchanged)
+  - tests/test_induced_gravity.py: 33 passed (C-GRV-001 consumer unchanged)
+  - proposals/P231-total-coupling-rung/verify.py: embedded consumer replay green
+breaking_changes: none
+debt: []

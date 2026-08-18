@@ -1,0 +1,74 @@
+campaign: P231
+scope: derived_usable_total_gravitational_coupling_composition
+frozen_before_any_comparator_evaluation: true
+empirical_comparators: none_exist_in_this_campaign
+domains:
+  cutoff: positive_exact
+  subtraction_scale: positive_exact
+  mass_squared: nonnegative_spacetime_constant_exact
+  field_count: positive_integer
+  non_minimal_coupling: exact_real_with_decidable_relation_to_one_sixth
+  baseline_inverse_coupling: exact_real_declared_input
+operator_contract:
+  inherited_from: C-IGR-001
+  dimension: 4
+  signature: Euclidean
+  type: positive_self_adjoint_boundaryless_real_scalar_Laplace_type
+  expression: D_E=-nabla_E^2+xi*R_E+m^2
+  claim_ceiling: local_heat_kernel_coefficient_families_not_full_nonlocal_determinant
+frozen_definitions:
+  curvature_scale_factor:
+    sharp: J_sharp(z)=exp(-z)-z*E1(z)=integral_1^infty exp(-z*t)t^-2 dt
+    smooth: J_smooth(z)=2*sqrt(z)*K_1(2*sqrt(z))=integral_0^infty exp(-z*t-1/t)t^-2 dt
+    zeta: J_zeta(z)=z*(log z+EulerGamma-1)
+    massless_extension: J_sharp(0)=J_smooth(0)=1, J_zeta(0)=0
+  selection_legs:
+    L1_spectral_positivity: 0<J(z)<=J(0)=1 from positive integrand (positive operator spectrum)
+    L2_monotone_decoupling: dJ/dz=-tau^-1_class<0 exactly; tau^-1 class is itself a positive-integrand integral with exact squeeze 0<E1(z)<=exp(-z)/z
+    L3_cutoff_ontology: scheme scale must carry E_cut=hbar*c/a (C-GRV-001); mu cannot
+  zeta_exclusion_roots:
+    sign_change: z*=exp(1-EulerGamma)
+    derivative_sign_change: exp(-EulerGamma)
+  total_composition:
+    formula: 1/G_total=B+N*(1-6*xi)*J(z)*Lambda^2/(12*pi)
+    induced_shift_source: accepted scalar_one_loop_mass exact_mass_inverse_newton_shift (C-IGR-001..003)
+  sign_map_necessary_and_sufficient:
+    xi_less_than_one_sixth: attractive iff B>-N*(1-6*xi)*J(z)*Lambda^2/(12*pi); attractive for all m^2 iff B>=0; negative B flips repulsive above unique critical mass J(z_c)=-12*pi*B/(N*(1-6*xi)*Lambda^2)
+    xi_equal_one_sixth: Delta=0 identically; attractive iff B>0; purely-induced reading lands exactly on 1/G_total=0 (marginal locus)
+    xi_greater_than_one_sixth: attractive iff B>N*(6*xi-1)*J(z)*Lambda^2/(12*pi); for all m^2 iff B>N*(6*xi-1)*Lambda^2/(12*pi)
+  scheme_spread:
+    ratio: R(z)=J_smooth/J_sharp
+    unit_mass: 2*e*K_1(2)/(1-e*E_1(1))
+    small_z_difference_leading_term: EulerGamma*z
+    large_z: unbounded (smooth decays like exp(-2*sqrt(z)) against exp(-z))
+  control_ledger:
+    tau_minus_one_class: -dJ/dz exactly; sharp E1(z), smooth 2*K_0(2*sqrt(z)), zeta log(z)+EulerGamma
+    log_divergence_at_massless_point: declared; predeclared domain z>=z_min>0
+    tau_minus_three_vacuum: accepted exact_mass_vacuum_density_shift value exhibited
+    nonlocal_remainder: bounded by derivative-expansion parameter Lambda^-2*||R_E|| in predeclared domain
+  baseline_provenance:
+    status: declared_premise_per_C-GRV-001 (B free; dimensions do not set B=0)
+    purely_induced_reading: B=0 is itself a declared premise; attractive iff xi<1/6 independent of N, m^2, Lambda, usable scheme
+    purely_induced_G_total: 12*pi/(N*(1-6*xi)*J(z)*Lambda^2) for xi<1/6
+    downstream_ceiling: scheme-bracketed by R(z); no unique numeric G without a further scheme-selection input no accepted claim supplies
+  renormalization_condition:
+    statement: 1/G_total=B+N*(1-6*xi)*Lambda^2*J(z)/(12*pi) normalized in the derived usable scheme set; B declared premise (C-GRV-001); xi=1/6 exact marginal locus; J(z) the derived finite part
+    usable_set_output: "{sharp proper-time, smooth essential-singularity} from legs L1/L2/L3; zeta excluded (fails L3: sign change at z=exp(1-EulerGamma), scale-free)"
+    finite_parts: J_sharp(z)=exp(-z)-z*E1(z); J_smooth(z)=2*sqrt(z)*K_1(2*sqrt(z)) exactly per usable scheme
+    reference_member: sharp proper-time cutoff tau_0=Lambda^-2 matches C-GRV-001 cutoff ontology E_cut=hbar*c/a (Lambda=1/a); massless limit reproduces accepted Delta(1/G)=s*Lambda^2
+    provenance: C-GRV-001 (v0.68.0), C-IGR-001..003 (v0.161.0), Vassilevich hep-th/0306138, Visser gr-qc/0204062
+    non_authority: scalar_induced_newton.py and covariant_sine_gordon_action.py (landed conditional, unpromoted; implementation reuse only)
+    open_items: no unique numeric G (scheme bracket R(z) is the quoted ceiling); claim promotion C-IGR-004/C-GRV-002 in a later reviewed transaction
+  total_newton_constant:
+    formula: G_total=1/(B+N*(1-6*xi)*Lambda^2*J(z)/(12*pi)) per usable scheme; reciprocal preserves sign
+    marginal_locus: 1/G_total=0 exactly (e.g. xi=1/6 with B=0) returns no Newton constant (None), never a silent division
+    purely_induced_bracket: (12*pi/(N*(1-6*xi)*Lambda^2*J_smooth(z)), 12*pi/(N*(1-6*xi)*Lambda^2*J_sharp(z))) for xi<1/6 with B=0
+    bracket_ratio: G_sharp/G_smooth=R(z)=J_smooth/J_sharp exactly
+    honesty: undecidable symbolic totals stay None; repulsive totals return negative G_total (not an error)
+exclusions:
+  - empirical_gravity_comparator (none exists in this campaign)
+  - observed_G_or_Planck_phenomenology
+  - physical_regulator_selection_by_numerical_closeness
+  - unique_numeric_normalization
+  - sourced_nonflat_geometry
+  - radiative_prediction

@@ -1,0 +1,54 @@
+id: attempt-0005
+campaign: P231
+branch: research/p231-total-coupling-rung
+base_release: v0.161.0
+accepted_release: v0.162.0
+source_baseline: substrate-framework@7dfe89b
+role: promotion_gate_record
+status: complete
+summary: >
+  Reviewed promotion transaction for C-IGR-004 (composition and selection
+  derivation) and C-GRV-002 (total-sign/regime map, baseline provenance, total
+  Newton constant). This is the governed registry-materialization event, not a
+  new scientific route: attempts 0001-0004 delivered and audited the derived
+  object; this attempt records the individual claim review, the campaign
+  adjudication, and the registry/release/docs/memory materialization.
+transaction:
+  moved: proposals/P231-total-coupling-rung -> campaigns/P231-total-coupling-rung
+  registry: governance/claims.yaml adds C-IGR-004 and C-GRV-002
+  release: governance/releases/v0.162.0.yaml + governance/releases/current.yaml
+  claim_reviews:
+    - reviews/C-IGR-004-claim-review.md
+    - reviews/C-GRV-002-claim-review.md
+  accepted_memory:
+    - memory/vantasner/decisions/C-IGR-004-review.md
+    - memory/vantasner/decisions/C-GRV-002-review.md
+  generated:
+    - docs/generated/claim-index.md (scripts/render_docs.py)
+    - memory/framework/claims/C-IGR-004.md and C-GRV-002.md (scripts/render_memory.py)
+    - memory/framework/releases/v0.162.0.md (scripts/render_memory.py)
+independent_governance_review:
+  reviewer_rederivation: fresh SymPy + 50-digit mpmath quadrature, no total_gravitational_coupling import
+  load_bearing_confirmed:
+    - sharp/smooth scale factors from defining tail integrals
+    - L1 squeeze 0<J<=1 and L2 strict monotone decoupling (quadrature grid)
+    - zeta exclusion at the exact root exp(1-EulerGamma)
+    - spread R(1)=2*e*K1(2)/(1-e*E1(1))=1.88377257808...
+    - composition equals accepted scalar_one_loop_mass shift exactly
+    - sign-map boundary B*=-Delta, conformal marginal Delta=0, purely-induced attractive iff xi<1/6
+    - large-mass decoupling J->0 confirmed by quadrature (J_sharp=6.9e-90, J_smooth=3.5e-12 at z=200), not an unevaluated SymPy E1 limit
+  comparator_blinding: held; no observed-G/Planck/CODATA token in module or tests
+  dependency_closure: pass (C-GRV-001, C-IGR-001..003, C-IGR-004 all in v0.162.0)
+command: >
+  PYTHONPATH=src .venv/bin/python -m pytest tests/test_total_gravitational_coupling.py -q;
+  PYTHONPATH=src .venv/bin/python campaigns/P231-total-coupling-rung/verify.py;
+  PYTHONPATH=src .venv/bin/python campaigns/P231-total-coupling-rung/reviews/independent_total_coupling_review.py;
+  bash scripts/validate.sh --full;
+  git diff --check
+evidence:
+  primary_verifier: ALL_32_CHECKS_PASS
+  independent_rederivation: ALL_20_CHECKS_PASS
+  targeted_tests: 41_passed
+  full_validation: 2304_passed_in_3228.55s_ALL_REPOSITORY_WORKFLOW_CHECKS_PASS_VALIDATE_EXIT_0
+  git_diff_check: clean
+next_materially_different_route: none; ready for independent reviewer reproduction and merge adjudication (kelvin)

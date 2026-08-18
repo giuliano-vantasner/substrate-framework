@@ -1,0 +1,19 @@
+campaign: P231
+base_release: v0.161.0
+source_baseline: substrate-framework@7dfe89b
+branch: research/p231-total-coupling-rung
+issue: 88
+coordination_comment: issues/88#issuecomment-5327558286
+accepted_claim_inputs:
+  - C-GRV-001 (v0.68.0)
+  - C-IGR-001 (v0.161.0)
+  - C-IGR-002 (v0.161.0)
+  - C-IGR-003 (v0.161.0)
+candidate_claims:
+  - C-IGR-004 (composition and selection derivation; candidate, promotion later)
+  - C-GRV-002 (total-coupling sign/regime statement; candidate, promotion later)
+promotion_boundary: >-
+  This rung lands the derived conditional API, tests, verifier, independent
+  rederivation, and evidence set. Registry, release, generated docs, and
+  accepted memory change only in the later reviewed promotion transaction;
+  candidate claims are promoted individually through review per AGENTS.md.
