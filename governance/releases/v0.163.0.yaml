@@ -1,6 +1,6 @@
 schema_version: 1
 release: v0.163.0
-source_baseline: substrate-framework@db082ec
+source_baseline: substrate-framework@970633a
 released_at: '2026-08-18T22:40:00+02:00'
 accepted_claims:
 - C-SG-001
@@ -225,13 +225,10 @@ accepted_claims:
 - C-SG-020
 - C-SG-022
 - C-VIR-002
-- C-GW-013
-- C-GW-014
-note: 'Closes the #92 promotion gap: attaches reviewed Lean verification evidence to 43 accepted claims
-  from the ingested historical corpus (campaign P232 census, 60 files / 467 theorems, every theorem classified
-  with a reviewed disposition), promotes ten new standalone exact facts with no registry counterpart (campaign
-  P233: TT graviton polarization count, lowest radiating multipole order, unbroken electroweak generator,
-  V-A parity violation, Z3 colour centre, rigid-top band splitting, generalized-Skyrme weights, kink exchange
-  phase, ionization basin, Comparsi virial certificate) and two composed theorems (campaigns P234/P235).
-  The formal surface is unchanged from the gate commit; no existing claim statement, dependency, or status
-  axis is altered.'
+note: 'Closes the #92 promotion gap: attaches 55 independently reviewed Lean artifact-claim evidence records,
+  spanning 176 theorem entrypoints, to 39 accepted claims from the ingested historical corpus (campaign P232
+  census, 60 files / 467 manifest theorems, every
+  theorem classified with a reviewed disposition) and promotes ten new standalone exact facts at their encoded
+  domains (campaign P233). P234/P235 record rejected dispositions for the proposed C-GW-013/C-GW-014 lookup-table
+  syntheses, which do not enter the registry or release. The historical source statements and proofs are unchanged;
+  the aggregate axiom audit adds the load-bearing C-SG-022 interval theorem.'

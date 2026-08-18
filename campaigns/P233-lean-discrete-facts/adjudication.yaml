@@ -1,8 +1,8 @@
 campaign: P233
 title: Historical Lean corpus fixed-theorem promotions
-base_release: v0.161.0
+base_release: v0.162.0
 accepted_release: v0.163.0
-base_commit: db082ec
+base_commit: 970633a
 adjudicated_at: '2026-08-18T21:30:00+02:00'
 selected_candidates:
 - id: A
@@ -70,11 +70,10 @@ claims:
   review: accepted
   compatibility: compatible_extension
   epistemic: active
-accepted_composition:
-- id: C-GW-002
-  decision: unchanged_spatial_TT_projector_rank_two_shared_D4_value_only
-- id: C-MOM-001
-  decision: unchanged_conservation_premises_recorded_as_declared_input_of_the_multipole_map
+dependency_closure:
+- claim: C-GW-012
+  dependency: C-GW-011
+  decision: same_release_dependency_declared_and_ordered_before_consumer
 unpromoted_surfaces:
 - id: ProductionAmplitude_time_delay_values
   reason: Hardcoded_branch_snapshots_with_a_pasted_decimal_do_not_evaluate_the_defining_digamma_object_class_4_disposition.
@@ -89,7 +88,7 @@ unpromoted_surfaces:
 evidence:
   proposal: proposal.yaml
   census: ../P232-lean-corpus-census/census.yaml
-  primary_route: attempts/0001/result.yaml
+  primary_route: attempts/0002/result.yaml
   claim_reviews:
   - reviews/C-GW-011-claim-review.md
   - reviews/C-GW-012-claim-review.md
@@ -102,14 +101,15 @@ evidence:
   - reviews/C-SG-022-claim-review.md
   - reviews/C-VIR-002-claim-review.md
 validation_commands:
-- scripts_check_lean_sh_at_ingestion_commit_63fa769_formal_surface_unchanged
+- scripts_check_lean_sh_at_corrected_final_boundary
 - PYTHONPATH_src_python_scripts_validate_repository_py
 - pytest_tests_test_lean_claim_census_py
 - scripts_validate_sh_full_once_at_final_boundary
 - git_diff_check_separately
 integrated_gate:
-  status: recorded_at_final_boundary
-  formal_surface: unchanged_from_gate_commit_63fa769
+  status: lean_gate_passed_full_validation_pending
+  formal_surface: historical_sources_unchanged_load_bearing_audit_extended_for_C_SG_022
   full_validation: scripts/validate.sh --full at the merge boundary
-debt: []
-status: accepted
+debt:
+- Fresh claim-level reviews are pending from an actor independent of the implementation.
+status: pending_independent_review

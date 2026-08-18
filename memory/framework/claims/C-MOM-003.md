@@ -38,4 +38,3 @@ Accepted in `v0.40.0` with provenance `campaigns/P045-p3d2-spherical-stf-null/ad
 - `campaigns/P045-p3d2-spherical-stf-null/reviews/source_adjudication.md`
 - `memory/vantasner/decisions/C-MOM-003-review.md`
 - `tests/test_conserved_moments.py`
-- `formal/SubstrateFramework/Ingested/Phase14P3D_SphericalNull.lean`

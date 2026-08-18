@@ -1,0 +1,15 @@
+attempt: '0002'
+route: Exact physical-encoding and dependency audit of the proposed synthesized theorem.
+command: inspect definitions and theorem statements in Phase16QB_TwoPolarizations.lean against C-GW-002 and C-GW-005
+entrypoint: formal/SubstrateFramework/Ingested/Phase16QB_TwoPolarizations.lean::Phase16QB.axisym_vs_triaxial_split
+dependency_scopes_used:
+- C-GW-002
+- C-GW-005
+status: rejected
+verdict: The kernel proves evaluations of numTTpolarizations, excitesCross, and excitesPlus, but those definitions
+  directly assign the axisymmetric and triaxial outputs. The accepted dependencies do not derive triaxial cross/plus
+  excitation or universal plus excitation, so the proposed core synthesis imports its structural gap as an input.
+diagnosed_layer: scientific_construction
+falsifier: An independent source-tensor and TT-projection derivation proving every table entry from accepted primitives
+  would permit a new synthesis proposal; evaluation of the current table cannot.
+elapsed: exact source audit; no numerical comparator

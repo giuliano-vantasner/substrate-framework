@@ -1,14 +1,14 @@
 id: P232
-base_release: v0.161.0
-source_baseline: substrate-framework@db082ec
+base_release: v0.162.0
+source_baseline: substrate-framework@970633a
 question: 'Census every theorem of the 60 ingested historical Lean files against the accepted claim registry
-  at v0.161.0: which theorems machine-check statements already accepted (and in exactly what scope), which
+  at v0.162.0: which theorems machine-check statements already accepted (and in exactly what scope), which
   are new standalone exact facts, which compose accepted claims, and which are infrastructure with a recorded
   disposition?'
 source_inventory:
-- source: governance/claims.yaml @ v0.161.0 (210 accepted statements)
+- source: governance/claims.yaml @ v0.162.0 (212 accepted statements)
   access: in-hand repository registry
-  extracted: all 210 claim statements read for matching
+  extracted: all 212 claim statements read for matching
 - source: formal/SubstrateFramework/Ingested/*.lean (60 files, 467 theorems)
   access: in-hand ingested corpus
   extracted: module docs, theorem statements, declared-input structure per file
@@ -20,7 +20,8 @@ invariants:
 - each attachment names exactly what the Lean theorem proves including its declared physics premises
 - interpretive or narrative physics beyond the machine-checked statement stays out of the core layer
 - every non-claim theorem carries a recorded disposition naming why it is not a claim
-- no formal/ file is edited and the Lean corpus gate is not rerun for governance-only changes
+- the ingested formal surface is provenance-preserving and its Lean gate is replayed at the final single-PR boundary
+- literal answer tables and copied expected values are artifact-only, not corroborating verification evidence
 allowed_imports:
 - C-TH-001
 - C-U1-001
@@ -74,6 +75,7 @@ uniqueness_evidence: 'The census route is fixed by the issue: enumerate every in
   against the registry; no mechanism selection is involved.'
 selection_criteria:
 - exact-scope match between the Lean statement and the accepted claim, named explicitly per attachment
+- the theorem evaluates the accepted claim's declared object rather than a stand-in that encodes the desired output
 - declared physics premises of the Lean file recorded as input, not as machine-checked content
 - no accepted claim re-reviewed or altered beyond appending lean evidence
 claims_proposed: []

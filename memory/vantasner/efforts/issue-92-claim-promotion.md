@@ -1,8 +1,8 @@
 ---
-description: Promote the ingested historical Lean corpus claims for issue #92 - census, corroboration evidence, fixed-theorem and synthesis promotions in the single merge unit
+description: Corrected review and promotion transaction for the ingested historical Lean corpus under issue #92
 author: prime-agent
 created: '2026-08-18T21:00:00+02:00'
-updated: '2026-08-18T21:55:00+02:00'
+updated: '2026-08-18T23:40:00+02:00'
 tags:
 - substrate-framework
 - effort
@@ -15,118 +15,97 @@ status: active
 
 ## Goal and Success Contract
 
-This effort delivers work items 2-4 of issue #92 on the single merge unit branch
-`process/historical-lean-ingestion` (PR #93): the theorem-by-theorem census of
-all 60 ingested Lean files against the accepted registry at release v0.161.0,
-the reviewed Lean evidence transaction attaching corroborations as
-`verification_evidence`, the promotion of the new standalone exact facts
-through a fixed-theorem campaign, the promotion of the two composed capstones
-through synthesis campaigns, the registry/release/doc/memory
-synchronization, and the final-boundary validation. It is complete only when
-every claim-bearing theorem is promoted through the workflow or carries a
-recorded, reviewed disposition, the debt ledger holds no "ingested theorems
-are not claims" residue, and the full validation suite passes at the merge
-commit.
+Issue #92 requires one reviewed disposition for every theorem in the 60-file
+historical Lean ingestion, promotion only for claims whose exact statements and
+dependency closure are supported, synchronized registry/release/docs/memory,
+and one proportionate final-boundary gate. PR #93 did not meet that contract:
+it self-reviewed the transaction, attached several answer-table artifacts as
+claim evidence, and promoted two circular syntheses. PR #94 restores the
+v0.162.0 tree; this corrected transaction is based on that rollback.
+
+Success remains pending until the corrected evidence scopes and ten fixed
+theorems receive independent claim-level review, a distinct actor merges the
+result, and issue #92 records the rejected C-GW-013/C-GW-014 routes alongside
+the landed work. Merge activity alone is not success.
 
 ## Accepted Baseline
 
-Release v0.161.0 (210 accepted claims), branch head db082ec carrying the
-ingested corpus (60 files, 467 theorems, provenance manifest, gate PASS:
-escape scan, 8,089-job lake build, axiom audit, 12/12 consistency tests).
-Read directly: `governance/claims.yaml` (all 210 statements),
-`formal/SubstrateFramework/Ingested/*.lean` (module docs and theorem
-statements), `formal/SubstrateFramework/Ingested/provenance.yaml`, campaign
-adjudications for every corroborated claim family, and the migration
-source-unit queue for family dispositions.
+Release v0.162.0, commit `970633a`, with 212 accepted claims. The ingested Lean
+source is `/home/dan/substrate@6d1f4e0`; the repository copy is checked for
+token-preserved statements and proofs after the documented namespace, comment,
+and import-path normalizations. Its prior gate recorded 8,089 Lean jobs and no
+proof escapes. The corrected boundary replays the Lean gate because
+`formal/Audit.lean` now audits the load-bearing positive-basin theorem.
 
 ## Constraints and Invariants
 
-The binding constraints for this effort are the following.
+The corrected transaction preserves these boundaries.
 
-- The Lean surface is frozen: no `formal/` edits, no Lean rebuild - the gate
-  passed at the ingestion commit and promotion is governance-only. Per owner
-  direction, no validation ceremony: the corpus is not rechecked; the full
-  suite runs once at the final boundary.
-- Accepted atoms are not re-reviewed; each attachment/promotion is reviewed
-  individually against what the Lean theorem actually proves, including its
-  asserted physics premises encoded as declared inputs.
-- Interpretive conditionals name their hypothesis and stay out of the core
-  dependency layer; class-4 dispositions name why each theorem is not a claim.
-- Claim statements are exact: scope limited to the machine-checked content
-  with the declared encoding named; every promotion carries exclusions.
+- Historical ingested source statements and proofs remain unchanged.
+- An answer encoded directly in a Lean definition is artifact provenance, not
+  independent corroboration or synthesized glue.
+- C-GW-011 is physically scoped to D >= 3; its D=2 evaluation is an arithmetic
+  out-of-regime guard.
+- C-GW-012 declares its same-release dependency on C-GW-011.
+- C-EW-001, C-ROT-002, C-SG-020, C-SG-022, and C-VIR-002 state only what their
+  formal artifacts and declared hypotheses support.
+- Reviews from PR #93 are not independent evidence and are replaced, not
+  inherited.
 
 ## Decomposition
 
-1. [x] Census: classify all 60 files / 467 theorems (46 corroboration
-   attachments to 35 claims, 11 fixed-theorem promotions, 2 synthesized
-   capstones, class-4 dispositions for the remainder).
-2. [x] Instantiate contracts: this effort memory plus P232-P235 proposal
-   manifests, validated before registry edits.
-3. [x] P232 evidence transaction: 46 lean verification_evidence records on 43
-   accepted claims, 43 individual scope reviews, adjudication, census.yaml.
-4. [x] P233 fixed-theorem promotions: C-GW-011, C-GW-012, C-EW-001, C-WK-001,
-   C-CF-001, C-ROT-002, C-GSK-003, C-SG-020, C-SG-022, C-VIR-002 (C-SG-021
-   reclassified class 4 during review: hardcoded branch snapshots, not the
-   digamma object - recorded in the adjudication as a preliminary-scan
-   correction).
-5. [x] P234/P235 synthesis promotions: C-GW-013, C-GW-014.
-6. [x] Release v0.163.0 (222 accepted claims), regenerated docs and accepted
-   memory, 13 decision memories, 2 synthesis contract memories,
-   tests/test_lean_claim_census.py (4 checks).
-7. [ ] Final-boundary validation once, commit, PR update, owner-authorized
-   merge, issue closure.
+1. [x] Classify all 60 files and every declared theorem/lemma.
+2. [x] Correct P232 to 55 artifact-claim evidence records spanning 176 named
+   theorem entrypoints and attached to 39 accepted claims; classify the Phase13,
+   Phase14, and Phase16 answer tables as artifact-only.
+3. [x] Correct P233 to ten fixed-theorem promotions: C-GW-011, C-GW-012,
+   C-EW-001, C-WK-001, C-CF-001, C-ROT-002, C-GSK-003, C-SG-020, C-SG-022,
+   and C-VIR-002.
+4. [x] Reject C-GW-013 and C-GW-014 in P234/P235 because their missing physical
+   maps are definition inputs, not consequences of the accepted dependencies.
+5. [x] Pin v0.163.0 to the ten supported additions (222 claims total) and
+   regenerate accepted docs/memory.
+6. [ ] Obtain fresh individual reviews for the 39 evidence attachments, ten
+   promotions, and two rejected syntheses.
+7. [ ] Run the selected final-boundary validation once, obtain distinct merge,
+   update issue #92, and verify merged-branch cleanup.
 
 ## Attempts
 
-Attempts are append-only and reproducible; this table records the single census-and-promotion route with its per-step verdicts.
+The failed merged route and its bounded correction are recorded separately.
 
-| Attempt | Candidate or repair | Artifact and command | Verdict | Mechanism | Next attempt |
+| Attempt | Candidate or repair | Artifact | Verdict | Mechanism | Next attempt |
 | --- | --- | --- | --- | --- | --- |
-| 0001 | Census + promotions as designed above | campaigns/P232..P235 | in progress | - | - |
+| 0001 | PR #93 census and promotions | merged commit `c864f33` | rejected and reverted | self-review, overbroad evidence scopes, circular C-GW-013/C-GW-014 glue | exact theorem/scope audit |
+| 0002 | Corrected census and bounded promotion | P232-P235 attempt 0002 records | in progress | ten supported promotions; two synthesis routes rejected | independent claim/evidence review |
 
 ## Validation
 
-Validation obligations and their commands are the following.
+The evidence gates are staged to avoid duplicating an unchanged full run.
 
-- Lean gate: unchanged from ingestion commit (check_lean.sh PASS recorded in
-  PR #93); promotion edits no formal/ file - verified by diff scope.
-- Census machine check: tests/test_lean_claim_census.py (census <-> registry
-  <-> artifacts <-> theorem coverage).
-- Registry/release/memory/docs: scripts/validate_repository.py,
-  scripts/render_docs.py --check, scripts/render_memory.py --check,
-  memory validate.
-- Final boundary: scripts/validate.sh --full once; git diff --check
-  separately.
+- Targeted census/ingestion tests: 17 passed after the scope correction.
+- Required before review: repository validator, generated-state checks, memory
+  validation, Lean gate, changed-scope selection, and `git diff --check`.
+- Required once at the final unchanged boundary: the validator-selected scoped
+  or full workflow. The governance and release changes currently imply full.
 
 ## Debt Ledger
 
-The single inherited debt from the ingestion workstream is discharged by this effort; no new debt is introduced.
+Two transaction-level obligations remain open.
 
-| Debt | Introduced by | Why it is real | Discharge artifact | Status |
-| --- | --- | --- | --- | --- |
-| Ingested theorems are not yet framework claims | ingestion workstream | Promotion requires the census + transactions | This effort: P232-P235 on the same branch | Discharged by this effort |
-
-## Results
-
-Census complete and machine-checked (test_lean_claim_census.py: 60 files, all
-506 parsed theorem/lemma names classified); registry 222 claims valid; release
-v0.163.0 pinned; docs/memory regenerated; campaign records P232-P235 immutable.
-Final-boundary validation and merge remain.
+| Debt | Introduced by | Discharge artifact | Status |
+| --- | --- | --- | --- |
+| Fresh individual review is absent | rejection of PR #93 self-review | new campaign review records by an independent agent | open |
+| Corrected transaction is not on `main` | rollback/codeowner and merge sequencing | merged rollback plus corrected PR by distinct actors | open |
 
 ## Canonicalization
 
-Registry: verification_evidence attachments + 13 new claims; release
-v0.163.0; campaigns P232-P235 immutable; docs regenerated; accepted claim
-memory synchronized; decision memories per promoted claim.
-
-## Done Gate
-
-Checked at merge: all four #92 work items in one PR, gate green at the merge
-commit (formal surface unchanged), full suite green, debt ledger empty.
+Accepted authority remains v0.162.0 until the corrected v0.163.0 transaction
+lands. C-GW-013 and C-GW-014 retain durable identifiers only in rejected
+proposal/attempt history and do not enter `governance/claims.yaml`.
 
 ## Cross-References
 
-Issue #92; PR #93; campaigns/P232-lean-corpus-census,
-P233-lean-discrete-facts, P234-lean-polarization-split,
-P235-lean-radiating-channel; memory/vantasner/efforts/
-historical-lean-corpus-ingestion.md; governance/releases/v0.163.0.yaml.
+Issue #92; PR #93; rollback PR #94; campaigns P232-P235;
+`memory/codex/efforts/issue-92-corrected-lean-promotion.md`;
+`memory/vantasner/efforts/historical-lean-corpus-ingestion.md`.

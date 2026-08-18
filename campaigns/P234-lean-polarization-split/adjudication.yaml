@@ -1,8 +1,7 @@
 campaign: P234
 title: 'Lean composed theorem: axisym/triaxial TT polarization split'
-base_release: v0.161.0
-accepted_release: v0.163.0
-base_commit: db082ec
+base_release: v0.162.0
+base_commit: 970633a
 adjudicated_at: '2026-08-18T21:30:00+02:00'
 campaign_type: synthesis
 target_kind: fixed_theorem
@@ -12,19 +11,22 @@ composition_dependencies:
 - C-GW-002
 - C-GW-005
 selected_candidates:
+- id: B
+  reason: The exact Lean propositions are retained as artifact-only table evaluations; no accepted dependency
+    derives the triaxial or universal-plus entries that candidate A encodes in definitions.
+competing_candidates:
 - id: A
-  reason: Lean glue in the ingested capstone file composing the accepted dependency scopes with no new
-    physical premise.
+  decision: rejected_as_synthesis_because_the_polarization_excitation_outputs_are_declared_by_the_glue_definitions
 claims:
 - id: C-GW-013
-  decision: accepted
+  decision: rejected_as_core_synthesis_because_the_missing_source_to_polarization_map_is_an_input
   verification: formal_verified
-  review: accepted
-  compatibility: compatible_extension
-  epistemic: active
+  review: rejected
+  compatibility: conflict
+  epistemic: refuted
   category: synthesized
   layer: core
-accepted_composition:
+dependency_audit:
 - id: C-GW-002
   decision: unchanged_input_not_re_reviewed
 - id: C-GW-005
@@ -32,14 +34,15 @@ accepted_composition:
 evidence:
   proposal: proposal.yaml
   census: ../P232-lean-corpus-census/census.yaml
-  primary_route: attempts/0001/result.yaml
+  primary_route: attempts/0002/result.yaml
   claim_review: reviews/C-GW-013-claim-review.md
 validation_commands:
-- scripts_check_lean_sh_at_ingestion_commit_63fa769_formal_surface_unchanged
+- scripts_check_lean_sh_at_corrected_final_boundary
 - PYTHONPATH_src_python_scripts_validate_repository_py
 - scripts_validate_sh_full_once_at_final_boundary
 integrated_gate:
-  status: recorded_at_final_boundary
-  formal_surface: unchanged_from_gate_commit_63fa769
-debt: []
-status: accepted
+  status: lean_gate_passed_full_validation_pending
+  formal_surface: historical_source_unchanged_but_load_bearing_axiom_audit_replayed
+debt:
+- Independent review of the rejected synthesis disposition is pending.
+status: pending_independent_review

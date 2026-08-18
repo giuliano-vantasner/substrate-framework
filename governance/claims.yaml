@@ -2189,15 +2189,6 @@ claims:
       - memory/vantasner/decisions/C-GW-002-review.md
       - tests/test_tt_polarizations.py
       - tests/test_tt_angular.py
-      - formal/SubstrateFramework/Ingested/Phase16QB_TwoPolarizations.lean
-    verification_evidence:
-    - method: lean
-      artifact: formal/SubstrateFramework/Ingested/Phase16QB_TwoPolarizations.lean
-      scope: >-
-        Corroborates the two-dimensionality content of C-GW-002: the generic (triaxial) source excites
-        both TT basis polarizations and no source exceeds the two-dimensional TT image. The explicit
-        projector, basis tensors, and frame-rotation phases remain the claim's SymPy scope; no physical
-        graviton count or helicity statement is imported, matching the claim's exclusions.
     assumptions:
       - Tensor contractions and rank use the real symmetric Cartesian three-tensor space and its Frobenius inner product.
       - The transverse frame is oriented so u cross v equals n_hat; reversing an axis changes conventional basis labels without changing the projector image.
@@ -2294,18 +2285,6 @@ claims:
       - campaigns/P040-fs1-breather-energy-moment/reviews/source_adjudication.md
       - memory/vantasner/decisions/C-SG-009-review.md
       - tests/test_sine_gordon.py
-      - formal/SubstrateFramework/Ingested/Phase13FS_HarmonicDoubling.lean
-    verification_evidence:
-    - method: lean
-      artifact: formal/SubstrateFramework/Ingested/Phase13FS_HarmonicDoubling.lean
-      scope: >-
-        Corroborates the doubling/even-harmonic core of C-SG-009: a source density quadratic in a field
-        oscillating at omega has its AC content on the even harmonic line, lowest order 2*omega (frequency
-        doubling), while a linear source sits on the odd line with lowest order omega; the parity split
-        and the 2*omega base frequency are machine-checked as the discrete harmonic-index arithmetic. The
-        exact asinh second-moment formula, its range, and the 1+1 moment functional remain the claim's
-        SymPy scope; no three-dimensional source or gravitational coupling is derived, matching the
-        claim's exclusions.
     assumptions:
       - The field and Hamiltonian density use the normalized real 1+1 conventions and open frequency domain of C-SG-001 and C-SG-002.
       - The breather is at rest and centered at x=0; a raw second moment is origin-dependent under translation.
@@ -2542,17 +2521,6 @@ claims:
       - campaigns/P045-p3d2-spherical-stf-null/reviews/source_adjudication.md
       - memory/vantasner/decisions/C-MOM-003-review.md
       - tests/test_conserved_moments.py
-      - formal/SubstrateFramework/Ingested/Phase14P3D_SphericalNull.lean
-    verification_evidence:
-    - method: lean
-      artifact: formal/SubstrateFramework/Ingested/Phase14P3D_SphericalNull.lean
-      scope: >-
-        Corroborates the spherical-null core of C-MOM-003 as the discrete radiating-index encoding: the
-        ell=0 (spherical) channel has vanishing radiated quadrupole content while ell=2 is nonzero
-        (quadrupole_mode_radiates guard), monopole and dipole channels are silent, and radiating content
-        starts at ell=2. The exact integral identity I_STF=(J/3)*delta with the axisymmetric guard tensor
-        remains the claim's SymPy scope; no gravitational dynamics or physical radiation claim is made,
-        matching the claim's exclusions.
     assumptions:
       - The radial density has a finite scalar second radial moment J; positivity is not required for the angular identity.
       - The z axis defines the P2 deformation convention, and P2(mu)=(3*mu^2-1)/2.
@@ -2737,14 +2705,6 @@ claims:
       - tests/test_tt_angular.py
       - tests/test_axisymmetric_radiation.py
       - tests/test_separable_moments.py
-      - formal/SubstrateFramework/Ingested/Phase16QB_TwoPolarizations.lean
-    verification_evidence:
-    - method: lean
-      artifact: formal/SubstrateFramework/Ingested/Phase16QB_TwoPolarizations.lean
-      scope: >-
-        Corroborates the axisymmetric-waveform core of C-GW-005: an axisymmetric STF source excites
-        exactly one TT polarization with zero cross component for a generic line of sight. The exact
-        tensor projection coordinates, waveform coefficients, and power remain the claim's SymPy scope.
     assumptions:
       - The tensor lives in real Cartesian Euclidean three-space and e and n are nonzero; the natural transverse frame fixes the plus/cross sign convention away from the axis.
       - Scale s is explicit and nonzero; normalized and triple conventions correspond to s=1 and s=3 rather than interchangeable tensor labels.
@@ -12126,17 +12086,19 @@ claims:
 
   - id: C-GW-011
     statement: >-
-      Declare gravitonPolarizations(D)=D*(D-3)/2 on the integers, the transverse-traceless (TT)
-      metric-perturbation polarization count of linearised gravity in D spacetime dimensions: a
+      Declare gravitonPolarizations(D)=D*(D-3)/2 on the integers. In the physical regime D>=3 this is
+      the declared transverse-traceless (TT) metric-perturbation polarization count of linearised
+      gravity in D spacetime dimensions: a
       symmetric rank-2 perturbation has D*(D+1)/2 components, linearised diffeomorphism gauge freedom
       removes D, and TT transversality and tracelessness remove the remaining non-propagating ones,
       leaving D*(D-3)/2 - this counting decomposition is a declared input, not proved here. The integer
       division is exact because D*(D-3) is even for every integer D. Evaluated: D=4 gives exactly 2
-      propagating polarizations (the two gravitational-wave modes), D=3 gives 0, D=5 gives 5, and D=2
-      gives -1 (strictly nonpositive, no propagating TT polarization counted in two dimensions); the
+      propagating polarizations (the two gravitational-wave modes), D=3 gives 0, and D=5 gives 5. The
+      out-of-regime arithmetic evaluation D=2 gives -1; it is a guard showing that the declared
+      component-count interpretation is not a physical nonnegative count below D=3. The function
       count strictly increases from D=3 to D=4 and D=4 exceeds D=3 by two. This is a conditional
       counting-arithmetic theorem on the declared function. It does not prove the gauge or counting
-      decomposition, derive linearised gravity or any field equation, assert a physical graviton,
+      decomposition, extend the count interpretation below D=3, derive linearised gravity or any field equation, assert a physical graviton,
       helicity, quantum state, or dimension selection, or identify the count with the accepted spatial
       TT-projector rank of C-GW-002 beyond their shared D=4 value.
     provenance: campaigns/P233-lean-discrete-facts/adjudication.yaml
@@ -12147,11 +12109,11 @@ claims:
     dependencies: []
     evidence:
       - formal/SubstrateFramework/Ingested/Phase5Gravity_GravitonTT.lean
-      - campaigns/P233-lean-discrete-facts/attempts/0001/result.yaml
+      - campaigns/P233-lean-discrete-facts/attempts/0002/result.yaml
       - campaigns/P232-lean-corpus-census/census.yaml
     assumptions:
       - The counting argument D*(D+1)/2 - D - (D-1) - 1 = D*(D-3)/2 and the identification of the TT
-        component count with propagating graviton polarizations are declared physics inputs; the
+        component count with propagating graviton polarizations for D>=3 are declared physics inputs; the
         claim machine-checks the arithmetic of the resulting integer function.
       - No spacetime dimension is selected; D=4 is the evaluation instance, not a derivation.
     comparators: []
@@ -12179,10 +12141,11 @@ claims:
     review: accepted
     compatibility: compatible_extension
     epistemic: active
-    dependencies: []
+    dependencies:
+      - C-GW-011
     evidence:
       - formal/SubstrateFramework/Ingested/Phase12GW_LowestMultipole.lean
-      - campaigns/P233-lean-discrete-facts/attempts/0001/result.yaml
+      - campaigns/P233-lean-discrete-facts/attempts/0002/result.yaml
       - campaigns/P232-lean-corpus-census/census.yaml
     assumptions:
       - The map ell_min = s and the conservation-law premises that motivate it are declared inputs;
@@ -12199,11 +12162,12 @@ claims:
       SU(2)_L generators T_1=[[0,1/2],[1/2,0]] and T_3=diag(1/2,-1/2), hypercharge half-generator
       Yhalf=I/2, and electric-charge operator Qop=T_3+Yhalf (so Qop=diag(1,0)), a generator g is
       unbroken on the VEV when g*vev=0. Then exactly: the charge operator annihilates the VEV
-      (Qop*vev=0, the massless-photon generator), while T_1 (a W generator, image (1/2,0)^T) and T_3 (a
-      Z generator, image (0,-1/2)^T) do not annihilate it (broken, massive); and the annihilator is
+      (Qop*vev=0), while T_1 (a charged weak-isospin generator, image (1/2,0)^T) and T_3 (the neutral
+      weak-isospin generator, image (0,-1/2)^T) do not annihilate it. Thus among the finite declared
+      set {Qop,T_1,T_3}, Qop is the only member shown to annihilate the VEV; and the result is
       conditional on the doublet VEV, since Qop does not annihilate the different vector (1,0)^T. The
       electroweak group SU(2)_L x U(1)_Y, the generator identification, and the masslessness
-      interpretation of the unbroken generator are declared inputs. This is a conditional finite matrix
+      interpretation of Qop as the massless-photon generator are declared inputs. This is a conditional finite matrix
       theorem. It does not derive the Higgs mechanism, assert gauge boson masses or a photon, build an
       action or vacuum, extend the check to T_2 or the hypercharge generator individually, or identify
       any physical particle.
@@ -12215,11 +12179,11 @@ claims:
     dependencies: []
     evidence:
       - formal/SubstrateFramework/Ingested/Phase7EW_MasslessPhoton.lean
-      - campaigns/P233-lean-discrete-facts/attempts/0001/result.yaml
+      - campaigns/P233-lean-discrete-facts/attempts/0002/result.yaml
       - campaigns/P232-lean-corpus-census/census.yaml
     assumptions:
       - The gauge group, generator conventions, VEV direction, and the massless-photon
-        interpretation of the unique annihilator among the declared generator set are declared
+        interpretation of the annihilator among the finite declared set {Qop,T_1,T_3} are declared
         inputs; the claim machine-checks the annihilator structure on the declared 2x2 rational
         matrices.
     comparators: []
@@ -12248,7 +12212,7 @@ claims:
     dependencies: []
     evidence:
       - formal/SubstrateFramework/Ingested/Phase6Weak_MaxParityViolation.lean
-      - campaigns/P233-lean-discrete-facts/attempts/0001/result.yaml
+      - campaigns/P233-lean-discrete-facts/attempts/0002/result.yaml
       - campaigns/P232-lean-corpus-census/census.yaml
     assumptions:
       - The chirality-parity dictionary, the left-only coupling values, and the V-A current
@@ -12276,7 +12240,7 @@ claims:
     dependencies: []
     evidence:
       - formal/SubstrateFramework/Ingested/Phase10CF_Z3CenterConfinement.lean
-      - campaigns/P233-lean-discrete-facts/attempts/0001/result.yaml
+      - campaigns/P233-lean-discrete-facts/attempts/0002/result.yaml
       - campaigns/P232-lean-corpus-census/census.yaml
     assumptions:
       - The centre identification centre(SU(3)) = Z_3 and any confinement interpretation are
@@ -12298,8 +12262,8 @@ claims:
       leaves the splitting exactly 3/(2*Lambda) for every E1 - it is a function of the inertia alone,
       with zero derivative in E1 and identical splittings for distinct vacuum energies - while every
       individual level strictly increases with E1. In the corpus inertia frame
-      Lambda=L*(1+lambda1)/(3*e^4*m_e) the splitting equals (9/2)*e^4*m_e/(L*(1+lambda1)) identically
-      and is strictly decreasing in the inertia correction lambda1>-1, with distinct corrections giving
+      Lambda=L*(1+lambda1)/(3*e^4*m_e), with e nonzero, L>0, m_e>0, and lambda1>-1, the splitting equals
+      (9/2)*e^4*m_e/(L*(1+lambda1)) identically and is strictly decreasing in lambda1, with distinct corrections giving
       distinct splittings; the two one-loop questions (level shift by E1, splitting shift by lambda1)
       are independent. This is a conditional band-structure theorem on the declared spectra. It does not
       derive the moment of inertia from a field theory, quantize a rotor, identify Delta or nucleon
@@ -12313,12 +12277,14 @@ claims:
     evidence:
       - formal/SubstrateFramework/Ingested/Phase47BM_RigidTopSpectrum.lean
       - formal/SubstrateFramework/Ingested/Phase48CE_OperatorAndGap.lean
-      - campaigns/P233-lean-discrete-facts/attempts/0001/result.yaml
+      - campaigns/P233-lean-discrete-facts/attempts/0002/result.yaml
       - campaigns/P232-lean-corpus-census/census.yaml
     assumptions:
       - The band formulas, the J=1/2 and J=3/2 assignments, and the corpus inertia frame are
         declared inputs; the claim machine-checks the exact gap, ratio, vacuum-independence, and
         monotonicity identities of the declared functions.
+      - The inertia-frame identity requires nonzero e, L, m_e, and 1+lambda1; the strict monotonicity
+        and injectivity clause uses e nonzero, L>0, m_e>0, and lambda1>-1 exactly as in the Lean theorem.
     comparators: []
     accepted_in: v0.163.0
     challenges: []
@@ -12346,7 +12312,7 @@ claims:
     dependencies: []
     evidence:
       - formal/SubstrateFramework/Ingested/Phase48CE_OperatorAndGap.lean
-      - campaigns/P233-lean-discrete-facts/attempts/0001/result.yaml
+      - campaigns/P233-lean-discrete-facts/attempts/0002/result.yaml
       - campaigns/P232-lean-corpus-census/census.yaml
     assumptions:
       - The weight formulas (the c6-sextic linearization bookkeeping) and the refractive-index
@@ -12375,11 +12341,11 @@ claims:
     dependencies: []
     evidence:
       - formal/SubstrateFramework/Ingested/Bridge.lean
-      - campaigns/P233-lean-discrete-facts/attempts/0001/result.yaml
+      - campaigns/P233-lean-discrete-facts/attempts/0002/result.yaml
       - campaigns/P232-lean-corpus-census/census.yaml
     assumptions:
       - The exchange-phase derivation (bosonic CCR to exchange phase via BCH) and the free-fermion
-        identification beta^2=4*pi are declared inputs verified outside Lean; the claim
+        identification beta^2=4*pi are declared inputs, not verified by this promotion transaction; the claim
         machine-checks the homogeneity, the free-fermion evaluation, and the sign-ordered
         anticommutator value of the declared functions.
     comparators: []
@@ -12393,8 +12359,9 @@ claims:
       P_min < exp(-pi*Gamma0) there exists a phase Delta with P_min < lzProbPhase(Gamma0,Delta) (the
       basin of outcome windows above threshold is nonempty); and for thresholds 0 < P_min < P_max < 1
       with P_min < exp(-pi*Gamma0), the intermediate basin {Delta : P_min < lzProbPhase(Gamma0,Delta) <
-      P_max} has positive measure, by continuity, the intermediate-value theorem, and strict
-      monotonicity of the phase probability on the interval. This is a conditional basin-nonemptiness
+      P_max} contains an open interval (a,b) with a<b on which both inequalities hold. This is a
+      positive-length interval theorem proved from continuity and the intermediate-value theorem; the
+      encoded Lean statement does not itself invoke a measure theory. This is a conditional basin-nonemptiness
       theorem on the declared probability model. It does not derive the Landau-Zener probability from a
       two-level Hamiltonian, prove that the physical ionization outcome realizes this window model, or
       establish any measured basin.
@@ -12406,12 +12373,12 @@ claims:
     dependencies: []
     evidence:
       - formal/SubstrateFramework/Ingested/Basin.lean
-      - campaigns/P233-lean-discrete-facts/attempts/0001/result.yaml
+      - campaigns/P233-lean-discrete-facts/attempts/0002/result.yaml
       - campaigns/P232-lean-corpus-census/census.yaml
     assumptions:
       - The Landau-Zener phase-window model and its interpretation as the basin of the
         single-constituent ionization outcome are declared inputs; the claim machine-checks the
-        existence and positive-measure statements for the declared function.
+        existence and positive-open-interval statements for the declared function.
     comparators: []
     accepted_in: v0.163.0
     challenges: []
@@ -12426,7 +12393,7 @@ claims:
       line has zero slope; and the single-crossing identity R0^2+3*c^2*(R0/c)^2=4*R0^2. These are the
       finite algebraic implications of the Comparsi exact-breather virial nonexistence route; the PDE
       differentiation and integration-by-parts identities that produce the virial relation are declared
-      inputs verified symbolically in the source workspace, not here. This is a conditional
+      inputs and are not verified by this Lean promotion. This is a conditional
       finite-implication theorem. It does not prove the virial identity for any PDE, establish
       nonexistence of periodic solutions by itself, or treat any physical breather.
     provenance: campaigns/P233-lean-discrete-facts/adjudication.yaml
@@ -12437,128 +12404,14 @@ claims:
     dependencies: []
     evidence:
       - formal/SubstrateFramework/Ingested/ComparsiVirial.lean
-      - campaigns/P233-lean-discrete-facts/attempts/0001/result.yaml
+      - campaigns/P233-lean-discrete-facts/attempts/0002/result.yaml
       - campaigns/P232-lean-corpus-census/census.yaml
     assumptions:
       - The virial relation 6*c^2*M*T=0 and its PDE derivation are declared inputs; the claim
         machine-checks the finite implications and certificates.
-      - The nonexistence reading requires the separately verified symbolic structure identities;
+      - The nonexistence reading requires separate verification of the symbolic structure identities;
         this claim supplies only their finite algebraic consequences.
     comparators: []
     accepted_in: v0.163.0
-    challenges: []
-    supersedes: []
-  - id: C-GW-013
-    statement: >-
-      Composing the accepted two-dimensional TT projection (C-GW-002) with the accepted axisymmetric
-      zero-cross waveform (C-GW-005): for the declared two-class source-symmetry classification
-      (axisymmetric vs triaxial breathing source), an axisymmetric source excites exactly one of the two
-      TT polarization dimensions - the cross excitation is zero, the plus excitation present - while a
-      triaxial source excites both; the polarization count equals two exactly when the cross
-      polarization is excited; every source in the classification excites at least the plus polarization
-      and at most two; and the triaxial count equals the declared D=4 TT count 2 (saturation) while the
-      axisymmetric count lies strictly below it. The glue is the symmetry-to-count dictionary tying the
-      accepted projector dimension to the accepted axisymmetric cross-zero statement; no new physical
-      premise enters. This is a conditional discrete dictionary theorem. It does not derive either
-      dependency, construct a source, assert physical radiation or a detector signal, or extend the
-      classification beyond the declared two classes.
-    provenance: campaigns/P234-lean-polarization-split/adjudication.yaml
-    verification: formal_verified
-    review: accepted
-    compatibility: compatible_extension
-    epistemic: active
-    dependencies:
-      - C-GW-002
-      - C-GW-005
-    evidence:
-      - formal/SubstrateFramework/Ingested/Phase16QB_TwoPolarizations.lean
-      - campaigns/P233-lean-discrete-facts/attempts/0001/result.yaml
-      - campaigns/P234-lean-polarization-split/adjudication.yaml
-      - campaigns/P232-lean-corpus-census/census.yaml
-    assumptions:
-      - The two-class symmetry classification and its polarization-excitation table are the declared
-        glue inputs; the accepted dependencies supply the dimension-two TT image and the
-        axisymmetric zero cross coordinate.
-      - No source dynamics, moment construction, or waveform convention is re-derived.
-    comparators: []
-    accepted_in: v0.163.0
-    category: synthesized
-    layer: core
-    exclusions:
-      - Does not re-derive the TT projector, its rank, or the e_plus/e_cross basis of C-GW-002.
-      - Does not re-derive the axisymmetric zero-cross projection of C-GW-005.
-      - Does not construct any breathing source or assert physical gravitational radiation.
-      - Does not classify sources outside the declared axisymmetric/triaxial classes.
-    composition:
-      dependencies:
-        - C-GW-002
-        - C-GW-005
-      structural_gap: >-
-        Neither dependency states how many of the two TT polarization dimensions a source of each symmetry
-        class excites, nor that the cross excitation alone separates the classes and saturates the
-        accepted two-dimensional TT image exactly for triaxial sources.
-      glue:
-        method: lean
-        artifact: formal/SubstrateFramework/Ingested/Phase16QB_TwoPolarizations.lean
-        entrypoint: Phase16QB.axisym_vs_triaxial_split
-    challenges: []
-    supersedes: []
-  - id: C-GW-014
-    statement: >-
-      Composing the accepted spherical STF null (C-MOM-003), the accepted 2*omega quadratic-moment
-      doubling (C-SG-009), and the accepted two-dimensional TT projection (C-GW-002): for the declared
-      radiating-channel index radiatedQuadrupole(ell)=ell for ell>=2 and 0 otherwise, a spherical
-      (ell=0) source has identically zero radiated-quadrupole content while the ell=2 channel is nonzero
-      (the guard), the monopole (ell=0) and dipole (ell=1) channels are silent (radiates false) and
-      every channel at or above ell=2 radiates, so the first radiating channel is the quadrupole; and
-      the tied harmonic content of a quadratic breathing source sits on the even line with lowest order
-      2*omega. The three accepted facts compose into the single channel statement: the radiating channel
-      of a breathing mass source is the ell=2, frequency-doubled, two-dimensional-transverse channel -
-      spherical monopole and dipole silent by the STF null and conservation structure, doubled frequency
-      by the quadratic moment, two transverse dimensions by the TT projection. This is a conditional
-      channel-index composition theorem. It does not re-derive any dependency, construct a 3+1 source or
-      solution, compute radiated power or a waveform, or claim physical radiation from any
-      configuration.
-    provenance: campaigns/P235-lean-radiating-channel/adjudication.yaml
-    verification: formal_verified
-    review: accepted
-    compatibility: compatible_extension
-    epistemic: active
-    dependencies:
-      - C-MOM-003
-      - C-SG-009
-      - C-GW-002
-    evidence:
-      - formal/SubstrateFramework/Ingested/Phase14P3D_SphericalNull.lean
-      - campaigns/P233-lean-discrete-facts/attempts/0001/result.yaml
-      - campaigns/P235-lean-radiating-channel/adjudication.yaml
-      - campaigns/P232-lean-corpus-census/census.yaml
-    assumptions:
-      - The channel-index function and its tie to the multipole and harmonic indices are the
-        declared glue inputs; the accepted dependencies supply the spherical null with axisymmetric
-        guard, the even-harmonic 2*omega moment structure, and the two-dimensional TT image.
-      - No radiative dynamics, retarded solution, or power formula is claimed.
-    comparators: []
-    accepted_in: v0.163.0
-    category: synthesized
-    layer: core
-    exclusions:
-      - Does not re-derive the radial-density STF null or its axisymmetric guard (C-MOM-003).
-      - Does not re-derive the exact quadratic moment or its even-harmonic support (C-SG-009).
-      - Does not re-derive the TT projector or its two-dimensional image (C-GW-002).
-      - Does not compute radiated power, a waveform, or assert physical radiation.
-    composition:
-      dependencies:
-        - C-MOM-003
-        - C-SG-009
-        - C-GW-002
-      structural_gap: >-
-        No accepted claim ties the three facts into one channel statement: that the breathing-source
-        radiating channel is simultaneously ell=2 (spherical null plus silent monopole/dipole),
-        frequency-doubled to 2*omega (quadratic moment), and two-dimensional transverse (TT image).
-      glue:
-        method: lean
-        artifact: formal/SubstrateFramework/Ingested/Phase14P3D_SphericalNull.lean
-        entrypoint: Phase14P3D.selfconsistent_channel_ties_GWL_FSL
     challenges: []
     supersedes: []
