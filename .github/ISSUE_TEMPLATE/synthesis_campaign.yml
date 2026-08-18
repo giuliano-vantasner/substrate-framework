@@ -1,0 +1,33 @@
+name: Synthesis campaign
+description: Chain framework primitives into a higher-level claim or scoped model
+title: '[Synthesis] '
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this when relevant ingredients largely exist and the work should compose them into a meaningful statement. The target may be scoped or conditional; it does not need to certify a final theory.
+  - type: textarea
+    id: statement
+    attributes:
+      label: Higher-level statement
+      description: What claim, explanation, prediction, or model fragment should emerge from this campaign?
+  - type: textarea
+    id: primitives
+    attributes:
+      label: Primitives to chain
+      description: Note the accepted claims, canonical modules, and approved imports expected to support the statement.
+  - type: textarea
+    id: composition
+    attributes:
+      label: Composition work
+      description: What identifications, bridges, convention maps, or missing links appear necessary?
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope and coordination
+      description: Note the intended boundary, explicit non-goals, likely write surfaces, and overlapping efforts.
+  - type: textarea
+    id: result
+    attributes:
+      label: Promotable result
+      description: What higher-level claim or reusable artifact should exist when the campaign succeeds, and what evidence would support it?

@@ -1,0 +1,33 @@
+name: Foundational campaign
+description: Establish a reusable primitive that enables higher-level framework statements
+title: '[Foundation] '
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this when a needed equation, construction, bridge, verifier, or result does not yet exist as reusable framework material. This issue is a planning aid, not an additional acceptance gate.
+  - type: textarea
+    id: objective
+    attributes:
+      label: Primitive to establish
+      description: What concrete reusable object, result, or capability should this campaign produce?
+  - type: textarea
+    id: purpose
+    attributes:
+      label: Higher-level purpose
+      description: Which statement, composition, or model fragment should this primitive make possible?
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Starting point and dependencies
+      description: Note relevant accepted claims, canonical modules, permitted imports, assumptions, or prior attempts.
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope and coordination
+      description: Note the intended work boundary, important non-goals, likely write surfaces, and overlapping efforts.
+  - type: textarea
+    id: result
+    attributes:
+      label: Useful result
+      description: What output would make this primitive usable by a later synthesis campaign? Include an appropriate check or demonstration if already known.
