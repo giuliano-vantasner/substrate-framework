@@ -26,15 +26,17 @@ An effort succeeds only when all of the following are true:
 
 Only the user may change the objective or accept a reduced scope. Runtime interruption, missing authority, or an external dependency may pause execution, but it does not turn incomplete work into success.
 
-These gates govern declaring the objective complete and promoting its headline claims. They are not a universal pull-request merge gate. Use `.agents/skills/research-pr-harvest/SKILL.md` to extract locally correct, novel, reusable units from an incomplete campaign while leaving its goal open. A merge creates provenance and reusable code, not accepted scientific authority. Missing parts of the larger goal are campaign frontier, not debt; debt is an unresolved defect, hidden assumption, broken consumer, or unsupported promise inside the scope being merged or promoted. Every harvest PR must name its canonical goal issue, and the final disposition must update that issue with unit-level lists and rationales for what merged, what requires refactor, and what remains only in PR history, plus landed links and the next decisive action.
+These gates govern declaring the objective complete and promoting its headline claims. They are not a universal pull-request merge gate. Use `.agents/skills/research-pr-harvest/SKILL.md` to extract locally correct, novel, reusable units from an incomplete campaign while leaving its goal open. A merge creates provenance and reusable code, not accepted scientific authority. Missing parts of the larger goal are campaign frontier, not debt; debt is an unresolved defect, hidden assumption, broken consumer, or unsupported promise inside the scope being merged or promoted. Every harvest PR must name its canonical goal issue, and the final disposition must update that issue with unit-level lists and rationales for what merged, what requires refactor, and what remains only in PR history, plus landed links and the next decisive action. A `refactor then merge` disposition is active work: name its owner or handoff, live source or harvest PR, exact repair, and landing test, and keep the source PR open until that unit lands or satisfies the terminal-close test below.
+
+Request changes or create a focused harvest when a PR contains valuable work with a finite repair path. Close an unmerged PR only when every reusable atom has landed elsewhere, every remaining atom has been shown incorrect, non-novel, or unmaintainable with unit-level rationale, the author or owner explicitly withdraws it, or a superseding landed implementation makes it redundant. Incomplete accepted dependency closure, a conflict with current canon, absence of a distinct merger, or a pending finite repair is not terminal. Record the qualifying reason and landed links before closure; otherwise keep the PR open in `request changes`, `active refactor`, or `active harvest` state.
 
 Every pull request, including documentation, tooling, compatibility, harvest, and scientific work, must name exactly one canonical issue that existed before the PR was submitted. A contributing agent may create that issue. There are no standalone-PR exceptions. The issue must state the positive objective, scope, success gate, dependencies, and coordination boundary; use `Advances #N` while work remains and `Fixes #N` only when the full objective is complete.
 
 An agent must never merge a PR that it opened, authored a commit for, or materially implemented. The PR must be reviewed and merged by a distinct agent or repository owner. If the authoring agent also performs substantive corrective work during review, merge authority remains with another actor. When no distinct merger is available, leave the validated PR ready for handoff rather than self-merging it.
 
-Merged same-repository PR head branches are transient and must not accumulate as a parallel discovery surface. Repository GitHub settings delete them automatically after merge; the distinct merger must verify that cleanup and may delete only the exact merged head if automation did not. Durable provenance lives in the merge commit, PR, canonical issue handoff, and landed `main` history. Preserve `main`, protected branches, open PR heads, and closed-unmerged or failed branches by default; deleting or retiring any of those requires an explicit owner decision. Branch cleanup never permits force-pushing, deleting an unverified or unrelated branch, or treating branch deletion as scientific adjudication.
+Merged same-repository PR head branches are transient and must not accumulate as a parallel discovery surface. Repository GitHub settings delete them automatically after merge; the distinct merger must verify that cleanup and may delete only the exact merged head if automation did not. Durable provenance lives in the merge commit, PR, canonical issue handoff, and landed `main` history. Preserve `main`, protected branches, open PR heads, and closed-unmerged or failed branches by default; retiring a closed-unmerged head requires both an explicit owner decision and its recorded terminal-close rationale. Branch cleanup never permits force-pushing, deleting an unverified or unrelated branch, or treating branch deletion as scientific adjudication.
 
-When the user supplies a pull-request URL or number to an agent that did not author or materially implement that PR, treat it as standing authorization to process the PR autonomously through the normal repository lifecycle: inspect, review, comment, correct PR metadata, create a focused harvest branch or follow-up PR, merge or close according to the evidence, and update the linked issue. Do not pause for routine operator confirmation. This authorization never overrides the non-self-merge rule and does not permit force-pushing a contributor branch, deleting unrelated branches, changing the user's objective, or promoting a claim that has not passed governance.
+When the user supplies a pull-request URL or number to an agent that did not author or materially implement that PR, treat it as standing authorization to process the PR autonomously through the normal repository lifecycle: inspect, review, comment, correct PR metadata, request changes, create a focused harvest branch or follow-up PR, merge when eligible, close only after the terminal-close test, and update the linked issue. Do not pause for routine operator confirmation. This authorization never overrides the non-self-merge rule and does not permit force-pushing a contributor branch, deleting unrelated branches, changing the user's objective, or promoting a claim that has not passed governance.
 
 ## Authority and provenance
 
@@ -46,7 +48,7 @@ Use this authority order:
 4. Active proposals.
 5. Append-only attempts and exploratory memory.
 
-Chronology, commit status, prose confidence, check count, and empirical agreement do not create authority. A commit establishes provenance, not truth. A later campaign may challenge an earlier claim but cannot supersede it until review promotes the replacement claim.
+Chronology, commit status, prose confidence, check count, and empirical agreement do not create authority. A commit establishes provenance, not truth. Accepted canon controls releases, promotion, and downstream dependency claims; it is reviewable scientific state, not an irrevisable premise or a reason to discard conflicting evidence. A later campaign may challenge an earlier claim but cannot supersede it until review promotes the replacement claim. Correct conditional APIs and evidence may merge without that promotion when their assumptions and exclusions are explicit.
 
 Never silently edit an earlier campaign. Never edit files under `docs/generated/`. Generate canonical documentation from the registry with `scripts/render_docs.py`.
 
@@ -72,9 +74,9 @@ Before implementation:
 - State selection criteria before inspecting comparison values: structural fit, assumption cost, parameter economy, symmetry, dimensional consistency, limiting behavior, compatibility with accepted sectors, and predictive reach.
 - Separate derivation inputs from empirical comparators. When practical, keep comparator values blinded until equations, conventions, tests, and selection criteria are frozen.
 
-When a candidate conflicts with accepted structure, diagnose the mismatch and reject or reformulate that candidate first. Try another concept. Do not rewrite unrelated earlier claims, rename quantities, mix conventions, or add compensating assumptions merely to preserve the chosen candidate.
+When a candidate conflicts with accepted structure, diagnose whether the mismatch is a candidate defect or evidence of a pre-existing inconsistency in canon. Reject or reformulate a defective candidate and try another concept. If the mismatch survives independently of the favored candidate, open a `challenges` or foundational-revision proposal and compare repairs. Do not rewrite unrelated earlier claims, rename quantities, mix conventions, or add compensating assumptions merely to preserve the chosen candidate; equally, do not use current acceptance status as a substitute for investigating credible contrary evidence.
 
-A foundational revision is exceptional. Open it as a separate proposal and require:
+A foundational revision is separately governed and evidence-heavy, but it is an active advancement path rather than a shutdown condition. Open it as a separate proposal and require:
 
 - evidence that the inconsistency exists without assuming the new candidate;
 - at least two repair alternatives;
@@ -195,11 +197,14 @@ git diff --check
 
 The non-pytest repository, generated-state, memory, skill, import, and compile
 checks run in both modes. A scoped pass is evidence only for the declared
-pytest scope; record the exact selectors in the PR. Use
+pytest scope; record the exact selectors in the PR. An additive public export
+may remain scoped when impact analysis shows a bounded sector, no changed
+existing contract, known consumers, and targeted coverage of the new API. Use
 `scripts/validate.sh --full` for a claim promotion or release and whenever the
 change reaches shared numerics, verification machinery, claim or release
-governance semantics, public exports, dependencies, conventions, multiple
-framework sectors, or has an uncertain dependency boundary. Calling
+governance semantics, changes an existing public contract with consumers,
+changes dependencies or cross-cutting conventions, spans multiple framework
+sectors, or has an uncertain dependency boundary. Calling
 `scripts/validate.sh` without arguments remains a backward-compatible alias for
 `--full`.
 

@@ -23,7 +23,7 @@ This effort delivers <exact positive result>. It is complete only when the objec
 The work starts from release <id and commit>. Record accepted claims and source artifacts actually read; chronology and memory prose are not authority.
 
 ## Constraints and Invariants
-State the user constraints, accepted invariants, conventions, units, permitted imports, and write boundaries. A new concept may not silently redefine them.
+State the user constraints, accepted invariants, conventions, units, permitted imports, and write boundaries. A new concept may not silently redefine them. Accepted canon governs release and promotion but remains challengeable; record what independent evidence would trigger a separate revision path.
 
 ## Decomposition
 Work proceeds through these dependency-ordered steps and continues after failed attempts.
@@ -55,7 +55,8 @@ Validation covers the actual objective, verifier sensitivity, limits, convention
 - Numerical solver-status, refinement, conservation/stability, and independent-route command (when applicable):
 - Dependency replay, after AST preflight for direct/imported/dynamic legacy trapezoid access and repair of mutable consumers to `np.trapezoid` or a safe two-step fallback, or an alias-only replay for immutable source:
 - Targeted tests during implementation:
-- `scripts/validate.sh` (includes the full pytest suite; run once at the unchanged promotion boundary):
+- Impact analysis and validation-scope rationale (an additive bounded API may stay scoped; promotion/release, shared machinery, changed existing contracts, cross-cutting dependencies/conventions, multi-sector, or uncertain impact requires full):
+- `scripts/validate.sh --pytest-scope <selectors>` or `scripts/validate.sh --full` (run the justified workflow once at the unchanged boundary):
 - `git diff --check` (run separately from commit so a later command cannot mask failure):
 
 ## Debt Ledger
@@ -65,7 +66,7 @@ Every new assumption, import, parameter, residual, broken consumer, or narrative
 | --- | --- | --- | --- | --- |
 
 ## Results
-Record positive verified outcomes and exact reproduction commands. Failures belong in Attempts and keep this contract active.
+Record positive verified outcomes and exact reproduction commands. Failures belong in Attempts and keep this contract active. For every `refactor then merge` unit, record the owner or handoff, live PR, landing test, and source-PR lifecycle; do not close it merely because dependency promotion remains incomplete.
 
 ## Canonicalization
 List claim-registry changes, release manifest, extracted APIs, immutable campaign record, generated docs, and accepted-memory synchronization. Confirm no proposal prose was merged into canonical memory.

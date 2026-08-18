@@ -35,7 +35,7 @@ Assign one status and justify the maximum verdict earned. Confirm the oracle fit
 Record input mutations, wrong conventions, counterexamples, convergence/limit tests, and whether each relevant check failed when it should. For numerical claims independently inspect solver status, precision, initial/boundary data, mesh/domain/time/tolerance or quadrature refinement, residual or error norm, conservation/stability behavior, and an independent method or soluble limit. Confirm that near-zero and agreement bounds have a dimensional or scale-relative error model; preserve any failed absolute threshold and require refinement or roundoff evidence before accepting a repaired numerical oracle, without weakening a separately exact statement.
 
 ## Framework Compatibility
-Assess invariants, assumptions, imports, parameters, units, conventions, limits, and cross-sector composition. If the concept does not fit, reject or return it for a different candidate; do not retrofit unrelated claims.
+Assess invariants, assumptions, imports, parameters, units, conventions, limits, and cross-sector composition. If the concept does not fit, determine whether the mismatch is a candidate defect or independent evidence against accepted canon. Reject or return a defective candidate; route a surviving inconsistency through `challenges` or a separate foundational revision. State separately whether a correct conditional artifact can merge without promoting the disputed claim.
 
 ## Dependency and Consumer Replay
 List direct/indirect consumers and exact replay results. Preflight direct, imported, and dynamic legacy access, including eagerly evaluated nested `getattr` defaults. Repair mutable code to `np.trapezoid` or a safe two-step fallback, or record an alias-only replay for immutable source, before calling the consumer scientifically broken. Record any debt created by the claim.
@@ -56,7 +56,7 @@ Record verification, review, compatibility, and epistemic status separately. Bef
 List registry edit, importable implementation/tests, immutable campaign record, release manifest, generated docs, accepted-memory synchronization, editable `migration/dispositions.yaml` update plus regenerated `migration/source-claims.yaml`, and validation commands. Check release closure against accepted registry membership, not only epistemically active claims; accepted qualified claims remain in the release. Use the governance validator rather than a review-local status subset. Never hand-edit the generated queue. For terminal qualification, refutation, duplicate, or scope decisions, record the structured reason and durable evidence path; an unsupported label is not an adjudication.
 
 ## Continuation if Not Accepted
-Non-acceptance is not campaign success. Name the repair or next candidate and leave the parent effort active. If a foundation issue is independently demonstrated, link the separate revision proposal.
+Non-acceptance is not campaign success and is not automatically PR closure. Name the repair or next candidate and leave the parent effort active. Record the source PR lifecycle, repair owner or handoff, live harvest/refactor PR, exact landing test, and terminal-close evidence if closure is proposed. If a foundation issue is independently demonstrated, link the separate revision proposal.
 
 ## Done Gate
 Accept only when the positive claim and every success gate in `AGENTS.md` pass with an empty debt ledger.

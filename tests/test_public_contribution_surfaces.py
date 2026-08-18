@@ -111,6 +111,27 @@ def test_issue_forms_preserve_issue_first_and_rights_boundaries() -> None:
         assert "issue" in serialized.lower()
 
 
+def test_pr_policy_keeps_viable_harvests_active_and_validation_scoped() -> None:
+    contract = (ROOT / "AGENTS.md").read_text(encoding="utf-8")
+    onboarding = (ROOT / "AGENTS_START_HERE.md").read_text(encoding="utf-8")
+    harvest_skill = (
+        ROOT / ".agents/skills/research-pr-harvest/SKILL.md"
+    ).read_text(encoding="utf-8")
+    pr_template = (ROOT / ".github/pull_request_template.md").read_text(
+        encoding="utf-8"
+    )
+
+    for surface in (contract, onboarding, harvest_skill):
+        assert "terminal-close" in surface
+        assert "active refactor" in surface
+        assert "additive public export" in surface
+
+    assert "live source or harvest PR" in harvest_skill
+    assert "current canon" in harvest_skill
+    assert "Source PR lifecycle" in pr_template
+    assert "Terminal-close evidence" in pr_template
+
+
 def test_contribution_policy_blocks_sensitive_and_unlicensed_sources() -> None:
     contributing = (ROOT / "CONTRIBUTING.md").read_text(encoding="utf-8").lower()
     assert "credentials" in contributing
