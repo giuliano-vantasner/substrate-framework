@@ -33,7 +33,6 @@ PROCESS_POLICY_PATHS = {
     ".github/pull_request_template.md",
 }
 VALIDATION_DRIVER_PATHS = {
-    ".github/workflows/validate.yml",
     "scripts/validate.sh",
     "scripts/validate_changed.py",
 }

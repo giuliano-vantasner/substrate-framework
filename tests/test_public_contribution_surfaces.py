@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 from pathlib import Path
-import re
 import tomllib
 
 import yaml
@@ -22,7 +21,6 @@ def test_required_community_files_exist_and_are_linked() -> None:
         "THIRD_PARTY_NOTICES.md",
         ".github/CODEOWNERS",
         ".github/dependabot.yml",
-        ".github/workflows/validate.yml",
     )
     for relative_path in required:
         assert (ROOT / relative_path).is_file(), relative_path
@@ -71,24 +69,11 @@ def test_all_files_require_designated_code_owner_approval() -> None:
     assert "automatically after merge" in contributing
 
 
-def test_pull_request_workflow_is_least_privilege_and_sha_pinned() -> None:
-    workflow = (ROOT / ".github/workflows/validate.yml").read_text(encoding="utf-8")
-    assert "pull_request_target:" not in workflow
-    assert "secrets." not in workflow
-    assert re.search(r"(?m)^permissions:\n  contents: read$", workflow)
-    assert "persist-credentials: false" in workflow
-    assert "scripts/validate_changed.py" in workflow
-    assert "Run impact-scoped pull-request validation" in workflow
-    assert "schedule:" in workflow
-    assert "scripts/validate.sh --full" in workflow
-    assert "push:" not in workflow
-    assert "timeout-minutes:" in workflow
-
-    uses_lines = [line.strip() for line in workflow.splitlines() if "uses:" in line]
-    assert uses_lines
-    for line in uses_lines:
-        reference = line.split("#", 1)[0].strip()
-        assert re.fullmatch(r"uses: [A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+@[0-9a-f]{40}", reference)
+def test_redundant_remote_repository_validation_is_absent() -> None:
+    assert not (ROOT / ".github/workflows/validate.yml").exists()
+    selector = (ROOT / "scripts/validate_changed.py").read_text(encoding="utf-8")
+    assert "def choose_validation_scope(" in selector
+    assert "def decision_for_refs(" in selector
 
 
 def test_dependabot_covers_python_and_actions() -> None:
@@ -134,9 +119,10 @@ def test_pr_policy_keeps_viable_harvests_active_and_validation_scoped() -> None:
     assert "current canon" in harvest_skill
     assert "Source PR lifecycle" in pr_template
     assert "Terminal-close evidence" in pr_template
-    assert "scripts/validate_changed.py" in (
-        ROOT / ".github/workflows/validate.yml"
-    ).read_text(encoding="utf-8")
+    for surface in (contract, onboarding, harvest_skill, pr_template):
+        assert "scripts/validate_changed.py" in surface
+    assert "Pull-request CI uses" not in contract
+    assert "Pull-request CI uses" not in onboarding
 
 
 def test_contribution_policy_blocks_sensitive_and_unlicensed_sources() -> None:

@@ -119,7 +119,7 @@ Record accepted positive results and reproduction commands. Also record harveste
 Record extracted APIs/tests, accepted registry entries, immutable campaign location, release id, generated docs command, accepted-memory synchronization, and proposal/attempt memory separation.
 
 ## Done Gate
-Check every success condition from `AGENTS.md`, confirm targeted science checks, downstream replay, `scripts/validate.sh --full` once at the unchanged promotion boundary, and an empty debt ledger. A progress harvest uses the impact-justified fixed-only/scoped/full workflow and records the agreeing `scripts/validate_changed.py` CI decision instead; it leaves the arc active. Otherwise continue.
+Check every success condition from `AGENTS.md`, confirm targeted science checks, downstream replay, `scripts/validate.sh --full` once at the unchanged promotion boundary, and an empty debt ledger. A progress harvest uses the impact-justified fixed-only/scoped/full workflow and records the agreeing local `scripts/validate_changed.py` decision instead; it leaves the arc active. Otherwise continue.
 
 ## Cross-References
 Link the proposal, source artifacts, claims, reviewers, campaign, release, generated outputs, and related memory entries.

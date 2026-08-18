@@ -219,11 +219,13 @@ Record the exact pytest selectors, commands, status codes, and meaningful
 verdicts in the PR; a scoped pass is not a repository-wide pass. A bounded PR
 can remain scoped through merge when its impact boundary is still valid against
 the current base. Do not repeat an equivalent validation at the same unchanged
-boundary. Pull-request CI uses `scripts/validate_changed.py` to reproduce a
-conservative changed-file decision, including `--fixed-only` when no pytest
-scope is affected and `--full` for cross-cutting or uncertain changes. Scheduled
-or manual CI runs the periodic integrated-main full backstop rather than
-duplicating it on every merge push; a pass count alone is not a review.
+boundary. The submitting agent uses `scripts/validate_changed.py` to make and
+record a conservative changed-file decision, including `--fixed-only` when no
+pytest scope is affected and `--full` for cross-cutting or uncertain changes.
+The review agent checks that decision against the diff and impact boundary;
+GitHub Actions does not replay the same repository scripts. Run the periodic
+integrated-main full backstop locally when scheduled or explicitly requested;
+a pass count alone is not a review.
 
 ## 8. Open the pull request
 
