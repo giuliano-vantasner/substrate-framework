@@ -1,0 +1,21 @@
+campaign: P231
+identifier_search:
+  family: C-IGR-004 and C-GRV-002
+  prior_accepted_or_rejected_uses: 0
+  search_scope: [governance/, campaigns/, proposals/, memory/, docs/]
+nearest_claims:
+  C-GRV-001: dimensional_and_additive_baseline_ledger_only; no total-sign map, no scheme set, no control ledger
+  C-IGR-001: sharp coefficient families only; explicitly excludes total Newton constant and attractive-gravity statements
+  C-IGR-002: smooth coefficient families and scheme-spread exposure; explicitly excludes regulator selection and total normalization
+  C-IGR-003: power-subtracted families and scale dependence; explicitly excludes physical selection
+nearest_modules:
+  scalar_one_loop_mass: coefficient families only; no composition, no sign map, no provenance record, no control ledger
+  scalar_induced_newton: massless sharp leading asymptotic only; no exact-mass composition
+novel_surface: >-
+  P231 is the first candidate to compose the accepted families into a derived
+  usable scheme set with exact selection legs, a necessary-and-sufficient
+  total-sign map including the conformal marginal locus, an explicit
+  baseline-provenance record with the purely-induced G_total formula and
+  scheme-bracket ceiling, and a control ledger for the tau^-1 class with its
+  declared log-divergence domain.
+result: nonduplicate_conditional_composition_extension

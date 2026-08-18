@@ -1,0 +1,32 @@
+campaign: P231
+criteria_frozen_before_evaluation:
+  - exactness (every leg derived, never fitted)
+  - L1 spectral positivity
+  - L2 monotone large-mass decoupling
+  - L3 cutoff-ontology closure
+  - scheme-uniformity of sign conditions
+  - assumption economy
+  - comparator blinding (no empirical value exists)
+candidates:
+  A_scheme_uniform_usable_set:
+    decision: selected
+    strengths:
+      - usable set {sharp, smooth} is an output of exact substrate structure
+      - sign map uniform because 0<J(z)<=1 on the usable set
+      - spread bracket R(z) quoted exactly as the ceiling
+      - no undeclared premise distinguishes sharp from smooth
+    premises: [positive exact cutoff, declared operator and conventions inherited from C-IGR-001]
+  B_point_scheme:
+    decision: rejected
+    reason: a point choice has no derivation; which scheme is chosen is exactly what substrate structure must output; selection legs L1-L3 do not separate sharp from smooth, so declaring one would be an undeclared premise
+  C_subtraction_scale_normalization:
+    decision: rejected
+    reason: power-subtracted family fails L1 (sign change at exp(1-EulerGamma)), fails L2 (derivative sign change at exp(-EulerGamma)), fails L3 (mu carries no cutoff identification); it remains the exact scale-dependence ledger
+  D_full_determinant_normalization:
+    decision: rejected
+    reason: folds the tau^-1 class and nonlocal form factors into the coupling itself, exceeding the accepted local-coefficient ceiling of C-IGR-001; those terms belong to the control ledger with a predeclared domain, not inside the normalization
+selection: A_derived_usable_set_composition
+falsifier:
+  zeta_sign_change_root: exp(1-EulerGamma) (exact, falsifies L1 for candidate C)
+  uniform_sign_map_holds_because: 0<J(z)<=1 for both usable schemes (exact squeeze from defining integrals)
+comparator_gate: closed_no_empirical_comparator_exists

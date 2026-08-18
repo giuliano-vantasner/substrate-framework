@@ -1,0 +1,124 @@
+id: P231
+base_release: v0.161.0
+source_baseline: substrate-framework@7dfe89b
+question: >-
+  Composing the accepted one-loop inverse-coupling families C-IGR-001..003
+  with C-GRV-001's dimensional and additive-baseline ledger into the
+  framework's first derived usable total gravitational coupling
+  1/G_total = 1/G_baseline + Delta(1/G) as a governed renormalization
+  condition: which exact substrate-internal conditions (operator-spectrum
+  positivity, cutoff ontology, conformal symmetry structure) select the
+  usable scheme set across the three accepted families so the usable scheme
+  and its finite parts are outputs of substrate structure rather than
+  choices; what is the additive baseline's exact derivation status and
+  consequence structure, including the purely-induced reading
+  1/G_baseline = 0 with its downstream ceiling; what are the exact
+  necessary and sufficient conditions on (N, xi, scheme, m^2, cutoff or
+  subtraction scale, baseline) for the attractive Newtonian sign
+  1/G_total > 0, including the conformal point xi = 1/6 and the exact-mass
+  corrections; and what control ledger derives, cancels, or bounds in a
+  predeclared domain every term that can defeat the claimed regime (the
+  tau^-1 higher-curvature/cosmological sector and the nonlocal remainder)?
+source_inventory:
+  - source: accepted C-GRV-001 (v0.68.0)
+    access: governance/claims.yaml and campaigns/P074-as3-induced-gravity-scaling
+    extracted: dimensional permission G=q*a^2*c^3/hbar, conditional shift Delta(1/G)=s*E_cut^2/(hbar*c^5) with E_cut=hbar*c/a, independent additive baseline 1/G_total=B+Delta(1/G), and the explicit ceiling that sign, field content, regulator, cutoff identification, and baseline remain premises
+  - source: accepted C-IGR-001, C-IGR-002, C-IGR-003 (v0.161.0)
+    access: governance/claims.yaml, campaigns/P230-exact-mass-regulator-rung, src/substrate_framework/scalar_one_loop_mass.py
+    extracted: exact sharp/smooth/power-subtracted I2 and I3 families, typed compositions Delta(1/G)=N*(1-6*xi)*I2/(12*pi) and Delta(rho)=-(N/2)*(4*pi)^-2*I3, the dI3/dm2=-I2 identity, massless values, and the exact scheme-dependence ceiling (z=1 smooth:sharp ratio ~1.88, sign-changing power-subtracted small-log structure)
+  - source: landed conditional module src/substrate_framework/scalar_one_loop_mass.py
+    access: repository source at 7dfe89b; C-IGR-001..003 accepted promotion
+    extracted: importable exact coefficient families and scheme tags reused as accepted-canon implementation; P231 reuses this API rather than duplicating it
+  - source: landed conditional modules src/substrate_framework/scalar_induced_newton.py and covariant_sine_gordon_action.py
+    access: repository source at 7dfe89b; PR #14 and PR #25 promoted no claims
+    extracted: regulator tag and constant-vacuum V''(phi_bg)=m^2 composition slot only; no unpromoted API is scientific authority
+  - source: Vassilevich arXiv:hep-th/0306138v3 equations 1.16-1.20, 2.2, 4.27
+    access: public primary source, independently checked in P230; carried forward as approved import
+    extracted: real-scalar determinant weight, proper-time sign, Laplace-type convention, boundaryless a0/a2 heat-kernel coefficients, and the heat-kernel expansion organization that exhibits the tau^-1 (a4, curvature-squared) class whose coefficient structure is declared convention
+  - source: Visser arXiv:gr-qc/0204062v1 equations 7-15
+    access: public primary source, independently checked in P230; carried forward as approved import
+    extracted: cutoff effective-action organization, curvature and vacuum classes, and the retention of cosmological and higher-curvature sectors required by the control ledger
+invariants:
+  - >-
+      every C-IGR-001 assumption remains in force: positive self-adjoint
+      boundaryless four-dimensional Euclidean real-scalar Laplace-type operator
+      with spacetime-constant nonnegative exact m^2, adequate infrared
+      convergence or reference subtraction, determinant weight 1/2, heat-kernel
+      prefactor (4*pi)^-2, Einstein-Hilbert matching factor 16*pi, and only
+      displayed local coefficient classes retained
+  - C-GRV-001's independent additive baseline B stays free; B=0 is a declared premise (the purely-induced reading), not a derived value, and its downstream ceiling is quoted exactly
+  - the usable scheme set and its finite parts must be outputs of exact substrate-internal conditions (spectral positivity, monotone decoupling, cutoff ontology, conformal symmetry point), not of a point choice; no physical regulator selection by numerical closeness
+  - the total-sign map is exact and necessary-and-sufficient on the full declared parameter domain (N positive integer, xi exact real with decidable relation to 1/6, m^2 nonnegative exact, positive cutoff or subtraction scale, real baseline)
+  - >-
+      every term that can defeat the claimed regime is in the control ledger:
+      the tau^-1 higher-curvature sector with its exact per-scheme integral
+      family and predeclared bounding domain, the tau^-3 cosmological sector,
+      and the nonlocal remainder; nothing is omitted silently
+  - no observed G, Planck scale, or empirical gravity comparator enters selection, formulas, tolerances, or tests; comparator blinding holds until the composition and sign map are frozen
+  - no fitted Newton constant, no borrowed Einstein-Hilbert coefficient, no sourced nonflat geometry solution, no radiative prediction (issue #76 gate 2, issue #88 non-goals)
+  - accepted claims, releases, and generated docs change only in a later reviewed promotion transaction; this rung writes the proposal, module, tests, and evidence only
+allowed_imports:
+  - C-GRV-001
+  - C-IGR-001
+  - C-IGR-002
+  - C-IGR-003
+  - the declared one-real-scalar determinant, heat-kernel, and Einstein-Hilbert coefficient conventions stated in source_inventory
+  - SymPy exact algebra, expint E1, modified Bessel K, limits, series, and sign decisions
+  - mpmath high-precision adaptive quadrature as corroboration only
+  - substrate_framework.scalar_one_loop_mass as accepted-canon implementation of the I2/I3 families
+  - the scalar_induced_newton regulator tag as implementation reuse checked against independent derivation
+candidates:
+  - id: A
+    description: >-
+      Scheme-uniform usable-set composition: derive the substrate-internal
+      selection conditions (strict spectral positivity of the curvature-class
+      coefficient from the positive operator spectrum, strict monotone
+      large-mass decoupling, C-GRV-001 cutoff ontology E_cut=hbar*c/a) and
+      output the usable set {sharp, smooth} with the total normalization as
+      an exact scheme-bracketed family, exact spread ratio, uniform sign map
+      on the usable set, and the zeta family retained as exact
+      scale-dependence ledger outside the usable set.
+  - id: B
+    description: >-
+      Point-scheme normalization: declare one cutoff scheme (for example the
+      sharp one) as the usable renormalization condition so the total
+      coupling is a point value.
+  - id: C
+    description: >-
+      Subtraction-scale normalization: adopt the power-subtracted family as
+      the usable condition since it has unique power-free finite parts and
+      explicit scale dependence.
+  - id: D
+    description: >-
+      Full-determinant normalization: define the renormalization condition
+      including the tau^-1 curvature-squared sector and nonlocal form
+      factors inside the coupling itself.
+selection_criteria:
+  - >-
+      exactness: every selection leg and sign condition derived exactly from
+      accepted families, never fitted
+  - spectral positivity of the curvature-class coefficient inherited from the positive operator spectrum for every scheme in the usable set
+  - monotone large-mass decoupling of the curvature-class coefficient within the usable set
+  - >-
+      cutoff-ontology closure: the usable scheme's scale carries C-GRV-001's
+      E_cut=hbar*c/a identification
+  - scheme-uniformity of the necessary-and-sufficient sign conditions over the
+      usable set
+  - >-
+      assumption economy: no undeclared premise distinguishing sharp from
+      smooth; no borrowed coefficient; baseline provenance explicit
+  - >-
+      comparator blinding: no empirical gravitational value enters selection,
+      formulas, tolerances, or tests
+claims_proposed:
+  - C-IGR-004
+  - C-GRV-002
+comparators_blinded_until: >-
+  No empirical gravity comparator belongs to P231 at all: observed G,
+  Planck-scale phenomenology, and any gravitational measurement stay closed
+  until the composition and sign map are frozen in
+  proposals/P231-total-coupling-rung/evidence/formula-freeze.yaml and
+  individually reviewed; internal exact formula evaluations (limits, ratios,
+  boundary loci) are derivations, not comparators, and cannot select a
+  scheme.
+status: active
