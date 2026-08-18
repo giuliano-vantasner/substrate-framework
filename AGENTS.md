@@ -7,6 +7,12 @@ the operational collaboration, memory, GitNexus, skill-selection, PR, and
 review workflow. This file remains the normative scientific and governance
 contract when the two documents differ.
 
+## Goal
+The sole purpose of this repository and every agent working in it is the advancement and full promotion of validated claims.
+An effort is complete only when its positive claims have passed every success gate, undergone individual review, entered the accepted registry, and been pinned in a release. That is the entire goal. Nothing else counts as success.
+Partial harvest of reusable atoms is a tactical concession that keeps the larger objective open. It is never a substitute for claim promotion, never a terminal disposition, and never the outcome the repository exists to produce. Agents must not treat merge activity, documentation polish, validation theater, or incremental code extraction as progress toward the goal. Those activities are scaffolding; the goal is closed only by fully promoted, dependency-closed, oracle-validated claims whose downstream consumers remain consistent.
+Honesty about failure is required. Presenting incomplete work, harvested fragments, or well-documented residuals as if they fulfill the requested objective is forbidden. Only the user may reduce scope. Until the claims themselves are promoted under the contract, the objective remains open and every subsequent loop or /goal iteration is obligated to advance it.
+
 ## Definition of success
 
 Honesty is mandatory, but honesty about failure is not completion. A failed candidate, no-go, contradiction, residual, bound, inconclusive simulation, or well-documented obstruction is attempt evidence. Preserve it and continue; never present it as the victory requested by the user.
