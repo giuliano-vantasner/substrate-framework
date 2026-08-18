@@ -77,7 +77,11 @@ def test_pull_request_workflow_is_least_privilege_and_sha_pinned() -> None:
     assert "secrets." not in workflow
     assert re.search(r"(?m)^permissions:\n  contents: read$", workflow)
     assert "persist-credentials: false" in workflow
+    assert "scripts/validate_changed.py" in workflow
+    assert "Run impact-scoped pull-request validation" in workflow
+    assert "schedule:" in workflow
     assert "scripts/validate.sh --full" in workflow
+    assert "push:" not in workflow
     assert "timeout-minutes:" in workflow
 
     uses_lines = [line.strip() for line in workflow.splitlines() if "uses:" in line]
@@ -130,6 +134,9 @@ def test_pr_policy_keeps_viable_harvests_active_and_validation_scoped() -> None:
     assert "current canon" in harvest_skill
     assert "Source PR lifecycle" in pr_template
     assert "Terminal-close evidence" in pr_template
+    assert "scripts/validate_changed.py" in (
+        ROOT / ".github/workflows/validate.yml"
+    ).read_text(encoding="utf-8")
 
 
 def test_contribution_policy_blocks_sensitive_and_unlicensed_sources() -> None:

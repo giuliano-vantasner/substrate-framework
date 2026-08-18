@@ -2,7 +2,7 @@
 description: Keep viable scientific pull requests active through repair or harvest and scope validation by impact
 author: codex
 created: '2026-08-18T09:27:59Z'
-updated: '2026-08-18T09:29:22Z'
+updated: '2026-08-18T09:35:01Z'
 tags:
 - substrate-framework
 - effort
@@ -31,7 +31,7 @@ The effort follows one bounded process transaction and one separately reviewed s
 4. [x] Make canon conflicts eligible for a separate challenge without weakening promotion authority.
 5. [x] Replace the public-export full-suite trigger with impact-based scoped/full selection.
 6. [x] Align AGENTS, onboarding, the PR template, both research skills, and five memory templates.
-7. [x] Add and run a contribution-policy regression test plus record-sensitive validators.
+7. [x] Add a conservative changed-file CI selector, fixed-only mode, and focused regression tests so PRs do not replay the full suite mechanically.
 8. [x] Open process PR #83 for issue #81 and hand merge authority to a distinct reviewer or owner.
 
 ## Attempts
@@ -42,9 +42,10 @@ The attempts preserve the process failures that motivated and tested the repair.
 | 0001 | Close PR #77 after identifying unmet promotion dependencies | GitHub close and branch cleanup | rejected process action; reversed | The review conflated claim promotion with artifact merge and treated canonical dependency gaps as terminal | Restore the head, reopen the PR, and create a focused harvest |
 | 0002 | Apply the categorical public-export full-suite rule to harvest #82 | `scripts/validate.sh --full` | stopped at the user's scope correction; not counted as validation | The rule ignored low measured impact and repeated integrated coverage | Run the focused API tests and scoped workflow; revise the trigger |
 | 0003 | First lifecycle-policy regression assertion | scoped workflow for `tests/test_public_contribution_surfaces.py` | one assertion failed | The test expected `live PR` while the skill deliberately requires the stronger `live source or harvest PR` wording | Correct only the assertion and rerun the failed scoped boundary |
+| 0004 | Verify final GitHub execution state | PR #82 check rollup and `.github/workflows/validate.yml` | CI optimization gap found | The workflow still hard-coded `--full` for every PR and would negate the local impact rule | Add `validate_changed.py`, fixed-only support, conservative full triggers, and a scheduled/manual full backstop |
 
 ## Validation
-Validation is proportionate to this documentation/template and one-test surface. Both edited skills pass their native validators. GitNexus detects 35 changed documentation sections, zero affected processes, and low risk. `scripts/validate.sh --pytest-scope tests/test_public_contribution_surfaces.py` passes all fixed repository checks and 9 targeted tests; the earlier interrupted full run and failed scoped attempt are not counted. `git diff --check` passes separately. Adding this final effort record requires only absolute-path memory validation and repository-schema validation, not another pytest replay.
+Validation is proportionate to this process, selector, and regression-test surface. Both edited skills pass their native validators. GitNexus reports low risk and no affected execution process. The final workflow command is `scripts/validate.sh --pytest-scope tests/test_public_contribution_surfaces.py tests/test_repository_validation.py tests/test_validate_changed.py tests/test_validate_script.py`; its 32 focused tests cover public policy, fixed checks, full/scoped/fixed-only dispatch, conservative source/governance/removal triggers, and workflow wiring. The earlier interrupted full run and failed scoped attempt are not counted. The final effort record passes absolute-path memory and repository-schema validation, and `git diff --check` passes separately.
 
 ## Debt Ledger
 The process-unit debt ledger is empty; independent merge remains workflow state, not hidden debt.
@@ -53,7 +54,7 @@ The process-unit debt ledger is empty; independent merge remains workflow state,
 | --- | --- | --- | --- | --- |
 
 ## Results
-PR #77 is open with its restored head, and focused harvest PR #82 advances goal #76 without promoting claims. The corrective policy makes `refactor then merge` active work with an owner, live PR, repair, and landing test; permits unmerged closure only under enumerated terminal conditions; treats accepted canon as authoritative but revisable; and allows bounded additive public APIs to use scoped validation when impact evidence supports it.
+PR #77 is open with its restored head, and focused harvest PR #82 advances goal #76 without promoting claims. The corrective policy makes `refactor then merge` active work with an owner, live PR, repair, and landing test; permits unmerged closure only under enumerated terminal conditions; treats accepted canon as authoritative but revisable; and allows bounded additive public APIs to use scoped validation when impact evidence supports it. Pull-request CI now makes that same conservative decision automatically; periodic or manually requested CI retains the integrated full-suite backstop.
 
 ## Canonicalization
 This is a process-only correction. Durable policy lives in `AGENTS.md`, `AGENTS_START_HERE.md`, the PR template, both research skills, and the aligned memory templates. The regression test prevents those public contribution surfaces from silently returning to the failed behavior.

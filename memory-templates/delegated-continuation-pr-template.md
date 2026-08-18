@@ -92,7 +92,7 @@ List individually accepted claims, source API/tests, immutable campaign record, 
 Record the verified positive result and every harvested unit. If the parent objective is incomplete, use `Advances #N`, preserve the exact next decisive action, and leave the goal active. A clean harvest handoff may end this PR or agent run without pretending the campaign is complete.
 
 ## Done Gate
-For full campaign completion, check all success conditions from `AGENTS.md`, targeted checks, downstream replay, generated-state consistency, one `scripts/validate.sh --full` run at the unchanged promotion boundary, and empty debt. For a progress merge, require that the canonical issue predates the PR, a distinct merger is identified, and each harvested unit passes its local claim, dependency, convention, consumer, impact, and proportionate scoped/full validation gates; keep the campaign and any live source-refactor PR open and do not promote unsupported headline claims.
+For full campaign completion, check all success conditions from `AGENTS.md`, targeted checks, downstream replay, generated-state consistency, one `scripts/validate.sh --full` run at the unchanged promotion boundary, and empty debt. For a progress merge, require that the canonical issue predates the PR, a distinct merger is identified, and each harvested unit passes its local claim, dependency, convention, consumer, impact, and proportionate fixed-only/scoped/full validation gates; record the `scripts/validate_changed.py` CI decision, keep the campaign and any live source-refactor PR open, and do not promote unsupported headline claims.
 
 ## Cross-References
 Link parent/child contracts, proposal, claims, campaigns, source, tests, release, generated docs, and PR.
