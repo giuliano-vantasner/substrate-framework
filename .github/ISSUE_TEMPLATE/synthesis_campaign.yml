@@ -1,33 +1,74 @@
 name: Synthesis campaign
-description: Chain framework primitives into a higher-level claim or scoped model
+description: Prove and promote one higher theorem from accepted framework claims
 title: '[Synthesis] '
 body:
   - type: markdown
     attributes:
       value: |
-        Use this when relevant ingredients largely exist and the work should compose them into a meaningful statement. The target may be scoped or conditional; it does not need to certify a final theory.
+        Use this when accepted ingredients exist but their higher consequence has not been proved and promoted. The campaign succeeds by promoting the new theorem—not by accumulating review ceremony or merely merging support code.
   - type: textarea
-    id: statement
+    id: theorem
     attributes:
-      label: Higher-level statement
-      description: What claim, explanation, prediction, or model fragment should emerge from this campaign?
+      label: Exact higher theorem
+      description: State the one positive claim to prove. Longer statements are welcome when assumptions and exclusions are explicit.
+    validations:
+      required: true
   - type: textarea
-    id: primitives
+    id: gap
     attributes:
-      label: Primitives to chain
-      description: Note the accepted claims, canonical modules, and approved imports expected to support the statement.
+      label: Structural gap closed
+      description: What implication, identity, convention map, or cross-sector bridge is absent from the accepted claim set, and what becomes possible when it closes?
+    validations:
+      required: true
   - type: textarea
-    id: composition
+    id: dependencies
     attributes:
-      label: Composition work
-      description: What identifications, bridges, convention maps, or missing links appear necessary?
+      label: Accepted composition dependencies
+      description: List at least two distinct accepted claim IDs and the exact accepted scope used. These atoms remain accepted inputs; the campaign reviews the new composition.
+    validations:
+      required: true
+  - type: dropdown
+    id: layer
+    attributes:
+      label: Claim layer
+      description: Interpretive theorems must state their added hypothesis explicitly and cannot feed the core layer.
+      options:
+        - Core theorem
+        - Interpretive theorem under hypothesis H
+    validations:
+      required: true
+  - type: textarea
+    id: glue
+    attributes:
+      label: Glue proof
+      description: Name the intended SymPy identity chain or Lean theorem, repository artifact, and proof obligations. A fixed theorem needs one sound route; compare mechanisms only when the mechanism is genuinely open.
+    validations:
+      required: true
+  - type: textarea
+    id: boundary
+    attributes:
+      label: Assumptions, exclusions, and hypothesis
+      description: Declare assumptions and exclusions. For an interpretive theorem, write hypothesis H and the resulting conditional statement.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence by scope
+      description: Separate exact proof from measurement, numerics, or simulation that test physical applicability. Lean may corroborate SymPy, but is not a universal prerequisite.
+    validations:
+      required: true
+  - type: textarea
+    id: promotion
+    attributes:
+      label: Promotion transaction
+      description: Name the proposed claim ID if allocated, individual review plan for the higher theorem, affected consumers, release pin, and proportional validation boundary. Support PRs may merge while this issue stays open.
+    validations:
+      required: true
   - type: textarea
     id: scope
     attributes:
       label: Scope and coordination
-      description: Note the intended boundary, explicit non-goals, likely write surfaces, and overlapping efforts.
-  - type: textarea
-    id: result
-    attributes:
-      label: Promotable result
-      description: What higher-level claim or reusable artifact should exist when the campaign succeeds, and what evidence would support it?
+      description: Record non-goals, write surfaces, and overlapping efforts. Dependency-graph rankings are advisory discovery aids, never gates.
+    validations:
+      required: true

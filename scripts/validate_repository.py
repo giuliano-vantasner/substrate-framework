@@ -6,6 +6,8 @@ from __future__ import annotations
 import re
 from pathlib import Path
 
+import yaml
+
 from substrate_framework.governance import (
     GovernanceError,
     load_yaml,
@@ -42,6 +44,58 @@ def validate_memory_contract_categories(root: Path) -> None:
         )
 
 
+def validate_repository_skills(root: Path) -> int:
+    """Validate discoverable repository skills and their UI metadata."""
+
+    count = 0
+    for skill_file in sorted((root / ".agents/skills").glob("*/SKILL.md")):
+        count += 1
+        relative = skill_file.relative_to(root)
+        content = skill_file.read_text(encoding="utf-8")
+        match = re.match(r"^---\n(.*?)\n---", content, re.DOTALL)
+        if not match:
+            raise GovernanceError(f"{relative}: missing YAML frontmatter")
+        frontmatter = yaml.safe_load(match.group(1))
+        if not isinstance(frontmatter, dict) or set(frontmatter) != {
+            "name",
+            "description",
+        }:
+            raise GovernanceError(
+                f"{relative}: frontmatter must contain only name and description"
+            )
+        name = frontmatter["name"]
+        if name != skill_file.parent.name or not re.fullmatch(
+            r"[a-z0-9]+(?:-[a-z0-9]+)*", name
+        ):
+            raise GovernanceError(f"{relative}: skill name must match its directory")
+        description = frontmatter["description"]
+        if not isinstance(description, str) or not description.strip():
+            raise GovernanceError(f"{relative}: description must be non-empty")
+
+        metadata_path = skill_file.parent / "agents/openai.yaml"
+        metadata = load_yaml(metadata_path)
+        interface = metadata.get("interface")
+        if not isinstance(interface, dict):
+            raise GovernanceError(
+                f"{metadata_path.relative_to(root)}: interface must be a mapping"
+            )
+        for field in ("display_name", "short_description", "default_prompt"):
+            value = interface.get(field)
+            if not isinstance(value, str) or not value.strip():
+                raise GovernanceError(
+                    f"{metadata_path.relative_to(root)}: {field} must be non-empty"
+                )
+        if not 25 <= len(interface["short_description"]) <= 64:
+            raise GovernanceError(
+                f"{metadata_path.relative_to(root)}: short_description must be 25-64 characters"
+            )
+        if f"${name}" not in interface["default_prompt"]:
+            raise GovernanceError(
+                f"{metadata_path.relative_to(root)}: default_prompt must mention ${name}"
+            )
+    return count
+
+
 def validate_accepted_artifact_paths(root: Path, registry: dict) -> None:
     """Require accepted provenance and evidence to resolve inside the repository."""
 
@@ -49,7 +103,15 @@ def validate_accepted_artifact_paths(root: Path, registry: dict) -> None:
         if claim["accepted_in"] is None:
             continue
         artifacts = [claim["provenance"], *claim["evidence"]]
-        for artifact in artifacts:
+        composition = claim.get("composition")
+        if isinstance(composition, dict) and isinstance(composition.get("glue"), dict):
+            artifacts.append(composition["glue"].get("artifact"))
+        artifacts.extend(
+            record.get("artifact")
+            for record in claim.get("verification_evidence", [])
+            if isinstance(record, dict)
+        )
+        for artifact in dict.fromkeys(artifacts):
             if not isinstance(artifact, str) or not artifact:
                 raise GovernanceError(f"{claim['id']}: accepted artifact path must be a string")
             relative = Path(artifact)
@@ -259,6 +321,7 @@ def validate_migration_inventory(root: Path, registry: dict) -> dict[str, int]:
 def main() -> int:
     root = Path(__file__).resolve().parents[1]
     validate_memory_contract_categories(root)
+    skill_count = validate_repository_skills(root)
     registry_path = root / "governance" / "claims.yaml"
     registry = load_yaml(registry_path)
     claim_ids = validate_registry(registry)
@@ -314,7 +377,8 @@ def main() -> int:
 
     print(
         f"WORKFLOW VALID: {len(claim_ids)} claims, {len(accepted_ids)} accepted, "
-        f"{proposal_count} proposals; MIGRATION QUEUE: {sum(migration_counts.values())} units, "
+        f"{proposal_count} proposals, {skill_count} skills; "
+        f"MIGRATION QUEUE: {sum(migration_counts.values())} units, "
         f"{migration_counts.get('pending_adjudication', 0)} pending, "
         f"{migration_counts.get('partially_migrated', 0)} partial"
     )

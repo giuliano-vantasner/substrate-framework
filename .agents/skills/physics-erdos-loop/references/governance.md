@@ -37,13 +37,21 @@ Before calculating, require a proposal manifest with:
 - exact question and positive completion object;
 - accepted invariants and conventions;
 - permitted imports and assumptions;
-- at least two candidate concepts, unless uniqueness is proved;
+- at least two candidate concepts when a scientific mechanism is being selected, unless uniqueness is proved; a fixed theorem target may register one complete proof route;
 - selection criteria fixed before comparator values are used;
 - proposed claim delta and anticipated consumers;
 - comparator-blinding point;
 - validation and global replay plan.
 
 A candidate cannot alter these fields retroactively without creating a recorded proposal revision and rerunning earlier gates.
+
+For synthesis campaigns, set `campaign_type: synthesis` and
+`target_kind: fixed_theorem`, name one higher claim and the structural gap, and
+list at least two distinct accepted composition dependencies. The accepted
+atoms are not re-reviewed. The new claim records `category: synthesized`, its
+SymPy or Lean glue proof, assumptions, and exclusions. An optional
+`layer: interpretive` theorem must state hypothesis H explicitly and cannot feed
+the core layer.
 
 ## Natural-fit test
 

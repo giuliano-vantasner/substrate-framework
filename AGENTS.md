@@ -23,9 +23,9 @@ An effort succeeds only when all of the following are true:
 2. Its dependency closure comes from accepted framework claims and explicitly approved imports; no hidden fitted constant, borrowed answer, or undeclared premise remains.
 3. It fits the framework's accepted invariants naturally, or a separate foundational-revision proposal has shown—independently of the favored candidate—that the invariants themselves require the smallest coherent change.
 4. The strongest practical oracle validates the actual claim, and the verifier is shown to be sensitive through mutation, counterexample, convergence, limiting-case, or independent-rederivation tests as appropriate.
-5. Plausible competing concepts were registered before selection and compared using predeclared structural criteria. Numerical closeness to a comparator cannot select the concept.
+5. When the scientific mechanism is genuinely open, plausible competing concepts were registered before selection and compared using predeclared structural criteria. A fixed theorem statement does not require fabricated rival mechanisms; one complete proof route may suffice. Numerical closeness to a comparator cannot select a concept.
 6. Every affected claim has been reviewed individually; an accepted proposal is not a blanket promotion of every sentence in a campaign.
-7. The full downstream dependency replay passes, including units, conventions, known limits, import inventories, formal statements, tests, and generated consumers.
+7. The impact-bounded downstream dependency replay passes, including every affected unit, convention, known limit, import inventory, formal statement, test, and generated consumer. Foundational or uncertain changes require the full graph; additive leaf theorems do not replay unrelated sectors.
 8. Reusable definitions and derivations live in importable modules with tests. Campaign code calls them rather than duplicating functions, constants, or proof-shaped prose.
 9. The accepted claim registry, release manifest, generated documentation, and durable memory agree.
 10. The debt ledger is empty: no unresolved assumptions, residuals, broken consumers, or narrative inconsistencies remain.  Resolve imported parameters when appropriate.
@@ -60,12 +60,12 @@ Never silently edit an earlier campaign. Never edit files under `docs/generated/
 
 ## Start every durable task this way
 
-1. Load `.agents/skills/physics-erdos-loop/SKILL.md` for physics, derivation, simulation, formalization, campaign, claim, or framework-reconciliation work.
+1. Load `.agents/skills/physics-erdos-loop/SKILL.md` for physics, derivation, simulation, formalization, campaign, claim, or framework-reconciliation work. Also load `.agents/skills/theorem-synthesis/SKILL.md` when composing accepted claims into a higher theorem.
 2. Read `governance/releases/current.yaml`, `governance/claims.yaml`, and the relevant accepted source modules. For predecessor migration, also locate the source unit in `migration/source-claims.yaml` and read its current disposition and scope policy.
 3. Search durable memory with the bundled `memory` CLI, then verify every reused fact at its source. Memory is an index and work record, not authority.
 4. Inspect git status and history. Separate committed baseline, uncommitted work, generated outputs, and attempt artifacts.
-5. Instantiate the appropriate contract from `memory-templates/` before substantive work, validate its matching proposal manifest with `scripts/validate_repository.py`, and do not open the source body or comparator values until that schema gate passes.
-6. Record the exact base release, question, invariants, permitted imports, claim delta, candidate set, selection criteria, and comparator-blinding point.
+5. Instantiate the appropriate contract from `memory-templates/` before substantive work, using `theorem-synthesis.md` for a synthesis campaign; validate its matching proposal manifest with `scripts/validate_repository.py`, and do not open a source body or comparator values until the relevant schema gate passes.
+6. Record the exact base release, question, invariants, permitted imports, claim delta, target kind, applicable candidate set and selection criteria, and comparator-blinding point. For a fixed exact theorem with no empirical comparator, say so instead of manufacturing either.
 
 If an existing result appears to solve the task, reproduce and audit it. Reuse it only if its exact claim, assumptions, and dependency closure match the current objective.
 
@@ -76,7 +76,7 @@ Do not choose a concept and then retrofit the framework around it.
 Before implementation:
 
 - Define what must be explained and what remains invariant.
-- Register at least two plausible candidate approaches unless a uniqueness theorem genuinely removes alternatives.
+- Register at least two plausible candidate approaches when selecting among scientific mechanisms, unless a uniqueness theorem genuinely removes alternatives. For a fixed theorem target, register at least one complete proof route and compare alternatives only when they materially reduce uncertainty.
 - State selection criteria before inspecting comparison values: structural fit, assumption cost, parameter economy, symmetry, dimensional consistency, limiting behavior, compatibility with accepted sectors, and predictive reach.
 - Separate derivation inputs from empirical comparators. When practical, keep comparator values blinded until equations, conventions, tests, and selection criteria are frozen.
 
@@ -100,6 +100,16 @@ Use four independent status axes for every claim:
 - compatibility: unassessed, native, compatible extension, or conflict;
 - epistemic: proposed, active, qualified, superseded, or refuted.
 
+Claims may additionally declare `category: synthesized` and `layer: core` or
+`interpretive`. A synthesized claim lists at least two distinct accepted
+dependencies, the structural gap it closes, and a SymPy or Lean glue proof in
+`composition`; its positive statement has no arbitrary length cap. Review the
+new composition individually without reopening the acceptance of its atoms.
+An interpretive theorem names hypothesis H explicitly and may depend on core
+claims, but core claims may not depend on the interpretive layer. Multiple
+verification modalities may be recorded with separate scopes; Lean can
+corroborate a symbolic proof without becoming a universal prerequisite.
+
 Proposals use `challenges` relationships. Only an accepted replacement may use `supersedes`. A proposal may be partly accepted: promote claims individually and retain rejected candidates as historical attempt evidence.
 
 Claim identifiers are durable provenance keys even when a proposal was rejected and never entered `governance/claims.yaml`. Before allocating an identifier, search the registry, campaigns, and durable memory; never reuse a provisional, rejected, refuted, superseded, or accepted identifier for a different statement.
@@ -117,6 +127,7 @@ Once adjudicated, move the campaign record into `campaigns/` without rewriting i
 - Reuse `src/substrate_framework/numerics.py` for SciPy IVP, BVP, method-of-lines, refinement evidence, and sampled trapezoidal integration. Canonical modules call `trapezoid_integral`; mutable standalone scripts targeting the current environment call `np.trapezoid`, never the removed `np.trapz`. Compatibility preflight must inspect executable syntax for both direct `np.trapz` and dynamic `getattr(np, "trapz")` access. In particular, never write `getattr(np, "trapezoid", getattr(np, "trapz"))`: Python evaluates that legacy default eagerly. Use the canonical helper or a two-step `None` fallback. Keep exact tractable integrals symbolic, and keep the spatial operator, boundary data, error metric, and physical pass criteria explicit in the claim module.
 - Keep exploration and orchestration in proposals/campaigns. Once accepted, extract reusable logic into the package and test it there.
 - Formal developments must import shared framework definitions where practical rather than restating the entire theory in each capstone.
+- Agent onboarding installs the repository-pinned Lean/mathlib environment. Put new formal developments under `formal/SubstrateFramework/`, run `scripts/check_lean.sh` when that surface changes, and keep historical external Lean ingestion in its own provenance-governed workflow.
 - Encode conventions once and test conversions explicitly. Never mix parameterizations from different readings inside one calculation.
 
 Run impact analysis before changing a canonical symbol. Record direct consumers, indirect consumers, generated documents, formal theorems, and memory entries. After editing, replay every affected path—not only the proposing script.
@@ -126,6 +137,12 @@ Run impact analysis before changing a canonical symbol. Record direct consumers,
 An `ALL N CHECKS PASS` tail proves only that those assertions executed successfully. It does not prove that the assertions test the headline claim.
 
 Choose the oracle by the mathematical claim, not by a preferred tool. Use SymPy for exact identities, substitutions, series, and analytic limits; Lean for finite formal statements whose exact encoding and axioms can be audited; and NumPy/SciPy for roots, spectra, quadrature, optimization, ODEs, boundary-value problems, and discretized PDEs without a tractable closed form. Not every proof obligation belongs in SymPy or Lean. Conversely, a SciPy result earns numeric or simulation evidence only: it never becomes exact merely because tolerances are tight.
+
+Proof and measurement answer different questions. An exact symbolic or formal
+proof establishes its encoded implication; measurement, numerical evidence, or
+simulation tests whether assumptions apply and consequences describe nature.
+Neither should be withheld until the other exists, and empirical agreement must
+not be relabeled as proof.
 
 Do not simulate a conclusion already fixed by stronger exact evidence. If exact elimination removes a parameter from an ODE right-hand side, local uniqueness—not duplicate integrations with two parameter values—establishes same-data trajectory independence. Before calling a downstream tail, dispersion, normalization, or consistency check independent, eliminate its shared intermediate variables and compare the resulting equations or positive solution sets; an algebraically equivalent condition is regression coverage, even when presented in different coordinates. Prefer exact parameter sensitivity or an initial Taylor-coefficient separation for a counterexample; simulate only behavior that remains analytically unresolved.
 
@@ -141,7 +158,7 @@ For each serious claim:
 
 - derive the checked quantity rather than hard-coding the expected result;
 - confirm process status zero and the terminal tally independently; inventory lexical check-call sites, runtime check executions, and assertion nodes separately, and never force those counts to agree when loops or dynamic dispatch legitimately multiply executions; never pass a positive check count through `SystemExit` as though it were a success code;
-- mutate load-bearing inputs and require the relevant check to fail;
+- mutate load-bearing inputs and require the relevant check to fail for custom symbolic/numeric verifiers and translation layers. For a kernel-checked Lean theorem, inspect the precise statement, imports, proof escapes, axiom footprint, and physics encoding; do not require a performative mutation of the kernel proof itself;
 - include counterexamples or wrong-convention probes;
 - run resolution/timestep/domain/tolerance refinement for numeric work;
 - check dimensions, signs, symmetries, conservation laws, and known limits;
@@ -206,11 +223,16 @@ checks run in both modes. A scoped pass is evidence only for the declared
 pytest scope; record the exact selectors in the PR. An additive public export
 may remain scoped when impact analysis shows a bounded sector, no changed
 existing contract, known consumers, and targeted coverage of the new API. Use
-`scripts/validate.sh --full` for a claim promotion or release and whenever the
-change reaches shared numerics, verification machinery, claim or release
-governance semantics, changes an existing public contract with consumers,
-changes dependencies or cross-cutting conventions, spans multiple framework
-sectors, or has an uncertain dependency boundary. Calling
+`scripts/validate.sh --full` whenever the change reaches shared numerics,
+verification machinery, claim or release governance semantics, changes an
+existing claim or public contract with consumers, changes dependencies or
+cross-cutting conventions, spans an uncertain boundary, or performs a
+foundational revision. An append-only leaf synthesized-theorem promotion may
+remain scoped when it changes no existing claim or contract, depends only on
+previously accepted claims, adds its release entry, and replays the exact proof,
+registry/rendering checks, direct consumers, and any changed formal surface.
+`scripts/validate_changed.py` recognizes this bounded case and names additional
+checks such as `scripts/check_lean.sh`. Calling
 `scripts/validate.sh` without arguments remains a backward-compatible alias for
 `--full`. The submitting agent runs `scripts/validate_changed.py` against the
 base commit to select affected tests for bounded changes, use `--fixed-only`

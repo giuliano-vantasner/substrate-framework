@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import os
 from pathlib import Path
 import tomllib
 
@@ -74,6 +75,7 @@ def test_redundant_remote_repository_validation_is_absent() -> None:
     selector = (ROOT / "scripts/validate_changed.py").read_text(encoding="utf-8")
     assert "def choose_validation_scope(" in selector
     assert "def decision_for_refs(" in selector
+    assert os.access(ROOT / "scripts/validate_changed.py", os.X_OK)
 
 
 def test_dependabot_covers_python_and_actions() -> None:
@@ -98,6 +100,37 @@ def test_issue_forms_preserve_issue_first_and_rights_boundaries() -> None:
         serialized = (issue_directory / name).read_text(encoding="utf-8")
         assert "pull request" in serialized.lower()
         assert "issue" in serialized.lower()
+
+
+def test_synthesis_issue_form_targets_theorem_promotion_without_gate_theater() -> None:
+    path = ROOT / ".github/ISSUE_TEMPLATE/synthesis_campaign.yml"
+    form = yaml.safe_load(path.read_text(encoding="utf-8"))
+    ids = {item.get("id") for item in form["body"] if isinstance(item, dict)}
+    assert {
+        "theorem",
+        "gap",
+        "dependencies",
+        "layer",
+        "glue",
+        "boundary",
+        "evidence",
+        "promotion",
+        "scope",
+    } <= ids
+    serialized = path.read_text(encoding="utf-8").lower()
+    assert "accepted inputs" in serialized
+    assert "never gates" in serialized
+    assert "measurement" in serialized
+
+
+def test_onboarding_exposes_theorem_skill_template_and_lean_setup() -> None:
+    onboarding = (ROOT / "AGENTS_START_HERE.md").read_text(encoding="utf-8")
+    contract = (ROOT / "AGENTS.md").read_text(encoding="utf-8")
+    assert "scripts/check_lean.sh" in onboarding
+    assert "theorem-synthesis.md" in onboarding
+    assert ".agents/skills/theorem-synthesis/SKILL.md" in contract
+    assert (ROOT / ".agents/skills/theorem-synthesis/SKILL.md").is_file()
+    assert (ROOT / "memory-templates/theorem-synthesis.md").is_file()
 
 
 def test_pr_policy_keeps_viable_harvests_active_and_validation_scoped() -> None:

@@ -83,7 +83,14 @@ From the repository root:
 ```bash
 scripts/bootstrap.sh
 memory --version
+scripts/check_lean.sh
 ```
+
+Bootstrap installs the Python environment, the pipx-managed memory CLI, and the
+repository-pinned Lean/mathlib toolchain. It also builds the small formal
+scaffold so a new agent can start a Lean proof without reconstructing the
+environment. Run `scripts/check_lean.sh` again only when the formal surface or
+its setup changes.
 
 If the clone already has the project-local GitNexus runner, check the index:
 
@@ -113,6 +120,7 @@ file from [`memory-templates/`](memory-templates/) before substantive work:
 | --- | --- |
 | Durable multi-step task | `effort-contract.md` |
 | New scientific campaign | `campaign-proposal.md` plus `proposals/<id>/proposal.yaml` |
+| Higher theorem from accepted claims | `theorem-synthesis.md` plus a synthesis proposal manifest |
 | Long research program | `research-arc.md` |
 | Independent claim review | `claim-review.md` |
 | Bounded continuation or harvest PR | `delegated-continuation-pr-template.md` |
@@ -134,6 +142,9 @@ must read the corresponding `SKILL.md` in full and follow the same workflow.
 - Use [`physics-erdos-loop`](.agents/skills/physics-erdos-loop/SKILL.md) for
   derivations, simulations, formalization, campaigns, claim changes, migration,
   canonical physics APIs, and framework reconciliation.
+- Use [`theorem-synthesis`](.agents/skills/theorem-synthesis/SKILL.md) when a
+  campaign composes accepted claims into one higher SymPy- or Lean-checked
+  theorem, including a conditional interpretive theorem.
 - Use [`research-pr-harvest`](.agents/skills/research-pr-harvest/SKILL.md) when a
   scientific PR URL or number is supplied, when deciding what is mergeable, or
   when harvesting durable units from an incomplete campaign. Also load
@@ -183,16 +194,21 @@ status declared; its presence in `src/` or the package `__all__` cannot be cited
 as accepted framework truth.
 
 For scientific work, freeze candidates and structural selection criteria before
-opening comparator values. Use the strongest practical oracle, demonstrate
-verifier sensitivity, record assumptions and imports, and replay affected
-consumers. A failed route is attempt evidence and triggers the next materially
-different attempt; it is not the requested positive result.
+opening comparator values when a mechanism is genuinely being selected. A
+fixed theorem may proceed with one complete proof route. Use the strongest
+practical oracle, demonstrate applicable verifier sensitivity, record
+assumptions and imports, and replay affected consumers. For kernel-checked Lean,
+audit the exact statement, imports, proof escapes, axioms, and physical encoding
+instead of adding a ceremonial mutation. A failed route is attempt evidence and
+triggers the next materially different attempt; it is not the requested positive
+result.
 
 Before requesting review:
 
 1. Bring the effort or proposal memory up to date, including remaining frontier
    and debt inside the proposed merge unit.
-2. Run targeted tests, scientific verifiers, mutations, and affected consumers.
+2. Run targeted tests, scientific verifiers, applicable mutations, formal
+   statement/axiom audits, and affected consumers.
 3. Inspect the diff and GitNexus change impact.
 4. Run the fixed repository checks and the pytest scope justified by the diff
    and impact analysis once at the final unchanged PR boundary:
@@ -203,12 +219,13 @@ Before requesting review:
 
    An additive public export may remain scoped when impact analysis shows a
    bounded sector, no changed existing contract, known consumers, and targeted
-   API coverage. Use `scripts/validate.sh --full` instead when the change
-   reaches shared numerics, verification machinery, claim or release governance
-   semantics, changes an existing public contract with consumers, changes
-   dependencies or cross-cutting conventions, spans multiple framework
-   sectors, or has an uncertain dependency boundary. Claim promotions and
-   releases always require `--full`.
+   API coverage. An append-only leaf synthesized-theorem promotion may also
+   remain scoped when it changes no existing claim or contract and replays its
+   exact proof, registry/rendering boundary, direct consumers, and changed formal
+   surface. Use `scripts/validate.sh --full` instead when the change reaches
+   shared numerics or verification machinery, alters existing governance
+   semantics, claims, contracts, dependencies, or cross-cutting conventions,
+   performs a foundational revision, or has uncertain impact.
 5. In a separate invocation, run:
 
    ```bash

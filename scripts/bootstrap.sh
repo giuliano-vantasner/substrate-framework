@@ -23,5 +23,8 @@ if ! command -v memory >/dev/null 2>&1; then
 fi
 
 memory --version
-echo "Bootstrap complete. No activation is needed for 'memory'."
+"$repo_root/scripts/setup_lean.sh"
+
+echo "Bootstrap complete. No virtual-environment activation is needed for memory or repository Lean commands."
 echo "Run: $repo_root/scripts/validate.sh"
+echo "Formal developments: $repo_root/scripts/check_lean.sh"

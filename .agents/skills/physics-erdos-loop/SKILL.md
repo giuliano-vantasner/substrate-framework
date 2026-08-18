@@ -1,6 +1,6 @@
 ---
 name: physics-erdos-loop
-description: Run persistent, verifier-backed physics research and framework reconciliation from candidate generation through claim-level promotion. Use for physics derivations, equations, ODE/PDE work, symbolic or numeric checks, simulations, Lean formalization, campaign design, claim migration, framework-wide consistency audits, or any proposal that might change accepted scientific claims. Enforces recall, preregistered competing concepts, natural framework fit, append-only attempts, mutation-sensitive verification, global dependency replay, no early stopping, and generated canonical records.
+description: Run persistent, verifier-backed physics research and framework reconciliation from candidate generation through claim-level promotion. Use for physics derivations, equations, ODE/PDE work, symbolic or numeric checks, simulations, Lean formalization, campaign design, claim migration, framework-wide consistency audits, or any proposal that might change accepted scientific claims. Enforces recall, mechanism comparison when scientifically open, natural framework fit, append-only attempts, claim-appropriate verifier audits, impact-bounded dependency replay, no early stopping, and generated canonical records.
 ---
 
 # Physics Erdős Loop
@@ -15,9 +15,9 @@ Success requires the requested object plus all of these gates:
 
 - accepted dependency closure and declared imports;
 - natural compatibility with framework invariants, or a separately accepted minimal foundational revision;
-- strongest practical oracle and verifier-sensitivity evidence;
-- preregistered comparison of plausible candidates;
-- full downstream replay;
+- strongest practical oracle and claim-appropriate sensitivity evidence;
+- preregistered comparison of plausible candidates when a mechanism is being selected;
+- impact-bounded downstream replay;
 - reusable importable implementation;
 - claim-by-claim review and release promotion;
 - synchronized generated docs and memory;
@@ -31,6 +31,7 @@ Read [governance.md](references/governance.md) before changing a claim, conventi
 - A proposal can challenge a claim; only an accepted claim can supersede one.
 - Accepted canon governs release and promotion decisions, but remains falsifiable and reviewable; a conflict is a diagnosis to investigate, not a reason to erase evidence or halt conditional artifact work.
 - A verifier passing is necessary, but proves only its asserted predicate.
+- Exact proof and empirical applicability are separate obligations: measurement can test nature without becoming the proof of a symbolic or formal implication.
 - A campaign completion decision, scientific claim decision, and PR merge decision are independent. Use `research-pr-harvest` for the merge decision.
 - Numeric agreement is a comparator, never a concept-selection mechanism or hidden derivation input.
 - A failed concept is evidence about that concept. It is not permission to retrofit the framework around it.
@@ -66,9 +67,9 @@ Do not include failure, no-go, residual, or “best effort” as an accepted out
 
 Validate the matching proposal manifest with `PYTHONPATH=src .venv/bin/python scripts/validate_repository.py` before opening a predecessor source body or comparator values. The frozen prose and YAML must agree, and a schema failure is an append-only attempt rather than permission to proceed informally.
 
-## Phase 2 — preregister competing concepts
+## Phase 2 — preregister the actual choice
 
-Register at least two plausible candidates unless uniqueness is already proved. For each, record its new objects, assumptions, parameters, expected limits, affected claims, and likely consumers.
+Register at least two plausible candidates when the scientific mechanism is genuinely being selected, unless uniqueness is already proved. For a fixed theorem statement, declare `target_kind: fixed_theorem` and register one complete proof route; compare proof routes only when a second route materially reduces uncertainty. Never invent a rival mechanism to satisfy a form. For each applicable candidate or proof route, record its new objects, assumptions, parameters, expected limits, affected claims, and likely consumers.
 
 Freeze selection criteria before inspecting comparison values:
 
@@ -128,7 +129,7 @@ Do not count a weaker oracle as independent evidence when a stronger result alre
 
 - confirm process status zero and terminal tally independently; record lexical check-call sites, runtime check executions, and assertion nodes as distinct inventories, without demanding equality when loops or dynamic dispatch multiply executions; with `CheckLedger`, preserve the formatted tally while returning its status-zero success token rather than a positive count as an OS exit code;
 - pin a verifier's own source, claim, and release evidence, but do not freeze unrelated future queue dispositions or require mutable `current` to remain a historical release; historical replay uses durable snapshots when available and otherwise targets canonical modules/tests rather than rewriting an adjudicated campaign;
-- mutate each load-bearing input and require a relevant check to fail;
+- mutate each load-bearing input and require a relevant check to fail for custom symbolic/numeric verifiers and translation layers. For a Lean theorem checked by the kernel, audit the exact statement, imports, proof escapes, axiom footprint, and physics encoding rather than performing a ceremonial mutation of the kernel;
 - test wrong signs, normalizations, conventions, and counterexamples;
 - check dimensions, symmetries, conserved quantities, and known limits;
 - run resolution, timestep, domain, and tolerance refinement for numerics;
@@ -177,7 +178,7 @@ For accepted claims:
 3. Move the adjudicated campaign record into the immutable `campaigns/` log.
 4. Run `scripts/render_docs.py`; never hand-edit `docs/generated/`.
 5. Generate or synchronize accepted claim/release memory. Keep proposal and attempt memory separate.
-6. Run targeted scientific checks, `scripts/validate.sh --full`, and `git diff --check`; promotion is a full-validation boundary, so do not repeat that unchanged suite separately. Run validation and commit in separate process invocations so an unguarded shell cannot continue past a failed gate and mask it with a later successful command.
+6. Run targeted scientific checks, the scope selected by `scripts/validate_changed.py`, and `git diff --check`. An append-only synthesized leaf theorem may remain scoped when it changes no existing claim or contract and its exact proof, registry/rendering, direct consumers, and formal surface replay; shared machinery, altered existing claims, foundational revisions, or uncertain impact require `scripts/validate.sh --full`. Do not repeat an unchanged suite. Run validation and commit in separate process invocations so an unguarded shell cannot continue past a failed gate and mask it with a later successful command.
 
 ## Phase 10 — done gate
 

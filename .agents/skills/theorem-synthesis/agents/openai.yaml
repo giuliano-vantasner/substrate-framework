@@ -1,0 +1,4 @@
+interface:
+  display_name: "Theorem Synthesis"
+  short_description: "Compose accepted claims into higher theorems"
+  default_prompt: "Use $theorem-synthesis to compose accepted framework claims into a promotable higher theorem."
