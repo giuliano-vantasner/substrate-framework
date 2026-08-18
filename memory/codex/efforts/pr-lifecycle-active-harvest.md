@@ -2,7 +2,7 @@
 description: Keep viable scientific pull requests active through repair or harvest and scope validation by impact
 author: codex
 created: '2026-08-18T09:27:59Z'
-updated: '2026-08-18T09:27:59Z'
+updated: '2026-08-18T09:29:22Z'
 tags:
 - substrate-framework
 - effort
@@ -32,7 +32,7 @@ The effort follows one bounded process transaction and one separately reviewed s
 5. [x] Replace the public-export full-suite trigger with impact-based scoped/full selection.
 6. [x] Align AGENTS, onboarding, the PR template, both research skills, and five memory templates.
 7. [x] Add and run a contribution-policy regression test plus record-sensitive validators.
-8. [ ] Open the issue-#81 process PR and hand merge authority to a distinct reviewer or owner.
+8. [x] Open process PR #83 for issue #81 and hand merge authority to a distinct reviewer or owner.
 
 ## Attempts
 The attempts preserve the process failures that motivated and tested the repair.
@@ -59,7 +59,7 @@ PR #77 is open with its restored head, and focused harvest PR #82 advances goal 
 This is a process-only correction. Durable policy lives in `AGENTS.md`, `AGENTS_START_HERE.md`, the PR template, both research skills, and the aligned memory templates. The regression test prevents those public contribution surfaces from silently returning to the failed behavior.
 
 ## Done Gate
-The local process unit is complete and validated, but this effort remains active until its issue-#81 PR is opened and a distinct reviewer or repository owner merges it. PR #77 remains active while harvest #82 is reviewed; neither an unpromoted dependency nor unavailable self-merge authority closes it.
+The local process unit is complete and validated in PR #83, but this effort remains active until a distinct reviewer or repository owner merges it. PR #77 remains active while harvest #82 is reviewed; neither an unpromoted dependency nor unavailable self-merge authority closes it.
 
 ## Cross-References
-Canonical process issue: https://github.com/vantasnerdan/substrate-framework/issues/81. Corrected source campaign: https://github.com/vantasnerdan/substrate-framework/pull/77. Focused scientific harvest: https://github.com/vantasnerdan/substrate-framework/pull/82. Predecessor process record: `memory/vantasner/efforts/issue-first-non-self-merge-policy.md`.
+Canonical process issue: https://github.com/vantasnerdan/substrate-framework/issues/81. Corrective process PR: https://github.com/vantasnerdan/substrate-framework/pull/83. Corrected source campaign: https://github.com/vantasnerdan/substrate-framework/pull/77. Focused scientific harvest: https://github.com/vantasnerdan/substrate-framework/pull/82. Predecessor process record: `memory/vantasner/efforts/issue-first-non-self-merge-policy.md`.
