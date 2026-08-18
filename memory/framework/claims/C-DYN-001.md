@@ -42,3 +42,4 @@ Accepted in `v0.79.0` with provenance `campaigns/P092-lb2-coherence-threshold/ad
 - `campaigns/P092-lb2-coherence-threshold/reviews/source_adjudication.md`
 - `memory/vantasner/decisions/C-DYN-001-review.md`
 - `tests/test_damped_oscillator.py`
+- `formal/SubstrateFramework/Ingested/Phase26LifetimeKernel.lean`

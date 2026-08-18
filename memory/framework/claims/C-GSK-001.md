@@ -48,3 +48,4 @@ Accepted in `v0.157.0` with provenance `campaigns/P218-mk5-generalized-skyrme-so
 - `campaigns/P218-mk5-generalized-skyrme-solve-audit/attempts/0006/result.yaml`
 - `src/substrate_framework/generalized_skyrme_radial.py`
 - `tests/test_generalized_skyrme_radial.py`
+- `formal/SubstrateFramework/Ingested/Phase40TX_RotatingTorus.lean`

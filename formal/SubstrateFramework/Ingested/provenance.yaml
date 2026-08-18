@@ -1,0 +1,497 @@
+# Provenance manifest for the ingested historical Lean corpus.
+# Source repository: /home/dan/substrate @ 6d1f4e0 (local clone of the
+# historical substrate workspace; no upstream remote).
+# sha256_source digests the ORIGINAL source file BEFORE the recorded
+# adaptations; diff source-vs-ingested to recover any exact change.
+# Empty adaptation lists are byte-verbatim copies.
+source_repository: /home/dan/substrate
+source_commit: 6d1f4e0
+files:
+  - file: ActionQuantum.lean
+    family: formalization
+    source: /sg-breather-ionization/formalization/ActionQuantum.lean
+    sha256_source: e86dcb90eb301a8769a7833c28c4801189108eb0a0fbf9e6b0dd5d5def5bf7ba
+    theorems: 7
+    main_theorem: 'ActionQuantum.sqrt_one_sub_sq_pos'
+    adaptations:
+      - 'import rewrite: formalization.Energy -> SubstrateFramework.Ingested.Energy'
+      - 'open declaration: added `open SGEnergy` so cross-file references that were root-level at the source keep resolving after the dependency namespace wrap'
+  - file: AmplitudeCondition.lean
+    family: dynamics_lean
+    source: /sg-breather-ionization/dynamics_lean/AmplitudeCondition.lean
+    sha256_source: c92fa7e04ec39b05c761b6a7585b31b62506e7d441433941042e7889facd3417
+    theorems: 1
+    main_theorem: 'SGAmplitudeCondition.amplitudeCondition_feasible'
+    adaptations:
+      - 'namespace wrap: added `namespace SGAmplitudeCondition` / `end SGAmplitudeCondition` (file historically declared root-level names and was checked standalone)'
+  - file: Basin.lean
+    family: dynamics_lean
+    source: /sg-breather-ionization/dynamics_lean/Basin.lean
+    sha256_source: 26b96d80e8906d111a42295e0cf8ac6de8debf9aad96d34eb8d72eeea066d03e
+    theorems: 1
+    main_theorem: 'SGBasin.basin_single_point_exists'
+    adaptations:
+      - 'namespace wrap: added `namespace SGBasin` / `end SGBasin` (file historically declared root-level names and was checked standalone)'
+  - file: Bridge.lean
+    family: dynamics_lean
+    source: /sg-breather-ionization/dynamics_lean/Bridge.lean
+    sha256_source: 2299d6cbc402d91168a07db526bf966f9fe6d8c8cd6cd3198e56cfa4986db47b
+    theorems: 5
+    main_theorem: 'SGBridge.exchange_phase_free_fermion'
+    adaptations:
+      - 'namespace wrap: added `namespace SGBridge` / `end SGBridge` (file historically declared root-level names and was checked standalone)'
+  - file: Charge.lean
+    family: formalization
+    source: /sg-breather-ionization/formalization/Charge.lean
+    sha256_source: 8fb9bc72b8cac759c8fe805341ec60c985760332feea625d76d02099817ee0f2
+    theorems: 0
+    main_theorem: 'none (import shim)'
+    adaptations:
+      - 'import rewrite: formalization.Formalization -> SubstrateFramework.Ingested.Formalization'
+      - 'open declaration: added `open SGFormalization` so cross-file references that were root-level at the source keep resolving after the dependency namespace wrap'
+      - 'namespace wrap: added `namespace SGCharge` / `end SGCharge` (file historically declared root-level names and was checked standalone)'
+  - file: ChargeDiscrimination.lean
+    family: dynamics_lean
+    source: /sg-breather-ionization/dynamics_lean/ChargeDiscrimination.lean
+    sha256_source: c692eb12d9aa81f7547f855fe24ed03f7ba2403ac3fc4710c33c42ff80364056
+    theorems: 6
+    main_theorem: 'SGChargeDiscrimination.channels_cp_conjugate'
+    adaptations:
+      - 'namespace wrap: added `namespace SGChargeDiscrimination` / `end SGChargeDiscrimination` (file historically declared root-level names and was checked standalone)'
+  - file: ComparsiVirial.lean
+    family: comparsi
+    source: /federico_comparsi/runs/exact-breather-oscillon/formalization/ComparsiVirial.lean
+    sha256_source: b1472a30beba81f9e0a3563149e5d069c8e5e70cf67706b49ae4c0e1f546a986
+    theorems: 4
+    main_theorem: 'ComparsiVirial.periodic_virial_forces_zero'
+    adaptations:
+      []
+  - file: DetectorGeometry.lean
+    family: dynamics_lean
+    source: /sg-breather-ionization/dynamics_lean/DetectorGeometry.lean
+    sha256_source: 5a31f758e95904a574b4ebd1125b922a306d9a7a37c1c3b8eeaad55c3e6e208a
+    theorems: 5
+    main_theorem: 'SGDetectorGeometry.kinkComptonTime_eq_inv_mass'
+    adaptations:
+      - 'import rewrite: dynamics_lean.ProductionAmplitude -> SubstrateFramework.Ingested.ProductionAmplitude'
+      - 'open declaration: added `open SGProductionAmplitude` so cross-file references that were root-level at the source keep resolving after the dependency namespace wrap'
+      - 'namespace wrap: added `namespace SGDetectorGeometry` / `end SGDetectorGeometry` (file historically declared root-level names and was checked standalone)'
+  - file: DoubleWell.lean
+    family: dynamics_lean
+    source: /sg-breather-ionization/dynamics_lean/DoubleWell.lean
+    sha256_source: 0e410977cc555fff50b9cf150724146defebff34a2f571c78918eb28e64697a6
+    theorems: 1
+    main_theorem: 'SGDoubleWell.barrier_height'
+    adaptations:
+      - 'namespace wrap: added `namespace SGDoubleWell` / `end SGDoubleWell` (file historically declared root-level names and was checked standalone)'
+  - file: DrivenNeumannBC.lean
+    family: dynamics_lean
+    source: /sg-breather-ionization/dynamics_lean/DrivenNeumannBC.lean
+    sha256_source: 1fa1b50215741c347d7937f371e08933f2b9e70c55340bb3d5fbd39c6b162aaa
+    theorems: 3
+    main_theorem: 'SGDrivenNeumannBC.drivenNeumannBC_periodic'
+    adaptations:
+      - 'namespace wrap: added `namespace SGDrivenNeumannBC` / `end SGDrivenNeumannBC` (file historically declared root-level names and was checked standalone)'
+  - file: Energy.lean
+    family: formalization
+    source: /sg-breather-ionization/formalization/Energy.lean
+    sha256_source: 33bf30a14fc51b9e2d65a6c4a10fab89b239fd2e5022244dd0ed7a4d18ca8356
+    theorems: 5
+    main_theorem: 'SGEnergy.binding_gap_nonneg'
+    adaptations:
+      - 'namespace wrap: added `namespace SGEnergy` / `end SGEnergy` (file historically declared root-level names and was checked standalone)'
+  - file: EnergyFlux.lean
+    family: dynamics_lean
+    source: /sg-breather-ionization/dynamics_lean/EnergyFlux.lean
+    sha256_source: bb0fd5adceb95994e88faffd4d25d1aa983e831504358d1a38ed386bbcdf7a84
+    theorems: 4
+    main_theorem: 'SGEnergyFlux.energyFlux_sign_absorbing'
+    adaptations:
+      - 'namespace wrap: added `namespace SGEnergyFlux` / `end SGEnergyFlux` (file historically declared root-level names and was checked standalone)'
+  - file: Exchange.lean
+    family: formalization
+    source: /sg-breather-ionization/formalization/Exchange.lean
+    sha256_source: 550c906062a7d29a5821e71adc77a6a372470df9cf7ce65f7e304180b7dd1582
+    theorems: 4
+    main_theorem: 'SGExchange.kink_exchange_neg'
+    adaptations:
+      - 'namespace wrap: added `namespace SGExchange` / `end SGExchange` (file historically declared root-level names and was checked standalone)'
+  - file: Formalization.lean
+    family: formalization
+    source: /sg-breather-ionization/formalization/Formalization.lean
+    sha256_source: 62f708d7e5126214df7ebb6f2fab92a896fd9cbf87ae6b0811b19726d03bf262
+    theorems: 11
+    main_theorem: 'SGFormalization.binding_gap_nonneg'
+    adaptations:
+      - 'namespace wrap: added `namespace SGFormalization` / `end SGFormalization` (file historically declared root-level names and was checked standalone)'
+  - file: Gates.lean
+    family: dynamics_lean
+    source: /sg-breather-ionization/dynamics_lean/Gates.lean
+    sha256_source: ab9b2efda17a815ef78f9354253836b6da93db61d50d257b1d83f1f36e09e21c
+    theorems: 2
+    main_theorem: 'SGGates.gate1_energy_budget'
+    adaptations:
+      - 'namespace wrap: added `namespace SGGates` / `end SGGates` (file historically declared root-level names and was checked standalone)'
+  - file: HBT_Approach.lean
+    family: dynamics_lean
+    source: /sg-breather-ionization/dynamics_lean/HBT_Approach.lean
+    sha256_source: c59bfd248bda11ff5148c7b50e63f51eac7c9032f137e82aa206b029d25fdcbc
+    theorems: 41
+    main_theorem: 'SGHBTApproach.c_cre_mul_c_ann'
+    adaptations:
+      - 'namespace wrap: added `namespace SGHBTApproach` / `end SGHBTApproach` (file historically declared root-level names and was checked standalone)'
+  - file: LandauZener.lean
+    family: dynamics_lean
+    source: /sg-breather-ionization/dynamics_lean/LandauZener.lean
+    sha256_source: 73b64472c2e3316a799a3637b2afb16c39446d75c39e1da2594e02381017ba4b
+    theorems: 2
+    main_theorem: 'SGLandauZener.landauZener_prob_range'
+    adaptations:
+      - 'namespace wrap: added `namespace SGLandauZener` / `end SGLandauZener` (file historically declared root-level names and was checked standalone)'
+  - file: Phase10CF_Z3CenterConfinement.lean
+    family: bridges
+    source: /merged-framework/bridges/phase-10/lean/Phase10CF_Z3CenterConfinement.lean
+    sha256_source: e62c2e0ac23def41033dd7a8bf40acba9019ff3ee4cab3ea295597c5cfd3087e
+    theorems: 8
+    main_theorem: 'Phase10CF.center_card_three'
+    adaptations:
+      []
+  - file: Phase11Flavor_CPPhaseCount.lean
+    family: bridges
+    source: /merged-framework/bridges/phase-11/lean/Phase11Flavor_CPPhaseCount.lean
+    sha256_source: ab36d11867e1f00b89416d88c865aef71bcd690025026ba81783c10530675d7c
+    theorems: 6
+    main_theorem: 'Phase11Flavor.cpPhases_two'
+    adaptations:
+      - 'comment reword: prose containing the Lean proof-escape keyword replaced with "proved escape-free"; exact original recoverable from the sha256_source diff'
+  - file: Phase12GW_LowestMultipole.lean
+    family: bridges
+    source: /merged-framework/bridges/phase-12/lean/Phase12GW_LowestMultipole.lean
+    sha256_source: bd78c9db26a5b7aee7286a2ec11d3653d9fd3f3e2359f1aeed8447024e81dc5b
+    theorems: 12
+    main_theorem: 'Phase12GW.gravity_lowest_multipole_two'
+    adaptations:
+      - 'namespace wrap: added `namespace Phase12GW` / `end Phase12GW` (file historically declared root-level names and was checked standalone)'
+  - file: Phase13FS_HarmonicDoubling.lean
+    family: bridges
+    source: /merged-framework/bridges/phase-13/lean/Phase13FS_HarmonicDoubling.lean
+    sha256_source: b9ecae44a243191f6400e07a09610e65c0fa6f9b4f6ceada2835bbb47fd398bd
+    theorems: 15
+    main_theorem: 'Phase13FS.quadratic_source_radiates_at_2omega'
+    adaptations:
+      []
+  - file: Phase14P3D_SphericalNull.lean
+    family: bridges
+    source: /merged-framework/bridges/phase-14/lean/Phase14P3D_SphericalNull.lean
+    sha256_source: a96470653a69808e487243f653b813f6e4e23388dd5221d1a3cde33d7c662b75
+    theorems: 15
+    main_theorem: 'Phase14P3D.spherical_breather_radiates_nothing'
+    adaptations:
+      []
+  - file: Phase15NC_NonlinearChiralSplit.lean
+    family: bridges
+    source: /merged-framework/bridges/phase-15/lean/Phase15NC_NonlinearChiralSplit.lean
+    sha256_source: 9e661ba325e3e1c2690667eed82adfff6de805781b00f62f8bce9d8d75208216
+    theorems: 14
+    main_theorem: 'Phase15NC.topo_conserved'
+    adaptations:
+      []
+  - file: Phase16QB_TwoPolarizations.lean
+    family: bridges
+    source: /merged-framework/bridges/phase-16/lean/Phase16QB_TwoPolarizations.lean
+    sha256_source: 8ea511150a17af46dbab51e8e416ce0a5ff6aa9b413a6b05711e76c2c7183f86
+    theorems: 17
+    main_theorem: 'Phase16QB.axisym_one_polarization'
+    adaptations:
+      []
+  - file: Phase17WZW_LevelWinding.lean
+    family: bridges
+    source: /merged-framework/bridges/phase-17/lean/Phase17WZW_LevelWinding.lean
+    sha256_source: 3518e8a49ad5467a30bef2005ed04ebbf8bb6f481efa0cc33f696651ec54e259
+    theorems: 16
+    main_theorem: 'Phase17WZW.wzw_level_eq_baryon_winding'
+    adaptations:
+      []
+  - file: Phase18Chiral_GoldstoneCount.lean
+    family: bridges
+    source: /merged-framework/bridges/phase-18/lean/Phase18Chiral_GoldstoneCount.lean
+    sha256_source: 175d826c632b799de2fc27585c8c93c1b8de5c00273fbe57e916b5dd7cb9d19a
+    theorems: 6
+    main_theorem: 'Phase18Chiral.pion_triplet'
+    adaptations:
+      []
+  - file: Phase19_D3S_LocalityImpliesS1.lean
+    family: bridges
+    source: /merged-framework/bridges/phase-19/lean/Phase19_D3S_LocalityImpliesS1.lean
+    sha256_source: 15f401a83a3e113d188b74201ad3a41b6b8cdc64667c0a0763921da0a0d1818d
+    theorems: 5
+    main_theorem: 'Phase19D3S.analytic_even_symbol_power_two_is_s1'
+    adaptations:
+      - 'namespace wrap: added `namespace Phase19D3S` / `end Phase19D3S` (file historically declared root-level names and was checked standalone)'
+  - file: Phase19_OM1_Z2Character.lean
+    family: bridges
+    source: /merged-framework/bridges/phase-19/lean/Phase19_OM1_Z2Character.lean
+    sha256_source: a6f11fc9f8a5d1be9991a0cef47273f0cf14e2b3e3c590030cd7e9629b24e959
+    theorems: 7
+    main_theorem: 'Phase19OM1.chiF_generator'
+    adaptations:
+      - 'namespace wrap: added `namespace Phase19OM1` / `end Phase19OM1` (file historically declared root-level names and was checked standalone)'
+  - file: Phase1Bridge_ThermalGate.lean
+    family: bridges
+    source: /merged-framework/bridges/phase-1/lean/Phase1Bridge_ThermalGate.lean
+    sha256_source: 66839713d0062417429242c0694431b2b28765e62aa46462eb164614f3dd778c
+    theorems: 3
+    main_theorem: 'Phase1ThermalGate.thermal_gate_eq_sech_sq'
+    adaptations:
+      []
+  - file: Phase20ME_HalfQuantumOrder2.lean
+    family: dynamics_lean
+    source: /sg-breather-ionization/dynamics_lean/Phase20ME_HalfQuantumOrder2.lean
+    sha256_source: 38f4986f9baa5c7232b40582cae347edb0ac233d39be3c2459319c1bbc6074d2
+    theorems: 8
+    main_theorem: 'Phase20ME.halfQuantum_add_self'
+    adaptations:
+      - 'namespace wrap: added `namespace Phase20ME` / `end Phase20ME` (file historically declared root-level names and was checked standalone)'
+  - file: Phase20MH_OverlapHierarchy.lean
+    family: dynamics_lean
+    source: /sg-breather-ionization/dynamics_lean/Phase20MH_OverlapHierarchy.lean
+    sha256_source: 0c3dd2c0d38fc16837afaaf87cca2b53786bea7fda620d7c4770d3717e6110c6
+    theorems: 3
+    main_theorem: 'Phase20MH.overlap_pos'
+    adaptations:
+      []
+  - file: Phase21AS_OverDetermination.lean
+    family: bridges
+    source: /merged-framework/bridges/phase-21/lean/Phase21AS_OverDetermination.lean
+    sha256_source: f9238f0dbe901c9f7dae9a8cd15c65642205812afe950804fdfc039c1590415e
+    theorems: 6
+    main_theorem: 'Phase21AS.odV1_underdetermined'
+    adaptations:
+      - 'namespace wrap: added `namespace Phase21AS` / `end Phase21AS` (file historically declared root-level names and was checked standalone)'
+  - file: Phase22AS_BetaPinnedScale.lean
+    family: bridges
+    source: /merged-framework/bridges/phase-22/lean/Phase22AS_BetaPinnedScale.lean
+    sha256_source: ec2d1592c5e74942ae6ee881ec67a9800c9a784ed15a179a368199a22a038cec
+    theorems: 12
+    main_theorem: 'Phase22AS.odV2_overdetermined'
+    adaptations:
+      - 'namespace wrap: added `namespace Phase22AS` / `end Phase22AS` (file historically declared root-level names and was checked standalone)'
+  - file: Phase23EW_Sin2ThetaW.lean
+    family: bridges
+    source: /merged-framework/bridges/phase-23/lean/Phase23EW_Sin2ThetaW.lean
+    sha256_source: 9b1a7fabe43c00563368b04fa596b6d59cf1a5465a689e0b0169e8cad1b8fead
+    theorems: 8
+    main_theorem: 'Phase23EW.tr_T3sq_eq'
+    adaptations:
+      []
+  - file: Phase25SeedingKernel.lean
+    family: bridges
+    source: /merged-framework/bridges/phase-25/lean/Phase25SeedingKernel.lean
+    sha256_source: 68d83e24f6b4fff7c596e0b65cf3f78c050be48c3b9fadb12c42d3299b0a6841
+    theorems: 3
+    main_theorem: 'Phase25Seeding.seeding_dc_null'
+    adaptations:
+      []
+  - file: Phase26LifetimeKernel.lean
+    family: bridges
+    source: /merged-framework/bridges/phase-26/lean/Phase26LifetimeKernel.lean
+    sha256_source: 5a00bb06fe6bb9a82c65ba093fddf95620cdef3e0f129c0307be881d1413fd5b
+    theorems: 2
+    main_theorem: 'Phase26Lifetime.lifetime_strictAntiOn'
+    adaptations:
+      []
+  - file: Phase27MediumKernel.lean
+    family: bridges
+    source: /merged-framework/bridges/phase-27/lean/Phase27MediumKernel.lean
+    sha256_source: 70f134e95b7366fa2481eeb3b603f8ed74125807ecd47a74faca336b9a4b44f2
+    theorems: 5
+    main_theorem: 'Phase27Medium.breather_exists_example'
+    adaptations:
+      []
+  - file: Phase28BarrierKernel.lean
+    family: bridges
+    source: /merged-framework/bridges/phase-28/lean/Phase28BarrierKernel.lean
+    sha256_source: 917316286d04ef3660b364146effe124aad0858c1066e7f1dc4c9766b5cb3f7b
+    theorems: 13
+    main_theorem: 'Phase28.preRungC_all_static'
+    adaptations:
+      - 'comment reword: prose containing the Lean proof-escape keyword replaced with "no proof escape"; exact original recoverable from the sha256_source diff'
+  - file: Phase29YieldKernel.lean
+    family: bridges
+    source: /merged-framework/bridges/phase-29/lean/Phase29YieldKernel.lean
+    sha256_source: 9f40cd3c6c2a2fd1105880d81ca051d77e33a4d8533996f409c3ace583c086a7
+    theorems: 8
+    main_theorem: 'Phase29.bps_zero_binding'
+    adaptations:
+      - 'comment reword: prose containing the Lean proof-escape keyword replaced with "no proof escape"; exact original recoverable from the sha256_source diff'
+  - file: Phase30PNKernel.lean
+    family: bridges
+    source: /merged-framework/bridges/phase-30/lean/Phase30PNKernel.lean
+    sha256_source: 1162c0a4b8a7051fc317b8c6748a7c0f3351f973c4b85764d9626298604768ab
+    theorems: 5
+    main_theorem: 'Phase30PN.subdivision_bound'
+    adaptations:
+      []
+  - file: Phase31CMKernel.lean
+    family: bridges
+    source: /merged-framework/bridges/phase-31/lean/Phase31CMKernel.lean
+    sha256_source: 34befe68a3710c2a6ba43507dd05cb07de1bb38bc33c3402494c2f63a3beab14
+    theorems: 4
+    main_theorem: 'Phase31CM.collective_exceeds_two_body'
+    adaptations:
+      []
+  - file: Phase32GBKernel.lean
+    family: bridges
+    source: /merged-framework/bridges/phase-32/lean/Phase32GBKernel.lean
+    sha256_source: 62b7500d72d52a29d37afa1e506084b7266cdb393b7d90312d6dcd2f418ad8a9
+    theorems: 4
+    main_theorem: 'Phase32GB.enh_grows'
+    adaptations:
+      []
+  - file: Phase34KIKernel.lean
+    family: bridges
+    source: /merged-framework/bridges/phase-34/lean/Phase34KIKernel.lean
+    sha256_source: 269c2b6b023fb1bfacb7dede2e708f09d3e08cad00bcc933e5149357ef5870f5
+    theorems: 8
+    main_theorem: 'Phase33.derivedScale_flow_invariant'
+    adaptations:
+      - 'comment reword: prose containing the Lean proof-escape keyword replaced with "no proof escape"; exact original recoverable from the sha256_source diff'
+  - file: Phase37WNKernel.lean
+    family: bridges
+    source: /merged-framework/bridges/phase-37/lean/Phase37WNKernel.lean
+    sha256_source: 2604290b39720ca1a043f8e66394f3563f46160b23881b957c41bc28232090d2
+    theorems: 7
+    main_theorem: 'Phase37WN.weight_pos'
+    adaptations:
+      []
+  - file: Phase38MDKernel.lean
+    family: bridges
+    source: /merged-framework/bridges/phase-38/lean/Phase38MDKernel.lean
+    sha256_source: da928750e9afaaf05c024cdffdcac97870602f3be3ce2bf74037bba826fc5537
+    theorems: 9
+    main_theorem: 'Phase38MD.overparam_cancel'
+    adaptations:
+      - 'comment reword: prose containing the Lean proof-escape keyword replaced with "No proof escapes, no new axioms"; exact original recoverable from the sha256_source diff'
+  - file: Phase3EM_U1Current.lean
+    family: bridges
+    source: /merged-framework/bridges/phase-3/lean/Phase3EM_U1Current.lean
+    sha256_source: 0e5483768c84943278955aca66df56b0a945d6d622d5d364fc2aeb2f711270e2
+    theorems: 4
+    main_theorem: 'Phase3EM.u1_divergence_identity'
+    adaptations:
+      - 'namespace wrap: added `namespace Phase3EM` / `end Phase3EM` (file historically declared root-level names and was checked standalone)'
+  - file: Phase40TX_RotatingTorus.lean
+    family: bridges
+    source: /merged-framework/bridges/phase-40/lean/Phase40TX_RotatingTorus.lean
+    sha256_source: 518ce82c20b9329df48cb34763462ed60fbb8151a00b1c0f570853f222c4100f
+    theorems: 16
+    main_theorem: 'Phase40.quad_traceless'
+    adaptations:
+      - 'comment reword: prose containing the Lean proof-escape keyword replaced with "no proof escape"; exact original recoverable from the sha256_source diff'
+  - file: Phase41GaugeKinetic.lean
+    family: bridges
+    source: /merged-framework/bridges/phase-41/lean/Phase41GaugeKinetic.lean
+    sha256_source: adf04573ce2654198a884b4d77669bfc0874aa6d483fd4ab30d510a94eadb040
+    theorems: 5
+    main_theorem: 'Phase41.induced_normalization_closes'
+    adaptations:
+      []
+  - file: Phase46EL_LeptonConstraint.lean
+    family: bridges
+    source: /merged-framework/bridges/phase-46/lean/Phase46EL_LeptonConstraint.lean
+    sha256_source: 65124c2e5b005a83f3f3fa3f25d9da543338dc2a13c9d734fbac57a79d5e8025
+    theorems: 10
+    main_theorem: 'Phase46Lepton.parity_eq_ite'
+    adaptations:
+      - 'comment reword: prose containing the Lean proof-escape keyword replaced with "no proof escape and no project axioms"; exact original recoverable from the sha256_source diff'
+      - 'comment reword: prose containing the Lean proof-escape keyword replaced with "0 proof escapes"; exact original recoverable from the sha256_source diff'
+  - file: Phase47BM_RigidTopSpectrum.lean
+    family: bridges
+    source: /merged-framework/bridges/phase-47/lean/Phase47BM_RigidTopSpectrum.lean
+    sha256_source: c0abdf08551aa4796c16b1a9cdfaefa84a1d9c5dc24cb924f11665272c5e5128
+    theorems: 16
+    main_theorem: 'Phase47BM.gap_eq'
+    adaptations:
+      - 'comment reword: prose containing the Lean proof-escape keyword replaced with "no proof escape and no project axioms"; exact original recoverable from the sha256_source diff'
+      - 'comment reword: prose containing the Lean proof-escape keyword replaced with "0 proof escapes"; exact original recoverable from the sha256_source diff'
+  - file: Phase48CE_OperatorAndGap.lean
+    family: bridges
+    source: /merged-framework/bridges/phase-48/lean/Phase48CE_OperatorAndGap.lean
+    sha256_source: 626ae48d727febd090eeeb05d90c1efabbe9afa7b07febd0bf61f271bf8f1369
+    theorems: 24
+    main_theorem: 'Phase48CE.gap_independent_of_vacuum_energy'
+    adaptations:
+      - 'comment reword: prose containing the Lean proof-escape keyword replaced with "no proof escape and no project axioms"; exact original recoverable from the sha256_source diff'
+      - 'comment reword: prose containing the Lean proof-escape keyword replaced with "0 proof escapes"; exact original recoverable from the sha256_source diff'
+  - file: Phase4Strong_FRSpinStat.lean
+    family: bridges
+    source: /merged-framework/bridges/phase-4/lean/Phase4Strong_FRSpinStat.lean
+    sha256_source: 0928a584870bb12c1a4da68a53df979f9d452598ee5c63797d3c49cee76a1cd9
+    theorems: 5
+    main_theorem: 'Phase4Strong.skyrmion_odd_is_fermion'
+    adaptations:
+      - 'namespace wrap: added `namespace Phase4Strong` / `end Phase4Strong` (file historically declared root-level names and was checked standalone)'
+  - file: Phase5Gravity_GravitonTT.lean
+    family: bridges
+    source: /merged-framework/bridges/phase-5/lean/Phase5Gravity_GravitonTT.lean
+    sha256_source: ac2930d5857ebe07ab63e317d82dae1dc755ab02fadcb6df0b9f90a63956eeb5
+    theorems: 7
+    main_theorem: 'Phase5Gravity.graviton_D4_eq_two'
+    adaptations:
+      - 'namespace wrap: added `namespace Phase5Gravity` / `end Phase5Gravity` (file historically declared root-level names and was checked standalone)'
+  - file: Phase6Weak_MaxParityViolation.lean
+    family: bridges
+    source: /merged-framework/bridges/phase-6/lean/Phase6Weak_MaxParityViolation.lean
+    sha256_source: de6426b0d0bcf15f2f87cf6f876454ac489913b9b637212c2489c6fa4a5953fb
+    theorems: 9
+    main_theorem: 'Phase6Weak.parity_involution'
+    adaptations:
+      - 'namespace wrap: added `namespace Phase6Weak` / `end Phase6Weak` (file historically declared root-level names and was checked standalone)'
+  - file: Phase7EW_MasslessPhoton.lean
+    family: bridges
+    source: /merged-framework/bridges/phase-7/lean/Phase7EW_MasslessPhoton.lean
+    sha256_source: 61000a182241f50dc025625e054fadd67708b0a698af3a66e13271b20ad9c816
+    theorems: 9
+    main_theorem: 'Phase7EW.Qop_eq_T3_plus_Yhalf'
+    adaptations:
+      []
+  - file: Phase8QCD_SU3GaugeFacts.lean
+    family: bridges
+    source: /merged-framework/bridges/phase-8/lean/Phase8QCD_SU3GaugeFacts.lean
+    sha256_source: daac8bde07ecde396cf2ccba886909f10985fd424e30905ae255cbfd6e068a09
+    theorems: 10
+    main_theorem: 'Phase8QCD.adjoint_dim_eq'
+    adaptations:
+      []
+  - file: Phase9SM_AnomalyCancellation.lean
+    family: bridges
+    source: /merged-framework/bridges/phase-9/lean/Phase9SM_AnomalyCancellation.lean
+    sha256_source: c19c0160a5f9d3eff36b0486aa8f925d31ee5d74630de50b8cdbe535e154db6e
+    theorems: 9
+    main_theorem: 'Phase9SM.anomaly_U1_cubed'
+    adaptations:
+      []
+  - file: PhaseCondition.lean
+    family: dynamics_lean
+    source: /sg-breather-ionization/dynamics_lean/PhaseCondition.lean
+    sha256_source: a1f2af59f31d26fe94dfb6682ba68f48efa3a53f1a68fce3bd5823705929384e
+    theorems: 4
+    main_theorem: 'SGPhaseCondition.optimal_phase_satisfies_condition'
+    adaptations:
+      - 'namespace wrap: added `namespace SGPhaseCondition` / `end SGPhaseCondition` (file historically declared root-level names and was checked standalone)'
+  - file: ProductionAmplitude.lean
+    family: dynamics_lean
+    source: /sg-breather-ionization/dynamics_lean/ProductionAmplitude.lean
+    sha256_source: 8d40b85512af2c0eae92627ebfb1b42a94d7be4f5a8f3c46bc730cf8cea1974a
+    theorems: 3
+    main_theorem: 'SGProductionAmplitude.sMatrixTimeDelay_free_fermion'
+    adaptations:
+      - 'namespace wrap: added `namespace SGProductionAmplitude` / `end SGProductionAmplitude` (file historically declared root-level names and was checked standalone)'
+  - file: Sigma2Prod.lean
+    family: dynamics_lean
+    source: /sg-breather-ionization/dynamics_lean/Sigma2Prod.lean
+    sha256_source: 6df9e398ad4c9ac39246ec3a91da2586a3d94c00eded3806c9aed4cee3e5a032
+    theorems: 5
+    main_theorem: 'SGSigma2Prod.sigma2_total_bounded'
+    adaptations:
+      - 'namespace wrap: added `namespace SGSigma2Prod` / `end SGSigma2Prod` (file historically declared root-level names and was checked standalone)'

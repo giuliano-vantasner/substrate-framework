@@ -50,3 +50,5 @@ Accepted in `v0.89.0` with provenance `campaigns/P105-e2-rational-map-radial-pro
 - `campaigns/P105-e2-rational-map-radial-profiles/reviews/source_adjudication.md`
 - `memory/vantasner/decisions/C-RPROF-002-review.md`
 - `tests/test_rational_map_radial.py`
+- `formal/SubstrateFramework/Ingested/Phase29YieldKernel.lean`
+- `formal/SubstrateFramework/Ingested/Phase40TX_RotatingTorus.lean`

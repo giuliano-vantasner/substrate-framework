@@ -47,3 +47,4 @@ Accepted in `v0.73.0` with provenance `campaigns/P081-wm1-charge-trace-audit/adj
 - `campaigns/P081-wm1-charge-trace-audit/reviews/source_adjudication.md`
 - `memory/vantasner/decisions/C-REP-001-review.md`
 - `tests/test_charge_traces.py`
+- `formal/SubstrateFramework/Ingested/Phase23EW_Sin2ThetaW.lean`

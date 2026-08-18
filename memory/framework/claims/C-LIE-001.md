@@ -39,3 +39,4 @@ Accepted in `v0.21.0` with provenance `campaigns/P024-su3-one-loop-coefficient/a
 - `campaigns/P024-su3-one-loop-coefficient/reviews/source_adjudication.md`
 - `memory/vantasner/decisions/C-LIE-001-review.md`
 - `tests/test_su3.py`
+- `formal/SubstrateFramework/Ingested/Phase8QCD_SU3GaugeFacts.lean`
