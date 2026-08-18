@@ -381,6 +381,15 @@ In M,L,T base-dimension order, for primitive columns consisting of a positive cu
 - Compatibility: `compatible_extension`
 - Dependencies: C-DIM-001, C-IDN-001, C-OG-003
 
+## C-GRV-002
+
+Under C-IGR-004's derived usable renormalization condition 1/G_total=B+Delta with Delta=N*(1-6*xi)*Lambda^2*J(z)/(12*pi) and 0<J(z)<=1 on the usable set, the exact necessary-and-sufficient conditions for the attractive Newtonian sign 1/G_total>0 on the full declared parameter domain (positive integer N, exact xi with decidable relation to 1/6, nonnegative exact m2, positive cutoff Lambda, real baseline B, usable scheme) are: for xi<1/6, Delta>0 and the total is attractive iff B>-Delta, hence attractive for every m2>=0 iff B>=0 (the large-mass worst case J->0 fixes the uniform threshold at zero) while a negative B turns repulsive above the unique critical mass with J(z_c)=-12*pi*B/(N*(1-6*xi)*Lambda^2); for xi=1/6, Delta=0 identically (conformal point) and the total is attractive iff B>0, so the purely-induced reading B=0 lands exactly on the marginal locus 1/G_total=0 (neither attractive nor repulsive); for xi>1/6, Delta<0 and the total is attractive iff B>N*(6*xi-1)*Lambda^2*J(z)/(12*pi)>0, so only a positive baseline can produce an attractive total. The additive baseline B is a declared premise per C-GRV-001; the purely-induced reading B=0 is itself a declared premise whose exact verdict is attractive iff xi<1/6, independent of N, m2, Lambda, and usable scheme, with G_total=12*pi/(N*(1-6*xi)*J(z)*Lambda^2) for xi<1/6. The total Newton constant is the reciprocal G_total=1/(B+Delta), which preserves sign (a repulsive total returns a negative G_total, not an error) and returns no Newton constant at the marginal locus; its purely-induced value is scheme-bracketed with G_sharp/G_smooth=R(z) exactly. No unique numeric G, no observed gravity comparator, no sourced geometry, and no radiative prediction follow; comparator blinding holds.
+
+- Accepted in: `v0.162.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: C-GRV-001, C-IGR-001, C-IGR-002, C-IGR-004
+
 ## C-GSK-001
 
 Let B be a positive integer, let I be a separately supplied positive rational-map angular integral, let c6 and c0 be separately supplied nonnegative dimensionless coefficients, and let f(r) be a real radial profile for r>0. Declare E=4*pi*integral_0^infinity L dr with L=r^2*f'^2+2*B*sin(f)^2*(1+f'^2)+I*sin(f)^4/r^2 +c6*I*sin(f)^4*f'^2/r^2+c0*r^2*(1-cos(f)). Every term is nonnegative. One half of d/dr(dL/df')-dL/df is exactly K*f''+(2*r-2*c6*I*sin(f)^4/r^3)*f' +B*sin(2*f)*(f'^2-1) +c6*I*sin(f)^2*sin(2*f)*f'^2/r^2 -I*sin(f)^2*sin(2*f)/r^2-c0*r^2*sin(f)/2, where K=r^2+2*B*sin(f)^2+c6*I*sin(f)^4/r^2. For f_s(r)=f(r/s), E(s)=s*E2+s^-1*E4+s^-3*E6+s^3*E0, so a stationary scale satisfies E2-E4-3*E6+3*E0=0. At c6=c0=0 the density and equation reduce exactly to C-RPROF-001. Linearization gives origin exponent (sqrt(1+8*B)-1)/2; when c0>0 the decaying tail is proportional to r^-1/2*K_nu(sqrt(c0/2)*r), with nu=sqrt(1/4+2*B), while c0=0 recovers the massless power tail. Conditional on separately supplied positive lambda_BPS, mu, e, and F in the accepted conventions, the reduced coefficients are c6=lambda_BPS^2*e^4*F^2/8 and c0=32*mu^2/(e^2*F^4); equivalently c6=lambda_A^2*e^4*F^2/(8*pi^4) when lambda_A=pi^2*lambda_BPS. This exact conditional reduced model derives no coefficient value, physical action, rational map, existence or uniqueness theorem, minimizer, full three-dimensional field, particle, nucleus, binding energy, observation, or substrate mechanism.
@@ -560,6 +569,15 @@ Under C-IGR-001's declared operator, determinant, local-coefficient, matching, c
 - Verification: `symbolic_verified`
 - Compatibility: `compatible_extension`
 - Dependencies: C-GRV-001, C-IGR-001, C-IGR-002
+
+## C-IGR-004
+
+Conditional on C-GRV-001's independent additive inverse-coupling baseline and the accepted constant-mass one-loop coefficient families C-IGR-001..003, the derived usable total gravitational coupling is the governed renormalization condition 1/G_total=B+N*(1-6*xi)*Lambda^2*J(z)/(12*pi) with z=m2/Lambda^2 and J(z)=I2/Lambda^2 the curvature-class scale factor of the accepted family; the induced shift is taken unchanged from C-IGR-001..003 as Delta(1/G)=N*(1-6*xi)*I2/(12*pi), and B is a declared premise. Three exact substrate-internal selection legs output the usable scheme set rather than choosing it: (L1) strict spectral positivity 0<J(z)<=J(0)=1 because J is the tail integral of a strictly positive integrand (positive operator spectrum); (L2) strict monotone large-mass decoupling dJ/dz=-(tau^-1 class)<0, the tau^-1 class itself a positive-integrand integral (E1(z) sharp with exact squeeze 0<E1(z)<=exp(-z)/z, 2*K0(2*sqrt(z)) smooth); and (L3) cutoff-ontology closure, the scheme scale carrying C-GRV-001's E_cut=hbar*c/a. Sharp and smooth proper-time families pass all three; the power-subtracted family J=z*(log z+EulerGamma-1) fails L1 and L2 (sign change at the exact root z*=exp(1-EulerGamma), derivative sign change at exp(-EulerGamma)) and fails L3 (a subtraction scale mu carries no cutoff identification), so the usable set is exactly {sharp, smooth} and the power-subtracted family is retained only as the exact scale-dependence ledger. The residual scheme dependence is the exact spread ratio R(z)=J_smooth/J_sharp (=1 only at z=0, =2*e*K1(2)/(1-e*E1(1))=1.88377257808... at z=1, unbounded as z->inf); the tau^-1 higher-curvature control class is exactly -dJ/dz per scheme and bounded on the predeclared domain z>=z_min>0, the tau^-3 vacuum class is exhibited from the accepted family, and the nonlocal remainder is bounded by Lambda^-2*||R_E|| in the predeclared small-curvature domain. This is a conditional composition of accepted families, not a selected physical regulator, a unique numeric normalization, a full or nonlocal determinant, a total sign, a sourced geometry, or an empirical prediction; no observed G or Planck-scale comparator enters selection, formulas, tolerances, or tests.
+
+- Accepted in: `v0.162.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: C-GRV-001, C-IGR-001, C-IGR-002, C-IGR-003
 
 ## C-IRR-001
 

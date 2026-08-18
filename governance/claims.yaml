@@ -11476,3 +11476,128 @@ claims:
     accepted_in: v0.161.0
     challenges: []
     supersedes: []
+  - id: C-IGR-004
+    statement: >-
+      Conditional on C-GRV-001's independent additive inverse-coupling baseline
+      and the accepted constant-mass one-loop coefficient families
+      C-IGR-001..003, the derived usable total gravitational coupling is the
+      governed renormalization condition
+      1/G_total=B+N*(1-6*xi)*Lambda^2*J(z)/(12*pi) with z=m2/Lambda^2 and
+      J(z)=I2/Lambda^2 the curvature-class scale factor of the accepted family;
+      the induced shift is taken unchanged from C-IGR-001..003 as
+      Delta(1/G)=N*(1-6*xi)*I2/(12*pi), and B is a declared premise. Three exact
+      substrate-internal selection legs output the usable scheme set rather than
+      choosing it: (L1) strict spectral positivity 0<J(z)<=J(0)=1 because J is
+      the tail integral of a strictly positive integrand (positive operator
+      spectrum); (L2) strict monotone large-mass decoupling
+      dJ/dz=-(tau^-1 class)<0, the tau^-1 class itself a positive-integrand
+      integral (E1(z) sharp with exact squeeze 0<E1(z)<=exp(-z)/z,
+      2*K0(2*sqrt(z)) smooth); and (L3) cutoff-ontology closure, the scheme
+      scale carrying C-GRV-001's E_cut=hbar*c/a. Sharp and smooth proper-time
+      families pass all three; the power-subtracted family
+      J=z*(log z+EulerGamma-1) fails L1 and L2 (sign change at the exact root
+      z*=exp(1-EulerGamma), derivative sign change at exp(-EulerGamma)) and
+      fails L3 (a subtraction scale mu carries no cutoff identification), so the
+      usable set is exactly {sharp, smooth} and the power-subtracted family is
+      retained only as the exact scale-dependence ledger. The residual scheme
+      dependence is the exact spread ratio R(z)=J_smooth/J_sharp (=1 only at
+      z=0, =2*e*K1(2)/(1-e*E1(1))=1.88377257808... at z=1, unbounded as
+      z->inf); the tau^-1 higher-curvature control class is exactly -dJ/dz per
+      scheme and bounded on the predeclared domain z>=z_min>0, the tau^-3
+      vacuum class is exhibited from the accepted family, and the nonlocal
+      remainder is bounded by Lambda^-2*||R_E|| in the predeclared
+      small-curvature domain. This is a conditional composition of accepted
+      families, not a selected physical regulator, a unique numeric
+      normalization, a full or nonlocal determinant, a total sign, a sourced
+      geometry, or an empirical prediction; no observed G or Planck-scale
+      comparator enters selection, formulas, tolerances, or tests.
+    provenance: campaigns/P231-total-coupling-rung/adjudication.yaml
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+    dependencies:
+      - C-GRV-001
+      - C-IGR-001
+      - C-IGR-002
+      - C-IGR-003
+    evidence:
+      - campaigns/P231-total-coupling-rung/verify.py
+      - campaigns/P231-total-coupling-rung/reviews/independent_total_coupling_review.py
+      - campaigns/P231-total-coupling-rung/reviews/C-IGR-004-claim-review.md
+      - campaigns/P231-total-coupling-rung/evidence/formula-freeze.yaml
+      - campaigns/P231-total-coupling-rung/evidence/candidate-comparison.yaml
+      - campaigns/P231-total-coupling-rung/evidence/dependency-audit.yaml
+      - campaigns/P231-total-coupling-rung/evidence/nonduplication-audit.yaml
+      - campaigns/P231-total-coupling-rung/attempts/0004/manifest.yaml
+      - src/substrate_framework/total_gravitational_coupling.py
+      - tests/test_total_gravitational_coupling.py
+      - memory/vantasner/decisions/C-IGR-004-review.md
+    assumptions:
+      - Every operator, mass, determinant, local-coefficient, matching, constant-mass, and additive-baseline assumption of C-IGR-001..003 remains in force.
+      - The usable scheme set and its finite parts are outputs of the exact selection legs L1/L2/L3, not a regulator choice; no undeclared premise distinguishes sharp from smooth.
+      - The additive baseline B stays a declared premise per C-GRV-001; dimensions do not set B=0.
+      - The tau^-1 higher-curvature class is logarithmically divergent at m2=0, so the control ledger predeclares z=m2/Lambda^2>=z_min>0; the nonlocal remainder is bounded, not derived, in the declared small-curvature domain.
+      - The spread R(z) is unbounded, so no unique numeric normalization follows; the scheme bracket is the exact quoted downstream ceiling.
+    comparators: []
+    accepted_in: v0.162.0
+    challenges: []
+    supersedes: []
+  - id: C-GRV-002
+    statement: >-
+      Under C-IGR-004's derived usable renormalization condition
+      1/G_total=B+Delta with Delta=N*(1-6*xi)*Lambda^2*J(z)/(12*pi) and
+      0<J(z)<=1 on the usable set, the exact necessary-and-sufficient conditions
+      for the attractive Newtonian sign 1/G_total>0 on the full declared
+      parameter domain (positive integer N, exact xi with decidable relation to
+      1/6, nonnegative exact m2, positive cutoff Lambda, real baseline B, usable
+      scheme) are: for xi<1/6, Delta>0 and the total is attractive iff B>-Delta,
+      hence attractive for every m2>=0 iff B>=0 (the large-mass worst case
+      J->0 fixes the uniform threshold at zero) while a negative B turns
+      repulsive above the unique critical mass with
+      J(z_c)=-12*pi*B/(N*(1-6*xi)*Lambda^2); for xi=1/6, Delta=0 identically
+      (conformal point) and the total is attractive iff B>0, so the
+      purely-induced reading B=0 lands exactly on the marginal locus
+      1/G_total=0 (neither attractive nor repulsive); for xi>1/6, Delta<0 and
+      the total is attractive iff B>N*(6*xi-1)*Lambda^2*J(z)/(12*pi)>0, so only
+      a positive baseline can produce an attractive total. The additive baseline
+      B is a declared premise per C-GRV-001; the purely-induced reading B=0 is
+      itself a declared premise whose exact verdict is attractive iff xi<1/6,
+      independent of N, m2, Lambda, and usable scheme, with
+      G_total=12*pi/(N*(1-6*xi)*J(z)*Lambda^2) for xi<1/6. The total Newton
+      constant is the reciprocal G_total=1/(B+Delta), which preserves sign (a
+      repulsive total returns a negative G_total, not an error) and returns no
+      Newton constant at the marginal locus; its purely-induced value is
+      scheme-bracketed with G_sharp/G_smooth=R(z) exactly. No unique numeric G,
+      no observed gravity comparator, no sourced geometry, and no radiative
+      prediction follow; comparator blinding holds.
+    provenance: campaigns/P231-total-coupling-rung/adjudication.yaml
+    verification: symbolic_verified
+    review: accepted
+    compatibility: compatible_extension
+    epistemic: active
+    dependencies:
+      - C-GRV-001
+      - C-IGR-001
+      - C-IGR-002
+      - C-IGR-004
+    evidence:
+      - campaigns/P231-total-coupling-rung/verify.py
+      - campaigns/P231-total-coupling-rung/reviews/independent_total_coupling_review.py
+      - campaigns/P231-total-coupling-rung/reviews/C-GRV-002-claim-review.md
+      - campaigns/P231-total-coupling-rung/evidence/formula-freeze.yaml
+      - campaigns/P231-total-coupling-rung/evidence/candidate-comparison.yaml
+      - campaigns/P231-total-coupling-rung/evidence/consumer-audit.yaml
+      - campaigns/P231-total-coupling-rung/attempts/0004/manifest.yaml
+      - src/substrate_framework/total_gravitational_coupling.py
+      - tests/test_total_gravitational_coupling.py
+      - memory/vantasner/decisions/C-GRV-002-review.md
+    assumptions:
+      - Every C-IGR-004 assumption remains in force, including the derived usable set, the local-coefficient ceiling, and the predeclared control domain.
+      - The additive baseline B is a declared premise per C-GRV-001; the purely-induced reading B=0 is itself a declared premise, not a derived value.
+      - The total sign is exact and necessary-and-sufficient because 0<J(z)<=1 on the usable set makes sign(Delta)=sign(1-6*xi); the reciprocal Newton constant preserves this sign and is undefined only at the marginal locus.
+      - No accepted claim supplies a unique numeric normalization, a sourced field-equation solution, or an empirical gravity comparator.
+    comparators: []
+    accepted_in: v0.162.0
+    challenges: []
+    supersedes: []

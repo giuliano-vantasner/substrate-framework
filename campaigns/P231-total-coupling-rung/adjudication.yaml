@@ -1,0 +1,59 @@
+campaign: P231
+title: Derived usable total gravitational coupling composition and total-sign promotion
+base_release: v0.161.0
+accepted_release: v0.162.0
+base_commit: 7dfe89b
+adjudicated_at: '2026-08-18T13:20:00+02:00'
+selected_candidates:
+  - {id: A, reason: Scheme_uniform_usable_set_is_an_output_of_exact_substrate_legs_L1_L2_L3_not_a_point_choice.}
+rejected_candidates:
+  - {id: B, reason: Point_scheme_normalization_has_no_derivation_the_selection_legs_do_not_separate_sharp_from_smooth.}
+  - {id: C, reason: Subtraction_scale_normalization_fails_L1_L2_L3_the_power_subtracted_family_is_retained_only_as_the_scale_dependence_ledger.}
+  - {id: D, reason: Full_determinant_normalization_folds_the_tau_minus_one_and_nonlocal_sectors_into_the_coupling_exceeding_the_accepted_local_coefficient_ceiling_of_C-IGR-001.}
+selection: derived_usable_scheme_set_composition_not_physical_regulator_choice
+claims:
+  - {id: C-IGR-004, decision: accepted, verification: symbolic_verified, review: accepted, compatibility: compatible_extension, epistemic: active}
+  - {id: C-GRV-002, decision: accepted, verification: symbolic_verified, review: accepted, compatibility: compatible_extension, epistemic: active}
+accepted_composition:
+  - {id: C-GRV-001, decision: unchanged_dimensional_permission_and_independent_additive_baseline_ledger}
+  - {id: C-IGR-001, decision: unchanged_sharp_constant_mass_coefficient_family_reused_as_accepted_canon_implementation}
+  - {id: C-IGR-002, decision: unchanged_smooth_constant_mass_coefficient_family_reused_as_accepted_canon_implementation}
+  - {id: C-IGR-003, decision: unchanged_power_subtracted_family_retained_as_exact_scale_dependence_ledger_outside_the_usable_set}
+unpromoted_surfaces:
+  - {id: unique_numeric_normalization, reason: Scheme_bracket_R_z_is_unbounded_the_quoted_downstream_ceiling_no_unique_numeric_G_is_derived.}
+  - {id: sourced_nonflat_geometry, reason: No_field_equation_solution_is_derived_this_rung_is_the_normalization_and_sign_only.}
+  - {id: radiative_prediction, reason: No_observable_prediction_no_empirical_gravity_comparator_enters_selection_formulas_tolerances_or_tests.}
+  - {id: full_nonlocal_determinant, reason: Only_the_accepted_local_coefficient_families_and_the_tau_minus_one_control_class_are_used_the_nonlocal_remainder_is_bounded_not_derived.}
+evidence:
+  proposal: proposal.yaml
+  formula_freeze: evidence/formula-freeze.yaml
+  literature_audit: evidence/literature-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  primary_verifier: verify.py
+  independent_rederivation: reviews/independent_total_coupling_review.py
+  claim_reviews:
+    - reviews/C-IGR-004-claim-review.md
+    - reviews/C-GRV-002-claim-review.md
+  self_adversarial_audit: reviews/self-adversarial-audit.md
+  final_attempt: attempts/0005/manifest.yaml
+validation_commands:
+  - PYTHONPATH_src_python_campaign_verify
+  - PYTHONPATH_src_python_independent_total_coupling_review
+  - pytest_total_gravitational_coupling_and_affected_consumers
+  - scripts_validate_sh_full_once_at_final_boundary
+  - git_diff_check_separately
+integrated_gate:
+  status: passed
+  repository_workflow: ALL_REPOSITORY_WORKFLOW_CHECKS_PASS
+  full_pytest: 2304_passed_in_3228_55s
+  primary_verifier: ALL_32_CHECKS_PASS
+  independent_rederivation: ALL_20_CHECKS_PASS
+  targeted_affected_tests: 41_passed
+  final_record_validation: passed
+  git_diff_check: passed
+debt: []
+status: accepted
