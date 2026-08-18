@@ -212,11 +212,13 @@ governance semantics, changes an existing public contract with consumers,
 changes dependencies or cross-cutting conventions, spans multiple framework
 sectors, or has an uncertain dependency boundary. Calling
 `scripts/validate.sh` without arguments remains a backward-compatible alias for
-`--full`. Pull-request CI runs `scripts/validate_changed.py` against the base
-commit: it selects affected tests for bounded changes, uses `--fixed-only` when
-no pytest scope is affected, and falls back to `--full` for the triggers above.
-Scheduled or manually requested CI supplies the periodic integrated-main full
-backstop; do not duplicate it on every merge push.
+`--full`. The submitting agent runs `scripts/validate_changed.py` against the
+base commit to select affected tests for bounded changes, use `--fixed-only`
+when no pytest scope is affected, and fall back to `--full` for the triggers
+above. The review agent checks that decision against the actual diff and impact
+boundary. There is no mandatory GitHub Actions replay of the same repository
+scripts. Run the periodic integrated-main full backstop locally when scheduled
+or explicitly requested; do not duplicate it on every merge push.
 
 Do not run the full suite a second time at the same unchanged boundary. Use
 targeted tests while developing, then run the appropriate scoped or full
