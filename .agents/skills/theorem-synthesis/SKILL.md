@@ -83,6 +83,12 @@ synthesized theorem can remain scoped when no existing contract or consumer is
 changed; foundation changes, shared machinery, uncertain impact, or altered
 existing claims require the wider replay.
 
+Freeze that boundary before review. An adjacent issue in an accepted atom or
+historical artifact becomes a follow-up unless it directly invalidates the new
+composition. Recheck only corrected glue and affected consumers; never turn a
+synthesis review into recursive re-acceptance of its atoms or validation of the
+review process.
+
 A synthesis campaign succeeds only when its higher claim is accepted, entered
 in the registry, and pinned in a release. Supporting implementation PRs may
 merge while the canonical issue remains open; they are useful progress, not a

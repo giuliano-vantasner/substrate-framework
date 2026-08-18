@@ -36,6 +36,12 @@ For each unit, state its local claim, inputs, outputs, dependencies, tests, cons
 
 ## Apply the three-question merge gate
 
+Freeze this gate to the PR diff and the units the PR actually proposes to
+merge. Do not recursively audit every neighboring accepted claim, historical
+artifact, count label, or workflow rule. A finding blocks the PR only if it
+falsifies a selected unit, its declared dependency closure, or a consumer in
+the recorded impact boundary; otherwise file or hand off a follow-up.
+
 Merge a unit only when all three answers are yes:
 
 1. Is it correct under its stated inputs and conventions?
@@ -163,6 +169,11 @@ An individual run may end at a clean handoff without lowering or closing the cam
 ## Validate proportionately
 
 Run targeted tests and claim-appropriate oracles for each harvested unit, impact analysis for changed public symbols, affected consumers, and one repository validation at the final unchanged merge boundary. An additive public export may use scoped validation when impact is bounded, no existing contract changes, consumers are known, and targeted API coverage passes. Reserve full validation for promotion or release, shared numerics or verification machinery, claim/release governance semantics, changed existing public contracts with consumers, dependency or cross-cutting convention changes, multi-sector changes, or uncertain impact. The submitting agent uses `scripts/validate_changed.py` locally for this conservative decision and uses fixed checks only when no pytest scope is affected; the review agent checks the recorded decision against the diff and impact boundary without requiring a duplicate GitHub Actions replay. Run the periodic full backstop locally when scheduled or explicitly requested. Do not rerun unrelated full validation for each discarded campaign artifact or again after merge.
+
+Do not add meta-tests for the review, reviewer, tally, or validation ledger.
+After a repair, rerun only the stale check. If the user directs merge without
+further validation, preserve the existing evidence and blocker record, stop
+expanding the review, and proceed as far as repository protection permits.
 
 ## Report the disposition
 

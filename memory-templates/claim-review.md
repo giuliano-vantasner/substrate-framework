@@ -23,7 +23,7 @@ status: active
 Quote the exact statement, quantifiers, regime, conventions, proposed graph relationship, and positive framework role.
 
 ## Sourced Inputs
-List the base release, dependencies, proposal, derivation, verifier, attempt history, and consumer map read directly. For migration, include the hash-pinned source unit and audit which of its subclaims remain outside the proposed claim delta.
+List the base release, dependencies, proposal, derivation, verifier, attempt history, and consumer map read directly. State the frozen review boundary: claim delta, dependency edges, and affected consumers. For migration, include the hash-pinned source unit and audit which of its subclaims remain outside the proposed claim delta. Classify adjacent observations as follow-up; do not expand this review unless they directly falsify the claim under review.
 
 ## Independence
 State what was independently rederived or implemented and what code, constants, or reasoning were intentionally not shared with the proposal path.
@@ -38,7 +38,7 @@ Record applicable input mutations, wrong conventions, counterexamples, convergen
 Assess invariants, assumptions, imports, parameters, units, conventions, limits, and cross-sector composition. If the concept does not fit, determine whether the mismatch is a candidate defect or independent evidence against accepted canon. Reject or return a defective candidate; route a surviving inconsistency through `challenges` or a separate foundational revision. State separately whether a correct conditional artifact can merge without promoting the disputed claim.
 
 ## Dependency and Consumer Replay
-List direct/indirect consumers and exact replay results. Preflight direct, imported, and dynamic legacy access, including eagerly evaluated nested `getattr` defaults. Repair mutable code to `np.trapezoid` or a safe two-step fallback, or record an alias-only replay for immutable source, before calling the consumer scientifically broken. Record any debt created by the claim.
+List direct/indirect consumers and exact replay results already required by the frozen boundary. Reuse a recorded passing result while its code and inputs are unchanged. Preflight direct, imported, and dynamic legacy access, including eagerly evaluated nested `getattr` defaults. Repair mutable code to `np.trapezoid` or a safe two-step fallback, or record an alias-only replay for immutable source, before calling the consumer scientifically broken. Record debt created by the claim, not unrelated repository cleanup.
 
 ## Competing Candidate Audit
 Confirm plausible alternatives and selection criteria were registered before comparator inspection. Explain the structural reason for selection independently of numerical closeness.
@@ -59,7 +59,7 @@ List registry edit, importable implementation/tests, immutable campaign record, 
 Non-acceptance is not campaign success and is not automatically PR closure. Name the repair or next candidate and leave the parent effort active. Record the source PR lifecycle, repair owner or handoff, live harvest/refactor PR, exact landing test, and terminal-close evidence if closure is proposed. If a foundation issue is independently demonstrated, link the separate revision proposal.
 
 ## Done Gate
-Accept only when the positive claim and every success gate in `AGENTS.md` pass with an empty debt ledger.
+Accept only when the positive claim and its in-boundary success gates pass with an empty in-boundary debt ledger. Do not require tests of reviewer identity, review prose, check counts, or the review process itself.
 
 ## Cross-References
 Link proposal, claim, dependencies, evidence, consumers, release, and parent research arc.
