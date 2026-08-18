@@ -91,12 +91,12 @@ One deliberate debt remains open by design, recorded in the table below.
 
 | Debt | Introduced by | Why it is real | Discharge artifact | Status |
 | --- | --- | --- | --- | --- |
-| Ingested theorems are not yet framework claims | The ingestion workstream | Promotion requires individual review with dependency closure through the theorem/synthesis workflows | Discharged by P231-P234 on this branch: census of all 60 files, 46 lean evidence attachments to 43 accepted claims, 12 promotions (10 fixed-theorem, 2 synthesized) into v0.162.0, remaining theorems with recorded dispositions | Discharged |
+| Ingested theorems are not yet framework claims | The ingestion workstream | Promotion requires individual review with dependency closure through the theorem/synthesis workflows | Discharged by P232-P235 on this branch: census of all 60 files, 46 lean evidence attachments to 43 accepted claims, 12 promotions (10 fixed-theorem, 2 synthesized) into v0.163.0, remaining theorems with recorded dispositions | Discharged |
 
 ## Done Gate
 
 Discharged: the census and promotion transactions landed on the same branch
-(campaigns P231-P234, release v0.162.0) with every claim-bearing theorem
+(campaigns P232-P235, release v0.163.0) with every claim-bearing theorem
 promoted or carrying a recorded, reviewed disposition; the formal surface is
 unchanged from the gate commit and the full validation suite runs once at the
 merge boundary. See memory/vantasner/efforts/issue-92-claim-promotion.md.

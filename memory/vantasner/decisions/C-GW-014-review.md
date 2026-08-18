@@ -18,9 +18,9 @@ Composing the accepted spherical STF null (C-MOM-003), the accepted 2*omega quad
 
 ## Sourced Inputs
 The review read the Lean sources (`formal/SubstrateFramework/Ingested/Phase14P3D_SphericalNull.lean`),
-the P231 census entry, the P232/P233/P234 proposal manifests and attempt records, the
+the P232 census entry, the P233/P234/P235 proposal manifests and attempt records, the
 registry-wide identifier collision search, and the campaign review
-`campaigns/P234-lean-radiating-channel/reviews/C-GW-014-claim-review.md`.
+`campaigns/P235-lean-radiating-channel/reviews/C-GW-014-claim-review.md`.
 
 ## Independence
 The theorem statements were re-derived from the file definitions rather than the module-doc
@@ -61,4 +61,4 @@ was tested against the registry and rejected by statement-level search (census r
 - Compatibility: compatible_extension
 - Epistemic: active
 
-Accepted into v0.162.0 through campaign P234.
+Accepted into v0.163.0 through campaign P235.

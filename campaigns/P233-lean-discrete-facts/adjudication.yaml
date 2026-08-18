@@ -1,0 +1,115 @@
+campaign: P233
+title: Historical Lean corpus fixed-theorem promotions
+base_release: v0.161.0
+accepted_release: v0.163.0
+base_commit: db082ec
+adjudicated_at: '2026-08-18T21:30:00+02:00'
+selected_candidates:
+- id: A
+  reason: Kernel-checked complete Lean proof routes at the pinned toolchain; no registry counterpart for
+    any statement after the registry-wide search recorded in the P232 census.
+selection: fixed_theorem_single_route_no_mechanism_selection
+claims:
+- id: C-GW-011
+  decision: accepted
+  verification: formal_verified
+  review: accepted
+  compatibility: compatible_extension
+  epistemic: active
+- id: C-GW-012
+  decision: accepted
+  verification: formal_verified
+  review: accepted
+  compatibility: compatible_extension
+  epistemic: active
+- id: C-EW-001
+  decision: accepted
+  verification: formal_verified
+  review: accepted
+  compatibility: compatible_extension
+  epistemic: active
+- id: C-WK-001
+  decision: accepted
+  verification: formal_verified
+  review: accepted
+  compatibility: compatible_extension
+  epistemic: active
+- id: C-CF-001
+  decision: accepted
+  verification: formal_verified
+  review: accepted
+  compatibility: compatible_extension
+  epistemic: active
+- id: C-ROT-002
+  decision: accepted
+  verification: formal_verified
+  review: accepted
+  compatibility: compatible_extension
+  epistemic: active
+- id: C-GSK-003
+  decision: accepted
+  verification: formal_verified
+  review: accepted
+  compatibility: compatible_extension
+  epistemic: active
+- id: C-SG-020
+  decision: accepted
+  verification: formal_verified
+  review: accepted
+  compatibility: compatible_extension
+  epistemic: active
+- id: C-SG-022
+  decision: accepted
+  verification: formal_verified
+  review: accepted
+  compatibility: compatible_extension
+  epistemic: active
+- id: C-VIR-002
+  decision: accepted
+  verification: formal_verified
+  review: accepted
+  compatibility: compatible_extension
+  epistemic: active
+accepted_composition:
+- id: C-GW-002
+  decision: unchanged_spatial_TT_projector_rank_two_shared_D4_value_only
+- id: C-MOM-001
+  decision: unchanged_conservation_premises_recorded_as_declared_input_of_the_multipole_map
+unpromoted_surfaces:
+- id: ProductionAmplitude_time_delay_values
+  reason: Hardcoded_branch_snapshots_with_a_pasted_decimal_do_not_evaluate_the_defining_digamma_object_class_4_disposition.
+- id: landau_zener_range_and_monotonicity
+  reason: Properties_of_the_declared_exponential_model_physics_premise_not_machine_checked_class_4_disposition.
+- id: wzw_level_equals_baryon_winding_identification
+  reason: C_WZW_002_excludes_the_Nc_and_baryon_identification_the_lean_corroborates_only_the_integrality_cut.
+- id: detector_normalization_bookkeeping
+  reason: Compton_time_and_bin_weight_conventions_are_normalization_level_not_claim_bearing_class_4.
+- id: operator_algebra_certificates
+  reason: CAR_Jordan_Wigner_and_exterior_algebra_identities_are_definitional_on_their_representations_class_4.
+evidence:
+  proposal: proposal.yaml
+  census: ../P232-lean-corpus-census/census.yaml
+  primary_route: attempts/0001/result.yaml
+  claim_reviews:
+  - reviews/C-GW-011-claim-review.md
+  - reviews/C-GW-012-claim-review.md
+  - reviews/C-EW-001-claim-review.md
+  - reviews/C-WK-001-claim-review.md
+  - reviews/C-CF-001-claim-review.md
+  - reviews/C-ROT-002-claim-review.md
+  - reviews/C-GSK-003-claim-review.md
+  - reviews/C-SG-020-claim-review.md
+  - reviews/C-SG-022-claim-review.md
+  - reviews/C-VIR-002-claim-review.md
+validation_commands:
+- scripts_check_lean_sh_at_ingestion_commit_63fa769_formal_surface_unchanged
+- PYTHONPATH_src_python_scripts_validate_repository_py
+- pytest_tests_test_lean_claim_census_py
+- scripts_validate_sh_full_once_at_final_boundary
+- git_diff_check_separately
+integrated_gate:
+  status: recorded_at_final_boundary
+  formal_surface: unchanged_from_gate_commit_63fa769
+  full_validation: scripts/validate.sh --full at the merge boundary
+debt: []
+status: accepted

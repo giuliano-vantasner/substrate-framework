@@ -18,9 +18,9 @@ Composing the accepted two-dimensional TT projection (C-GW-002) with the accepte
 
 ## Sourced Inputs
 The review read the Lean sources (`formal/SubstrateFramework/Ingested/Phase16QB_TwoPolarizations.lean`),
-the P231 census entry, the P232/P233/P234 proposal manifests and attempt records, the
+the P232 census entry, the P233/P234/P235 proposal manifests and attempt records, the
 registry-wide identifier collision search, and the campaign review
-`campaigns/P233-lean-polarization-split/reviews/C-GW-013-claim-review.md`.
+`campaigns/P234-lean-polarization-split/reviews/C-GW-013-claim-review.md`.
 
 ## Independence
 The theorem statements were re-derived from the file definitions rather than the module-doc
@@ -61,4 +61,4 @@ was tested against the registry and rejected by statement-level search (census r
 - Compatibility: compatible_extension
 - Epistemic: active
 
-Accepted into v0.162.0 through campaign P233.
+Accepted into v0.163.0 through campaign P234.
