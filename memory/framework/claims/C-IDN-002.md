@@ -45,4 +45,3 @@ Accepted in `v0.71.0` with provenance `campaigns/P078-as7-gravity-scale-confront
 - `campaigns/P078-as7-gravity-scale-confrontation/reviews/source_adjudication.md`
 - `memory/vantasner/decisions/C-IDN-002-review.md`
 - `tests/test_gravity_scale_confrontation.py`
-- `formal/SubstrateFramework/Ingested/Phase34KIKernel.lean`

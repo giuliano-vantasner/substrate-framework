@@ -40,4 +40,3 @@ Accepted in `v0.31.0` with provenance `campaigns/P035-fg4-unitary-rephasing/adju
 - `memory/vantasner/decisions/C-MIX-002-review.md`
 - `tests/test_unitary_rephasing.py`
 - `tests/test_matrix_decompositions.py`
-- `formal/SubstrateFramework/Ingested/Phase11Flavor_CPPhaseCount.lean`

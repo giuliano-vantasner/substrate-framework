@@ -49,4 +49,3 @@ Accepted in `v0.137.0` with provenance `campaigns/P185-gk3d1-general-vacuum-pola
 - `campaigns/P185-gk3d1-general-vacuum-polarization-audit/evidence/primary-provenance.yaml`
 - `src/substrate_framework/dirac_vacuum_polarization.py`
 - `tests/test_dirac_vacuum_polarization.py`
-- `formal/SubstrateFramework/Ingested/Phase41GaugeKinetic.lean`

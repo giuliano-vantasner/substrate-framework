@@ -41,4 +41,3 @@ Accepted in `v0.51.0` with provenance `campaigns/P057-wz2-pi5-period-level/adjud
 - `campaigns/P057-wz2-pi5-period-level/evidence/topology-provenance.yaml`
 - `memory/vantasner/decisions/C-WZW-002-review.md`
 - `tests/test_wzw.py`
-- `formal/SubstrateFramework/Ingested/Phase17WZW_LevelWinding.lean`

@@ -44,4 +44,3 @@ Accepted in `v0.135.0` with provenance `campaigns/P183-tx4-floquet-stability-aud
 - `campaigns/P183-tx4-floquet-stability-audit/evidence/primary-provenance.yaml`
 - `src/substrate_framework/rotating_stability.py`
 - `tests/test_rotating_stability.py`
-- `formal/SubstrateFramework/Ingested/Phase40TX_RotatingTorus.lean`

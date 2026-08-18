@@ -51,4 +51,3 @@ Accepted in `v0.132.0` with provenance `campaigns/P180-tx1-intrinsic-quadrupole-
 - `memory/vantasner/decisions/TX1-qualified-review.md`
 - `src/substrate_framework/rational_map_moments.py`
 - `tests/test_rational_map_moments.py`
-- `formal/SubstrateFramework/Ingested/Phase40TX_RotatingTorus.lean`

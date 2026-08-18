@@ -57,4 +57,3 @@ Accepted in `v0.97.0` with provenance `campaigns/P117-cm3-monotone-crossover-aud
 - `memory/vantasner/decisions/C-XOV-001-review.md`
 - `src/substrate_framework/crossovers.py`
 - `tests/test_crossovers.py`
-- `formal/SubstrateFramework/Ingested/Phase34KIKernel.lean`

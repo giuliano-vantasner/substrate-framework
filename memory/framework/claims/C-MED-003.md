@@ -43,4 +43,3 @@ Accepted in `v0.81.0` with provenance `campaigns/P095-mc1-dimensional-sine-gordo
 - `campaigns/P095-mc1-dimensional-sine-gordon/reviews/source_adjudication.md`
 - `memory/vantasner/decisions/C-MED-003-review.md`
 - `tests/test_dimensional_sine_gordon.py`
-- `formal/SubstrateFramework/Ingested/Phase27MediumKernel.lean`

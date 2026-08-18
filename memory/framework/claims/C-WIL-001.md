@@ -39,4 +39,3 @@ Accepted in `v0.25.0` with provenance `campaigns/P028-su3-center-wilson/adjudica
 - `campaigns/P028-su3-center-wilson/reviews/source_adjudication.md`
 - `memory/vantasner/decisions/C-WIL-001-review.md`
 - `tests/test_wilson_loops.py`
-- `formal/SubstrateFramework/Ingested/Phase10CF_Z3CenterConfinement.lean`
