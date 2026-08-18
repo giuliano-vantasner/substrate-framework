@@ -1,0 +1,50 @@
+id: P232
+base_release: v0.161.0
+source_baseline: substrate-framework@db082ec
+question: 'Which ingested Lean theorems state new standalone exact facts with no accepted registry counterpart,
+  and can their complete Lean proof routes at the pinned toolchain be promoted as fixed-theorem claims:
+  the TT graviton polarization count D*(D-3)/2, the lowest radiating multipole order of a massless spin-s
+  field, the unique unbroken electroweak generator on the Higgs VEV, the parity violation of a left-only
+  weak coupling, the Z3 colour center, the rigid-top rotational band splitting, the generalized-Skyrme
+  linearized weight/refractive-index family, the kink exchange-phase family, the exact S-matrix time-delay
+  values, the ionization basin nonemptiness, and the Comparsi periodic virial certificate?'
+source_inventory:
+- source: formal/SubstrateFramework/Ingested (the eleven promoting files)
+  access: in-hand ingested corpus
+  extracted: complete Lean proof routes, statements, declared inputs, axiom footprints
+- source: governance/claims.yaml @ v0.161.0
+  access: in-hand repository registry
+  extracted: registry-wide and campaign-wide collision search for the eleven proposed identifiers
+invariants:
+- each claim states exactly what its Lean theorem proves with the declared encoding named
+- physics premises asserted as inputs in the Lean files stay conditional premises or exclusions
+- verification axis formal_verified only for kernel-checked statements at the pinned toolchain
+- no existing claim is altered; additions are append-only
+allowed_imports:
+- Lean kernel proofs and Mathlib at the pinned toolchain (Lean v4.28.0, mathlib 8f9d9cff6bd7)
+- the ingested files themselves as evidence artifacts
+candidates:
+- id: A
+  description: One complete Lean proof route per fact, already machine-checked in the ingested corpus
+    at the repository-pinned toolchain; promotion records the statement, imports, escape scan, and axiom
+    footprint per entrypoint.
+uniqueness_evidence: 'target_kind is fixed_theorem: each statement is fixed by the historical Lean file;
+  a second proof route would not reduce uncertainty about a kernel-checked statement.'
+selection_criteria:
+- kernel-checked statement, no proof escape, axiom footprint a subset of Mathlib standard axioms
+- no accepted claim already states the fact (registry-wide search recorded per claim)
+- scope and exclusions name the declared encoding and the asserted physics premises
+claims_proposed:
+- C-GW-011
+- C-GW-012
+- C-EW-001
+- C-WK-001
+- C-CF-001
+- C-ROT-002
+- C-GSK-003
+- C-SG-020
+- C-SG-021
+- C-SG-022
+- C-VIR-002
+comparators_blinded_until: 'Not applicable: exact formal statements; no empirical comparator enters promotion.'
+status: accepted

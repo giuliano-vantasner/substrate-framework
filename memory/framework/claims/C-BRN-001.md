@@ -57,3 +57,7 @@ Accepted in `v0.98.0` with provenance `campaigns/P122-gb1-channel-branching-audi
 - `memory/vantasner/decisions/C-BRN-001-review.md`
 - `src/substrate_framework/branching.py`
 - `tests/test_branching.py`
+- `formal/SubstrateFramework/Ingested/Phase30PNKernel.lean`
+- `formal/SubstrateFramework/Ingested/Phase31CMKernel.lean`
+- `formal/SubstrateFramework/Ingested/Phase32GBKernel.lean`
+- `formal/SubstrateFramework/Ingested/Phase38MDKernel.lean`

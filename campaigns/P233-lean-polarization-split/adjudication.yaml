@@ -1,0 +1,45 @@
+campaign: P233
+title: 'Lean composed theorem: axisym/triaxial TT polarization split'
+base_release: v0.161.0
+accepted_release: v0.162.0
+base_commit: db082ec
+adjudicated_at: '2026-08-18T21:30:00+02:00'
+campaign_type: synthesis
+target_kind: fixed_theorem
+structural_gap: 'the symmetry-to-polarization-count dictionary: how many of the two accepted TT dimensions
+  each symmetry class excites, and that the cross excitation alone separates and saturates'
+composition_dependencies:
+- C-GW-002
+- C-GW-005
+selected_candidates:
+- id: A
+  reason: Lean glue in the ingested capstone file composing the accepted dependency scopes with no new
+    physical premise.
+claims:
+- id: C-GW-013
+  decision: accepted
+  verification: formal_verified
+  review: accepted
+  compatibility: compatible_extension
+  epistemic: active
+  category: synthesized
+  layer: core
+accepted_composition:
+- id: C-GW-002
+  decision: unchanged_input_not_re_reviewed
+- id: C-GW-005
+  decision: unchanged_input_not_re_reviewed
+evidence:
+  proposal: proposal.yaml
+  census: ../P231-lean-corpus-census/census.yaml
+  primary_route: attempts/0001/result.yaml
+  claim_review: reviews/C-GW-013-claim-review.md
+validation_commands:
+- scripts_check_lean_sh_at_ingestion_commit_63fa769_formal_surface_unchanged
+- PYTHONPATH_src_python_scripts_validate_repository_py
+- scripts_validate_sh_full_once_at_final_boundary
+integrated_gate:
+  status: recorded_at_final_boundary
+  formal_surface: unchanged_from_gate_commit_63fa769
+debt: []
+status: accepted

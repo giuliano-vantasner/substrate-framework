@@ -1,0 +1,51 @@
+id: P234
+base_release: v0.161.0
+source_baseline: substrate-framework@db082ec
+question: 'Composing the accepted spherical STF null (C-MOM-003), the accepted 2*omega breathing-moment
+  doubling (C-SG-009), and the accepted two-dimensional TT projection (C-GW-002): is the radiating channel
+  of a breathing mass source exactly the ell=2, 2*omega TT channel - spherical monopole silent, sub-quadrupole
+  moments silent, quadrupole radiating at the doubled frequency in a two-dimensional transverse space?'
+source_inventory:
+- source: C-MOM-003 @ v0.161.0
+  access: governance/claims.yaml and campaigns/P045-p3d2-spherical-stf-null
+  extracted: radial density gives identically zero STF moment, axisymmetric guard nonzero
+- source: C-SG-009 @ v0.161.0
+  access: governance/claims.yaml and campaigns/P040-fs1-breather-energy-moment
+  extracted: quadratic moment has base frequency 2*omega with only even harmonics
+- source: C-GW-002 @ v0.161.0
+  access: governance/claims.yaml and campaigns/P038-gw3-tt-polarization-basis
+  extracted: TT projector image dimension two
+- source: formal/SubstrateFramework/Ingested/Phase14P3D_SphericalNull.lean (with Phase12GW and Phase13FS
+    cross-references)
+  access: in-hand ingested corpus
+  extracted: the radiating-channel capstone theorems
+invariants:
+- accepted dependencies are inputs, not re-reviewed
+- the composition adds only the channel-index glue tying the three accepted facts
+allowed_imports:
+- C-MOM-003
+- C-SG-009
+- C-GW-002
+- Lean kernel proofs at the pinned toolchain
+candidates:
+- id: A
+  description: 'Lean glue: the radiates/radiatedQuadrupole channel-index function with the ell=0 null,
+    ell=2 radiating evaluation, monopole/dipole silence, and the triple tie to the multipole and harmonic
+    indices.'
+uniqueness_evidence: target_kind is fixed_theorem; the composition is fixed by the ingested file.
+selection_criteria:
+- exact agreement with all three accepted dependency scopes
+- no radiative dynamics claimed beyond the conditional channel indices
+structural_gap: 'No accepted claim ties the three facts together: that the radiating channel of a breathing
+  source is simultaneously ell=2 (by the spherical null and conservation structure), frequency-doubled
+  (by the quadratic moment), and two-dimensional transverse (by the TT projection).'
+composition_dependencies:
+- C-MOM-003
+- C-SG-009
+- C-GW-002
+claims_proposed:
+- C-GW-014
+comparators_blinded_until: 'Not applicable: exact discrete statements.'
+campaign_type: synthesis
+target_kind: fixed_theorem
+status: accepted

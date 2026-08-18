@@ -42,3 +42,5 @@ Accepted in `v0.60.0` with provenance `campaigns/P066-om1-cyclic-sign-characters
 - `campaigns/P066-om1-cyclic-sign-characters/reviews/source_adjudication.md`
 - `memory/vantasner/decisions/C-CHR-001-review.md`
 - `tests/test_topological_labels.py`
+- `formal/SubstrateFramework/Ingested/Phase19_OM1_Z2Character.lean`
+- `formal/SubstrateFramework/Ingested/Phase20ME_HalfQuantumOrder2.lean`

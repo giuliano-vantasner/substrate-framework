@@ -42,3 +42,4 @@ Accepted in `v0.54.0` with provenance `campaigns/P060-pg1-goldstone-hessian/adju
 - `campaigns/P060-pg1-goldstone-hessian/evidence/goldstone-provenance.yaml`
 - `memory/vantasner/decisions/C-CHI-001-review.md`
 - `tests/test_symmetry_breaking.py`
+- `formal/SubstrateFramework/Ingested/Phase18Chiral_GoldstoneCount.lean`
