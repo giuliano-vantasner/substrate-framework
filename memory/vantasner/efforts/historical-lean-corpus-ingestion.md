@@ -30,6 +30,12 @@ no claim is promoted (ingestion is of formal artifacts, not claim acceptance).
 
 ## Survey (all 170 .lean files in /home/dan/substrate @ 6d1f4e0)
 
+The survey walked every Lean file in the historical workspace and assigned
+each family a disposition, deduplicating byte-identical copies (14
+dynamics_lean files and 3 formalization files are identical to their bridges
+counterparts) and excluding superseded attempt candidates and audit-time
+snapshot tooling.
+
 | Family | Files | Disposition |
 | --- | --- | --- |
 | `merged-framework/bridges/phase-*/lean` | 38 | INGESTED (unified-framework phase oracle contributions) |
@@ -75,6 +81,8 @@ ingested file equals its source: no statement or proof body changed.
   v4.28.0` and mathlib rev `8f9d9cff6bd7`.
 
 ## Debt Ledger
+
+One deliberate debt remains open by design, recorded in the table below.
 
 | Debt | Introduced by | Why it is real | Discharge artifact | Status |
 | --- | --- | --- | --- | --- |
