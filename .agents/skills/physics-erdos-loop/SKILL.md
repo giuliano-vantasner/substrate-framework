@@ -1,6 +1,6 @@
 ---
 name: physics-erdos-loop
-description: Run persistent, verifier-backed physics research and framework reconciliation from candidate generation through claim-level promotion. Use for physics derivations, equations, ODE/PDE work, symbolic or numeric checks, simulations, Lean formalization, campaign design, claim migration, framework-wide consistency audits, or any proposal that might change accepted scientific claims. Enforces recall, mechanism comparison when scientifically open, natural framework fit, append-only attempts, claim-appropriate verifier audits, impact-bounded dependency replay, no early stopping, and generated canonical records.
+description: Run persistent, verifier-backed physics research and framework reconciliation from candidate generation through claim-level promotion. Use for physics derivations, equations, ODE/PDE work, symbolic or numeric checks, simulations, Lean formalization, campaign design, claim migration, framework-wide consistency audits, or any proposal that might change accepted scientific claims. Enforces recall, mechanism comparison when scientifically open, natural framework fit, append-only attempts, one bounded constructive review, claim-appropriate verification, impact-bounded replay, and generated canonical records.
 ---
 
 # Physics Erdős Loop
@@ -9,7 +9,7 @@ Use this loop to produce a positive, framework-consistent, verified result—not
 
 ## Non-negotiable outcome
 
-Honesty is required but is not itself success. Classify a failed candidate, no-go, obstruction, residual, bound, or inconclusive computation as attempt evidence and continue. Do not close the effort on it.
+Honesty is required but is not itself success. Classify a failed candidate, no-go, obstruction, residual, bound, or inconclusive computation as attempt evidence and continue. Do not close the effort on it. Equally, do not turn honest review into a ratchet toward trivial claims: preserve the strongest meaningful positive result, make the minimum truthful scope repair, and leave the larger objective open when it is not yet met.
 
 Success requires the requested object plus all of these gates:
 
@@ -31,6 +31,11 @@ Read [governance.md](references/governance.md) before changing a claim, conventi
 - A proposal can challenge a claim; only an accepted claim can supersede one.
 - Accepted canon governs release and promotion decisions, but remains falsifiable and reviewable; a conflict is a diagnosis to investigate, not a reason to erase evidence or halt conditional artifact work.
 - A verifier passing is necessary, but proves only its asserted predicate.
+- A support gap is not a refutation. Reserve “false” for a contradiction or
+  counterexample under the stated hypotheses.
+- Evidence can be an exact proof, corroborating subclaim, regression,
+  applicability test, or provenance record. Only the first is expected to prove
+  the whole encoded statement; label the others instead of discarding them.
 - Exact proof and empirical applicability are separate obligations: measurement can test nature without becoming the proof of a symbolic or formal implication.
 - A campaign completion decision, scientific claim decision, and PR merge decision are independent. Use `research-pr-harvest` for the merge decision.
 - Numeric agreement is a comparator, never a concept-selection mechanism or hidden derivation input.
@@ -128,10 +133,12 @@ that boundary and leave other questions on the campaign frontier.
 
 Choose the strongest practical oracle using [oracles.md](references/oracles.md), then audit it against the named claim:
 
-The audit asks whether the verifier establishes the named claim. Do not create
-a second meta-verifier for the audit, add checks for review prose or reviewer
-identity, or reopen unrelated accepted claims. A discovered adjacent concern is
-a follow-up unless it directly breaks the named claim or its dependency closure.
+The audit asks whether the verifier establishes the named claim and where its
+positive support ends. Do not create a second meta-verifier, add checks for
+review prose or reviewer identity, or reopen unrelated accepted claims. A
+discovered adjacent concern is a follow-up unless it directly falsifies the
+proposed statement, removes a proposition used from a declared dependency, or
+breaks an affected consumer. Record it once and return to the frozen boundary.
 
 Do not count a weaker oracle as independent evidence when a stronger result already fixes its input. In particular, after exact algebra removes a parameter from an ODE right-hand side, local uniqueness proves same-initial-data trajectory independence; integrating that identical right-hand side twice is only regression coverage. Likewise, eliminate shared intermediate variables before calling a downstream tail, dispersion, or normalization check independent: if it yields the same equation or positive solution set, record it as a dependent regression. Cross-sector matching additionally requires explicit field, kinetic-metric, action-measure, and coefficient maps; equal names, shapes, or dimensions do not supply them. Use exact sensitivity or initial Taylor coefficients for analytically accessible counterexamples, and reserve simulation for behavior the exact result does not decide.
 
@@ -166,19 +173,34 @@ Before review:
 2. Re-run targeted unit, symbolic, numeric, simulation, and formal checks. If a mutable consumer aborts on direct or dynamic access to removed `np.trapz`—including an eagerly evaluated nested `getattr` default—repair it to `np.trapezoid` or a safe two-step fallback and rerun before classifying the consumer or campaign; use an alias-only recorded replay for immutable source.
 3. Re-check units, conventions, signs, limits, free-symbol sets, imported constants, and parameter counts.
 4. Compare generated outputs and narrative consumers.
-5. Record every new debt and discharge it in the same effort.
+5. Record and discharge defects or hidden promises created inside the proposed
+   claim delta. Keep unrelated observations and unfinished parent work on the
+   follow-up frontier rather than in the promotion debt ledger.
 
 Local success with broken downstream consumers is failure.
 
 ## Phase 8 — independent claim review
 
-Use `memory-templates/claim-review.md`. Review claims individually, not the proposal as a single package. The reviewer must have the raw artifacts and acceptance criteria, not the proposing agent's preferred conclusion.
+Use `memory-templates/claim-review.md`. Review each claim proposed for acceptance
+or changed accepted statement once, not every sentence, theorem entrypoint, or
+evidence attachment in the campaign. The reviewer must have the raw artifacts
+and acceptance criteria, not the proposing agent's preferred conclusion.
 
 Pin the review boundary to the proposed claim delta and its declared
 dependencies. Review an evidence attachment at the exact scope it claims; do
 not require it to rederive the parent claim or share every parent object when
-it is explicitly labeled as a narrower corollary. After requested corrections,
-recheck only the corrected statements and affected dependency edges.
+it is explicitly labeled as a narrower corollary, regression, applicability
+test, or provenance record. Use
+`memory-templates/evidence-attachment-review.md` when attachment roles need an
+audit; one record may cover a coherent group of entrypoints. After requested
+corrections, perform one correction check limited to the changed statements and
+directly affected dependency edges. Do not start a second substantive pass.
+
+For a scope defect, report in this order: strongest meaningful supported
+statement, exact unsupported extension, minimum repair, and evidence that would
+restore the stronger version. Prefer a correct quantifier, explicit hypothesis,
+layer split, or evidence-role change over deletion. Reject the whole statement
+only when no useful positive core survives.
 
 Assign each claim independent verification, review, compatibility, and epistemic statuses. Unaccepted work stays under `proposals/`. Use `challenges` until a replacement claim is accepted; only then add `supersedes`.
 
@@ -192,12 +214,12 @@ For accepted claims:
 3. Move the adjudicated campaign record into the immutable `campaigns/` log.
 4. Run `scripts/render_docs.py`; never hand-edit `docs/generated/`.
 5. Generate or synchronize accepted claim/release memory. Keep proposal and attempt memory separate.
-6. Run targeted scientific checks, the scope selected by `scripts/validate_changed.py`, and `git diff --check` once at the final frozen boundary. An append-only synthesized leaf theorem may remain scoped when it changes no existing claim or contract and its exact proof, registry/rendering, direct consumers, and formal surface replay; shared machinery, altered existing claims, foundational revisions, or uncertain impact require `scripts/validate.sh --full`. Record the command and boundary commit and reuse that result; documentation-only review records do not stale a scientific gate. Run validation and commit in separate process invocations so an unguarded shell cannot continue past a failed gate and mask it with a later successful command.
+6. Run targeted scientific checks, the scope selected by `scripts/validate_changed.py`, and `git diff --check` once at the final frozen boundary. An append-only synthesized leaf theorem may remain scoped when it changes no existing claim or contract and its exact proof, registry/rendering, direct consumers, and formal surface replay; shared machinery, altered existing claims, foundational revisions, or uncertain impact require `scripts/validate.sh --full`. Record one content-addressed receipt and reuse it; review prose, evidence counts, and generated summaries do not stale a scientific gate. Run validation and commit in separate process invocations so an unguarded shell cannot continue past a failed gate and mask it with a later successful command.
 
 ## Phase 10 — done gate
 
-Declare the campaign objective complete only when every item in the success contract passes and the debt ledger is empty. An honest failure leaves the objective active with a new candidate or repair queued. It does not prevent an individual PR or agent run from ending at a clean harvest checkpoint: use `research-pr-harvest` to merge independently correct, novel, reusable units, name and keep open the canonical goal issue, update that issue with the merged/refactor/history disposition and unit-level rationale, and hand the exact frontier to a fresh run. Keep a source PR open while a finite repair or harvest is live; close it unmerged only after the harvest skill's terminal-close test. Missing work toward the larger goal is frontier rather than debt unless a merged or promoted unit promises it. A pause caused by user authority or an external dependency preserves the active contract and exact next executable action; it is not scientific completion. When a repeated workflow defect or tooling gotcha is discovered, correct and consolidate the relevant instruction in `AGENTS.md`, this skill, and the applicable memory template; do not merely append another overlapping rule.
+Declare the campaign objective complete only when every applicable item in the success contract passes and the in-boundary debt ledger is empty. An honest failure leaves the objective active with a new candidate or repair queued. It does not prevent an individual PR or agent run from ending at a clean harvest checkpoint: use `research-pr-harvest` to merge independently correct, novel, reusable units, name and keep open the canonical goal issue, record the positive result retained, minimum correction if any, and one next decisive action, then hand off the frontier. Keep a source PR open while a finite repair or harvest is live; close it unmerged only after the harvest skill's terminal-close test. Missing work toward the larger goal is frontier rather than debt unless a merged or promoted unit promises it. A pause caused by user authority or an external dependency preserves the active contract and exact next executable action; it is not scientific completion. When a repeated workflow defect or tooling gotcha is discovered, correct and consolidate the relevant instruction in `AGENTS.md`, this skill, and the applicable memory template; do not merely append another overlapping rule.
 
 ## Working with delegated agents
 
-When delegation is authorized, give each worker one child contract and a disjoint write surface. Fresh reviewers receive sourced inputs, the claim, and criteria—not the parent agent's interpretation or expected answer. Classify each finding as an in-boundary blocker or a follow-up, reconcile blockers once, and rerun only checks invalidated by the resulting edits.
+When delegation is authorized, give each worker one child contract and a disjoint write surface. Use one reviewer for one frozen claim transaction unless the promotion contract or user explicitly requires more. Fresh reviewers receive sourced inputs, the claim, and criteria—not the parent agent's interpretation or expected answer. They may report direct blockers and one compact follow-up list, but may not recursively commission broader audits. Reconcile blockers once and rerun only checks invalidated by the edits.

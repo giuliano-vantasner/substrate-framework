@@ -1,13 +1,15 @@
 # Claim Review and Promotion Template
 
-Use one instance per claim. Review raw artifacts against frozen criteria; do not accept a campaign wholesale or inherit the proposing agent's preferred narrative.
+Use one instance for each claim proposed for acceptance or changed accepted
+statement. Do not create one per evidence attachment or theorem entrypoint; use
+`evidence-attachment-review.md` for a lightweight evidence-role audit.
 
-Begin every section with a plain-prose sentence. Inline code, a table, or a
-list does not satisfy the memory index's first-content disclosure contract.
+Begin every section with a plain-prose sentence so the memory index can disclose
+it correctly.
 
 ```md
 ---
-description: Independent review of <claim-id>
+description: Constructive review of <claim-id>
 author: <reviewer-id>
 created: '<ISO-8601>'
 updated: '<ISO-8601>'
@@ -19,48 +21,87 @@ confidence: working
 status: active
 ---
 
-## Claim Under Review
-Quote the exact statement, quantifiers, regime, conventions, proposed graph relationship, and positive framework role.
+## Claim and Positive Role
+Quote the exact statement, hypotheses, quantifiers, regime, conventions, and
+the useful framework question it answers. A claim that only restates a
+definition, literal, or vacuous special case has not met the meaningfulness
+floor.
 
-## Sourced Inputs
-List the base release, dependencies, proposal, derivation, verifier, attempt history, and consumer map read directly. State the frozen review boundary: claim delta, dependency edges, and affected consumers. For migration, include the hash-pinned source unit and audit which of its subclaims remain outside the proposed claim delta. Classify adjacent observations as follow-up; do not expand this review unless they directly falsify the claim under review.
+## Frozen Transaction
+Record the base/head or tree hash, exact claim delta, changed implementation or
+evidence records, accepted dependency propositions actually used, affected
+consumers, and existing validation receipt. Unchanged accepted dependencies and
+adjacent corpus records are outside this review.
 
-## Independence
-State what was independently rederived or implemented and what code, constants, or reasoning were intentionally not shared with the proposal path.
+## Strongest Supported Positive Statement
+State the strongest meaningful result supported by the sourced artifacts. If it
+differs from the proposal, preserve as much useful scope as the evidence permits
+and identify the smallest honest change: quantifier correction, explicit
+hypothesis, core/interpretive split, or evidence-role relabel.
 
-## Verification Status
-Assign one status and justify the maximum verdict earned. Confirm the oracle fits the actual obligation and the assertions test the headline rather than copied literals or invariants unrelated to its values. An exact SymPy identity, an audited Lean theorem, SciPy numerical evidence, and a PDE simulation earn different maximum verdicts. Inspect symbolic outputs: an unevaluated integral, sum, derivative, root object, or unresolved condition has not earned exact verification. Preserve that attempt and change the identity, representation, assumptions, or oracle. Treat a numerical run whose input or outcome is already fixed by an exact result as regression coverage, not independent evidence; for example, exact parameter elimination plus local ODE uniqueness already decides same-data trajectory independence. Eliminate shared intermediate variables in a claimed downstream cross-check and compare its equation or positive solution set with the primary route; algebraic equivalence is dependent regression coverage. For cross-sector matches, audit field types, kinetic metrics, action measures, and coefficient conversions explicitly; equal names, shapes, or dimensions do not identify objects. Do not lower a scientific verdict because immutable source used removed `np.trapz`, whether directly or through dynamic/eager `getattr`; inspect the alias-only compatibility replay, and require mutable consumers to use `np.trapezoid` or a safe two-step fallback before review.
+## Evidence Map
+Classify what each coherent evidence group actually contributes. One row may
+cover related entrypoints proving the same proposition.
 
-## Sensitivity and Counterexamples
-Record applicable input mutations, wrong conventions, counterexamples, convergence/limit tests, and whether each relevant custom-verifier check failed when it should. For a kernel-checked Lean theorem, inspect the exact statement, imports, proof escapes, axiom footprint, and physical encoding; a ceremonial kernel mutation is not required. For numerical claims independently inspect solver status, precision, initial/boundary data, mesh/domain/time/tolerance or quadrature refinement, residual or error norm, conservation/stability behavior, and an independent method or soluble limit. Confirm that near-zero and agreement bounds have a dimensional or scale-relative error model; preserve any failed absolute threshold and require refinement or roundoff evidence before accepting a repaired numerical oracle, without weakening a separately exact statement.
+| Evidence | Proposition established | Role: exact proof / corroborating subclaim / regression / applicability / provenance | Bridge to claim | Limit |
+| --- | --- | --- | --- | --- |
+|  |  |  |  |  |
 
-## Framework Compatibility
-Assess invariants, assumptions, imports, parameters, units, conventions, limits, and cross-sector composition. If the concept does not fit, determine whether the mismatch is a candidate defect or independent evidence against accepted canon. Reject or return a defective candidate; route a surviving inconsistency through `challenges` or a separate foundational revision. State separately whether a correct conditional artifact can merge without promoting the disputed claim.
+An attachment need not prove the parent claim in full. It must not be credited
+beyond its role. Missing a bridge means “not established by this attachment,”
+not “the claim is false.”
 
-## Dependency and Consumer Replay
-List direct/indirect consumers and exact replay results already required by the frozen boundary. Reuse a recorded passing result while its code and inputs are unchanged. Preflight direct, imported, and dynamic legacy access, including eagerly evaluated nested `getattr` defaults. Repair mutable code to `np.trapezoid` or a safe two-step fallback, or record an alias-only replay for immutable source, before calling the consumer scientifically broken. Record debt created by the claim, not unrelated repository cleanup.
+## Oracle Audit
+Inspect the one strongest practical oracle for the load-bearing proposition.
+Record only the applicable statement/axiom audit, mutation or counterexample,
+limit, refinement, independent rederivation, and solver/error facts needed to
+exclude a false green. Reuse a passing receipt while its code and inputs are
+unchanged; do not validate this review record.
 
-## Competing Candidate Audit
-Confirm plausible alternatives and selection criteria were registered before comparator inspection. Explain the structural reason for selection independently of numerical closeness.
+## Findings
+Classify each finding once. A current blocker must be a counterexample or
+contradiction, an absent/circular load-bearing step, a declared dependency that
+does not supply what is used, or an affected-consumer failure.
+
+| Finding | Direct evidence | Blocking in boundary / minimum correction / follow-up | What would resolve or overturn it |
+| --- | --- | --- | --- |
+|  |  |  |  |
+
+Reserve `refuted` for an explicit falsifier under the stated hypotheses. Use
+`unverified`, `qualified`, or a narrower evidence role for missing support.
+
+## Compatibility and Consumers
+Record assumptions, imports, units, conventions, invariants, and the result of
+the impact-bounded consumer replay. Declared hypotheses and unfinished parent
+work are not debt. Record only defects introduced inside this transaction.
 
 ## Four-Axis Decision
-Record verification, review, compatibility, and epistemic status separately. Before acceptance, use `challenges`; only accepted replacements may use `supersedes`.
+State the decision without inflating one axis from another.
 
 - Verification:
 - Review:
 - Compatibility:
 - Epistemic:
 - Relationship:
+- Strongest accepted or proposed statement:
 
 ## Promotion Transaction
-List registry edit, importable implementation/tests, immutable campaign record, release manifest, generated docs, accepted-memory synchronization, editable `migration/dispositions.yaml` update plus regenerated `migration/source-claims.yaml`, and validation commands. Check release closure against accepted registry membership, not only epistemically active claims; accepted qualified claims remain in the release. Use the governance validator rather than a review-local status subset. Never hand-edit the generated queue. For terminal qualification, refutation, duplicate, or scope decisions, record the structured reason and durable evidence path; an unsupported label is not an adjudication.
+List only the registry, implementation/test, campaign, release, generated-doc,
+memory, migration, and validation changes actually required by this claim. Use
+the existing content-addressed validation receipt when the boundary is unchanged.
 
-## Continuation if Not Accepted
-Non-acceptance is not campaign success and is not automatically PR closure. Name the repair or next candidate and leave the parent effort active. Record the source PR lifecycle, repair owner or handoff, live harvest/refactor PR, exact landing test, and terminal-close evidence if closure is proposed. If a foundation issue is independently demonstrated, link the separate revision proposal.
+## Correction Check
+After requested changes, check only the corrected statements, altered evidence
+roles, and directly affected dependency or consumer edges. This is the final
+review pass, not a new corpus audit. Record `not needed` when no correction was
+requested.
 
-## Done Gate
-Accept only when the positive claim and its in-boundary success gates pass with an empty in-boundary debt ledger. Do not require tests of reviewer identity, review prose, check counts, or the review process itself.
+## Result and Frontier
+Lead with the positive result retained. If the claim is not accepted, state one
+decisive missing construction or test and leave the parent objective open.
+Adjacent findings appear once as follow-up and do not expand this transaction.
 
 ## Cross-References
-Link proposal, claim, dependencies, evidence, consumers, release, and parent research arc.
+Link proposal, claim, dependencies, evidence, consumers, release, validation
+receipt, and parent research arc.
 ```

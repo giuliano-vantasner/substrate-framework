@@ -17,7 +17,7 @@ status: active
 ---
 
 ## Goal and Success Contract
-This effort delivers <exact positive result>. It is complete only when the object exists, accepted dependencies close, framework fit is established, the strongest practical verifier and sensitivity audit pass, downstream consumers replay, implementation is importable, canonical records agree, and the debt ledger is empty. A failed attempt, no-go, residual, bound, or obstruction is not completion. Delivery to the requester happens only after the PRs are reviewed and merged; pre-merge, send status updates only, never a delivery claim.
+This effort delivers <exact positive result>. It is complete only when the object exists, accepted dependencies close, framework fit is established, one claim-appropriate oracle with applicable sensitivity evidence passes, affected consumers replay, implementation is importable, canonical records agree, and no hidden in-boundary debt remains. A failed attempt, no-go, residual, bound, or obstruction is not completion. Delivery to the requester happens only after the PRs are reviewed and merged; pre-merge, send status updates only, never a delivery claim.
 
 ## Accepted Baseline
 The work starts from release <id and commit>. Record accepted claims and source artifacts actually read; chronology and memory prose are not authority.
@@ -60,13 +60,19 @@ Validation covers the actual objective, verifier sensitivity, limits, convention
 - `git diff --check` (run separately from commit so a later command cannot mask failure):
 
 ## Debt Ledger
-Every new assumption, import, parameter, residual, broken consumer, or narrative inconsistency is recorded and discharged. This table must be empty at close.
+Record hidden assumptions, unexplained fitted parameters, unsupported promises,
+or broken affected consumers introduced inside the promoted scope. Declared
+hypotheses, honest exclusions, adjacent observations, and open campaign frontier
+are not debt.
 
 | Debt | Introduced by | Why it is real | Discharge artifact | Status |
 | --- | --- | --- | --- | --- |
 
 ## Results
-Record positive verified outcomes and exact reproduction commands. Failures belong in Attempts and keep this contract active. For every `refactor then merge` unit, record the owner or handoff, live PR, landing test, and source-PR lifecycle; do not close it merely because dependency promotion remains incomplete.
+Lead with the strongest meaningful positive outcome and exact reproduction
+command. Failures belong in Attempts and keep the objective active. For a
+`correct then merge` unit, record the minimum repair and one landing check; add
+ownership or lifecycle detail only when a handoff is actually required.
 
 ## Canonicalization
 List claim-registry changes, release manifest, extracted APIs, immutable campaign record, generated docs, and accepted-memory synchronization. Confirm no proposal prose was merged into canonical memory.

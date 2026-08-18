@@ -22,7 +22,9 @@ status: active
 
 State one positive theorem precisely enough to encode in SymPy or Lean. Say
 whether it is `core` or `interpretive`; an interpretive target names hypothesis
-H in the statement itself.
+H in the statement itself. Explain the useful structural gap it closes. Do not
+shrink the target to a tautology, definition, or isolated numeral merely to make
+verification easy.
 
 ## Accepted Composition Boundary
 
@@ -40,7 +42,8 @@ answerable when it closes.
 
 List every added assumption and explicit exclusion. For an interpretive
 theorem, record the hypothesis label and statement and keep its consequences
-out of the core dependency layer.
+out of the core dependency layer. A real declared hypothesis is not a defect;
+prefer an honest conditional theorem to rejecting useful composition.
 
 ## Proof Route
 
@@ -55,7 +58,8 @@ the mapping to the physics statement.
 
 Separate each modality and its scope. Exact proof establishes the encoded
 statement. Measurement, numerics, or simulation test applicability or empirical
-adequacy and never retroactively become the proof.
+adequacy and never retroactively become the proof. A support gap is not a
+refutation of either accepted dependency.
 
 | Method | Artifact | Exact scope | Verdict |
 | --- | --- | --- | --- |
@@ -78,6 +82,14 @@ equivalent validation at the same unchanged boundary. Freeze the composition
 boundary before review; adjacent defects become follow-up unless they directly
 invalidate the new glue, and review prose never triggers another oracle run.
 
+## Constructive Review
+
+Use one substantive review and one correction check. Lead with the strongest
+meaningful theorem the glue proves, then identify any unsupported extension and
+the minimum repair. Recheck only corrected glue and affected consumers. Do not
+reopen accepted atoms, audit every historical attachment, or commission another
+review because prose, counts, or evidence roles changed.
+
 ## Attempts and Frontier
 
 Preserve failed proof routes append-only and state the next materially different
@@ -86,7 +98,8 @@ route. Supporting implementation can merge without closing the theorem issue.
 ## Done Gate
 
 Close only when the exact higher claim is individually accepted, registered,
-dependency-closed, pinned in a release, and its in-scope debt is empty.
+dependency-closed, pinned in a release, and free of hidden in-scope debt. An
+explicit interpretive hypothesis or honest exclusion is not debt.
 ```
 
 Matching proposal fields:

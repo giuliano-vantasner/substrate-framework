@@ -100,7 +100,23 @@ case "$installed_memory_version" in
     ;;
 esac
 memory --help >/dev/null
-memory validate "$repo_root/memory"
+memory_log="$(mktemp)"
+trap 'rm -f "$memory_log"' EXIT
+if memory validate "$repo_root/memory" >"$memory_log" 2>&1; then
+  memory_summary="$(grep -E 'All [0-9]+ file\(s\) valid\.' "$memory_log" | tail -n 1 || true)"
+  memory_warning_count="$(grep -c '\[warn\]' "$memory_log" || true)"
+  if [ -n "$memory_summary" ]; then
+    printf '%s\n' "$memory_summary"
+  else
+    echo "MEMORY VALIDATION PASS"
+  fi
+  if [ "$memory_warning_count" -gt 0 ]; then
+    echo "MEMORY VALIDATION WARNINGS: $memory_warning_count (run 'memory validate $repo_root/memory' for details)"
+  fi
+else
+  cat "$memory_log" >&2
+  exit 1
+fi
 "$python_bin" "$repo_root/.agents/skills/physics-erdos-loop/scripts/validate_skill.py" \
   "$repo_root/.agents/skills/physics-erdos-loop"
 "$python_bin" -m compileall -q "$repo_root/src" "$repo_root/tools/agent-memory/src"

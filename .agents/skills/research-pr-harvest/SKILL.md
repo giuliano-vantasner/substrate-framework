@@ -1,6 +1,6 @@
 ---
 name: research-pr-harvest
-description: Autonomously process goal-directed research or campaign pull requests, harvest correct, novel, reusable progress even when the headline objective is incomplete, and leave a structured handoff on the linked goal issue. Use whenever the user supplies a PR URL or number, asks what to merge from a scientific PR, needs merge eligibility separated from claim promotion and goal completion, wants strong milestone code or proofs salvaged, needs merged/refactor/history dispositions recorded with rationale, or is handing off a long campaign whose later work is diminishing.
+description: Autonomously process goal-directed research or campaign pull requests, preserve the strongest correct reusable progress even when the headline objective is incomplete, and leave a compact handoff on the linked goal issue. Use whenever the user supplies a PR URL or number, asks what to merge from a scientific PR, needs merge eligibility separated from claim promotion and goal completion, wants useful code or proofs salvaged without recursive re-review, or is handing off a long campaign whose later work is diminishing.
 ---
 
 # Research PR Harvest
@@ -19,11 +19,14 @@ Read the PR, linked goal, base release, accepted claim boundary, diff, tests, an
 
 Identify one canonical goal issue and confirm that it existed before the PR was submitted, including before a draft PR. The PR must mention that issue explicitly: use `Advances #N` while the goal remains incomplete and reserve `Fixes #N` for full completion. If the source PR has no pre-existing issue, do not merge it. Create the canonical issue, preserve the source PR as provenance, and place any selected units in a new compliant harvest PR opened after the issue.
 
-In this repository, treat the user's act of supplying a PR URL or number to an agent that did not open, commit to, or materially implement that PR as standing authorization to complete the normal PR lifecycle without further operator prompts: review and comment, edit PR metadata, request changes, create a focused harvest branch or follow-up PR, merge when eligible, close only after the terminal-close test below, and update the linked issue. An agent must not merge any PR it opened, committed to, or materially implemented. If the reviewing agent performs substantive repairs or creates a follow-up harvest PR, a distinct agent or repository owner must execute that merge. Leave a validated handoff when no distinct merger is available. Do not force-push a contributor's branch, delete unrelated branches, broaden the issue objective, or promote unsupported claims. If an external permission or branch rule blocks an action, preserve the exact next action and report the actual blocker.
+In this repository, treat the user's act of supplying a PR URL or number to an agent that did not open, commit to, or materially implement that PR as standing authorization to complete the normal PR lifecycle without further operator prompts: review and comment, edit PR metadata, request changes, create a focused harvest branch or follow-up PR, merge when eligible, close only after the terminal-close test below, and update the linked issue. Use a distinct merger by default. The user or repository owner may explicitly direct an authoring agent to self-merge a named PR; record that operational override without presenting it as independent scientific review. Do not force-push a contributor's branch, delete unrelated branches, broaden the issue objective, or promote unsupported claims. If an external permission or branch rule blocks an action, preserve the exact next action and report the actual blocker.
 
 ## Slice the PR into harvest atoms
 
-Do not adjudicate a large PR as one indivisible story. Partition it by dependency into the smallest coherent units, such as:
+Do not adjudicate a large PR as one indivisible story, but do not atomize it into
+every file, theorem entrypoint, evidence row, or prose sentence either. Identify
+only independently mergeable units or materially different risk boundaries,
+such as:
 
 - a pure utility or compatibility repair;
 - an exact identity or narrowly scoped theorem;
@@ -32,15 +35,19 @@ Do not adjudicate a large PR as one indivisible story. Partition it by dependenc
 - a speculative composition that depends on the headline hypothesis;
 - campaign narration, memory, attempts, and generated output.
 
-For each unit, state its local claim, inputs, outputs, dependencies, tests, consumers, and whether it still works if the PR's favored headline mechanism is removed.
+For each unit, state its local positive claim, dependencies, evidence, affected
+consumers, and whether it still works if the PR's favored headline mechanism is
+removed. Group closely related entrypoints under one proposition.
 
 ## Apply the three-question merge gate
 
 Freeze this gate to the PR diff and the units the PR actually proposes to
-merge. Do not recursively audit every neighboring accepted claim, historical
-artifact, count label, or workflow rule. A finding blocks the PR only if it
-falsifies a selected unit, its declared dependency closure, or a consumer in
-the recorded impact boundary; otherwise file or hand off a follow-up.
+merge. Use one substantive pass and one correction check. Do not recursively
+audit neighboring accepted claims, historical artifacts, count labels, or
+workflow rules. A finding blocks only if it falsifies a selected unit, exposes
+an absent/circular load-bearing step, removes a proposition used from its
+declared dependency closure, or breaks a consumer in the recorded impact
+boundary. Record everything else once as follow-up.
 
 Merge a unit only when all three answers are yes:
 
@@ -48,17 +55,17 @@ Merge a unit only when all three answers are yes:
 2. Is it materially novel or reusable enough to avoid future reinvention?
 3. Is it locally complete, proportionately validated, compatible with the repository, and free of unresolved defects inside its own scope?
 
-Do not require the unit to complete the parent campaign. Do require it to stand without borrowed conclusions, hidden parameters, convention conflicts, or tests that merely repeat copied formulas.
+Do not require the unit to complete the parent campaign. Do require it to stand without borrowed conclusions, hidden parameters, convention conflicts, or tests that merely repeat copied formulas. A narrower evidence attachment may merge as a corroborating subclaim, regression, applicability result, or provenance record; it need not be discarded merely because it does not prove the parent claim.
 
 Classify every unit as one of:
 
 - **merge unchanged** — independent, clean, and already well scoped;
-- **refactor then merge** — valuable core exists but must be decoupled, renamed, narrowed, or convention-corrected;
+- **correct then merge** — valuable core exists and needs the minimum decoupling, naming, quantifier, hypothesis, evidence-role, or convention repair;
 - **leave in PR history** — speculative capstone, duplicated machinery, unsupported interpretation, failed route, or maintenance cost with no durable reusable unit.
 
-`Refactor then merge` is an active lifecycle state, not a polite rejection. Name
-the repair owner or handoff, live source or harvest PR, exact change, and landing
-test. Keep the source PR open in `request changes`, `active refactor`, or
+`Correct then merge` is an active lifecycle state, not a polite rejection. Name
+the exact minimum repair and one landing check. Keep the source PR open in
+`request changes`, `active refactor`, or
 `active harvest` state until that unit lands or becomes terminal.
 
 Close an unmerged PR only when every reusable atom has landed elsewhere, every
@@ -74,11 +81,16 @@ Prefer a focused harvest commit or follow-up PR over merging an inseparable camp
 
 - Keep accepted-claim authority in the registry; do not promote a headline because related code merges. Treat accepted canon as release authority, not an irrevisable premise: a correct conditional API may merge with explicit assumptions while contrary evidence proceeds through `challenges` or a separately governed foundational revision.
 - Create or confirm the canonical goal issue before opening the focused PR. Name it using `Advances #N` for partial progress and use `Fixes #N` only after the full goal passes its completion gate.
-- Record the authoring or implementing agent and a distinct intended merger. The authoring agent may prepare, validate, and hand off the PR but may not merge it.
+- Record the authoring or implementing agent and intended merger. Use a distinct
+  merger unless the user or repository owner explicitly authorizes self-merge;
+  that exception never supplies missing scientific review.
 - Keep the goal issue open when the campaign remains incomplete.
 - Remove campaign memory, attempt directories, debt ledgers, stale generated output, and proof-shaped narrative unless one is itself the reviewed durable artifact.
 - Preserve a failed route in main only when it yields a reusable theorem, counterexample, oracle, fixture, or compatibility repair. Merge that object, not its diary.
 - Do not make generated or canonical records claim more than the harvested unit establishes.
+- Preserve the strongest useful positive statement. Fix an overbroad quantifier,
+  add an honest hypothesis, split an interpretive layer, or relabel evidence
+  before deleting a result. “Not proved by this artifact” is not “refuted.”
 
 ## Update the goal issue
 
@@ -87,57 +99,42 @@ After the final merge boundary is known, update the goal issue—not only the PR
 ```md
 ## Harvest handoff from PR #<number>
 
-### Merged
-- <unit and landed location> — Rationale: <why it is correct, reusable, and independent enough to own>. Evidence: <tests/oracle>.
+### Landed
+- <unit/path>: <positive local claim>. Evidence: <one receipt>.
 
-### Requires refactor
-- <unit> — Rationale: <valuable core>. Required change: <specific decoupling, correction, or narrowing>. Owner/handoff: <identity>. Live PR: <source or harvest PR>. Landing test: <exact evidence>. Source: <PR path/commit>.
+### Correct next
+- <unit>: <minimum repair and one landing check>, or `None`.
 
-### Left in PR history
-- <unit> — Rationale: <why it should not enter main>. Source: <PR path/commit>.
+### History only
+- <unit>: <specific terminal reason>, or `None`.
 
-### Continuation
-- Claims promoted: <none or ids>
-- Goal state: <open or complete>
-- PR lifecycle: <request changes, active refactor, active harvest, merged, or terminal closed>
-- Landed interfaces: <paths/symbols>
-- Next decisive action: <one executable step or test>
-- Terminal-close evidence: <not applicable, or qualifying reason plus landed replacement links>
-
-### What closes the goal
-- Objective-level closure: <the positive scientific result and governance gates, independent of the reviewed route>
-- Current-route gap: <verification-only, implementation/representation, or scientific construction; explain why>
-- Necessary obligations: <route-neutral mathematical and physical conditions that remain unsatisfied>
-- One sufficient next move, not an exclusive prescription: <an experiment, derivation, or implementation that would decisively advance one obligation>
-- Grounds for reconsideration: <evidence or argument that would overturn the blocking review conclusion>
-- Reviewer-role boundary: <what was harvested or repaired, and what requires a distinct submitter effort>
+### Frontier
+- Claims promoted: <none or ids>; goal: <open or complete>.
+- Strongest result retained: <statement>.
+- One next decisive action: <command, derivation, or experiment>.
+- Reconsider a blocker if: <specific counterevidence>, or `not applicable`.
 ```
 
-Write rationales at unit level; do not use one blanket explanation for a category. Point to exact files, symbols, evidence, and commits so the next agent can resume without reconstructing the PR. When authorized to mutate GitHub, post this record after the merge or harvest split. Otherwise, return the exact ready-to-post issue comment and state clearly that the issue update remains pending; never imply it was posted.
+Keep this handoff short and unit-level. Link exact files, evidence, and commits so
+the next agent can resume without reconstructing the PR. Add lifecycle or
+terminal-close details only when they are actually in dispute. When authorized
+to mutate GitHub, post the record; otherwise return it ready to post.
 
 ## State the closure contract without prescribing the solution
 
-The issue handoff must say exactly what remains before the goal may close while preserving legitimate exploration space. State the objective-level obligations independently of the reviewed proposal. A favored lattice, continuum, formal, analytic, or numerical realization is not an issue requirement unless the issue or accepted framework makes it invariant.
+State the one decisive remaining gap before the goal can close, independently
+of the reviewed route. Classify it as `verification`,
+`implementation/representation`, or `scientific construction`, then name one
+sufficient next move. Do not inventory every imaginable missing proof or make a
+favored architecture mandatory.
 
-Classify each blocking gap explicitly:
-
-- **verification-only** — the claimed object and derivation exist, but a named transformation, limiting case, sensitivity test, error bound, or consumer replay is missing. Identify the exact relation and explain why that finite addition would suffice;
-- **implementation/representation** — the mathematics exists, but the canonical API, convention conversion, integration, or reusable implementation is incomplete;
-- **scientific construction** — a load-bearing map, action, dynamics, mechanism, theorem, approximation regime, or degree-of-freedom argument does not yet exist. Say plainly that adding assertions around declared values cannot supply the missing object.
-
-Do not summarize every scientific shortcoming as “more tests needed.” Explain what each script actually establishes as a mathematical proposition and what physical interpretation it does not establish. In particular, distinguish identities from derivations, kinematics from dynamics, a declared parameter count from a constraint analysis, and a closed-form point-source expression from a controlled approximation. Name the falsifier, independent derivation, convergence study, or error estimate that would make the stronger interpretation reviewable.
-
-For the current route, list necessary proof obligations and the evidence that would discharge them, but present any concrete architecture as one sufficient route rather than the unique repair. If the gap plausibly can be finished, say so. During the same adjudication, however, do not rescue a headline claim by choosing its missing mechanism or new assumptions and then acting as its submitter. Narrow correctness repairs and independently complete harvest units remain appropriate; continuing the rejected or incomplete mechanism belongs in a separately identified submitter effort or proposal.
-
-Treat review conclusions as reasoned and rebuttable, not as accepted scientific authority. For every blocking conclusion, state what counterexample, derivation, constraint count, controlled limit, or other evidence would change the assessment. Invite focused disagreement without weakening the completion gate.
-
-When a route conflicts with accepted canon, separate its artifact claim from its
-authority claim. A canon conflict blocks promotion and accepted downstream use;
-it does not by itself block a correct conditional artifact, erase contrary
-evidence, or close the PR. Test whether the mismatch is a candidate defect or a
-pre-existing canonical inconsistency. If it survives independently of the
-favored route, open a `challenges` or foundational-revision proposal with
-competing repairs and keep the scientific frontier active.
+Say what the artifact positively establishes before saying what it does not.
+Distinguish an identity from a derivation, kinematics from dynamics, and an
+applicability test from exact proof. Treat the review conclusion as rebuttable:
+for a blocker, name the specific evidence that would change it. A conflict with
+accepted canon blocks promotion, not a truthful conditional artifact; route an
+independently surviving conflict through `challenges` without expanding the PR
+review into a foundational campaign.
 
 ## Preserve novelty without creating debt
 
@@ -170,6 +167,10 @@ An individual run may end at a clean handoff without lowering or closing the cam
 
 Run targeted tests and claim-appropriate oracles for each harvested unit, impact analysis for changed public symbols, affected consumers, and one repository validation at the final unchanged merge boundary. An additive public export may use scoped validation when impact is bounded, no existing contract changes, consumers are known, and targeted API coverage passes. Reserve full validation for promotion or release, shared numerics or verification machinery, claim/release governance semantics, changed existing public contracts with consumers, dependency or cross-cutting convention changes, multi-sector changes, or uncertain impact. The submitting agent uses `scripts/validate_changed.py` locally for this conservative decision and uses fixed checks only when no pytest scope is affected; the review agent checks the recorded decision against the diff and impact boundary without requiring a duplicate GitHub Actions replay. Run the periodic full backstop locally when scheduled or explicitly requested. Do not rerun unrelated full validation for each discarded campaign artifact or again after merge.
 
+Process prose, memory templates, reviewer records, and evidence-count corrections
+receive only their affected structural checks and `git diff --check`; they do
+not stale or trigger scientific validation.
+
 Do not add meta-tests for the review, reviewer, tally, or validation ledger.
 After a repair, rerun only the stale check. If the user directs merge without
 further validation, preserve the existing evidence and blocker record, stop
@@ -185,8 +186,8 @@ Use this compact structure:
 ### Merge unchanged
 - <unit>: <local claim and evidence>
 
-### Refactor then merge
-- <unit>: <valuable core and required decoupling>
+### Correct then merge
+- <unit>: <strong positive core, minimum repair, and one landing check>
 
 ### Leave in PR history
 - <unit>: <why it should not enter main>
@@ -196,11 +197,12 @@ Use this compact structure:
 - Goal issue: <number/link and open or complete>
 - Issue predates PR: <yes/no and timestamp evidence>
 - Authoring or implementing agent: <identity>
-- Distinct merger: <identity or handoff pending>
+- Merger: <distinct identity, or explicit owner-authorized self-merge>
 - Issue handoff: <posted link or ready-to-post pending>
 - PR lifecycle: <request changes, active refactor, active harvest, merged, or terminal closed>
 - Terminal-close evidence: <not applicable, or qualifying reason plus landed replacement links>
 - Campaign frontier: <next decisive question>
 ```
 
-Lead with the concrete files or symbols to keep. Avoid a large scorecard: the dependency slice and three-question gate are the policy.
+Lead with what remains useful and the concrete files or symbols to keep. Avoid
+a large scorecard: the frozen boundary and three-question gate are the policy.

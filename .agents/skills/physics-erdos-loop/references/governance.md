@@ -41,9 +41,10 @@ Before calculating, require a proposal manifest with:
 - selection criteria fixed before comparator values are used;
 - proposed claim delta and anticipated consumers;
 - comparator-blinding point;
-- validation and global replay plan.
+- validation and impact-bounded replay plan.
 
-A candidate cannot alter these fields retroactively without creating a recorded proposal revision and rerunning earlier gates.
+A candidate cannot alter these fields retroactively without a recorded proposal
+revision. Rerun only gates whose inputs or asserted proposition changed.
 
 For synthesis campaigns, set `campaign_type: synthesis` and
 `target_kind: fixed_theorem`, name one higher claim and the structural gap, and
@@ -74,7 +75,8 @@ Do not bundle foundation changes into a candidate campaign. That makes it imposs
 
 ## Promotion transaction
 
-Promote claims individually:
+Promote each proposed or changed claim individually. Do not reopen unchanged
+accepted dependencies or turn evidence attachments into new claim reviews:
 
 1. Freeze the proposal and its attempt history.
 2. Audit the exact claim and verifier sensitivity.
@@ -86,6 +88,14 @@ Promote claims individually:
 8. Pin a release.
 9. Generate docs and accepted memory.
 10. Commit the complete transaction together.
+
+Use one substantive review and one correction check. Evidence attachments carry
+an explicit role—exact proof, corroborating subclaim, regression, applicability,
+or provenance—in the review record and registry `scope` text; no new schema key
+is implied. Related entrypoints may be grouped under one proposition.
+Reserve `refuted` for an explicit contradiction or counterexample. When scope
+needs repair, preserve the strongest meaningful positive statement through the
+minimum quantifier, hypothesis, layer, or evidence-role correction.
 
 Before acceptance, a proposal may record `challenges`. Only an accepted claim may record `supersedes`.
 

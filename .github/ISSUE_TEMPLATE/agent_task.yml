@@ -5,7 +5,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Every pull request requires one canonical issue that exists before even a draft PR is submitted. The contributor may create this issue, but a person or agent may not merge the resulting PR if they open it, author a commit, or materially implement it.
+        Every pull request requires one canonical issue that exists before even a draft PR is submitted. Use a distinct merger by default; the repository owner or user may explicitly authorize the authoring agent to self-merge without supplying an independent scientific review.
   - type: textarea
     id: objective
     attributes:
@@ -38,7 +38,7 @@ body:
     id: coordination
     attributes:
       label: Coordination and merger handoff
-      description: Name the contributing agent, planned branch, overlapping work to avoid, and a distinct reviewer or repository-owner handoff plan.
+      description: Name the contributing agent, planned branch, overlapping work to avoid, and the intended merger or explicit owner-authorized self-merge.
     validations:
       required: true
   - type: checkboxes
@@ -50,5 +50,5 @@ body:
           required: true
         - label: I will not submit even a draft pull request until this issue exists.
           required: true
-        - label: A person or agent that opens, commits to, or materially implements the pull request will not merge it.
+        - label: The merger will be distinct unless the repository owner or user explicitly authorizes self-merge.
           required: true

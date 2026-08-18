@@ -123,6 +123,7 @@ file from [`memory-templates/`](memory-templates/) before substantive work:
 | Higher theorem from accepted claims | `theorem-synthesis.md` plus a synthesis proposal manifest |
 | Long research program | `research-arc.md` |
 | Independent claim review | `claim-review.md` |
+| Evidence attachment or theorem-group role audit | `evidence-attachment-review.md` |
 | Bounded continuation or harvest PR | `delegated-continuation-pr-template.md` |
 | Explicitly authorized subagent slice | `subagent-task.md` |
 
@@ -205,8 +206,9 @@ result.
 
 Before requesting review:
 
-1. Bring the effort or proposal memory up to date, including remaining frontier
-   and debt inside the proposed merge unit.
+1. Bring scientific effort or proposal memory up to date when that state
+   changed. For process-only work, record a short boundary in the issue or PR;
+   do not manufacture campaign memory.
 2. Run targeted tests, scientific verifiers, applicable mutations, formal
    statement/axiom audits, and affected consumers.
 3. Inspect the diff and GitNexus change impact.
@@ -217,7 +219,9 @@ Before requesting review:
    scripts/validate.sh --pytest-scope tests/test_affected_module.py [more selectors ...]
    ```
 
-   An additive public export may remain scoped when impact analysis shows a
+   Process-document and template-only changes instead receive frontmatter or
+   syntax checks, affected process tests if any, and `git diff --check`; they do
+   not trigger scientific or full-suite replay. An additive public export may remain scoped when impact analysis shows a
    bounded sector, no changed existing contract, known consumers, and targeted
    API coverage. An append-only leaf synthesized-theorem promotion may also
    remain scoped when it changes no existing claim or contract and replays its
@@ -233,7 +237,7 @@ Before requesting review:
    ```
 
 Record the exact pytest selectors, commands, status codes, and meaningful
-verdicts in the PR; a scoped pass is not a repository-wide pass. A bounded PR
+verdicts in one validation receipt; a scoped pass is not a repository-wide pass. A bounded PR
 can remain scoped through merge when its impact boundary is still valid against
 the current base. Do not repeat an equivalent validation at the same unchanged
 boundary. The submitting agent uses `scripts/validate_changed.py` to make and
@@ -247,7 +251,7 @@ a pass count alone is not a review.
 ## 8. Open the pull request
 
 Use [the repository PR template](.github/pull_request_template.md). Record the
-pre-existing canonical issue, authoring agent, and intended independent merger.
+pre-existing canonical issue, authoring agent, and intended merger.
 Link the issue with `Advances #N` while any part of the positive objective
 remains and reserve `Fixes #N` for complete success. A draft PR is appropriate
 while the merge boundary or evidence is still changing, but the issue must exist
@@ -259,43 +263,52 @@ The author must state separately:
 2. whether any scientific claim is proposed for promotion;
 3. whether the canonical goal is actually complete.
 
-An agent may not merge a PR that it opened, authored a commit for, or materially
-implemented. This applies to every PR type. A distinct reviewing agent or
-repository owner decides the disposition and performs the merge. If the
-authoring agent makes substantive review repairs, another actor still must
-merge. When no distinct merger is available, leave the validated PR ready for
-handoff. Explicit PR-lifecycle authorization never overrides this separation.
+The default is a distinct merger for a PR an agent opened, committed to, or
+materially implemented. The user or repository owner may explicitly authorize
+that agent to self-merge a named PR or bounded change. Record the override and
+reuse the existing validation receipt. This operational exception is not an
+independent scientific approval: promoted claims still need their required
+claim review. Without a distinct merger or explicit owner direction, leave the
+validated PR ready for handoff.
 
 ## 9. Review the pull request
 
 Review the actual head commit and reproduce load-bearing evidence. Do not review
 only the PR narrative or treat all files as one indivisible story.
 
-1. Establish the base release, linked goal, diff, accepted boundary, proposal,
-   memory, checks, and review discussion.
+1. Establish the base release, linked goal, exact diff, proposed claim delta,
+   changed evidence records, affected consumers, checks, and review discussion.
+   Freeze that transaction; proximity in a corpus or import tree is not impact.
 2. Confirm the canonical issue predates the PR and identify the authoring agent
-   and a distinct merger. Do not review an issue-less PR toward merge.
-3. Split the PR into the smallest coherent units. For each, name its local
-   claim, dependencies, outputs, tests, consumers, and whether it survives if
-   the headline hypothesis is removed.
-4. Audit correctness and scope. Independently rederive or reimplement the
-   load-bearing step; inspect mutations, counterexamples, limits, numerical
-   refinement, and wrong-convention probes as applicable.
-5. Audit framework fit and architecture. Check declared imports, units,
-   conventions, dependency closure, duplication, GitNexus impact, generated
-   consumers, the authority status of every public symbol, and debt created
-   inside each unit.
+   and merger or explicit owner self-merge direction.
+3. Identify only the coherent units needed for the merge decision. Do not
+   atomize every file, historical artifact, theorem entrypoint, or metadata row.
+4. Audit each load-bearing step once. Reuse valid independent evidence already
+   recorded at the same boundary; add a rederivation, mutation, counterexample,
+   or refinement only when the claim-appropriate oracle actually needs it.
+5. Check declared imports, units, conventions, dependency closure, duplication,
+   affected consumers, and debt created inside the frozen unit. Do not reopen
+   unchanged accepted dependencies.
 6. Make three independent decisions:
 
    - **Artifact merge:** is a correct, novel, reusable unit worth maintaining?
    - **Claim promotion:** has a specific statement passed claim-level governance?
    - **Goal completion:** have all success gates for the canonical issue passed?
 
-Classify findings as blocking, required refactor, or follow-up. Correctness
-defects, hidden premises, unsupported claim language, insensitive verification,
-broken consumers, and unresolved debt within the proposed unit are blocking.
-Incomplete future work is campaign frontier and may remain open when a smaller
-unit is independently useful.
+Classify findings as blocking, required refactor, or follow-up. A blocker must
+show that the proposed statement is false, a load-bearing step is absent or
+circular, a declared dependency does not supply what is used, or an affected
+consumer fails. “This attachment does not prove the entire parent claim” is a
+scope or evidence-role correction, not a refutation. Preserve the strongest
+meaningful supported positive statement through the minimum correction; do not
+reduce it to a tautology or isolated numeral. Incomplete future work and
+adjacent defects are follow-up frontier.
+
+Perform one substantive pass and one check of requested corrections. The second
+pass is not permission to rescan the corpus, recount evidence, or discover new
+classes of requirements. Another reviewer is used only when scientific
+promotion explicitly requires it, the first reviewer is unavailable or
+conflicted, or the user requests it.
 
 Treat `request changes`, `active refactor`, and `active harvest` as live review
 states. A required-refactor finding must name an owner or handoff, a live source
@@ -320,10 +333,9 @@ Next decisive action: one concrete step
 
 ## 10. Merge and hand off
 
-The distinct reviewer or repository owner—not the authoring or implementing
-agent—merges only the accepted unit boundary. A merge creates provenance and
-reusable code; it does not automatically promote a claim or close the parent
-issue.
+The distinct merger, repository owner, or explicitly authorized author merges
+only the accepted unit boundary. A merge creates provenance and reusable code;
+it does not automatically promote a claim or close the parent issue.
 
 After the final disposition:
 

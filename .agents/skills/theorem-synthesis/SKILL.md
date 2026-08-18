@@ -7,7 +7,9 @@ description: Compose accepted Substrate Framework claims into a new higher theor
 
 Promote a new positive statement by proving the missing glue between accepted
 claims. Keep proof, empirical applicability, and scientific interpretation
-distinct so each can advance without becoming ceremony for the others.
+distinct so each can advance without becoming ceremony for the others. Protect
+the strongest useful theorem supported by the composition; do not make a proof
+easier by shrinking the result to a tautology or isolated special value.
 
 ## Establish the target
 
@@ -27,6 +29,10 @@ State:
 Do not re-review accepted dependencies. Audit only that the theorem uses their
 exact accepted scope. There is no statement-length cap once the dependency and
 assumption boundary is explicit.
+
+If the composition needs a real hypothesis, state it and use the interpretive
+layer rather than rejecting an otherwise useful conditional theorem. A missing
+bridge is “not yet proved,” not a refutation of either accepted atom.
 
 If the scientific mechanism is genuinely open, compare plausible mechanisms
 under preregistered structural criteria. If the theorem statement is fixed,
@@ -88,6 +94,11 @@ historical artifact becomes a follow-up unless it directly invalidates the new
 composition. Recheck only corrected glue and affected consumers; never turn a
 synthesis review into recursive re-acceptance of its atoms or validation of the
 review process.
+
+Use one substantive review pass and one correction check. Report the strongest
+supported theorem first, then any unsupported extension and minimum repair.
+Do not commission a second review because counts, review prose, or evidence-role
+labels changed.
 
 A synthesis campaign succeeds only when its higher claim is accepted, entered
 in the registry, and pinned in a release. Supporting implementation PRs may
