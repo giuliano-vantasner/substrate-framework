@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import os
 from pathlib import Path
 import tomllib
 
@@ -74,6 +75,7 @@ def test_redundant_remote_repository_validation_is_absent() -> None:
     selector = (ROOT / "scripts/validate_changed.py").read_text(encoding="utf-8")
     assert "def choose_validation_scope(" in selector
     assert "def decision_for_refs(" in selector
+    assert os.access(ROOT / "scripts/validate_changed.py", os.X_OK)
 
 
 def test_dependabot_covers_python_and_actions() -> None:

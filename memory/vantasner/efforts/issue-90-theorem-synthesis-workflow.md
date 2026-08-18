@@ -69,6 +69,7 @@ Technical attempts are append-only so onboarding and validation failures remain 
 | 0001 | Backward-compatible optional metadata plus strict rules when `category: synthesized` or `layer: interpretive` is declared | Issue #90 and branch `process/theorem-synthesis-90` | In progress | Avoids bulk rewriting accepted claims while giving new theorems an executable contract | Implement and test the exact schema |
 | 0002 | First idempotent Lean onboarding replay | `scripts/setup_lean.sh` | Technical failure: existing toolchain returned status 1 | Elan 4.2.3 treats reinstall of an installed toolchain as an error | Inventory `elan toolchain list` before installation, then rerun setup |
 | 0003 | First formal axiom-audit replay | `scripts/check_lean.sh` and `lake env lean Audit.lean` | Technical failure: the library had not produced an olean | The Lake library was declared but not a default build target, so bare `lake build` completed with zero jobs | Mark the library as `@[default_target]`, rebuild, and rerun the audit |
+| 0004 | First direct validation-scope selection | `scripts/validate_changed.py --base origin/main --head HEAD --print-only` | Technical failure: permission denied | The documented shebang command lacked an executable file mode | Mark the selector executable, cover the command surface, and rerun |
 
 ## Validation
 
