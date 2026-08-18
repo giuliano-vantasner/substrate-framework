@@ -15,18 +15,24 @@ status: active
 
 ## Goal and Success Contract
 
-Execute the historical external Lean ingestion that issue #90 explicitly
-deferred ("Historical Lean ingestion from `/home/dan/substrate` is a separate
-workflow"). Survey every Lean file under `/home/dan/substrate`, select the
-files that can live inside the repository-pinned Lean 4.28.0 / mathlib v4.28.0
-library without changing any theorem statement or proof, and land them in one
-PR under the new workflow: `scripts/check_lean.sh` gate, per-file provenance
-manifest, axiom audits, proportional validation via
-`scripts/validate_changed.py`.
+Execute Phase A of issue #92: the historical external Lean incorporation that
+issue #90 explicitly deferred ("Historical Lean ingestion from
+`/home/dan/substrate` is a separate workflow"). Survey every Lean file under
+`/home/dan/substrate`, land the corpus in the repository library with recorded
+provenance under the new workflow (`scripts/check_lean.sh` gate, per-file
+provenance manifest, axiom audits, proportional validation via
+`scripts/validate_changed.py`), adapting files as needed with every adaptation
+auditable. Where the sources needed zero statement/proof changes, the stronger
+token-for-token guarantee is recorded; it is not the acceptance gate.
 
-Success: the corpus builds as part of the repository library, the gate passes,
-every file's provenance and every recorded adaptation is machine-checked, and
-no claim is promoted (ingestion is of formal artifacts, not claim acceptance).
+Success for this phase: the corpus builds as part of the repository library,
+the gate passes, every file's provenance and every recorded adaptation is
+machine-checked. Claim promotion is NOT out of scope for the umbrella issue:
+Phase B classifies every ingested theorem against the accepted registry
+(corroboration evidence, new standalone exact facts, synthesized higher
+theorems, or recorded dispositions) and Phase C promotes the real claims
+through the theorem and synthesis workflows with individual review, registry
+entry, and release pinning.
 
 ## Survey (all 170 .lean files in /home/dan/substrate @ 6d1f4e0)
 
@@ -86,9 +92,12 @@ One deliberate debt remains open by design, recorded in the table below.
 
 | Debt | Introduced by | Why it is real | Discharge artifact | Status |
 | --- | --- | --- | --- | --- |
-| Ingested theorems are not framework claims | This effort | Ingestion is of formal artifacts; promotion requires individual review with dependency closure | Future theorem-synthesis campaigns referencing ingested glue | Open by design |
+| Ingested theorems are not yet framework claims | This effort (Phase A) | Promotion requires individual review with dependency closure through the theorem/synthesis workflows | Issue #92 Phases B–C: census + promotion transactions | Open, tracked by #92 |
 
 ## Done Gate
 
-Closes when the single PR is reviewed and merged by the repository owner;
-promotes no claim, changes no accepted statement, and leaves the gate green.
+Phase A closes when the ingestion PR is reviewed and merged by the repository
+owner with the gate green and no accepted statement changed. The umbrella
+issue #92 closes only when Phases B–C complete: every ingested theorem with
+genuine claim content is promoted through the workflow or carries a recorded,
+reviewed disposition.
