@@ -15,24 +15,23 @@ status: active
 
 ## Goal and Success Contract
 
-Execute Phase A of issue #92: the historical external Lean incorporation that
-issue #90 explicitly deferred ("Historical Lean ingestion from
-`/home/dan/substrate` is a separate workflow"). Survey every Lean file under
-`/home/dan/substrate`, land the corpus in the repository library with recorded
-provenance under the new workflow (`scripts/check_lean.sh` gate, per-file
-provenance manifest, axiom audits, proportional validation via
-`scripts/validate_changed.py`), adapting files as needed with every adaptation
-auditable. Where the sources needed zero statement/proof changes, the stronger
-token-for-token guarantee is recorded; it is not the acceptance gate.
+Execute the ingestion workstream of issue #92 — the historical external Lean
+incorporation that issue #90 deferred — as part of #92's SINGLE merge unit
+(one PR, no phase split, no stopping point after ingestion). Survey every Lean
+file under `/home/dan/substrate`, land the corpus in the repository library
+with recorded provenance (`scripts/check_lean.sh` gate, per-file provenance
+manifest, axiom audits), adapting files as needed with every adaptation
+auditable; where sources needed zero statement/proof changes, record that
+stronger guarantee.
 
-Success for this phase: the corpus builds as part of the repository library,
-the gate passes, every file's provenance and every recorded adaptation is
-machine-checked. Claim promotion is NOT out of scope for the umbrella issue:
-Phase B classifies every ingested theorem against the accepted registry
+Success for this workstream: the corpus builds as part of the repository
+library, the gate passes, every file's provenance and every recorded
+adaptation is machine-checked. The workstream is NOT itself a done point: the
+same PR must also census every ingested theorem against the accepted registry
 (corroboration evidence, new standalone exact facts, synthesized higher
-theorems, or recorded dispositions) and Phase C promotes the real claims
-through the theorem and synthesis workflows with individual review, registry
-entry, and release pinning.
+theorems, or recorded dispositions) and promote the real claims through the
+theorem and synthesis workflows with individual review, registry entry, and
+release pinning before it is ready for review. #92 closes only at that merge.
 
 ## Survey (all 170 .lean files in /home/dan/substrate @ 6d1f4e0)
 
@@ -92,12 +91,12 @@ One deliberate debt remains open by design, recorded in the table below.
 
 | Debt | Introduced by | Why it is real | Discharge artifact | Status |
 | --- | --- | --- | --- | --- |
-| Ingested theorems are not yet framework claims | This effort (Phase A) | Promotion requires individual review with dependency closure through the theorem/synthesis workflows | Issue #92 Phases B–C: census + promotion transactions | Open, tracked by #92 |
+| Ingested theorems are not yet framework claims | The ingestion workstream | Promotion requires individual review with dependency closure through the theorem/synthesis workflows | Census + promotion transactions landing on the same PR before review (#92 single merge unit) | Open, blocking PR #93 review readiness |
 
 ## Done Gate
 
-Phase A closes when the ingestion PR is reviewed and merged by the repository
-owner with the gate green and no accepted statement changed. The umbrella
-issue #92 closes only when Phases B–C complete: every ingested theorem with
-genuine claim content is promoted through the workflow or carries a recorded,
-reviewed disposition.
+There is no separate done gate for ingestion. PR #93 is ready for review only
+when the census and promotion transactions are also on the branch; #92 closes
+at that merge with every claim-bearing theorem promoted through the workflow
+or carrying a recorded, reviewed disposition, the gate green, and the full
+validation suite passing at the merge commit.
