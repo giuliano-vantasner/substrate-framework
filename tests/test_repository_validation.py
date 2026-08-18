@@ -7,6 +7,7 @@ from scripts.validate_repository import (
     validate_memory_contract_categories,
     validate_migration_inventory,
     validate_migration_unit_disposition,
+    validate_repository_skills,
     validate_reserved_claim_identifiers,
 )
 from substrate_framework.governance import GovernanceError
@@ -29,6 +30,37 @@ def test_memory_contract_category_validation_is_sensitive(tmp_path) -> None:
     validate_memory_contract_categories(tmp_path)
 
 
+def test_repository_skill_validation_checks_discovery_metadata(tmp_path) -> None:
+    skill = tmp_path / ".agents/skills/theorem-synthesis"
+    (skill / "agents").mkdir(parents=True)
+    (skill / "SKILL.md").write_text(
+        "---\n"
+        "name: theorem-synthesis\n"
+        "description: Compose accepted claims.\n"
+        "---\n"
+        "# Theorem Synthesis\n",
+        encoding="utf-8",
+    )
+    (skill / "agents/openai.yaml").write_text(
+        "interface:\n"
+        '  display_name: "Theorem Synthesis"\n'
+        '  short_description: "Compose claims into higher theorems"\n'
+        '  default_prompt: "Use $theorem-synthesis to prove a higher theorem."\n',
+        encoding="utf-8",
+    )
+
+    assert validate_repository_skills(tmp_path) == 1
+    metadata = skill / "agents/openai.yaml"
+    metadata.write_text(
+        metadata.read_text(encoding="utf-8").replace(
+            "$theorem-synthesis", "$wrong-skill"
+        ),
+        encoding="utf-8",
+    )
+    with pytest.raises(GovernanceError, match="must mention"):
+        validate_repository_skills(tmp_path)
+
+
 def test_accepted_artifact_validation_rejects_missing_evidence(tmp_path) -> None:
     claim = {
         "id": "C1",
@@ -48,6 +80,41 @@ def test_accepted_artifact_validation_rejects_missing_evidence(tmp_path) -> None
     provenance.write_text("status: accepted\n", encoding="utf-8")
     evidence.write_text("def test_claim(): pass\n", encoding="utf-8")
     validate_accepted_artifact_paths(tmp_path, registry)
+
+
+def test_accepted_artifact_validation_includes_glue_and_secondary_evidence(
+    tmp_path,
+) -> None:
+    claim = {
+        "id": "C3",
+        "accepted_in": "v1",
+        "provenance": "campaigns/P1/adjudication.yaml",
+        "evidence": ["tests/test_claim.py"],
+        "composition": {
+            "glue": {"artifact": "formal/SubstrateFramework/Glue.lean"}
+        },
+        "verification_evidence": [
+            {"artifact": "campaigns/P1/evidence/measurement.json"}
+        ],
+    }
+    for artifact in (claim["provenance"], *claim["evidence"]):
+        path = tmp_path / artifact
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text("evidence\n", encoding="utf-8")
+
+    with pytest.raises(GovernanceError, match="Glue.lean"):
+        validate_accepted_artifact_paths(tmp_path, {"claims": [claim]})
+
+    glue = tmp_path / "formal/SubstrateFramework/Glue.lean"
+    glue.parent.mkdir(parents=True)
+    glue.write_text("theorem glue : True := by trivial\n", encoding="utf-8")
+    with pytest.raises(GovernanceError, match="measurement.json"):
+        validate_accepted_artifact_paths(tmp_path, {"claims": [claim]})
+
+    measurement = tmp_path / "campaigns/P1/evidence/measurement.json"
+    measurement.parent.mkdir(parents=True)
+    measurement.write_text("{}\n", encoding="utf-8")
+    validate_accepted_artifact_paths(tmp_path, {"claims": [claim]})
 
 
 def test_rejected_claim_identifier_remains_reserved(tmp_path) -> None:

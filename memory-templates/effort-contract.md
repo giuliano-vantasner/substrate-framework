@@ -55,7 +55,7 @@ Validation covers the actual objective, verifier sensitivity, limits, convention
 - Numerical solver-status, refinement, conservation/stability, and independent-route command (when applicable):
 - Dependency replay, after AST preflight for direct/imported/dynamic legacy trapezoid access and repair of mutable consumers to `np.trapezoid` or a safe two-step fallback, or an alias-only replay for immutable source:
 - Targeted tests during implementation:
-- Impact analysis and validation-scope rationale (an additive bounded API may stay scoped; promotion/release, shared machinery, changed existing contracts, cross-cutting dependencies/conventions, multi-sector, or uncertain impact requires full):
+- Impact analysis and validation-scope rationale (an additive bounded API or append-only leaf synthesized theorem may stay scoped; shared machinery, changed existing claims/contracts, foundational or cross-cutting changes, or uncertain impact requires full):
 - `scripts/validate.sh --fixed-only`, `--pytest-scope <selectors>`, or `--full` plus the agreeing local `scripts/validate_changed.py` decision (run the justified workflow once at the unchanged boundary):
 - `git diff --check` (run separately from commit so a later command cannot mask failure):
 

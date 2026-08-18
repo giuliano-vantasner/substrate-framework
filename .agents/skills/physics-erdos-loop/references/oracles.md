@@ -12,6 +12,10 @@ Use the strongest practical oracle for each claim and state exactly what verdict
 
 Split composite claims so each part receives the right oracle. Discover numerically, then prove symbolically or formally when the structure permits.
 
+Proof establishes the encoded mathematical statement. Measurement, numerics,
+and simulation test applicability or consequences; record them as separate
+evidence scopes rather than treating measurement as the definition of proof.
+
 ## Symbolic checks
 
 - Derive expressions from canonical inputs.
@@ -52,7 +56,8 @@ A theorem can be perfectly proved and still encode too weak a proposition.
 
 ## Mutation and counterexample audit
 
-For each load-bearing input, construct a scientifically meaningful mutation:
+For each load-bearing input to a custom symbolic/numeric verifier or translation
+layer, construct a scientifically meaningful mutation:
 
 - coefficient or normalization change;
 - sign flip;
@@ -62,7 +67,7 @@ For each load-bearing input, construct a scientifically meaningful mutation:
 - fabricated fitted parameter;
 - broken boundary or initial condition.
 
-At least one relevant assertion must fail for every mutation. If the headline numbers move while the tally stays green, the verifier does not establish the headline claim.
+At least one relevant assertion must fail for every applicable mutation. If the headline numbers move while the tally stays green, the verifier does not establish the headline claim. A kernel-checked Lean theorem instead requires exact statement, import, proof-escape, axiom-footprint, and physical-encoding audits; do not add a mutation whose only purpose is ceremony.
 
 ## Independent rederivation
 

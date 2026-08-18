@@ -22,7 +22,7 @@ fi
 if command -v lean >/dev/null 2>&1 && command -v lake >/dev/null 2>&1; then
   good "Lean/Lake available"
 else
-  miss "Lean/Lake unavailable (needed only for formal claims)"
+  miss "Lean/Lake unavailable; run scripts/setup_lean.sh before formal claims"
 fi
 if command -v memory >/dev/null 2>&1; then
   good "pipx-managed agent-memory CLI available ($(memory --version))"

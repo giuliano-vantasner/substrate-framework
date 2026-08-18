@@ -18,7 +18,7 @@ status: active
 ---
 
 ## Positive Objective and Success
-State the requested result precisely. Completion requires the result itself, accepted dependency closure, natural framework fit, a sensitive verifier, candidate comparison, global replay, importable implementation, accepted claim promotion, synchronized generated records, and an empty debt ledger. Honest failure and honest no-go reports are attempt evidence, never the deliverable.
+State the requested result precisely. Completion requires the result itself, accepted dependency closure, natural framework fit, a claim-appropriate verifier audit, mechanism comparison when a mechanism is genuinely open, impact-bounded replay, importable implementation, accepted claim promotion, synchronized generated records, and an empty debt ledger. Honest failure and honest no-go reports are attempt evidence, never the deliverable.
 
 ## Authority and Prior Work
 Record the accepted release, source commit, claim ids, importable modules, campaigns, memory searches, and graph/source queries actually checked. Distinguish accepted state, proposal state, and attempt state. Accepted canon controls release and promotion; it remains falsifiable, so record credible independent challenges rather than treating conflict as automatic rejection.
@@ -91,7 +91,7 @@ Append one row per scientific attempt. Preserve source, stdout/stderr, elapsed t
 Assess each candidate before empirical fit: invariant preservation, imports, free parameters, conventions, known limits, cross-sector consumers, and whether it demands unrelated narrative changes. Determine whether a mismatch is a candidate defect or independent evidence against canon. Reject and replace a defective candidate; route a surviving canonical inconsistency through the separate revision gate without blocking correct conditional artifacts.
 
 ## Verifier Audit
-Record clean exit and tally, derivation-vs-literal inspection, mutations, counterexamples, wrong conventions, refinement, conservation/limit tests, independent rederivation, and exact formal theorem/axioms where applicable. For SciPy ODE/BVP/PDE evidence, record routine/algorithm, precision, solver status, domain, mesh, time policy, tolerances, residual/error norm, convergence order, and a soluble limit or independent method.
+Record clean exit and tally, derivation-vs-literal inspection, applicable mutations, counterexamples, wrong conventions, refinement, conservation/limit tests, independent rederivation, and exact formal theorem/axioms where applicable. For a kernel-checked Lean theorem, audit its statement, imports, proof escapes, axiom footprint, and physical encoding rather than inventing a mutation. For SciPy ODE/BVP/PDE evidence, record routine/algorithm, precision, solver status, domain, mesh, time policy, tolerances, residual/error norm, convergence order, and a soluble limit or independent method.
 
 ## Global Dependency Replay
 List direct and indirect consumers and every replay command. Preflight direct/imported/dynamic legacy access and eager fallback defaults. Repair mutable code to `np.trapezoid` or a safe two-step fallback—or use an alias-only replay for immutable evidence—before assigning a scientific verdict. Local pass with a scientifically broken repaired consumer is failure.
@@ -119,7 +119,7 @@ Record accepted positive results and reproduction commands. Also record harveste
 Record extracted APIs/tests, accepted registry entries, immutable campaign location, release id, generated docs command, accepted-memory synchronization, and proposal/attempt memory separation.
 
 ## Done Gate
-Check every success condition from `AGENTS.md`, confirm targeted science checks, downstream replay, `scripts/validate.sh --full` once at the unchanged promotion boundary, and an empty debt ledger. A progress harvest uses the impact-justified fixed-only/scoped/full workflow and records the agreeing local `scripts/validate_changed.py` decision instead; it leaves the arc active. Otherwise continue.
+Check every success condition from `AGENTS.md`, confirm targeted science checks, impact-bounded downstream replay, the fixed-only/scoped/full workflow selected by `scripts/validate_changed.py` once at the unchanged promotion boundary, and an empty debt ledger. An append-only leaf synthesized theorem may remain scoped; changed existing claims, shared machinery, foundational revisions, or uncertain impact require full validation. A progress harvest records its own impact-justified decision and leaves the arc active. Otherwise continue.
 
 ## Cross-References
 Link the proposal, source artifacts, claims, reviewers, campaign, release, generated outputs, and related memory entries.

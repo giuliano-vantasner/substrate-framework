@@ -1,0 +1,3 @@
+import SubstrateFramework
+
+#print axioms SubstrateFramework.compose_implications

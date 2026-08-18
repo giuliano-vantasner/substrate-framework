@@ -32,6 +32,45 @@ def claim(claim_id: str, dependencies: list[str], accepted: bool = True) -> dict
     }
 
 
+def synthesized_claim(
+    claim_id: str,
+    dependencies: list[str],
+    *,
+    layer: str = "core",
+    accepted: bool = True,
+) -> dict:
+    result = claim(claim_id, dependencies, accepted=accepted)
+    result.update(
+        {
+            "category": "synthesized",
+            "layer": layer,
+            "exclusions": ["No substrate mechanism follows without an explicit hypothesis"],
+            "composition": {
+                "dependencies": dependencies,
+                "structural_gap": "the accepted atoms have not been composed end to end",
+                "glue": {
+                    "method": "lean",
+                    "artifact": "formal/SubstrateFramework/Glue.lean",
+                    "entrypoint": "SubstrateFramework.compose_implications",
+                },
+            },
+            "verification_evidence": [
+                {
+                    "method": "lean",
+                    "artifact": "formal/SubstrateFramework/Glue.lean",
+                    "scope": "the implication glue only",
+                },
+                {
+                    "method": "measurement",
+                    "artifact": "tests/test_governance.py",
+                    "scope": "physical applicability, not the formal implication",
+                },
+            ],
+        }
+    )
+    return result
+
+
 def test_empty_registry_is_valid_bootstrap() -> None:
     assert validate_registry({"schema_version": 1, "claims": []}) == []
 
@@ -39,6 +78,54 @@ def test_empty_registry_is_valid_bootstrap() -> None:
 def test_accepted_dependency_closure_is_valid() -> None:
     data = {"schema_version": 1, "claims": [claim("C1", []), claim("C2", ["C1"])]}
     assert validate_registry(data) == ["C1", "C2"]
+
+
+def test_synthesized_claim_composes_two_accepted_dependencies() -> None:
+    data = {
+        "schema_version": 1,
+        "claims": [
+            claim("C1", []),
+            claim("C2", []),
+            synthesized_claim("C3", ["C1", "C2"]),
+        ],
+    }
+
+    assert validate_registry(data) == ["C1", "C2", "C3"]
+
+
+def test_synthesized_claim_rejects_duplicate_or_unaccepted_atoms() -> None:
+    duplicate = synthesized_claim("C3", ["C1", "C1"])
+    data = {"schema_version": 1, "claims": [claim("C1", []), duplicate]}
+    with pytest.raises(GovernanceError, match="two distinct dependencies"):
+        validate_registry(data)
+
+    proposed = claim("C2", [], accepted=False)
+    composite = synthesized_claim("C3", ["C1", "C2"], accepted=False)
+    data = {
+        "schema_version": 1,
+        "claims": [claim("C1", []), proposed, composite],
+    }
+    with pytest.raises(GovernanceError, match="depends on unaccepted C2"):
+        validate_registry(data)
+
+
+def test_interpretive_layer_is_explicit_and_cannot_feed_core() -> None:
+    interpretation = synthesized_claim("C3", ["C1", "C2"], layer="interpretive")
+    interpretation["hypothesis"] = {
+        "label": "H-substrate",
+        "statement": "the accepted effective fields arise from the proposed substrate",
+    }
+    core_consumer = claim("C4", ["C3"])
+    data = {
+        "schema_version": 1,
+        "claims": [claim("C1", []), claim("C2", []), interpretation, core_consumer],
+    }
+
+    with pytest.raises(GovernanceError, match="core claim depends on interpretive"):
+        validate_registry(data)
+
+    data["claims"].pop()
+    assert validate_registry(data) == ["C1", "C2", "C3"]
 
 
 def test_accepted_claim_cannot_depend_on_proposal() -> None:
@@ -103,6 +190,31 @@ def test_proposal_requires_immutable_source_baseline() -> None:
     validate_proposal(proposal)
     proposal["source_baseline"] = ""
     with pytest.raises(GovernanceError, match="immutable source revision"):
+        validate_proposal(proposal)
+
+
+def test_fixed_theorem_synthesis_needs_one_route_not_competing_mechanisms() -> None:
+    proposal = {
+        "id": "P000",
+        "base_release": "v-test",
+        "source_baseline": "substrate-framework@abc123",
+        "question": "compose two accepted implications into one higher theorem",
+        "invariants": ["accepted dependencies are not reopened"],
+        "allowed_imports": ["C1", "C2"],
+        "candidates": [{"id": "proof", "description": "Lean implication chain"}],
+        "selection_criteria": ["exact statement match"],
+        "claims_proposed": ["C3"],
+        "comparators_blinded_until": "not applicable to an exact theorem",
+        "status": "draft",
+        "campaign_type": "synthesis",
+        "target_kind": "fixed_theorem",
+        "structural_gap": "C1 and C2 have no accepted composition",
+        "composition_dependencies": ["C1", "C2"],
+    }
+
+    validate_proposal(proposal)
+    proposal["composition_dependencies"] = ["C1"]
+    with pytest.raises(GovernanceError, match="two distinct accepted dependencies"):
         validate_proposal(proposal)
 
 

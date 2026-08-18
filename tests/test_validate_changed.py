@@ -5,6 +5,7 @@ from pathlib import Path
 from scripts.validate_changed import (
     Change,
     choose_validation_scope,
+    is_additive_leaf_theorem_promotion,
     parse_name_status,
 )
 
@@ -119,7 +120,58 @@ def test_governance_change_forces_full(tmp_path: Path) -> None:
         [Change("M", "governance/claims.yaml")], repo_root=tmp_path
     )
     assert decision.mode == "full"
-    assert "cross-cutting path" in decision.reasons[0]
+    assert "governance semantics" in decision.reasons[0]
+
+
+def test_additive_leaf_theorem_promotion_can_remain_scoped(tmp_path: Path) -> None:
+    _touch(
+        tmp_path,
+        "tests/test_governance.py",
+        "tests/test_repository_validation.py",
+        "tests/test_lean_scaffold.py",
+    )
+    decision = choose_validation_scope(
+        [
+            Change("M", "governance/claims.yaml"),
+            Change("M", "governance/releases/current.yaml"),
+            Change("A", "governance/releases/v2.yaml"),
+            Change("A", "formal/SubstrateFramework/NewTheorem.lean"),
+        ],
+        repo_root=tmp_path,
+        additive_leaf_promotion=True,
+    )
+    assert decision.mode == "scoped"
+    assert decision.selectors == (
+        "tests/test_governance.py",
+        "tests/test_lean_scaffold.py",
+        "tests/test_repository_validation.py",
+    )
+    assert decision.additional_checks == ("scripts/check_lean.sh",)
+
+
+def test_additive_leaf_classifier_rejects_changed_existing_claim() -> None:
+    atom = {"id": "C1", "accepted_in": "v1", "epistemic": "active"}
+    other_atom = {"id": "C0", "accepted_in": "v1", "epistemic": "active"}
+    old_registry = {"claims": [other_atom, atom]}
+    theorem = {
+        "id": "C2",
+        "category": "synthesized",
+        "review": "accepted",
+        "accepted_in": "v2",
+        "epistemic": "active",
+        "dependencies": ["C0", "C1"],
+    }
+    new_registry = {"claims": [dict(other_atom), dict(atom), theorem]}
+    old_release = {"release": "v1", "accepted_claims": ["C0", "C1"]}
+    new_release = {"release": "v2", "accepted_claims": ["C0", "C1", "C2"]}
+
+    assert is_additive_leaf_theorem_promotion(
+        old_registry, new_registry, old_release, new_release
+    )
+    new_registry["claims"][0]["statement"] = "changed"
+    assert not is_additive_leaf_theorem_promotion(
+        old_registry, new_registry, old_release, new_release
+    )
 
 
 def test_validation_driver_change_selects_its_regressions(tmp_path: Path) -> None:

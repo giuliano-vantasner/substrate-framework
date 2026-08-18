@@ -72,6 +72,41 @@ def _as_string_list(value: Any, field: str, owner: str) -> list[str]:
     return value
 
 
+def _nonempty_string(value: Any, field: str, owner: str) -> str:
+    if not isinstance(value, str) or not value.strip():
+        raise GovernanceError(f"{owner}: {field} must be a non-empty string")
+    return value
+
+
+def _validate_verification_evidence(claim: dict[str, Any], claim_id: str) -> None:
+    records = claim.get("verification_evidence", [])
+    if not isinstance(records, list):
+        raise GovernanceError(
+            f"{claim_id}: verification_evidence must be a list of mappings"
+        )
+    allowed_methods = {
+        "analytic",
+        "sympy",
+        "lean",
+        "numeric",
+        "simulation",
+        "measurement",
+    }
+    for index, record in enumerate(records):
+        owner = f"{claim_id}.verification_evidence[{index}]"
+        if not isinstance(record, dict):
+            raise GovernanceError(f"{owner} must be a mapping")
+        missing = {"method", "artifact", "scope"} - record.keys()
+        if missing:
+            raise GovernanceError(f"{owner} missing fields: {sorted(missing)}")
+        if record["method"] not in allowed_methods:
+            raise GovernanceError(
+                f"{owner}: invalid verification method {record['method']!r}"
+            )
+        _nonempty_string(record["artifact"], "artifact", owner)
+        _nonempty_string(record["scope"], "scope", owner)
+
+
 def _detect_dependency_cycles(graph: dict[str, list[str]]) -> None:
     active: set[str] = set()
     complete: set[str] = set()
@@ -134,6 +169,7 @@ def validate_registry(data: dict[str, Any]) -> list[str]:
         _as_string_list(claim["evidence"], "evidence", claim_id)
         _as_string_list(claim["assumptions"], "assumptions", claim_id)
         _as_string_list(claim["comparators"], "comparators", claim_id)
+        _validate_verification_evidence(claim, claim_id)
         graph[claim_id] = dependencies
         unknown = set(dependencies) - by_id.keys()
         if unknown:
@@ -150,6 +186,97 @@ def validate_registry(data: dict[str, Any]) -> list[str]:
             raise GovernanceError(
                 f"{claim_id}: invalid verification status {claim['verification']!r}"
             )
+
+        category = claim.get("category", "standard")
+        layer = claim.get("layer", "core")
+        if category not in {"standard", "synthesized"}:
+            raise GovernanceError(f"{claim_id}: invalid claim category {category!r}")
+        if layer not in {"core", "interpretive"}:
+            raise GovernanceError(f"{claim_id}: invalid claim layer {layer!r}")
+
+        if category == "synthesized" or layer == "interpretive":
+            if "exclusions" not in claim:
+                raise GovernanceError(
+                    f"{claim_id}: synthesized and interpretive claims must declare exclusions"
+                )
+            _as_string_list(claim["exclusions"], "exclusions", claim_id)
+
+        if category == "synthesized":
+            composition = claim.get("composition")
+            if not isinstance(composition, dict):
+                raise GovernanceError(
+                    f"{claim_id}: synthesized claim needs a composition mapping"
+                )
+            component_ids = _as_string_list(
+                composition.get("dependencies"),
+                "composition.dependencies",
+                claim_id,
+            )
+            if len(component_ids) < 2 or len(component_ids) != len(set(component_ids)):
+                raise GovernanceError(
+                    f"{claim_id}: composition needs at least two distinct dependencies"
+                )
+            if set(component_ids) != set(dependencies) or len(component_ids) != len(
+                dependencies
+            ):
+                raise GovernanceError(
+                    f"{claim_id}: composition dependencies must match claim dependencies"
+                )
+            _nonempty_string(
+                composition.get("structural_gap"),
+                "composition.structural_gap",
+                claim_id,
+            )
+            glue = composition.get("glue")
+            if not isinstance(glue, dict):
+                raise GovernanceError(
+                    f"{claim_id}: composition.glue must be a mapping"
+                )
+            if glue.get("method") not in {"sympy", "lean"}:
+                raise GovernanceError(
+                    f"{claim_id}: composition.glue.method must be sympy or lean"
+                )
+            _nonempty_string(glue.get("artifact"), "composition.glue.artifact", claim_id)
+            _nonempty_string(
+                glue.get("entrypoint"), "composition.glue.entrypoint", claim_id
+            )
+            for dependency in component_ids:
+                dependency_claim = by_id[dependency]
+                if (
+                    dependency_claim["accepted_in"] is None
+                    or dependency_claim["review"] != "accepted"
+                    or dependency_claim["epistemic"] not in {"active", "qualified"}
+                ):
+                    raise GovernanceError(
+                        f"{claim_id}: synthesized claim depends on unaccepted {dependency}"
+                    )
+
+        if layer == "interpretive":
+            hypothesis = claim.get("hypothesis")
+            if not isinstance(hypothesis, dict):
+                raise GovernanceError(
+                    f"{claim_id}: interpretive claim needs a hypothesis mapping"
+                )
+            _nonempty_string(hypothesis.get("label"), "hypothesis.label", claim_id)
+            _nonempty_string(
+                hypothesis.get("statement"), "hypothesis.statement", claim_id
+            )
+            for dependency in dependencies:
+                if by_id[dependency].get("layer", "core") != "core":
+                    raise GovernanceError(
+                        f"{claim_id}: interpretive claim must depend only on core claims"
+                    )
+        else:
+            interpretive_dependencies = [
+                dependency
+                for dependency in dependencies
+                if by_id[dependency].get("layer", "core") == "interpretive"
+            ]
+            if interpretive_dependencies:
+                raise GovernanceError(
+                    f"{claim_id}: core claim depends on interpretive claims "
+                    f"{sorted(interpretive_dependencies)}"
+                )
 
         accepted_in = claim["accepted_in"]
         was_accepted = accepted_in is not None
@@ -211,11 +338,40 @@ def validate_proposal(data: dict[str, Any], source: str = "proposal") -> None:
         raise GovernanceError(f"{source}: source_baseline must name an immutable source revision")
     for field in ("invariants", "allowed_imports", "selection_criteria", "claims_proposed"):
         _as_string_list(data[field], field, source)
+    campaign_type = data.get("campaign_type", "discovery")
+    target_kind = data.get("target_kind", "mechanism_selection")
+    if campaign_type not in {"discovery", "synthesis"}:
+        raise GovernanceError(f"{source}: invalid campaign_type {campaign_type!r}")
+    if target_kind not in {"mechanism_selection", "fixed_theorem"}:
+        raise GovernanceError(f"{source}: invalid target_kind {target_kind!r}")
+    if campaign_type == "synthesis":
+        if target_kind != "fixed_theorem":
+            raise GovernanceError(
+                f"{source}: synthesis campaign must declare target_kind: fixed_theorem"
+            )
+        _nonempty_string(data.get("structural_gap"), "structural_gap", source)
+        components = _as_string_list(
+            data.get("composition_dependencies"),
+            "composition_dependencies",
+            source,
+        )
+        if len(components) < 2 or len(components) != len(set(components)):
+            raise GovernanceError(
+                f"{source}: synthesis campaign needs at least two distinct accepted dependencies"
+            )
+        if len(data["claims_proposed"]) != 1:
+            raise GovernanceError(
+                f"{source}: synthesis campaign must target exactly one higher claim"
+            )
     candidates = data["candidates"]
     uniqueness = data.get("uniqueness_evidence")
     if not isinstance(candidates, list) or not candidates:
         raise GovernanceError(f"{source}: register at least one candidate approach")
-    if len(candidates) < 2 and not (isinstance(uniqueness, str) and uniqueness.strip()):
+    if (
+        target_kind == "mechanism_selection"
+        and len(candidates) < 2
+        and not (isinstance(uniqueness, str) and uniqueness.strip())
+    ):
         raise GovernanceError(
             f"{source}: register at least two candidates or cite uniqueness_evidence"
         )
@@ -312,6 +468,27 @@ def render_claim_memory(claim: dict[str, Any], released_at: str) -> str:
     assumptions = ", ".join(claim["assumptions"]) or "none"
     comparators = ", ".join(claim["comparators"]) or "none"
     evidence = "\n".join(f"- `{item}`" for item in claim["evidence"])
+    theorem_metadata = ""
+    if "category" in claim or "layer" in claim:
+        theorem_metadata = (
+            "\n## Theorem Classification\n"
+            f"Category is `{claim.get('category', 'standard')}`; layer is "
+            f"`{claim.get('layer', 'core')}`.\n"
+        )
+        composition = claim.get("composition")
+        if isinstance(composition, dict):
+            glue = composition["glue"]
+            theorem_metadata += (
+                f"Structural gap: {composition['structural_gap']}\n\n"
+                f"Glue proof: `{glue['method']}` at `{glue['artifact']}` "
+                f"entrypoint `{glue['entrypoint']}`.\n"
+            )
+        hypothesis = claim.get("hypothesis")
+        if isinstance(hypothesis, dict):
+            theorem_metadata += (
+                f"\nConditional hypothesis `{hypothesis['label']}`: "
+                f"{hypothesis['statement']}\n"
+            )
     return (
         f"---\n{header}\n---\n"
         f"# {claim['id']}\n\n"
@@ -322,7 +499,8 @@ def render_claim_memory(claim: dict[str, Any], released_at: str) -> str:
         "The four governance axes remain independent.\n\n"
         f"Verification is `{claim['verification']}`; review is `{claim['review']}`; "
         f"compatibility is `{claim['compatibility']}`; epistemic status is "
-        f"`{claim['epistemic']}`.\n\n"
+        f"`{claim['epistemic']}`.\n"
+        f"{theorem_metadata}\n"
         "## Dependency and Import Closure\n"
         "The registry records the accepted closure and declared non-claim inputs.\n\n"
         f"Dependencies: {dependencies}. Assumptions: {assumptions}. "
@@ -395,16 +573,45 @@ def render_claim_index(data: dict[str, Any]) -> str:
     if not claims:
         lines.append("No scientific claims have been accepted into this repository yet.")
     for claim in claims:
+        metadata = [
+            f"- Accepted in: `{claim['accepted_in']}`",
+            f"- Verification: `{claim['verification']}`",
+            f"- Compatibility: `{claim['compatibility']}`",
+            f"- Dependencies: {', '.join(claim['dependencies']) or 'none'}",
+        ]
+        if "category" in claim or "layer" in claim:
+            metadata.extend(
+                [
+                    f"- Category: `{claim.get('category', 'standard')}`",
+                    f"- Layer: `{claim.get('layer', 'core')}`",
+                ]
+            )
+        composition = claim.get("composition")
+        if isinstance(composition, dict):
+            glue = composition["glue"]
+            metadata.extend(
+                [
+                    f"- Structural gap: {composition['structural_gap']}",
+                    f"- Glue proof: `{glue['method']}` at `{glue['artifact']}` "
+                    f"(`{glue['entrypoint']}`)",
+                ]
+            )
+        hypothesis = claim.get("hypothesis")
+        if isinstance(hypothesis, dict):
+            metadata.append(
+                f"- Hypothesis `{hypothesis['label']}`: {hypothesis['statement']}"
+            )
+        if "exclusions" in claim:
+            metadata.append(
+                f"- Exclusions: {', '.join(claim['exclusions']) or 'none'}"
+            )
         lines.extend(
             [
                 f"## {claim['id']}",
                 "",
                 str(claim["statement"]),
                 "",
-                f"- Accepted in: `{claim['accepted_in']}`",
-                f"- Verification: `{claim['verification']}`",
-                f"- Compatibility: `{claim['compatibility']}`",
-                f"- Dependencies: {', '.join(claim['dependencies']) or 'none'}",
+                *metadata,
                 "",
             ]
         )
