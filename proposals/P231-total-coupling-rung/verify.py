@@ -310,6 +310,70 @@ def run() -> int:
         and conformal_provenance.purely_induced_newton_constant is None,
     )
 
+    # --- renormalization condition (issue #88: physical_regulator_or_renormalization_condition) ---
+    condition = implementation.renormalization_condition(cutoff=sp.Integer(1), mass_squared=sp.Rational(1, 4))
+    checks.check(
+        "renormalization condition: usable set, finite parts, and reference member derived",
+        condition.usable_schemes == (SHARP_PROPER_TIME_REGULATOR, SMOOTH_PROPER_TIME_REGULATOR)
+        and condition.excluded_schemes == (ZETA_POWER_SUBTRACTED_REGULATOR,)
+        and sp.simplify(condition.finite_parts[SHARP_PROPER_TIME_REGULATOR] - (sp.exp(-sp.Rational(1, 4)) - sp.Rational(1, 4) * sp.expint(1, sp.Rational(1, 4)))) == 0
+        and sp.simplify(condition.finite_parts[SMOOTH_PROPER_TIME_REGULATOR] - sp.besselk(1, 1)) == 0
+        and condition.reference_scheme == SHARP_PROPER_TIME_REGULATOR,
+    )
+    checks.check(
+        "condition massless limit reproduces the accepted C-GRV-001 shift s*Lambda^2",
+        implementation.renormalization_condition(cutoff=sp.Integer(1), mass_squared=0).finite_parts[SHARP_PROPER_TIME_REGULATOR] == 1
+        and sp.simplify(exact_mass_inverse_newton_shift(3, sp.Rational(0), regulator=SHARP_PROPER_TIME_REGULATOR, cutoff=1, mass_squared=0).value - sp.Rational(1, 4) / sp.pi) == 0
+        and "E_cut = hbar*c/a" in condition.reference_justification,
+    )
+    checks.check(
+        "condition provenance names accepted claims and approved imports; unpromoted modules are non-authority",
+        "C-GRV-001" in " ".join(condition.provenance)
+        and "C-IGR-001" in " ".join(condition.provenance)
+        and "Vassilevich" in " ".join(condition.provenance)
+        and "Visser" in " ".join(condition.provenance)
+        and "scalar_induced_newton" in " ".join(condition.non_authority)
+        and "covariant_sine_gordon_action" in " ".join(condition.non_authority),
+    )
+
+    # --- total Newton constant (issue #88: total_Newton_constant) ---
+    newton = implementation.total_newton_constant(sp.Integer(0), 3, sp.Rational(0), cutoff=1, mass_squared=sp.Rational(1, 4))
+    newton_by_scheme = {e.regulator: e for e in newton.entries}
+    checks.check(
+        "total Newton constant: reciprocal identity and attractive sign on the usable set",
+        all(
+            sp.simplify(e.total_newton_constant * e.total_inverse_coupling - 1) == 0
+            and e.total_sign == 1
+            and e.attractive_newtonian is True
+            for e in newton.entries
+        ),
+    )
+    checks.check(
+        "purely-induced bracket endpoints are 12*pi/(N*J(z)) and G ratio is the spread R(z)",
+        sp.simplify(newton.purely_induced_bracket[0] - 12 * sp.pi / (3 * sp.besselk(1, 1))) == 0
+        and sp.simplify(
+            newton_by_scheme[SHARP_PROPER_TIME_REGULATOR].total_newton_constant
+            / newton_by_scheme[SMOOTH_PROPER_TIME_REGULATOR].total_newton_constant
+            - sp.besselk(1, 1) / (sp.exp(-sp.Rational(1, 4)) - sp.Rational(1, 4) * sp.expint(1, sp.Rational(1, 4)))
+        )
+        == 0,
+    )
+    conformal_newton = implementation.total_newton_constant(sp.Integer(0), 3, sp.Rational(1, 6), cutoff=1, mass_squared=sp.Rational(1, 3))
+    repulsive_newton = implementation.total_newton_constant(sp.Integer(-1), 1, sp.Rational(1, 3), cutoff=1, mass_squared=1)
+    checks.check(
+        "Newton constant honesty: conformal marginal is None (never zoo); repulsive is negative",
+        all(
+            e.total_newton_constant is None and e.acceptance == "marginal_zero_total_no_newton_constant"
+            for e in conformal_newton.entries
+        )
+        and conformal_newton.purely_induced_bracket is None
+        and all(
+            e.total_sign == -1 and e.attractive_newtonian is False
+            and sp.Float(sp.N(e.total_newton_constant, 50), 50) < 0
+            for e in repulsive_newton.entries
+        ),
+    )
+
     import os
 
     proc = subprocess.run(

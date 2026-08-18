@@ -76,3 +76,33 @@ oppose the weight"). Repair: a half-line leg in the derived-structure tier
 (`baseline.is_nonnegative` with weight +1, symmetrically nonpositive with
 weight -1), locked by boundary tests on both sides (positive symbol,
 nonnegative symbol decided; unconstrained symbol still None).
+
+
+## Addendum (attempt 0003): issue-closure iteration
+
+Owner direction: close all of #88's goals within this single PR. The
+adversarial re-read against the issue text found the composition goal
+half-delivered: the issue names `physical_regulator_or_renormalization_condition`
+and `total_Newton_constant` as surfaces this campaign must attack, and they
+existed only implicitly (finding F9). Delivered explicitly:
+
+- `renormalization_condition()` — the governed condition record: statement,
+  the three selection legs (L1 strict spectral positivity, L2 monotone
+  large-mass decoupling, L3 cutoff-ontology respect with the exact zeta
+  exclusion root), the exact finite parts per usable scheme (outputs of
+  substrate structure, not regulator choices), the sharp reference member
+  justified by C-GRV-001's cutoff ontology with the massless limit
+  reproducing the accepted s*Lambda^2, the provenance ledger (accepted
+  claims and approved imports only), the non-authority ledger (unpromoted
+  modules are implementation reuse only), and the honestly open items.
+- `total_newton_constant()` — the exact per-scheme Newton constant with
+  reciprocal sign preservation, the marginal locus returning None (never a
+  silent division), undecidability propagation, and the purely-induced
+  bracket whose endpoint ratio is exactly the spread R(z).
+
+Finding F8 (module defect): the baseline gate was stricter than the
+module's own decidability tiers — the sign map's own boundary B* = -Delta
+is SymPy-undecidable as real and was rejected. Repaired with certified
+numeric acceptance for symbol-free finite-real constants; the tuned
+boundary now evaluates exactly, giving the marginal locus in the tuned
+scheme and an honest attractive verdict in the other usable scheme.

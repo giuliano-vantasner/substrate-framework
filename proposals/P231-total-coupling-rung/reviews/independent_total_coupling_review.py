@@ -120,6 +120,33 @@ def run() -> int:
         smooth_scale(mp.mpf(50)) / sharp_scale(mp.mpf(50)) > 10**15,
     )
 
+    # Route 7: the renormalization condition's finite parts and the total
+    # Newton constant recomputed from the defining integrals.
+    z_q = mp.mpf(1) / 4
+    j_s, j_m = sharp_scale(z_q), smooth_scale(z_q)
+    # the frozen closed forms the module publishes at z = 1/4:
+    # sharp exp(-z) - z*E1(z), smooth 2*sqrt(z)*K1(2*sqrt(z)) = K1(1).
+    checks.check(
+        "condition finite parts equal the frozen closed forms by quadrature",
+        abs(j_s - (mp.e ** (-z_q) - z_q * mp.e1(z_q))) < mp.mpf(10) ** -35
+        and abs(j_m - 2 * mp.sqrt(z_q) * mp.besselk(1, 2 * mp.sqrt(z_q))) < mp.mpf(10) ** -35
+        and abs(j_m - mp.besselk(1, 1)) < mp.mpf(10) ** -35,
+    )
+    g_sharp = 1 / induced_shift(3, mp.mpf(0), j_s, mp.mpf(1))
+    g_smooth = 1 / induced_shift(3, mp.mpf(0), j_m, mp.mpf(1))
+    # the module's frozen bracket: 12*pi/(N*(1-6*xi)*J(z)) per usable scheme.
+    pref = 12 * mp.pi / 3
+    checks.check(
+        "Newton constants and bracket reproduce 12*pi/(N*J(z)) by quadrature",
+        abs(g_sharp - pref / j_s) < mp.mpf(10) ** -28
+        and abs(g_smooth - pref / j_m) < mp.mpf(10) ** -28,
+    )
+    checks.check(
+        "independent G bracket ratio equals the independently integrated spread",
+        abs((g_sharp / g_smooth) - (j_m / j_s)) < mp.mpf(10) ** -28
+        and g_sharp > g_smooth > 0,
+    )
+
     return checks.finish()
 
 

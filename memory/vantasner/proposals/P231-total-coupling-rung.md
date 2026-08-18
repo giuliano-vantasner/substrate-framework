@@ -2,14 +2,14 @@
 description: 'P231: compose C-IGR-001..003 with C-GRV-001 into the first derived usable total gravitational coupling 1/G_total = 1/G_baseline + Delta(1/G) with scheme selection, sign map, and control ledger (issue #88)'
 author: vantasner
 created: '2026-08-18T14:05:00+02:00'
-updated: '2026-08-18T14:05:00+02:00'
+updated: '2026-08-18T17:55:00+02:00'
 tags:
 - substrate-framework
 - campaign-proposal
 - induced-gravity
 - total-coupling
 category: proposals
-confidence: exploratory
+confidence: working
 status: active
 ---
 
@@ -119,3 +119,14 @@ The rung is complete when the derived positive object exists: importable
 API, tests, mutation-sensitive oracles, evidence set, independent
 rederivation, and a PR passing adversarial review. The #76 and #88 objectives
 remain open until the later promotion and comparator gates.
+
+## Issue-closure status (attempt 0003)
+
+All #88 composition goals are delivered in PR #89: the derived usable
+total coupling with its governed renormalization condition
+(`renormalization_condition`), the total Newton constant surface
+(`total_newton_constant`) with the purely-induced scheme bracket, the
+exact sign map, the additive-baseline provenance, the scheme-spread
+structure, and the control ledger. Findings F1-F10 are repaired and
+append-only in the attempt manifests. Claim promotion C-IGR-004/C-GRV-002
+is a later reviewed transaction per the issue's own scope note.

@@ -1,0 +1,56 @@
+id: attempt-0003
+campaign: P231
+branch: research/p231-total-coupling-rung
+base_release: v0.161.0
+source_baseline: substrate-framework@7dfe89b
+command: >
+  PYTHONPATH=src .venv/bin/python -m pytest tests/test_total_gravitational_coupling.py -q;
+  PYTHONPATH=src .venv/bin/python proposals/P231-total-coupling-rung/verify.py;
+  PYTHONPATH=src .venv/bin/python proposals/P231-total-coupling-rung/reviews/independent_total_coupling_review.py;
+  bash scripts/validate.sh --full
+working_directory: /home/dan/substrate-framework
+status: complete
+verdict: issue_closure_iteration_complete_all_88_surfaces_delivered
+owner_direction: >
+  Close issue #88's goals within this single PR/campaign (no further
+  rung-splitting); iterate, self-review, and repair until the PR delivers
+  every composition goal the issue text names.
+self_adversarial_findings_and_repairs:
+  F8_boundary_baseline_gate_stricter_than_decidability_tiers: >
+    The sign map's own boundary B* = -Delta (an exact real constant built
+    from E1/BesselK values) was rejected by the baseline input gate because
+    SymPy cannot decide is_real for it, while the module's own three-tier
+    sign machinery exists precisely for that class. Repair: _real_exact
+    accepts symbol-free finite-real constants via certified 70-digit
+    numeric evaluation; symbolic undecidable, infinite, and non-real
+    inputs are still rejected (locked by tests). The tuned-marginal oracle
+    now evaluates exactly: sharp entry marginal (None, never zoo), smooth
+    entry honestly attractive.
+  F9_issue_closure_surface_gap: >
+    Issue #88 names two unpromoted surfaces this campaign must attack:
+    physical_regulator_or_renormalization_condition and
+    total_Newton_constant. Attempts 0001/0002 delivered them only
+    implicitly (selection ledger + baseline provenance). Repair: explicit
+    first-class API surfaces renormalization_condition() (governed
+    condition record: statement, selection legs L1/L2/L3, exact finite
+    parts per usable scheme, sharp reference member justified by C-GRV-001
+    cutoff ontology E_cut=hbar*c/a, provenance and non-authority ledgers,
+    open items) and total_newton_constant() (per-scheme exact G_total,
+    reciprocal-sign preservation, marginal locus returning None, and the
+    purely-induced bracket whose ratio is exactly the spread R(z)).
+  F10_test_side_tautology: >
+    The first draft of the new selection-legs test contained a tautological
+    or-expression; fixed to positional L1/L2/L3 prefix assertions. A first
+    verifier draft also used 1/4 instead of 1/(4*pi) for the massless
+    shift (same defect class as F3); fixed with an exact simplify
+    comparison. Both caught by the adversarial re-read before commit.
+evidence:
+  primary_verifier: ALL_32_CHECKS_PASS
+  independent_rederivation: ALL_20_CHECKS_PASS
+  targeted_tests: 41_passed
+  formula_freeze: extended_with_renormalization_condition_and_total_newton_constant
+  full_validation: 2304_passed_ALL_REPOSITORY_WORKFLOW_CHECKS_PASS
+  comparator_blinding: no_empirical_comparator_exists
+  proposal_schema: validated_by_scripts/validate_repository.py
+  memory_contract: validated_by_memory_cli
+next_materially_different_route: none; #88 composition goals delivered, PR updated to close the issue; claim promotion C-IGR-004/C-GRV-002 remains a later reviewed transaction per the issue's own scope note

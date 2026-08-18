@@ -131,7 +131,16 @@ def _positive_exact(value: Any, name: str) -> sp.Expr:
 def _real_exact(value: Any, name: str) -> sp.Expr:
     expr = sp.sympify(value)
     if expr.is_real is not True:
-        raise ValueError(f"{name} must be a real exact quantity")
+        # Symbol-free exact constants built from E1/BesselK values (e.g. the
+        # sign map's own boundary B* = -Delta) are real but SymPy-undecidable
+        # by is_real alone; certify them numerically instead of rejecting the
+        # module's own boundary inputs (finding F8).  Symbolic inputs with
+        # undecidable reality are still rejected.
+        if expr.free_symbols:
+            raise ValueError(f"{name} must be a real exact quantity")
+        numeric = sp.N(expr, _NUMERIC_SIGN_PRECISION)
+        if numeric.is_real is not True or numeric.is_finite is not True:
+            raise ValueError(f"{name} must be a real exact quantity")
     return expr
 
 
@@ -857,5 +866,236 @@ def higher_curvature_control_ledger(
             "outside the accepted local-coefficient ceiling (C-IGR-001); "
             "bounded by the same small parameter Lambda**-2*||R_E|| in the "
             "predeclared domain, never silently omitted"
+        ),
+    )
+
+
+@dataclass(frozen=True)
+class RenormalizationCondition:
+    """The governed renormalization condition with declared substrate provenance.
+
+    Issue #88's composition goal: the usable scheme and its finite parts are
+    outputs of substrate structure rather than choices.  This record states
+    the condition, exhibits the selection legs that output the usable set,
+    fixes the exact finite part per usable scheme at the declared ``z``, and
+    quotes the exact scheme ceiling of the normalization.
+    """
+
+    statement: str
+    usable_schemes: tuple
+    excluded_schemes: tuple
+    selection_legs: tuple
+    finite_parts: dict
+    reference_scheme: str
+    reference_justification: str
+    scheme_ceiling: str
+    premises: tuple
+    provenance: tuple
+    non_authority: tuple
+    open_items: tuple
+
+
+def renormalization_condition(
+    *,
+    cutoff: Any,
+    mass_squared: Any = 0,
+) -> RenormalizationCondition:
+    """Return the governed renormalization condition record at declared ``z``.
+
+    The condition: *the total inverse Newton coupling is normalized as the
+    finite curvature-class coefficient of the accepted one-loop determinant
+    per field, ``1/G_total = B + N*(1-6*xi)*Lambda**2*J(z)/(12*pi)``, taken
+    in the derived usable scheme set* — with the additive baseline ``B`` a
+    declared premise per ``C-GRV-001`` and the usable set and finite parts
+    ``J(z)`` outputs of the substrate-internal selection legs below, not
+    regulator choices.
+    """
+
+    lam = _positive_exact(cutoff, "cutoff")
+    mass = _nonnegative_exact(mass_squared, "mass_squared")
+    z = sp.simplify(mass / lam**2)
+    j_sharp = curvature_scale_factor(SHARP_PROPER_TIME_REGULATOR, cutoff=lam, mass_squared=mass)
+    j_smooth = curvature_scale_factor(SMOOTH_PROPER_TIME_REGULATOR, cutoff=lam, mass_squared=mass)
+    return RenormalizationCondition(
+        statement=(
+            "1/G_total = B + N*(1-6*xi)*Lambda**2*J(z)/(12*pi) with "
+            "z = m**2/Lambda**2, normalized in the derived usable scheme "
+            "set; B is a declared premise (C-GRV-001), xi = 1/6 is the "
+            "exact marginal locus, and J(z) is the derived finite part"
+        ),
+        usable_schemes=USABLE_TOTAL_COUPLING_SCHEMES,
+        excluded_schemes=EXCLUDED_TOTAL_COUPLING_SCHEMES,
+        selection_legs=(
+            "L1 strict spectral positivity: J is the positive tail integral "
+            "of a positive integrand, so 0 < J(z) <= 1 with J(0)=1 (positive "
+            "operator spectrum of the accepted Route 1 fluctuation operator)",
+            "L2 monotone large-mass decoupling: dJ/dz < 0 strictly "
+            "(E1(z) sharp, 2*K_0(2*sqrt(z)) smooth), so the sign map is "
+            "mass-uniform and no spurious zero appears at finite mass",
+            "L3 cutoff-ontology respect: the finite part carries the cutoff "
+            "scale Lambda (no cutoff-free, sign-changing structure); the "
+            "power-subtracted family fails L3 because J_zeta changes sign "
+            "at the exact root z = exp(1-EulerGamma) and is scale-free",
+        ),
+        finite_parts={
+            SHARP_PROPER_TIME_REGULATOR: j_sharp,
+            SMOOTH_PROPER_TIME_REGULATOR: j_smooth,
+        },
+        reference_scheme=SHARP_PROPER_TIME_REGULATOR,
+        reference_justification=(
+            "the sharp proper-time cutoff tau_0 = Lambda**-2 is the member "
+            "matching C-GRV-001's cutoff ontology E_cut = hbar*c/a with "
+            "Lambda = 1/a: its massless limit reproduces the accepted "
+            "Delta(1/G) = s*Lambda**2 exactly; the smooth essential-"
+            "singularity weight is the admitted smooth alternative and the "
+            "bracket R(z) quantifies the residual scheme dependence"
+        ),
+        scheme_ceiling=(
+            "the normalization is scheme-bracketed by R(z) = J_smooth/J_sharp "
+            "(equal to 1 only at z = 0, exactly 2*e*K_1(2)/(1-e*E_1(1)) at "
+            "z = 1, unbounded as z -> inf); no unique numeric G follows "
+            "without a further scheme-selection input, which no accepted "
+            "claim supplies"
+        ),
+        premises=(
+            "additive baseline B free (declared premise per C-GRV-001); "
+            "B = 0 is itself a declared premise, not a derived value",
+            "xi = 1/6: Delta = 0 identically (conformal point), no induced "
+            "Newton constant, purely-induced reading lands on the marginal "
+            "locus 1/G_total = 0",
+            "control regime: z >= z_min > 0 for the tau^-1 sector and "
+            "Lambda**-2*||R_E|| <= eps << 1 for the nonlocal remainder "
+            "(predeclared domain of the control ledger)",
+        ),
+        provenance=(
+            "C-GRV-001 (accepted, v0.68.0): dimensional permission and "
+            "additive-baseline ledger",
+            "C-IGR-001, C-IGR-002, C-IGR-003 (accepted, v0.161.0): exact "
+            "sharp/smooth/power-subtracted I_2/I_3 families and the "
+            "scheme-dependence results",
+            "Vassilevich arXiv:hep-th/0306138: heat-kernel/determinant "
+            "conventions (approved primary import)",
+            "Visser arXiv:gr-qc/0204062: effective-action organization "
+            "(approved primary import)",
+        ),
+        non_authority=(
+            "scalar_induced_newton.py: landed conditional, unpromoted; "
+            "implementation reuse only",
+            "covariant_sine_gordon_action.py: landed conditional, "
+            "unpromoted; implementation reuse only",
+        ),
+        open_items=(
+            "no unique numeric Newton constant (scheme bracket is the "
+            "quoted ceiling)",
+            "claim promotion C-IGR-004/C-GRV-002 happens in a later "
+            "reviewed promotion transaction",
+            "sourced nonflat geometry and radiative predictions are "
+            "later rungs (non-goals of #88)",
+        ),
+    )
+
+
+@dataclass(frozen=True)
+class TotalNewtonConstant:
+    """The total Newton constant per usable scheme, exactly and honestly."""
+
+    regulator: str
+    baseline_inverse_coupling: sp.Expr
+    total_inverse_coupling: sp.Expr
+    total_newton_constant: Any
+    total_sign: int | None
+    attractive_newtonian: bool | None
+    acceptance: str
+    ceiling: str
+
+
+@dataclass(frozen=True)
+class TotalNewtonConstantLedger:
+    """The total Newton constant over the usable scheme set with its bracket."""
+
+    entries: tuple
+    purely_induced_bracket: Any
+    ceiling: str
+
+
+def total_newton_constant(
+    baseline_inverse_coupling: Any,
+    field_count: Any,
+    non_minimal_coupling: Any,
+    *,
+    cutoff: Any,
+    mass_squared: Any = 0,
+) -> TotalNewtonConstantLedger:
+    """Return ``G_total = 1/(B + N*(1-6*xi)*Lambda**2*J(z)/(12*pi))`` per usable scheme.
+
+    The reciprocal preserves the sign, so ``G_total > 0`` exactly when the
+    total inverse coupling is positive; ``G_total < 0`` is the repulsive
+    reading, not an error.  The exact conformal marginal locus
+    ``1/G_total = 0`` has no Newton constant at all and returns ``None``
+    for the constant (never a silent division by zero); symbolic
+    undecidability propagates as ``None`` with the honest acceptance label.
+    """
+
+    entries = []
+    total_sign_ref = None
+    for scheme in USABLE_TOTAL_COUPLING_SCHEMES:
+        total = total_inverse_gravity_coupling(
+            baseline_inverse_coupling,
+            field_count,
+            non_minimal_coupling,
+            regulator=scheme,
+            cutoff=cutoff,
+            mass_squared=mass_squared,
+        )
+        if total.total_sign == 0:
+            constant = None
+            acceptance = "marginal_zero_total_no_newton_constant"
+        else:
+            constant = sp.simplify(1 / total.total_inverse_coupling)
+            acceptance = total.acceptance
+        entries.append(
+            TotalNewtonConstant(
+                regulator=scheme,
+                baseline_inverse_coupling=total.baseline_inverse_coupling,
+                total_inverse_coupling=total.total_inverse_coupling,
+                total_newton_constant=constant,
+                total_sign=total.total_sign,
+                attractive_newtonian=total.attractive_newtonian,
+                acceptance=acceptance,
+                ceiling=(
+                    "scheme bracket R(z) = J_smooth/J_sharp applies to the "
+                    "constant: G_sharp/G_smooth = R(z) on the usable set "
+                    "when the purely-induced reading is taken"
+                ),
+            )
+        )
+    baseline = sp.sympify(baseline_inverse_coupling)
+    xi = sp.sympify(non_minimal_coupling)
+    lam = _positive_exact(cutoff, "cutoff")
+    mass = _nonnegative_exact(mass_squared, "mass_squared")
+    j_sharp = curvature_scale_factor(SHARP_PROPER_TIME_REGULATOR, cutoff=lam, mass_squared=mass)
+    j_smooth = curvature_scale_factor(SMOOTH_PROPER_TIME_REGULATOR, cutoff=lam, mass_squared=mass)
+    if (
+        baseline.is_zero is True
+        and xi.is_real is True
+        and sp.simplify(1 - 6 * xi).is_positive is True
+    ):
+        prefactor = 12 * sp.pi / (_positive_integer(field_count, "field_count") * (1 - 6 * xi) * lam**2)
+        bracket = (
+            sp.simplify(prefactor / j_smooth),
+            sp.simplify(prefactor / j_sharp),
+        )
+    else:
+        bracket = None
+    return TotalNewtonConstantLedger(
+        entries=tuple(entries),
+        purely_induced_bracket=bracket,
+        ceiling=(
+            "G_total is scheme-bracketed by R(z): on the purely-induced "
+            "sub-conformal reading the bracket endpoints are "
+            "12*pi/(N*(1-6*xi)*Lambda**2*J(z)) per usable scheme, with "
+            "G_sharp/G_smooth = R(z) exactly; no unique numeric G follows "
+            "without a further scheme-selection input, which no accepted "
+            "claim supplies"
         ),
     )

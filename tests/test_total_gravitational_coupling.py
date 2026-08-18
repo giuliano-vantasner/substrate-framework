@@ -34,9 +34,11 @@ from substrate_framework.total_gravitational_coupling import (
     curvature_scale_factor,
     higher_curvature_control_ledger,
     purely_induced_attractive_verdict,
+    renormalization_condition,
     scheme_selection_ledger,
     scheme_spread_ratio,
     total_inverse_gravity_coupling,
+    total_newton_constant,
 )
 
 z = sp.symbols("z", positive=True)
@@ -442,3 +444,175 @@ def test_baseline_provenance_purely_induced_and_conformal() -> None:
     assert conformal.purely_induced_total_inverse_coupling == 0
     assert "marginal" in conformal.status
     assert "no Newton constant" in conformal.downstream_ceiling
+
+
+# --- renormalization condition (#88 composition surface: physical_regulator_or_renormalization_condition)
+
+
+def test_renormalization_condition_is_exported_and_declared() -> None:
+    assert framework.renormalization_condition is renormalization_condition
+    record = renormalization_condition(cutoff=sp.Integer(1), mass_squared=sp.Rational(1, 4))
+    assert record.usable_schemes == USABLE_TOTAL_COUPLING_SCHEMES
+    assert record.excluded_schemes == EXCLUDED_TOTAL_COUPLING_SCHEMES
+    assert record.reference_scheme == SHARP_PROPER_TIME_REGULATOR
+    assert "1/G_total" in record.statement and "declared premise" in record.statement
+    assert len(record.selection_legs) == 3
+    assert all(leg.startswith(prefix) for leg, prefix in zip(record.selection_legs, ("L1", "L2", "L3")))
+    assert any("L3" in leg for leg in record.selection_legs)
+
+
+def test_condition_finite_parts_are_outputs_of_substrate_structure() -> None:
+    record = renormalization_condition(cutoff=sp.Integer(1), mass_squared=sp.Rational(1, 4))
+    # the finite parts are exactly the derived scale factors, not chosen numbers
+    assert sp.simplify(
+        record.finite_parts[SHARP_PROPER_TIME_REGULATOR]
+        - curvature_scale_factor(SHARP_PROPER_TIME_REGULATOR, cutoff=1, mass_squared=sp.Rational(1, 4))
+    ) == 0
+    assert sp.simplify(
+        record.finite_parts[SMOOTH_PROPER_TIME_REGULATOR]
+        - curvature_scale_factor(SMOOTH_PROPER_TIME_REGULATOR, cutoff=1, mass_squared=sp.Rational(1, 4))
+    ) == 0
+    ledger = scheme_selection_ledger(cutoff=1, mass_squared=sp.Rational(1, 4))
+    assert set(record.finite_parts) == set(ledger.usable_schemes)
+
+
+def test_reference_scheme_massless_limit_reproduces_cgrv001_shift() -> None:
+    # the sharp member's massless limit reproduces the accepted s*Lambda^2 shift
+    record = renormalization_condition(cutoff=sp.Integer(1), mass_squared=0)
+    assert record.reference_scheme == SHARP_PROPER_TIME_REGULATOR
+    assert record.finite_parts[SHARP_PROPER_TIME_REGULATOR] == 1
+    assert record.finite_parts[SMOOTH_PROPER_TIME_REGULATOR] == 1
+    shift = exact_mass_inverse_newton_shift(3, sp.Rational(0), regulator=SHARP_PROPER_TIME_REGULATOR, cutoff=1, mass_squared=0)
+    assert sp.simplify(shift.value - 3 * (1 - 0) * 1 / (12 * sp.pi)) == 0
+    assert "E_cut = hbar*c/a" in record.reference_justification
+
+
+def test_condition_provenance_and_non_authority_are_explicit() -> None:
+    record = renormalization_condition(cutoff=sp.Integer(1), mass_squared=sp.Rational(1, 4))
+    joined = " ".join(record.provenance).lower()
+    assert "c-grv-001" in joined and "c-igr-001" in joined
+    assert "vassilevich" in joined and "visser" in joined
+    nonauth = " ".join(record.non_authority).lower()
+    assert "scalar_induced_newton" in nonauth and "unpromoted" in nonauth
+    assert "covariant_sine_gordon_action" in nonauth
+    open_items = " ".join(record.open_items).lower()
+    assert "no unique numeric" in open_items
+    assert "promotion" in open_items
+
+
+# --- total Newton constant (#88 surface: total_Newton_constant)
+
+
+def test_total_newton_constant_reciprocal_identity() -> None:
+    ledger = total_newton_constant(sp.Integer(0), 3, sp.Rational(0), cutoff=1, mass_squared=sp.Rational(1, 4))
+    for entry in ledger.entries:
+        assert sp.simplify(entry.total_newton_constant * entry.total_inverse_coupling - 1) == 0
+        assert entry.attractive_newtonian is True and entry.total_sign == 1
+
+
+def test_total_newton_constant_purely_induced_bracket_equals_spread_ratio() -> None:
+    ledger = total_newton_constant(sp.Integer(0), 3, sp.Rational(0), cutoff=1, mass_squared=sp.Rational(1, 4))
+    by_scheme = {e.regulator: e for e in ledger.entries}
+    j_sharp = curvature_scale_factor(SHARP_PROPER_TIME_REGULATOR, cutoff=1, mass_squared=sp.Rational(1, 4))
+    j_smooth = curvature_scale_factor(SMOOTH_PROPER_TIME_REGULATOR, cutoff=1, mass_squared=sp.Rational(1, 4))
+    # bracket endpoints are 12*pi/(N*J(z)) per scheme and the G ratio is R(z) exactly
+    assert sp.simplify(ledger.purely_induced_bracket[1] - 12 * sp.pi / (3 * j_sharp)) == 0
+    assert sp.simplify(ledger.purely_induced_bracket[0] - 12 * sp.pi / (3 * j_smooth)) == 0
+    ratio = sp.simplify(
+        by_scheme[SHARP_PROPER_TIME_REGULATOR].total_newton_constant
+        / by_scheme[SMOOTH_PROPER_TIME_REGULATOR].total_newton_constant
+    )
+    assert sp.simplify(ratio - j_smooth / j_sharp) == 0
+
+
+def test_total_newton_constant_conformal_marginal_returns_none() -> None:
+    ledger = total_newton_constant(sp.Integer(0), 3, sp.Rational(1, 6), cutoff=1, mass_squared=sp.Rational(1, 4))
+    for entry in ledger.entries:
+        assert entry.total_newton_constant is None
+        assert entry.acceptance == "marginal_zero_total_no_newton_constant"
+        assert entry.total_sign == 0
+    assert ledger.purely_induced_bracket is None
+
+
+def test_total_newton_constant_repulsive_is_negative_not_error() -> None:
+    ledger = total_newton_constant(sp.Integer(-1), 1, sp.Rational(1, 3), cutoff=1, mass_squared=1)
+    for entry in ledger.entries:
+        assert entry.total_sign == -1
+        assert entry.attractive_newtonian is False
+        numeric = sp.Float(sp.N(entry.total_newton_constant, 50), 50)
+        assert numeric < 0  # reciprocal preserves the sign: G_total < 0
+
+
+def test_total_newton_constant_symbolic_baseline_propagates_undecidability() -> None:
+    ledger = total_newton_constant(
+        sp.Symbol("B", real=True), 1, sp.Rational(1, 5), cutoff=1, mass_squared=1
+    )
+    for entry in ledger.entries:
+        assert entry.total_sign is None and entry.attractive_newtonian is None
+        assert entry.acceptance == "undecidable_symbolic_total"
+    # but the half-line contract still certifies B >= 0
+    certified = total_newton_constant(
+        sp.Symbol("B", real=True, negative=False), 1, sp.Rational(0), cutoff=1, mass_squared=1
+    )
+    for entry in certified.entries:
+        assert entry.total_sign == 1 and entry.attractive_newtonian is True
+
+
+def test_total_newton_constant_never_nan_or_zoo() -> None:
+    for mass in (0, sp.Rational(1, 4), 25):
+        ledger = total_newton_constant(sp.Rational(1, 100), 3, sp.Rational(0), cutoff=1, mass_squared=mass)
+        for entry in ledger.entries:
+            value = entry.total_newton_constant
+            assert value is not None
+            assert sp.Float(sp.N(value, 50)) == sp.Float(sp.N(value, 50))  # not NaN
+            assert entry.total_newton_constant != sp.zoo
+
+
+def test_newton_constant_mutations_break_load_bearing_checks() -> None:
+    # wrong bracket endpoint: swapped schemes
+    ledger = total_newton_constant(sp.Integer(0), 3, sp.Rational(0), cutoff=1, mass_squared=sp.Rational(1, 4))
+    j_sharp = curvature_scale_factor(SHARP_PROPER_TIME_REGULATOR, cutoff=1, mass_squared=sp.Rational(1, 4))
+    wrong_endpoint = 12 * sp.pi / (3 * j_sharp)
+    assert sp.simplify(ledger.purely_induced_bracket[0] - wrong_endpoint) != 0
+    # wrong reciprocal sign: -1/total is not the constant
+    for entry in ledger.entries:
+        assert sp.simplify(-1 / entry.total_inverse_coupling - entry.total_newton_constant) != 0
+    # wrong reference scheme in the condition: smooth does not match the cutoff ontology
+    record = renormalization_condition(cutoff=1, mass_squared=sp.Rational(1, 4))
+    assert record.reference_scheme != SMOOTH_PROPER_TIME_REGULATOR
+
+
+def test_tuned_marginal_boundary_is_evaluable_and_exact() -> None:
+    """F8 repair: the sign map's own boundary B* = -Delta must be an admissible input.
+
+    The boundary contains SymPy-undecidable real constants (E1, BesselK); the
+    input gate certifies symbol-free finite-real constants numerically instead
+    of rejecting them, and the boundary evaluation returns the marginal locus
+    (no Newton constant, never zoo) in the tuned scheme while the other usable
+    scheme honestly keeps its own verdict.
+    """
+    delta = total_inverse_gravity_coupling(
+        sp.Integer(0), 1, sp.Rational(0), regulator=SHARP_PROPER_TIME_REGULATOR, cutoff=1, mass_squared=1
+    ).induced_shift
+    ledger = total_newton_constant(-delta, 1, sp.Rational(0), cutoff=1, mass_squared=1)
+    by_scheme = {e.regulator: e for e in ledger.entries}
+    tuned = by_scheme[SHARP_PROPER_TIME_REGULATOR]
+    assert tuned.total_sign == 0
+    assert tuned.total_newton_constant is None
+    assert tuned.acceptance == "marginal_zero_total_no_newton_constant"
+    other = by_scheme[SMOOTH_PROPER_TIME_REGULATOR]
+    assert other.total_sign == 1 and other.attractive_newtonian is True
+    assert sp.simplify(tuned.total_inverse_coupling) == 0
+
+
+def test_baseline_gate_rejects_symbolic_undecidable_and_nonfinite() -> None:
+    """The F8 repair widens the gate only for symbol-free finite real constants."""
+    for bad in (sp.Symbol("B"), sp.Symbol("B", real=False) + 0 * sp.Symbol("x"), sp.oo, sp.nan, sp.I):
+        try:
+            total_inverse_gravity_coupling(
+                bad, 1, sp.Rational(0), regulator=SHARP_PROPER_TIME_REGULATOR, cutoff=1, mass_squared=1
+            )
+            raised = False
+        except ValueError:
+            raised = True
+        assert raised, f"{bad!r} must be rejected by the baseline gate"
