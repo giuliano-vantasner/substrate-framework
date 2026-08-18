@@ -63,3 +63,4 @@ Accepted in `v0.143.0` with provenance `campaigns/P192-wn4-derived-weight-crosso
 - `memory/vantasner/decisions/WN4-qualified-review.md`
 - `src/substrate_framework/bosonic_fock.py`
 - `tests/test_factorial_one_distribution.py`
+- `formal/SubstrateFramework/Ingested/Phase37WNKernel.lean`

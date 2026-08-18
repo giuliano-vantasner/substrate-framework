@@ -55,3 +55,4 @@ Accepted in `v0.139.0` with provenance `campaigns/P187-gk3d3-transmutation-logar
 - `memory/vantasner/decisions/GK3D3-qualified-review.md`
 - `src/substrate_framework/kinetic_scale_matching.py`
 - `tests/test_kinetic_scale_matching.py`
+- `formal/SubstrateFramework/Ingested/Phase41GaugeKinetic.lean`

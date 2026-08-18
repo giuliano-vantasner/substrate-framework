@@ -1,0 +1,552 @@
+campaign: P232
+title: Historical Lean corpus census and corroboration evidence transaction
+base_release: v0.161.0
+base_commit: db082ec
+adjudicated_at: '2026-08-18T21:30:00+02:00'
+deliverable: Census of all 60 ingested files / 467 manifest theorems against the v0.161.0 registry with
+  per-theorem classification and the reviewed attachment of Lean verification evidence.
+census_counts:
+  files: 60
+  manifest_theorems: 467
+  corroboration_attachments: 59
+  claims_receiving_lean_evidence: 43
+  new_standalone_exact_facts: 10
+  composed_theorems: 2
+  infrastructure_dispositions: remaining theorems with recorded dispositions (census.yaml)
+attachments:
+- claim: C-ANO-001
+  decision: accepted
+  records:
+  - artifact: formal/SubstrateFramework/Ingested/Phase9SM_AnomalyCancellation.lean
+    entrypoints:
+    - anomaly_U1_cubed
+    - anomaly_grav_U1
+    - anomaly_SU2_sq_U1
+    - anomaly_SU3_sq_U1
+    - witten_even
+    - all_anomalies_cancel
+    - nontautology_guard
+    scope_review: campaigns/P232-lean-corpus-census/reviews/C-ANO-001-lean-evidence.md
+- claim: C-BPS-001
+  decision: accepted
+  records:
+  - artifact: formal/SubstrateFramework/Ingested/Phase34KIKernel.lean
+    entrypoints:
+    - derivedScale_flow_invariant
+    - eps_flow_scales
+    - eps_flow_nontrivial
+    scope_review: campaigns/P232-lean-corpus-census/reviews/C-BPS-001-lean-evidence.md
+- claim: C-BPS-002
+  decision: accepted
+  records:
+  - artifact: formal/SubstrateFramework/Ingested/Phase29YieldKernel.lean
+    entrypoints:
+    - bps_zero_binding
+    scope_review: campaigns/P232-lean-corpus-census/reviews/C-BPS-002-lean-evidence.md
+- claim: C-BRN-001
+  decision: accepted
+  records:
+  - artifact: formal/SubstrateFramework/Ingested/Phase30PNKernel.lean
+    entrypoints:
+    - dicke_rate_not_squared
+    scope_review: campaigns/P232-lean-corpus-census/reviews/C-BRN-001-lean-evidence.md
+  - artifact: formal/SubstrateFramework/Ingested/Phase31CMKernel.lean
+    entrypoints:
+    - collective_exceeds_two_body
+    - rate_linear_not_squared
+    scope_review: campaigns/P232-lean-corpus-census/reviews/C-BRN-001-lean-evidence.md
+  - artifact: formal/SubstrateFramework/Ingested/Phase32GBKernel.lean
+    entrypoints:
+    - enh_grows
+    - rate_linear_not_squared
+    scope_review: campaigns/P232-lean-corpus-census/reviews/C-BRN-001-lean-evidence.md
+  - artifact: formal/SubstrateFramework/Ingested/Phase38MDKernel.lean
+    entrypoints:
+    - branching_antitone
+    - branching_mem_unit
+    - branching_antitone_not_vacuous
+    scope_review: campaigns/P232-lean-corpus-census/reviews/C-BRN-001-lean-evidence.md
+- claim: C-CHI-001
+  decision: accepted
+  records:
+  - artifact: formal/SubstrateFramework/Ingested/Phase18Chiral_GoldstoneCount.lean
+    entrypoints:
+    - pion_triplet
+    - broken_generators_eq_diagonal
+    - vector_unbroken
+    scope_review: campaigns/P232-lean-corpus-census/reviews/C-CHI-001-lean-evidence.md
+- claim: C-CHR-001
+  decision: accepted
+  records:
+  - artifact: formal/SubstrateFramework/Ingested/Phase19_OM1_Z2Character.lean
+    entrypoints:
+    - chiF_generator
+    - chiF_double
+    - chiF_nontrivial
+    - chiF_is_unique_nontrivial
+    scope_review: campaigns/P232-lean-corpus-census/reviews/C-CHR-001-lean-evidence.md
+  - artifact: formal/SubstrateFramework/Ingested/Phase20ME_HalfQuantumOrder2.lean
+    entrypoints:
+    - chiHQ_generator
+    - chiHQ_double
+    - chiHQ_nontrivial
+    scope_review: campaigns/P232-lean-corpus-census/reviews/C-CHR-001-lean-evidence.md
+- claim: C-CMB-003
+  decision: accepted
+  records:
+  - artifact: formal/SubstrateFramework/Ingested/Phase37WNKernel.lean
+    entrypoints:
+    - weight_pos
+    - crossover
+    - growth_limb
+    - halving_tail
+    - crossover_not_vacuous
+    - both_limbs_realized
+    scope_review: campaigns/P232-lean-corpus-census/reviews/C-CMB-003-lean-evidence.md
+- claim: C-DYN-001
+  decision: accepted
+  records:
+  - artifact: formal/SubstrateFramework/Ingested/Phase26LifetimeKernel.lean
+    entrypoints:
+    - Ncoh_vanishes_overdamped
+    scope_review: campaigns/P232-lean-corpus-census/reviews/C-DYN-001-lean-evidence.md
+- claim: C-GSK-001
+  decision: accepted
+  records:
+  - artifact: formal/SubstrateFramework/Ingested/Phase40TX_RotatingTorus.lean
+    entrypoints:
+    - tail_exponent_one
+    scope_review: campaigns/P232-lean-corpus-census/reviews/C-GSK-001-lean-evidence.md
+- claim: C-GW-002
+  decision: accepted
+  records:
+  - artifact: formal/SubstrateFramework/Ingested/Phase16QB_TwoPolarizations.lean
+    entrypoints:
+    - triaxial_two_polarizations
+    - at_most_two_polarizations
+    - two_polarizations_iff_cross
+    - both_excite_plus
+    scope_review: campaigns/P232-lean-corpus-census/reviews/C-GW-002-lean-evidence.md
+- claim: C-GW-005
+  decision: accepted
+  records:
+  - artifact: formal/SubstrateFramework/Ingested/Phase16QB_TwoPolarizations.lean
+    entrypoints:
+    - axisym_one_polarization
+    - axisym_no_cross
+    - only_triaxial_excites_cross
+    scope_review: campaigns/P232-lean-corpus-census/reviews/C-GW-005-lean-evidence.md
+- claim: C-GW-009
+  decision: accepted
+  records:
+  - artifact: formal/SubstrateFramework/Ingested/Phase40TX_RotatingTorus.lean
+    entrypoints:
+    - quad_traceless
+    - triaxial_generic
+    - circular_on_axis
+    - perp_radiates
+    - axis_null
+    - polarization_ratio_free
+    scope_review: campaigns/P232-lean-corpus-census/reviews/C-GW-009-lean-evidence.md
+- claim: C-IDN-001
+  decision: accepted
+  records:
+  - artifact: formal/SubstrateFramework/Ingested/Phase21AS_OverDetermination.lean
+    entrypoints:
+    - odV1_underdetermined
+    - odV2_overdetermined
+    - the_flip
+    - fab_not_over
+    - fab_fails_on_rank_not_constraints
+    scope_review: campaigns/P232-lean-corpus-census/reviews/C-IDN-001-lean-evidence.md
+  - artifact: formal/SubstrateFramework/Ingested/Phase22AS_BetaPinnedScale.lean
+    entrypoints:
+    - odV2_overdetermined
+    - odV3_overdetermined
+    - the_second_reduction
+    - pin_odV2_is_odV3
+    - reduction_independent_of_pinned_value
+    - AS7_pin_gives_same_reduction
+    - refloat_not_reduced
+    scope_review: campaigns/P232-lean-corpus-census/reviews/C-IDN-001-lean-evidence.md
+- claim: C-IDN-002
+  decision: accepted
+  records:
+  - artifact: formal/SubstrateFramework/Ingested/Phase34KIKernel.lean
+    entrypoints:
+    - backsolve_is_identity
+    scope_review: campaigns/P232-lean-corpus-census/reviews/C-IDN-002-lean-evidence.md
+- claim: C-KRN-001
+  decision: accepted
+  records:
+  - artifact: formal/SubstrateFramework/Ingested/Phase19_D3S_LocalityImpliesS1.lean
+    entrypoints:
+    - analytic_even_symbol_power_two_is_s1
+    - s1_symbol_power_is_two
+    - fractional_symbol_power_one_not_s1
+    - analytic_distinguishes_local_from_fractional
+    - even_symbol_power_is_integer_order
+    scope_review: campaigns/P232-lean-corpus-census/reviews/C-KRN-001-lean-evidence.md
+- claim: C-LIE-001
+  decision: accepted
+  records:
+  - artifact: formal/SubstrateFramework/Ingested/Phase8QCD_SU3GaugeFacts.lean
+    entrypoints:
+    - dynkin_fundamental
+    - casimir_adjoint_three
+    - casimir_fundamental_value
+    - casimir_dynkin_consistency_general
+    scope_review: campaigns/P232-lean-corpus-census/reviews/C-LIE-001-lean-evidence.md
+- claim: C-MED-003
+  decision: accepted
+  records:
+  - artifact: formal/SubstrateFramework/Ingested/Phase27MediumKernel.lean
+    entrypoints:
+    - isotope_ratio
+    - isotope_ratio_DH
+    - isotope_shift_nontrivial
+    scope_review: campaigns/P232-lean-corpus-census/reviews/C-MED-003-lean-evidence.md
+- claim: C-MIX-002
+  decision: accepted
+  records:
+  - artifact: formal/SubstrateFramework/Ingested/Phase11Flavor_CPPhaseCount.lean
+    entrypoints:
+    - cpPhases_two
+    - cpPhases_three
+    - mixingAngles_two
+    - mixingAngles_three
+    - removablePhases_three
+    - param_count_identity
+    - cp_requires_three_generations
+    - cp_vanishes_below_three
+    scope_review: campaigns/P232-lean-corpus-census/reviews/C-MIX-002-lean-evidence.md
+- claim: C-MOM-003
+  decision: accepted
+  records:
+  - artifact: formal/SubstrateFramework/Ingested/Phase14P3D_SphericalNull.lean
+    entrypoints:
+    - spherical_breather_radiates_nothing
+    - monopole_silent
+    - dipole_silent
+    - subquadrupole_moments_null
+    - spherical_below_threshold
+    scope_review: campaigns/P232-lean-corpus-census/reviews/C-MOM-003-lean-evidence.md
+- claim: C-OVL-002
+  decision: accepted
+  records:
+  - artifact: formal/SubstrateFramework/Ingested/Phase20MH_OverlapHierarchy.lean
+    entrypoints:
+    - hierarchy_strictMono
+    - hierarchy_orders_of_magnitude
+    - flat_condensate_equal
+    - flat_not_strict
+    - capstone
+    scope_review: campaigns/P232-lean-corpus-census/reviews/C-OVL-002-lean-evidence.md
+- claim: C-REP-001
+  decision: accepted
+  records:
+  - artifact: formal/SubstrateFramework/Ingested/Phase23EW_Sin2ThetaW.lean
+    entrypoints:
+    - tr_T3sq_eq
+    - tr_Ysq_eq
+    - tr_T3Y_eq
+    - tr_Qsq_eq
+    - qsq_splits
+    - sin2thetaW_eq
+    - nontautology_guard
+    scope_review: campaigns/P232-lean-corpus-census/reviews/C-REP-001-lean-evidence.md
+- claim: C-RMOM-001
+  decision: accepted
+  records:
+  - artifact: formal/SubstrateFramework/Ingested/Phase40TX_RotatingTorus.lean
+    entrypoints:
+    - spherical_null
+    - triaxial_needs_q
+    scope_review: campaigns/P232-lean-corpus-census/reviews/C-RMOM-001-lean-evidence.md
+- claim: C-ROT-001
+  decision: accepted
+  records:
+  - artifact: formal/SubstrateFramework/Ingested/Phase40TX_RotatingTorus.lean
+    entrypoints:
+    - inertia_from_quadrupole
+    scope_review: campaigns/P232-lean-corpus-census/reviews/C-ROT-001-lean-evidence.md
+- claim: C-RPROF-002
+  decision: accepted
+  records:
+  - artifact: formal/SubstrateFramework/Ingested/Phase29YieldKernel.lean
+    entrypoints:
+    - binding_hierarchy
+    - classical_overbinds_B2
+    - classical_overbinds_B4
+    scope_review: campaigns/P232-lean-corpus-census/reviews/C-RPROF-002-lean-evidence.md
+  - artifact: formal/SubstrateFramework/Ingested/Phase40TX_RotatingTorus.lean
+    entrypoints:
+    - fission_bound
+    scope_review: campaigns/P232-lean-corpus-census/reviews/C-RPROF-002-lean-evidence.md
+- claim: C-SG-002
+  decision: accepted
+  records:
+  - artifact: formal/SubstrateFramework/Ingested/Energy.lean
+    entrypoints:
+    - E_breather_pos_lt_pair
+    scope_review: campaigns/P232-lean-corpus-census/reviews/C-SG-002-lean-evidence.md
+- claim: C-SG-003
+  decision: accepted
+  records:
+  - artifact: formal/SubstrateFramework/Ingested/ActionQuantum.lean
+    entrypoints:
+    - cos_action_eq_freq
+    - E_breather_eq_sin_action
+    - action_pos_lt_eight_pi
+    - sqrt_one_sub_sq_pos
+    scope_review: campaigns/P232-lean-corpus-census/reviews/C-SG-003-lean-evidence.md
+- claim: C-SG-005
+  decision: accepted
+  records:
+  - artifact: formal/SubstrateFramework/Ingested/Gates.lean
+    entrypoints:
+    - gate1_energy_budget
+    scope_review: campaigns/P232-lean-corpus-census/reviews/C-SG-005-lean-evidence.md
+  - artifact: formal/SubstrateFramework/Ingested/Energy.lean
+    entrypoints:
+    - binding_gap_nonneg
+    - binding_gap_pos
+    - breather_plus_gap_eq_pair
+    - E_breather_le_pair
+    scope_review: campaigns/P232-lean-corpus-census/reviews/C-SG-005-lean-evidence.md
+  - artifact: formal/SubstrateFramework/Ingested/Formalization.lean
+    entrypoints:
+    - binding_gap_nonneg
+    - binding_gap_pos
+    - breather_plus_gap_eq_pair
+    - E_breather_le_pair
+    - E_breather_pos_lt_pair
+    scope_review: campaigns/P232-lean-corpus-census/reviews/C-SG-005-lean-evidence.md
+- claim: C-SG-006
+  decision: accepted
+  records:
+  - artifact: formal/SubstrateFramework/Ingested/ActionQuantum.lean
+    entrypoints:
+    - hbar_eff_strict_anti
+    - hbar_eff_not_constant
+    - action_over_hbar_eff
+    scope_review: campaigns/P232-lean-corpus-census/reviews/C-SG-006-lean-evidence.md
+- claim: C-SG-009
+  decision: accepted
+  records:
+  - artifact: formal/SubstrateFramework/Ingested/Phase13FS_HarmonicDoubling.lean
+    entrypoints:
+    - quadratic_source_radiates_at_2omega
+    - quadratic_harmonics_all_even
+    - quadratic_harmonics_even
+    - quadratic_not_fundamental
+    - quadratic_at_least_doubled
+    - lowest_parity_matches_power_even
+    - lowest_parity_matches_power_odd
+    scope_review: campaigns/P232-lean-corpus-census/reviews/C-SG-009-lean-evidence.md
+- claim: C-SG-011
+  decision: accepted
+  records:
+  - artifact: formal/SubstrateFramework/Ingested/Phase15NC_NonlinearChiralSplit.lean
+    entrypoints:
+    - topo_conserved
+    - chiral_not_conserved
+    - conservation_splits_the_currents
+    - chiral_source_present
+    - topo_charge_parity_odd
+    - parity_actually_flips_charge
+    - only_topological_matches
+    - nonlinear_parity_violation_survives
+    scope_review: campaigns/P232-lean-corpus-census/reviews/C-SG-011-lean-evidence.md
+  - artifact: formal/SubstrateFramework/Ingested/ChargeDiscrimination.lean
+    entrypoints:
+    - channels_cp_conjugate
+    - charge_step_counts_one
+    scope_review: campaigns/P232-lean-corpus-census/reviews/C-SG-011-lean-evidence.md
+  - artifact: formal/SubstrateFramework/Ingested/Formalization.lean
+    entrypoints:
+    - halfLineCharge_deriv_eq_neg_phi_t_div_2pi
+    scope_review: campaigns/P232-lean-corpus-census/reviews/C-SG-011-lean-evidence.md
+- claim: C-SG-012
+  decision: accepted
+  records:
+  - artifact: formal/SubstrateFramework/Ingested/EnergyFlux.lean
+    entrypoints:
+    - energyFlux_sign_absorbing
+    - energyFlux_sign_pumping
+    - energyFlux_zero_if_either_zero
+    - energyFluxPiston_zero_if_any_zero
+    scope_review: campaigns/P232-lean-corpus-census/reviews/C-SG-012-lean-evidence.md
+- claim: C-SG-016
+  decision: accepted
+  records:
+  - artifact: formal/SubstrateFramework/Ingested/Phase26LifetimeKernel.lean
+    entrypoints:
+    - lifetime_strictAntiOn
+    - lifetime_unbounded_as_lossless
+    scope_review: campaigns/P232-lean-corpus-census/reviews/C-SG-016-lean-evidence.md
+- claim: C-SG-017
+  decision: accepted
+  records:
+  - artifact: formal/SubstrateFramework/Ingested/Phase27MediumKernel.lean
+    entrypoints:
+    - kappaSq_pos_iff
+    - gapless_no_breather
+    - above_gap_no_breather
+    - breather_exists_example
+    - breather_predicate_has_content
+    scope_review: campaigns/P232-lean-corpus-census/reviews/C-SG-017-lean-evidence.md
+- claim: C-SK-001
+  decision: accepted
+  records:
+  - artifact: formal/SubstrateFramework/Ingested/Phase47BM_RigidTopSpectrum.lean
+    entrypoints:
+    - classical_identification
+    scope_review: campaigns/P232-lean-corpus-census/reviews/C-SK-001-lean-evidence.md
+- claim: C-TH-001
+  decision: accepted
+  records:
+  - artifact: formal/SubstrateFramework/Ingested/Phase1Bridge_ThermalGate.lean
+    entrypoints:
+    - thermal_gate_eq_sech_sq
+    scope_review: campaigns/P232-lean-corpus-census/reviews/C-TH-001-lean-evidence.md
+  - artifact: formal/SubstrateFramework/Ingested/Phase28BarrierKernel.lean
+    entrypoints:
+    - gate_le_half
+    - gate_eq_half_at_half
+    scope_review: campaigns/P232-lean-corpus-census/reviews/C-TH-001-lean-evidence.md
+  - artifact: formal/SubstrateFramework/Ingested/LandauZener.lean
+    entrypoints:
+    - ionizationWeight_max
+    - ionizationWeight_at_half
+    scope_review: campaigns/P232-lean-corpus-census/reviews/C-TH-001-lean-evidence.md
+- claim: C-TOP-001
+  decision: accepted
+  records:
+  - artifact: formal/SubstrateFramework/Ingested/Phase4Strong_FRSpinStat.lean
+    entrypoints:
+    - skyrmion_odd_is_fermion
+    - skyrmion_even_is_boson
+    - skyrmion_parity_charge_conjugate
+    scope_review: campaigns/P232-lean-corpus-census/reviews/C-TOP-001-lean-evidence.md
+  - artifact: formal/SubstrateFramework/Ingested/Phase20ME_HalfQuantumOrder2.lean
+    entrypoints:
+    - halfQuantum_add_self
+    - halfQuantum_ne_zero
+    - halfQuantum_addOrderOf
+    scope_review: campaigns/P232-lean-corpus-census/reviews/C-TOP-001-lean-evidence.md
+  - artifact: formal/SubstrateFramework/Ingested/Phase46EL_LeptonConstraint.lean
+    entrypoints:
+    - parity_hom
+    - parity_eq_ite
+    - parity_zero
+    - parity_one
+    - parity_two
+    scope_review: campaigns/P232-lean-corpus-census/reviews/C-TOP-001-lean-evidence.md
+  - artifact: formal/SubstrateFramework/Ingested/ChargeDiscrimination.lean
+    entrypoints:
+    - both_channels_parity_minus_one
+    - reflectedCharge_parity_is_minus_one
+    scope_review: campaigns/P232-lean-corpus-census/reviews/C-TOP-001-lean-evidence.md
+  - artifact: formal/SubstrateFramework/Ingested/Formalization.lean
+    entrypoints:
+    - fermionParity_sq_eq_one
+    - fermionParity_zero
+    - fermionParity_one
+    - fermionParity_neg_one
+    scope_review: campaigns/P232-lean-corpus-census/reviews/C-TOP-001-lean-evidence.md
+- claim: C-U1-001
+  decision: accepted
+  records:
+  - artifact: formal/SubstrateFramework/Ingested/Phase3EM_U1Current.lean
+    entrypoints:
+    - u1_divergence_identity
+    - u1_conservation
+    - u1_phase_breaking_witness
+    scope_review: campaigns/P232-lean-corpus-census/reviews/C-U1-001-lean-evidence.md
+- claim: C-U1-002
+  decision: accepted
+  records:
+  - artifact: formal/SubstrateFramework/Ingested/ActionQuantum.lean
+    entrypoints:
+    - charge_action_reciprocity
+    - hbar_eff_eq_sixtyfour_div_charge
+    scope_review: campaigns/P232-lean-corpus-census/reviews/C-U1-002-lean-evidence.md
+- claim: C-VAC-002
+  decision: accepted
+  records:
+  - artifact: formal/SubstrateFramework/Ingested/Phase41GaugeKinetic.lean
+    entrypoints:
+    - constant_polarization_forces_D_two
+    scope_review: campaigns/P232-lean-corpus-census/reviews/C-VAC-002-lean-evidence.md
+- claim: C-VAC-004
+  decision: accepted
+  records:
+  - artifact: formal/SubstrateFramework/Ingested/Phase41GaugeKinetic.lean
+    entrypoints:
+    - induced_normalization_closes
+    - induced_coupling_is_pure_ratio
+    - ratio_indep_of_scale_choice
+    scope_review: campaigns/P232-lean-corpus-census/reviews/C-VAC-004-lean-evidence.md
+- claim: C-WIL-001
+  decision: accepted
+  records:
+  - artifact: formal/SubstrateFramework/Ingested/Phase10CF_Z3CenterConfinement.lean
+    entrypoints:
+    - area_law_unbounded
+    - perimeter_law_bounded
+    - deconfined_sigma_zero
+    scope_review: campaigns/P232-lean-corpus-census/reviews/C-WIL-001-lean-evidence.md
+- claim: C-WZW-002
+  decision: accepted
+  records:
+  - artifact: formal/SubstrateFramework/Ingested/Phase17WZW_LevelWinding.lean
+    entrypoints:
+    - wzw_level_integer
+    - integer_level_single_valued
+    - half_integer_fails_single_valued
+    - integrality_is_a_real_cut
+    scope_review: campaigns/P232-lean-corpus-census/reviews/C-WZW-002-lean-evidence.md
+- claim: C-XOV-001
+  decision: accepted
+  records:
+  - artifact: formal/SubstrateFramework/Ingested/Phase34KIKernel.lean
+    entrypoints:
+    - kappa_surjective
+    - zero_information_gain
+    scope_review: campaigns/P232-lean-corpus-census/reviews/C-XOV-001-lean-evidence.md
+promotions_delegated:
+- campaign: P233-lean-discrete-facts
+  claims:
+  - C-GW-011
+  - C-GW-012
+  - C-EW-001
+  - C-WK-001
+  - C-CF-001
+  - C-ROT-002
+  - C-GSK-003
+  - C-SG-020
+  - C-SG-022
+  - C-VIR-002
+- campaign: P234-lean-polarization-split
+  claims:
+  - C-GW-013
+- campaign: P235-lean-radiating-channel
+  claims:
+  - C-GW-014
+preliminary_scan_corrections:
+- item: CP-phase count
+  correction: C-MIX-002 already states the (N-1)(N-2)/2 phase count with 0 at N=2 and 1 at N=3; Phase11Flavor
+    attaches as corroboration, not a promotion.
+- item: S-matrix time-delay values
+  correction: the Lean definition is a hardcoded branch function with a pasted decimal; reclassified class
+    4, not promoted.
+evidence:
+  proposal: proposal.yaml
+  census: census.yaml
+  scope_reviews: 43 files under reviews/
+validation_commands:
+- PYTHONPATH_src_python_python_census_consistency_test
+- PYTHONPATH_src_python_scripts_validate_repository_py
+debt: []
+status: accepted

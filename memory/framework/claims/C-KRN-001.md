@@ -40,3 +40,4 @@ Accepted in `v0.58.0` with provenance `campaigns/P064-d3s-gap-locality-coulomb/a
 - `campaigns/P064-d3s-gap-locality-coulomb/reviews/source_adjudication.md`
 - `memory/vantasner/decisions/C-KRN-001-review.md`
 - `tests/test_momentum_kernels.py`
+- `formal/SubstrateFramework/Ingested/Phase19_D3S_LocalityImpliesS1.lean`

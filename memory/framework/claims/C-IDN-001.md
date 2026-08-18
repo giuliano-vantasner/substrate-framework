@@ -44,3 +44,5 @@ Accepted in `v0.59.0` with provenance `campaigns/P065-od-absolute-scale-identifi
 - `memory/vantasner/decisions/C-IDN-001-review.md`
 - `tests/test_scale_constraints.py`
 - `tests/test_linear_systems.py`
+- `formal/SubstrateFramework/Ingested/Phase21AS_OverDetermination.lean`
+- `formal/SubstrateFramework/Ingested/Phase22AS_BetaPinnedScale.lean`

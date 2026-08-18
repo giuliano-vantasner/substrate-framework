@@ -1,0 +1,41 @@
+attempt: '0001'
+route: 'One complete Lean proof route per fact, already machine-checked in the ingested corpus at the
+  repository-pinned toolchain (leanprover/lean4 v4.28.0, mathlib 8f9d9cff6bd7): the kernel-checked theorems
+  of the promoting files, with statements, imports, escape scan, and axiom footprint audited.'
+command: 'scripts/check_lean.sh at the ingestion commit 63fa769 (escape scan; 8,089-job lake build; axiom
+  audit over every ingested main theorem) - PASS, recorded in PR #93 and the ingestion effort memory;
+  the formal surface is byte-identical at this promotion (git diff shows no formal/ change), so the gate
+  result carries and the corpus is not rebuilt per owner direction.'
+environment:
+  lean: leanprover/lean4 v4.28.0
+  mathlib: 8f9d9cff6bd7
+  proof_escapes: none (escape scan clean over all 60 ingested files)
+  axiom_footprint_aggregate: 12 axiom-free, 5 [propext], 1 [propext, Quot.sound], 42 [propext, Classical.choice,
+    Quot.sound] across the 59 audited main theorems; every footprint a subset of Mathlib standard axioms,
+    no project axioms
+entrypoints:
+  C-GW-011:
+  - formal/SubstrateFramework/Ingested/Phase5Gravity_GravitonTT.lean::graviton_D4_eq_two
+  C-GW-012:
+  - formal/SubstrateFramework/Ingested/Phase12GW_LowestMultipole.lean::gravity_lowest_multipole_two
+  C-EW-001:
+  - formal/SubstrateFramework/Ingested/Phase7EW_MasslessPhoton.lean::Qop_eq_T3_plus_Yhalf
+  C-WK-001:
+  - formal/SubstrateFramework/Ingested/Phase6Weak_MaxParityViolation.lean::parity_involution
+  C-CF-001:
+  - formal/SubstrateFramework/Ingested/Phase10CF_Z3CenterConfinement.lean::center_card_three
+  C-ROT-002:
+  - formal/SubstrateFramework/Ingested/Phase47BM_RigidTopSpectrum.lean::gap_eq
+  - formal/SubstrateFramework/Ingested/Phase48CE_OperatorAndGap.lean::gap_independent_of_vacuum_energy
+  C-GSK-003:
+  - formal/SubstrateFramework/Ingested/Phase48CE_OperatorAndGap.lean::weight_gap
+  C-SG-020:
+  - formal/SubstrateFramework/Ingested/Bridge.lean::exchange_phase_free_fermion
+  C-SG-022:
+  - formal/SubstrateFramework/Ingested/Basin.lean::basin_single_point_exists
+  C-VIR-002:
+  - formal/SubstrateFramework/Ingested/ComparsiVirial.lean::periodic_virial_forces_zero
+status: pass
+verdict: All ten fixed-theorem statements are kernel-checked with no proof escape and standard-axiom-only
+  footprints; the physics premises are declared inputs recorded in each claim assumptions field.
+elapsed: gate recorded at ingestion commit; no rebuild performed (formal surface unchanged)

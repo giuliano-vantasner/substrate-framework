@@ -39,3 +39,8 @@ Accepted in `v0.17.0` with provenance `campaigns/P019-winding-parity-labels/adju
 - `campaigns/P019-winding-parity-labels/reviews/source_adjudication.md`
 - `memory/vantasner/decisions/C-TOP-001-review.md`
 - `tests/test_topological_labels.py`
+- `formal/SubstrateFramework/Ingested/Phase4Strong_FRSpinStat.lean`
+- `formal/SubstrateFramework/Ingested/Phase20ME_HalfQuantumOrder2.lean`
+- `formal/SubstrateFramework/Ingested/Phase46EL_LeptonConstraint.lean`
+- `formal/SubstrateFramework/Ingested/ChargeDiscrimination.lean`
+- `formal/SubstrateFramework/Ingested/Formalization.lean`

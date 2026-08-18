@@ -58,3 +58,4 @@ Accepted in `v0.127.0` with provenance `campaigns/P165-sm3-anomaly-cancellation-
 - `memory/vantasner/decisions/SM3-qualified-review.md`
 - `src/substrate_framework/chiral_anomalies.py`
 - `tests/test_chiral_anomalies.py`
+- `formal/SubstrateFramework/Ingested/Phase9SM_AnomalyCancellation.lean`

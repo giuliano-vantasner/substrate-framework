@@ -37,7 +37,7 @@ release. No accepted statement or release membership changes in this effort.
 The effort preserves these scientific and coordination boundaries.
 
 - Historical Lean ingestion from `/home/dan/substrate` is a separate workflow.
-- Active P231 work and its uncommitted test edit are outside this worktree.
+- Active P232 work and its uncommitted test edit are outside this worktree.
 - A synthesized theorem has at least two distinct accepted dependencies, a named
   structural gap, and a repository-local glue proof. There is no arbitrary
   three-claim threshold or positive-statement length cap.

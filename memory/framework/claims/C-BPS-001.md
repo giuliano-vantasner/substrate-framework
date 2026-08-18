@@ -49,3 +49,4 @@ Accepted in `v0.91.0` with provenance `campaigns/P107-e4-bps-zero-binding-audit/
 - `campaigns/P107-e4-bps-zero-binding-audit/reviews/source_adjudication.md`
 - `memory/vantasner/decisions/C-BPS-001-review.md`
 - `tests/test_bps_energy.py`
+- `formal/SubstrateFramework/Ingested/Phase34KIKernel.lean`

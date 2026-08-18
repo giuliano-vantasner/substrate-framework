@@ -44,3 +44,4 @@ Accepted in `v0.65.0` with provenance `campaigns/P071-mh2-translated-localizatio
 - `campaigns/P071-mh2-translated-localization/reviews/source_adjudication.md`
 - `memory/vantasner/decisions/C-OVL-002-review.md`
 - `tests/test_translated_localization.py`
+- `formal/SubstrateFramework/Ingested/Phase20MH_OverlapHierarchy.lean`
