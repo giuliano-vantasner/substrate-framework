@@ -19,7 +19,7 @@ Read the PR, linked goal, base release, accepted claim boundary, diff, tests, an
 
 Identify one canonical goal issue and confirm that it existed before the PR was submitted, including before a draft PR. The PR must mention that issue explicitly: use `Advances #N` while the goal remains incomplete and reserve `Fixes #N` for full completion. If the source PR has no pre-existing issue, do not merge it. Create the canonical issue, preserve the source PR as provenance, and place any selected units in a new compliant harvest PR opened after the issue.
 
-In this repository, treat the user's act of supplying a PR URL or number to an agent that did not open, commit to, or materially implement that PR as standing authorization to complete the normal PR lifecycle without further operator prompts: review and comment, edit PR metadata, create a focused harvest branch or follow-up PR, merge or close according to the evidence, and update the linked issue. An agent must not merge any PR it opened, committed to, or materially implemented. If the reviewing agent performs substantive repairs or creates a follow-up harvest PR, a distinct agent or repository owner must execute that merge. Leave a validated handoff when no distinct merger is available. Do not force-push a contributor's branch, delete unrelated branches, broaden the issue objective, or promote unsupported claims. If an external permission or branch rule blocks an action, preserve the exact next action and report the actual blocker.
+In this repository, treat the user's act of supplying a PR URL or number to an agent that did not open, commit to, or materially implement that PR as standing authorization to complete the normal PR lifecycle without further operator prompts: review and comment, edit PR metadata, request changes, create a focused harvest branch or follow-up PR, merge when eligible, close only after the terminal-close test below, and update the linked issue. An agent must not merge any PR it opened, committed to, or materially implemented. If the reviewing agent performs substantive repairs or creates a follow-up harvest PR, a distinct agent or repository owner must execute that merge. Leave a validated handoff when no distinct merger is available. Do not force-push a contributor's branch, delete unrelated branches, broaden the issue objective, or promote unsupported claims. If an external permission or branch rule blocks an action, preserve the exact next action and report the actual blocker.
 
 ## Slice the PR into harvest atoms
 
@@ -50,11 +50,23 @@ Classify every unit as one of:
 - **refactor then merge** — valuable core exists but must be decoupled, renamed, narrowed, or convention-corrected;
 - **leave in PR history** — speculative capstone, duplicated machinery, unsupported interpretation, failed route, or maintenance cost with no durable reusable unit.
 
+`Refactor then merge` is an active lifecycle state, not a polite rejection. Name
+the repair owner or handoff, live source or harvest PR, exact change, and landing
+test. Keep the source PR open in `request changes`, `active refactor`, or
+`active harvest` state until that unit lands or becomes terminal.
+
+Close an unmerged PR only when every reusable atom has landed elsewhere, every
+remaining atom has unit-level evidence that it is incorrect, non-novel, or
+unmaintainable, the author or owner explicitly withdraws it, or a superseding
+landed implementation makes it redundant. Missing accepted dependency closure,
+a conflict with current canon, lack of a distinct merger, or a pending finite
+repair does not pass this terminal-close test.
+
 ## Build a harvest merge
 
 Prefer a focused harvest commit or follow-up PR over merging an inseparable campaign dump. Include only the selected implementation, tests, and minimal API documentation.
 
-- Keep accepted-claim authority in the registry; do not promote a headline because related code merges.
+- Keep accepted-claim authority in the registry; do not promote a headline because related code merges. Treat accepted canon as release authority, not an irrevisable premise: a correct conditional API may merge with explicit assumptions while contrary evidence proceeds through `challenges` or a separately governed foundational revision.
 - Create or confirm the canonical goal issue before opening the focused PR. Name it using `Advances #N` for partial progress and use `Fixes #N` only after the full goal passes its completion gate.
 - Record the authoring or implementing agent and a distinct intended merger. The authoring agent may prepare, validate, and hand off the PR but may not merge it.
 - Keep the goal issue open when the campaign remains incomplete.
@@ -73,7 +85,7 @@ After the final merge boundary is known, update the goal issue—not only the PR
 - <unit and landed location> — Rationale: <why it is correct, reusable, and independent enough to own>. Evidence: <tests/oracle>.
 
 ### Requires refactor
-- <unit> — Rationale: <valuable core>. Required change: <specific decoupling, correction, or narrowing>. Source: <PR path/commit>.
+- <unit> — Rationale: <valuable core>. Required change: <specific decoupling, correction, or narrowing>. Owner/handoff: <identity>. Live PR: <source or harvest PR>. Landing test: <exact evidence>. Source: <PR path/commit>.
 
 ### Left in PR history
 - <unit> — Rationale: <why it should not enter main>. Source: <PR path/commit>.
@@ -81,8 +93,10 @@ After the final merge boundary is known, update the goal issue—not only the PR
 ### Continuation
 - Claims promoted: <none or ids>
 - Goal state: <open or complete>
+- PR lifecycle: <request changes, active refactor, active harvest, merged, or terminal closed>
 - Landed interfaces: <paths/symbols>
 - Next decisive action: <one executable step or test>
+- Terminal-close evidence: <not applicable, or qualifying reason plus landed replacement links>
 
 ### What closes the goal
 - Objective-level closure: <the positive scientific result and governance gates, independent of the reviewed route>
@@ -111,6 +125,14 @@ For the current route, list necessary proof obligations and the evidence that wo
 
 Treat review conclusions as reasoned and rebuttable, not as accepted scientific authority. For every blocking conclusion, state what counterexample, derivation, constraint count, controlled limit, or other evidence would change the assessment. Invite focused disagreement without weakening the completion gate.
 
+When a route conflicts with accepted canon, separate its artifact claim from its
+authority claim. A canon conflict blocks promotion and accepted downstream use;
+it does not by itself block a correct conditional artifact, erase contrary
+evidence, or close the PR. Test whether the mismatch is a candidate defect or a
+pre-existing canonical inconsistency. If it survives independently of the
+favored route, open a `challenges` or foundational-revision proposal with
+competing repairs and keep the scientific frontier active.
+
 ## Preserve novelty without creating debt
 
 Missing pieces of the parent goal are the **campaign frontier**, not debt. Debt means an unresolved defect, unsupported promise, broken consumer, or hidden assumption inside the scope being merged or promoted.
@@ -134,12 +156,13 @@ Treat the goal as long-lived and each agent run or PR as bounded.
 - Harvest a unit as soon as it becomes locally complete; do not hold all value hostage to the capstone.
 - Maintain a short PR frontier with `landed`, `current hypothesis`, and `next decisive test` rather than expanding narrative state.
 - If later work becomes repetitive, weakens claims, substitutes ceremony for new evidence, or only restates earlier results, stop that run at the last strong milestone. Merge the harvest, leave the goal open, and hand the frontier to a fresh agent.
+- Keep the source PR open while a declared refactor or harvest remains live; reassess closure only after the unit lands or the terminal-close test passes.
 
 An individual run may end at a clean handoff without lowering or closing the campaign objective.
 
 ## Validate proportionately
 
-Run targeted tests and claim-appropriate oracles for each harvested unit, impact analysis for changed public symbols, affected consumers, and one repository validation at the final unchanged merge boundary. Do not rerun unrelated full validation for each discarded campaign artifact.
+Run targeted tests and claim-appropriate oracles for each harvested unit, impact analysis for changed public symbols, affected consumers, and one repository validation at the final unchanged merge boundary. An additive public export may use scoped validation when impact is bounded, no existing contract changes, consumers are known, and targeted API coverage passes. Reserve full validation for promotion or release, shared numerics or verification machinery, claim/release governance semantics, changed existing public contracts with consumers, dependency or cross-cutting convention changes, multi-sector changes, or uncertain impact. Pull-request CI uses `scripts/validate_changed.py` for this conservative decision and uses fixed checks only when no pytest scope is affected; scheduled/manual CI supplies the periodic full backstop. Do not rerun unrelated full validation for each discarded campaign artifact or again after merge.
 
 ## Report the disposition
 
@@ -164,7 +187,8 @@ Use this compact structure:
 - Authoring or implementing agent: <identity>
 - Distinct merger: <identity or handoff pending>
 - Issue handoff: <posted link or ready-to-post pending>
-- PR disposition: <progress merge, harvest split, request changes, or close>
+- PR lifecycle: <request changes, active refactor, active harvest, merged, or terminal closed>
+- Terminal-close evidence: <not applicable, or qualifying reason plus landed replacement links>
 - Campaign frontier: <next decisive question>
 ```
 

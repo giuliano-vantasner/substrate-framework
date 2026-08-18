@@ -29,6 +29,7 @@ Read [governance.md](references/governance.md) before changing a claim, conventi
 
 - A campaign is an immutable research event, not canonical truth.
 - A proposal can challenge a claim; only an accepted claim can supersede one.
+- Accepted canon governs release and promotion decisions, but remains falsifiable and reviewable; a conflict is a diagnosis to investigate, not a reason to erase evidence or halt conditional artifact work.
 - A verifier passing is necessary, but proves only its asserted predicate.
 - A campaign completion decision, scientific claim decision, and PR merge decision are independent. Use `research-pr-harvest` for the merge decision.
 - Numeric agreement is a comparator, never a concept-selection mechanism or hidden derivation input.
@@ -107,7 +108,7 @@ After failure, choose the next action from the diagnosis:
 - implementation defect → repair and rerun;
 - unstable numerics → change discretization, solver, precision, or oracle;
 - bad representation → change variables, gauge, basis, coordinates, or formalism;
-- concept conflicts with the framework → reject or reformulate it and try another candidate;
+- concept conflicts with the framework → determine whether the defect belongs to the candidate or is independent evidence against accepted structure; reject or reformulate a defective candidate, otherwise open a `challenges` or foundational-revision proposal and keep the frontier active;
 - target was misstated → correct the claim while preserving the user's objective;
 - accepted foundation appears inconsistent → open a separate foundational-revision proposal.
 
@@ -142,9 +143,9 @@ A large pass tally with insensitive predicates does not promote a claim.
 
 ## Phase 6 — assess framework fit before data fit
 
-Compare candidates using the preregistered criteria. Structural fit precedes empirical closeness. If the favored candidate requires reinterpretation of unrelated claims, convention mixing, compensating imports, or narrative edits, reject it and continue the search.
+Compare candidates using the preregistered criteria. Structural fit precedes empirical closeness. If the favored candidate requires reinterpretation of unrelated claims, convention mixing, compensating imports, or narrative edits merely to preserve it, reject it and continue the search. If the mismatch is reproduced independently of that candidate, treat it as evidence about canon and route it through a separate challenge rather than assuming acceptance status resolves the science.
 
-Do not revise foundations merely to save a candidate. A foundational revision must demonstrate an independent pre-existing inconsistency, compare at least two repairs, select the minimum coherent change, enumerate the migration, and pass global replay.
+Do not revise foundations merely to save a candidate. A foundational revision is nevertheless a legitimate advancement route when it demonstrates an independent pre-existing inconsistency, compares at least two repairs, selects the minimum coherent change, enumerates the migration, and passes global replay. Until adjudication, the conflict blocks promotion and accepted downstream use, not truthful conditional APIs or continued investigation.
 
 Only after the structural choice is frozen should you open the comparator gate and report predictive agreement or disagreement.
 
@@ -176,11 +177,11 @@ For accepted claims:
 3. Move the adjudicated campaign record into the immutable `campaigns/` log.
 4. Run `scripts/render_docs.py`; never hand-edit `docs/generated/`.
 5. Generate or synchronize accepted claim/release memory. Keep proposal and attempt memory separate.
-6. Run targeted scientific checks, `scripts/validate.sh` (which includes the full test suite), and `git diff --check`; do not repeat the unchanged full suite separately. Run validation and commit in separate process invocations so an unguarded shell cannot continue past a failed gate and mask it with a later successful command.
+6. Run targeted scientific checks, `scripts/validate.sh --full`, and `git diff --check`; promotion is a full-validation boundary, so do not repeat that unchanged suite separately. Run validation and commit in separate process invocations so an unguarded shell cannot continue past a failed gate and mask it with a later successful command.
 
 ## Phase 10 — done gate
 
-Declare the campaign objective complete only when every item in the success contract passes and the debt ledger is empty. An honest failure leaves the objective active with a new candidate or repair queued. It does not prevent an individual PR or agent run from ending at a clean harvest checkpoint: use `research-pr-harvest` to merge independently correct, novel, reusable units, name and keep open the canonical goal issue, update that issue with the merged/refactor/history disposition and unit-level rationale, and hand the exact frontier to a fresh run. Missing work toward the larger goal is frontier rather than debt unless a merged or promoted unit promises it. A pause caused by user authority or an external dependency preserves the active contract and exact next executable action; it is not scientific completion. When a repeated workflow defect or tooling gotcha is discovered, correct and consolidate the relevant instruction in `AGENTS.md`, this skill, and the applicable memory template; do not merely append another overlapping rule.
+Declare the campaign objective complete only when every item in the success contract passes and the debt ledger is empty. An honest failure leaves the objective active with a new candidate or repair queued. It does not prevent an individual PR or agent run from ending at a clean harvest checkpoint: use `research-pr-harvest` to merge independently correct, novel, reusable units, name and keep open the canonical goal issue, update that issue with the merged/refactor/history disposition and unit-level rationale, and hand the exact frontier to a fresh run. Keep a source PR open while a finite repair or harvest is live; close it unmerged only after the harvest skill's terminal-close test. Missing work toward the larger goal is frontier rather than debt unless a merged or promoted unit promises it. A pause caused by user authority or an external dependency preserves the active contract and exact next executable action; it is not scientific completion. When a repeated workflow defect or tooling gotcha is discovered, correct and consolidate the relevant instruction in `AGENTS.md`, this skill, and the applicable memory template; do not merely append another overlapping rule.
 
 ## Working with delegated agents
 

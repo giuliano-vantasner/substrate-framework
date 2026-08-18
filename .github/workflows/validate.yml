@@ -2,9 +2,8 @@ name: Repository validation
 
 on:
   pull_request:
-  push:
-    branches:
-      - main
+  schedule:
+    - cron: '17 3 * * 1'
   workflow_dispatch:
 
 permissions:
@@ -23,6 +22,7 @@ jobs:
       - name: Check out the repository
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
+          fetch-depth: 0
           persist-credentials: false
 
       - name: Set up Python
@@ -38,5 +38,12 @@ jobs:
       - name: Bootstrap the repository
         run: scripts/bootstrap.sh
 
-      - name: Run full repository validation
+      - name: Run impact-scoped pull-request validation
+        if: github.event_name == 'pull_request'
+        env:
+          VALIDATION_BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: python scripts/validate_changed.py --base "$VALIDATION_BASE_SHA" --head HEAD
+
+      - name: Run periodic or manually requested full validation
+        if: github.event_name != 'pull_request'
         run: scripts/validate.sh --full

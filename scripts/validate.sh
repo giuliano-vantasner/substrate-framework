@@ -6,13 +6,15 @@ usage() {
 Usage:
   scripts/validate.sh
   scripts/validate.sh --full
+  scripts/validate.sh --fixed-only
   scripts/validate.sh --pytest-scope SELECTOR [SELECTOR ...]
 
 Every mode runs the repository, generated-state, memory, skill, import, and
-compile checks. With no arguments or --full, pytest runs the complete suite.
-Arguments after --pytest-scope must be repository test files, directories, or
-node IDs. Pytest options are rejected so collection-only or similar flags cannot
-be mistaken for executed validation.
+compile checks. With no arguments or --full, pytest runs the complete suite;
+--fixed-only runs no pytest and is appropriate only when impact selection finds
+no affected test. Arguments after --pytest-scope must be repository test files,
+directories, or node IDs. Pytest options are rejected so collection-only or
+similar flags cannot be mistaken for executed validation.
 EOF
 }
 
@@ -27,6 +29,14 @@ case "${1:-}" in
       usage >&2
       exit 2
     fi
+    ;;
+  --fixed-only)
+    if [ "$#" -ne 1 ]; then
+      echo "ERROR: --fixed-only does not accept additional arguments" >&2
+      usage >&2
+      exit 2
+    fi
+    pytest_mode="fixed-only"
     ;;
   --pytest-scope)
     shift
@@ -97,6 +107,8 @@ memory validate "$repo_root/memory"
 if [ "$pytest_mode" = "full" ]; then
   PYTHONPATH="$repo_root/src" "$python_bin" -m pytest -q
   echo "ALL REPOSITORY WORKFLOW CHECKS PASS (full pytest suite)"
+elif [ "$pytest_mode" = "fixed-only" ]; then
+  echo "ALL FIXED REPOSITORY CHECKS PASS (no affected pytest scope)"
 else
   printf 'Running requested pytest scope:'
   printf ' %q' "${pytest_args[@]}"

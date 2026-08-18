@@ -89,12 +89,15 @@ Campaign frontier outside this merge unit:
 ## Validation boundary
 
 Mark a nonapplicable scientific row `N/A` and explain why in the verification
-section; do not claim it passed.
+section; do not claim it passed. An additive public export may stay scoped when
+impact analysis shows a bounded sector, no changed existing contract, known
+consumers, and targeted API coverage. Record that rationale rather than treating
+the export alone as a full-suite trigger.
 
 - [ ] Targeted tests and named scientific verifiers pass.
 - [ ] Load-bearing mutations, counterexamples, or wrong-convention probes fail as expected.
 - [ ] Affected downstream consumers replay.
-- [ ] `scripts/validate.sh --pytest-scope ...` passes with the exact selectors recorded, or the full-suite trigger is explained and `scripts/validate.sh --full` passes.
+- [ ] `scripts/validate.sh --pytest-scope ...` passes with the exact selectors recorded, `--fixed-only` is justified by no affected pytest scope, or the full-suite trigger is explained and `scripts/validate.sh --full` passes; PR CI's `scripts/validate_changed.py` decision agrees.
 - [ ] The pytest scope remains valid against the merge base; an equivalent unchanged validation is not duplicated.
 - [ ] `git diff --check` passes in a separate invocation.
 - [ ] No unrelated, generated-by-hand, or host-specific artifacts are included.
@@ -119,10 +122,12 @@ fields in a formal review.
 - Claim promotion: <!-- none or exact claim IDs and review evidence -->
 - Goal completion: <!-- yes/no and still-open gate -->
 - Merge as written: <!-- yes/no -->
-- Refactor or harvest: <!-- exact units and required changes -->
+- Refactor or harvest: <!-- exact units, owner/handoff, live PR, required changes, and landing test -->
 - Leave in PR history: <!-- exact units and rationale -->
+- Source PR lifecycle: <!-- request changes, active refactor, active harvest, merged, or terminal closed -->
+- Terminal-close evidence: <!-- N/A, or qualifying reason and landed replacement links -->
 - Next decisive action: <!-- one concrete step -->
-- Head branch disposition: <!-- auto-delete after merge; preserve if closed-unmerged/failed; name any explicit owner exception -->
+- Head branch disposition: <!-- auto-delete after merge; otherwise preserve unless owner retirement follows a recorded terminal-close decision -->
 
 ### Reviewer checks
 
@@ -134,5 +139,7 @@ fields in a formal review.
 - [ ] Every new public symbol has an explicit authority status and owning issue.
 - [ ] Verification sensitivity and applicable numerical/formal limits audited.
 - [ ] Merge, claim-promotion, and goal-completion decisions kept independent.
+- [ ] A finite refactor or harvest has an owner/handoff, live PR, and landing test; its source PR remains open.
+- [ ] Any proposed unmerged closure passes the terminal-close test and records landed replacements.
 - [ ] Canonical issue handoff is posted or preserved ready to post.
 - [ ] The exact same-repository head will be deleted after merge; open or closed-unmerged/failed heads are preserved unless an owner explicitly retires them.

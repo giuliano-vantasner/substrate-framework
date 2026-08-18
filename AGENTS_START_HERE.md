@@ -19,7 +19,10 @@ Use this read order at the start of a task:
 
 A pinned accepted release and accepted claim registry outrank a newer commit,
 confident prose, a passing script, or an attractive numerical match. Never edit
-`docs/generated/` or `migration/source-claims.yaml` by hand.
+`docs/generated/` or `migration/source-claims.yaml` by hand. This authority
+controls release and promotion decisions; canon remains scientifically
+challengeable, and a truthful conditional artifact may merge without claim
+promotion while a challenge is reviewed.
 
 ## 2. Coordinate before editing
 
@@ -63,7 +66,8 @@ after merge; the merge commit, PR, issue handoff, and landed `main` history are
 the durable discovery paths. If automatic cleanup does not occur, the merger
 deletes that exact merged head after verifying the PR state and target. Preserve
 open heads and closed-unmerged or failed heads by default so unresolved work is
-not erased; retire those only through an explicit owner decision. Never delete
+not erased; retire those only through an explicit owner decision after the
+terminal-close reason and any landed replacement are recorded. Never delete
 `main`, a protected branch, another open contributor branch, or an unverified
 head merely because it appears old.
 
@@ -197,11 +201,14 @@ Before requesting review:
    scripts/validate.sh --pytest-scope tests/test_affected_module.py [more selectors ...]
    ```
 
-   Use `scripts/validate.sh --full` instead when the change reaches shared
-   numerics, verification machinery, claim or release governance semantics,
-   public exports, dependencies, conventions, multiple framework sectors, or
-   has an uncertain dependency boundary. Claim promotions and releases always
-   require `--full`.
+   An additive public export may remain scoped when impact analysis shows a
+   bounded sector, no changed existing contract, known consumers, and targeted
+   API coverage. Use `scripts/validate.sh --full` instead when the change
+   reaches shared numerics, verification machinery, claim or release governance
+   semantics, changes an existing public contract with consumers, changes
+   dependencies or cross-cutting conventions, spans multiple framework
+   sectors, or has an uncertain dependency boundary. Claim promotions and
+   releases always require `--full`.
 5. In a separate invocation, run:
 
    ```bash
@@ -212,8 +219,11 @@ Record the exact pytest selectors, commands, status codes, and meaningful
 verdicts in the PR; a scoped pass is not a repository-wide pass. A bounded PR
 can remain scoped through merge when its impact boundary is still valid against
 the current base. Do not repeat an equivalent validation at the same unchanged
-boundary. Run the full suite periodically on integrated `main` as a backstop; a
-pass count alone is not a review.
+boundary. Pull-request CI uses `scripts/validate_changed.py` to reproduce a
+conservative changed-file decision, including `--fixed-only` when no pytest
+scope is affected and `--full` for cross-cutting or uncertain changes. Scheduled
+or manual CI runs the periodic integrated-main full backstop rather than
+duplicating it on every merge push; a pass count alone is not a review.
 
 ## 8. Open the pull request
 
@@ -268,6 +278,15 @@ broken consumers, and unresolved debt within the proposed unit are blocking.
 Incomplete future work is campaign frontier and may remain open when a smaller
 unit is independently useful.
 
+Treat `request changes`, `active refactor`, and `active harvest` as live review
+states. A required-refactor finding must name an owner or handoff, a live source
+or harvest PR, the exact repair, and the landing test. Keep the source PR open
+while that finite path is active. Close unmerged only when all reusable atoms
+land elsewhere, all remaining atoms have unit-level evidence of being
+incorrect, non-novel, or unmaintainable, the owner explicitly withdraws the
+work, or a landed replacement makes it redundant. A canon conflict, incomplete
+dependency closure, or unavailable distinct merger is not by itself terminal.
+
 End the review with an explicit disposition:
 
 ```text
@@ -294,7 +313,10 @@ After the final disposition:
 - after a successful merge, confirm the exact same-repository PR head was
   automatically deleted and delete it explicitly if the repository setting did
   not do so; retain closed-unmerged or failed heads unless their owner explicitly
-  retires them;
+  retires them after recording the terminal-close rationale;
+- keep a source PR open while a promised refactor or harvest is live; close it
+  as superseded only after the reusable unit lands, or close it unmerged only
+  after the terminal-close test in the review section passes;
 - leave the issue open with the next decisive action when the PR only advances
   it;
 - synchronize durable effort or decision memory with the landed commit and

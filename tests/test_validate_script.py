@@ -117,6 +117,23 @@ def test_scoped_validation_requires_a_selector(
     assert not command_log.exists()
 
 
+def test_fixed_only_validation_skips_pytest(
+    validation_environment: tuple[dict[str, str], Path],
+) -> None:
+    environment, command_log = validation_environment
+
+    result = run_validation(environment, "--fixed-only")
+
+    assert result.returncode == 0, result.stderr
+    assert "ALL FIXED REPOSITORY CHECKS PASS (no affected pytest scope)" in result.stdout
+    pytest_calls = [
+        line
+        for line in command_log.read_text(encoding="utf-8").splitlines()
+        if line.startswith("python|-m|pytest|")
+    ]
+    assert pytest_calls == []
+
+
 @pytest.mark.parametrize("selector", ["--collect-only", "src/substrate_framework"])
 def test_scoped_validation_rejects_non_test_selectors(
     validation_environment: tuple[dict[str, str], Path], selector: str
