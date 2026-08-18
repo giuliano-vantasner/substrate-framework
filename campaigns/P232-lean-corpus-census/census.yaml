@@ -163,9 +163,13 @@ files:
     - generator_order_three
     - center_is_cyclic
     - nontautology_su3_ne_su2
-    - confinement_compound
     campaign: P233
     entrypoint: Phase10CF.center_card_three
+  - class: infrastructure_or_disposition
+    theorems:
+    - confinement_compound
+    disposition: 'Class 4 (compound restatement): conjoins the new ZMod-3 group facts with the separately classified
+      C-WIL-001 area/perimeter results and adds no new implication. Artifact-only rather than part of C-CF-001.'
 - file: Phase11Flavor_CPPhaseCount.lean
   family: bridges
   manifest_theorems: 6
@@ -226,8 +230,7 @@ files:
   manifest_theorems: 15
   main_theorem: Phase13FS.quadratic_source_radiates_at_2omega
   entries:
-  - class: corroborates_accepted_claim
-    claim: C-SG-009
+  - class: infrastructure_or_disposition
     theorems:
     - quadratic_source_radiates_at_2omega
     - quadratic_harmonics_all_even
@@ -236,14 +239,6 @@ files:
     - quadratic_at_least_doubled
     - lowest_parity_matches_power_even
     - lowest_parity_matches_power_odd
-    scope: 'Corroborates the doubling/even-harmonic core of C-SG-009: a source density quadratic in a field oscillating
-      at omega has its AC content on the even harmonic line, lowest order 2*omega (frequency doubling), while a
-      linear source sits on the odd line with lowest order omega; the parity split and the 2*omega base frequency
-      are machine-checked as the discrete harmonic-index arithmetic. The exact asinh second-moment formula, its
-      range, and the 1+1 moment functional remain the claim''s SymPy scope; no three-dimensional source or gravitational
-      coupling is derived, matching the claim''s exclusions.'
-  - class: infrastructure_or_disposition
-    theorems:
     - linear_source_radiates_at_omega
     - harmonic_doubling_not_tautology
     - linear_harmonics_all_odd
@@ -252,36 +247,23 @@ files:
     - breathing_quadrupole_ties_GWL
     - quadratic_above_linear
     - quadratic_second_harmonic
-    disposition: 'Class 4 (supporting lemmas of this file''s classified theorems): definitional unfoldings, sanity
-      witnesses, non-tautology guards, compound restatements, and intermediate arithmetic belonging to the entries
-      classified above; individually not claim-bearing.'
+    disposition: 'Class 4 (declared harmonic lookup): the file defines the expected lowest harmonic directly from
+      monomial parity and proves evaluations of that definition. It does not evaluate the exact C-SG-009 second-moment
+      function or derive its Fourier support, so every theorem is artifact-only rather than corroborating evidence.'
 - file: Phase14P3D_SphericalNull.lean
   family: bridges
   manifest_theorems: 15
   main_theorem: Phase14P3D.spherical_breather_radiates_nothing
   entries:
-  - class: corroborates_accepted_claim
-    claim: C-MOM-003
+  - class: infrastructure_or_disposition
     theorems:
     - spherical_breather_radiates_nothing
     - monopole_silent
     - dipole_silent
     - subquadrupole_moments_null
     - spherical_below_threshold
-    scope: 'Corroborates the spherical-null core of C-MOM-003 as the discrete radiating-index encoding: the ell=0
-      (spherical) channel has vanishing radiated quadrupole content while ell=2 is nonzero (quadrupole_mode_radiates
-      guard), monopole and dipole channels are silent, and radiating content starts at ell=2. The exact integral
-      identity I_STF=(J/3)*delta with the axisymmetric guard tensor remains the claim''s SymPy scope; no gravitational
-      dynamics or physical radiation claim is made, matching the claim''s exclusions.'
-  - class: composes_accepted_claims
-    claim: C-GW-014
-    theorems:
     - selfconsistent_channel_ties_GWL_FSL
     - lowest_radiating_is_quadrupole
-    campaign: P235
-    entrypoint: Phase14P3D.spherical_breather_radiates_nothing
-  - class: infrastructure_or_disposition
-    theorems:
     - quadrupole_mode_radiates
     - spherical_null_not_tautology
     - quadrupole_not_null
@@ -290,9 +272,10 @@ files:
     - radiating_index_is_ell
     - quadrupole_at_least_two
     - doubled_frequency_even
-    disposition: 'Class 4 (supporting lemmas of this file''s classified theorems): definitional unfoldings, sanity
-      witnesses, non-tautology guards, compound restatements, and intermediate arithmetic belonging to the entries
-      classified above; individually not claim-bearing.'
+    disposition: 'Class 4 (declared radiating-channel lookup): radiatedQuadrupole, radiates,
+      lowestRadiatingMultipole, and lowestACHarmonic encode the quadrupole threshold and harmonic answers. The theorems
+      do not evaluate the C-MOM-003 STF integral or derive conservation, a source-to-channel map, or radiation. They are
+      artifact-only; proposed synthesis C-GW-014 is rejected in P235.'
 - file: Phase15NC_NonlinearChiralSplit.lean
   family: bridges
   manifest_theorems: 14
@@ -330,36 +313,18 @@ files:
   manifest_theorems: 17
   main_theorem: Phase16QB.axisym_one_polarization
   entries:
-  - class: corroborates_accepted_claim
-    claim: C-GW-005
+  - class: infrastructure_or_disposition
     theorems:
     - axisym_one_polarization
     - axisym_no_cross
     - only_triaxial_excites_cross
-    scope: 'Corroborates the axisymmetric-waveform core of C-GW-005: an axisymmetric STF source excites exactly
-      one TT polarization with zero cross component for a generic line of sight. The exact tensor projection coordinates,
-      waveform coefficients, and power remain the claim''s SymPy scope.'
-  - class: corroborates_accepted_claim
-    claim: C-GW-002
-    theorems:
     - triaxial_two_polarizations
     - at_most_two_polarizations
     - two_polarizations_iff_cross
     - both_excite_plus
-    scope: 'Corroborates the two-dimensionality content of C-GW-002: the generic (triaxial) source excites both
-      TT basis polarizations and no source exceeds the two-dimensional TT image. The explicit projector, basis tensors,
-      and frame-rotation phases remain the claim''s SymPy scope; no physical graviton count or helicity statement
-      is imported, matching the claim''s exclusions.'
-  - class: composes_accepted_claims
-    claim: C-GW-013
-    theorems:
     - axisym_vs_triaxial_split
     - triaxial_saturates_graviton_count
     - axisym_below_graviton_count
-    campaign: P234
-    entrypoint: Phase16QB.axisym_one_polarization
-  - class: infrastructure_or_disposition
-    theorems:
     - triaxial_excites_cross
     - triaxial_excites_both
     - polarization_count_not_tautology
@@ -367,9 +332,10 @@ files:
     - triaxial_above_axisym
     - graviton_count_four
     - at_least_one_polarization
-    disposition: 'Class 4 (supporting lemmas of this file''s classified theorems): definitional unfoldings, sanity
-      witnesses, non-tautology guards, compound restatements, and intermediate arithmetic belonging to the entries
-      classified above; individually not claim-bearing.'
+    disposition: 'Class 4 (declared polarization answer table): numTTpolarizations, excitesCross, and excitesPlus
+      directly assign the axisymmetric/triaxial outputs and the theorems evaluate those assignments. They do not
+      evaluate the C-GW-002 TT projector or the C-GW-005 axisymmetric tensor. They are artifact-only; proposed
+      synthesis C-GW-013 is rejected in P234.'
 - file: Phase17WZW_LevelWinding.lean
   family: bridges
   manifest_theorems: 16
@@ -1096,7 +1062,7 @@ files:
     - refractive_index_longitudinal_one
     - refractive_index_transverse_gt_one
     campaign: P233
-    entrypoint: Phase48CE.gap_independent_of_vacuum_energy
+    entrypoint: Phase48CE.weight_gap
   - class: infrastructure_or_disposition
     theorems:
     - free_charpoly_factors
@@ -1203,7 +1169,7 @@ files:
     - basin_single_point_exists
     - basin_positive_measure
     campaign: P233
-    entrypoint: SGBasin.basin_single_point_exists
+    entrypoint: SGBasin.basin_positive_measure
 - file: Bridge.lean
   family: dynamics_lean
   manifest_theorems: 5

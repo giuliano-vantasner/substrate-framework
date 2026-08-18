@@ -1,0 +1,38 @@
+attempt: '0002'
+route: Corrected fixed-theorem promotion after exact statement, dependency, domain, and physical-encoding audit.
+command: scripts/check_lean.sh at the corrected final boundary plus tests/test_lean_claim_census.py
+environment:
+  lean: leanprover/lean4 v4.28.0
+  mathlib: 8f9d9cff6bd7
+  proof_escapes: none required
+entrypoints:
+  C-GW-011:
+  - formal/SubstrateFramework/Ingested/Phase5Gravity_GravitonTT.lean::graviton_D4_eq_two
+  C-GW-012:
+  - formal/SubstrateFramework/Ingested/Phase12GW_LowestMultipole.lean::gravity_lowest_multipole_two
+  C-EW-001:
+  - formal/SubstrateFramework/Ingested/Phase7EW_MasslessPhoton.lean::unique_unbroken_generator
+  C-WK-001:
+  - formal/SubstrateFramework/Ingested/Phase6Weak_MaxParityViolation.lean::parity_distinguishes_weak_from_vector
+  C-CF-001:
+  - formal/SubstrateFramework/Ingested/Phase10CF_Z3CenterConfinement.lean::center_card_three
+  - formal/SubstrateFramework/Ingested/Phase10CF_Z3CenterConfinement.lean::center_is_cyclic
+  C-ROT-002:
+  - formal/SubstrateFramework/Ingested/Phase47BM_RigidTopSpectrum.lean::gap_eq
+  - formal/SubstrateFramework/Ingested/Phase48CE_OperatorAndGap.lean::two_independent_one_loop_questions
+  C-GSK-003:
+  - formal/SubstrateFramework/Ingested/Phase48CE_OperatorAndGap.lean::weight_gap
+  - formal/SubstrateFramework/Ingested/Phase48CE_OperatorAndGap.lean::refractive_index_transverse_gt_one
+  C-SG-020:
+  - formal/SubstrateFramework/Ingested/Bridge.lean::anticommutator_at_free_fermion
+  C-SG-022:
+  - formal/SubstrateFramework/Ingested/Basin.lean::basin_positive_measure
+  C-VIR-002:
+  - formal/SubstrateFramework/Ingested/ComparsiVirial.lean::periodic_virial_forces_zero
+status: formal_gate_passed_review_pending
+verdict: The corrected Lean gate passed (8,089 jobs, no proof escape, audited standard axiom footprint); independent
+  claim reviews and the final integrated repository gate remain pending. Registry statements now restrict the
+  graviton count interpretation to D>=3, declare the C-GW-012 dependency, narrow C-EW-001 to the finite checked set,
+  include the exact C-ROT-002 positivity hypotheses, remove unsupported outside-verification language, and state
+  C-SG-022 as the positive-open-interval theorem actually encoded.
+elapsed: scripts/check_lean.sh completed successfully in 17.5 seconds at the corrected formal boundary

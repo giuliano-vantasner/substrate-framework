@@ -1,17 +1,17 @@
 campaign: P232
 title: Historical Lean corpus census and corroboration evidence transaction
-base_release: v0.161.0
-base_commit: db082ec
+base_release: v0.162.0
+base_commit: 970633a
 adjudicated_at: '2026-08-18T21:30:00+02:00'
-deliverable: Census of all 60 ingested files / 467 manifest theorems against the v0.161.0 registry with
+deliverable: Census of all 60 ingested files / 467 manifest theorems against the v0.162.0 registry with
   per-theorem classification and the reviewed attachment of Lean verification evidence.
 census_counts:
   files: 60
   manifest_theorems: 467
-  corroboration_attachments: 59
-  claims_receiving_lean_evidence: 43
+  corroboration_theorem_records: 55
+  claims_receiving_lean_evidence: 39
   new_standalone_exact_facts: 10
-  composed_theorems: 2
+  composed_theorems: 0
   infrastructure_dispositions: remaining theorems with recorded dispositions (census.yaml)
 attachments:
 - claim: C-ANO-001
@@ -117,25 +117,6 @@ attachments:
     entrypoints:
     - tail_exponent_one
     scope_review: campaigns/P232-lean-corpus-census/reviews/C-GSK-001-lean-evidence.md
-- claim: C-GW-002
-  decision: accepted
-  records:
-  - artifact: formal/SubstrateFramework/Ingested/Phase16QB_TwoPolarizations.lean
-    entrypoints:
-    - triaxial_two_polarizations
-    - at_most_two_polarizations
-    - two_polarizations_iff_cross
-    - both_excite_plus
-    scope_review: campaigns/P232-lean-corpus-census/reviews/C-GW-002-lean-evidence.md
-- claim: C-GW-005
-  decision: accepted
-  records:
-  - artifact: formal/SubstrateFramework/Ingested/Phase16QB_TwoPolarizations.lean
-    entrypoints:
-    - axisym_one_polarization
-    - axisym_no_cross
-    - only_triaxial_excites_cross
-    scope_review: campaigns/P232-lean-corpus-census/reviews/C-GW-005-lean-evidence.md
 - claim: C-GW-009
   decision: accepted
   records:
@@ -220,17 +201,6 @@ attachments:
     - cp_requires_three_generations
     - cp_vanishes_below_three
     scope_review: campaigns/P232-lean-corpus-census/reviews/C-MIX-002-lean-evidence.md
-- claim: C-MOM-003
-  decision: accepted
-  records:
-  - artifact: formal/SubstrateFramework/Ingested/Phase14P3D_SphericalNull.lean
-    entrypoints:
-    - spherical_breather_radiates_nothing
-    - monopole_silent
-    - dipole_silent
-    - subquadrupole_moments_null
-    - spherical_below_threshold
-    scope_review: campaigns/P232-lean-corpus-census/reviews/C-MOM-003-lean-evidence.md
 - claim: C-OVL-002
   decision: accepted
   records:
@@ -331,19 +301,6 @@ attachments:
     - hbar_eff_not_constant
     - action_over_hbar_eff
     scope_review: campaigns/P232-lean-corpus-census/reviews/C-SG-006-lean-evidence.md
-- claim: C-SG-009
-  decision: accepted
-  records:
-  - artifact: formal/SubstrateFramework/Ingested/Phase13FS_HarmonicDoubling.lean
-    entrypoints:
-    - quadratic_source_radiates_at_2omega
-    - quadratic_harmonics_all_even
-    - quadratic_harmonics_even
-    - quadratic_not_fundamental
-    - quadratic_at_least_doubled
-    - lowest_parity_matches_power_even
-    - lowest_parity_matches_power_odd
-    scope_review: campaigns/P232-lean-corpus-census/reviews/C-SG-009-lean-evidence.md
 - claim: C-SG-011
   decision: accepted
   records:
@@ -528,11 +485,12 @@ promotions_delegated:
   - C-SG-020
   - C-SG-022
   - C-VIR-002
+dispositions_delegated:
 - campaign: P234-lean-polarization-split
-  claims:
+  candidates:
   - C-GW-013
 - campaign: P235-lean-radiating-channel
-  claims:
+  candidates:
   - C-GW-014
 preliminary_scan_corrections:
 - item: CP-phase count
@@ -544,9 +502,10 @@ preliminary_scan_corrections:
 evidence:
   proposal: proposal.yaml
   census: census.yaml
-  scope_reviews: 43 files under reviews/
+  scope_reviews: 39 files under reviews/
 validation_commands:
 - PYTHONPATH_src_python_python_census_consistency_test
 - PYTHONPATH_src_python_scripts_validate_repository_py
-debt: []
-status: accepted
+debt:
+- Fresh scope-review records are pending from an actor independent of the implementation.
+status: pending_independent_review

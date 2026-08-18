@@ -34,5 +34,5 @@ The accepted release and immutable campaign evidence are the authoritative point
 Accepted in `v0.163.0` with provenance `campaigns/P233-lean-discrete-facts/adjudication.yaml`.
 
 - `formal/SubstrateFramework/Ingested/Phase48CE_OperatorAndGap.lean`
-- `campaigns/P233-lean-discrete-facts/attempts/0001/result.yaml`
+- `campaigns/P233-lean-discrete-facts/attempts/0002/result.yaml`
 - `campaigns/P232-lean-corpus-census/census.yaml`

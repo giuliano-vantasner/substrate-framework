@@ -1,0 +1,16 @@
+attempt: '0002'
+route: Exact physical-encoding and dependency audit of the proposed synthesized theorem.
+command: inspect definitions and theorem statements in Phase14P3D_SphericalNull.lean against C-MOM-003, C-SG-009, and C-GW-002
+entrypoint: formal/SubstrateFramework/Ingested/Phase14P3D_SphericalNull.lean::Phase14P3D.selfconsistent_channel_ties_GWL_FSL
+dependency_scopes_used:
+- C-MOM-003
+- C-SG-009
+- C-GW-002
+status: rejected
+verdict: The kernel proves evaluations of radiatedQuadrupole, radiates, lowestRadiatingMultipole, and lowestACHarmonic,
+  but those definitions directly declare the quadrupole threshold, spin map, and even harmonic. The accepted dependencies
+  do not prove dipole conservation or a source-to-radiating-channel map, so the proposed core synthesis imports its gap.
+diagnosed_layer: scientific_construction
+falsifier: An independent conservation/multipole theorem and source-to-channel construction composed with the accepted
+  STF, harmonic, and TT claims would permit a new synthesis proposal; evaluation of the current lookup functions cannot.
+elapsed: exact source audit; no numerical comparator

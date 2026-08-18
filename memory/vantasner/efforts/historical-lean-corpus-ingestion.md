@@ -2,7 +2,7 @@
 description: Ingest the historical Lean corpus from /home/dan/substrate into the framework as provenance-governed formal artifacts
 author: prime-agent
 created: '2026-08-18T19:05:00+02:00'
-updated: '2026-08-18T19:05:00+02:00'
+updated: '2026-08-18T23:40:00+02:00'
 tags:
 - substrate-framework
 - effort
@@ -87,16 +87,17 @@ ingested file equals its source: no statement or proof body changed.
 
 ## Debt Ledger
 
-One deliberate debt remains open by design, recorded in the table below.
+The ingestion itself is complete. Its promotion handoff remains active until
+the corrected claim-level transaction is independently reviewed and merged.
 
 | Debt | Introduced by | Why it is real | Discharge artifact | Status |
 | --- | --- | --- | --- | --- |
-| Ingested theorems are not yet framework claims | The ingestion workstream | Promotion requires individual review with dependency closure through the theorem/synthesis workflows | Discharged by P232-P235 on this branch: census of all 60 files, 46 lean evidence attachments to 43 accepted claims, 12 promotions (10 fixed-theorem, 2 synthesized) into v0.163.0, remaining theorems with recorded dispositions | Discharged |
+| Ingested theorems require reviewed claim-level disposition | The ingestion workstream | Promotion requires individual review with exact dependency closure | Corrected P232-P235 transaction: 55 theorem records on 39 existing claims, ten fixed-theorem promotions, two rejected circular syntheses, and artifact dispositions for the remainder | Pending independent review and merge |
 
 ## Done Gate
 
-Discharged: the census and promotion transactions landed on the same branch
-(campaigns P232-P235, release v0.163.0) with every claim-bearing theorem
-promoted or carrying a recorded, reviewed disposition; the formal surface is
-unchanged from the gate commit and the full validation suite runs once at the
-merge boundary. See memory/vantasner/efforts/issue-92-claim-promotion.md.
+The 60-file corpus and its provenance checks are complete. The first promotion
+transaction in PR #93 was rejected and reverted because review and claim scope
+were unsound. Completion now requires the corrected P232-P235 transaction,
+fresh individual review, and distinct merge. See
+`memory/vantasner/efforts/issue-92-claim-promotion.md`.

@@ -1,15 +1,15 @@
 id: P234
-base_release: v0.161.0
-source_baseline: substrate-framework@db082ec
+base_release: v0.162.0
+source_baseline: substrate-framework@970633a
 question: 'Composing the accepted two-dimensional TT projection (C-GW-002) with the accepted axisymmetric
   cross-zero waveform (C-GW-005): does an axisymmetric breathing source excite exactly one of the two
   TT polarization dimensions while a triaxial source excites both, with the two counts separated by the
   cross excitation alone?'
 source_inventory:
-- source: C-GW-002 @ v0.161.0
+- source: C-GW-002 @ v0.162.0
   access: governance/claims.yaml and campaigns/P038-gw3-tt-polarization-basis
   extracted: TT projector rank two, e_plus/e_cross completeness
-- source: C-GW-005 @ v0.161.0
+- source: C-GW-005 @ v0.162.0
   access: governance/claims.yaml and campaigns/P047-p3d4-conditional-axisymmetric-waveform
   extracted: axisymmetric STF TT projection has zero cross coordinate
 - source: formal/SubstrateFramework/Ingested/Phase16QB_TwoPolarizations.lean
@@ -26,10 +26,14 @@ candidates:
 - id: A
   description: 'Lean glue: the SourceSym-indexed polarization-count function with the axisym one / triaxial
     two evaluation, cross-excitation iff triaxial, and the saturation comparison against the D=4 TT dimension.'
-uniqueness_evidence: target_kind is fixed_theorem; the composition is fixed by the ingested file.
+- id: B
+  description: Classify the table-evaluation theorems as artifact-only because the SourceSym-indexed definitions
+    declare the triaxial and plus-mode answers that the accepted dependencies do not derive.
+uniqueness_evidence: null
 selection_criteria:
 - exact agreement with both accepted dependency scopes
 - no new assumption beyond the declared symmetry classification
+- no desired polarization-excitation value encoded as a definition or glue input
 structural_gap: 'Neither C-GW-002 nor C-GW-005 states the symmetry-to-count dictionary: how many of the
   two accepted TT dimensions a source of each symmetry class excites, and that the cross excitation alone
   separates the classes.'

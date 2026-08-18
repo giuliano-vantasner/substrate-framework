@@ -9,6 +9,7 @@ import SubstrateFramework
 #print axioms ActionQuantum.sqrt_one_sub_sq_pos  -- ActionQuantum.lean
 #print axioms SGAmplitudeCondition.amplitudeCondition_feasible  -- AmplitudeCondition.lean
 #print axioms SGBasin.basin_single_point_exists  -- Basin.lean
+#print axioms SGBasin.basin_positive_measure  -- Basin.lean (load-bearing promoted interval theorem)
 #print axioms SGBridge.exchange_phase_free_fermion  -- Bridge.lean
 #print axioms SGChargeDiscrimination.channels_cp_conjugate  -- ChargeDiscrimination.lean
 #print axioms ComparsiVirial.periodic_virial_forces_zero  -- ComparsiVirial.lean
