@@ -1,0 +1,58 @@
+campaign: P230
+title: Exact constant-mass one-loop regulator coefficient promotion
+base_release: v0.160.0
+accepted_release: v0.161.0
+base_commit: 0beaac3
+adjudicated_at: '2026-08-18T11:49:56+02:00'
+selected_candidates:
+  - {id: A, reason: Sharp_tail_integrals_are_exact_positive_and_keep_the_cutoff_explicit.}
+  - {id: B, reason: Smooth_weight_integrals_form_an_exact_convergent_Bessel_family.}
+  - {id: C, reason: Declared_power_subtraction_exposes_the_exact_scale_dependent_finite_part.}
+selection: parallel_conditional_families_not_physical_regulator_choice
+claims:
+  - {id: C-IGR-001, decision: accepted, verification: symbolic_verified, review: accepted, compatibility: compatible_extension, epistemic: active}
+  - {id: C-IGR-002, decision: accepted, verification: symbolic_verified, review: accepted, compatibility: compatible_extension, epistemic: active}
+  - {id: C-IGR-003, decision: accepted, verification: symbolic_verified, review: accepted, compatibility: compatible_extension, epistemic: active}
+accepted_composition:
+  - {id: C-GRV-001, decision: unchanged_dimensional_and_independent_additive_baseline_ledger}
+unpromoted_surfaces:
+  - {id: varying_mass_background, reason: Factorization_requires_spacetime_constant_m_squared.}
+  - {id: full_nonlocal_determinant, reason: P230_proves_only_the_displayed_local_coefficient_families.}
+  - {id: physical_regulator_or_renormalization_condition, reason: All_three_declared_schemes_remain_unselected.}
+  - {id: total_Newton_constant, reason: C-GRV-001_retains_an_independent_additive_baseline.}
+  - {id: attractive_gravity_or_sourced_geometry, reason: No_field_equation_solution_or_total_sign_is_derived.}
+  - {id: higher_curvature_sector, reason: Tau_minus_one_and_nonlocal_terms_are_outside_P230.}
+evidence:
+  proposal: proposal.yaml
+  formula_freeze: evidence/formula-freeze.yaml
+  literature_audit: evidence/literature-audit.yaml
+  candidate_comparison: evidence/candidate-comparison.yaml
+  dependency_audit: evidence/dependency-audit.yaml
+  consumer_audit: evidence/consumer-audit.yaml
+  nonduplication_audit: evidence/nonduplication-audit.yaml
+  primary_provenance: evidence/primary-provenance.yaml
+  primary_verifier: verify.py
+  independent_rederivation: reviews/independent_exact_mass_review.py
+  claim_reviews:
+    - reviews/C-IGR-001-claim-review.md
+    - reviews/C-IGR-002-claim-review.md
+    - reviews/C-IGR-003-claim-review.md
+  impact_analysis: reviews/impact_analysis.md
+  final_attempt: attempts/0003/result.yaml
+validation_commands:
+  - PYTHONPATH_src_python_campaign_verify
+  - PYTHONPATH_src_python_independent_exact_mass_review
+  - pytest_scalar_one_loop_mass_and_affected_consumers
+  - scripts_validate_sh_full_once_at_final_boundary
+  - git_diff_check_separately
+integrated_gate:
+  status: passed
+  repository_workflow: ALL_REPOSITORY_WORKFLOW_CHECKS_PASS
+  full_pytest: 2263_passed_in_288_80_seconds
+  primary_verifier: ALL_27_CHECKS_PASS
+  independent_rederivation: ALL_21_CHECKS_PASS
+  targeted_affected_tests: 42_passed
+  final_record_validation: passed
+  git_diff_check: passed
+debt: []
+status: accepted

@@ -1,0 +1,12 @@
+id: attempt-0001
+campaign: P230
+source_pr: 77
+reviewed_head: 04f26f2
+verdict: rejected_implementation_boundary
+reusable_atoms: [sharp_integrals, smooth_integrals, power_subtracted_integrals, scheme_ledger]
+failures:
+  - mass_resummed_I3_was_double_counted_with_unresummed_m2_I2
+  - reported_sign_ignored_power_subtracted_integral_sign
+  - landed_unpromoted_dependencies_were_called_accepted
+evidence: https://github.com/vantasnerdan/substrate-framework/pull/77#pullrequestreview-4957950666
+next_route: repair_formula_sign_and_authority_boundaries

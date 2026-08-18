@@ -1,0 +1,15 @@
+id: attempt-0002
+campaign: P230
+source_prs: [77, 82]
+source_heads: [a8a47f8, d415caf]
+verdict: artifact_correct_claim_promotion_incomplete
+repairs:
+  - mass_resummed_vacuum_uses_I3_only
+  - dI3_dm2_equals_minus_I2_added
+  - curvature_weight_sign_separated_from_full_value_sign
+  - focused_PR82_removed_false_accepted_language_from_code
+remaining_gaps:
+  - proposal_still_lacked_exact_promotable_claim_statements
+  - arbitrary_background_language_exceeded_constant_mass_factorization
+  - no_independent_rederivation_campaign_reviews_registry_release_docs_or_accepted_memory
+next_route: constant_mass_claim_promotion_transaction

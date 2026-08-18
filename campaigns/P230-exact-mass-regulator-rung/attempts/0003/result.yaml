@@ -1,0 +1,23 @@
+id: attempt-0003
+campaign: P230
+branch: research/p230-exact-mass-promotion
+status: complete
+verdict: three_exact_constant_mass_claims_ready_for_promotion
+repairs:
+  - exact_claims_narrowed_to_constant_nonnegative_mass
+  - positive_self_adjoint_and_IR_reference_assumptions_declared
+  - local_coefficient_ceiling_separated_from_full_nonlocal_determinant
+  - inverse_Newton_factor_rederived_without_unpromoted_scientific_API
+  - direct_substitution_at_m2_zero_replaced_by_one_sided_limit_oracle
+evidence:
+  primary_verifier: ALL_27_CHECKS_PASS
+  independent_rederivation: ALL_21_CHECKS_PASS
+  targeted_tests: 42_passed
+  package_import: pass
+  legacy_numpy_preflight: clean
+  gitnexus_impact: low_zero_affected_execution_flows
+  full_repository_validation: 2263_passed_in_288_80_seconds
+  final_record_validation: pass
+  git_diff_check: pass
+integrated_gate: pass
+debt: []

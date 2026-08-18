@@ -1,0 +1,16 @@
+campaign: P230
+identifier_search:
+  family: C-IGR-001_through_C-IGR-003
+  prior_accepted_or_rejected_uses: 0
+nearest_claims:
+  C-GRV-001: dimensional_and_additive_baseline_ledger_only
+  C-VAC-002: conditional_Dirac_gauge_polarization_not_scalar_gravity_coefficients
+  C-VAC-003: conditional_complex_scalar_gauge_polarization_not_curved_scalar_heat_kernel
+nearest_modules:
+  scalar_induced_newton: leading_massless_sharp_asymptotic_only_and_unpromoted
+  covariant_sine_gordon_action: action_and_fluctuation_slot_only_and_unpromoted
+novel_surface: >-
+  P230 is the first accepted candidate to expose exact constant-mass I2/I3
+  families for sharp, smooth, and declared power-subtracted prescriptions,
+  their mass-resummed vacuum composition, and their exact scheme ceiling.
+result: nonduplicate_narrow_conditional_extension

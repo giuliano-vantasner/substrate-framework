@@ -534,6 +534,33 @@ Let G_r=G/G_ref, L_r=L/a_ref, C, and b0 be separately supplied positive exact di
 - Compatibility: `compatible_extension`
 - Dependencies: C-GRV-001, C-RGE-003, C-IDN-001
 
+## C-IGR-001
+
+Conditional on C-GRV-001's independent additive inverse-coupling baseline ledger, separately declare a positive self-adjoint boundaryless four-dimensional Euclidean real-scalar Laplace-type operator D_E=-nabla_E^2+xi*R_E+m2 with spacetime-constant m2>=0, adequate infrared convergence or reference subtraction, Gamma_E=(1/2)*ln(det(D_E)), heat-kernel prefactor (4*pi)^-2, and Euclidean Einstein-Hilbert matching factor 16*pi. For a positive sharp proper-time cutoff Lambda with tau0=Lambda^-2 and z=m2/Lambda^2, the exact local curvature and vacuum coefficient integrals are I2=Lambda^2*(exp(-z)-z*E1(z)) and I3=Lambda^4*exp(-z)/2-m2*I2/2, continuously extended at m2=0. They obey dI3/dm2=-I2, have massless values Lambda^2 and Lambda^4/2, and decay in the large-mass limit. For positive integer N and exact xi, the declared conditional additive coefficients are Delta(1/G)=N*(1-6*xi)*I2/(12*pi) and Delta(rho)=-(N/2)*(4*pi)^-2*I3. These are exact local coefficient families, not a full or nonlocal determinant, varying-mass theorem, selected regulator, cutoff ontology, total Newton constant, attractive- gravity result, sourced geometry, or empirical prediction.
+
+- Accepted in: `v0.161.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: C-GRV-001
+
+## C-IGR-002
+
+Under C-IGR-001's declared operator, determinant, local-coefficient, matching, constant-mass, and baseline assumptions, replace the sharp cutoff by the explicitly declared smooth proper-time weight exp(-1/(Lambda^2*tau)). For positive Lambda, m2>=0, and z=m2/Lambda^2, the exact coefficient integrals are I2=2*Lambda^2*sqrt(z)*K1(2*sqrt(z)) and I3=2*Lambda^4*z*K2(2*sqrt(z)), continuously extended at m2=0. They obey dI3/dm2=-I2, have massless values Lambda^2 and Lambda^4, and decay for large mass. The conditional additive coefficients are the same typed compositions Delta(1/G)=N*(1-6*xi)*I2/(12*pi) and Delta(rho)=-(N/2)*(4*pi)^-2*I3. The exact massless I3 value is twice C-IGR-001's sharp value at the same Lambda, so this claim exposes rather than removes regulator dependence and establishes no physical regulator selection or total gravitational normalization.
+
+- Accepted in: `v0.161.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: C-GRV-001, C-IGR-001
+
+## C-IGR-003
+
+Under C-IGR-001's declared operator, determinant, local-coefficient, matching, constant-mass, and baseline assumptions, declare instead the power-subtracted sharp-cutoff finite-part prescription at a positive scale mu. For constant m2>=0 its exact continuously extended coefficient family is I2=m2*(log(m2/mu^2)+EulerGamma-1) and I3=-(m2^2/2)*(log(m2/mu^2)+EulerGamma-3/2). These are the finite limits after the P230-frozen power and logarithmic subtractions, obey dI3/dm2=-I2, mu*dI2/dmu=-2*m2, and mu*dI3/dmu=m2^2, and vanish continuously at m2=0. The conditional additive shifts use the same typed factors as C-IGR-001. At unit scale and cutoff with m2=0, the sharp, smooth, and power-subtracted I3 values are exactly 1/2, 1, and 0; moreover the finite-part I2 can change sign with m2/mu^2. Therefore P230 derives exact scheme and scale dependence, not a regulator-free coefficient, selected subtraction, finite counterterm, total Newton constant, or physical normalization.
+
+- Accepted in: `v0.161.0`
+- Verification: `symbolic_verified`
+- Compatibility: `compatible_extension`
+- Dependencies: C-GRV-001, C-IGR-001, C-IGR-002
+
 ## C-IRR-001
 
 In the standard fundamental SU(3) convention of C-LIE-001 with Y=2*T_8/sqrt(3), let p and q be arbitrary nonnegative integer Dynkin labels and use the U(3) Gelfand-Tsetlin top row (p+q,q,0). The exact Weyl dimension is (p+1)(q+1)(p+q+2)/2, the quadratic Casimir is (p^2+p*q+q^2+3*p+3*q)/3, and the C-LIE-002 center triality is p+2*q modulo three. Every interlacing pattern p+q>=m12>=q>=m22>=0 and m12>=m11>=m22 gives one basis state with I=(m12-m22)/2, I3=m11-(m12+m22)/2, and Y=m12+m22-2*(p+2*q)/3; these patterns are complete, their count equals the Weyl dimension, and aggregation gives the exact weight multiplicities and multiplicity-free SU(2)xU(1) branching rows. Conditional on an exact rational target hypercharge and explicitly supplied finite nonnegative bounds max_p and max_q, enumerating all labels in the rectangular domain returns every irrep containing that hypercharge and preserves all minimum-dimension ties. At target Y=1 the unique global minimum is (1,1) of dimension eight with I=1/2; the next distinct dimension is ten and contains both (0,3) with I=1/2 and (3,0) with I=3/2. This is a mathematical representation and kinematic-filter theorem only. It does not supply a collective-coordinate action, right generator constraint, WZW level or response, N_c, baryon number, statistics, Hamiltonian, symmetry breaking, particle dictionary, mass spectrum, physical octet/decuplet selection, or substrate mechanism.

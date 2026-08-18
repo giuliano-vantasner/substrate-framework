@@ -1,0 +1,19 @@
+campaign: P230
+accepted_dependencies:
+  C-GRV-001:
+    reused: conditional_additive_inverse_coupling_and_independent_baseline_ledger
+    not_reused: [field_spectrum, regulator, cutoff_ontology, coefficient, total_G]
+approved_nonclaim_imports:
+  - positive_self_adjoint_boundaryless_D_E_with_constant_nonnegative_mass
+  - declared_real_scalar_determinant_heat_kernel_and_EH_matching_conventions
+  - exact_special_function_identities_and_cutoff_finite_part_definition
+implementation_only_inputs:
+  scalar_induced_newton:
+    reused: SHARP_PROPER_TIME_REGULATOR_string_tag
+    scientific_outputs_imported: []
+  covariant_sine_gordon_action:
+    reused: []
+    optional_composition: constant_vacuum_V_double_prime_only
+dependency_closure: pass
+hidden_parameters: []
+debt: []
