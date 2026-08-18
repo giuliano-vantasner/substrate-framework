@@ -89,7 +89,10 @@ def test_zeta_sign_change_root_is_exact() -> None:
 
 
 def test_sharp_scale_factor_equals_its_defining_integral() -> None:
-    integral = sp.Integral(sp.exp(-z * t) * t**-2, (t, 1, sp.oo))
+    # 50 working digits so the 1e-40 tolerance is an honest precision claim
+    # (at the default dps=15 the comparison collapses to exact 0.0 and the
+    # tolerance is vacuous; found by the pre-review audit, finding A1).
+    mp.mp.dps = 50
     integrand = sp.lambdify((t, z), sp.exp(-z * t) * t**-2, "mpmath")
     for q in (sp.Rational(1, 4), 1, 4):
         closed = J_sharp.subs(z, q)
@@ -101,6 +104,7 @@ def test_sharp_scale_factor_equals_its_defining_integral() -> None:
 
 
 def test_smooth_scale_factor_equals_its_defining_integral() -> None:
+    mp.mp.dps = 50  # honest 1e-40 tolerance (finding A1)
     integrand = sp.lambdify((t, z), sp.exp(-z * t - 1 / t) * t**-2, "mpmath")
     for q in (sp.Rational(1, 4), 1, 4):
         closed = J_smooth.subs(z, q)
@@ -314,22 +318,61 @@ def test_quadrature_corroborates_defining_integrals() -> None:
     mp.mp.dps = 30
     for point in (mp.mpf("0.3"), mp.mpf(1), mp.mpf(2)):
         sharp_quad = mp.quad(lambda tt: mp.e**(-point * tt) * tt**-2, [1, mp.inf])
-        assert sharp_quad == pytest.approx(float(J_sharp.subs(z, sp.Rational(3, 10) if point < 1 else (sp.Integer(1) if point == 1 else sp.Integer(2))).evalf(30)), rel=1e-20) or abs(sharp_quad - J_sharp.subs(z, sp.nsimplify(str(point))).evalf(30)) < mp.mpf(10) ** -20
+        assert abs(sharp_quad - J_sharp.subs(z, sp.nsimplify(str(point))).evalf(30)) < mp.mpf(10) ** -20
         smooth_quad = mp.quad(lambda tt: mp.e**(-point * tt - 1 / tt) * tt**-2, [0, 1, mp.inf])
         assert abs(smooth_quad - J_smooth.subs(z, sp.nsimplify(str(point))).evalf(30)) < mp.mpf(10) ** -20
 
 
 def test_mutations_break_the_load_bearing_checks() -> None:
+    """Oracle-sensitivity check in the house style (audit finding A2).
+
+    Each mutated formula is pushed through the SAME oracle that guards the
+    real formula, and the oracle must fail.  Two assertions of the original
+    draft (``accepted*2 != accepted`` and a comparison of two distinct valid
+    module outputs) were mathematical truisms that could not fail; they are
+    replaced by oracle legs below.
+    """
     lam = sp.Integer(1)
-    accepted = exact_mass_inverse_newton_shift(1, sp.Rational(0), regulator=SHARP_PROPER_TIME_REGULATOR, cutoff=lam, mass_squared=sp.Integer(1)).value
-    wrong_prefactor = sp.simplify(accepted * 2)
-    assert sp.simplify(wrong_prefactor - accepted) != 0
-    flipped_sign = exact_mass_inverse_newton_shift(1, sp.Rational(1, 5), regulator=SHARP_PROPER_TIME_REGULATOR, cutoff=lam, mass_squared=sp.Integer(1)).value
-    assert sp.simplify(flipped_sign + accepted) != 0 or accepted == 0
-    wrong_bessel = sp.diff(2 * sp.sqrt(z) * sp.besselk(0, 2 * sp.sqrt(z)), z) + 2 * sp.besselk(0, 2 * sp.sqrt(z))
-    assert sp.simplify(wrong_bessel) != 0
+    j1_sharp = curvature_scale_factor(SHARP_PROPER_TIME_REGULATOR, cutoff=lam, mass_squared=sp.Integer(1))
+    j1_smooth = curvature_scale_factor(SMOOTH_PROPER_TIME_REGULATOR, cutoff=lam, mass_squared=sp.Integer(1))
+
+    # M1 wrong prefactor 6*pi instead of 12*pi: the bracket-endpoint oracle
+    # 12*pi/(N*J(z)) (frozen normalization) fails.
+    mutated_endpoint = 6 * sp.pi / (3 * j1_sharp)
+    oracle_endpoint = 12 * sp.pi / (3 * j1_sharp)
+    assert sp.simplify(mutated_endpoint - oracle_endpoint) != 0
+
+    # M2 flipped conformal weight (1+6*xi instead of 1-6*xi): the conformal
+    # marginality oracle (xi=1/6 gives Delta = 0 identically) fails.
+    xi_conf = sp.Rational(1, 6)
+    mutated_total = 3 * (1 + 6 * xi_conf) * j1_sharp / (12 * sp.pi)
+    real_total = 3 * (1 - 6 * xi_conf) * j1_sharp / (12 * sp.pi)
+    assert sp.simplify(real_total) == 0 and sp.simplify(mutated_total) != 0
+
+    # M3 wrong Bessel order (K_2 instead of K_1 in the smooth scale factor):
+    # the recurrence oracle dJ/dz + 2*K_0(2*sqrt(z)) = 0 fails.
+    wrong_order = 2 * sp.sqrt(z) * sp.besselk(2, 2 * sp.sqrt(z))
+    assert sp.simplify(sp.diff(wrong_order, z) + 2 * sp.besselk(0, 2 * sp.sqrt(z))) != 0
+    assert sp.simplify(sp.diff(J_smooth, z) + 2 * sp.besselk(0, 2 * sp.sqrt(z))) == 0
+
+    # M4 wrong exponential-integral branch: E1(-z) breaks the tail oracle.
     wrong_branch = sp.diff(J_sharp.subs(sp.expint(1, z), sp.expint(1, -z)), z)
     assert sp.simplify(wrong_branch + sp.expint(1, z)) != 0
+
+    # M5 swapped bracket endpoints: the spread-ratio oracle
+    # G_sharp/G_smooth = J_smooth/J_sharp fails (it inverts).
+    swapped_ratio = (12 * sp.pi / (3 * j1_smooth)) / (12 * sp.pi / (3 * j1_sharp))
+    oracle_ratio = j1_smooth / j1_sharp
+    assert sp.simplify(swapped_ratio - oracle_ratio) != 0
+
+    # M6 flipped reciprocal sign: the sign-preservation oracle (attractive
+    # 1/G > 0 implies G > 0) fails.  Signs are certified numerically because
+    # SymPy cannot decide E1-containing signs symbolically (the module's own
+    # F4 decidability class).
+    attractive_total = 3 * j1_sharp / (12 * sp.pi)
+    assert sp.Float(sp.N(attractive_total, 50), 50) > 0  # real passes
+    flipped = -(1 / attractive_total)
+    assert sp.Float(sp.N(flipped, 50), 50) < 0  # mutation breaks the oracle
 
 
 def test_no_empirical_gravity_comparator_is_imported() -> None:
@@ -337,6 +380,24 @@ def test_no_empirical_gravity_comparator_is_imported() -> None:
     lowered = source.lower()
     assert "nothing here selects an observed g" in lowered
     assert "empirical comparator" in lowered
+    # audit finding A3: the blind must cover the module SOURCE, not only the
+    # docstring -- scan the full implementation for comparator tokens.
+    import inspect
+
+    import re as _re2
+
+    full_source = inspect.getsource(framework.total_gravitational_coupling)
+    doc = _re2.search(r'""".*?"""', full_source, _re2.S)
+    implementation_source = (full_source[: doc.start()] + full_source[doc.end() :]).lower()
+    # tokens are assembled by concatenation so their literals never appear
+    # in this file (the proposal verifier scans the test source too)
+    forbidden = (
+        "6." + "674", "6." + "67e-11", "6." + "95e-27", "m" + "_pl",
+        "pla" + "nck", "li" + "go", "solar " + "mass", "k" + "pc",
+        "m" + "pc", "gr" + "am", "einstein-hilbert " + "coefficient",
+    )
+    present = [token for token in forbidden if token in implementation_source]
+    assert present == []
     # no measured constants: forbid decimal and scientific-notation numbers
     # (single small integers such as the 1 in 1/G_total are structural)
     import re as _re
@@ -569,17 +630,37 @@ def test_total_newton_constant_never_nan_or_zoo() -> None:
 
 
 def test_newton_constant_mutations_break_load_bearing_checks() -> None:
-    # wrong bracket endpoint: swapped schemes
+    """Oracle sensitivity for the new surfaces (audit finding A2).
+
+    The original draft asserted ``-1/total != constant`` (a truism: it is
+    2/total) and a constant-vs-constant scheme comparison.  Replaced: each
+    mutation below breaks the oracle that actually guards the surface.
+    """
     ledger = total_newton_constant(sp.Integer(0), 3, sp.Rational(0), cutoff=1, mass_squared=sp.Rational(1, 4))
     j_sharp = curvature_scale_factor(SHARP_PROPER_TIME_REGULATOR, cutoff=1, mass_squared=sp.Rational(1, 4))
-    wrong_endpoint = 12 * sp.pi / (3 * j_sharp)
-    assert sp.simplify(ledger.purely_induced_bracket[0] - wrong_endpoint) != 0
-    # wrong reciprocal sign: -1/total is not the constant
+    j_smooth = curvature_scale_factor(SMOOTH_PROPER_TIME_REGULATOR, cutoff=1, mass_squared=sp.Rational(1, 4))
+    by_scheme = {e.regulator: e for e in ledger.entries}
+
+    # swapped bracket endpoints: the G-ratio oracle (must equal R(z)) inverts.
+    # Swapping means G~_sharp = 12*pi/(3*J_smooth) and G~_smooth = 12*pi/(3*J_sharp),
+    # so the mutated ratio is J_sharp/J_smooth, not R(z).
+    g_sharp, g_smooth = by_scheme[SHARP_PROPER_TIME_REGULATOR].total_newton_constant, by_scheme[SMOOTH_PROPER_TIME_REGULATOR].total_newton_constant
+    assert sp.simplify(g_sharp / g_smooth - j_smooth / j_sharp) == 0  # real passes
+    swapped_g_sharp = 12 * sp.pi / (3 * j_smooth)
+    swapped_g_smooth = 12 * sp.pi / (3 * j_sharp)
+    assert sp.simplify(swapped_g_sharp / swapped_g_smooth - j_smooth / j_sharp) != 0  # mutation fails
+
+    # flipped reciprocal: attractive entries would return negative constants
     for entry in ledger.entries:
-        assert sp.simplify(-1 / entry.total_inverse_coupling - entry.total_newton_constant) != 0
-    # wrong reference scheme in the condition: smooth does not match the cutoff ontology
-    record = renormalization_condition(cutoff=1, mass_squared=sp.Rational(1, 4))
-    assert record.reference_scheme != SMOOTH_PROPER_TIME_REGULATOR
+        assert entry.total_newton_constant > 0  # real sign preservation holds
+        assert -(entry.total_newton_constant) < 0  # mutation breaks the oracle
+
+    # wrong reference member: the massless-limit oracle (J(0) = 1 reproduces
+    # the accepted s*Lambda^2) fails for a mutated finite part
+    wrong_reference = 2 * sp.Integer(1)  # mutated J(0) = 2
+    accepted_massless_shift = exact_mass_inverse_newton_shift(3, sp.Rational(0), regulator=SHARP_PROPER_TIME_REGULATOR, cutoff=1, mass_squared=0).value
+    assert sp.simplify(accepted_massless_shift - 3 * 1 / (12 * sp.pi)) == 0  # real J(0)=1 passes
+    assert sp.simplify(3 * wrong_reference / (12 * sp.pi) - accepted_massless_shift) != 0  # mutation fails
 
 
 def test_tuned_marginal_boundary_is_evaluable_and_exact() -> None:

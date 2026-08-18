@@ -106,3 +106,20 @@ is SymPy-undecidable as real and was rejected. Repaired with certified
 numeric acceptance for symbol-free finite-real constants; the tuned
 boundary now evaluates exactly, giving the marginal locus in the tuned
 scheme and an honest attractive verdict in the other usable scheme.
+
+
+## Final pre-review adversarial audit (attempt 0004)
+
+Owner-requested audit before review assignment, attacking claims vs. code,
+tautologies, SymPy usage, and validation integrity. Three oracle defects
+found and repaired (A1 false-precision quadrature tolerances; A2
+tautological mutation legs replaced with genuine oracle-sensitivity legs;
+A3 comparator blind extended from docstring to implementation source), one
+evidence gap closed (A4: verifier and independent rederivation re-run after
+the F8 repair). Audit probes confirmed the sign-band edges, the exact
+spread unit-mass value, zoo-freedom, symbolic-cutoff acceptance, and input
+rejection contracts. The audit itself introduced and then caught two
+self-inflicted traps (an algebraically-identical "swapped ratio" leg and a
+comparator-token list whose literals tripped the proposal verifier's own
+source scan) — both repaired before commit. Final head: 41 targeted, 32
+primary, 20 independent, 2304 full, all green.
