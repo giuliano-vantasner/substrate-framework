@@ -2,14 +2,14 @@
 description: Make higher-theorem promotion a proof-first repository workflow with Lean-ready onboarding
 author: Codex
 created: '2026-08-18T17:19:01+02:00'
-updated: '2026-08-18T17:19:01+02:00'
+updated: '2026-08-18T17:43:46+02:00'
 tags:
 - substrate-framework
 - effort
 - theorem-synthesis
 category: efforts
-confidence: working
-status: active
+confidence: established
+status: archived
 ---
 
 ## Goal and Success Contract
@@ -54,11 +54,11 @@ The effort preserves these scientific and coordination boundaries.
 ## Decomposition
 
 1. [x] Verify authority, memory, issue, worktree isolation, and impact boundary.
-2. [ ] Implement synthesized/interpretive governance and focused tests.
-3. [ ] Implement the advisory dependency graph and CLI.
-4. [ ] Add the theorem-synthesis skill, memory template, and Lean onboarding.
-5. [ ] Consolidate proportional proof-first guidance in the agent contracts.
-6. [ ] Validate once at the final boundary, self-review, PR, and merge.
+2. [x] Implement synthesized/interpretive governance and focused tests.
+3. [x] Implement the advisory dependency graph and CLI.
+4. [x] Add the theorem-synthesis skill, memory template, and Lean onboarding.
+5. [x] Consolidate proportional proof-first guidance in the agent contracts.
+6. [x] Validate once at the final boundary and open the owner-authorized self-merge PR.
 
 ## Attempts
 
@@ -66,25 +66,27 @@ Technical attempts are append-only so onboarding and validation failures remain 
 
 | Attempt | Candidate or repair | Artifact and command | Verdict | Mechanism | Next attempt |
 | --- | --- | --- | --- | --- | --- |
-| 0001 | Backward-compatible optional metadata plus strict rules when `category: synthesized` or `layer: interpretive` is declared | Issue #90 and branch `process/theorem-synthesis-90` | In progress | Avoids bulk rewriting accepted claims while giving new theorems an executable contract | Implement and test the exact schema |
-| 0002 | First idempotent Lean onboarding replay | `scripts/setup_lean.sh` | Technical failure: existing toolchain returned status 1 | Elan 4.2.3 treats reinstall of an installed toolchain as an error | Inventory `elan toolchain list` before installation, then rerun setup |
-| 0003 | First formal axiom-audit replay | `scripts/check_lean.sh` and `lake env lean Audit.lean` | Technical failure: the library had not produced an olean | The Lake library was declared but not a default build target, so bare `lake build` completed with zero jobs | Mark the library as `@[default_target]`, rebuild, and rerun the audit |
-| 0004 | First direct validation-scope selection | `scripts/validate_changed.py --base origin/main --head HEAD --print-only` | Technical failure: permission denied | The documented shebang command lacked an executable file mode | Mark the selector executable, cover the command surface, and rerun |
+| 0001 | Backward-compatible optional metadata plus strict rules when `category: synthesized` or `layer: interpretive` is declared | Issue #90 and branch `process/theorem-synthesis-90` | Pass | Existing 210-claim registry validates unchanged; positive and negative synthesis tests pass | Complete |
+| 0002 | First idempotent Lean onboarding replay | `scripts/setup_lean.sh` | Repaired and passed | Elan 4.2.3 treats reinstall of an installed toolchain as an error | Installed-toolchain inventory and cache detection make repeat setup idempotent |
+| 0003 | First formal axiom-audit replay | `scripts/check_lean.sh` and `lake env lean Audit.lean` | Repaired and passed | The Lake library was declared but not a default build target, so bare `lake build` completed with zero jobs | Default target builds 8,028 jobs; glue theorem has no axioms |
+| 0004 | First direct validation-scope selection | `scripts/validate_changed.py --base origin/main --head HEAD --print-only` | Repaired and passed | The documented shebang command lacked an executable file mode | Selector is executable, tested, and chose the correct full boundary for this PR |
 
 ## Validation
 
 Validation is proportional to this cross-cutting workflow change and includes the actual Lean environment.
 
-- Targeted governance/analyzer tests: pending.
-- Lean project build and axiom inspection of the infrastructure theorem: pending.
-- Skill and memory-template validation: pending.
+- Targeted governance/analyzer/selector/onboarding/public-surface tests: 50 passed.
+- Lean setup and build: pinned Lean/mathlib setup passed; the library build completed 8,028 jobs.
+- Formal audit: `SubstrateFramework.compose_implications` depends on no axioms.
+- Skill validation: the skill-creator quick validator and repository skill validator passed.
 - Impact analysis: `validate_registry` has two direct and one indirect consumer;
   `validate_proposal` and `render_claim_index` have no indexed upstream callers.
   Overall indexed risk is LOW, with repository scripts and tests still included
   manually because the graph omits some script-level calls.
-- Final repository workflow: pending `scripts/validate_changed.py --base 7dfe89b`
-  decision and one matching validation run.
-- `git diff --check`: pending, separately from commit.
+- Final repository workflow: `scripts/validate_changed.py --base origin/main --head HEAD`
+  selected full validation because governance semantics changed; 2,279 tests and
+  all fixed checks passed in 291.60 seconds, followed by the Lean audit.
+- `git diff --check`: passed separately before commit.
 
 ## Debt Ledger
 
@@ -95,27 +97,33 @@ The merge unit currently has no known unresolved debt.
 
 ## Results
 
-Pending implementation.
+The workflow now supports synthesized and interpretive claim metadata, fixed
+theorem synthesis campaigns, scoped evidence modalities, and exact composition
+artifacts without changing accepted claims. The advisory graph surfaces live
+cross-sector intersections; the SG/MOM/GW run ranked `C-GW-007`, `C-MOM-002`,
+and `C-GW-004` at the frontier. Agent bootstrap installs the pinned Lean 4.28.0
+and mathlib v4.28.0 environment, builds the repository library, and exposes an
+axiom audit. Pull request #91 contains the complete merge unit.
 
 ## Canonicalization
 
-No accepted claim, campaign, release, or accepted-memory record changes. Generated
-claim documentation will be regenerated only if the renderer's backward-compatible
-output changes. Workflow guidance, schema support, tooling, setup, and templates
-will land together.
+No accepted claim, campaign, release, or accepted-memory record changed, and
+generated claim documentation remained current. Workflow guidance, schema
+support, tooling, setup, templates, and tests land together in PR #91.
 
 ## Done Gate
 
-This is a workflow implementation rather than a claim-promotion campaign. It is
-done when every scope item in issue #90 exists, targeted negative/positive tests
-and the final repository validation pass, Lean builds from the pinned scaffold,
-and the PR is merged without modifying accepted scientific state.
+This workflow implementation has met every in-scope gate: positive and negative
+tests pass, the repository and generated state validate, Lean builds with an
+empty axiom footprint, the debt ledger is empty, and PR #91 is ready for the
+repository-owner-authorized self-merge. It promotes no scientific claim.
 
 ## Cross-References
 
 The canonical issue and accepted baseline anchor this effort.
 
 - Canonical issue: https://github.com/vantasnerdan/substrate-framework/issues/90
+- Pull request: https://github.com/vantasnerdan/substrate-framework/pull/91
 - Branch: `process/theorem-synthesis-90`
 - Base release: `governance/releases/current.yaml`
 - Registry: `governance/claims.yaml`
