@@ -36,7 +36,10 @@ def validation_environment(tmp_path: Path) -> tuple[dict[str, str], Path]:
         "printf 'memory' >> \"$VALIDATE_TEST_LOG\"\n"
         "for arg in \"$@\"; do printf '|%s' \"$arg\" >> \"$VALIDATE_TEST_LOG\"; done\n"
         "printf '\\n' >> \"$VALIDATE_TEST_LOG\"\n"
-        "if [ \"${1:-}\" = '--version' ]; then printf 'memory 0.0\\n'; fi\n",
+        "if [ \"${1:-}\" = '--version' ]; then printf 'memory 0.0\\n'; fi\n"
+        "if [ \"${1:-}\" = 'validate' ]; then\n"
+        "  printf '  noisy per-field pass\\n  [warn] sample warning\\n  All 2 file(s) valid.\\n'\n"
+        "fi\n",
         encoding="utf-8",
     )
     memory_stub.chmod(0o755)
@@ -132,6 +135,19 @@ def test_fixed_only_validation_skips_pytest(
         if line.startswith("python|-m|pytest|")
     ]
     assert pytest_calls == []
+
+
+def test_validation_compacts_successful_memory_output(
+    validation_environment: tuple[dict[str, str], Path],
+) -> None:
+    environment, _ = validation_environment
+
+    result = run_validation(environment, "--fixed-only")
+
+    assert result.returncode == 0, result.stderr
+    assert "All 2 file(s) valid." in result.stdout
+    assert "MEMORY VALIDATION WARNINGS: 1" in result.stdout
+    assert "noisy per-field pass" not in result.stdout
 
 
 @pytest.mark.parametrize("selector", ["--collect-only", "src/substrate_framework"])

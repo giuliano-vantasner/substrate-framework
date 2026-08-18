@@ -10,7 +10,10 @@ Use the strongest practical oracle for each claim and state exactly what verdict
 | Time-dependent PDE or nonlinear dynamics | Appropriate spatial discretization plus SciPy time integration, convergence, conservation/stability, and a method cross-check | `simulation_evidence` |
 | Figure or visualization | Rendering tool | artifact only |
 
-Split composite claims so each part receives the right oracle. Discover numerically, then prove symbolically or formally when the structure permits.
+Separate genuinely different evidence modalities so each receives the right
+verdict, while preserving the strongest useful combined statement. Do not split
+a claim into trivial fragments merely to simplify review. Discover numerically,
+then prove symbolically or formally when the structure permits.
 
 Proof establishes the encoded mathematical statement. Measurement, numerics,
 and simulation test applicability or consequences; record them as separate
@@ -23,7 +26,8 @@ evidence scopes rather than treating measurement as the definition of proof.
 - Assert the unsimplified and simplified structure where sign or branch information matters.
 - Inspect the evaluated form before assigning an exact verdict. An unevaluated `Integral`, `Sum`, derivative, root object, or unresolved condition is not a symbolic proof merely because it appears inside an equality check. Preserve the failed attempt and change identity, representation, assumptions, or oracle; use independent refined numerics only as a cross-check when the claim remains exact.
 - Test domains, branches, dimensions, symmetries, special cases, and limits.
-- Mutate coefficients and signs; the residual check must fail.
+- Use a representative coefficient, sign, branch, or convention mutation when
+  it can expose a copied or insensitive residual.
 
 An identity that holds only because both sides contain the same copied literal is not verification.
 
@@ -56,8 +60,9 @@ A theorem can be perfectly proved and still encode too weak a proposition.
 
 ## Mutation and counterexample audit
 
-For each load-bearing input to a custom symbolic/numeric verifier or translation
-layer, construct a scientifically meaningful mutation:
+Choose the smallest representative set of scientifically meaningful mutations
+that covers the load-bearing failure modes of a custom symbolic/numeric verifier
+or translation layer:
 
 - coefficient or normalization change;
 - sign flip;
@@ -67,11 +72,20 @@ layer, construct a scientifically meaningful mutation:
 - fabricated fitted parameter;
 - broken boundary or initial condition.
 
-At least one relevant assertion must fail for every applicable mutation. If the headline numbers move while the tally stays green, the verifier does not establish the headline claim. A kernel-checked Lean theorem instead requires exact statement, import, proof-escape, axiom-footprint, and physical-encoding audits; do not add a mutation whose only purpose is ceremony.
+Each selected mutation must fail a relevant assertion. Do not mutate every
+parameter when one mutation exercises the same failure channel. If headline
+numbers move while the tally stays green, the verifier does not establish the
+headline claim. A kernel-checked Lean theorem instead requires exact statement,
+import, proof-escape, axiom-footprint, and physical-encoding audits; do not add a
+mutation whose only purpose is ceremony.
 
 ## Independent rederivation
 
-Reimplement load-bearing normalizations, convention conversions, and parameter eliminations through a different route with no shared helper beyond canonical primitives. Agreement between two calls to the same copied formula is not independence.
+Use an independent route for a load-bearing normalization, convention
+conversion, or parameter elimination when the primary oracle and existing
+evidence do not already close that risk. Reuse a valid recorded rederivation at
+the same boundary. Agreement between two calls to the same copied formula is
+not independence.
 
 ## Comparator gate
 

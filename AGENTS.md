@@ -8,10 +8,11 @@ review workflow. This file remains the normative scientific and governance
 contract when the two documents differ.
 
 ## Goal
-The sole purpose of this repository and every agent working in it is the advancement and full promotion of validated claims.
-An effort is complete only when its positive claims have passed every success gate, undergone individual review, entered the accepted registry, and been pinned in a release. That is the entire goal. Nothing else counts as success.
-Partial harvest of reusable atoms is a tactical concession that keeps the larger objective open. It is never a substitute for claim promotion, never a terminal disposition, and never the outcome the repository exists to produce. Agents must not treat merge activity, documentation polish, validation theater, or incremental code extraction as progress toward the goal. Those activities are scaffolding; the goal is closed only by fully promoted, dependency-closed, oracle-validated claims whose downstream consumers remain consistent.
-Honesty about failure is required. Presenting incomplete work, harvested fragments, or well-documented residuals as if they fulfill the requested objective is forbidden. Only the user may reduce scope. Until the claims themselves are promoted under the contract, the objective remains open and every subsequent loop or /goal iteration is obligated to advance it.
+The sole purpose of this repository and every agent working in it is the advancement and full promotion of meaningful validated claims. Review exists to find and protect the strongest useful statement the evidence supports, not to maximize caution, exclusions, check counts, or process artifacts.
+
+An effort is complete only when its positive claims have passed their applicable success gates, undergone individual review, entered the accepted registry, and been pinned in a release. Partial harvest remains useful progress and keeps the larger objective open, but does not substitute for claim promotion. Merge activity, documentation, and validation are scaffolding; apply only the amount that advances or protects the scientific result.
+
+Honesty about failure is required. Presenting incomplete work as the requested result is forbidden, but a support gap is not a refutation and a declared hypothesis is not a defect. Reviewers may make the minimum correction needed to state a result truthfully or split core, interpretive, and empirical layers; they may not silently replace the user's objective with a trivial statement. If the strongest supported result does not meet the objective, preserve it as progress and leave the objective open.
 
 ## Definition of success
 
@@ -22,27 +23,27 @@ An effort succeeds only when all of the following are true:
 1. The requested positive object, mechanism, derivation, or implementation exists in its intended scope.
 2. Its dependency closure comes from accepted framework claims and explicitly approved imports; no hidden fitted constant, borrowed answer, or undeclared premise remains.
 3. It fits the framework's accepted invariants naturally, or a separate foundational-revision proposal has shown—independently of the favored candidate—that the invariants themselves require the smallest coherent change.
-4. The strongest practical oracle validates the actual claim, and the verifier is shown to be sensitive through mutation, counterexample, convergence, limiting-case, or independent-rederivation tests as appropriate.
+4. One strongest practical oracle validates the actual claim, with the smallest sensitivity, counterexample, convergence, limiting-case, or independent-rederivation evidence appropriate to expose a false green result. Evidence attachments do not each require a duplicate oracle.
 5. When the scientific mechanism is genuinely open, plausible competing concepts were registered before selection and compared using predeclared structural criteria. A fixed theorem statement does not require fabricated rival mechanisms; one complete proof route may suffice. Numerical closeness to a comparator cannot select a concept.
-6. Every affected claim has been reviewed individually; an accepted proposal is not a blanket promotion of every sentence in a campaign.
-7. The impact-bounded downstream dependency replay passes, including every affected unit, convention, known limit, import inventory, formal statement, test, and generated consumer. Foundational or uncertain changes require the full graph; additive leaf theorems do not replay unrelated sectors.
+6. Every claim proposed for acceptance or whose accepted statement changes has been reviewed individually. Unchanged dependencies remain accepted inputs, and evidence-attachment classification is not another claim-acceptance review.
+7. The impact-bounded downstream dependency replay passes for consumers that can change under the declared delta. Foundational or uncertain changes require the full graph; additive leaf theorems and evidence metadata do not replay unrelated sectors.
 8. Reusable definitions and derivations live in importable modules with tests. Campaign code calls them rather than duplicating functions, constants, or proof-shaped prose.
 9. The accepted claim registry, release manifest, generated documentation, and durable memory agree.
-10. The debt ledger is empty: no unresolved assumptions, residuals, broken consumers, or narrative inconsistencies remain.  Resolve imported parameters when appropriate.
+10. The in-boundary debt ledger is empty: no hidden assumption, unresolved promise, or broken affected consumer remains inside the promoted statement. Explicit hypotheses, honest exclusions, open campaign frontier, and unrelated repository observations are not debt.
 
 Only the user may change the objective or accept a reduced scope. Runtime interruption, missing authority, or an external dependency may pause execution, but it does not turn incomplete work into success.
 
-These gates govern declaring the objective complete and promoting its headline claims. They are not a universal pull-request merge gate. Use `.agents/skills/research-pr-harvest/SKILL.md` to extract locally correct, novel, reusable units from an incomplete campaign while leaving its goal open. A merge creates provenance and reusable code, not accepted scientific authority. Missing parts of the larger goal are campaign frontier, not debt; debt is an unresolved defect, hidden assumption, broken consumer, or unsupported promise inside the scope being merged or promoted. Every harvest PR must name its canonical goal issue, and the final disposition must update that issue with unit-level lists and rationales for what merged, what requires refactor, and what remains only in PR history, plus landed links and the next decisive action. A `refactor then merge` disposition is active work: name its owner or handoff, live source or harvest PR, exact repair, and landing test, and keep the source PR open until that unit lands or satisfies the terminal-close test below.
+These gates govern declaring the objective complete and promoting its headline claims. They are not a universal pull-request merge gate. Use `.agents/skills/research-pr-harvest/SKILL.md` to extract locally correct, novel, reusable units from an incomplete campaign while leaving its goal open. A merge creates provenance and reusable code, not accepted scientific authority. Missing parts of the larger goal are campaign frontier, not debt; debt is an unresolved defect, hidden assumption, broken consumer, or unsupported promise inside the scope being merged or promoted. Every harvest PR must name its canonical goal issue, and the final disposition must update that issue with a compact record of what landed, the minimum correction still active, what is terminally history-only, and the next decisive action. A `correct then merge` disposition is active work: name the exact repair and one landing check, and keep the source PR open until that unit lands or satisfies the terminal-close test below.
 
 Request changes or create a focused harvest when a PR contains valuable work with a finite repair path. Close an unmerged PR only when every reusable atom has landed elsewhere, every remaining atom has been shown incorrect, non-novel, or unmaintainable with unit-level rationale, the author or owner explicitly withdraws it, or a superseding landed implementation makes it redundant. Incomplete accepted dependency closure, a conflict with current canon, absence of a distinct merger, or a pending finite repair is not terminal. Record the qualifying reason and landed links before closure; otherwise keep the PR open in `request changes`, `active refactor`, or `active harvest` state.
 
 Every pull request, including documentation, tooling, compatibility, harvest, and scientific work, must name exactly one canonical issue that existed before the PR was submitted. A contributing agent may create that issue. There are no standalone-PR exceptions. The issue must state the positive objective, scope, success gate, dependencies, and coordination boundary; use `Advances #N` while work remains and `Fixes #N` only when the full objective is complete.
 
-An agent must never merge a PR that it opened, authored a commit for, or materially implemented. The PR must be reviewed and merged by a distinct agent or repository owner. If the authoring agent also performs substantive corrective work during review, merge authority remains with another actor. When no distinct merger is available, leave the validated PR ready for handoff rather than self-merging it.
+By default, an agent does not merge a PR that it opened, authored a commit for, or materially implemented; a distinct agent or repository owner performs that operational check. A repository owner or the user may explicitly direct the authoring agent to self-merge a named PR or bounded change. Record that override and the existing validation receipt. It does not count as independent scientific review, so a scientific claim promotion still needs its required claim review before merge. When neither a distinct merger nor an explicit owner override is available, leave the validated PR ready for handoff.
 
-Merged same-repository PR head branches are transient and must not accumulate as a parallel discovery surface. Repository GitHub settings delete them automatically after merge; the distinct merger must verify that cleanup and may delete only the exact merged head if automation did not. Durable provenance lives in the merge commit, PR, canonical issue handoff, and landed `main` history. Preserve `main`, protected branches, open PR heads, and closed-unmerged or failed branches by default; retiring a closed-unmerged head requires both an explicit owner decision and its recorded terminal-close rationale. Branch cleanup never permits force-pushing, deleting an unverified or unrelated branch, or treating branch deletion as scientific adjudication.
+Merged same-repository PR head branches are transient and must not accumulate as a parallel discovery surface. Repository GitHub settings delete them automatically after merge; the merger must verify that cleanup and may delete only the exact merged head if automation did not. Durable provenance lives in the merge commit, PR, canonical issue handoff, and landed `main` history. Preserve `main`, protected branches, open PR heads, and closed-unmerged or failed branches by default; retiring a closed-unmerged head requires both an explicit owner decision and its recorded terminal-close rationale. Branch cleanup never permits force-pushing, deleting an unverified or unrelated branch, or treating branch deletion as scientific adjudication.
 
-When the user supplies a pull-request URL or number to an agent that did not author or materially implement that PR, treat it as standing authorization to process the PR autonomously through the normal repository lifecycle: inspect, review, comment, correct PR metadata, request changes, create a focused harvest branch or follow-up PR, merge when eligible, close only after the terminal-close test, and update the linked issue. Do not pause for routine operator confirmation. This authorization never overrides the non-self-merge rule and does not permit force-pushing a contributor branch, deleting unrelated branches, changing the user's objective, or promoting a claim that has not passed governance.
+When the user supplies a pull-request URL or number to an agent that did not author or materially implement that PR, treat it as standing authorization to process the PR autonomously through the normal repository lifecycle: inspect, review, comment, correct PR metadata, request changes, create a focused harvest branch or follow-up PR, merge when eligible, close only after the terminal-close test, and update the linked issue. Do not pause for routine operator confirmation. This authorization does not permit force-pushing a contributor branch, deleting unrelated branches, changing the user's objective, or promoting a claim that has not passed governance. Self-merge still requires the explicit owner direction described above.
 
 ## Authority and provenance
 
@@ -110,6 +111,22 @@ claims, but core claims may not depend on the interpretive layer. Multiple
 verification modalities may be recorded with separate scopes; Lean can
 corroborate a symbolic proof without becoming a universal prerequisite.
 
+Give each evidence attachment one role: `exact_proof`, `corroborating_subclaim`,
+`regression`, `applicability`, or `provenance_only`. State the exact proposition
+and bridge it contributes in the review record and registry `scope` text; this
+taxonomy does not add a required registry field. An attachment need not rederive the entire parent
+claim or reuse every parent variable when its narrower role is explicit. It
+cannot inherit a stronger verdict than its own proposition, and a collection
+of related entrypoints may be reviewed as one evidence record rather than as
+dozens of new claims.
+
+Reserve `refuted` and “false” for an explicit contradiction, counterexample, or
+failed consequence under the claim's stated hypotheses. Use `unverified`,
+`qualified`, a narrower evidence role, or an open obligation when the cited
+artifact simply does not prove the whole statement. Absence of a typed bridge
+means “not established by this attachment,” not “the scientific claim is
+false.”
+
 Proposals use `challenges` relationships. Only an accepted replacement may use `supersedes`. A proposal may be partly accepted: promote claims individually and retain rejected candidates as historical attempt evidence.
 
 Claim identifiers are durable provenance keys even when a proposal was rejected and never entered `governance/claims.yaml`. Before allocating an identifier, search the registry, campaigns, and durable memory; never reuse a provisional, rejected, refuted, superseded, or accepted identifier for a different statement.
@@ -117,6 +134,44 @@ Claim identifiers are durable provenance keys even when a proposal was rejected 
 Migration dispositions are decisions, not queue labels. `qualified`, `refuted`, `duplicate_evidence`, and `out_of_scope` units must name their disposition-specific reason and durable evidence paths; use `qualified` for mixed units that also map accepted claims. Never clear a source unit with an unsupported terminal word.
 
 Once adjudicated, move the campaign record into `campaigns/` without rewriting it. Create a release manifest pinning the exact accepted claim set and source commit. Release membership follows the independent review/acceptance decision (and `accepted_in`), not an `epistemic: active` filter: a current release may retain accepted `qualified` claims. Use the registry/release validator for closure instead of an ad hoc status subset. `current` means the latest accepted release, never the newest directory or working-tree prose. When a campaign migrates predecessor material, edit only `migration/dispositions.yaml` and regenerate `migration/source-claims.yaml`; never hand-edit that generated queue. Partial migration must name the unaccepted remainder rather than marking a whole bridge complete.
+
+## Bounded, constructive review
+
+Freeze a review transaction before substantive review: the exact claim delta,
+changed implementation, new or changed evidence records, declared dependencies,
+and consumers that can be affected. “Affected claim” means a claim whose
+statement, status, dependency edge, implementation, or accepted evidence role
+changes in that transaction. Merely being nearby in a registry, corpus, import
+tree, campaign, or count does not make a claim affected.
+
+Use one substantive review pass per frozen transaction and one correction check
+for requested changes. The correction check verifies only the corrections and
+their directly affected edges; it does not begin a new audit. Add another
+independent review only when the applicable promotion contract explicitly
+requires it, the first review is unavailable or conflicted, or the user asks.
+Never validate the validation, test the reviewer, or turn a record-count audit
+into a theorem-by-theorem re-adjudication.
+
+A finding blocks the current transaction only when it demonstrates one of:
+
+- the proposed statement is false under its stated hypotheses;
+- a load-bearing step is circular, hard-coded, ill-typed, or absent;
+- a declared dependency does not supply the proposition used; or
+- a changed consumer in the frozen impact boundary fails.
+
+Everything else is a non-blocking follow-up. Record each adjacent concern once
+with enough evidence to reproduce it, then return to the transaction. Metadata
+wording and counts are corrected in place when cheap, but do not trigger a new
+scientific review unless they change accepted meaning or dependency closure.
+
+For every blocking scope problem, first state the strongest meaningful positive
+result that survives. Prefer the minimum honest repair: correct a quantifier,
+add a real hypothesis, split core from interpretation, or relabel an evidence
+role. Do not collapse a useful theorem into a definition, tautology, isolated
+numeral, or vacuous special case merely because that is easiest to certify. If
+no meaningful supported statement remains, return the claim with the precise
+missing construction; do not decorate the absence with maximal negative
+language.
 
 ## Implementation architecture
 
@@ -209,16 +264,20 @@ Do not copy personal or historical memory into this repository. The bundled CLI 
 
 ## Required validation before commit or promotion
 
-Freeze the review and validation boundary before running it: name the diff,
-claims, consumers, and commands that are in scope. A review finding expands
-that boundary only when it directly falsifies an object being merged or
-promoted. Record adjacent defects as follow-up issues; do not turn a bounded PR
-review into a framework-wide re-adjudication. After a correction, rerun only
-the check made stale by that correction. Do not add tests whose sole purpose is
-to validate reviewer identity, review prose, pass tallies, or the validation
-process itself. Process improvements discovered during a scientific PR belong
-in a separate follow-up unless they are required to prevent incorrect accepted
-state in that PR.
+Use one content-addressed validation receipt per frozen boundary: record the
+base and head (or tree hash), declared impact surface, commands, and results. A
+reviewer checks whether that receipt matches the diff; the reviewer and merger
+do not rerun equivalent commands. After a correction, rerun only a check whose
+inputs or asserted behavior changed. Review prose, evidence counts, issue text,
+generated summaries, and merger identity do not stale a scientific oracle.
+
+Do not add tests whose sole purpose is to validate reviewer identity, review
+prose, pass tallies, or the validation process itself. Process-document and
+template-only changes receive syntax/frontmatter checks, affected process tests
+if any, and `git diff --check`; they never trigger the scientific or full-suite
+backstop merely because they describe governance. Process improvements found
+during a scientific PR belong in a separate follow-up unless needed to prevent
+incorrect accepted state in that PR.
 
 For a bounded commit or pull request, run all fixed repository checks plus the
 pytest files or node IDs selected from the diff, GitNexus impact analysis,
@@ -280,4 +339,6 @@ when a repeated workflow defect is demonstrated. Consolidate or replace the
 causing instruction instead of appending parallel rules. Make the improvement
 a separate bounded change when it is not necessary for the active scientific
 diff. Never use self-improvement to delay a requested merge, introduce a new
-gate, or revalidate an unchanged artifact.
+gate, or revalidate an unchanged artifact. Evaluate the correction against a
+few concrete failure scenarios; do not create a meta-validator or an
+independent review campaign for process prose.

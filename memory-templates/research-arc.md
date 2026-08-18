@@ -18,7 +18,12 @@ status: active
 ---
 
 ## Positive Objective and Success
-State the requested result precisely. Completion requires the result itself, accepted dependency closure, natural framework fit, a claim-appropriate verifier audit, mechanism comparison when a mechanism is genuinely open, impact-bounded replay, importable implementation, accepted claim promotion, synchronized generated records, and an empty debt ledger. Honest failure and honest no-go reports are attempt evidence, never the deliverable.
+State the requested result precisely and explain why it is scientifically useful.
+Completion requires the result itself, accepted dependency closure, natural
+framework fit, one claim-appropriate verifier audit, mechanism comparison only
+when genuinely open, impact-bounded replay, importable implementation, accepted
+promotion, synchronized records, and no unresolved defect inside the promoted
+scope. Honest failure is attempt evidence; an explicit hypothesis is not debt.
 
 ## Authority and Prior Work
 Record the accepted release, source commit, claim ids, importable modules, campaigns, memory searches, and graph/source queries actually checked. Distinguish accepted state, proposal state, and attempt state. Accepted canon controls release and promotion; it remains falsifiable, so record credible independent challenges rather than treating conflict as automatic rejection.
@@ -34,10 +39,14 @@ Record the accepted release, source commit, claim ids, importable modules, campa
 Freeze variables, domains, units, normalizations, symmetries, topology, initial/boundary conditions, regularity assumptions, known limits, and cross-sector invariants before candidate selection. For numerical work also freeze the precision, discretization family, domain truncation, stability condition, and error norm before inspecting results.
 
 ## Permitted Imports and Assumptions
-List every permitted external or framework input with provenance. Any new item enters the debt ledger until independently accepted or eliminated.
+List every permitted external or framework input with provenance. Distinguish a
+declared hypothesis or interpretive assumption from a hidden premise. Only a
+hidden or promised-but-undischarged input enters the debt ledger.
 
 ## Candidate Set
-Register plausible concepts before opening empirical comparators. Include at least two unless uniqueness is proved.
+Register at least two plausible concepts only when selecting an open scientific
+mechanism. For a fixed theorem or specified construction, register one complete
+route and add another only when it materially reduces uncertainty.
 
 | Candidate | Construction | New objects/parameters | Natural-fit case | Expected falsifier | Status |
 | --- | --- | --- | --- | --- | --- |
@@ -53,6 +62,12 @@ List each claim proposed, challenged, qualified, or potentially superseded. A pr
 | Claim id | Exact statement | Dependencies | Relationship | Oracle | Consumers |
 | --- | --- | --- | --- | --- | --- |
 |  |  |  |  |  |  |
+
+## Frozen Review Transaction
+Name the exact claim delta, changed implementation, new or changed evidence
+groups, declared dependency propositions, affected consumers, base/head or tree
+hash, and planned validation receipt. Unchanged accepted dependencies, adjacent
+corpus items, and raw theorem counts are outside the transaction.
 
 ## Claim Ladder
 Build the smallest dependency-first ladder. Each row names the strongest practical oracle and sensitivity test. Use SymPy for exact algebraic obligations, Lean for an auditable formal theorem, and SciPy for root/spectrum/integral/optimization/ODE/BVP/PDE evidence when no tractable closed form exists; do not force every obligation into the same tool.
@@ -91,10 +106,18 @@ Append one row per scientific attempt. Preserve source, stdout/stderr, elapsed t
 Assess each candidate before empirical fit: invariant preservation, imports, free parameters, conventions, known limits, cross-sector consumers, and whether it demands unrelated narrative changes. Determine whether a mismatch is a candidate defect or independent evidence against canon. Reject and replace a defective candidate; route a surviving canonical inconsistency through the separate revision gate without blocking correct conditional artifacts.
 
 ## Verifier Audit
-Freeze the verifier boundary to the claim delta before running it. Record clean exit and tally, derivation-vs-literal inspection, applicable mutations, counterexamples, wrong conventions, refinement, conservation/limit tests, independent rederivation, and exact formal theorem/axioms where applicable. For a kernel-checked Lean theorem, audit its statement, imports, proof escapes, axiom footprint, and physical encoding rather than inventing a mutation. For SciPy ODE/BVP/PDE evidence, record routine/algorithm, precision, solver status, domain, mesh, time policy, tolerances, residual/error norm, convergence order, and a soluble limit or independent method. Do not add a verifier for this review record or expand adjacent observations into the active claim delta.
+Record the one strongest practical oracle and only the sensitivity evidence
+needed for this claim: statement/axiom audit for Lean; applicable mutation,
+counterexample, or exact limit for custom symbolic work; solver status, error
+model, refinement, and one independent method or soluble limit for numerics.
+Reuse an unchanged receipt. Do not create a verifier for this record or expand
+adjacent observations into the transaction.
 
-## Global Dependency Replay
-List direct and indirect consumers and every replay command. Preflight direct/imported/dynamic legacy access and eager fallback defaults. Repair mutable code to `np.trapezoid` or a safe two-step fallback—or use an alias-only replay for immutable evidence—before assigning a scientific verdict. Local pass with a scientifically broken repaired consumer is failure.
+## Impact-Bounded Dependency Replay
+List only consumers that can change under the declared claim or implementation
+delta and their replay command. Preflight relevant compatibility hazards before
+assigning a scientific verdict. Do not replay unrelated sectors merely because
+they share a corpus, registry, or historical campaign.
 
 | Consumer | Why affected | Command or proof | Result | Repair if needed |
 | --- | --- | --- | --- | --- |
@@ -104,22 +127,38 @@ List direct and indirect consumers and every replay command. Preflight direct/im
 Leave empty unless independent evidence shows accepted foundations are inconsistent. If opened, link a separate proposal containing the pre-existing inconsistency, two or more repair candidates, minimum-change decision, migration map, independent review, and full replay. This is an active advancement route when the evidence qualifies; never use it merely to rescue a favored concept.
 
 ## Debt Ledger
-Track every assumption, import, parameter, residual, unresolved convention, broken consumer, or documentation mismatch inside the scope proposed for promotion. Empty it before completion. Do not list the still-open parent objective or an unselected future route as debt.
+Track hidden assumptions, unresolved promises, unexplained fitted parameters,
+broken affected consumers, or contradictory accepted narration created inside
+the promoted scope. Declared hypotheses, honest exclusions, the still-open
+parent objective, adjacent observations, and unselected routes are not debt.
 
 | Debt | Source | Effect | Discharge | Status |
 | --- | --- | --- | --- | --- |
 
 ## Independent Claim Review
-Link one `claim-review.md` instance per promoted claim. Record all four status axes and why verifier success establishes the exact headline claim.
+Link one `claim-review.md` instance per claim proposed for acceptance or changed
+accepted statement. Use `evidence-attachment-review.md` for changed attachment
+roles; one record may cover a coherent set of entrypoints. Review once, then
+perform one correction check limited to requested changes.
 
 ## Results and Continuation
-Record accepted positive results and reproduction commands. Also record harvested progress and the last strong milestone. Classify review findings as `blocking in-boundary` or `follow-up`; only the former expands the current repair. For each failed route, record the next active candidate or repair. If an agent run reaches diminishing returns, hand off the exact campaign frontier to a fresh run without changing the objective or marking the arc complete.
+Lead with the strongest meaningful positive result and its reproduction command.
+Then record harvested progress, one decisive frontier action, and findings as
+`blocking in-boundary`, `minimum correction`, or `follow-up`. Reserve `refuted`
+for an explicit contradiction or counterexample; missing support remains
+unverified or qualified. If a run becomes repetitive, hand off at the last
+strong milestone without changing the objective.
 
 ## Promotion and Materialization
 Record extracted APIs/tests, accepted registry entries, immutable campaign location, release id, generated docs command, accepted-memory synchronization, and proposal/attempt memory separation.
 
 ## Done Gate
-Check every success condition from `AGENTS.md`, confirm targeted science checks, impact-bounded downstream replay, the fixed-only/scoped/full workflow selected by `scripts/validate_changed.py` once at the unchanged promotion boundary, and an empty in-boundary debt ledger. Record the command and boundary commit; do not rerun it for review prose, counters, or generated summaries that cannot affect the oracle. An append-only leaf synthesized theorem may remain scoped; changed existing claims, shared machinery, foundational revisions, or uncertain impact require full validation. A progress harvest records its own impact-justified decision and leaves the arc active.
+Check applicable success conditions from `AGENTS.md` once at the unchanged
+promotion boundary. Record one receipt containing the base/head or tree hash,
+impact surface, exact command, and result. Do not rerun it for review prose,
+counts, evidence-role corrections, or generated summaries that cannot affect
+the oracle. A progress harvest records its proportional receipt and leaves the
+arc active.
 
 ## Cross-References
 Link the proposal, source artifacts, claims, reviewers, campaign, release, generated outputs, and related memory entries.

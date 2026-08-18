@@ -133,7 +133,7 @@ def test_onboarding_exposes_theorem_skill_template_and_lean_setup() -> None:
     assert (ROOT / "memory-templates/theorem-synthesis.md").is_file()
 
 
-def test_pr_policy_keeps_viable_harvests_active_and_validation_scoped() -> None:
+def test_pr_policy_keeps_review_constructive_bounded_and_validation_scoped() -> None:
     contract = (ROOT / "AGENTS.md").read_text(encoding="utf-8")
     onboarding = (ROOT / "AGENTS_START_HERE.md").read_text(encoding="utf-8")
     harvest_skill = (
@@ -147,8 +147,12 @@ def test_pr_policy_keeps_viable_harvests_active_and_validation_scoped() -> None:
         assert "terminal-close" in surface
         assert "active refactor" in surface
         assert "additive public export" in surface
+        assert "one substantive" in surface.lower()
 
-    assert "live source or harvest PR" in harvest_skill
+    assert "strongest meaningful" in contract
+    assert "strongest useful positive statement" in harvest_skill
+    assert "explicitly direct an authoring agent to self-merge" in harvest_skill
+    assert (ROOT / "memory-templates/evidence-attachment-review.md").is_file()
     assert "current canon" in harvest_skill
     assert "Source PR lifecycle" in pr_template
     assert "Terminal-close evidence" in pr_template

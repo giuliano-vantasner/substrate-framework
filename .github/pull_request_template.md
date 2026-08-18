@@ -8,10 +8,10 @@ Issue relationship: <!-- Use `Advances #N` while work remains; use `Fixes #N` on
 
 Authoring agent:
 
-Intended independent merger: <!-- Must be a distinct agent or repository owner. -->
+Intended merger: <!-- Distinct by default; otherwise link explicit owner/user self-merge direction. -->
 
 - [ ] The canonical issue existed before this PR was submitted.
-- [ ] I will not merge this PR because I opened it, authored a commit, or materially implemented it.
+- [ ] The merger is distinct, or explicit owner/user self-merge direction is recorded.
 
 ## Change classification
 
@@ -42,14 +42,15 @@ An exported symbol is not accepted scientific authority by itself. For every
 conditional unpromoted API, state its explicit inputs, assumptions, exclusions,
 and why it is still independently reusable.
 
-## Unit-level disposition
+## Useful-unit disposition
 
-List the smallest coherent units. A mergeable unit must remain useful and true
-without relying on an unearned headline claim.
+List only independently mergeable units or materially different risk
+boundaries. Do not atomize every file, theorem entrypoint, or evidence row. A
+mergeable unit must remain useful and true without an unearned headline claim.
 
 | Unit | Local claim or purpose | Dependencies | Evidence and tests | Proposed disposition |
 | --- | --- | --- | --- | --- |
-|  |  |  |  | merge / refactor / history only |
+|  |  |  |  | merge / minimum correction / history only |
 
 Answer each decision independently:
 
@@ -57,11 +58,12 @@ Answer each decision independently:
 - Claim promotion: <!-- none, or exact claim IDs -->
 - Goal completion: <!-- yes/no and the remaining gate -->
 
-## Verification and sensitivity
+## Validation receipt
 
-List exact commands and results. Include the claim-appropriate oracle,
-mutations or counterexamples, numeric refinement and independent route when
-applicable, and affected consumer replay. A pass tally by itself is not enough.
+Record the base/head or tree hash, frozen impact surface, exact commands, and
+results once. Include only claim-appropriate sensitivity and affected consumers.
+Reuse this receipt while its inputs are unchanged; review prose and counts do
+not stale it.
 
 ```text
 # command
@@ -116,13 +118,13 @@ fields in a formal review.
 
 - Canonical issue predates PR: <!-- yes/no -->
 - Authoring or implementing agent:
-- Distinct merger:
+- Merger and basis: <!-- distinct, or explicit owner-authorized self-merge -->
 
 - Artifact merge: <!-- yes/no with unit-level rationale -->
 - Claim promotion: <!-- none or exact claim IDs and review evidence -->
 - Goal completion: <!-- yes/no and still-open gate -->
 - Merge as written: <!-- yes/no -->
-- Refactor or harvest: <!-- exact units, owner/handoff, live PR, required changes, and landing test -->
+- Correct or harvest: <!-- exact unit, minimum repair, and one landing check -->
 - Leave in PR history: <!-- exact units and rationale -->
 - Source PR lifecycle: <!-- request changes, active refactor, active harvest, merged, or terminal closed -->
 - Terminal-close evidence: <!-- N/A, or qualifying reason and landed replacement links -->
@@ -133,13 +135,13 @@ fields in a formal review.
 
 - [ ] Base release, issue, accepted boundary, diff, memory, and discussion inspected.
 - [ ] The canonical issue existed before the PR was submitted.
-- [ ] The designated merger did not open, author a commit for, or materially implement the PR.
-- [ ] Load-bearing result independently rederived or reproduced.
+- [ ] The merger is distinct or explicit owner/user self-merge direction is linked.
+- [ ] The load-bearing result and existing validation receipt were checked once at the frozen boundary.
 - [ ] Dependencies, conventions, imports, consumers, and GitNexus impact audited.
 - [ ] Every new public symbol has an explicit authority status and owning issue.
-- [ ] Verification sensitivity and applicable numerical/formal limits audited.
+- [ ] Applicable verification sensitivity and numerical/formal limits were audited without duplicate replay.
 - [ ] Merge, claim-promotion, and goal-completion decisions kept independent.
-- [ ] A finite refactor or harvest has an owner/handoff, live PR, and landing test; its source PR remains open.
+- [ ] A finite correction has the minimum repair and one landing check; ownership is named only when handed off.
 - [ ] Any proposed unmerged closure passes the terminal-close test and records landed replacements.
 - [ ] Canonical issue handoff is posted or preserved ready to post.
 - [ ] The exact same-repository head will be deleted after merge; open or closed-unmerged/failed heads are preserved unless an owner explicitly retires them.

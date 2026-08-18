@@ -55,12 +55,21 @@ Name importable APIs, claim-appropriate exact/numeric/formal oracles, applicable
 Append failed routes with diagnoses and next candidates. An ill-fitting concept is rejected or reformulated; unrelated earlier work is not rewritten to save it. If a conflict survives independently of the candidate, open a separate `challenges` or foundational-revision proposal rather than treating canon as irrevisable or silently changing it. Execution runs in declared waves whose inputs are explicit; research/grounding is wave 0 and a dependent wave (implementation, verification, report) opens only after every input its wave declares has settled — a research subagent's output is a hard prerequisite, never a race (AP-15).
 
 ## Debt Ledger
-Describe what this campaign's ledger tracks, then list new assumptions,
-imports, parameters, residuals, convention conflicts, and broken consumers.
-The campaign remains active until the ledger is empty.
+Track hidden assumptions, unexplained fitted parameters, unsupported promises,
+convention conflicts, and broken affected consumers inside the proposed claim.
+Declared hypotheses, honest exclusions, open candidate routes, and adjacent
+repository observations are frontier rather than debt.
 
 ## Review and Promotion Plan
-Name claim-level reviewers, acceptance gates, package extraction, release update, generated documentation, and accepted-memory synchronization. State the resulting source-unit disposition; a partial migration must preserve its exact remaining subclaims. For each `refactor then merge` atom, name its owner or handoff, live PR, exact repair, landing test, and source-PR lifecycle. Close unmerged only after the terminal-close test in `AGENTS.md`. Terminal `qualified`, `refuted`, `duplicate_evidence`, and `out_of_scope` decisions must name their disposition-specific reason and durable evidence paths; use `qualified` for mixed units that also map accepted claims. Materialize each evidence path before registering it. For predecessor migration, edit `migration/dispositions.yaml` and regenerate `migration/source-claims.yaml` with `scripts/inventory_claims.py`; never maintain the generated queue by hand. Record the impact-based fixed-only/scoped/full validation rationale and the agreeing local `scripts/validate_changed.py` decision, and run validation and commit in separate process invocations; never let an unguarded later command mask an earlier failed gate. If a final attempt summarizes the promotion gate, create it with an explicit in-progress status, finalize it after the gate, and rerun only record-sensitive repository/generation checks rather than the unchanged full suite.
+Name one claim-level review per proposed or changed claim, the frozen transaction,
+package extraction, release update, generated documentation, and accepted-memory
+synchronization. Classify changed attachments by evidence role; do not turn them
+into additional claim reviews. Preserve the strongest meaningful positive
+statement and use the minimum correction before rejecting it. Reserve
+`refuted` for a contradiction or counterexample. For predecessor migration,
+edit `migration/dispositions.yaml` and regenerate `migration/source-claims.yaml`;
+never hand-edit the queue. Record one impact-selected validation receipt and
+reuse it. After corrections, check only changed statements and affected edges.
 
 ## Done Gate
 The campaign closes only on the complete positive success contract in `AGENTS.md`. If any gate fails, state the next attempt and continue.

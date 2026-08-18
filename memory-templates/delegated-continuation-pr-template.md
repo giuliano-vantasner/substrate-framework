@@ -35,7 +35,7 @@ Use `$research-pr-harvest` whenever a local unit becomes complete. Keep utilitie
 - Issue created before PR: <yes and timestamp/link evidence>
 - PR issue reference: <`Advances #N` or `Fixes #N`>
 - Authoring or implementing agent: <identity>
-- Distinct intended merger: <identity or handoff pending>
+- Intended merger: <distinct identity, explicit owner-authorized self-merge, or handoff pending>
 - Source PR lifecycle: <request changes, active refactor, active harvest, merged, or terminal closed>
 - Refactor owner/handoff and live PR: <identity and link, or not applicable>
 - Terminal-close evidence: <not applicable, or qualifying rationale and landed replacement>
@@ -45,29 +45,46 @@ Use `$research-pr-harvest` whenever a local unit becomes complete. Keep utilitie
 | --- | --- | --- | --- | --- |
 |  |  |  |  |  |
 
-After the merge boundary is known, update the canonical issue with three unit-level lists: merged and rationale, requires refactor and rationale plus exact required change, owner, live PR, and landing test, and left in PR history and rationale. Link landed paths/commits, the reviewed PR, and the next decisive action. Keep the source PR open while a finite refactor or harvest is live. Close unmerged only after the terminal-close test in `AGENTS.md`, and record the qualifying reason. If GitHub mutation is not authorized, preserve the exact ready-to-post comment and mark the handoff pending.
+After the merge boundary is known, update the canonical issue compactly: what
+landed and its positive local claim, the minimum correction still active, what
+is terminally history-only, and one next decisive action. Link the landed
+paths/commit and reviewed PR. Add ownership or lifecycle fields only when work
+is actually handed off or closure is disputed.
 
 ## Decomposition and Ownership
-List dependency-ordered local work and one child contract per authorized worker. Give workers disjoint write surfaces and raw sourced inputs. The agent that opens, commits to, or materially implements the PR may not merge it; reserve merge authority for the named distinct reviewer or repository owner.
+List dependency-ordered local work and one child contract per authorized worker.
+Give workers disjoint write surfaces and raw sourced inputs. Use a distinct
+merger by default; when the user or repository owner explicitly authorizes
+self-merge, record the override without treating it as independent scientific
+review.
 
 ## Finding Intake
-Every finding becomes a repair, candidate rejection, new candidate, targeted foundation proposal, or promotion action.
+Classify findings against the frozen transaction. Only a direct falsifier,
+absent/circular load-bearing step, broken declared dependency, or affected
+consumer failure becomes a current repair. Record adjacent observations once as
+follow-up; do not assign workers or open a new campaign during this review.
 
 | Finding | Source | Meaning | Next materially different action | Owner |
 | --- | --- | --- | --- | --- |
 |  |  |  |  |  |
 
 ## Continuation Cycles
-After every result, failed test, review, or apparent success, rerun this cycle.
+Open a new cycle only after a materially different scientific attempt or a
+correction that changes the claim boundary. Review prose, counts, handoff edits,
+and repeated checks do not create cycles.
 
 ### Cycle <n>
-Record the result, whether it advances the positive success contract, the failed/remaining gate, diagnosed layer, next candidate or repair, changed artifact, retest, sensitivity audit, dependency replay, and canonical-state check. The decision is `continue` until every success gate passes.
+Record the positive result, one remaining decisive gate, changed artifact, and
+the one stale check. The campaign remains active until success, but a bounded
+agent run may land a strong milestone and hand off without repeating the cycle.
 
 ## Framework-Fit and Foundation Gate
 Record why the selected concept fits naturally. If it does not, determine whether the mismatch is a candidate defect or independent evidence against canon. Reject a defective candidate and try another; route independent canonical inconsistency through a separate `challenges` or foundational-revision proposal with alternate repairs, minimum-change rationale, migration map, and global replay. A conflict blocks promotion, not a correct conditional artifact.
 
 ## Validation Ledger
-Every failed row creates the next task.
+Keep one content-addressed receipt for the frozen boundary. Include only
+applicable rows; a failed in-boundary row creates one repair, while an unrelated
+observation becomes follow-up.
 
 | Gate | Command/evidence | Result | Next task if not passed |
 | --- | --- | --- | --- |
@@ -75,7 +92,7 @@ Every failed row creates the next task.
 | Claim-appropriate symbolic/formal/numerical oracle |  |  |  |
 | Verifier mutations/counterexamples |  |  |  |
 | Solver status, refinement, conservation/stability, and independent route where numerical |  |  |  |
-| Global dependency replay |  |  |  |
+| Impact-bounded dependency replay |  |  |  |
 | Importable API tests |  |  |  |
 | Impact analysis and scoped/full validation rationale |  |  |  |
 | Registry/release validation |  |  |  |
@@ -83,7 +100,9 @@ Every failed row creates the next task.
 | Debt ledger empty |  |  |  |
 
 ## Debt Ledger
-Track every introduced assumption, import, parameter, residual, convention conflict, broken consumer, and narrative mismatch inside a unit proposed for merge or promotion until discharged. The uncompleted remainder of the parent goal is campaign frontier, not debt.
+Track hidden premises, unsupported promises, and broken affected consumers
+inside a unit proposed for merge or promotion. Declared hypotheses, honest
+exclusions, adjacent observations, and the uncompleted parent goal are not debt.
 
 ## Promotion Record
 List individually accepted claims, source API/tests, immutable campaign record, release id, generated outputs, memory synchronization, commit, PR, and review evidence.
@@ -92,7 +111,12 @@ List individually accepted claims, source API/tests, immutable campaign record, 
 Record the verified positive result and every harvested unit. If the parent objective is incomplete, use `Advances #N`, preserve the exact next decisive action, and leave the goal active. A clean harvest handoff may end this PR or agent run without pretending the campaign is complete.
 
 ## Done Gate
-For full campaign completion, check all success conditions from `AGENTS.md`, targeted checks, downstream replay, generated-state consistency, one `scripts/validate.sh --full` run at the unchanged promotion boundary, and empty debt. For a progress merge, require that the canonical issue predates the PR, a distinct merger is identified, and each harvested unit passes its local claim, dependency, convention, consumer, impact, and proportionate fixed-only/scoped/full validation gates; record the local `scripts/validate_changed.py` decision, keep the campaign and any live source-refactor PR open, and do not promote unsupported headline claims.
+For campaign completion, check applicable success conditions from `AGENTS.md`
+and run the impact-selected fixed/scoped/full workflow once at the unchanged
+promotion boundary. Full validation is not automatic. For a progress merge,
+require local correctness, a proportional receipt, and either a distinct merger
+or explicit owner self-merge direction; leave unsupported headline claims
+unpromoted and the campaign open.
 
 ## Cross-References
 Link parent/child contracts, proposal, claims, campaigns, source, tests, release, generated docs, and PR.
