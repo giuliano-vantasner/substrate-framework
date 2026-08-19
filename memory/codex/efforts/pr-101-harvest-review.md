@@ -2,14 +2,14 @@
 description: Corrective review and landing record for PR 101's P236 two-clock GEM Newton-limit campaign
 author: codex
 created: '2026-08-19T07:54:53+02:00'
-updated: '2026-08-19T18:30:00+02:00'
+updated: '2026-08-19T10:48:35+02:00'
 tags:
 - substrate-framework
 - continuation-pr
 - pr-101
 category: efforts
 confidence: established
-status: active
+status: archived
 ---
 
 ## Goal and Success Contract
@@ -72,7 +72,7 @@ The exact correction boundary has the following validation state.
 | Growing-box and fixed-domain convergence | pass |
 | Source deletion and zero boost | pass |
 | P231 consumer tests | pass |
-| Final repository validation and tree receipt | pending landing check |
+| Final repository validation and tree receipt | pass; scientific tree `8de54c3407c8203f2071b60e650a400586aa9036` |
 
 ## Debt Ledger
 
@@ -82,10 +82,15 @@ discussion, not an obligation of this transaction.
 
 ## Promotion and Merge Record
 
-No claim promotion is proposed. The user explicitly authorized the reviewer
-to correct and self-merge named PR #101 after the bounded correction check.
-Merge/issue/branch cleanup receipts remain pending until landing.
+No claim promotion was proposed. The corrected head
+`1f8b7281b39d23d6030b5fc4f13494abeeecb62c` landed through PRs #101 and #102
+at merge commit `11a7094eae3e9073c5f663d11ab4d64cbf64accb` after a distinct CODEOWNER
+landing review. Issue #96 closed, and both exact merged head branches were
+deleted. Attempt 0001 is terminal history only; no correction or in-scope
+obligation remains active.
 
 ## Cross-References
 
-Issue #96; PR #101; P236 attempt 0002; C-IGR-004; C-GRV-002; v0.163.0.
+Issue #96; PRs #101 and #102; merge
+`11a7094eae3e9073c5f663d11ab4d64cbf64accb`; P236 attempt 0002; C-IGR-004;
+C-GRV-002; v0.163.0.
