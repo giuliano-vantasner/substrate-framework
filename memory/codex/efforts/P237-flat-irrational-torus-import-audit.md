@@ -2,7 +2,7 @@
 description: Review and harvest every correct reusable unit from the FlatIrrationalTorus v13.0 model
 author: codex
 created: '2026-08-19T15:18:24+02:00'
-updated: '2026-08-19T15:34:19+02:00'
+updated: '2026-08-19T15:36:35+02:00'
 tags:
 - substrate-framework
 - research-arc
@@ -111,21 +111,21 @@ The planned package surface is `substrate_framework.flat_torus`: validated
 side lengths, reciprocal wavevectors, scalar-Laplacian eigenvalues, lattice
 translation enumeration, and matched-circle angular radii. It remains pure and
 does not import `healpy`, execute simulations, or embed the upstream physical
-scale. NumPy is appropriate only for array-valued geometry; exact rational
-specializations may use `fractions.Fraction`. No sampled integration is
-planned.
+scale. SymPy carries exact geometry and mpmath evaluates explicitly finite
+Epstein partial sums at declared precision. No sampled integration is used.
 
 ## Harvest Checkpoints
-The canonical goal is issue #105 and any PR will use `Advances #105` unless the
-full issue success gate is met. This branch is an active harvest; source PR
-closure is not applicable because the source is an external repository rather
-than a contributed Substrate PR.
+The canonical goal is issue #105. PR #107 uses `Fixes #105` because the full
+source-audit and reusable-import gate is met; only the distinct-merger
+operation remains. Source PR closure is not applicable because the source is
+an external repository rather than a contributed Substrate PR. The compact
+issue handoff is posted at issue comment 5342914592.
 
 | Unit | Local claim | Independent of headline? | Evidence | Commit/PR | Disposition |
 | --- | --- | --- | --- | --- | --- |
-| Rectangular-torus geometry | Exact conditional Fourier/translation identities | yes | 21 focused tests and P237 source audit | frozen tree `ee288685993e573f79972dca6c387a7a614a9ec7` | ready for PR |
-| Matched-circle geometry | Exact conditional sphere-intersection result | yes | exact limits and translation enumeration tests | frozen tree `ee288685993e573f79972dca6c387a7a614a9ec7` | ready for PR |
-| Rectangular Epstein partial sums | Convergent finite positive lattice sums with visible refinement increments | yes | scale mutation, 1D oracle, and cutoff ladder | frozen tree `ee288685993e573f79972dca6c387a7a614a9ec7` | ready for PR |
+| Rectangular-torus geometry | Exact conditional Fourier/translation identities | yes | 21 focused tests and P237 source audit | PR #107, frozen tree `ee288685993e573f79972dca6c387a7a614a9ec7` | ready for distinct merge |
+| Matched-circle geometry | Exact conditional sphere-intersection result | yes | exact limits and translation enumeration tests | PR #107, frozen tree `ee288685993e573f79972dca6c387a7a614a9ec7` | ready for distinct merge |
+| Rectangular Epstein partial sums | Convergent finite positive lattice sums with visible refinement increments | yes | scale mutation, 1D oracle, and cutoff ladder | PR #107, frozen tree `ee288685993e573f79972dca6c387a7a614a9ec7` | ready for distinct merge |
 
 ## Attempts
 The attempt ledger distinguishes compatibility and evidential defects from
@@ -193,12 +193,16 @@ docs stay unchanged. The validation receipt is
 ## Done Gate
 The source inventory has unit-level dispositions, every reusable atom is in
 the frozen PR tree or explicitly excluded for a technical reason, the debt
-ledger is empty, and affected validation passes. The record remains active
-only until the PR lands and the canonical issue handoff is posted; no
-scientific or implementation obligation remains inside the harvest boundary.
+ledger is empty, affected validation passes, and the canonical issue handoff
+is posted. The record remains active only until PR #107 lands; no scientific
+or implementation obligation remains inside the harvest boundary.
 
 ## Cross-References
 Canonical issue: https://github.com/vantasnerdan/substrate-framework/issues/105
+
+Pull request: https://github.com/vantasnerdan/substrate-framework/pull/107
+
+Issue handoff: https://github.com/vantasnerdan/substrate-framework/issues/105#issuecomment-5342914592
 
 Upstream source: https://github.com/Viktar-Pi/FlatIrrationalTorus
 
