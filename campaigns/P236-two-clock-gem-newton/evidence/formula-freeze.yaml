@@ -1,0 +1,17 @@
+record: P236 measurement
+engine: openwave-labs/openwave@614a223 (public Apache-2.0 clone)
+driver: evidence/m5_96_two_clock_gem_newton.py (canonical sandbox_v8 imports; drop-in)
+environment: anaconda numpy stack; run log evidence/run-log.txt
+primary_provenance:
+  - m5_8_2q_delta_scaling.py (u_sectors EM/GEM split; the N-3 anchor 16.7379)
+  - m5_17_two_charge.py (the two-charge angle-superposition texture, gate C0)
+  - m5_21_8 lattice record (the rigid-dressing attractor m*/artanh(1/g)=0.8168 at g=8)
+  - m5_21_14 method note (the constrained-smooth-profile boundedness guard)
+  - m5_12 block-11 sign theorem (the mixing-free class control)
+formula_freeze:
+  observable: "U_gem(d) = GEM[pair](d) - 2*GEM[single]"
+  fit: "U_gem(d) = U_inf + C/d (two-parameter least squares on the mid window)"
+  force: "F(d) = -dU/dd = C/d^2"
+  mediator: "theta(x) = theta_clock(r1) + theta_clock(r2); theta_clock(r) = b* e^{-(r/RW)^2} + a0 (1 - e^{-(r/RW)^2}); a0 = 0.8168 artanh(1/g)"
+  gates: G0..G10 as listed in evidence/findings-note.md section 5
+frozen_before_production: true

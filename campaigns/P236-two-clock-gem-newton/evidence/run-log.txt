@@ -1,0 +1,20 @@
+[G0] N-3 anchor: H_static = 16.7379 (target 16.7379)  PASS
+[ladder] 24^3 -> 48^3 ...
+  24^3 L=6.0: U_gem =   -63.09 +  -503.27/d  R2=0.95799  F exp -2.056  (b0 null 0.0e+00)
+  32^3 L=8.0: U_gem =  -212.25 +  -341.23/d  R2=0.97485  F exp -2.042  (b0 null 0.0e+00)
+  48^3 L=12.0: U_gem =  -405.35 +  -335.42/d  R2=0.97336  F exp -2.071  (b0 null 0.0e+00)
+[controls] ...
+sandbox_v8/m5_8_2cb_taichi_constrained.py:692: RuntimeWarning: invalid value encountered in divide
+  rhat /= np.sqrt(np.einsum("...i,...i->...", rhat, rhat))[..., None]
+  a0=0.0500: C=  -135.43  C/sinh^2= -54128.6  F exp -1.981
+  a0=0.1026: C=  -367.19  C/sinh^2= -34759.3  F exp -2.041
+  a0=0.1500: C=  -740.44  C/sinh^2= -32662.8  F exp -2.054
+  a0=0.2000: C= -1333.62  C/sinh^2= -32899.4  F exp -2.053
+  anti-pair: C_gem= +322.24 (like  -367.41), C_em= -227.84
+  mutation: C=  -87.55  collapse factor 4.20
+  mixing-free uniaxial: |U_gem| <= 4.88e-30 (exact-zero control)
+[mediation] relaxed shared field at 32^3 ...
+  relaxed: C=-321.31, F exp -2.048
+[audit] forward-stencil twin at 48^3 ...
+  fwd twin: C=-302.03, F exp -2.116
+done in 1050.7s -> data/m5_96_two_clock_gem_newton.json

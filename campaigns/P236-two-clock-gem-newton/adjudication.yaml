@@ -1,0 +1,33 @@
+campaign: P236
+attempt: attempt-0001
+date: 2026-08-19
+status: review_pending
+canonical_issue: "96"
+measured_record:
+  observable: "U_gem(d) = GEM[pair](d) - 2*GEM[single] on the openwave M5 engine"
+  form: "U_gem(d) = U_inf + C/d ; F(d) = -dU/dd = C/d^2"
+  ladder:
+    - rung: 24
+      C: -503.267
+      force_exponent: -2.056
+    - rung: 32
+      C: -341.233
+      force_exponent: -2.042
+    - rung: 48
+      C: -335.418
+      force_exponent: -2.071
+  sign: attractive (C < 0 at every amplitude, rung, stencil, protocol)
+  coupling_face: "C(a0)/sinh^2(a0) = -3.28e4 (0.7% spread for a0 >= 0.1)"
+  mediation_relaxed_32: C=-321.31, exp -2.048
+  fwd_twin_48: C=-302.03, exp -2.116
+controls:
+  zero_boost_null: "GEM == 0 machine-exact on every rung"
+  mutation_collapse_factor: 4.20
+  antipair_sign_flip: "+322.2 vs -367.4 (EM mirrored: -227.8 vs +380.9)"
+  mixing_free_class: "4.9e-30 (exact zero, the M5.12 block-11 control)"
+wiring:
+  claim_C_IGR_004: "1/G_total = Lambda^2 J(0)/(12 pi) = pi/(12 h^2); sharp == smooth at z = 0"
+  claim_C_GRV_002: "attractive_newtonian = True on the M5 branch (1 - 6 xi = 1 > 0); matches measured C < 0"
+  dictionary: "B=0 (purely-induced), N=1, xi=0, Lambda=pi/h, z=0"
+  unit_identity_scope: out_of_scope_per_issue_text
+verdict: measured_attractive_1_over_r2_gem_force_pending_maintainer_review

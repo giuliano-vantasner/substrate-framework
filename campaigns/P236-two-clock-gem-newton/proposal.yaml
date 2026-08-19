@@ -1,0 +1,57 @@
+id: P236
+base_release: v0.163.0
+source_baseline: substrate-framework@a96399f
+canonical_issue: "96"
+question: >-
+  Measure the attractive 1/r^2 inter-mass force in the M5 (liquid crystal)
+  model's induced-gravity (GEM) sector between two driven M5.8 fixed-clock
+  configs, on the public openwave M5 engine, and wire the measured coupling
+  into the accepted composition: does the two-clock GEM interaction energy
+  obey U_gem(d) = U_inf + C/d with C < 0 (attractive Newton force F = C/d^2),
+  is the exponent driven to -2 and stable across the engine's box ladder
+  (24^3 -> 32^3 -> 48^3, fixed h ~ 0.52, box grows), does the measured sign
+  match C-GRV-002's attractive branch sign(1/G_total) with the M5 mediator
+  dictionary (B = 0 purely-induced, N = 1, xi = 0, Lambda = pi/h, z = 0), is
+  the magnitude consistent with 1/G_total = Lambda^2 J(0)/(12 pi) under that
+  dictionary, and does every mandated control pass (zero-boost null, source
+  mutation, mixing-free class, anti-pair sign flip, relaxed-shared-field
+  mediation, forward-stencil twin)?
+source_inventory:
+  - source: openwave-labs/openwave@614a223 (public Apache-2.0 clone)
+    access: openwave/xperiments/m5_liquid_crystal/research/{scripts,findings,data}
+    extracted: the M5.8 seed_M class (m5_8_2q_delta_scaling.py: u_sectors EM/GEM
+      split, the N-3 anchor H_static = 16.7379), the two-charge angle-superposition
+      texture (m5_17_two_charge.py pair_field, gate C0), the M5.21.8 rigid-dressing
+      attractor m*/artanh(1/g) = 0.8168 at g = 8, the M5.21.14 constrained-smooth-profile
+      guard for the boost-dressing boundedness, the M5.12 mixing-free class control
+  - source: accepted C-IGR-004 (v0.162.0, PR #89 / P231)
+    access: governance/claims.yaml, src/substrate_framework/total_gravitational_coupling.py
+    extracted: 1/G_total = B + N*(1-6*xi)*Lambda^2*J(z)/(12*pi) with J_sharp =
+      exp(-z) - z*E1(z), J_smooth = 2*sqrt(z)*K_1(2*sqrt(z)), J(0) = 1, usable
+      scheme set {sharp, smooth}
+  - source: accepted C-GRV-002 (v0.162.0, PR #89 / P231)
+    access: governance/claims.yaml, total_gravitational_coupling.attractive_sign_map
+    extracted: attractive iff 1/G_total > 0 with the sign carried by (1-6*xi) on
+      the usable set; conformal point xi = 1/6 marginal
+invariants:
+  - >-
+    the measurement runs entirely in-platform on the public openwave engine
+    (numpy only, canonical sandbox_v8 imports; no unverified imported numbers)
+  - >-
+    the two-body observable is never an imposed-envelope overlap: the pair
+    texture is the merged two-charge angle-superposition construction and the
+    shared boost field is either the engine's own measured attractor branch
+    (frozen protocol) or relaxed with both clock cores pinned (mediation arm)
+  - >-
+    the d-independent far-field self-energy background is absorbed by the
+    two-parameter fit U_inf + C/d (the M5.17 E0 + A/d protocol) and cancels
+    identically in F = -dU/dd
+  - >-
+    C-IGR-004 / C-GRV-002 enter as public Apache-2.0 provenance evaluated
+    in-platform through this repository's own accepted module
+deliverables:
+  - evidence/m5_96_two_clock_gem_newton.py (openwave drop-in, canonical imports)
+  - evidence/m5_96_two_clock_gem_newton.json (full data record)
+  - evidence/findings-note.md (equations-first method note)
+  - evidence/plots (U(d) + ladder + controls)
+  - verify.py (wiring + record consistency, this repository's environment)
