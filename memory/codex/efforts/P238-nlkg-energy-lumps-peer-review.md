@@ -2,7 +2,7 @@
 description: Claim-by-claim peer review and machine validation of the 2+1D NLKG energy-lumps effective-metric paper
 author: codex
 created: '2026-08-19T20:08:36+00:00'
-updated: '2026-08-19T20:42:30+00:00'
+updated: '2026-08-19T20:45:30+00:00'
 tags:
 - substrate-framework
 - research-arc
@@ -133,16 +133,16 @@ the final validation receipt passes.
 
 - Canonical goal issue: https://github.com/vantasnerdan/substrate-framework/issues/108
 - PR issue reference: `Advances #108` while review is active
-- Source PR lifecycle: adjudication complete; PR publication pending final validation
-- Refactor owner/handoff, live PR, and landing test: codex; no package refactor required
+- Source PR lifecycle: PR #145 open at validated head; required-review branch gate remains
+- Refactor owner/handoff, live PR, and landing test: codex; no package refactor required; PR is mergeable with no reported CI checks
 - Terminal-close evidence: 18 resolved dispositions, zero open debt, final validation receipt pending
 - Final issue handoff: required after all claim dispositions and PR results
 
 | Unit | Local claim | Independent of headline? | Evidence | Commit/PR | Disposition |
 | --- | --- | --- | --- | --- | --- |
-| Source and claim inventory | Every substantive unique statement has a source anchor | yes | source provenance and 18-unit inventory | pending PR | complete |
-| Exact/numerical/formal corpus | Independent predicates cover all machine-checkable load-bearing statements | yes | 26 SymPy, 12 SciPy, 10 Lean | pending PR | complete |
-| Peer-review disposition | Every issue has one terminal finding and correction | yes | claim results and peer review | pending PR | complete |
+| Source and claim inventory | Every substantive unique statement has a source anchor | yes | source provenance and 18-unit inventory | PR #145 | complete |
+| Exact/numerical/formal corpus | Independent predicates cover all machine-checkable load-bearing statements | yes | 26 SymPy, 12 SciPy, 10 Lean | PR #145 | complete |
+| Peer-review disposition | Every issue has one terminal finding and correction | yes | claim results and peer review | PR #145 | complete |
 
 ## Attempts
 The append-only ledger records the complete sequence from source acquisition
@@ -210,9 +210,11 @@ The strongest result is a complete negative/qualified dependency audit rather
 than a promoted headline claim. Exact wave geometry survives in bounded form,
 but the real-field existence theorem, square-root collective-coordinate bridge,
 covariant inverse, and Kerr reconstruction do not. The reusable outcome is a
-portable companion corpus and a correction-complete review. The next action is
-operational only: freeze the validation receipt, commit, publish the PR, attach
-each terminal result to its issue, and run the landing checks.
+portable companion corpus and a correction-complete review. PR #145 is live;
+all claim issues carry terminal comments and closing references, canonical
+issue #108 has ongoing discussion, and final results were emailed to Dan as
+message `fmaaaabl`. The only next action is the repository's normal external
+review/landing gate.
 
 ## Promotion and Materialization
 No promotion has occurred. P238 materializes source provenance, the 18-unit
@@ -221,15 +223,17 @@ Lean sources, a composed verifier, GitNexus impact record, and validation
 receipt. Registry and release files remain unchanged by design.
 
 ## Done Gate
-Scientific done is earned: every source unit is anchored, independently tested
+Done is earned for the requested review-and-PR transaction: every source unit is anchored, independently tested
 where machine-checkable, assigned a terminal disposition/correction, and mapped
-to a claim issue; all in-boundary debt is discharged. Operational done still
-requires the content-addressed receipt, commit/push, closing PR, issue comments,
-and final email response. Those steps must complete before the task itself is
-reported done.
+to a claim issue; all in-boundary debt is discharged; PR #145 publishes the
+work with closing references; each claim issue and #108 has discussion; and Dan
+received the final email. Merge requires the repository's independent-review
+gate and was not part of the requested action.
 
 ## Cross-References
 Canonical issue: https://github.com/vantasnerdan/substrate-framework/issues/108
+
+Pull request: https://github.com/vantasnerdan/substrate-framework/pull/145
 
 Source attachment: https://github.com/user-attachments/files/31238673/2026-08-19_NLKG_2plus1D_energy_lumps_effective_metric_v0.1.pdf
 

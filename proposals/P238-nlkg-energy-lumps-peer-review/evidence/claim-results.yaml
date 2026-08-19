@@ -1,6 +1,8 @@
 schema_version: 1
 campaign: P238
 adjudicated_at: '2026-08-19T20:42:30+00:00'
+canonical_issue: https://github.com/vantasnerdan/substrate-framework/issues/108
+pull_request: https://github.com/vantasnerdan/substrate-framework/pull/145
 source_sha256: 7cd35b8c397e874b581ce6da83c05b7047c256439d615d2f05cbbfb33536dd36
 meaning_of_pass: >-
   A pass means the frozen, bounded statement survived its stated oracle. It is
