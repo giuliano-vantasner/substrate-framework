@@ -1,0 +1,72 @@
+id: P238
+base_release: v0.163.0
+source_baseline: substrate-framework@f00d11b0fca02fd5ac27c80b0d00d8b7f5de8853
+question: >-
+  Which explicit mathematical, numerical, and physical claims in
+  2026-08-19_NLKG_2plus1D_energy_lumps_effective_metric_v0.1.pdf survive
+  independent claim-by-claim reconstruction with the strongest practical
+  SymPy, Lean, or SciPy oracle, and which unique supported claims fit the
+  Substrate framework without overstating their evidence?
+source_inventory:
+  - source: >-
+      2026-08-19_NLKG_2plus1D_energy_lumps_effective_metric_v0.1.pdf,
+      attached by vantasnerdan to canonical GitHub issue 108
+    access: >-
+      authoritative issue attachment URL; locally acquired after the proposal
+      and matching research-arc contract validated; SHA-256
+      7cd35b8c397e874b581ce6da83c05b7047c256439d615d2f05cbbfb33536dd36
+    extracted: >-
+      all 17 pages, equations (1)-(72), two figures, references, assumptions,
+      open points, and 18 unique claim units frozen in the P238 claim inventory
+invariants:
+  - accepted release v0.163.0 and governance/claims.yaml remain unchanged until individual claim review and promotion
+  - every extracted claim keeps its source page equation figure assumptions domain and stated evidential strength
+  - exact identities numerical observations and physical interpretations remain distinct claim types
+  - all metric signature coordinate dimension unit boundary and normalization conventions are frozen before validation
+  - published tables plots and fitted values are comparators and never hidden derivation inputs
+allowed_imports:
+  - SymPy for exact algebra differentiation integration tensor identities dimensions and limiting cases
+  - SciPy and repository numerical helpers for independently specified roots integrals ODEs BVPs PDE reductions spectra optimization and convergence audits
+  - Lean through the repository setup for finite exact propositions whose assurance materially exceeds symbolic testing
+  - accepted release v0.163.0 claims and package APIs only as declared convention or nonduplication cross-checks
+  - the issue-108 PDF as a source object under audit and not as authority
+candidates:
+  - id: A
+    description: >-
+      Symbolic-first clean-room reconstruction of the paper's declared action,
+      field equations, conserved quantities, effective-metric construction,
+      dimensions, signs, symmetries, and exact limits, with mutation and
+      counterexample probes.
+  - id: B
+    description: >-
+      Independent SciPy reproduction of each genuinely numerical energy-lump,
+      propagation, or effective-metric result from declared equations and
+      initial or boundary data, with solver diagnostics, refinement, and a
+      soluble or independent-method cross-check.
+  - id: C
+    description: >-
+      Lean formalization of self-contained exact algebraic or discrete
+      propositions when the extracted claim statement and dependencies are
+      finite enough for a stronger auditable theorem than SymPy alone.
+uniqueness_evidence: >-
+  GitNexus queries and direct accepted-registry inspection found exact einbein
+  overlap with C-WLN-001 through C-WLN-003 and conditional wave-metric and
+  oscillon precedents in C-GOR-001 and C-PDE-001. No surviving source unit is
+  promoted: the exact overlap is duplicate and the remaining passes are
+  conditional proposal constructions that do not justify broadening accepted
+  framework claims.
+selection_criteria:
+  - exact agreement between extracted claim and oracle obligation
+  - explicit dependency closure with no paper result reused as an input
+  - convention dimension sign symmetry topology and limit compatibility
+  - mutation sensitivity or explicit counterexample coverage
+  - numerical convergence stability error model and independent route where applicable
+  - nonduplication against accepted framework claims and package APIs
+  - maintainable importable implementation with minimum assumption cost
+claims_proposed: []
+comparators_blinded_until: >-
+  the proposal and research-arc contract validate and the source claim
+  inventory freezes each statement, assumptions, claim type, oracle, and
+  acceptance threshold; published numerical values and plots may then be
+  opened only as comparators for the already specified reconstruction
+status: draft

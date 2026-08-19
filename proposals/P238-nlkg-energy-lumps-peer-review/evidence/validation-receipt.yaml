@@ -1,0 +1,44 @@
+receipt:
+  recorded_at: '2026-08-19T20:42:42+00:00'
+  base_commit: f00d11b0fca02fd5ac27c80b0d00d8b7f5de8853
+  frozen_tree: 2711b875534052662f436451bf4ed7a64904bfcb
+  source_sha256: 7cd35b8c397e874b581ce6da83c05b7047c256439d615d2f05cbbfb33536dd36
+  impact_surface:
+    - .gitignore
+    - memory/codex/efforts/P238-nlkg-energy-lumps-peer-review.md
+    - proposals/P238-nlkg-energy-lumps-peer-review
+  preflight:
+    command: .agents/skills/physics-erdos-loop/scripts/preflight.sh
+    result: 7 checks passed, 0 warnings
+  gitnexus:
+    repository: substrate-paper-review-108
+    command: gitnexus detect-changes --scope all --repo substrate-paper-review-108
+    result: 18 files, 22 symbols, 0 affected processes, low risk
+  focused_oracle:
+    command: .venv/bin/python proposals/P238-nlkg-energy-lumps-peer-review/verify.py
+    result: >-
+      18/18 terminal claim dispositions; 26/26 SymPy predicates, 12/12
+      SciPy probes, and 10/10 Lean theorems pass; 0 open debt
+  memory_contract:
+    command: >-
+      memory validate --base
+      /home/axis/worktrees/substrate-paper-peer-review/memory
+      /home/axis/worktrees/substrate-paper-peer-review/memory/codex/efforts/P238-nlkg-energy-lumps-peer-review.md
+    result: all required fields and sections pass
+  repository_gate:
+    selector: .venv/bin/python scripts/validate_changed.py --base origin/main --print-only
+    mode: fixed-only
+    reason: no changed path maps to an affected pytest scope
+    command: .venv/bin/python scripts/validate_changed.py --base origin/main
+    result: >-
+      WORKFLOW VALID: 222 claims, 222 accepted, 4 proposals, 3 skills;
+      MIGRATION QUEUE: 218 units, 0 pending, 0 partial; all 963 files valid;
+      skill valid; all fixed repository checks pass
+  hygiene:
+    command: git diff --check
+    result: pass
+  note: >-
+    The receipt itself and later PR/issue/email metadata do not change the
+    frozen scientific or executable boundary. Repository-wide memory validation
+    reports 36 pre-existing warnings; the new P238 contract validates cleanly
+    by explicit path and introduces no memory warning or debt.

@@ -1,0 +1,220 @@
+schema_version: 1
+campaign: P238
+adjudicated_at: '2026-08-19T20:42:30+00:00'
+source_sha256: 7cd35b8c397e874b581ce6da83c05b7047c256439d615d2f05cbbfb33536dd36
+meaning_of_pass: >-
+  A pass means the frozen, bounded statement survived its stated oracle. It is
+  not automatic acceptance into the Substrate claim registry.
+meaning_of_resolved: >-
+  The review question has a terminal evidence-backed disposition. A rejected
+  or qualified paper claim is resolved review work, not unrecorded debt.
+counts:
+  total: 18
+  pass: 5
+  qualified: 4
+  fail: 9
+  resolved: 18
+open_debt: []
+claims:
+  - id: P238-S01
+    issue: https://github.com/vantasnerdan/substrate-framework/issues/127
+    disposition: qualified
+    resolved: true
+    finding: >-
+      The material-derivative square and displayed action expansion are exact.
+      The action is one valid first-derivative quadratic scalar model, not the
+      most general scalar continuum action without additional symmetry,
+      locality, derivative-order, and coupling assumptions.
+    correction: Replace "most general" with a scoped modelling ansatz and list the excluded couplings.
+    evidence: [companion/sympy_checks.py, companion/P238PaperChecks.lean]
+  - id: P238-S02
+    issue: https://github.com/vantasnerdan/substrate-framework/issues/128
+    disposition: qualified
+    resolved: true
+    finding: >-
+      Equations (6)-(9), including the full two-dimensional product-rule
+      expansion, are exact. On a constant background the full linearized
+      equation also contains U''(0)u/rho0; only its principal part is the
+      massless convective wave operator quoted in the paper.
+    correction: Say "principal part/characteristic operator" or retain the mass term explicitly.
+    evidence: [companion/sympy_checks.py]
+  - id: P238-S03
+    issue: https://github.com/vantasnerdan/substrate-framework/issues/129
+    disposition: fail
+    resolved: true
+    finding: >-
+      The determinant condition has the advertised dimensions and isotropic
+      reduction, but one scalar determinant cannot match direction-dependent
+      anisotropic impedance. Two media with rho=1 and stiffness tensors I and
+      diag(4,1/4) have equal determinant and normal-incidence reflection
+      coefficient 1/3 at an interface normal to the first axis.
+    correction: Present determinant matching as a constitutive normalization, not a general reflectionless condition; derive interface matching for each propagation direction and polarization.
+    evidence: [companion/sympy_checks.py, companion/scipy_checks.py, companion/P238PaperChecks.lean]
+  - id: P238-S04
+    issue: https://github.com/vantasnerdan/substrate-framework/issues/130
+    disposition: pass
+    resolved: true
+    finding: >-
+      Conditional on imposing the determinant constraint as a modelling
+      normalization, equations (14)-(20) reconstruct rho and Theta from SPD A
+      and define N=c0*A^(-1/2) with the stated principal values.
+    correction: Decouple this algebraic pass from the failed reflectionless interpretation in P238-S03.
+    evidence: [companion/sympy_checks.py]
+  - id: P238-S05
+    issue: https://github.com/vantasnerdan/substrate-framework/issues/131
+    disposition: fail
+    resolved: true
+    finding: >-
+      The dispersion relation is correct, but a generic directional phase
+      index is c0/sqrt(khat^T A khat), not khat^T N khat. For A=diag(1,4) at
+      45 degrees these give sqrt(10)/5 and 3/4. They agree only on principal
+      axes or in the isotropic limit.
+    correction: Define the directional index by the inverse square root of the acoustic quadratic form; do not call it the ordinary quadratic form of N.
+    evidence: [companion/sympy_checks.py, companion/scipy_checks.py]
+  - id: P238-S06
+    issue: https://github.com/vantasnerdan/substrate-framework/issues/132
+    disposition: fail
+    resolved: true
+    finding: >-
+      The cited Benci-Fortunato result is for a complex U(1)-charged field; its
+      Q-ball theorem is stated for N>=3, while the N=2 vortex theorem still
+      uses a complex phase and conserved charge. It does not guarantee lumps
+      for the paper's single real 2+1D scalar under the listed potential
+      conditions. A positive binding-condition example also exhibits the
+      two-dimensional Derrick obstruction for nonzero static real lumps.
+    correction: Supply a theorem for the actual real field and dimension, or a concrete time-dependent numerical family with persistence and error evidence.
+    evidence: [evidence/literature-audit.md, companion/sympy_checks.py]
+  - id: P238-S07
+    issue: https://github.com/vantasnerdan/substrate-framework/issues/133
+    disposition: qualified
+    resolved: true
+    finding: >-
+      Scale separation is a legitimate declared hypothesis, not a validated
+      conclusion. Without a concrete localized family, residual estimate,
+      internal-mode treatment, and gradient-error bound it cannot carry the
+      later particle claims.
+    correction: Keep the eikonal statement explicitly hypothetical until those quantities are supplied.
+    evidence: [evidence/literature-audit.md, reviews/peer-review.md]
+  - id: P238-S08
+    issue: https://github.com/vantasnerdan/substrate-framework/issues/134
+    disposition: fail
+    resolved: true
+    finding: >-
+      Substitution of the displayed rigid translation ansatz into a field
+      action quadratic in first time derivatives yields a Lagrangian at most
+      quadratic in Xdot. It cannot produce the asserted all-orders square root.
+      The cited 1+1D baseline instead assumes a velocity-dependent boosted
+      breather and omits the decisive integral; the current draft explicitly
+      defers its concrete profile calculation.
+    correction: Derive the effective action from an explicit velocity-dependent localized family, including the spatial integral, approximation order, and radiation/internal-mode error.
+    evidence: [evidence/literature-audit.md, companion/sympy_checks.py, companion/P238PaperChecks.lean]
+  - id: P238-S09
+    issue: https://github.com/vantasnerdan/substrate-framework/issues/135
+    disposition: pass
+    resolved: true
+    finding: >-
+      Given a Lorentzian metric, the massive einbein elimination, null
+      specialization, and affine-geodesic identities are exact. They duplicate
+      accepted claims C-WLN-001 through C-WLN-003 and do not establish the
+      missing field-to-worldline bridge.
+    correction: Cite the result as a conditional identity and separate it from the unsupported derivation of the metric action.
+    evidence: [companion/sympy_checks.py, governance/claims.yaml]
+  - id: P238-S10
+    issue: https://github.com/vantasnerdan/substrate-framework/issues/136
+    disposition: pass
+    resolved: true
+    finding: >-
+      With phase covector K=(-omega/c0,k), equations (29)-(32) reproduce the
+      convective dispersion polynomial exactly. This is a wave-principal-symbol
+      null cone; by itself it is not a massive-lump metric derivation.
+    correction: State the covector sign convention and keep the wave and particle claims separate.
+    evidence: [companion/sympy_checks.py]
+  - id: P238-S11
+    issue: https://github.com/vantasnerdan/substrate-framework/issues/137
+    disposition: fail
+    resolved: true
+    finding: >-
+      Equations (33)-(38) are not the inverse of equations (29)-(31). At V=0,
+      N=diag(2,8), and nbar=4, their product is diag(1,2,1/2). If v=V/c0,
+      the inverse of nbar*g^ is nbar^(-1) times the block matrix with temporal
+      entry -1+v^T*N^2*v, mixed block -N^2*v, and spatial block N^2.
+    correction: Replace the full covariant dictionary, including the sign and power of N, and rederive every downstream metric coefficient.
+    evidence: [companion/sympy_checks.py, companion/scipy_checks.py, companion/P238PaperChecks.lean]
+  - id: P238-S12
+    issue: https://github.com/vantasnerdan/substrate-framework/issues/138
+    disposition: fail
+    resolved: true
+    finding: >-
+      Time dilation, anisotropic ruler contraction, massive-lump free fall, and
+      gravito-inertial equivalence do not follow from a principal-symbol null
+      cone. Their load-bearing existence, collective-coordinate, metric-inverse,
+      and operational-observable dependencies fail or remain hypothetical.
+    correction: Remove these as conclusions; reintroduce individual observables only after a concrete lump calculation and corrected metric pass their own tests.
+    evidence: [evidence/claim-results.yaml, reviews/peer-review.md]
+  - id: P238-S13
+    issue: https://github.com/vantasnerdan/substrate-framework/issues/139
+    disposition: pass
+    resolved: true
+    finding: >-
+      For f=1-rs/r>0, the eigenvalues Arr=c0^2*f^2 and A_tang=c0^2*f give the
+      acoustic covariant null cone diag(-1,f^-2,r^2/f), which becomes the
+      equatorial Schwarzschild metric after multiplication by f. The paper's
+      separate equations (40)-(42), inherited from P238-S11, are not conformal
+      to that target and must not be used as the proof.
+    correction: Retain the eigenvalue/null-speed construction but replace the covariant-map derivation.
+    evidence: [companion/sympy_checks.py, companion/P238PaperChecks.lean]
+  - id: P238-S14
+    issue: https://github.com/vantasnerdan/substrate-framework/issues/140
+    disposition: pass
+    resolved: true
+    finding: >-
+      The physical-basis profiles rho/rho0=f^(-3/4), Theta_r/Theta0=f^(5/4),
+      and Theta_t/Theta0=f^(1/4) satisfy A=Theta/rho and determinant matching
+      identically and remain positive for r>rs. They diverge or degenerate at
+      the horizon, so the construction is an exterior singular analogue.
+    correction: State the exterior domain and horizon singularity, and distinguish physical angular stiffness from its coordinate component.
+    evidence: [companion/sympy_checks.py, companion/scipy_checks.py]
+  - id: P238-S15
+    issue: https://github.com/vantasnerdan/substrate-framework/issues/141
+    disposition: fail
+    resolved: true
+    finding: >-
+      Equations (56)-(59) inherit the false covariant inverse from P238-S11, so
+      their proposed coefficient-by-coefficient Kerr dictionary is invalid.
+    correction: Start from the exact block inverse and solve all independent conformal coefficient-ratio equations before assigning constitutive fields.
+    evidence: [companion/sympy_checks.py, companion/scipy_checks.py]
+  - id: P238-S16
+    issue: https://github.com/vantasnerdan/substrate-framework/issues/142
+    disposition: fail
+    resolved: true
+    finding: >-
+      After the natural conformal scaling, the minimal model has gtphi=-a and
+      gphiphi=r^2, whereas equatorial Kerr has gtphi=-a*rs/r and
+      gphiphi=r^2+a^2+a^2*rs/r. It is not conformal to Kerr for generic
+      nonzero a despite sharing gtt, grr, and selected characteristic surfaces.
+    correction: Rename it a minimal rotating acoustic model; do not claim an explicit Kerr reconstruction unless every independent coefficient ratio matches.
+    evidence: [companion/sympy_checks.py, companion/scipy_checks.py, companion/P238PaperChecks.lean]
+  - id: P238-S17
+    issue: https://github.com/vantasnerdan/substrate-framework/issues/143
+    disposition: qualified
+    resolved: true
+    finding: >-
+      Equations (68)-(72), the horizon roots, and the equatorial ergosurface are
+      algebraically correct for the minimal model. The prose reverses the root
+      interpretation: the lower/counter-rotating root becomes positive inside
+      the ergoregion, while the upper/co-rotating root stays positive.
+    correction: Reverse that sentence and describe the result as the causal structure of the minimal model, not proof of full Kerr frame dragging.
+    evidence: [companion/sympy_checks.py, companion/scipy_checks.py]
+  - id: P238-S18
+    issue: https://github.com/vantasnerdan/substrate-framework/issues/144
+    disposition: fail
+    resolved: true
+    finding: >-
+      The chain is not fully explicit: the cited existence theorem does not
+      apply, the square-root reduction is not derived, the covariant metric is
+      algebraically wrong, and the minimal rotating model is not Kerr. The
+      surviving wave-null-cone constructions support an analogue-kinematics
+      research program, not emergence of massive-particle SR, GR, or the
+      equivalence principle from the stated substrate.
+    correction: Replace the headline conclusion with the narrower validated wave-analogue results and label the remaining chain as future work.
+    evidence: [evidence/claim-results.yaml, reviews/peer-review.md]
