@@ -1,7 +1,7 @@
 # M5.96 findings — relaxed two-clock GEM Newton limit
 
 Campaign P236 · canonical issue #96 · corrected PR #101 transaction · public
-engine `openwave-labs/openwave@614a223fff4ca0fa53a5c4fbc79cc5347a341d69`.
+engine `openwave-labs/openwave@614a223fff01b768550b0917d0f96621d6bbe155`.
 The drop-in driver uses canonical `sandbox_v8`/`sandbox_vn` imports. Every PR
 commit carries its author's DCO `Signed-off-by` trailer.
 

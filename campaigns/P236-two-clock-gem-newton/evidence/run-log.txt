@@ -1,6 +1,6 @@
 P236 corrected production receipt (2026-08-19)
 
-Engine: openwave-labs/openwave@614a223fff4ca0fa53a5c4fbc79cc5347a341d69
+Engine: openwave-labs/openwave@614a223fff01b768550b0917d0f96621d6bbe155
 Driver: evidence/m5_96_two_clock_gem_newton.py all
 Independent: reviews/independent_force_audit.py --write
 

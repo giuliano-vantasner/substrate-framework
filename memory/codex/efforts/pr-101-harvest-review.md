@@ -2,7 +2,7 @@
 description: Corrective review and landing record for PR 101's P236 two-clock GEM Newton-limit campaign
 author: codex
 created: '2026-08-19T07:54:53+02:00'
-updated: '2026-08-19T10:48:35+02:00'
+updated: '2026-08-19T10:52:00+02:00'
 tags:
 - substrate-framework
 - continuation-pr
@@ -88,6 +88,12 @@ at merge commit `11a7094eae3e9073c5f663d11ab4d64cbf64accb` after a distinct CODE
 landing review. Issue #96 closed, and both exact merged head branches were
 deleted. Attempt 0001 is terminal history only; no correction or in-scope
 obligation remains active.
+
+A post-landing source-object audit found that the recorded long expansion of
+OpenWave short commit `614a223` did not exist. Attempt 0003 corrects only that
+provenance string to Git-verified object
+`614a223fff01b768550b0917d0f96621d6bbe155`; equations, measurements,
+verdicts, claims, and the executed OpenWave snapshot are unchanged.
 
 ## Cross-References
 

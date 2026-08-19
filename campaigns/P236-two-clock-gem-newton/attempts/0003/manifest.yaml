@@ -1,0 +1,22 @@
+id: attempt-0003
+campaign: P236
+canonical_issue: "96"
+status: provenance_corrected_validated
+classification: provenance_only
+objective: >-
+  Replace the invalid long-form expansion of the pinned OpenWave short commit
+  614a223 with the full object identifier that Git actually resolves.
+incorrect_oid: 614a223fff4ca0fa53a5c4fbc79cc5347a341d69
+verified_oid: 614a223fff01b768550b0917d0f96621d6bbe155
+verification:
+  - command: git -C <openwave clone> rev-parse 614a223
+    result: 614a223fff01b768550b0917d0f96621d6bbe155
+  - command: >-
+      git -C <openwave clone> cat-file -t
+      614a223fff4ca0fa53a5c4fbc79cc5347a341d69
+    result: fail; object does not exist locally or on the source remote
+scientific_delta: none
+claims_changed: []
+measurements_changed: false
+open_obligations_inside_scope: []
+validation_receipt: attempts/0003/validation-receipt.yaml

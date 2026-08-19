@@ -527,7 +527,7 @@ def run_all() -> dict[str, object]:
     grid = {str(count): cache[(count, domain)] for count, domain in GRID_RUNGS}
     record = {
         "task": "M5.96 / P236 corrected transaction",
-        "source": "openwave-labs/openwave@614a223fff4ca0fa53a5c4fbc79cc5347a341d69",
+        "source": "openwave-labs/openwave@614a223fff01b768550b0917d0f96621d6bbe155",
         "instrument": {
             "derivative": "pointwise Cartesian central difference",
             "derivative_epsilon": DERIVATIVE_EPSILON,

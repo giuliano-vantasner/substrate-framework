@@ -1,0 +1,36 @@
+campaign: P236
+transaction: openwave-source-oid-provenance-correction
+base_commit: 5288dd99b077b2d341697205ecb34469f51de046
+validated_commit: 492bbd9156aa32ac1a8fc2b485cb9ff31ac8b128
+validated_tree: 26cdf82058e1dcaff84f362be1f6e3707737aec6
+impact_surface:
+  - campaigns/P236-two-clock-gem-newton source-provenance strings
+  - campaigns/P236-two-clock-gem-newton/attempts/0003/manifest.yaml
+  - memory/codex/efforts/pr-101-harvest-review.md
+scientific_delta: none
+excluded_unchanged_surfaces:
+  - equations and numerical kernels
+  - measured arrays and summaries
+  - governance/claims.yaml
+  - governance/releases/current.yaml
+  - docs/generated
+commands:
+  - command: git -C <openwave clone> rev-parse 614a223
+    result: 614a223fff01b768550b0917d0f96621d6bbe155
+  - command: >-
+      git -C <openwave clone> cat-file -t
+      614a223fff4ca0fa53a5c4fbc79cc5347a341d69
+    result: fail as expected; invalid object locally and on source remote
+  - command: PYTHONPATH=src python campaigns/P236-two-clock-gem-newton/verify.py
+    result: ALL 29 CHECKS PASS
+  - command: PYTHONPATH=src python scripts/validate_repository.py
+    result: workflow valid; 222 claims; migration queue clear
+  - command: >-
+      memory validate --base "$PWD"
+      "$PWD/memory/codex/efforts/pr-101-harvest-review.md"
+    result: all checks pass
+  - command: git diff --check
+    result: pass
+artifacts:
+  corrected_primary_json_sha256: ad924620c5457a5d0d27787fea979a046e1c6762b573bb22ba638aad0850dfa5
+verdict: provenance_corrected_no_scientific_delta
