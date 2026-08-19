@@ -1,0 +1,53 @@
+campaign: P236
+canonical_issue: "96"
+transaction: PR-101-corrected-evidence
+base_release: v0.163.0
+source_pr_head: 5ba1fe63a0c4e37acb0f3ce2e796f12e64c82ea4
+disposition: correct_then_merge
+target_kind: simulation_evidence
+claim_registry_delta: []
+accepted_claims_consumed:
+  - C-IGR-004
+  - C-GRV-002
+positive_result: >-
+  On the guarded, independently relaxed M5.21.8 shared-rapidity family of
+  two driven M5.8 fixed-clock configurations, the GEM interaction produces
+  an attractive directly differenced force with exponent -2.032 to -2.060
+  on the 24^3 -> 32^3 -> 48^3 growing-box ladder.  A separate fixed-domain
+  grid refinement gives -2.044 to -2.060 and converges in raw coefficient to
+  C=-123.9048.  An independent cylindrical pipeline gives exponent -2.0204
+  and C=-118.3291 (4.50% magnitude difference).
+scope:
+  included:
+    - driven M5.8 fixed-clock source class requested by issue #96
+    - guarded one-parameter shared GEM field relaxation at every row
+    - raw force, box convergence, fixed-domain grid convergence
+    - zero-boost, source-deletion, derivative, and independent-pipeline controls
+    - typed conditional C-IGR-004 / C-GRV-002 coefficient bridge
+  excluded_by_issue:
+    - OpenWave MODELS.md edit
+    - OpenWave pull request
+    - self-sustaining M5.12 soliton class
+governance_reading: >-
+  This is evidence attachment and reusable campaign machinery, not an
+  accepted-claim promotion.  C-IGR-004 explicitly supplies no unique numeric
+  normalization, so Lambda remains a positive symbolic premise.  The
+  measured Z_GEM normalizes the raw Green kernel, and G_total multiplies the
+  resulting unit-source kernel; the independent pipeline checks Z_GEM to
+  4.50% without changing either accepted claim.
+controls:
+  zero_boost: pass_machine_exact
+  source_deletion: pass_force_collapse_16.52_and_exponent_minus_3.087
+  growing_box: pass
+  fixed_domain_grid: pass
+  independent_refute_pipeline: pass_5_of_5
+  derivative_epsilon: pass_below_1ppm
+debt_ledger: []
+terminal_history:
+  attempt_0001: >-
+    Superseded as measurement evidence because its frame, relaxation,
+    observable, exponent oracle, verifier, and numeric coupling dictionary
+    were defective.  Preserved append-only for provenance.
+merge_condition: >-
+  Final correction check and scoped repository validation pass on the exact
+  corrected tree; then merge PR #101 under the user's explicit owner override.

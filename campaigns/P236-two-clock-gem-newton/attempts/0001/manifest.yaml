@@ -1,0 +1,42 @@
+id: attempt-0001
+campaign: P236
+branch: research/p236-two-clock-gem-newton
+base_release: v0.163.0
+source_baseline: substrate-framework@a96399f
+command: >
+  cd <openwave clone>/openwave/xperiments/m5_liquid_crystal/research/scripts &&
+  ln -sfn scripts ../sandbox_v6 && ln -sfn scripts ../sandbox_v8 && ln -sfn scripts ../sandbox_vn &&
+  python3 m5_96_two_clock_gem_newton.py all;
+  cd <substrate-framework> && .venv/bin/python campaigns/P236-two-clock-gem-newton/verify.py
+working_directory: isolated clones (openwave@614a223, substrate-framework@a96399f)
+status: complete
+verdict: measured_attractive_1_over_r2_gem_force_pending_review
+self_adversarial_findings_and_repairs:
+  F1_two_center_frame_blend: >
+    The first two-center texture used a frame BLEND (interpolation of two
+    hedgehog frames). It carried a non-decaying +O(1000) EM artifact and no
+    clean 1/d. REPAIRED by adopting the merged openwave two-charge
+    angle-superposition construction (m5_17_two_charge.py, gate C0) verbatim
+    in the biaxial (1, delta, 0) form.
+  F2_boost_product_wigner_artifact: >
+    Composing the two per-center radial boosts as Q1 Q2 (product form)
+    generated a non-decaying EM artifact (boost-composition rotations).
+    REPAIRED by the additive shared-field form theta(x) = theta_1(r_1) +
+    theta_2(r_2) with the engine's single fixed boost axis (A_BOOST = 2, the
+    seed_M class), which is also the class the issue prescribes.
+  F3_ldg_well_confinement: >
+    Free static relaxation of the boost dressing with the development LdG
+    amplitude well (kappa > 0) collapsed the dressing to the core (an
+    artifact: the well pins the undressed trace). REPAIRED by the kappa = 0
+    engine functional (u + 1.558 u^2, the N-3 record object) with the
+    M5.21.14 constrained-smooth guard (band-limited descent) for the
+    mediation arm.
+  F4_zigzag_channel: >
+    Unconstrained FIRE on the kappa = 0 functional rides the known scale-free
+    oscillatory boost channel (M5.21.14 section 4 / M5.20.3). GUARDED by
+    sigma = 2 px band-limited descent directions and reported via the
+    zigzag amplitude and forward/central monitors.
+  F5_fit_window: >
+    Including separations out to 2(L - 4h) degraded the fit (box-edge
+    contamination). REPAIRED by the mid-range window [4.1, 0.9 L] with a
+    disclosed small-box extension to four points at 24^3.

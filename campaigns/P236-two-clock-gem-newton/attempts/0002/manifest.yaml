@@ -1,0 +1,35 @@
+id: attempt-0002
+campaign: P236
+canonical_issue: "96"
+base_pr_head: 5ba1fe63a0c4e37acb0f3ce2e796f12e64c82ea4
+status: corrected_validated_pending_merge
+objective: >-
+  Repair PR #101 without reducing issue #96: correct the field frame,
+  relaxation, interaction observable, force oracle, convergence axes,
+  mutation, independent audit, and #89 coefficient bridge.
+preserved_history:
+  - attempts/0001/manifest.yaml
+  - git commit 5ba1fe63a0c4e37acb0f3ce2e796f12e64c82ea4
+rejected_routes:
+  - non-orthogonal submitted O4 frame
+  - forced-fit residual exponent
+  - summed two-tail field with 2a ambient rapidity
+  - unrestricted full-field descent into the M5.21.14 UV channel
+  - global Gauss quadrature without source/core panels
+selected_route: >-
+  Orthogonal M5.17 frame; one guarded shared M5.21.8 rapidity minimized on
+  every measurement lattice; pointwise common-mask subtraction; composite
+  Gauss tensor quadrature; direct force differences.
+headline_results:
+  box_force_exponents: [-2.0319783141, -2.0436125852, -2.0601830017]
+  box_C: [-123.0796065483, -124.9992835635, -123.9048062616]
+  fixed_domain_force_exponents: [-2.0440271360, -2.0466141207, -2.0601830017]
+  fixed_domain_C: [-118.3185641821, -123.8230974171, -123.9048062616]
+  independent_force_exponent: -2.0203674717
+  independent_C: -118.3291126263
+  zero_boost_GEM: 0.0
+  deleted_source_peak_force_collapse: 16.5221467688
+  deleted_source_force_exponent: -3.0866964829
+claims_changed: []
+open_obligations_inside_scope: []
+validation_receipt: attempts/0002/validation-receipt.yaml (added after the content commit; receipt-only metadata does not stale the oracle)
