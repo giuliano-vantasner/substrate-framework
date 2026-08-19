@@ -2,8 +2,8 @@
 
 Campaign P236 · canonical issue #96 · corrected PR #101 transaction · public
 engine `openwave-labs/openwave@614a223fff4ca0fa53a5c4fbc79cc5347a341d69`.
-The drop-in driver uses canonical `sandbox_v8`/`sandbox_vn` imports. DCO:
-`Signed-off-by: Dan <dan@localhost>`.
+The drop-in driver uses canonical `sandbox_v8`/`sandbox_vn` imports. Every PR
+commit carries its author's DCO `Signed-off-by` trailer.
 
 ## Result
 
