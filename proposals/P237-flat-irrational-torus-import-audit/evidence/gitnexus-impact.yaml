@@ -1,0 +1,28 @@
+pre_change:
+  target: isotropic_continuum_mode_count
+  reason: nearest existing public leaf API used as the additive-module pattern
+  direct_dependents: 0
+  processes_affected: 0
+  modules_affected: 0
+  risk: LOW
+post_change:
+  scope: all worktree changes with intent-to-add entries visible to git diff
+  changed_files: 8
+  indexed_changed_symbols:
+    - src/substrate_framework/__init__.py::__all__
+  affected_symbols: 0
+  affected_processes: []
+  risk: low
+graph_limit: >-
+  The index predates the new untracked symbols, so it can classify the public
+  export edit but cannot infer callers for definitions that did not exist at
+  index time. Direct repository search found no pre-existing flat_torus import
+  or matching API; focused import and package tests cover the new leaf.
+process_inventory:
+  - Run to Check
+impact_boundary:
+  - src/substrate_framework/flat_torus.py
+  - src/substrate_framework/__init__.py public imports
+  - tests/test_flat_torus.py
+  - tests/test_mode_counting.py as the adjacent continuum/discrete distinction
+  - tests/test_twisted_casimir.py as the adjacent T2 twist/Epstein surface

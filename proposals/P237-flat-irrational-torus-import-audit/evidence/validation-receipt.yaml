@@ -1,0 +1,41 @@
+receipt:
+  recorded_at: '2026-08-19T15:34:19+02:00'
+  base_commit: 56f10e18848331f1ab57e97c4ec4a358f5124cc7
+  frozen_tree: ee288685993e573f79972dca6c387a7a614a9ec7
+  impact_surface:
+    - src/substrate_framework/flat_torus.py
+    - src/substrate_framework/__init__.py
+    - tests/test_flat_torus.py
+    - tests/test_mode_counting.py
+    - tests/test_twisted_casimir.py
+    - proposals/P237-flat-irrational-torus-import-audit
+    - memory/codex/efforts/P237-flat-irrational-torus-import-audit.md
+  preflight:
+    gitnexus_risk: low
+    affected_processes: []
+  command: >-
+    PYTHON=/repository-managed/.venv/bin/python scripts/validate.sh
+    --pytest-scope tests/test_flat_torus.py tests/test_mode_counting.py
+    tests/test_twisted_casimir.py
+  result:
+    exit_code: 0
+    repository_validator: >-
+      WORKFLOW VALID: 222 claims, 222 accepted, 3 proposals, 3 skills;
+      MIGRATION QUEUE: 218 units, 0 pending, 0 partial
+    file_validation: 962 files valid
+    pytest: 60 passed in 10.50s
+    terminal: ALL FIXED REPOSITORY CHECKS AND REQUESTED PYTEST SCOPE PASS
+  focused_oracle:
+    command: >-
+      PYTHONPATH=src /repository-managed/.venv/bin/python -m pytest
+      tests/test_flat_torus.py -q
+    result: 21 passed
+    coverage: >-
+      exact periodic and fixed-twist spectra, exact degeneracies, load-bearing
+      side mutation, complete strict translation cutoffs, sign-pair quotient,
+      matched-circle tangency and radii, Epstein scale mutation, refinement,
+      and invalid domains
+  note: >-
+    This is the single content-addressed receipt for the frozen scientific and
+    implementation boundary. The receipt itself and final PR/issue metadata do
+    not change the tested APIs or oracles.

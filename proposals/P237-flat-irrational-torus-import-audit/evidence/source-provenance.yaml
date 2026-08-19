@@ -1,0 +1,37 @@
+source:
+  repository: https://github.com/Viktar-Pi/FlatIrrationalTorus
+  commit: ba487f6361f1f8740a4fe518bf86584847ab518b
+  authored_at: '2026-05-25T11:19:36+03:00'
+  license: MIT
+  license_sha256: fb722840f055bda57e81f1f19846b29f4c1942225a79f55f11d533dc06a49e79
+  files:
+    README.md: 53595a5f7ab7eb3a44680c5d8d02d14a4d02a11f448b9bd0f2c822670d1ef463
+    Master_Verification_Engine_Final.py: a469593f35a58cedfa26fc958acee7c6aeeccba84c9570875ab85abed51fa820
+    verify_results.py: 8cc413d1859da25023354a40b1a0f852da16ad5cc178fb971cd5c0bc60950548
+    run_all.py: 5e5a9e5b41dbf9d5ae1f50a6e873e88ad8f9c2a197b5ad8a5e7b73df2663267e
+    requirements.txt: 43aab5ab033cf9034e3eff26edf6dd0cf08b932c818a84fb64a912f4793a088c
+    geometry/spectral_gap_calculator.py: 604bc3f0acef1f51adcc38b6b96169191105e8f50a06cfaf87097e2101f2f8ac
+    scripts/b_modes_IT3.py: 22ace5261452a0377190da867230b366615bbf974e209b04c78a5aab22c8a4b8
+    scripts/biposh_full.py: bdebb254fdf85f296dc9dae47f68ed4b236ba0c85c80479d70e09942b1dc0974
+    scripts/biposh_minimal.py: 07adb684ddfc740430def63663bf618c9861d75cf1bc87dcbb7a0459bc5687e2
+    scripts/circles_minimal.py: 213b60ac22199ce82725c292176a53808129832b0582d65f60a98f047c2778ea
+    scripts/cold_spot_interference.py: af4e3dba5808ee2c69544fda717cf977850ced4ede0ca4dc2e8e0cd448a2bfaa
+    scripts/hubble_tension_torus.py: 87d48433db0ea06fbd0c42b62c8a7bce6047799c92d6b2e2a381276b81231c2b
+    scripts/run_all_tests.py: 9d33cf6654f38581e0522644a9abd2e05909b2786ef6c4d8301576261a23f69f
+    analysis/class_wrapper.py: 3ceacce3f6b9d60ebfb6057ce0bbe5ac798e7c6271a6fcb34298969600e281c6
+    analysis/likelihood.py: 0fc9c8348e5cf35456d79bbb7d41f3cc62bcff95a8cbbc92a52c4beaba1bac27
+    analysis/mcmc_run.py: 6a9915ce425992f8e5087974d86ea1edbb13a659b94cba6ed8647c81e84f0445
+paper:
+  record: https://zenodo.org/records/19599505
+  file: https://zenodo.org/records/19599505/files/Paper_4.pdf?download=1
+  title: >-
+    Comprehensive Analytical Guide to the IT3 Master Verification Engine
+    v13.0: A Zero-Parameter Geometric Falsification of LambdaCDM
+  dated: '2026-04-15'
+  pages: 3
+  sha256: 5624a9978b1be2405e58ad119fdedbbe6bd9fa7836fd365dbee7a7f53b5663c6
+scope_note: >-
+  The current README identifies the v13 master engine and Paper 4 as the
+  complete current verification surface. Historical versioned directories
+  were consulted where the current engine replaced a calculation by a literal
+  status, but they are not treated as additional current proofs.
