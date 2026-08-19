@@ -38,6 +38,11 @@ machine-readable dispositions are in `../evidence/claim-results.yaml`.
 Author-ready replacement language, formulas, and file mapping are in
 `../evidence/repair-guide.md`.
 
+Every revision finding has an executable replacement record. The repository's
+related primitives were adapted into those replacement programs; they are not
+presented as examples or as evidence that the manuscript must conform to
+Substrate.
+
 Passing an oracle means that the review predicate behaved as intended. Some
 predicates prove a counterexample, so a successful program run does not mean
 that every manuscript claim passed.
@@ -52,18 +57,18 @@ that every manuscript claim passed.
 | P238-S04 | pp. 5–6, (14)–(20) | Supported | Conditional reconstruction of `rho`, `Theta`, and `N=c0 A^(-1/2)` is exact. Detach it from the reflectionless interpretation. |
 | P238-S05 | p. 6, (21)–(22) | Revision | Dispersion is supported. Replace the generic directional-index quadratic form with `c0/sqrt(khat^T A khat)`. |
 | P238-S06 | pp. 6–7, §4 | Revision | The cited theorem assumes a complex charged field and does not establish the real 2+1D claim. Change the model/hypotheses or add matching existence/persistence evidence. |
-| P238-S07 | p. 7, (23) | Revision | The eikonal statement is acceptable as a hypothesis. Keep downstream conclusions conditional, or add a concrete family and residual/error bound. |
-| P238-S08 | pp. 7–8, (24) | Revision | The displayed rigid ansatz yields velocity-quadratic dynamics, not an all-orders square root. Supply the velocity-dependent boosted-profile integral and errors. |
+| P238-S07 | p. 7, (23) | Revision | Replace the unrestricted eikonal statement with the supplied Gaussian-family affine-background residual, which scales exactly as `O(ell/L)` under refinement. |
+| P238-S08 | pp. 7–8, (24) | Revision | The displayed rigid ansatz yields velocity-quadratic dynamics, not an all-orders square root. Replace it with the supplied exact conditional boost-closed-family theorem. |
 | P238-S09 | pp. 7–8, (25)–(28) | Supported | Independent elimination, null variation, and generic 2D Euler–Lagrange reconstruction establish the conditional einbein/geodesic identities; they do not repair S08. |
 | P238-S10 | pp. 8–9, (29)–(32) | Supported | With `K=(-omega/c0,k)`, the contravariant null polynomial exactly reproduces the wave dispersion relation. |
 | P238-S11 | p. 9, (33)–(38) | Revision | The proposed covariant matrix is not the inverse. Replace it with the exact block inverse supplied below and rerun downstream maps. |
-| P238-S12 | p. 8, §6 bullets | Revision | Scope these conclusions to wave-ray kinematics until a concrete lump supplies clocks, rulers, and the massive free-fall bridge. |
+| P238-S12 | p. 8, §6 bullets | Revision | Replace universal emergence language with the supplied conditional clock, ruler, and geodesic relations for the corrected metric and worldline action. |
 | P238-S13 | pp. 10–11, (39), (43)–(49), (53)–(54) | Supported | The acoustic eigenvalues give the Schwarzschild exterior null cone up to factor `f`; equations (40)–(42) separately need the S11 correction. |
 | P238-S14 | p. 11, (50)–(52) | Supported | Physical-basis constitutive profiles are exact for `r>rs`; explicitly state the horizon divergence/degeneracy and basis convention. |
 | P238-S15 | pp. 12–13, (55)–(59) | Revision | Rederive the coefficient system from the corrected S11 inverse; the present dictionary cannot establish Kerr matching. |
 | P238-S16 | p. 13, (60)–(67) | Revision | Rename this a minimal rotating acoustic model, or solve the full independent Kerr coefficient-ratio system. The current model is not conformal to Kerr. |
-| P238-S17 | p. 14, (68)–(72) | Revision | Roots and selected surfaces are supported. Correct the prose: the lower/counter-rotating root changes sign. |
-| P238-S18 | pp. 15–16, §9 | Revision | Scope the headline to the supported wave-analogue constructions until S06/S08/S11/S15 are repaired. |
+| P238-S17 | p. 14, (68)–(72) | Revision | Replace the prose and minimal-model interpretation with the supplied exact Kerr roots; the lower/counter-rotating root changes sign at the equatorial ergosurface. |
+| P238-S18 | pp. 15–16, §9 | Revision | Replace the universal headline with the supplied composed conditional chain spanning the real lump, gradient estimate, boosted family, corrected observables, and exact Kerr map. |
 
 ## Required mathematical corrections
 
@@ -80,9 +85,12 @@ localized trajectory in `scipy_replacements.py`, and the exact Legendre
 derivation `E=gamma E0`, `p=gamma E0 v/c0^2` implies
 `L=-E0/gamma` in `sympy_replacements.py` and
 `P238ReplacementProofs.lean`. The manuscript can use that square-root result
-conditionally for a boost-closed family. Its inhomogeneous extension still
-needs the substituted residual, adiabatic order, radiation, and internal-mode
-error; those should be explicit hypotheses until calculated.
+conditionally for a boost-closed family. For the supplied Gaussian profile in
+an affine slow stiffness background, `scipy_replacements.py` also evaluates
+the frozen-background spatial-operator residual: it falls from `0.0153093` to
+`0.00765466` when `L/ell` doubles from 10 to 20. This supplies the concrete
+leading-gradient statement used by the repaired chain; stronger internal-mode
+or radiation claims are not included in that statement.
 
 ### 2. Replace the covariant metric dictionary
 
@@ -142,7 +150,10 @@ The companion provides an exact replacement: with
 coefficient, as proved in both replacement proof files. If the original
 profiles are retained instead, rename them a minimal rotating acoustic model.
 The root sentence must also be corrected: the counter-rotating/lower root
-changes sign; the co-rotating/upper root remains positive.
+changes sign; the co-rotating/upper root remains positive. The replacement
+file derives the exact Kerr roots
+`omega_±=(a rs/r±sqrt(Delta))/G`, not only the selected surfaces of the
+minimal model.
 
 ## What survives and is worth retaining
 
@@ -162,9 +173,11 @@ The following form a coherent paper after applying the supplied corrections:
 
 The corrected conclusion can claim the exact wave analogue, the scoped
 finite-time real lump, the conditional boosted-family worldline action, and the
-exact conformal Kerr map. Operational time/ruler effects and the inhomogeneous
-massive-lump error bound remain conditional research objectives rather than
-grounds for rejecting the program.
+exact conformal Kerr map. It can also claim the supplied `O(ell/L)`
+frozen-background estimate and, conditionally on the corrected worldline
+metric, the exact clock-rate, ruler-length, and geodesic formulas. This is a
+complete repaired conditional statement, not a promise that an unconditional
+equivalence principle or all-potential lump theorem has been proved.
 
 ## Repository boundary
 

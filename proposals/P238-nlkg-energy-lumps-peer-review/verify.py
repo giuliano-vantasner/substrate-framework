@@ -19,6 +19,21 @@ EXPECTED_ISSUES = {
     for index in range(1, 19)
 }
 REVIEW_OUTCOMES = {"supported", "revision_required"}
+REVISION_IDS = {
+    "P238-S01",
+    "P238-S02",
+    "P238-S03",
+    "P238-S05",
+    "P238-S06",
+    "P238-S07",
+    "P238-S08",
+    "P238-S11",
+    "P238-S12",
+    "P238-S15",
+    "P238-S16",
+    "P238-S17",
+    "P238-S18",
+}
 
 
 def run_json(path: Path) -> dict[str, object]:
@@ -35,6 +50,9 @@ def run_json(path: Path) -> dict[str, object]:
 def main() -> int:
     inventory = yaml.safe_load((HERE / "evidence" / "claim-inventory.yaml").read_text())
     results = yaml.safe_load((HERE / "evidence" / "claim-results.yaml").read_text())
+    reuse_audit = yaml.safe_load(
+        (HERE / "evidence" / "solution-reuse-audit.yaml").read_text()
+    )
 
     inventory_ids = {item["id"] for item in inventory["claims"]}
     result_items = results["claims"]
@@ -57,6 +75,19 @@ def main() -> int:
     scipy_result = run_json(HERE / "companion" / "scipy_checks.py")
     sympy_replacements = run_json(HERE / "companion" / "sympy_replacements.py")
     scipy_replacement = run_json(HERE / "companion" / "scipy_replacements.py")
+    replacement_claim_ids = {
+        claim_id
+        for replacement in sympy_replacements["replacements"]
+        for claim_id in replacement["claims"].split()
+    }
+    replacement_claim_ids.update(
+        scipy_claim_id for scipy_claim_id in scipy_replacement["claims"].split()
+    )
+    reused_solution_claim_ids = {
+        claim_id
+        for replacement in reuse_audit["replacement_claims"]
+        for claim_id in replacement["claims"]
+    }
     lean_files = [
         HERE / "companion" / "P238PaperChecks.lean",
         HERE / "companion" / "P238ReplacementProofs.lean",
@@ -84,6 +115,13 @@ def main() -> int:
             item["passed"] for item in sympy_replacements["replacements"]
         ),
         "scipy_replacement": scipy_replacement["passed"],
+        "revision_replacement_coverage": replacement_claim_ids == REVISION_IDS,
+        "repository_solution_reuse_coverage": (
+            reused_solution_claim_ids == REVISION_IDS
+            and reuse_audit.get("scientific_role", "").startswith(
+                "Implementation source only."
+            )
+        ),
         "lean": all(result.returncode == 0 for result in lean_results),
     }
     report = {
@@ -94,7 +132,7 @@ def main() -> int:
             "scipy": len(scipy_result["checks"]),
             "lean_theorems": 11,
             "sympy_replacements": len(sympy_replacements["replacements"]),
-            "scipy_replacements": 1,
+            "scipy_replacements": 2,
             "lean_replacement_theorems": 9,
         },
         "claim_counts": counts,

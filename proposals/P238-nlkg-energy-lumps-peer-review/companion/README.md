@@ -10,7 +10,8 @@ printed outputs. The replacement programs go further: they supply corrected
 derivations or a scoped numerical claim that preserves the paper's intended
 wave/lump-to-effective-geometry program. Claim assessments and author-ready
 replacement language live in `../evidence/claim-results.yaml` and
-`../evidence/repair-guide.md`.
+`../evidence/repair-guide.md`. The exact repository-primitive transformation
+map is `../evidence/solution-reuse-audit.yaml`.
 
 ## Python oracles
 
@@ -52,7 +53,9 @@ to a standalone repository. Run `lake update && lake build` there.
 The corpus retains positive identities, exact qualifications, counterexamples,
 numerical sign/domain probes, and constructive replacements for P238-S01
 through P238-S18. In particular, the replacement files provide the corrected
-linearized operator, directional impedance/index, boosted-family square-root
-derivation, anisotropic inverse, exact conformal equatorial Kerr map, and a
-finite-time real 2+1D localized sine-Gordon trajectory. Literature and language
-conclusions remain explicit prose rather than counterfeit numerical proofs.
+scoped action, linearized operator, directional impedance/index, finite-time
+real 2+1D localized sine-Gordon trajectory, explicit `O(ell/L)` gradient
+estimate, boosted-family square-root derivation, operational clock/ruler
+relations, anisotropic inverse, exact conformal equatorial Kerr map and null
+roots, and the composed conditional headline. Literature conclusions remain
+explicit prose rather than counterfeit numerical proofs.

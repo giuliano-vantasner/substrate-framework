@@ -1,0 +1,86 @@
+schema_version: 1
+campaign: P238
+purpose: >-
+  Record how repository primitives were transformed into the portable
+  replacement SymPy, SciPy, and Lean solutions requested for the manuscript.
+scientific_role: >-
+  Implementation source only. These repository artifacts are not premises,
+  comparators, or acceptance criteria for the manuscript's claims.
+portability: >-
+  The replacement files intentionally do not import substrate_framework. They
+  restate the adapted equations and algorithms in the paper's variables so the
+  complete companion subtree can move to an author-owned repository.
+replacement_claims:
+  - claims: [P238-S01, P238-S02]
+    sources:
+      - src/substrate_framework/covariant_sine_gordon_action.py
+    transferred_solution: exact action expansion, Euler-Lagrange reconstruction, and potential-curvature linearization
+    modification: reduced to the paper's 2+1 anisotropic-flow variables and scoped to its declared model class
+    destination: companion/sympy_replacements.py
+  - claims: [P238-S03]
+    sources:
+      - src/substrate_framework/boundary_scattering.py
+    transferred_solution: exact impedance reflection coefficient and zero-reflection condition
+    modification: replaced the half-line scalar impedance by the paper's interface-normal anisotropic impedance
+    destination: companion/sympy_replacements.py
+  - claims: [P238-S05]
+    sources:
+      - src/substrate_framework/gordon_metric.py
+      - src/substrate_framework/substrate_metric.py
+    transferred_solution: refractive index as inverse rest-frame phase speed with explicit convention control
+    modification: generalized the scalar index to the paper's anisotropic slowness surface using its SPD tensor A
+    destination: companion/sympy_replacements.py
+  - claims: [P238-S06, P238-S07]
+    sources:
+      - src/substrate_framework/radial_sine_gordon.py
+      - src/substrate_framework/radial_harmonic_balance.py
+      - campaigns/P044-p3d1-radial-sine-gordon-oscillon/verify.py
+    transferred_solution: regular-origin radial evolution, leapfrog/method-of-lines cross-check, energy localization, and refinement pattern
+    modification: changed the radial coefficient and energy measure from 3+1 to 2+1, added a standalone DOP853 route, and added an affine-background O(ell/L) residual calculation
+    destination: companion/scipy_replacements.py
+  - claims: [P238-S08]
+    sources:
+      - src/substrate_framework/sine_gordon.py
+      - campaigns/P132-t2a-boosted-stress-source-audit/proposal.yaml
+    transferred_solution: Lorentz-boosted localized-family energy and momentum transformation
+    modification: generalized the exact breather shape to an explicit boost-closed-family hypothesis, restored c0, and derived the worldline Lagrangian by Legendre transform
+    destination:
+      - companion/sympy_replacements.py
+      - companion/P238ReplacementProofs.lean
+  - claims: [P238-S11]
+    sources:
+      - src/substrate_framework/pseudo_riemannian.py
+      - src/substrate_framework/substrate_metric.py
+      - src/substrate_framework/gordon_metric.py
+    transferred_solution: exact metric inversion with sign and convention audits
+    modification: solved the paper's full 2+1 anisotropic block inverse with N squared and dimensionless flow v=V/c0
+    destination:
+      - companion/sympy_replacements.py
+      - companion/P238ReplacementProofs.lean
+  - claims: [P238-S12]
+    sources:
+      - src/substrate_framework/relativistic_particle.py
+      - campaigns/P227-einbein-worldline-harvest/verify.py
+      - src/substrate_framework/substrate_metric.py
+    transferred_solution: conditional worldline action, geodesic variation, and exact metric normalization
+    modification: specialized the corrected static anisotropic metric to explicit timelike clock-rate and proper-ruler observables
+    destination: companion/sympy_replacements.py
+  - claims: [P238-S15, P238-S16, P238-S17]
+    sources:
+      - src/substrate_framework/gordon_metric.py
+      - src/substrate_framework/substrate_metric.py
+      - src/substrate_framework/pseudo_riemannian.py
+    transferred_solution: exact effective-metric block construction, inversion, null-root extraction, and coefficient residual checks
+    modification: solved the independent equatorial Kerr coefficients for Delta, G, conformal factor, spatial metric, azimuthal shift, constitutive profiles, and causal roots
+    destination:
+      - companion/sympy_replacements.py
+      - companion/P238ReplacementProofs.lean
+  - claims: [P238-S18]
+    sources:
+      - all preceding replacement mappings
+    transferred_solution: composition of independently checked local primitives
+    modification: replaced the universal emergence headline by the complete conditional analogue-kinematics chain actually established by the replacement files
+    destination:
+      - companion/sympy_replacements.py
+      - companion/scipy_replacements.py
+      - companion/P238ReplacementProofs.lean

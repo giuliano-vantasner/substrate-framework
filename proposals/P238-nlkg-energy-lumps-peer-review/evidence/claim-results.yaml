@@ -5,8 +5,9 @@ review_scope: manuscript_internal_peer_review
 novelty_role: not_a_criterion
 replacement_policy: >-
   When a claim needs revision, preserve its intended purpose where possible by
-  supplying replacement language, mathematics, or executable SymPy, Lean, or
-  SciPy evidence rather than treating the finding as a framework gate.
+  supplying executable replacement SymPy, Lean, or SciPy together with the
+  minimum truthful language or formula change, rather than treating the
+  finding as a framework gate or leaving a prose-only repair.
 canonical_issue: https://github.com/vantasnerdan/substrate-framework/issues/108
 pull_request: https://github.com/vantasnerdan/substrate-framework/pull/145
 repair_guide: evidence/repair-guide.md
@@ -16,9 +17,9 @@ meaning_of_supported: >-
   own definitions, equations, assumptions, and cited dependencies under its
   stated oracle. Repository claims are not comparators.
 meaning_of_resolved: >-
-  The review unit has a complete evidence-backed assessment and a concrete
-  revision path. It does not mean the research direction is gated or
-  permanently closed.
+  The review unit has a complete evidence-backed assessment and an executable
+  replacement for the repaired statement. It does not mean the research
+  direction is gated or permanently closed.
 counts:
   total: 18
   supported: 5
@@ -36,8 +37,8 @@ claims:
       The action is one valid first-derivative quadratic scalar model, not the
       most general scalar continuum action without additional symmetry,
       locality, derivative-order, and coupling assumptions.
-    correction: Replace "most general" with a scoped modelling ansatz and list the excluded couplings.
-    evidence: [companion/sympy_checks.py, companion/P238PaperChecks.lean, evidence/repair-guide.md]
+    correction: Replace "most general" with the supplied scoped modelling ansatz and exact material-derivative expansion.
+    evidence: [companion/sympy_checks.py, companion/sympy_replacements.py, companion/P238PaperChecks.lean, evidence/repair-guide.md]
   - id: P238-S02
     issue: https://github.com/vantasnerdan/substrate-framework/issues/110
     disposition: revision_required
@@ -107,10 +108,10 @@ claims:
     resolved: true
     finding: >-
       Scale separation is a legitimate declared hypothesis, not a validated
-      conclusion. Without a concrete localized family, residual estimate,
-      internal-mode treatment, and gradient-error bound it cannot carry the
-      later particle claims.
-    correction: Keep the eikonal statement explicitly hypothetical until those quantities are supplied.
+      conclusion. The supplied Gaussian-family replacement now evaluates the
+      exact frozen-background spatial-operator residual in an affine stiffness
+      background and demonstrates the expected O(ell/L) refinement law.
+    correction: Replace the unrestricted statement by the supplied concrete leading-gradient estimate and keep applications beyond that estimate conditional on their stated hypotheses.
     evidence: [evidence/literature-audit.md, companion/scipy_replacements.py, evidence/repair-guide.md]
   - id: P238-S08
     issue: https://github.com/vantasnerdan/substrate-framework/issues/116
@@ -124,7 +125,7 @@ claims:
       The cited 1+1D baseline instead assumes a velocity-dependent boosted
       breather and omits the decisive integral; the current draft explicitly
       defers its concrete profile calculation.
-    correction: Derive the effective action from an explicit velocity-dependent localized family, including the spatial integral, approximation order, and radiation/internal-mode error.
+    correction: Replace the rigid-profile inference by the supplied exact conditional theorem for a boost-closed localized family with Lorentz-covariant energy and momentum.
     evidence: [evidence/literature-audit.md, companion/sympy_checks.py, companion/P238PaperChecks.lean, companion/sympy_replacements.py, companion/P238ReplacementProofs.lean, evidence/repair-guide.md]
   - id: P238-S09
     issue: https://github.com/vantasnerdan/substrate-framework/issues/117
@@ -166,14 +167,15 @@ claims:
   - id: P238-S12
     issue: https://github.com/vantasnerdan/substrate-framework/issues/120
     disposition: revision_required
-    repair_class: language_scope_pending_dependencies
+    repair_class: conditional_observable_derivation
     resolved: true
     finding: >-
       Time dilation, anisotropic ruler contraction, massive-lump free fall, and
       gravito-inertial equivalence do not follow from a principal-symbol null
-      cone. Their load-bearing existence, collective-coordinate, metric-inverse,
-      and operational-observable dependencies require correction or remain hypothetical.
-    correction: State these conclusions conditionally on the supplied boosted-family replacement, the corrected metric, and a future inhomogeneous residual/observable calculation.
+      cone alone. The supplied replacement derives exact clock-rate and
+      proper-ruler relations from the corrected static metric and combines
+      them with the conditional boosted-family worldline/geodesic result.
+    correction: Replace the universal emergence language by the supplied conditional metric clock, ruler, and geodesic statement; do not infer a universal equivalence principle from the wave cone alone.
     evidence: [companion/sympy_replacements.py, companion/P238ReplacementProofs.lean, evidence/repair-guide.md]
   - id: P238-S13
     issue: https://github.com/vantasnerdan/substrate-framework/issues/121
@@ -233,11 +235,11 @@ claims:
       interpretation: the lower/counter-rotating root becomes positive inside
       the ergoregion, while the upper/co-rotating root stays positive.
     correction: Reverse that sentence and describe the result as the causal structure of the minimal model, not proof of full Kerr frame dragging.
-    evidence: [companion/sympy_checks.py, companion/scipy_checks.py, evidence/repair-guide.md]
+    evidence: [companion/sympy_checks.py, companion/scipy_checks.py, companion/sympy_replacements.py, evidence/repair-guide.md]
   - id: P238-S18
     issue: https://github.com/vantasnerdan/substrate-framework/issues/126
     disposition: revision_required
-    repair_class: headline_scope_pending_dependencies
+    repair_class: composed_conditional_replacement
     resolved: true
     finding: >-
       The chain is not fully explicit: the cited existence theorem does not
@@ -247,5 +249,5 @@ claims:
       intended analogue-kinematics program, but the current draft does not yet
       establish massive-particle SR, GR, or the equivalence principle from the
       stated substrate.
-    correction: Use the repaired wave, real-lump, boosted-family, inverse, and exact-Kerr results, while keeping the inhomogeneous massive-lump error/observable bridge explicitly conditional.
+    correction: Replace the universal headline by the supplied self-contained conditional analogue-kinematics chain, which composes the real-lump, O(ell/L), boosted-family, inverse, observable, and exact-Kerr replacements without claiming all-potential existence or an unconditional equivalence principle.
     evidence: [companion/sympy_replacements.py, companion/scipy_replacements.py, companion/P238ReplacementProofs.lean, evidence/repair-guide.md]

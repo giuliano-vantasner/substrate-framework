@@ -30,9 +30,11 @@ class Evolution:
 
 @dataclass(frozen=True)
 class ReplacementResult:
-    claim: str
+    claims: str
     revised_claim: str
     passed: bool
+    lump_localization_passed: bool
+    adiabatic_gradient_passed: bool
     leapfrog_late_core_fraction: float
     mol_late_core_fraction: float
     refined_late_core_fraction: float
@@ -41,7 +43,47 @@ class ReplacementResult:
     mol_energy_drift: float
     center_relative_rms: float
     core_relative_max: float
+    adiabatic_relative_residual: float
+    adiabatic_refined_relative_residual: float
+    adiabatic_refinement_ratio: float
     parameters: dict[str, float]
+
+
+def affine_background_residual_ratio(
+    *, profile_width: float, background_scale: float, contrast: float = 0.25
+) -> float:
+    """Relative L2 residual from freezing a slow affine stiffness at the lump center.
+
+    For ``u=A exp(-(x^2+y^2)/ell^2)`` and
+    ``a(x)=1+contrast*x/L``, evaluate
+    ``div(a grad u)-a(0) Laplacian(u)`` exactly on a resolved grid.  The
+    residual is linear in ``ell/L`` and supplies a concrete leading-gradient
+    error estimate for the declared Gaussian localized family.
+    """
+
+    spacing = profile_width / 30.0
+    extent = 6.0 * profile_width
+    coordinate = np.arange(-extent, extent + 0.5 * spacing, spacing)
+    x_coordinate, y_coordinate = np.meshgrid(
+        coordinate, coordinate, indexing="ij"
+    )
+    radius_squared = x_coordinate**2 + y_coordinate**2
+    profile = np.exp(-radius_squared / profile_width**2)
+    derivative_x = -2.0 * x_coordinate * profile / profile_width**2
+    laplacian = (
+        4.0 * radius_squared / profile_width**4
+        - 4.0 / profile_width**2
+    ) * profile
+    residual = contrast / background_scale * (
+        x_coordinate * laplacian + derivative_x
+    )
+
+    def l2_norm(values: FloatArray) -> float:
+        squared = np.square(values)
+        integrated_y = np.trapezoid(squared, coordinate, axis=1)
+        return float(np.sqrt(np.trapezoid(integrated_y, coordinate)))
+
+    return l2_norm(residual) / l2_norm(laplacian)
 
 
 def radial_laplacian_2d(field: FloatArray, spacing: float) -> FloatArray:
@@ -266,7 +308,7 @@ def run() -> ReplacementResult:
         np.max(np.abs(leapfrog_core - mol.core_energy))
         / np.mean(mol.core_energy)
     )
-    passed = bool(
+    lump_localization_passed = bool(
         leapfrog_fraction > 0.75
         and mol_fraction > 0.75
         and refined_fraction > 0.75
@@ -276,14 +318,35 @@ def run() -> ReplacementResult:
         and center_rms < 0.03
         and core_relative_max < 0.01
     )
+    adiabatic_relative_residual = affine_background_residual_ratio(
+        profile_width=parameters["width"],
+        background_scale=10.0 * parameters["width"],
+    )
+    adiabatic_refined_relative_residual = affine_background_residual_ratio(
+        profile_width=parameters["width"],
+        background_scale=20.0 * parameters["width"],
+    )
+    adiabatic_refinement_ratio = (
+        adiabatic_refined_relative_residual / adiabatic_relative_residual
+    )
+    adiabatic_gradient_passed = bool(
+        adiabatic_relative_residual < 0.05
+        and abs(adiabatic_refinement_ratio - 0.5) < 1.0e-12
+    )
+    passed = lump_localization_passed and adiabatic_gradient_passed
     return ReplacementResult(
-        claim="P238-S06",
+        claims="P238-S06 P238-S07",
         revised_claim=(
             "For U(u)=1-cos(u) and the declared Gaussian initial data, the "
             "real radial 2+1D NLKG has a finite-time localized trajectory "
-            "through t=30, reproduced by leapfrog and SciPy DOP853."
+            "through t=30, reproduced by leapfrog and SciPy DOP853.  For the "
+            "same Gaussian profile in an affine stiffness background, the "
+            "frozen-background spatial-operator residual is explicitly "
+            "O(ell/L) under scale refinement."
         ),
         passed=passed,
+        lump_localization_passed=lump_localization_passed,
+        adiabatic_gradient_passed=adiabatic_gradient_passed,
         leapfrog_late_core_fraction=leapfrog_fraction,
         mol_late_core_fraction=mol_fraction,
         refined_late_core_fraction=refined_fraction,
@@ -292,6 +355,9 @@ def run() -> ReplacementResult:
         mol_energy_drift=mol_drift,
         center_relative_rms=center_rms,
         core_relative_max=core_relative_max,
+        adiabatic_relative_residual=adiabatic_relative_residual,
+        adiabatic_refined_relative_residual=adiabatic_refined_relative_residual,
+        adiabatic_refinement_ratio=adiabatic_refinement_ratio,
         parameters=parameters,
     )
 

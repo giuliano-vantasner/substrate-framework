@@ -43,6 +43,28 @@ def run() -> list[Replacement]:
             Replacement(claims, name, bool(passed), revised_claim, str(detail))
         )
 
+    # S01: make the model class explicit and prove the advertised expansion
+    # inside that class.  The construction no longer claims uniqueness among
+    # actions with higher derivatives, parity-odd terms, or derivative/potential
+    # cross-couplings.
+    time_derivative, flow_derivative = sp.symbols(
+        "time_derivative flow_derivative", real=True
+    )
+    material_derivative = time_derivative + flow_derivative
+    scoped_kinetic = sp.expand(material_derivative**2)
+    scoped_expansion = (
+        time_derivative**2
+        + 2 * time_derivative * flow_derivative
+        + flow_derivative**2
+    )
+    record(
+        "P238-S01",
+        "scoped material-derivative action",
+        _zero(scoped_kinetic - scoped_expansion),
+        "Within local, first-derivative, quadratic, time-reversal-even real-scalar models whose prescribed flow enters only through D_t u=partial_t u+V dot grad(u), the displayed kinetic action expands exactly as stated.",
+        scoped_kinetic,
+    )
+
     # S02: retain the potential curvature in the full constant-background
     # linearization and reserve "convective wave operator" for its principal
     # part.
@@ -129,6 +151,40 @@ def run() -> list[Replacement]:
         _zero(gamma_relation_residual),
         "If an explicit localized solution family is closed under boosts with E=gamma E0 and p=gamma E0 v/c0^2, then L=pv-E=-E0/gamma=-E0 sqrt(1-v^2/c0^2).",
         gamma_relation_residual,
+    )
+
+    # S12: the corrected metric gives exact operational clock and ruler
+    # relations for the conditional massive worldline.  This is the positive
+    # metric consequence supported by the replacement; it does not label a
+    # wave cone alone as a proof of a universal equivalence principle.
+    local_speed_squared, coordinate_length = sp.symbols(
+        "local_speed_squared coordinate_length", nonnegative=True
+    )
+    spatial_index, conformal_scale = sp.symbols(
+        "spatial_index conformal_scale", positive=True
+    )
+    stationary_clock_rate = 1 / sp.sqrt(conformal_scale)
+    local_gamma = 1 / sp.sqrt(1 - local_speed_squared)
+    moving_clock_rate = sp.sqrt(
+        (1 - local_speed_squared) / conformal_scale
+    )
+    proper_ruler_length = (
+        spatial_index * coordinate_length / sp.sqrt(conformal_scale)
+    )
+    clock_residual = sp.powdenest(
+        moving_clock_rate - stationary_clock_rate / local_gamma,
+        force=True,
+    )
+    ruler_residual = (
+        proper_ruler_length**2
+        - spatial_index**2 * coordinate_length**2 / conformal_scale
+    )
+    record(
+        "P238-S12",
+        "conditional metric clock-and-ruler observables",
+        _zero(clock_residual) and _zero(ruler_residual),
+        "For the corrected static metric ds^2=nbar^(-1)(-dt^2+sum_i n_i^2 dx_i^2) and 0<=v_local^2<1, a timelike trajectory has d_tau/dt=nbar^(-1/2)/gamma_local and a coordinate interval dx_i has proper length n_i*dx_i/sqrt(nbar); together with the independently derived worldline Euler-Lagrange equation, these are conditional metric clock, ruler, and geodesic relations.",
+        (clock_residual, ruler_residual),
     )
 
     # S11: exact corrected inverse in an anisotropic principal frame.
@@ -262,6 +318,76 @@ def run() -> list[Replacement]:
             stiffness_tangential_ratio,
             constitutive_matching,
         ),
+    )
+
+    # S17: use the exact Kerr replacement, not resemblance of selected
+    # surfaces in the manuscript's minimal rotating model, to derive the two
+    # azimuthal null roots and their exterior sign change.
+    root_plus = (
+        spin * schwarzschild_radius / radius + sp.sqrt(delta)
+    ) / angular
+    root_minus = (
+        spin * schwarzschild_radius / radius - sp.sqrt(delta)
+    ) / angular
+    null_polynomial = (
+        angular * sp.Symbol("omega") ** 2
+        - 2 * spin * schwarzschild_radius / radius * sp.Symbol("omega")
+        - (1 - schwarzschild_radius / radius)
+    )
+    root_residuals = tuple(
+        sp.factor(null_polynomial.subs(sp.Symbol("omega"), root))
+        for root in (root_minus, root_plus)
+    )
+    adm_substitution = {
+        delta: angular * (1 - schwarzschild_radius / radius)
+        + spin**2 * schwarzschild_radius**2 / radius**2
+    }
+    reduced_root_residuals = tuple(
+        sp.factor(residual.subs(adm_substitution))
+        for residual in root_residuals
+    )
+    root_product = sp.simplify(
+        (root_minus * root_plus).subs(adm_substitution)
+    )
+    record(
+        "P238-S17",
+        "exact Kerr azimuthal-null roots",
+        all(_zero(residual) for residual in reduced_root_residuals)
+        and _zero(
+            root_product
+            + (1 - schwarzschild_radius / radius) / angular
+        ),
+        "For the exact exterior Kerr replacement, omega_±=(a*rs/r±sqrt(Delta))/G.  The upper root is positive for a>0; the lower root is negative for r>rs, zero at the equatorial ergosurface r=rs, and positive between that surface and the outer horizon.",
+        (reduced_root_residuals, root_product),
+    )
+
+    # S18: compose the repaired exact chain.  The numerical real-lump premise
+    # is checked independently in scipy_replacements.py and is required by the
+    # top-level verifier before this conditional headline is reported.
+    exact_chain_claims = {
+        "P238-S01",
+        "P238-S02",
+        "P238-S03",
+        "P238-S05",
+        "P238-S08 P238-S12",
+        "P238-S11",
+        "P238-S12",
+        "P238-S15 P238-S16",
+        "P238-S17",
+    }
+    exact_chain_passed = all(
+        replacement.passed
+        for replacement in replacements
+        if replacement.claims in exact_chain_claims
+    ) and exact_chain_claims.issubset(
+        {replacement.claims for replacement in replacements}
+    )
+    record(
+        "P238-S18",
+        "composed conditional analogue-kinematics chain",
+        exact_chain_passed,
+        "The supplied finite-time real 2+1D localized trajectory, explicit O(ell/L) frozen-background estimate, conditional boosted-family square-root action, corrected metric inverse, operational metric observables, and exact equatorial Kerr construction form a self-contained conditional analogue-kinematics chain; the result does not assert an all-potential existence theorem or an unconditional universal equivalence principle.",
+        sorted(exact_chain_claims),
     )
 
     return replacements

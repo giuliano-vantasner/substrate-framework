@@ -2,7 +2,7 @@
 description: Claim-by-claim peer review and machine validation of the 2+1D NLKG energy-lumps effective-metric paper
 author: codex
 created: '2026-08-19T20:08:36+00:00'
-updated: '2026-08-19T21:57:52+00:00'
+updated: '2026-08-19T22:11:31+00:00'
 tags:
 - substrate-framework
 - research-arc
@@ -120,7 +120,11 @@ The importable deliverable is the portable, standalone companion corpus:
 audit files `sympy_checks.py`, `scipy_checks.py`, and
 `P238PaperChecks.lean`; constructive replacements `sympy_replacements.py`,
 `scipy_replacements.py`, and `P238ReplacementProofs.lean`; pinned environments;
-and an author-ready repair guide. `verify.py` composes the oracles with exact
+an author-ready repair guide; and `evidence/solution-reuse-audit.yaml`, which
+records the exact source-to-replacement transformations. All 13 revision findings map to executable
+replacement records, including the scoped action, real-lump trajectory,
+`O(ell/L)` gradient estimate, conditional worldline observables, exact Kerr
+roots, and composed repaired headline. `verify.py` composes the oracles with exact
 inventory, canonical-issue, review-completeness, replacement, and zero-debt
 checks.
 
@@ -153,7 +157,7 @@ through manuscript-internal review and constructive repair without rewriting the
 | 0003 | Source extraction and claim freeze | source provenance plus claim inventory | 17 pages and 18 unique units frozen; #109–#126 are canonical and retry-created #127–#144 are duplicate workflow debt | source/claim boundary | assign claim-specific oracles and close duplicate set |
 | 0004 | Symbolic, numerical, and formal reconstruction | portable companion corpus | 29/29 SymPy, 12/12 SciPy, 11/11 Lean audit predicates pass | adjudication complete | audit literature and dependencies |
 | 0005 | Manuscript-internal primary-source audit | literature audit, claim results, peer review | 5 supported and 13 revision-required against the paper's own claims | review complete | construct repairs |
-| 0006 | Constructive repair pass | replacement SymPy/SciPy/Lean files and repair guide | 8 SymPy replacements, one refined dual-integrator SciPy solution, and 9 Lean replacement theorems pass | author-ready correction | update canonical issues and PR |
+| 0006 | Constructive repair pass | replacement SymPy/SciPy/Lean files and repair guide | 12 SymPy replacement records, two SciPy claim solutions in one refined dual-integrator program, and 9 Lean replacement theorems pass; every revision finding has executable coverage | author-ready correction | update canonical issues and PR |
 
 ## Framework-Fit Audit
 Framework fit is intentionally not a scientific question in P238. This required
@@ -167,10 +171,10 @@ a repository claim.
 The verifier assignment completed as frozen: 29 exact SymPy predicates, 12
 independent SciPy matrix/domain/root probes, and 11 Lean theorems cover the
 machine-checkable obligations. Literature and dependency conclusions remain
-explicit prose audits rather than counterfeit numeric proofs. Eight SymPy
-replacement constructions, one refined dual-integrator SciPy replacement, and
-nine Lean replacement theorems supply repairs for the claims that need
-revision. `verify.py`
+explicit prose audits rather than counterfeit numeric proofs. Twelve SymPy
+replacement records, two SciPy claim solutions, and nine Lean replacement
+theorems supply executable coverage for all 13 claims that need revision.
+`verify.py`
 requires all 18 canonical issue links, complete assessments, exact counts, an
 empty debt ledger, and passing constructive replacements in addition to the
 audit oracles.
@@ -213,10 +217,11 @@ manuscript-internal assessments, repair language, and executable evidence.
 ## Results and Continuation
 The strongest result is a complete manuscript-internal review plus constructive
 repair. Exact wave geometry is supported; scoped numerical real-lump evidence,
-a conditional boosted-family square-root derivation, the corrected covariant
-inverse, and an exact conformal equatorial Kerr map are now supplied as
-replacement files. The inhomogeneous massive-lump residual/observable bridge
-remains explicitly conditional in the proposed language. PR #145 is live;
+an explicit `O(ell/L)` frozen-background estimate, a conditional boosted-family
+square-root derivation, corrected clock/ruler/geodesic relations, the corrected
+covariant inverse, exact Kerr null roots, and an exact conformal equatorial Kerr
+map are supplied as replacement files. The repaired headline is a complete
+conditional analogue-kinematics statement, not an unresolved promise. PR #145 is live;
 all canonical claim issues carry review comments and closing references, canonical
 issue #108 has ongoing discussion, and final results were emailed to Dan as
 message `fmaaaabl`. The only next action is the repository's normal external
