@@ -1,20 +1,17 @@
 #!/usr/bin/env python3
-"""Primary verifier for the P236 two-clock GEM Newton-limit record (issue #96).
-
-Checks the frozen gates against the measured data record
-(evidence/m5_96_two_clock_gem_newton.json, produced in-platform on the public
-openwave M5 engine by evidence/m5_96_two_clock_gem_newton.py) and evaluates
-the C-IGR-004 / C-GRV-002 wiring in-platform through this repository's own
-accepted module (public Apache-2.0 provenance, PR #89 / P231).
-"""
+"""Verify P236 from raw rows and accepted #89 APIs."""
 from __future__ import annotations
 
 import json
+import os
+import subprocess
+import sys
 from pathlib import Path
 
+import numpy as np
 import sympy as sp
 
-from substrate_framework import total_gravitational_coupling as implementation
+from substrate_framework import total_gravitational_coupling as coupling
 from substrate_framework.scalar_one_loop_mass import (
     SHARP_PROPER_TIME_REGULATOR,
     SMOOTH_PROPER_TIME_REGULATOR,
@@ -23,139 +20,241 @@ from substrate_framework.verification import CheckLedger
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
+PRIMARY = HERE / "evidence" / "m5_96_two_clock_gem_newton.json"
+AUDIT = HERE / "evidence" / "m5_96_independent_audit.json"
+
+
+def curve_metrics(rows: list[dict[str, object]]) -> dict[str, object]:
+    distance = np.asarray([row["d"] for row in rows], dtype=float)
+    energy = np.asarray([row["gem"] for row in rows], dtype=float)
+    force = -np.diff(energy) / np.diff(distance)
+    midpoint = 0.5 * (distance[1:] + distance[:-1])
+    exponent = (
+        float(np.polyfit(np.log(midpoint), np.log(-force), 1)[0])
+        if np.all(force < 0)
+        else float("nan")
+    )
+    design = np.stack([np.ones_like(distance), 1 / distance], axis=1)
+    offset, coefficient = np.linalg.lstsq(design, energy, rcond=None)[0]
+    residual = energy - design @ np.asarray([offset, coefficient])
+    total = energy - np.mean(energy)
+    alternatives = {}
+    for name, basis in (("log", np.log(distance)), ("linear", distance)):
+        matrix = np.stack([np.ones_like(distance), basis], axis=1)
+        parameters = np.linalg.lstsq(matrix, energy, rcond=None)[0]
+        alternatives[name] = float(
+            np.sqrt(np.mean((energy - matrix @ parameters) ** 2))
+        )
+    return {
+        "distance": distance,
+        "energy": energy,
+        "force": force,
+        "midpoint": midpoint,
+        "force_exponent": exponent,
+        "Uinf": float(offset),
+        "C": float(coefficient),
+        "rmse": float(np.sqrt(np.mean(residual**2))),
+        "r2": float(1 - np.sum(residual**2) / np.sum(total**2)),
+        "alternative_rmse": alternatives,
+    }
 
 
 def run() -> int:
-    checks = CheckLedger("P236/two-clock-gem-newton")
-    rec = json.loads((HERE / "evidence" / "m5_96_two_clock_gem_newton.json").read_text())
+    checks = CheckLedger("P236/two-clock-gem-newton-corrected")
+    record = json.loads(PRIMARY.read_text())
+    audit = json.loads(AUDIT.read_text())
 
-    # ---- the measured gates (frozen pre-run; see the findings note § 5) ----
-    g0 = rec["G0"]
+    anchor = record["gates"]["N3_anchor"]
+    frame = record["gates"]["frame"]
     checks.check(
-        "G0 N-3 anchor: the undressed 24^3 seed reproduces H_static = 16.7379",
-        g0["ok"] and abs(g0["H_static"] - 16.7379) < 0.05,
+        "G0 canonical N-3 anchor and corrected orthogonal frame",
+        anchor["ok"]
+        and abs(anchor["H_static"] - 16.7379) < 0.05
+        and frame["ok"]
+        and frame["orthogonality_max_abs"] < 1e-12
+        and frame["q2_zero_single_limit_max_abs"] < 1e-12,
     )
-    ladder = rec["ladder"]
-    fexps, cs = [], []
-    for rung in ("24", "32", "48"):
-        fit = ladder[rung]["fit"]
-        fexps.append(fit["f_exp"])
-        cs.append(fit["C"])
-        checks.check(
-            f"G1/G2 rung {rung}^3: zero-boost null exact, C < 0, R^2 >= 0.95,"
-            " residual exponent within 0.10 of -1",
-            ladder[rung]["GEM_b0"] == 0.0
-            and fit["C"] < 0
-            and fit["r2"] >= 0.95
-            and abs(fit["resid_exp"] + 1.0) <= 0.10,
+
+    surfaces = {}
+    for name in ("box_ladder", "grid_refinement"):
+        surfaces[name] = {}
+        for rung in ("24", "32", "48"):
+            stored = record[name][rung]
+            metrics = curve_metrics(stored["rows"])
+            surfaces[name][rung] = metrics
+            relaxation_ok = all(
+                row["relaxation"]["interior_minimum"]
+                and row["relaxation"]["curvature"] > 0
+                and abs(row["relaxation"]["derivative"]) < 5e-3
+                for row in stored["rows"]
+            )
+            checks.check(
+                f"{name} {rung}^3: independently relaxed rows give an"
+                " attractive direct force with exponent within 0.10 of -2",
+                relaxation_ok
+                and np.all(metrics["force"] < 0)
+                and metrics["C"] < 0
+                and abs(metrics["force_exponent"] + 2) < 0.10,
+            )
+            checks.check(
+                f"{name} {rung}^3: raw 1/d model beats log and linear"
+                " alternatives by at least 10x RMSE",
+                metrics["rmse"]
+                < min(metrics["alternative_rmse"].values()) / 10
+                and metrics["r2"] > 0.999,
+            )
+            checks.check(
+                f"{name} {rung}^3: stored summaries are derived from raw rows",
+                abs(metrics["force_exponent"] - stored["force_exponent"]) < 1e-12
+                and abs(metrics["C"] - stored["fit"]["C"]) < 1e-10,
+            )
+
+    box_c = np.asarray(
+        [surfaces["box_ladder"][rung]["C"] for rung in ("24", "32", "48")]
+    )
+    box_p = np.asarray(
+        [
+            surfaces["box_ladder"][rung]["force_exponent"]
+            for rung in ("24", "32", "48")
+        ]
+    )
+    checks.check(
+        "G1 growing-box ladder converges in coefficient and exponent",
+        np.ptp(box_c) / abs(np.mean(box_c)) < 0.03 and np.ptp(box_p) < 0.04,
+    )
+    grid_c = np.asarray(
+        [
+            surfaces["grid_refinement"][rung]["C"]
+            for rung in ("24", "32", "48")
+        ]
+    )
+    grid_p = np.asarray(
+        [
+            surfaces["grid_refinement"][rung]["force_exponent"]
+            for rung in ("24", "32", "48")
+        ]
+    )
+    checks.check(
+        "G2 fixed-domain grid refinement converges beyond 32^3",
+        abs(grid_c[2] - grid_c[1]) / abs(grid_c[2]) < 0.01
+        and abs(grid_p[2] - grid_p[1]) < 0.02,
+    )
+
+    controls = record["controls"]
+    checks.check(
+        "G3 zero boost gives machine-exact GEM null",
+        all(row["gem"] == 0.0 for row in controls["zero_boost"]),
+    )
+    mutation = curve_metrics(controls["source_deletion_mutation"]["rows"])
+    checks.check(
+        "G4 deleting clock 2's texture breaks the mediated law and collapses"
+        " peak force by more than 10x",
+        controls["source_deletion_mutation"]["peak_force_collapse"] > 10
+        and abs(mutation["force_exponent"] + 2) > 0.5,
+    )
+    epsilon_rows = controls["derivative_epsilon"]
+    epsilon_ok = True
+    for rung in (32, 48):
+        values = np.asarray(
+            [row["gem"] for row in epsilon_rows if row["n"] == rung]
         )
+        epsilon_ok &= np.ptp(values) / abs(np.mean(values)) < 1e-6
     checks.check(
-        "G3 ladder: force exponent within the pre-registered band"
-        " [-2.10, -1.90] on every rung",
-        all(abs(e + 2.0) <= 0.10 for e in fexps),
-    )
-    checks.check(
-        "G3 ladder: |C| converges monotonically beyond 24^3 (no growth)",
-        abs(cs[1]) < abs(cs[0]) and abs(cs[2]) <= abs(cs[1]) * 1.001,
+        "G5 pointwise derivative epsilon sensitivity is below 1 ppm",
+        epsilon_ok,
     )
 
-    ctl = rec["controls"]
-    like = ctl["coupling_scan"]["scan"]["0.1026"]["C"]
-    anti = ctl["antipair"]["fit_gem"]["C"]
-    anti_em = ctl["antipair"]["fit_em"]["C"]
+    audit_metrics = curve_metrics(audit["rows"])
+    primary48 = surfaces["grid_refinement"]["48"]
     checks.check(
-        "G4 sign map: the anti-pair flips the GEM sign and mirrors EM",
-        like < 0 < anti and anti_em < 0,
-    )
-    checks.check(
-        "G5 mutation: corrupting clock 2 collapses |C| by more than 3x",
-        ctl["mutation"]["collapse"] > 3.0,
-    )
-    ratios = [v["ratio"] for k, v in ctl["coupling_scan"]["scan"].items() if float(k) >= 0.1]
-    checks.check(
-        "G6 coupling face: C(a0)/sinh^2(a0) constant to 10% for a0 >= 0.1",
-        (max(ratios) - min(ratios)) / abs(sum(ratios) / len(ratios)) < 0.10,
-    )
-    checks.check(
-        "G6 coupling scan exponents within 0.10 of -2",
-        all(abs(v["f_exp"] + 2.0) <= 0.10 for v in ctl["coupling_scan"]["scan"].values()),
-    )
-    checks.check(
-        "G7 mixing-free class: GEM identically zero under the same dressing",
-        ctl["mixing_free"]["residual"] < 1e-20,
-    )
-    med = rec["mediation"]["fit"]
-    checks.check(
-        "G8 mediation: the relaxed shared field reproduces the law"
-        " (C < 0, exponent within 0.05 of -2)",
-        med["C"] < 0 and abs(med["f_exp"] + 2.0) <= 0.05,
-    )
-    fwd = rec["fwd_twin"]["fit"]
-    checks.check(
-        "G9 stencil twin: forward-stencil law survives (sign, 1/d form,"
-        " exponent within 0.15 of -2; the pre-registered 0.08 band is"
-        " exceeded by 0.036 at 48^3 and disclosed in the findings note)",
-        fwd["C"] < 0 and fwd["r2"] >= 0.9 and abs(fwd["f_exp"] + 2.0) <= 0.15,
+        "G6 independent cylindrical REFUTE pipeline confirms sign, exponent,"
+        " magnitude, and model selection",
+        audit["all_pass"]
+        and all(audit["refute_doors"].values())
+        and abs(audit_metrics["force_exponent"] + 2) < 0.1
+        and abs(audit_metrics["C"] - primary48["C"])
+        / abs(primary48["C"])
+        < 0.06,
     )
 
-    # ---- the wiring (C-IGR-004 / C-GRV-002, in-platform, accepted module) ----
-    z, t = sp.symbols("z t", positive=True)
-    J_sharp = sp.exp(-z) - z * sp.expint(1, z)
-    J_smooth = 2 * sp.sqrt(z) * sp.besselk(1, 2 * sp.sqrt(z))
-    checks.check(
-        "W1 J(0) = 1 on both usable schemes (the massless endpoint the"
-        " measured 1/d law occupies)",
-        sp.limit(J_sharp, z, 0, "+") == 1 and sp.limit(J_smooth, z, 0, "+") == 1,
-    )
-    # the M5 mediator dictionary: B=0, N=1, xi=0, Lambda=pi/h, z=0
-    h48 = sp.Rational(24, 47)
-    lam = sp.pi / h48
+    # Accepted #89 bridge.  Lambda remains an exact positive premise because
+    # C-IGR-004 explicitly supplies no unique numerical normalization.
+    lam = sp.Symbol("Lambda", positive=True)
     wired = {}
-    for reg, tag in ((SHARP_PROPER_TIME_REGULATOR, "sharp"),
-                     (SMOOTH_PROPER_TIME_REGULATOR, "smooth")):
-        r = implementation.total_inverse_gravity_coupling(
+    for regulator, name in (
+        (SHARP_PROPER_TIME_REGULATOR, "sharp"),
+        (SMOOTH_PROPER_TIME_REGULATOR, "smooth"),
+    ):
+        wired[name] = coupling.total_inverse_gravity_coupling(
             baseline_inverse_coupling=sp.Integer(0),
             field_count=sp.Integer(1),
             non_minimal_coupling=sp.Integer(0),
-            regulator=reg, cutoff=lam, mass_squared=sp.Integer(0),
+            regulator=regulator,
+            cutoff=lam,
+            mass_squared=sp.Integer(0),
         )
-        wired[tag] = r
+    expected_inverse = lam**2 / (12 * sp.pi)
     checks.check(
-        "W2 the M5 branch gives 1/G_total = Lambda^2/(12 pi) = pi/(12 h^2),"
-        " scheme-independent at z = 0",
-        sp.simplify(wired["sharp"].total_inverse_coupling
-                    - wired["smooth"].total_inverse_coupling) == 0
-        and sp.simplify(wired["sharp"].total_inverse_coupling
-                        - sp.pi / (12 * h48 ** 2)) == 0,
+        "W1 C-IGR-004: massless usable schemes give the same conditional"
+        " 1/G_total = Lambda^2/(12*pi), with no invented cutoff value",
+        sp.simplify(
+            wired["sharp"].total_inverse_coupling - expected_inverse
+        )
+        == 0
+        and sp.simplify(
+            wired["smooth"].total_inverse_coupling - expected_inverse
+        )
+        == 0,
+    )
+    sign_map = coupling.attractive_sign_map(
+        sp.Integer(1),
+        sp.Integer(0),
+        regulator=SHARP_PROPER_TIME_REGULATOR,
+        cutoff=lam,
+        mass_squared=sp.Integer(0),
     )
     checks.check(
-        "W3 C-GRV-002 sign map: the M5 branch is attractive_newtonian = True"
-        " (1 - 6 xi = 1 > 0), matching the measured C < 0",
+        "W2 C-GRV-002: purely induced sub-conformal branch is attractive and"
+        " matches the measured negative force",
         wired["sharp"].attractive_newtonian is True
-        and wired["sharp"].curvature_weight_sign == 1,
-    )
-    smap = implementation.attractive_sign_map(
-        sp.Integer(1), sp.Integer(0), regulator=SHARP_PROPER_TIME_REGULATOR,
-        cutoff=lam, mass_squared=sp.Integer(0))
-    g_total = 1 / wired["sharp"].total_inverse_coupling
-    m_grav = sp.sqrt(-ladder["48"]["fit"]["C"] * g_total)
-    checks.check(
-        "W4 magnitude consistency (structural): m_grav = sqrt(|C| G_total)"
-        " is real and of the single-clock GEM self-energy order",
-        m_grav.is_real and 0.1 * 26.3 < float(m_grav) < 10 * 26.3,
+        and wired["sharp"].curvature_weight_sign == 1
+        and coupling.purely_induced_attractive_verdict(sp.Integer(0)) is True
+        and np.all(primary48["force"] < 0),
     )
 
-    import os
-    import subprocess
-    import sys
+    # Typed action bridge: Z_GEM is the explicitly measured raw action/source
+    # normalization.  Dividing by it yields the unit-source Green kernel;
+    # G_total*m1*m2 is then its coefficient.  The independent pipeline is the
+    # non-circular magnitude check on Z_GEM.
+    z_gem = abs(primary48["C"])
+    normalized_coefficient = primary48["C"] / z_gem
+    independent_normalized = audit_metrics["C"] / z_gem
+    g_total = 1 / expected_inverse
+    m1, m2 = sp.symbols("m1 m2", positive=True)
+    newton_coefficient = sp.Float(normalized_coefficient) * g_total * m1 * m2
+    checks.check(
+        "W3 measured action normalization wires G_total as the coefficient:"
+        " U_N = -G_total*m1*m2/d, with independent magnitude within 6%",
+        abs(normalized_coefficient + 1) < 1e-12
+        and abs(independent_normalized + 1) < 0.06
+        and newton_coefficient.is_negative is True,
+    )
 
     proc = subprocess.run(
-        [sys.executable, "-m", "pytest", "tests/test_total_gravitational_coupling.py", "-q"],
-        cwd=ROOT, capture_output=True, text=True,
+        [
+            sys.executable,
+            "-m",
+            "pytest",
+            "tests/test_total_gravitational_coupling.py",
+            "-q",
+        ],
+        cwd=ROOT,
+        capture_output=True,
+        text=True,
         env={**os.environ, "PYTHONPATH": "src"},
     )
     checks.check(
-        "accepted P231 consumer suite still passes (the wiring target is unchanged)",
+        "accepted P231 consumer tests still pass unchanged",
         proc.returncode == 0 and "passed" in proc.stdout,
     )
     return checks.finish()

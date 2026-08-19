@@ -1,217 +1,194 @@
-# M5.96 findings note — the two-clock GEM Newton limit (attractive 1/r² inter-mass force)
+# M5.96 findings — relaxed two-clock GEM Newton limit
 
-**Campaign**: substrate-framework P236 (this PR) · canonical issue #96 ·
-measurement run in-platform on the public openwave M5 engine
-(`openwave-labs/openwave@614a223`, `openwave/xperiments/m5_liquid_crystal/research/`,
-anaconda numpy stack, canonical `sandbox_v8` imports — the script is a drop-in
-for that tree). Driver: `evidence/m5_96_two_clock_gem_newton.py` →
-`evidence/m5_96_two_clock_gem_newton.json`. DCO: Signed-off-by: Dan <dan@localhost>
-(see the PR commits).
+Campaign P236 · canonical issue #96 · corrected PR #101 transaction · public
+engine `openwave-labs/openwave@614a223fff4ca0fa53a5c4fbc79cc5347a341d69`.
+The drop-in driver uses canonical `sandbox_v8`/`sandbox_vn` imports. DCO:
+`Signed-off-by: Dan <dan@localhost>`.
 
-## 1. The measured result (headline first)
+## Result
 
-Between two driven M5.8 fixed-clock configs separated by d, the GEM-sector
-interaction energy obeys
+For two driven M5.8 fixed-clock configurations, with the one shared GEM
+rapidity independently relaxed at every separation and lattice rung,
 
 ```text
-U_gem(d) = U_inf + C/d ,   C < 0 ,   F(d) = -dU/dd = C/d²  (ATTRACTIVE 1/r²)
+U_gem(d) = U_inf + C/d,       C < 0,
+F(d_i+1/2) = -[U(d_i+1)-U(d_i)]/[d_i+1-d_i] < 0,
+F(d) proportional to d^p,    p = -2 within the declared numerical band.
 ```
 
-| rung (box ladder, h ≈ 0.52 fixed, box grows) | window | U_inf | C | R² | force exponent |
-| --- | --- | --- | --- | --- | --- |
-| 24³, L = 6 | [4.17, 7.30] | −63.1 | **−503.3** | 0.958 | **−2.056** |
-| 32³, L = 8 | [4.13, 7.23] | −212.3 | **−341.2** | 0.975 | **−2.042** |
-| 48³, L = 12 | [4.09, 10.21] | −405.4 | **−335.4** | 0.973 | **−2.071** |
+The exponent is measured from direct differences of the raw energy rows. It
+does not use `U_inf` or a forced `1/d` residual.
 
-The force exponent sits at −2 to within 3.6% on every rung (ladder spread
-±0.015; the forward-stencil twin widens the systematic band to ±0.12, § 5 G9);
-|C| converges monotonically (−503 → −341 → −335; +1.7% from 32³→48³). Every
-mandated control passes (§ 5; G9's pre-registered 0.08 band is exceeded by
-0.036 and disclosed).
+### Growing-box ladder
 
-## 2. The objects and the equations
+| lattice | half-domain D | C | R² | direct force exponent |
+| --- | ---: | ---: | ---: | ---: |
+| 24³ | 96 | -123.0796 | 0.999995 | **-2.03198** |
+| 32³ | 108 | -124.9993 | 0.999983 | **-2.04361** |
+| 48³ | 120 | -123.9048 | 0.999954 | **-2.06018** |
 
-### 2.1 The energy instrument (the engine's own, verbatim)
+The coefficient spread is 1.55% and the exponent spread is 0.0282.
 
-The M5.8 audited quartic-commutator static stack (m5_8_2q_delta_scaling.py):
+### Fixed-domain grid refinement
+
+| lattice | half-domain D | C | R² | direct force exponent |
+| --- | ---: | ---: | ---: | ---: |
+| 24³ | 120 | -118.3186 | 0.999988 | **-2.04403** |
+| 32³ | 120 | -123.8231 | 0.999981 | **-2.04661** |
+| 48³ | 120 | -123.9048 | 0.999954 | **-2.06018** |
+
+From 32³ to 48³, `C` changes by 0.066% and the exponent by 0.0136. On every
+rung, the `1/d` energy RMSE is more than 20 times smaller than the logarithmic
+alternative and more than 40 times smaller than the linear alternative.
+
+## Equations and construction
+
+The M5.8 engine supplies
 
 ```text
-u(x)     = Σ_{i<j} 2 ⟨F_ij, tw(F_ij)⟩,   F_ij = [∂_iM, ∂_jM]
-u_EM     = +4 Σ_{i<j} (F_ij)_spatial²          (curvature of rotations)
-u_GEM    = −4 Σ_{i<j} (F_ij)_time-mixing²      (curvature of boosts = the clock fuel)
-H_static = Σ_act (u + β u²) h³,  β = 1.558     (the N-3 record object)
-M(x)     = O4(x) B(θ(x), a=2) D B^T O4^T,  D = diag(g, 1, δ, 0), g = 8, δ = 0.3
+F_ij = [partial_i M, partial_j M]
+u_EM  = +4 sum_(i<j) sum_spatial (F_ij)^2
+u_GEM = -4 sum_(i<j) sum_time-mixing (F_ij)^2
+u = u_EM + u_GEM
+H_static = integral [u + 1.558 u^2] d^3x
+M = O4 B(a,A_BOOST) diag(8,1,0.3,0) B(a,A_BOOST)^T O4^T.
 ```
 
-The GEM sector is exactly the negative time-mixing block: **zero at zero
-boost** (machine-exact, every rung), negative when the clock dressing turns
-on — the MODELS.md "GEM ∝ (b·g)²" coupling.
-
-### 2.2 The two-clock object (mediated, never imposed)
-
-Two clock cores at z = ±d/2 share the **merged openwave two-charge texture**
-(the m5_17_two_charge.py construction, gate C0): the angle superposition
+For cores `z1=-d/2`, `z2=d/2`, the corrected M5.17 frame is
 
 ```text
-Θ(x) = θ_1(x) + q₂ θ_2(x),   θ_i = atan2(ρ, z − z_i),  q₂ = +1 (like) / −1 (anti)
-frame axes: n = sinΘ ê_ρ + cosΘ ê_z,  e_Θ,  ê_φ  with eigenvalues (1, δ, 0)
-melt: s = (1 − e^{−(r₁/r_c)²})(1 − e^{−(r₂/r_c)²}),  r_c = 1.6
+Theta = atan2(rho,z-z1) + atan2(rho,z-z2)
+e_r = (sin Theta cos phi, sin Theta sin phi, cos Theta)
+e_phi = (-sin phi, cos phi, 0)
+e_Theta = e_phi cross e_r
+O4 = diag(1, [e_r e_Theta e_phi]).
 ```
 
-and the **shared boost field** (one mediator for both clocks — the M5.8 seed
-class single boost axis a = 2):
+This is orthogonal to `8.88e-16`; setting the second charge to zero reproduces
+the single-source matrix exactly. The submitted non-orthogonal frame and its
+core melt are not used.
+
+There is one ambient rapidity, not a sum of two nondecaying tails:
 
 ```text
-θ(x) = θ_clock(r₁) + θ_clock(r₂),
-θ_clock(r) = b* e^{−(r/R_W)²} + a₀ (1 − e^{−(r/R_W)²}),  b* = 0.13, R_W = 3.5
-a₀ = 0.8168 · artanh(1/g) = 0.10254   (the M5.21.8 lattice-measured
-                                        rigid-dressing attractor at g = 8)
+w_i = exp[-(r_i/R_W)^2],       R_W=3.5, B_STAR=0.13
+a(x) = a + (B_STAR-a) w_1
+           + (B_STAR-a) w_2 (1-w_1).
 ```
 
-The observable (the issue's formula):
+At each `(n,D,d)`, the bounded scalar `a in (0,0.3)` is minimized on the
+same composite Gauss-Legendre `n^3` lattice later used for the observable.
+Every minimum is interior, has positive curvature, and has `|dH/da|<0.005`.
+This is the canonical M5.21.8 rigid family. It obeys M5.21.14's mandatory
+guard: unrestricted full-field minimization is forbidden because the signed
+static functional has a scale-free negative UV channel; constrained smooth
+profiles are the upstream-authorized object.
+
+The interaction is local before it is global:
 
 ```text
-U_gem(d) = GEM[pair](d) − 2·GEM[single]
+u_int(x;d) = u_pair(x;d) - u_single,1(x;d) - u_single,2(x;d)
+U_gem(d) = integral_common_pair_mask u_int,GEM(x;d) d^3x.
 ```
 
-A d-independent background U_inf (the non-decaying mediator's far-field
-self-energy on the finite box: the (2a₀)² vs 2·a₀ mismatch) sits in U_gem;
-it **cancels identically in F = −dU/dd** and is absorbed by the two-parameter
-fit U_inf + C/d (the M5.17 E0 + A/d protocol). Banned construction absent:
-no envelope overlap is ever read — the pair field is the shared texture with
-both clocks as sources, and the dressing tail amplitude is the engine's own
-measured attractor value (validated § 5, G8-arm).
+Using the common pair mask removes core-mask and far-background mismatches.
+The pointwise matrix derivatives use a central epsilon of `2e-4`; varying it
+from `1e-4` to `1e-3` changes the checked GEM value by less than one part per
+million.
 
-### 2.3 The force law
+## Equation-to-code map
 
-With U_gem(d) = U_inf + C/d the mediated force is exactly
-
-```text
-F(d) = −dU/dd = C/d²  — an inverse-SQUARE law, attractive iff C < 0.
-```
-
-The measured C < 0 at every amplitude, rung, stencil, and protocol.
-
-## 3. Equation-to-code map
-
-| Piece | Code (`evidence/m5_96_two_clock_gem_newton.py`) |
+| Object | Production code |
 | --- | --- |
-| u / u_sectors (EM/GEM split) | `u_density`, `u_sectors` (m5_8_2q conventions verbatim) |
-| M(θ) seed-class dressing | `M_of` (O4·B(θ,a=2)·D·B^T·O4^T) |
-| single clock grid + act mask | `single_grid` (build_grid_n + the N-3 mask) |
-| two-center angle-superposition texture | `pair17_grid` (Θ = θ₁+q₂θ₂; gate C0 analog) |
-| shared mediator field, mutation hook | `theta_shared`, `theta_clock` |
-| U(d) observable + fits | `sectors`, `fit_Ud` (U_inf + C/d, sign-aware residual exponent) |
-| relaxed-shared-field mediation | `run_mediation` (κ=0 functional, band-limited FIRE, both clock cores pinned at b*; adjoint gradient dM/dθ = O4{G_a, BDB^T}O4^T validated vs FD) |
-| forward-stencil twin | `run_fwd_twin` (`_fwd`) |
-| mixing-free machinery control | `run_controls` G7 (m5_17_energy.hedgehog_field + m5_17_two_charge.pair_field) |
+| M5.8 matrix and signed sectors | `M_of`, `sector_density`, `pair_total` |
+| orthogonal M5.17 frame | `orthogonal_frame` |
+| one shared rapidity and two pinned cores | `matrix_field` |
+| exact n³ composite lattice | `composite_nodes`, `lattice` |
+| guarded relaxation | `relax_pair` |
+| pointwise interaction subtraction | `interaction` |
+| raw force and hostile model comparison | `summarize` |
+| independent cylindrical reconstruction | `reviews/independent_force_audit.py` |
+| accepted #89 bridge | `verify.py` using `total_gravitational_coupling` |
 
-## 4. The wiring into the merged coupling work (C-IGR-004 / C-GRV-002)
+## C-IGR-004 / C-GRV-002 bridge
 
-Public Apache-2.0 provenance (`substrate-framework` PR #89 / P231), evaluated
-in-platform by `verify.py` through this repository's own accepted module
-(`total_gravitational_coupling`), on the **M5 mediator dictionary** (each entry
-an output of the M5 measurement or an engine-measured constant, not a fit):
-
-| slot | value | source |
-| --- | --- | --- |
-| B (baseline 1/G) | 0 | purely-induced reading: the M5 stack has no independent Einstein-Hilbert term |
-| N (field count) | 1 | one scalar mediator channel: the shared boost dressing |
-| ξ (non-minimal coupling) | 0 | minimal: the quartic-commutator stack carries no conformal curvature term |
-| Λ (cutoff) | π/h | the lattice UV cutoff (C-GRV-001's E_cut = ℏc/a with a = h) |
-| z = m²/Λ² | 0 | the measured 1/d law IS the massless endpoint (a massive mediator gives e^{−mr}); J(0) = 1 |
-
-Computed in-platform (both usable schemes agree exactly at z = 0):
+C-IGR-004 is used exactly as accepted. On the declared purely induced,
+massless, minimally coupled branch,
 
 ```text
-1/G_total = Λ² J(0)/(12π) = π/(12 h²):
-   24³: 529π/1728 = 0.9618      32³: 961π/3072 = 0.9825      48³: 2209π/6912 = 1.0044
-attractive_newtonian = True on the M5 branch (1 − 6ξ = 1 > 0; C-GRV-002's map)
+B=0, N=1, xi=0, z=0,
+1/G_total = Lambda^2/(12 pi),
+G_total = 12 pi/Lambda^2.
 ```
 
-**Sign**: the measured C < 0 (attractive) matches C-GRV-002's attractive
-branch exactly (the map's only sign carrier on the usable set is 1−6ξ > 0).
-The anti-pair control (§ 5) demonstrates the sign structure in-model.
+Sharp and smooth proper-time schemes agree because `J(0)=1`. `Lambda` remains
+an exact positive symbol: C-IGR-004 explicitly does not choose a regulator,
+cutoff value, or unique numerical normalization. The former `Lambda=pi/h`
+substitution is removed.
 
-**Magnitude consistency** (disclosed as structural, not a unit-identity):
-reading the measured two-body coupling as U = −G m² / d gives
-m_grav = √(|C|/G_total) = 18.3 grid units at 48³, the same order as the
-single clock's |GEM| self-energy (26.3 grid units at a₀ = m*); the
-C(a₀)/sinh²(a₀) scan (§ 5) is the measured coupling face of "(b·g)²". The
-grid-unit ↔ physical-unit map is NOT claimed here (the M5.8 stack's own
-lock — the M5.16 c₂ = αħc/64π calibration — belongs to the openwave
-submission step, which is out of scope for this PR by the issue's own text).
+The type bridge keeps the raw M5 action normalization distinct from the
+Newton coefficient. Let
 
-## 5. Gates and controls (every one frozen before the production run)
+```text
+Z_GEM = |C_48| = 123.9048063
+K(d) = [U_gem(d)-U_inf]/Z_GEM = -1/d + discretization residual.
+```
 
-| Gate | Check | Result |
+`K` is the unit-source Green kernel; the coupled energy is
+
+```text
+U_N(d) = G_total m1 m2 K(d) = -G_total m1 m2/d + residual.
+```
+
+Thus `G_total`, not a raw lattice coefficient, is the coefficient of the
+normalized kernel. The magnitude oracle is independent: the cylindrical
+pipeline measures `Z_GEM=118.3291126`, 4.50% below the primary value, inside
+the frozen 6% band. C-GRV-002 gives an attractive total for `xi<1/6` on the
+purely induced branch; its sign matches every measured `F<0`. No accepted
+claim or registry statement changes.
+
+## Controls
+
+| Control | Frozen gate | Result |
 | --- | --- | --- |
-| G0 N-3 anchor | undressed 24³ seed H_static = 16.7379 | **PASS** (16.7379) |
-| G1 zero-boost null | θ ≡ 0 ⇒ GEM ≡ 0 exactly, every rung | **PASS** (0.0e+00) |
-| G2 the 1/d law | R² ≥ 0.95, C < 0, residual exponent ∈ [−1.10, −0.90] | **PASS** (R² 0.958–0.975; exponents −2.056/−2.042/−2.071) |
-| G3 box ladder | C converges beyond 24³ | **PASS** (−503 → −341 → −335, +1.7% last step; exponents −2.02 to −2.07) |
-| G4 sign map | anti-pair (q₂ = −1) flips sign(C), EM mirrors | **PASS** (C_gem: −367.4 → **+322.2**; C_em: like +380.9 → **−227.8**) |
-| G5 mutation | corrupt clock 2 (θ₂ := 0) collapses \|C\| > 3× | **PASS** (4.20×) |
-| G6 coupling face | C(a₀)/sinh²(a₀) constant to 10% for a₀ ≥ 0.1 | **PASS** (−34759 / −32663 / −32899; spread 0.7%) |
-| G7 mixing-free class | M5.17 uniaxial s·nn^T under the same dressing ⇒ GEM ≡ 0 | **PASS** (4.9e−30 — the M5.12 block-11 sign-theorem control) |
-| G8 mediation | relaxed shared field (κ = 0, cores pinned, band-limited FIRE) reproduces the law | **PASS** (C = −321.3, R² = 0.967, F exponent −2.048; reproduced exactly on the determinism re-run) |
-| G9 stencil twin | forward-stencil sectors at 48³ | **PASS\*** (C = −302.0, R² = 0.936, F exponent −2.116: the pre-registered 0.08 band is exceeded by 0.036 — the one-sided quadrature's known textured-gradient bias dominates the exponent uncertainty; sign, 1/d form, and R² survive; reproduced exactly on the re-run) |
-| G10 coupling scan exponents | a₀-scan force exponents | −1.981 / −2.041 / −2.054 / −2.053 |
+| N-3 anchor | `H_static=16.7379 +/- 0.05` | 16.7379188, pass |
+| frame | orthogonal and exact single limit | `8.88e-16`, `0`, pass |
+| zero boost | GEM exactly zero | `0.0` at d=24,48,72, pass |
+| source deletion | collapse >10 and exponent shift >0.5 | 16.52x; exponent -3.0867, pass |
+| growing box | `C` spread <3%, exponent spread <0.04 | 1.55%, 0.0282, pass |
+| fixed-domain grid | last `C` change <1%, exponent change <0.02 | 0.066%, 0.0136, pass |
+| derivative epsilon | relative spread <1 ppm | pass |
+| independent pipeline | exponent within 0.1 of -2; C within 6% | -2.02037; 4.50%, pass |
 
-## 6. Assumptions and honesty boundaries
+The source-deletion mutation removes clock 2's texture while leaving the two
+clock-core locations in the relaxation problem. Its peak force falls from
+`0.16091` to `0.009739`, and its exponent becomes `-3.0867`. This tests the
+load-bearing two-source texture rather than merely changing a summary value.
 
-1. **Driven-config boundary** (the issue's own scope): the clocks are driven
-   M5.8 fixed-clock configs (the class of the maintainer's own single-body GEM
-   measurement and the g ≈ 2 record), not self-sustaining M5.12 solitons
-   (that route is a closed measured-negative).
-2. **The mediator branch**: the boost-dressing tail amplitude a₀ = 0.10254 is
-   the engine's own M5.21.8 lattice-measured attractor (m*/artanh(1/g) =
-   0.8168 at g = 8), not fitted to the force data. The κ = 0 relaxation
-   settles in the same band (0.10–0.11); the known scale-free oscillatory
-   channel (M5.21.14 §4, M5.20.3) is excluded by the constrained-smooth guard
-   and monitored (zigzag amplitude, fwd/cen ratios in the JSON).
-3. **The background U_inf** is d-independent by construction of the
-   far-field mismatch and is absorbed by the fit; its value grows with box
-   volume as expected. The 24³ rung is window-limited (4 points, small-box
-   extension disclosed); the ladder trend carries the convergence statement.
-4. **The wiring dictionary** (§ 4) is a structural identification, each slot
-   engine-measured or engine-structural; the numeric unit-identity between
-   grid-units and physical units is explicitly NOT claimed (out of scope per
-   the issue: the openwave submission is a later, separate step).
-5. **C's residual window dependence**: |C| drifts +1.7% from 32³ → 48³
-   (window-bound); the exponent band [−2.04, −2.07] is the converged
-   statement together with the ±0.12 stencil systematic. A 64³ rung would
-   tighten further; recorded as the refinement path, not a blocker.
+## Independent REFUTE audit
 
-## 7. Adversarial audit (independent REFUTE attempt, per AI_HYGIENE.md)
+The independent script imports no production function. It reconstructs the
+field directly on a uniform cylindrical lattice (`D=120`, `h=0.75`), uses
+`d/drho`, `(1/rho)d/dphi`, and `d/dz`, integrates with `2*pi*rho`, and derives
+its own raw force and models. Its results are
 
-The audit pipeline (see `reviews/self-adversarial-audit.md` for the full
-REFUTE protocol and `reviews/independent-force-audit.md`) attacked the result
-through four independent doors:
+```text
+C = -118.3291126
+force exponent = -2.0203675
+RMSE(1/d) = 0.000329
+RMSE(log d) = 0.171363
+RMSE(linear) = 0.335248.
+```
 
-- **A1 stencil**: recomputed all 48³ sectors with the forward stencil
-  (one-sided differences — a different quadrature): the law survives
-  (G9; exponent within 0.08 of −2).
-- **A2 texture code path**: rebuilt the pair on the openwave m5_17 uniaxial
-  code path: the GEM channel is **exactly zero** there (G7) — the mixing-free
-  class control: the GEM force is specific to the biaxial clock texture, as
-  the M5.12 sign theorem demands. (The EM channel on that path remains the
-  M5.17 Coulomb structure.)
-- **A3 protocol**: replaced the frozen attractor branch by full
-  relaxation of the shared field with both clock cores pinned (the issue's
-  literal "relax the shared GEM/time-mixing field"): the law survives (G8).
-- **A4 sign/structure**: the anti-pair and mutation arms (G4, G5) break or
-  flip the result exactly as a real two-body coupling must; a Gaussian
-  two-envelope overlap readout (the banned construction) was re-run during
-  development and reproduces the known fake steep exponents (−3.5/−4.4
-  family), which the mediated observable here does not show.
+All five preregistered REFUTE doors pass: attraction, inverse-square
+exponent, independent magnitude, independent exponent, and hostile model
+selection. The audit record is `m5_96_independent_audit.json`.
 
-No refutation survived; the record stands as measured.
+## Scope and honesty boundary
 
-## 8. Not computed
-
-- The physical-unit lock (fm/MeV scale of C) — belongs to the openwave
-  submission (author-gated), per the issue text.
-- The 64³ rung and the ω-drive (clock-frequency) dependence of C — recorded
-  as refinement paths.
-- openwave MODELS.md is untouched (author-gated by the issue).
+The positive result is for the driven M5.8 fixed-clock class explicitly
+requested by issue #96. It is not a claim about nonexistent free-period
+M5.12 solutions. The issue explicitly leaves the OpenWave MODELS.md edit and
+OpenWave PR for a separate later step; neither is part of this campaign.
+Within issue #96's requested boundary, the correction leaves no unresolved
+assumption, promised validation, or affected consumer.

@@ -1,67 +1,51 @@
-# P236 self-adversarial audit (development record, pre-freeze)
+# P236 corrective adversarial record
 
-Auditor: the proposing agent, against its own development record (the
-REFUTE-first discipline of openwave AI_HYGIENE.md). Every finding below was
-either repaired before the production run or is disclosed in the findings
-note. The independent-audit companion is `independent-force-audit.md`.
+This append-only narrative explains why attempt 0001 is not reused as
+evidence and what the corrected transaction changed. The bounded PR review
+is `pr101-correction-review.md`; the independent executable audit is
+`independent_force_audit.py`.
 
-## F1 — the two-center frame blend (REPAIRED)
+## Refuted original mechanisms
 
-The development two-center texture interpolated the two hedgehog FRAMES
-(linear blend). Measured symptom: a non-decaying +O(1000) EM interaction
-background with no clean 1/d in any sector; the pair-vs-single frame
-mismatch fills the box. Root cause: a frame blend is not a solution of the
-two-charge structure — the merged openwave construction superposes the
-ANGLE field, not the frames. Repair: adopt the m5_17_two_charge.py
-angle-superposition construction (Θ = θ₁ + q₂θ₂) verbatim in the biaxial
-(1, δ, 0) form; the +O(1000) artifact disappears and the EM channel returns
-the M5.17 Coulomb structure (like charges repel, +C_em/d).
+- **Non-orthogonal frame:** active median `max|O^T O-I|=0.5`, maximum
+  `0.997238`; `q2=0` did not reproduce the single source. Corrected maximum
+  is `8.88e-16` and the single limit is exact.
+- **Two imposed ambient tails:** the old field tended to `2a0` at infinity.
+  The corrected field has one ambient rapidity shared by two pinned cores.
+- **Global pair-minus-single subtraction:** different masks and far fields
+  contaminated the observable. The corrected density subtraction is
+  pointwise on one common pair mask.
+- **Forced-fit exponent:** fitting `U_inf+C/d` and then fitting the residual
+  necessarily favored the requested law. The corrected exponent comes from
+  direct raw differences; log and linear energy models are hostile controls.
+- **Summary-trusting verifier:** attempt-0001 raw rows could be corrupted
+  without changing its stored-summary verdict. The corrected verifier
+  derives all scientific quantities from rows.
+- **Invented coupling dictionary:** `Lambda=pi/h` and the old mass comparison
+  were not supplied by C-IGR-004; the written mass algebra was also wrong.
+  The corrected bridge keeps Lambda symbolic and separates raw-action
+  normalization from G_total.
 
-## F2 — the boost-product composition (REPAIRED)
+## Rejected correction routes
 
-Composing per-center radial boosts as Q₁Q₂M₀Q₂ᵀQ₁ᵀ produced a non-decaying
-EM artifact: composing non-aligned boosts generates rotations (the Wigner
-channel), which the quartic curvature reads as large EM structure.
-Repair: the additive shared field θ(x) = θ_clock(r₁) + θ_clock(r₂) on the
-engine's single fixed boost axis (the seed_M class — the issue's own
-object), i.e. the boost-angle superposition, the boost-channel analog of
-the M5.17 tilt superposition.
+- Unrestricted rapidity-field descent was built and rejected because it
+  enters M5.21.14's proven scale-free negative UV channel. This is an
+  environment-compatible scientific rejection, not an early stop.
+- Smooth localized-profile multistart minimization was built; its raw force
+  exponent was about `-1.24` and logarithmic energy fit won. Rejected.
+- Projected full-angle descent and a stationarity root solve did not produce
+  a converged two-source solution. Rejected.
+- Unpanelled global Gauss quadrature oscillated under node refinement.
+  Source/core-aligned composite panels repaired it.
 
-## F3 — the LdG-well confinement artifact (REPAIRED)
+## Selected construction
 
-Static relaxation of the boost dressing with the development amplitude well
-(κ > 0) collapsed the dressing to the core: the well pins the undressed
-trace t* and fights every boost. This produced the "no smooth decaying
-mediator exists" development conclusion — an artifact of the added well,
-not of the engine functional. Repair: κ = 0 (the N-3 record object
-u + 1.558u²); the non-decaying branch reappears and settles at the M5.21.8
-attractor band (0.10–0.11 vs the measured 0.10254).
+The selected object is the upstream-authorized guarded M5.21.8 rigid family:
+one rapidity, both clock cores pinned, minimized at every separation on the
+same n³ composite lattice used for the measurement. It is not a reduced
+objective: M5.21.14 requires a constraint or exact finite-g stabilizer and
+explicitly permits constrained smooth profiles.
 
-## F4 — the scale-free oscillatory channel (GUARDED)
-
-Unconstrained FIRE on the κ = 0 functional rides the known unbounded
-oscillatory boost channel (M5.21.14 §4; M5.20.3): measured energy dives
-with growing zigzag amplitude and forward/central blowup. Guard: band-limited
-(sigma = 2 px) descent directions (the M5.8.2f doctrine), zigzag and
-fwd/cen monitors recorded. The frozen-branch protocol avoids the channel
-by construction (the tail is the engine-measured attractor profile).
-
-## F5 — the fit window (REPAIRED)
-
-Including separations out to 2(L − 4h) admits box-edge contamination and
-degraded the fit (R² 0.84, exponent −2.5 at 48³ in one development run).
-Repair: the mid-range window [4.1, 0.9L] with a disclosed small-box
-extension to four points at 24³. A rounding mismatch between the stored
-row separations and the unrounded window bounds dropped the last point
-from the ladder fits; repaired by fitting on the stored values' own range.
-
-## Residual honesty items (disclosed, not repaired)
-
-- The forward-stencil twin's force exponent at 48³ deviates 0.116 from −2
-  (pre-registered band 0.08): the one-sided quadrature's known overestimate
-  of textured gradients dominates the exponent uncertainty; the sign, the
-  1/d form, and R² survive (see the findings note § 5, G9 row).
-- |C| still drifts +13% from 32³ to 48³ (window-bounded); the exponent is
-  the converged quantity.
-- The wiring dictionary's unit-identity (grid ↔ physical units) is out of
-  scope by the issue text and not claimed.
+The selected construction passes both convergence axes, exact null, source
+deletion, derivative sensitivity, and the separate cylindrical audit. No
+residual corrective item remains inside issue #96.

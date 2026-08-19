@@ -3,55 +3,69 @@ base_release: v0.163.0
 source_baseline: substrate-framework@a96399f
 canonical_issue: "96"
 question: >-
-  Measure the attractive 1/r^2 inter-mass force in the M5 (liquid crystal)
-  model's induced-gravity (GEM) sector between two driven M5.8 fixed-clock
-  configs, on the public openwave M5 engine, and wire the measured coupling
-  into the accepted composition: does the two-clock GEM interaction energy
-  obey U_gem(d) = U_inf + C/d with C < 0 (attractive Newton force F = C/d^2),
-  is the exponent driven to -2 and stable across the engine's box ladder
-  (24^3 -> 32^3 -> 48^3, fixed h ~ 0.52, box grows), does the measured sign
-  match C-GRV-002's attractive branch sign(1/G_total) with the M5 mediator
-  dictionary (B = 0 purely-induced, N = 1, xi = 0, Lambda = pi/h, z = 0), is
-  the magnitude consistent with 1/G_total = Lambda^2 J(0)/(12 pi) under that
-  dictionary, and does every mandated control pass (zero-boost null, source
-  mutation, mixing-free class, anti-pair sign flip, relaxed-shared-field
-  mediation, forward-stencil twin)?
+  On the public OpenWave M5 engine, does the shared, relaxed GEM field of two
+  driven M5.8 fixed-clock configurations produce an attractive inter-source
+  force F(d) proportional to d^-2, stable under the required 24^3 -> 32^3 ->
+  48^3 growing-box ladder and a separate fixed-domain grid refinement, and
+  can its normalized Green kernel be wired to accepted C-IGR-004 / C-GRV-002
+  without inventing a cutoff or changing an accepted claim?
+positive_objective: >-
+  A directly differenced attractive force curve with exponent -2, a
+  genuinely relaxed shared field at every distance and rung, converged raw
+  magnitude, mandatory null/mutation/independent-pipeline controls, and a
+  typed conditional G_total coefficient bridge.
+coordination_boundary: >-
+  This campaign lands in substrate-framework and resolves issue #96.  It
+  does not edit OpenWave MODELS.md or open an OpenWave pull request; that is
+  the separately requested follow-on discussion.
 source_inventory:
-  - source: openwave-labs/openwave@614a223 (public Apache-2.0 clone)
-    access: openwave/xperiments/m5_liquid_crystal/research/{scripts,findings,data}
-    extracted: the M5.8 seed_M class (m5_8_2q_delta_scaling.py: u_sectors EM/GEM
-      split, the N-3 anchor H_static = 16.7379), the two-charge angle-superposition
-      texture (m5_17_two_charge.py pair_field, gate C0), the M5.21.8 rigid-dressing
-      attractor m*/artanh(1/g) = 0.8168 at g = 8, the M5.21.14 constrained-smooth-profile
-      guard for the boost-dressing boundedness, the M5.12 mixing-free class control
-  - source: accepted C-IGR-004 (v0.162.0, PR #89 / P231)
-    access: governance/claims.yaml, src/substrate_framework/total_gravitational_coupling.py
-    extracted: 1/G_total = B + N*(1-6*xi)*Lambda^2*J(z)/(12*pi) with J_sharp =
-      exp(-z) - z*E1(z), J_smooth = 2*sqrt(z)*K_1(2*sqrt(z)), J(0) = 1, usable
-      scheme set {sharp, smooth}
-  - source: accepted C-GRV-002 (v0.162.0, PR #89 / P231)
-    access: governance/claims.yaml, total_gravitational_coupling.attractive_sign_map
-    extracted: attractive iff 1/G_total > 0 with the sign carried by (1-6*xi) on
-      the usable set; conformal point xi = 1/6 marginal
+  - source: openwave-labs/openwave@614a223fff4ca0fa53a5c4fbc79cc5347a341d69
+    role: >-
+      Public M5.8 quartic-commutator engine and fixed-clock constants; M5.17
+      angle-superposition texture; M5.21.8 rigid rapidity family; M5.21.14
+      mandatory constrained-profile guard.
+  - source: accepted C-IGR-004 and C-GRV-002 in v0.162.0
+    role: >-
+      Conditional total gravitational coupling and exact attractive-sign
+      map, imported through src/substrate_framework/total_gravitational_coupling.py.
 invariants:
-  - >-
-    the measurement runs entirely in-platform on the public openwave engine
-    (numpy only, canonical sandbox_v8 imports; no unverified imported numbers)
-  - >-
-    the two-body observable is never an imposed-envelope overlap: the pair
-    texture is the merged two-charge angle-superposition construction and the
-    shared boost field is either the engine's own measured attractor branch
-    (frozen protocol) or relaxed with both clock cores pinned (mediation arm)
-  - >-
-    the d-independent far-field self-energy background is absorbed by the
-    two-parameter fit U_inf + C/d (the M5.17 E0 + A/d protocol) and cancels
-    identically in F = -dU/dd
-  - >-
-    C-IGR-004 / C-GRV-002 enter as public Apache-2.0 provenance evaluated
-    in-platform through this repository's own accepted module
+  - MODELS.md and governance/claims.yaml remain unchanged.
+  - The two-center frame is orthogonal and q2=0 is exactly the single source.
+  - One ambient rapidity is shared by both pinned clock cores and is minimized
+    on the same n^3 lattice used for the observable.
+  - Pair and both single densities are subtracted pointwise on one common
+    mask before integration.
+  - The force exponent is fitted from direct finite differences of raw U(d),
+    never from a residual created by a forced 1/d energy fit.
+  - Lambda stays a positive symbolic premise because C-IGR-004 supplies no
+    unique numerical normalization.
+candidates:
+  - id: guarded_rigid_shared_rapidity
+    status: selected
+    rationale: >-
+      Canonical M5.21.8 profile class; M5.21.14 expressly permits constrained
+      smooth profiles and forbids an unguarded full-field descent.
+  - id: unrestricted_local_rapidity_descent
+    status: rejected
+    rationale: >-
+      Enters the upstream-proven scale-free negative UV channel and therefore
+      does not define the requested relaxed physical state.
+  - id: imposed_two_envelope_overlap
+    status: prohibited
+    rationale: >-
+      Explicitly banned by issue #96 and known to manufacture steep overlap
+      exponents.
 deliverables:
-  - evidence/m5_96_two_clock_gem_newton.py (openwave drop-in, canonical imports)
-  - evidence/m5_96_two_clock_gem_newton.json (full data record)
-  - evidence/findings-note.md (equations-first method note)
-  - evidence/plots (U(d) + ladder + controls)
-  - verify.py (wiring + record consistency, this repository's environment)
+  - evidence/m5_96_two_clock_gem_newton.py
+  - evidence/m5_96_two_clock_gem_newton.json
+  - evidence/m5_96_independent_audit.json
+  - evidence/findings-note.md
+  - evidence/plots/m5_96_ud_ladder.png
+  - evidence/plots/m5_96_controls.png
+  - reviews/independent_force_audit.py
+  - verify.py
+claim_delta: none; evidence campaign only, accepted claims are unchanged
+target_kind: simulation_evidence
+comparator_blinding: >-
+  No external gravitational constant or observed comparator was inspected;
+  -2, sign, ladder, and mutation thresholds came from issue #96.

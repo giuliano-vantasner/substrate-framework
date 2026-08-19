@@ -1,17 +1,38 @@
-record: P236 measurement
-engine: openwave-labs/openwave@614a223 (public Apache-2.0 clone)
-driver: evidence/m5_96_two_clock_gem_newton.py (canonical sandbox_v8 imports; drop-in)
-environment: anaconda numpy stack; run log evidence/run-log.txt
-primary_provenance:
-  - m5_8_2q_delta_scaling.py (u_sectors EM/GEM split; the N-3 anchor 16.7379)
-  - m5_17_two_charge.py (the two-charge angle-superposition texture, gate C0)
-  - m5_21_8 lattice record (the rigid-dressing attractor m*/artanh(1/g)=0.8168 at g=8)
-  - m5_21_14 method note (the constrained-smooth-profile boundedness guard)
-  - m5_12 block-11 sign theorem (the mixing-free class control)
-formula_freeze:
-  observable: "U_gem(d) = GEM[pair](d) - 2*GEM[single]"
-  fit: "U_gem(d) = U_inf + C/d (two-parameter least squares on the mid window)"
-  force: "F(d) = -dU/dd = C/d^2"
-  mediator: "theta(x) = theta_clock(r1) + theta_clock(r2); theta_clock(r) = b* e^{-(r/RW)^2} + a0 (1 - e^{-(r/RW)^2}); a0 = 0.8168 artanh(1/g)"
-  gates: G0..G10 as listed in evidence/findings-note.md section 5
-frozen_before_production: true
+campaign: P236
+attempt: attempt-0002
+canonical_issue: "96"
+frozen_transaction:
+  field: >-
+    M=O4 B(a) diag(8,1,0.3,0) B(a)^T O4^T, with the orthogonal M5.17
+    two-center angle frame and one shared ambient rapidity a.
+  relaxation: >-
+    At each (n,D,d), minimize H_static=sum[u+1.558*u^2] over a in (0,0.3),
+    with both Gaussian clock cores pinned at B_STAR=0.13.  This is the
+    guarded M5.21.8 family authorized by M5.21.14.
+  interaction_density: "u_pair - u_single_1 - u_single_2 on the common pair mask"
+  force: "F(d_i+1/2)=-(U(d_i+1)-U(d_i))/(d_i+1-d_i)"
+  exponent: "least-squares slope of log(-F) against log(d_mid), only if every F<0"
+  energy_model: "U(d)=U_inf+C/d, compared against offset+log(d) and offset+d"
+  distance_window: [24, 32, 40, 48, 56, 64, 72]
+  growing_box_ladder: [[24, 96], [32, 108], [48, 120]]
+  fixed_domain_grid_refinement: [[24, 120], [32, 120], [48, 120]]
+  pointwise_derivative_epsilon: 0.0002
+gates:
+  exponent: "abs(p_F+2)<0.10 on every rung"
+  attractive: "every directly differenced F<0"
+  model_selection: "RMSE(1/d)<min(RMSE(log d),RMSE(d))/10"
+  relaxation: "interior minimum, positive curvature, abs(dH/da)<0.005"
+  box_convergence: "coefficient spread<3%; exponent spread<0.04"
+  grid_convergence: "32^3->48^3 coefficient change<1%; exponent change<0.02"
+  zero_boost: "GEM==0 exactly"
+  mutation: "delete clock 2 texture; peak-force collapse>10 and exponent moves>0.5"
+  independent_pipeline: "C within 6%, exponent within 0.08, own inverse-square gate"
+  derivative_sensitivity: "relative spread<1 ppm"
+coupling_bridge:
+  accepted_formula: "1/G_total=B+N(1-6xi)Lambda^2 J(z)/(12pi)"
+  branch: "B=0, N=1, xi=0, z=0; Lambda remains symbolic positive"
+  action_normalization: >-
+    Z_GEM=abs(C_48) is the measured raw unit-source action normalization;
+    K=(U-U_inf)/Z_GEM has coefficient -1, so U_N=G_total*m1*m2*K.
+  magnitude_oracle: "independent cylindrical Z_GEM agrees within 6%"
+frozen_before_corrected_production: true

@@ -1,20 +1,31 @@
-[G0] N-3 anchor: H_static = 16.7379 (target 16.7379)  PASS
-[ladder] 24^3 -> 48^3 ...
-  24^3 L=6.0: U_gem =   -63.09 +  -503.27/d  R2=0.95799  F exp -2.056  (b0 null 0.0e+00)
-  32^3 L=8.0: U_gem =  -212.25 +  -341.23/d  R2=0.97485  F exp -2.042  (b0 null 0.0e+00)
-  48^3 L=12.0: U_gem =  -405.35 +  -335.42/d  R2=0.97336  F exp -2.071  (b0 null 0.0e+00)
-[controls] ...
-sandbox_v8/m5_8_2cb_taichi_constrained.py:692: RuntimeWarning: invalid value encountered in divide
-  rhat /= np.sqrt(np.einsum("...i,...i->...", rhat, rhat))[..., None]
-  a0=0.0500: C=  -135.43  C/sinh^2= -54128.6  F exp -1.981
-  a0=0.1026: C=  -367.19  C/sinh^2= -34759.3  F exp -2.041
-  a0=0.1500: C=  -740.44  C/sinh^2= -32662.8  F exp -2.054
-  a0=0.2000: C= -1333.62  C/sinh^2= -32899.4  F exp -2.053
-  anti-pair: C_gem= +322.24 (like  -367.41), C_em= -227.84
-  mutation: C=  -87.55  collapse factor 4.20
-  mixing-free uniaxial: |U_gem| <= 4.88e-30 (exact-zero control)
-[mediation] relaxed shared field at 32^3 ...
-  relaxed: C=-321.31, F exp -2.048
-[audit] forward-stencil twin at 48^3 ...
-  fwd twin: C=-302.03, F exp -2.116
-done in 1050.7s -> data/m5_96_two_clock_gem_newton.json
+P236 corrected production receipt (2026-08-19)
+
+Engine: openwave-labs/openwave@614a223fff4ca0fa53a5c4fbc79cc5347a341d69
+Driver: evidence/m5_96_two_clock_gem_newton.py all
+Independent: reviews/independent_force_audit.py --write
+
+N-3 anchor: H_static=16.7379187770 PASS
+Frame: max |O^T O-I|=8.881784197e-16; q2=0 single residual=0 PASS
+
+Growing-box ladder:
+  24^3 D=96   C=-123.0796065483  R2=0.9999950721  force p=-2.0319783141
+  32^3 D=108  C=-124.9992835635  R2=0.9999833428  force p=-2.0436125852
+  48^3 D=120  C=-123.9048062616  R2=0.9999537280  force p=-2.0601830017
+
+Fixed-domain D=120 grid refinement:
+  24^3 C=-118.3185641821  force p=-2.0440271360
+  32^3 C=-123.8230974171  force p=-2.0466141207
+  48^3 C=-123.9048062616  force p=-2.0601830017
+
+Controls:
+  zero boost GEM=0.0 exactly at d=24,48,72
+  delete clock-2 texture: peak force collapse=16.5221; p=-3.0866964829
+  derivative epsilon 1e-4..1e-3: relative GEM spread <1 ppm
+
+Independent cylindrical pipeline (D=120, h=0.75):
+  C=-118.3291126263; force p=-2.0203674717
+  C difference from primary=4.49998%; exponent difference=0.0398155
+  REFUTE doors: 5/5 PASS
+
+Verifier: campaigns/P236-two-clock-gem-newton/verify.py
+Accepted claims changed: none

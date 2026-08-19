@@ -1,0 +1,77 @@
+{
+  "all_pass": true,
+  "domain": 120.0,
+  "fit": {
+    "C": -118.3291126263401,
+    "Uinf": 0.5972869270902275,
+    "alternative_rmse": {
+      "linear": 0.3352482059223725,
+      "log": 0.17136272806969585
+    },
+    "force": [
+      -0.15404559961149827,
+      -0.09252001725725273,
+      -0.061657567650089534,
+      -0.04398694989115287,
+      -0.03294166549073671,
+      -0.025679417428365103
+    ],
+    "force_exponent": -2.0203674717353297,
+    "rmse": 0.00032936202531877646
+  },
+  "pipeline": "uniform cylindrical finite differences; no production imports",
+  "primary_C_relative_difference": 0.0449998172266066,
+  "primary_exponent_absolute_difference": 0.039815529961800156,
+  "refute_doors": {
+    "A_force_is_attractive": true,
+    "B_exponent_is_inverse_square": true,
+    "C_independent_magnitude_agrees": true,
+    "D_independent_exponent_agrees": true,
+    "E_1_over_d_beats_alternatives": true
+  },
+  "rows": [
+    {
+      "d": 24.0,
+      "em": 4.021378712027098,
+      "gem": -4.333166600937098,
+      "rapidity": 0.08542795251240677
+    },
+    {
+      "d": 32.0,
+      "em": 2.856100109655571,
+      "gem": -3.1008018040451115,
+      "rapidity": 0.08465154516243092
+    },
+    {
+      "d": 40.0,
+      "em": 2.150763854508264,
+      "gem": -2.3606416659870897,
+      "rapidity": 0.08413551399491796
+    },
+    {
+      "d": 48.0,
+      "em": 1.6774842572082147,
+      "gem": -1.8673811247863734,
+      "rapidity": 0.08377216965976302
+    },
+    {
+      "d": 56.0,
+      "em": 1.3377980720783218,
+      "gem": -1.5154855256571504,
+      "rapidity": 0.08350541310241805
+    },
+    {
+      "d": 64.0,
+      "em": 1.082030319818008,
+      "gem": -1.2519522017312568,
+      "rapidity": 0.08330363073905597
+    },
+    {
+      "d": 72.0,
+      "em": 0.8817529229091448,
+      "gem": -1.046516862304336,
+      "rapidity": 0.08314808773035154
+    }
+  ],
+  "spacing": 0.75
+}
