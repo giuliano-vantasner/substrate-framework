@@ -19,7 +19,7 @@ coordination_boundary: >-
   does not edit OpenWave MODELS.md or open an OpenWave pull request; that is
   the separately requested follow-on discussion.
 source_inventory:
-  - source: openwave-labs/openwave@614a223fff4ca0fa53a5c4fbc79cc5347a341d69
+  - source: openwave-labs/openwave@614a223fff01b768550b0917d0f96621d6bbe155
     role: >-
       Public M5.8 quartic-commutator engine and fixed-clock constants; M5.17
       angle-superposition texture; M5.21.8 rigid rapidity family; M5.21.14

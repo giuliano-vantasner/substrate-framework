@@ -57,3 +57,8 @@ landing_record:
     - "102"
   issue_state: closed
   branch_cleanup: complete
+provenance_correction:
+  invalid_expansion: 614a223fff4ca0fa53a5c4fbc79cc5347a341d69
+  verified_source_oid: 614a223fff01b768550b0917d0f96621d6bbe155
+  record: attempts/0003/manifest.yaml
+  scientific_delta: none
