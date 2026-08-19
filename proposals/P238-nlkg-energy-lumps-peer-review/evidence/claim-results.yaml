@@ -1,26 +1,35 @@
 schema_version: 1
 campaign: P238
-adjudicated_at: '2026-08-19T20:42:30+00:00'
+adjudicated_at: '2026-08-19T21:57:52+00:00'
+review_scope: manuscript_internal_peer_review
+novelty_role: not_a_criterion
+replacement_policy: >-
+  When a claim needs revision, preserve its intended purpose where possible by
+  supplying replacement language, mathematics, or executable SymPy, Lean, or
+  SciPy evidence rather than treating the finding as a framework gate.
 canonical_issue: https://github.com/vantasnerdan/substrate-framework/issues/108
 pull_request: https://github.com/vantasnerdan/substrate-framework/pull/145
+repair_guide: evidence/repair-guide.md
 source_sha256: 7cd35b8c397e874b581ce6da83c05b7047c256439d615d2f05cbbfb33536dd36
-meaning_of_pass: >-
-  A pass means the frozen, bounded statement survived its stated oracle. It is
-  not automatic acceptance into the Substrate claim registry.
+meaning_of_supported: >-
+  Supported means the frozen, bounded paper statement follows from the paper's
+  own definitions, equations, assumptions, and cited dependencies under its
+  stated oracle. Repository claims are not comparators.
 meaning_of_resolved: >-
-  The review question has a terminal evidence-backed disposition. A rejected
-  or qualified paper claim is resolved review work, not unrecorded debt.
+  The review unit has a complete evidence-backed assessment and a concrete
+  revision path. It does not mean the research direction is gated or
+  permanently closed.
 counts:
   total: 18
-  pass: 5
-  qualified: 4
-  fail: 9
+  supported: 5
+  revision_required: 13
   resolved: 18
 open_debt: []
 claims:
   - id: P238-S01
-    issue: https://github.com/vantasnerdan/substrate-framework/issues/127
-    disposition: qualified
+    issue: https://github.com/vantasnerdan/substrate-framework/issues/109
+    disposition: revision_required
+    repair_class: language_scope
     resolved: true
     finding: >-
       The material-derivative square and displayed action expansion are exact.
@@ -28,10 +37,11 @@ claims:
       most general scalar continuum action without additional symmetry,
       locality, derivative-order, and coupling assumptions.
     correction: Replace "most general" with a scoped modelling ansatz and list the excluded couplings.
-    evidence: [companion/sympy_checks.py, companion/P238PaperChecks.lean]
+    evidence: [companion/sympy_checks.py, companion/P238PaperChecks.lean, evidence/repair-guide.md]
   - id: P238-S02
-    issue: https://github.com/vantasnerdan/substrate-framework/issues/128
-    disposition: qualified
+    issue: https://github.com/vantasnerdan/substrate-framework/issues/110
+    disposition: revision_required
+    repair_class: algebraic_language_correction
     resolved: true
     finding: >-
       Equations (6)-(9), including the full two-dimensional product-rule
@@ -39,10 +49,11 @@ claims:
       equation also contains U''(0)u/rho0; only its principal part is the
       massless convective wave operator quoted in the paper.
     correction: Say "principal part/characteristic operator" or retain the mass term explicitly.
-    evidence: [companion/sympy_checks.py]
+    evidence: [companion/sympy_checks.py, companion/sympy_replacements.py, evidence/repair-guide.md]
   - id: P238-S03
-    issue: https://github.com/vantasnerdan/substrate-framework/issues/129
-    disposition: fail
+    issue: https://github.com/vantasnerdan/substrate-framework/issues/111
+    disposition: revision_required
+    repair_class: scope_or_directional_interface_derivation
     resolved: true
     finding: >-
       The determinant condition has the advertised dimensions and isotropic
@@ -51,20 +62,22 @@ claims:
       diag(4,1/4) have equal determinant and normal-incidence reflection
       coefficient 1/3 at an interface normal to the first axis.
     correction: Present determinant matching as a constitutive normalization, not a general reflectionless condition; derive interface matching for each propagation direction and polarization.
-    evidence: [companion/sympy_checks.py, companion/scipy_checks.py, companion/P238PaperChecks.lean]
+    evidence: [companion/sympy_checks.py, companion/scipy_checks.py, companion/P238PaperChecks.lean, companion/sympy_replacements.py, evidence/repair-guide.md]
   - id: P238-S04
-    issue: https://github.com/vantasnerdan/substrate-framework/issues/130
-    disposition: pass
+    issue: https://github.com/vantasnerdan/substrate-framework/issues/112
+    disposition: supported
+    repair_class: none
     resolved: true
     finding: >-
       Conditional on imposing the determinant constraint as a modelling
       normalization, equations (14)-(20) reconstruct rho and Theta from SPD A
       and define N=c0*A^(-1/2) with the stated principal values.
-    correction: Decouple this algebraic pass from the failed reflectionless interpretation in P238-S03.
+    correction: Decouple this supported algebra from the broader reflectionless wording in P238-S03.
     evidence: [companion/sympy_checks.py]
   - id: P238-S05
-    issue: https://github.com/vantasnerdan/substrate-framework/issues/131
-    disposition: fail
+    issue: https://github.com/vantasnerdan/substrate-framework/issues/113
+    disposition: revision_required
+    repair_class: algebraic_correction
     resolved: true
     finding: >-
       The dispersion relation is correct, but a generic directional phase
@@ -72,10 +85,11 @@ claims:
       45 degrees these give sqrt(10)/5 and 3/4. They agree only on principal
       axes or in the isotropic limit.
     correction: Define the directional index by the inverse square root of the acoustic quadratic form; do not call it the ordinary quadratic form of N.
-    evidence: [companion/sympy_checks.py, companion/scipy_checks.py]
+    evidence: [companion/sympy_checks.py, companion/scipy_checks.py, companion/sympy_replacements.py, evidence/repair-guide.md]
   - id: P238-S06
-    issue: https://github.com/vantasnerdan/substrate-framework/issues/132
-    disposition: fail
+    issue: https://github.com/vantasnerdan/substrate-framework/issues/114
+    disposition: revision_required
+    repair_class: model_change_or_new_existence_evidence
     resolved: true
     finding: >-
       The cited Benci-Fortunato result is for a complex U(1)-charged field; its
@@ -84,11 +98,12 @@ claims:
       for the paper's single real 2+1D scalar under the listed potential
       conditions. A positive binding-condition example also exhibits the
       two-dimensional Derrick obstruction for nonzero static real lumps.
-    correction: Supply a theorem for the actual real field and dimension, or a concrete time-dependent numerical family with persistence and error evidence.
-    evidence: [evidence/literature-audit.md, companion/sympy_checks.py]
+    correction: Use the supplied finite-time 2+1D real sine-Gordon trajectory, or add a theorem for the actual field and dimension; do not retain the all-potential theorem wording.
+    evidence: [evidence/literature-audit.md, companion/sympy_checks.py, companion/scipy_replacements.py, evidence/repair-guide.md]
   - id: P238-S07
-    issue: https://github.com/vantasnerdan/substrate-framework/issues/133
-    disposition: qualified
+    issue: https://github.com/vantasnerdan/substrate-framework/issues/115
+    disposition: revision_required
+    repair_class: language_scope_or_error_estimate
     resolved: true
     finding: >-
       Scale separation is a legitimate declared hypothesis, not a validated
@@ -96,10 +111,11 @@ claims:
       internal-mode treatment, and gradient-error bound it cannot carry the
       later particle claims.
     correction: Keep the eikonal statement explicitly hypothetical until those quantities are supplied.
-    evidence: [evidence/literature-audit.md, reviews/peer-review.md]
+    evidence: [evidence/literature-audit.md, companion/scipy_replacements.py, evidence/repair-guide.md]
   - id: P238-S08
-    issue: https://github.com/vantasnerdan/substrate-framework/issues/134
-    disposition: fail
+    issue: https://github.com/vantasnerdan/substrate-framework/issues/116
+    disposition: revision_required
+    repair_class: new_collective_coordinate_derivation
     resolved: true
     finding: >-
       Substitution of the displayed rigid translation ansatz into a field
@@ -109,21 +125,25 @@ claims:
       breather and omits the decisive integral; the current draft explicitly
       defers its concrete profile calculation.
     correction: Derive the effective action from an explicit velocity-dependent localized family, including the spatial integral, approximation order, and radiation/internal-mode error.
-    evidence: [evidence/literature-audit.md, companion/sympy_checks.py, companion/P238PaperChecks.lean]
+    evidence: [evidence/literature-audit.md, companion/sympy_checks.py, companion/P238PaperChecks.lean, companion/sympy_replacements.py, companion/P238ReplacementProofs.lean, evidence/repair-guide.md]
   - id: P238-S09
-    issue: https://github.com/vantasnerdan/substrate-framework/issues/135
-    disposition: pass
+    issue: https://github.com/vantasnerdan/substrate-framework/issues/117
+    disposition: supported
+    repair_class: none
     resolved: true
     finding: >-
       Given a Lorentzian metric, the massive einbein elimination, null
-      specialization, and affine-geodesic identities are exact. They duplicate
-      accepted claims C-WLN-001 through C-WLN-003 and do not establish the
-      missing field-to-worldline bridge.
+      specialization, and affine-geodesic identities follow directly from the
+      paper's supplied worldline action. Independent elimination,
+      einbein-variation, and generic two-dimensional Euler-Lagrange calculations
+      pass. These conditional identities do not establish the separate missing
+      field-to-worldline bridge.
     correction: Cite the result as a conditional identity and separate it from the unsupported derivation of the metric action.
-    evidence: [companion/sympy_checks.py, governance/claims.yaml]
+    evidence: [companion/sympy_checks.py, companion/P238PaperChecks.lean]
   - id: P238-S10
-    issue: https://github.com/vantasnerdan/substrate-framework/issues/136
-    disposition: pass
+    issue: https://github.com/vantasnerdan/substrate-framework/issues/118
+    disposition: supported
+    repair_class: none
     resolved: true
     finding: >-
       With phase covector K=(-omega/c0,k), equations (29)-(32) reproduce the
@@ -132,8 +152,9 @@ claims:
     correction: State the covector sign convention and keep the wave and particle claims separate.
     evidence: [companion/sympy_checks.py]
   - id: P238-S11
-    issue: https://github.com/vantasnerdan/substrate-framework/issues/137
-    disposition: fail
+    issue: https://github.com/vantasnerdan/substrate-framework/issues/119
+    disposition: revision_required
+    repair_class: exact_matrix_correction
     resolved: true
     finding: >-
       Equations (33)-(38) are not the inverse of equations (29)-(31). At V=0,
@@ -141,21 +162,23 @@ claims:
       the inverse of nbar*g^ is nbar^(-1) times the block matrix with temporal
       entry -1+v^T*N^2*v, mixed block -N^2*v, and spatial block N^2.
     correction: Replace the full covariant dictionary, including the sign and power of N, and rederive every downstream metric coefficient.
-    evidence: [companion/sympy_checks.py, companion/scipy_checks.py, companion/P238PaperChecks.lean]
+    evidence: [companion/sympy_checks.py, companion/scipy_checks.py, companion/P238PaperChecks.lean, companion/sympy_replacements.py, companion/P238ReplacementProofs.lean, evidence/repair-guide.md]
   - id: P238-S12
-    issue: https://github.com/vantasnerdan/substrate-framework/issues/138
-    disposition: fail
+    issue: https://github.com/vantasnerdan/substrate-framework/issues/120
+    disposition: revision_required
+    repair_class: language_scope_pending_dependencies
     resolved: true
     finding: >-
       Time dilation, anisotropic ruler contraction, massive-lump free fall, and
       gravito-inertial equivalence do not follow from a principal-symbol null
       cone. Their load-bearing existence, collective-coordinate, metric-inverse,
-      and operational-observable dependencies fail or remain hypothetical.
-    correction: Remove these as conclusions; reintroduce individual observables only after a concrete lump calculation and corrected metric pass their own tests.
-    evidence: [evidence/claim-results.yaml, reviews/peer-review.md]
+      and operational-observable dependencies require correction or remain hypothetical.
+    correction: State these conclusions conditionally on the supplied boosted-family replacement, the corrected metric, and a future inhomogeneous residual/observable calculation.
+    evidence: [companion/sympy_replacements.py, companion/P238ReplacementProofs.lean, evidence/repair-guide.md]
   - id: P238-S13
-    issue: https://github.com/vantasnerdan/substrate-framework/issues/139
-    disposition: pass
+    issue: https://github.com/vantasnerdan/substrate-framework/issues/121
+    disposition: supported
+    repair_class: none
     resolved: true
     finding: >-
       For f=1-rs/r>0, the eigenvalues Arr=c0^2*f^2 and A_tang=c0^2*f give the
@@ -166,8 +189,9 @@ claims:
     correction: Retain the eigenvalue/null-speed construction but replace the covariant-map derivation.
     evidence: [companion/sympy_checks.py, companion/P238PaperChecks.lean]
   - id: P238-S14
-    issue: https://github.com/vantasnerdan/substrate-framework/issues/140
-    disposition: pass
+    issue: https://github.com/vantasnerdan/substrate-framework/issues/122
+    disposition: supported
+    repair_class: none
     resolved: true
     finding: >-
       The physical-basis profiles rho/rho0=f^(-3/4), Theta_r/Theta0=f^(5/4),
@@ -177,28 +201,31 @@ claims:
     correction: State the exterior domain and horizon singularity, and distinguish physical angular stiffness from its coordinate component.
     evidence: [companion/sympy_checks.py, companion/scipy_checks.py]
   - id: P238-S15
-    issue: https://github.com/vantasnerdan/substrate-framework/issues/141
-    disposition: fail
+    issue: https://github.com/vantasnerdan/substrate-framework/issues/123
+    disposition: revision_required
+    repair_class: rederive_after_metric_correction
     resolved: true
     finding: >-
       Equations (56)-(59) inherit the false covariant inverse from P238-S11, so
       their proposed coefficient-by-coefficient Kerr dictionary is invalid.
-    correction: Start from the exact block inverse and solve all independent conformal coefficient-ratio equations before assigning constitutive fields.
-    evidence: [companion/sympy_checks.py, companion/scipy_checks.py]
+    correction: Replace the map with the supplied exact ADM/acoustic equatorial Kerr solution, then assign constitutive fields from its corrected acoustic tensor.
+    evidence: [companion/sympy_checks.py, companion/scipy_checks.py, companion/sympy_replacements.py, companion/P238ReplacementProofs.lean, evidence/repair-guide.md]
   - id: P238-S16
-    issue: https://github.com/vantasnerdan/substrate-framework/issues/142
-    disposition: fail
+    issue: https://github.com/vantasnerdan/substrate-framework/issues/124
+    disposition: revision_required
+    repair_class: rename_or_solve_full_coefficient_system
     resolved: true
     finding: >-
       After the natural conformal scaling, the minimal model has gtphi=-a and
       gphiphi=r^2, whereas equatorial Kerr has gtphi=-a*rs/r and
       gphiphi=r^2+a^2+a^2*rs/r. It is not conformal to Kerr for generic
       nonzero a despite sharing gtt, grr, and selected characteristic surfaces.
-    correction: Rename it a minimal rotating acoustic model; do not claim an explicit Kerr reconstruction unless every independent coefficient ratio matches.
-    evidence: [companion/sympy_checks.py, companion/scipy_checks.py, companion/P238PaperChecks.lean]
+    correction: Use the supplied exact conformal Kerr coefficient solution; alternatively retain the original profiles but rename them a minimal rotating acoustic model.
+    evidence: [companion/sympy_checks.py, companion/scipy_checks.py, companion/P238PaperChecks.lean, companion/sympy_replacements.py, companion/P238ReplacementProofs.lean, evidence/repair-guide.md]
   - id: P238-S17
-    issue: https://github.com/vantasnerdan/substrate-framework/issues/143
-    disposition: qualified
+    issue: https://github.com/vantasnerdan/substrate-framework/issues/125
+    disposition: revision_required
+    repair_class: root_interpretation_correction
     resolved: true
     finding: >-
       Equations (68)-(72), the horizon roots, and the equatorial ergosurface are
@@ -206,17 +233,19 @@ claims:
       interpretation: the lower/counter-rotating root becomes positive inside
       the ergoregion, while the upper/co-rotating root stays positive.
     correction: Reverse that sentence and describe the result as the causal structure of the minimal model, not proof of full Kerr frame dragging.
-    evidence: [companion/sympy_checks.py, companion/scipy_checks.py]
+    evidence: [companion/sympy_checks.py, companion/scipy_checks.py, evidence/repair-guide.md]
   - id: P238-S18
-    issue: https://github.com/vantasnerdan/substrate-framework/issues/144
-    disposition: fail
+    issue: https://github.com/vantasnerdan/substrate-framework/issues/126
+    disposition: revision_required
+    repair_class: headline_scope_pending_dependencies
     resolved: true
     finding: >-
       The chain is not fully explicit: the cited existence theorem does not
       apply, the square-root reduction is not derived, the covariant metric is
       algebraically wrong, and the minimal rotating model is not Kerr. The
-      surviving wave-null-cone constructions support an analogue-kinematics
-      research program, not emergence of massive-particle SR, GR, or the
-      equivalence principle from the stated substrate.
-    correction: Replace the headline conclusion with the narrower validated wave-analogue results and label the remaining chain as future work.
-    evidence: [evidence/claim-results.yaml, reviews/peer-review.md]
+      surviving wave-null-cone constructions and supplied repairs support the
+      intended analogue-kinematics program, but the current draft does not yet
+      establish massive-particle SR, GR, or the equivalence principle from the
+      stated substrate.
+    correction: Use the repaired wave, real-lump, boosted-family, inverse, and exact-Kerr results, while keeping the inhomogeneous massive-lump error/observable bridge explicitly conditional.
+    evidence: [companion/sympy_replacements.py, companion/scipy_replacements.py, companion/P238ReplacementProofs.lean, evidence/repair-guide.md]

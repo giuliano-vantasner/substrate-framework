@@ -1,0 +1,63 @@
+receipt:
+  status: current
+  recorded_at: '2026-08-19T22:02:04+00:00'
+  repository_base_commit: f00d11b0fca02fd5ac27c80b0d00d8b7f5de8853
+  preceding_pr_head: 04abec44568b8f2fa8ae7ae63844f8f912cabe3d
+  frozen_tree: 101476673a14efaae09c7c667ed2c8b418a51d65
+  source_sha256: 7cd35b8c397e874b581ce6da83c05b7047c256439d615d2f05cbbfb33536dd36
+  review_scope:
+    kind: manuscript_internal_peer_review
+    comparator: paper definitions, equations, assumptions, and cited dependencies
+    novelty_criterion: false
+    substrate_role: workflow, executable primitives incorporated into replacements, impact validation, and storage
+  issue_correction:
+    canonical_claim_issues: '#109-#126'
+    duplicate_retry_issues: '#127-#144, closed with canonical pointers'
+  assessment:
+    claims_reviewed: 18
+    supported: 5
+    revision_required: 13
+    repair_path_supplied: 13
+    open_review_debt: 0
+  audit_oracles:
+    sympy: 29/29
+    scipy: 12/12
+    lean: 11/11
+  constructive_replacements:
+    sympy: 8/8
+    scipy: >-
+      1/1 finite-time real 2+1D sine-Gordon lump solution; leapfrog and
+      DOP853 agree, spatial refinement passes, late core-energy fractions
+      exceed 0.90
+    lean: 9/9
+    author_guide: evidence/repair-guide.md
+  preflight:
+    command: .agents/skills/physics-erdos-loop/scripts/preflight.sh
+    result: 7 checks passed, 0 warnings
+  focused_oracle:
+    command: .venv/bin/python proposals/P238-nlkg-energy-lumps-peer-review/verify.py
+    result: all inventory, canonical issue, assessment, debt, audit, and replacement checks pass
+  memory_contract:
+    command: >-
+      memory validate --base
+      /home/axis/worktrees/substrate-paper-peer-review/memory
+      /home/axis/worktrees/substrate-paper-peer-review/memory/codex/efforts/P238-nlkg-energy-lumps-peer-review.md
+    result: all required fields and sections pass
+  gitnexus:
+    command: gitnexus detect-changes --scope all --repo substrate-paper-review-108
+    result: 17 files, 19 symbols, 0 affected processes, low risk
+  repository_gate:
+    command: .venv/bin/python scripts/validate_changed.py --base origin/main
+    mode: fixed-only
+    result: >-
+      WORKFLOW VALID: 222 claims, 222 accepted, 4 proposals, 3 skills;
+      MIGRATION QUEUE: 218 units, 0 pending, 0 partial; all 963 files valid;
+      skill valid; all fixed repository checks pass
+  hygiene:
+    command: git diff --check
+    result: pass
+  note: >-
+    This receipt supersedes validation-receipt.yaml. Its own addition and later
+    issue/PR metadata do not change the frozen scientific or executable tree.
+    The 36 repository-wide memory warnings are pre-existing; the P238 contract
+    validates cleanly by explicit path.

@@ -55,4 +55,11 @@ theorem rigidAnsatzVelocityDependenceIsQuadratic
         inertia / 2 * flow ^ 2 - constant := by
   ring
 
+theorem masslessEinbeinVariationImpliesNullConstraint
+    (einbein tangentNorm : ℝ) (he : einbein ≠ 0)
+    (variation : -tangentNorm / (2 * einbein ^ 2) = 0) :
+    tangentNorm = 0 := by
+  field_simp [he] at variation
+  linarith
+
 end P238PaperChecks

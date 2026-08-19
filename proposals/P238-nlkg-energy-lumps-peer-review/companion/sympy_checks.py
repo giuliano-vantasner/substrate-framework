@@ -162,7 +162,9 @@ def run() -> list[Check]:
     quartic = sp.simplify(sp.diff(square_root, velocity, 4).subs(velocity, 0))
     record("P238-S08", "relativistic square root has nonzero quartic term", quartic != 0, quartic)
 
-    # P238-S09: exact conditional einbein identities, already accepted as C-WLN.
+    # P238-S09: derive the einbein, null-constraint, and affine-geodesic
+    # identities directly from the paper's action, without importing a
+    # framework claim as an oracle.
     qnorm, einbein_mass, signal_speed = sp.symbols(
         "qnorm einbein_mass signal_speed", positive=True
     )
@@ -171,6 +173,73 @@ def run() -> list[Check]:
     einbein_lagrangian = sigma / (2 * einbein) - einbein * (einbein_mass * signal_speed) ** 2 / 2
     eliminated = -einbein_mass * signal_speed * sp.sqrt(-sigma)
     record("P238-S09", "einbein elimination", _zero(einbein_lagrangian - eliminated), sp.simplify(einbein_lagrangian - eliminated))
+
+    einbein_symbol, mass_parameter = sp.symbols(
+        "einbein_symbol mass_parameter", nonzero=True, real=True
+    )
+    tangent_norm = sp.symbols("tangent_norm", real=True)
+    einbein_action = (
+        tangent_norm / (2 * einbein_symbol)
+        - einbein_symbol * mass_parameter**2 / 2
+    )
+    massless_constraint = sp.simplify(
+        -2 * einbein_symbol**2
+        * sp.diff(einbein_action.subs(mass_parameter, 0), einbein_symbol)
+    )
+    record(
+        "P238-S09",
+        "massless einbein variation imposes the null constraint",
+        _zero(massless_constraint - tangent_norm),
+        massless_constraint,
+    )
+
+    q0, q1 = sp.symbols("q0 q1", real=True)
+    coordinates = (q0, q1)
+    velocities = sp.symbols("velocity0 velocity1", real=True)
+    accelerations = sp.symbols("acceleration0 acceleration1", real=True)
+    metric = sp.Matrix(
+        [
+            [sp.Function("g00")(q0, q1), sp.Function("g01")(q0, q1)],
+            [sp.Function("g01")(q0, q1), sp.Function("g11")(q0, q1)],
+        ]
+    )
+    kinetic = sum(
+        metric[mu, nu] * velocities[mu] * velocities[nu]
+        for mu in range(2)
+        for nu in range(2)
+    ) / (2 * einbein_symbol)
+    for alpha in range(2):
+        momentum = sp.diff(kinetic, velocities[alpha])
+        total_momentum_derivative = sum(
+            sp.diff(momentum, coordinates[mu]) * velocities[mu]
+            + sp.diff(momentum, velocities[mu]) * accelerations[mu]
+            for mu in range(2)
+        )
+        euler_lagrange = sp.expand(
+            total_momentum_derivative - sp.diff(kinetic, coordinates[alpha])
+        )
+        lowered_geodesic = sum(
+            metric[alpha, nu] * accelerations[nu] for nu in range(2)
+        )
+        lowered_geodesic += sum(
+            sp.Rational(1, 2)
+            * (
+                sp.diff(metric[alpha, nu], coordinates[mu])
+                + sp.diff(metric[alpha, mu], coordinates[nu])
+                - sp.diff(metric[mu, nu], coordinates[alpha])
+            )
+            * velocities[mu]
+            * velocities[nu]
+            for mu in range(2)
+            for nu in range(2)
+        )
+        residual = sp.simplify(einbein_symbol * euler_lagrange - lowered_geodesic)
+        record(
+            "P238-S09",
+            f"constant-einbein geodesic identity component {alpha}",
+            _zero(residual),
+            residual,
+        )
 
     # P238-S10: phase-covector contraction reproduces equation (21).
     omega, kx, ky, c0, ax, ay, flow_x, flow_y = sp.symbols(

@@ -21,22 +21,23 @@ semantic_queries:
       - src/substrate_framework/substrate_metric.py
       - src/substrate_framework/gordon_scalar_compatibility.py
     conclusion: >-
-      The paper overlaps accepted conditional wave/effective-metric surfaces,
-      but P238 changes no accepted implementation.
+      Operational impact search only: these existing files are not inputs to
+      the scientific adjudication and P238 changes none of them.
   - query: einbein relativistic particle massless geodesic
     principal_results:
       - src/substrate_framework/relativistic_particle.py
       - campaigns/P227-einbein-worldline-harvest/verify.py
       - tests/test_relativistic_particle.py
-    conclusion: P238-S09 duplicates accepted C-WLN-001 through C-WLN-003.
+    conclusion: >-
+      Operational impact search only. P238-S09 is independently rederived from
+      the paper and no existing einbein claim is used as an oracle.
   - query: nonlinear Klein Gordon oscillon localized
     principal_results:
       - campaigns/P044-p3d1-radial-sine-gordon-oscillon/verify.py
       - src/substrate_framework/radial_harmonic_balance.py
     conclusion: >-
-      Existing numerical evidence is model-specific and finite-time; it does
-      not supply the real-scalar existence theorem or particle bridge asserted
-      by the paper.
+      Operational impact search only. Existing repository oscillon work is
+      excluded from the paper's existence-claim adjudication.
 change_detection:
   command: gitnexus detect-changes --scope all --repo substrate-paper-review-108
   changed_files: 18
@@ -49,3 +50,13 @@ change_detection:
     accepted package, test, formal, claim-registry, release, or generated-doc
     surface. Direct P238 oracle replay and fixed repository validation are the
     complete impact-bounded gate.
+scope_correction_detection:
+  command: gitnexus detect-changes --scope all --repo substrate-paper-review-108
+  changed_files: 17
+  changed_symbols: 19
+  affected_processes: 0
+  risk: low
+  explanation: >-
+    The follow-up replaces framework-comparison language with manuscript-internal
+    peer review, remaps the canonical issues, and adds standalone constructive
+    SymPy/SciPy/Lean repairs. It still changes no accepted runtime consumer.

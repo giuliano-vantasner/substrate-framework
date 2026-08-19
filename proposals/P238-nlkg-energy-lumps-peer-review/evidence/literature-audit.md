@@ -1,7 +1,8 @@
 # P238 primary-source and prior-work audit
 
-This audit uses cited sources only to check hypotheses, provenance, and
-nonduplication. The paper remains the object under review, not an authority.
+This audit uses only sources invoked by the paper to check the hypotheses of
+the paper's own literature-dependent claims. Substrate claims and
+implementations are not scientific comparators.
 
 ## Benci–Fortunato existence result
 
@@ -60,21 +61,10 @@ Schwarzschild null cone as wave-principal-symbol results. It does not supply
 the missing massive-lump collective-coordinate or operational clock/ruler
 bridge.
 
-## Accepted Substrate precedents
+## Scope boundary
 
-The accepted registry was searched before deciding whether any result was a
-new framework claim:
-
-- `C-GOR-001` is an exact conditional isotropic Gordon/acoustic metric and
-  explicitly excludes material or dynamical gravity.
-- `C-WLN-001`, `C-WLN-002`, and `C-WLN-003` already cover massive einbein
-  elimination, the massless/null geodesic specialization, and
-  reparametrization/conformal statements.
-- `C-PDE-001` supports a specific finite-time radial sine–Gordon oscillon and
-  explicitly excludes an exact eternal breather, particle ontology, or
-  gravitational interpretation.
-
-Therefore the exact einbein material is duplicate, while the surviving P238
-acoustic constructions remain conditional proposal evidence. No accepted
-claim is silently broadened and no registry promotion is requested by this
-review.
+The repository's prior claims were excluded from scientific adjudication. In
+particular, P238-S09 was rederived directly from equations (25)–(28) rather than
+replayed from a Substrate einbein claim. GitNexus and repository validation are
+used only to manage the PR's change impact; they do not support or falsify any
+paper conclusion.

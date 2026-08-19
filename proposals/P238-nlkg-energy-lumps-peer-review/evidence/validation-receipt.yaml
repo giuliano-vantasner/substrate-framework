@@ -1,4 +1,10 @@
 receipt:
+  status: superseded
+  superseded_by: validation-receipt-scope-corrected.yaml
+  supersession_reason: >-
+    The initial boundary omitted canonical issues #109-#126 and treated the
+    review too much like a framework gate. It is preserved for provenance but
+    is not the final P238 receipt.
   recorded_at: '2026-08-19T20:42:42+00:00'
   base_commit: f00d11b0fca02fd5ac27c80b0d00d8b7f5de8853
   frozen_tree: 2711b875534052662f436451bf4ed7a64904bfcb

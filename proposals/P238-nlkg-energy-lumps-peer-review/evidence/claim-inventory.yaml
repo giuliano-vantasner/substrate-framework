@@ -11,15 +11,14 @@ claims:
     source: pages 3-4, equations (1)-(5)
     kind: exact_construction
     statement: >-
-      The displayed 2+1D real-scalar action with material derivative expands as
-      stated and is a valid constitutive model; the phrase most general is a
-      separate overclaim unless additional symmetry and derivative assumptions
-      are declared.
+      The displayed material derivative and 2+1D real-scalar action expand as
+      stated, and equation (2) is the most general Lagrangian density that
+      incorporates the prescribed substrate flow.
     dependencies: [smooth real scalar field, prescribed rho Theta and V, SPD Theta]
     oracle: Lean polynomial identity plus SymPy algebra and model-scope audit
     acceptance: expansion is exact and the model is described as conditional rather than uniquely most general
-    status: resolved_qualified
-    issue: https://github.com/vantasnerdan/substrate-framework/issues/127
+    status: reviewed_revision_required
+    issue: https://github.com/vantasnerdan/substrate-framework/issues/109
   - id: P238-S02
     source: page 4, equations (6)-(9), and page 6 equation (21)
     kind: exact_derivation
@@ -29,8 +28,8 @@ claims:
     dependencies: [P238-S01, fixed background fields, discarded boundary terms]
     oracle: SymPy variational coefficient and substitution checks
     acceptance: every residual simplifies identically to zero with declared index conventions
-    status: resolved_qualified
-    issue: https://github.com/vantasnerdan/substrate-framework/issues/128
+    status: reviewed_revision_required
+    issue: https://github.com/vantasnerdan/substrate-framework/issues/110
   - id: P238-S03
     source: pages 4-5, equations (10)-(13)
     kind: constitutive_claim
@@ -41,8 +40,8 @@ claims:
     dependencies: [positive rho, SPD Theta, local orthonormal frame]
     oracle: SymPy isotropic/dimensional reduction plus anisotropic interface counterexample
     acceptance: algebra and dimensions pass, and the reflectionless statement follows for arbitrary direction rather than only determinant matching
-    status: resolved_fail
-    issue: https://github.com/vantasnerdan/substrate-framework/issues/129
+    status: reviewed_revision_required
+    issue: https://github.com/vantasnerdan/substrate-framework/issues/111
   - id: P238-S04
     source: pages 5-6, equations (14)-(20)
     kind: exact_construction
@@ -52,8 +51,8 @@ claims:
     dependencies: [P238-S03 determinant constraint, SPD A, c0^2=Theta0/rho0]
     oracle: SymPy diagonal spectral reconstruction and determinant identity
     acceptance: recovered fields satisfy A=Theta/rho and the matching condition identically
-    status: resolved_pass
-    issue: https://github.com/vantasnerdan/substrate-framework/issues/130
+    status: reviewed_supported
+    issue: https://github.com/vantasnerdan/substrate-framework/issues/112
   - id: P238-S05
     source: page 6, equations (21)-(22)
     kind: exact_wave_claim
@@ -64,8 +63,8 @@ claims:
     dependencies: [P238-S02, SPD A, local plane-wave approximation]
     oracle: SymPy diagonal anisotropic counterexample plus eigenaxis and isotropic limits
     acceptance: the two proposed directional-index definitions agree for generic directions and anisotropy
-    status: resolved_fail
-    issue: https://github.com/vantasnerdan/substrate-framework/issues/131
+    status: reviewed_revision_required
+    issue: https://github.com/vantasnerdan/substrate-framework/issues/113
   - id: P238-S06
     source: pages 6-7, section 4
     kind: theorem_application
@@ -76,8 +75,8 @@ claims:
     dependencies: [real scalar u, stated potential conditions, cited references 2 and 3]
     oracle: primary-source hypothesis audit plus SymPy Derrick-scaling countermodel
     acceptance: cited theorems apply to the paper's field type charge dimension and exact stated hypotheses
-    status: resolved_fail
-    issue: https://github.com/vantasnerdan/substrate-framework/issues/132
+    status: reviewed_revision_required
+    issue: https://github.com/vantasnerdan/substrate-framework/issues/114
   - id: P238-S07
     source: page 7, equation (23)
     kind: declared_hypothesis
@@ -87,8 +86,8 @@ claims:
     dependencies: [existence of a suitable localized family, scale separation, controlled internal modes]
     oracle: assumption ledger and residual-order requirement
     acceptance: retained as a declared hypothesis until a concrete profile gives a bounded residual and gradient expansion
-    status: resolved_qualified
-    issue: https://github.com/vantasnerdan/substrate-framework/issues/133
+    status: reviewed_revision_required
+    issue: https://github.com/vantasnerdan/substrate-framework/issues/115
   - id: P238-S08
     source: pages 7-8, equation (24)
     kind: reduction_claim
@@ -98,8 +97,8 @@ claims:
     dependencies: [P238-S01, P238-S06, P238-S07, explicit profile integrals]
     oracle: SymPy velocity-degree audit of the rigid ansatz and dependency closure
     acceptance: the field integral derives the square root and metric coefficients without assuming the desired worldline action
-    status: resolved_fail
-    issue: https://github.com/vantasnerdan/substrate-framework/issues/134
+    status: reviewed_revision_required
+    issue: https://github.com/vantasnerdan/substrate-framework/issues/116
   - id: P238-S09
     source: pages 7-8, equations (25)-(28) and geodesic paragraph
     kind: exact_conditional_identity
@@ -108,10 +107,10 @@ claims:
       to the massive square-root action, has a regular null specialization, and
       yields affine geodesics after constant-einbein gauge fixing.
     dependencies: [supplied metric, positive einbein, timelike or null constraint]
-    oracle: accepted C-WLN-001 through C-WLN-003 replay and Lean/SymPy cross-check
-    acceptance: exact duplication is identified and no field-to-worldline bridge is inferred from the identity alone
-    status: resolved_pass
-    issue: https://github.com/vantasnerdan/substrate-framework/issues/135
+    oracle: independent SymPy elimination null-variation and generic 2D Euler-Lagrange reconstruction plus Lean exact algebra
+    acceptance: all three conditional identities follow from equations (25)-(28) without importing an external framework claim
+    status: reviewed_supported
+    issue: https://github.com/vantasnerdan/substrate-framework/issues/117
   - id: P238-S10
     source: pages 8-9, equations (29)-(32)
     kind: exact_wave_geometry
@@ -121,8 +120,8 @@ claims:
     dependencies: [P238-S04, P238-S05 dispersion relation]
     oracle: SymPy quadratic-form reconstruction and sign-convention mutation
     acceptance: contraction with the phase covector reproduces the dispersion polynomial exactly
-    status: resolved_pass
-    issue: https://github.com/vantasnerdan/substrate-framework/issues/136
+    status: reviewed_supported
+    issue: https://github.com/vantasnerdan/substrate-framework/issues/118
   - id: P238-S11
     source: page 9, equations (33)-(38)
     kind: exact_matrix_claim
@@ -132,8 +131,8 @@ claims:
     dependencies: [P238-S10, SPD anisotropic A]
     oracle: SymPy exact block inversion plus diagonal anisotropic counterexample; Lean rational counterexample
     acceptance: claimed covariant and contravariant matrices multiply to the identity up to one scalar for unequal principal indices
-    status: resolved_fail
-    issue: https://github.com/vantasnerdan/substrate-framework/issues/137
+    status: reviewed_revision_required
+    issue: https://github.com/vantasnerdan/substrate-framework/issues/119
   - id: P238-S12
     source: page 8, section 6 consequence bullets
     kind: physical_bridge
@@ -143,8 +142,8 @@ claims:
     dependencies: [P238-S06, P238-S07, P238-S08, correct induced metric, operational clock and ruler observables]
     oracle: dependency-closure and countermodel audit
     acceptance: each observable is derived from a concrete lump family and survives internal-mode and finite-size corrections
-    status: resolved_fail
-    issue: https://github.com/vantasnerdan/substrate-framework/issues/138
+    status: reviewed_revision_required
+    issue: https://github.com/vantasnerdan/substrate-framework/issues/120
   - id: P238-S13
     source: pages 10-11, equations (39), (43)-(49), and (53)-(54)
     kind: exact_null_cone_construction
@@ -154,8 +153,8 @@ claims:
     dependencies: [r greater than rs, V=0, local orthonormal radial/tangential frame]
     oracle: SymPy conformal-equivalence and null-speed reconstruction
     acceptance: one positive scalar conformal factor maps the correct acoustic metric to the target 2+1 equatorial metric
-    status: resolved_pass
-    issue: https://github.com/vantasnerdan/substrate-framework/issues/139
+    status: reviewed_supported
+    issue: https://github.com/vantasnerdan/substrate-framework/issues/121
   - id: P238-S14
     source: page 11, equations (50)-(52)
     kind: exact_constitutive_construction
@@ -165,8 +164,8 @@ claims:
     dependencies: [P238-S04, P238-S13, r greater than rs]
     oracle: SymPy exponent determinant and ratio checks plus SciPy domain sampling
     acceptance: A=Theta/rho and rho*sqrt(det Theta)=rho0*Theta0 hold identically and sampled profiles stay SPD outside the horizon
-    status: resolved_pass
-    issue: https://github.com/vantasnerdan/substrate-framework/issues/140
+    status: reviewed_supported
+    issue: https://github.com/vantasnerdan/substrate-framework/issues/122
   - id: P238-S15
     source: pages 12-13, equations (55)-(59)
     kind: target_mapping_claim
@@ -176,8 +175,8 @@ claims:
     dependencies: [P238-S11, target Kerr metric, coordinate-basis conventions]
     oracle: SymPy metric-ratio and matrix-inverse audit
     acceptance: the mapping supplies all independent Kerr coefficient ratios with consistent signs and dimensions
-    status: resolved_fail
-    issue: https://github.com/vantasnerdan/substrate-framework/issues/141
+    status: reviewed_revision_required
+    issue: https://github.com/vantasnerdan/substrate-framework/issues/123
   - id: P238-S16
     source: page 13, equations (60)-(67)
     kind: analogue_geometry_claim
@@ -187,8 +186,8 @@ claims:
     dependencies: [P238-S03, P238-S04, P238-S15]
     oracle: SymPy comparison with equatorial Kerr coefficient ratios and asymptotic expansion
     acceptance: the analogue is conformal to equatorial Kerr for generic nonzero a and rs, not merely at selected surfaces
-    status: resolved_fail
-    issue: https://github.com/vantasnerdan/substrate-framework/issues/142
+    status: reviewed_revision_required
+    issue: https://github.com/vantasnerdan/substrate-framework/issues/124
   - id: P238-S17
     source: page 14, equations (68)-(72)
     kind: causal_structure_claim
@@ -198,8 +197,8 @@ claims:
     dependencies: [P238-S16, positive exterior acoustic eigenvalues]
     oracle: SymPy roots and surface equations plus SciPy sign sampling across exterior ergoregion
     acceptance: roots are algebraically correct and their signs support the stated co/counter-rotating interpretation at both characteristic surfaces
-    status: resolved_qualified
-    issue: https://github.com/vantasnerdan/substrate-framework/issues/143
+    status: reviewed_revision_required
+    issue: https://github.com/vantasnerdan/substrate-framework/issues/125
   - id: P238-S18
     source: pages 15-16, section 9 summary
     kind: headline_physical_claim
@@ -209,5 +208,5 @@ claims:
     dependencies: [P238-S01 through P238-S17]
     oracle: claim dependency graph and surviving-disposition audit
     acceptance: every load-bearing bridge is derived and validated rather than listed as an open point
-    status: resolved_fail
-    issue: https://github.com/vantasnerdan/substrate-framework/issues/144
+    status: reviewed_revision_required
+    issue: https://github.com/vantasnerdan/substrate-framework/issues/126

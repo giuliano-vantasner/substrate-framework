@@ -4,19 +4,27 @@
 Lumps to Geodesic Propagation in an Effective Metric Induced by Substrate
 Inhomogeneity, Anisotropy and Flow*, version 0.1 corrected, 19 August 2026.
 
-**Recommendation:** major revision. The manuscript contains useful exact
+**Recommendation:** major revision, with concrete repair paths below. The manuscript contains useful exact
 wave-analogue constructions, especially the contravariant principal-symbol
 metric and the exterior Schwarzschild acoustic eigenvalue/profile model. Its
 central emergence claim is not established in the present draft. Three
-load-bearing steps fail independently: the cited existence theorem does not
+load-bearing steps need independent correction: the cited existence theorem does not
 apply to the stated real field, the field-to-square-root reduction is asserted
 rather than derived, and the displayed covariant metric is not the inverse of
 the contravariant one. The minimal rotating model also does not match Kerr.
 
-The review is terminal for all 18 frozen claims: 5 pass within an explicit
-domain, 4 require qualification, and 9 fail their acceptance criterion. A
-failed paper claim is a complete review disposition; it is not deferred review
-debt.
+All 18 frozen claims have been reviewed: 5 are supported as written within an
+explicit domain, and 13 need revision. “Needs revision” is not a gate or a
+claim that the research direction is impossible. It means the current wording,
+derivation, citation, or evidence does not yet support the stated conclusion;
+each such finding below includes a scoping, algebraic, or evidential repair.
+Novelty is not an acceptance criterion.
+
+The scientific comparator is the manuscript itself. Each statement is tested
+against its own displayed definitions, equations, assumptions, source anchors,
+and cited dependencies. Substrate supplies the workflow, issue tracker, and
+execution environment only; no Substrate claim or implementation determines
+whether a paper claim is supported or needs revision.
 
 ## Method and reproducibility
 
@@ -27,6 +35,8 @@ Exact algebra and counterexamples were reconstructed with SymPy 1.14.0 and
 Lean 4.28.0/mathlib; independent floating-point/domain probes used NumPy 2.5.2
 and SciPy 1.18.0. The portable sources are in `../companion/` and the exact
 machine-readable dispositions are in `../evidence/claim-results.yaml`.
+Author-ready replacement language, formulas, and file mapping are in
+`../evidence/repair-guide.md`.
 
 Passing an oracle means that the review predicate behaved as intended. Some
 predicates prove a counterexample, so a successful program run does not mean
@@ -36,24 +46,24 @@ that every manuscript claim passed.
 
 | ID | Source | Decision | Review finding |
 | --- | --- | --- | --- |
-| P238-S01 | pp. 3–4, (1)–(5) | Qualified | Material-derivative algebra passes. “Most general” requires additional declared modelling restrictions. |
-| P238-S02 | p. 4, (6)–(9) | Qualified | Euler–Lagrange and homogeneous equations pass. The full constant-background linearization retains `U''(0)u/rho0`; only the principal part is the quoted convective wave operator. |
-| P238-S03 | pp. 4–5, (10)–(13) | Fail | Determinant matching has the right dimensions but does not eliminate generic anisotropic reflection; an exact matched-determinant interface has `R=1/3`. |
-| P238-S04 | pp. 5–6, (14)–(20) | Pass | Conditional reconstruction of `rho`, `Theta`, and `N=c0 A^(-1/2)` is exact. It must be detached from the reflectionless interpretation. |
-| P238-S05 | p. 6, (21)–(22) | Fail | Dispersion passes; the generic directional index is not the ordinary quadratic form of `N`. The 45-degree exact counterexample is `sqrt(10)/5 != 3/4`. |
-| P238-S06 | pp. 6–7, §4 | Fail | Benci–Fortunato requires a complex charged field; its Q-ball theorem also uses `N>=3`. It does not guarantee the paper's real 2+1D lumps. |
-| P238-S07 | p. 7, (23) | Qualified | A legitimate hypothesis, but no concrete family, residual order, internal-mode treatment, or error bound validates it here. |
-| P238-S08 | pp. 7–8, (24) | Fail | A rigid translated profile in the stated quadratic field action yields velocity-quadratic dynamics, not an all-orders square root. The required boosted-profile integral is absent. |
-| P238-S09 | pp. 7–8, (25)–(28) | Pass | Conditional einbein/geodesic identities pass and duplicate accepted `C-WLN-001`–`003`; they do not repair S08. |
-| P238-S10 | pp. 8–9, (29)–(32) | Pass | With `K=(-omega/c0,k)`, the contravariant null polynomial exactly reproduces the wave dispersion relation. |
-| P238-S11 | p. 9, (33)–(38) | Fail | The proposed covariant matrix is not the inverse. A diagonal exact example gives product `diag(1,2,1/2)`. |
-| P238-S12 | p. 8, §6 bullets | Fail | Clock, ruler, massive free-fall, and equivalence-principle conclusions lack the required concrete observables and depend on failed S06/S08/S11. |
-| P238-S13 | pp. 10–11, (39), (43)–(49), (53)–(54) | Pass | The acoustic eigenvalues give the Schwarzschild exterior null cone up to factor `f`; equations (40)–(42) do not and must be replaced. |
-| P238-S14 | p. 11, (50)–(52) | Pass | Physical-basis constitutive profiles pass exactly for `r>rs`; density diverges and stiffness degenerates at the horizon. |
-| P238-S15 | pp. 12–13, (55)–(59) | Fail | The coefficient dictionary inherits the false inverse and cannot establish Kerr matching. |
-| P238-S16 | p. 13, (60)–(67) | Fail | The minimal model has `g_tphi=-a`, `g_phiphi=r^2`; Kerr has `-a rs/r` and `r^2+a^2+a^2 rs/r`. No generic conformal match exists. |
-| P238-S17 | p. 14, (68)–(72) | Qualified | Roots and selected surfaces pass. The prose reverses which root changes sign: it is the lower/counter-rotating root. |
-| P238-S18 | pp. 15–16, §9 | Fail | The surviving evidence establishes narrower wave-analogue kinematics, not the claimed explicit emergence of massive-particle SR, GR, or equivalence. |
+| P238-S01 | pp. 3–4, (1)–(5) | Revision | Material-derivative algebra is supported. Scope “most general” by listing the symmetry, locality, derivative-order, and excluded-coupling assumptions. |
+| P238-S02 | p. 4, (6)–(9) | Revision | Euler–Lagrange and homogeneous equations are supported. Add `U''(0)u/rho0`, or say only the principal part is the quoted convective wave operator. |
+| P238-S03 | pp. 4–5, (10)–(13) | Revision | Determinant normalization is supported; generic reflectionlessness is not. Scope the language or derive directional interface impedances. |
+| P238-S04 | pp. 5–6, (14)–(20) | Supported | Conditional reconstruction of `rho`, `Theta`, and `N=c0 A^(-1/2)` is exact. Detach it from the reflectionless interpretation. |
+| P238-S05 | p. 6, (21)–(22) | Revision | Dispersion is supported. Replace the generic directional-index quadratic form with `c0/sqrt(khat^T A khat)`. |
+| P238-S06 | pp. 6–7, §4 | Revision | The cited theorem assumes a complex charged field and does not establish the real 2+1D claim. Change the model/hypotheses or add matching existence/persistence evidence. |
+| P238-S07 | p. 7, (23) | Revision | The eikonal statement is acceptable as a hypothesis. Keep downstream conclusions conditional, or add a concrete family and residual/error bound. |
+| P238-S08 | pp. 7–8, (24) | Revision | The displayed rigid ansatz yields velocity-quadratic dynamics, not an all-orders square root. Supply the velocity-dependent boosted-profile integral and errors. |
+| P238-S09 | pp. 7–8, (25)–(28) | Supported | Independent elimination, null variation, and generic 2D Euler–Lagrange reconstruction establish the conditional einbein/geodesic identities; they do not repair S08. |
+| P238-S10 | pp. 8–9, (29)–(32) | Supported | With `K=(-omega/c0,k)`, the contravariant null polynomial exactly reproduces the wave dispersion relation. |
+| P238-S11 | p. 9, (33)–(38) | Revision | The proposed covariant matrix is not the inverse. Replace it with the exact block inverse supplied below and rerun downstream maps. |
+| P238-S12 | p. 8, §6 bullets | Revision | Scope these conclusions to wave-ray kinematics until a concrete lump supplies clocks, rulers, and the massive free-fall bridge. |
+| P238-S13 | pp. 10–11, (39), (43)–(49), (53)–(54) | Supported | The acoustic eigenvalues give the Schwarzschild exterior null cone up to factor `f`; equations (40)–(42) separately need the S11 correction. |
+| P238-S14 | p. 11, (50)–(52) | Supported | Physical-basis constitutive profiles are exact for `r>rs`; explicitly state the horizon divergence/degeneracy and basis convention. |
+| P238-S15 | pp. 12–13, (55)–(59) | Revision | Rederive the coefficient system from the corrected S11 inverse; the present dictionary cannot establish Kerr matching. |
+| P238-S16 | p. 13, (60)–(67) | Revision | Rename this a minimal rotating acoustic model, or solve the full independent Kerr coefficient-ratio system. The current model is not conformal to Kerr. |
+| P238-S17 | p. 14, (68)–(72) | Revision | Roots and selected surfaces are supported. Correct the prose: the lower/counter-rotating root changes sign. |
+| P238-S18 | pp. 15–16, §9 | Revision | Scope the headline to the supported wave-analogue constructions until S06/S08/S11/S15 are repaired. |
 
 ## Required mathematical corrections
 
@@ -65,11 +75,14 @@ not establish that a finite nonlinear energy lump has the square-root action,
 uses the same metric, or carries operational clocks and rulers. The manuscript
 should state this boundary every time it moves from rays to massive lumps.
 
-For the latter claim, provide one explicit localized solution family
-`u(x-X(t); alpha(t), Xdot(t))`, perform the spatial action integral, state the
-adiabatic order, and bound the residual, radiation, and internal-mode terms.
-The cited 1+1D paper assumes a boosted breather and omits this decisive
-integral; it cannot substitute for the 2+1D calculation.
+The companion supplies two pieces of the repair: a finite-time real 2+1D
+localized trajectory in `scipy_replacements.py`, and the exact Legendre
+derivation `E=gamma E0`, `p=gamma E0 v/c0^2` implies
+`L=-E0/gamma` in `sympy_replacements.py` and
+`P238ReplacementProofs.lean`. The manuscript can use that square-root result
+conditionally for a boost-closed family. Its inhomogeneous extension still
+needs the substituted residual, adiabatic order, radiation, and internal-mode
+error; those should be explicit hypotheses until calculated.
 
 ### 2. Replace the covariant metric dictionary
 
@@ -95,10 +108,13 @@ matching must be rederived from the corrected inverse.
 ### 3. Narrow the existence statement to the actual theorem
 
 The cited theorem's complex U(1)-charged field, conserved charge, dimension,
-and phase ansatz are indispensable. Either change the field model to match
-those hypotheses or supply existence/persistence evidence for an actual real
-2+1D time-dependent family. Long-lived oscillons, Q-balls, vortices, and static
-real solitons are not interchangeable categories.
+and phase ansatz are indispensable. `scipy_replacements.py` supplies a usable
+narrower replacement: for `U=1-cos u` and declared Gaussian data, both
+leapfrog and DOP853 reproduce a real radial 2+1D localized trajectory through
+`t=30`, with spatial refinement and late core-energy fraction above 0.90.
+State that finite-time computational claim rather than an all-potential
+existence theorem. Long-lived oscillons, Q-balls, vortices, and static real
+solitons remain distinct categories.
 
 ### 4. Correct the anisotropic index and impedance statements
 
@@ -114,18 +130,23 @@ but it does not match the normal impedance of every anisotropic interface.
 Any reflectionless claim needs boundary conditions, interface orientation,
 mode/polarization, and the appropriate directional impedance.
 
-### 5. Rename the rotating construction
+### 5. Replace or rename the rotating construction
 
 The model in equations (60)–(72) is a minimal rotating acoustic analogue. It
 shares the Kerr radial factor and selected horizon/ergosurface locations, but
 it does not reproduce the independent equatorial Kerr coefficient ratios.
-Conformal freedom cannot change those ratios. The sentence about root reversal
-must also be corrected: the counter-rotating/lower root changes sign in the
-sampled ergoregion; the co-rotating/upper root remains positive.
+The companion provides an exact replacement: with
+`Delta=r^2-rs*r+a^2`, `G=r^2+a^2+a^2 rs/r`, choose
+`Omega^2=Delta/G`, `h_rr=r^2 G/Delta^2`, `h_phiphi=G^2/Delta`, and
+`V^phi/c0=a rs/(rG)`. Then `Omega^2 g_acoustic=g_Kerr` coefficient by
+coefficient, as proved in both replacement proof files. If the original
+profiles are retained instead, rename them a minimal rotating acoustic model.
+The root sentence must also be corrected: the counter-rotating/lower root
+changes sign; the co-rotating/upper root remains positive.
 
 ## What survives and is worth retaining
 
-The following form a coherent, defensible narrower paper after correction:
+The following form a coherent paper after applying the supplied corrections:
 
 1. the specific convective anisotropic scalar action and its exact field
    equation;
@@ -134,18 +155,23 @@ The following form a coherent, defensible narrower paper after correction:
 3. the contravariant wave metric/null-cone representation;
 4. the exterior Schwarzschild acoustic eigenvalues, coordinate null speeds,
    and determinant-normalized constitutive profiles; and
-5. the exact einbein identities, explicitly identified as conditional prior
-   results rather than a field-to-particle derivation.
+5. the exact einbein identities, explicitly conditional on the repaired
+   field-to-particle bridge;
+6. the scoped finite-time real 2+1D localized trajectory; and
+7. the exact conformal equatorial Kerr acoustic map from the corrected inverse.
 
-The corrected conclusion should say that these results define a program for
-wave analogue geometry. Massive energy-lump kinematics, operational
-time/ruler effects, a full Kerr analogue, and an emergent equivalence principle
-remain research objectives requiring new evidence.
+The corrected conclusion can claim the exact wave analogue, the scoped
+finite-time real lump, the conditional boosted-family worldline action, and the
+exact conformal Kerr map. Operational time/ruler effects and the inhomogeneous
+massive-lump error bound remain conditional research objectives rather than
+grounds for rejecting the program.
 
-## Framework disposition
+## Repository boundary
 
-No accepted Substrate claim is changed. The exact einbein content is already
-accepted; other surviving statements are conditional constructions preserved
-as P238 proposal evidence. This review requests no silent claim promotion. The
-portable SymPy/SciPy/Lean corpus is retained intact so it can be moved into a
-future author companion repository without depending on Substrate governance.
+Substrate is not a scientific comparator in this review. Its repository-native
+workflow provides source freezing, issue traceability, executable environments,
+and validation checks. The supported/revision assessments above use only the
+paper's claims, definitions, assumptions, internal dependencies, and the
+external theorems the paper itself invokes. The portable SymPy/SciPy/Lean
+corpus is retained intact so it can be moved into a future author companion
+repository without inheriting Substrate governance.
