@@ -2,7 +2,7 @@ id: attempt-0002
 campaign: P236
 canonical_issue: "96"
 base_pr_head: 5ba1fe63a0c4e37acb0f3ce2e796f12e64c82ea4
-status: corrected_complete_pending_landing_check
+status: corrected_validated_pending_merge
 objective: >-
   Repair PR #101 without reducing issue #96: correct the field frame,
   relaxation, interaction observable, force oracle, convergence axes,

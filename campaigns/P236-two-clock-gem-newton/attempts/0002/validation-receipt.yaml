@@ -1,0 +1,43 @@
+campaign: P236
+transaction: PR-101-correction
+base_commit: 5ba1fe63a0c4e37acb0f3ce2e796f12e64c82ea4
+validated_commit: 3eae711a2d08bcf7a0ee6ee4fd36656eb947aedf
+validated_tree: 8de54c3407c8203f2071b60e650a400586aa9036
+impact_surface:
+  - campaigns/P236-two-clock-gem-newton
+  - memory/codex/efforts/pr-101-harvest-review.md
+excluded_unchanged_surfaces:
+  - governance/claims.yaml
+  - governance/releases/current.yaml
+  - docs/generated
+gitnexus:
+  detect_changes: low risk; 0 affected processes
+  production_run_all: low risk; 2 impacted symbols; 0 processes
+  verifier_run: low risk; 1 impacted symbol; 0 processes
+commands:
+  - command: >-
+      PYTHONPATH=<openwave clone>:src python
+      campaigns/P236-two-clock-gem-newton/evidence/m5_96_two_clock_gem_newton.py all
+    result: pass; corrected primary JSON reproduced
+  - command: >-
+      PYTHONPATH=<openwave clone>:src python
+      campaigns/P236-two-clock-gem-newton/reviews/independent_force_audit.py --write
+    result: pass; 5/5 REFUTE doors
+  - command: PYTHONPATH=src python campaigns/P236-two-clock-gem-newton/verify.py
+    result: ALL 29 CHECKS PASS
+  - command: PYTHONPATH=src python scripts/validate_repository.py
+    result: workflow valid; 222 claims; migration queue clear
+  - command: >-
+      memory validate --base "$PWD"
+      "$PWD/memory/codex/efforts/pr-101-harvest-review.md"
+    result: all checks pass
+  - command: scripts/validate.sh --pytest-scope tests/test_total_gravitational_coupling.py
+    result: all fixed checks pass; 41 pytest tests pass
+  - command: git diff --check
+    result: pass
+artifacts:
+  primary_json_sha256: 628f4a9b2e4bd8c914b4bc0c733ada62de6110121426315b87b19cda7f001152
+  audit_json_sha256: ab3fd5e7071d04edea14be057da650a20ec1373fd6454f31a355a9d748da80c2
+  ladder_plot_sha256: a5177ec0bbdabbfee2ad1bf3adf4a184f61fc1e139863decefea3bab5c317276
+  controls_plot_sha256: a31ad2abe4f599acd3fb9563bad55c4488aa04453966059cf93681139d16e9ed
+verdict: correction_validated_merge_eligible
