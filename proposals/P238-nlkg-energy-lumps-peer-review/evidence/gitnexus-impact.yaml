@@ -60,3 +60,21 @@ scope_correction_detection:
     The follow-up replaces framework-comparison language with manuscript-internal
     peer review, remaps the canonical issues, and adds standalone constructive
     SymPy/SciPy/Lean repairs. It still changes no accepted runtime consumer.
+final_pr_detection:
+  indexed_commit: c277959237917e559d42b9ac3b41d10055e7301a
+  indexed_at: '2026-08-19T22:21:27+00:00'
+  graph:
+    nodes: 37247
+    edges: 57462
+    clusters: 527
+    flows: 1
+  command: gitnexus detect-changes --scope compare --base-ref origin/main --repo substrate-paper-review-108
+  changed_files: 25
+  changed_symbols: 159
+  affected_processes: 0
+  risk: low
+  explanation: >-
+    The final PR adds only proposal, portable companion, review, evidence, and
+    repository-memory surfaces. The repository primitives named in
+    solution-reuse-audit.yaml were transformed into standalone paper solutions
+    but are themselves unchanged, and no indexed runtime process is affected.

@@ -2,7 +2,7 @@
 description: Claim-by-claim peer review and machine validation of the 2+1D NLKG energy-lumps effective-metric paper
 author: codex
 created: '2026-08-19T20:08:36+00:00'
-updated: '2026-08-19T22:11:31+00:00'
+updated: '2026-08-19T22:20:10+00:00'
 tags:
 - substrate-framework
 - research-arc
@@ -135,10 +135,10 @@ the final validation receipt passes.
 
 - Canonical goal issue: https://github.com/vantasnerdan/substrate-framework/issues/108
 - PR issue reference: `Advances #108` while review is active
-- Source PR lifecycle: PR #145 open at validated head; required-review branch gate remains
+- Source PR lifecycle: PR #145 open; scientific boundary `c2779592` is validated and the required-review branch gate remains
 - Refactor owner/handoff, live PR, and landing test: codex; no package refactor required; PR is mergeable with no reported CI checks
-- Review-complete evidence: 18 assessments with repair paths, zero open review debt, corrected validation receipt pending
-- Final issue handoff: required after all claim dispositions and PR results
+- Review-complete evidence: 18 assessments with executable replacements, zero open review debt, and corrected validation receipt
+- Final issue handoff: corrected in place at issue #108 comment `5347796842`; canonical issue audit retained in `evidence/issue-audit.yaml`
 
 | Unit | Local claim | Independent of headline? | Evidence | Commit/PR | Disposition |
 | --- | --- | --- | --- | --- | --- |
@@ -223,8 +223,8 @@ covariant inverse, exact Kerr null roots, and an exact conformal equatorial Kerr
 map are supplied as replacement files. The repaired headline is a complete
 conditional analogue-kinematics statement, not an unresolved promise. PR #145 is live;
 all canonical claim issues carry review comments and closing references, canonical
-issue #108 has ongoing discussion, and final results were emailed to Dan as
-message `fmaaaabl`. The only next action is the repository's normal external
+issue #108 has the corrected final handoff, and corrected results were emailed
+to Dan as message `fqaaaabm`. The only next action is the repository's normal external
 review/landing gate.
 
 ## Promotion and Materialization

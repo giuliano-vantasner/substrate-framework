@@ -1,0 +1,50 @@
+schema_version: 1
+campaign: P238
+recorded_at: '2026-08-19T22:20:10+00:00'
+canonical_goal:
+  issue: https://github.com/vantasnerdan/substrate-framework/issues/108
+  state: open
+  corrected_handoff: https://github.com/vantasnerdan/substrate-framework/issues/108#issuecomment-5347796842
+canonical_claim_issues:
+  - {claim: P238-S01, issue: 109, state: open, comments: 1, reviewer: axis-marbell, comment: 'https://github.com/vantasnerdan/substrate-framework/issues/109#issuecomment-5348552480'}
+  - {claim: P238-S02, issue: 110, state: open, comments: 1, reviewer: axis-marbell, comment: 'https://github.com/vantasnerdan/substrate-framework/issues/110#issuecomment-5348552623'}
+  - {claim: P238-S03, issue: 111, state: open, comments: 1, reviewer: axis-marbell, comment: 'https://github.com/vantasnerdan/substrate-framework/issues/111#issuecomment-5348552792'}
+  - {claim: P238-S04, issue: 112, state: open, comments: 1, reviewer: axis-marbell, comment: 'https://github.com/vantasnerdan/substrate-framework/issues/112#issuecomment-5348552942'}
+  - {claim: P238-S05, issue: 113, state: open, comments: 1, reviewer: axis-marbell, comment: 'https://github.com/vantasnerdan/substrate-framework/issues/113#issuecomment-5348553095'}
+  - {claim: P238-S06, issue: 114, state: open, comments: 1, reviewer: axis-marbell, comment: 'https://github.com/vantasnerdan/substrate-framework/issues/114#issuecomment-5348553358'}
+  - {claim: P238-S07, issue: 115, state: open, comments: 1, reviewer: axis-marbell, comment: 'https://github.com/vantasnerdan/substrate-framework/issues/115#issuecomment-5348553509'}
+  - {claim: P238-S08, issue: 116, state: open, comments: 1, reviewer: axis-marbell, comment: 'https://github.com/vantasnerdan/substrate-framework/issues/116#issuecomment-5348553655'}
+  - {claim: P238-S09, issue: 117, state: open, comments: 1, reviewer: axis-marbell, comment: 'https://github.com/vantasnerdan/substrate-framework/issues/117#issuecomment-5348553771'}
+  - {claim: P238-S10, issue: 118, state: open, comments: 1, reviewer: axis-marbell, comment: 'https://github.com/vantasnerdan/substrate-framework/issues/118#issuecomment-5348553953'}
+  - {claim: P238-S11, issue: 119, state: open, comments: 1, reviewer: axis-marbell, comment: 'https://github.com/vantasnerdan/substrate-framework/issues/119#issuecomment-5348554077'}
+  - {claim: P238-S12, issue: 120, state: open, comments: 1, reviewer: axis-marbell, comment: 'https://github.com/vantasnerdan/substrate-framework/issues/120#issuecomment-5348554258'}
+  - {claim: P238-S13, issue: 121, state: open, comments: 1, reviewer: axis-marbell, comment: 'https://github.com/vantasnerdan/substrate-framework/issues/121#issuecomment-5348554463'}
+  - {claim: P238-S14, issue: 122, state: open, comments: 1, reviewer: axis-marbell, comment: 'https://github.com/vantasnerdan/substrate-framework/issues/122#issuecomment-5348554592'}
+  - {claim: P238-S15, issue: 123, state: open, comments: 1, reviewer: axis-marbell, comment: 'https://github.com/vantasnerdan/substrate-framework/issues/123#issuecomment-5348554719'}
+  - {claim: P238-S16, issue: 124, state: open, comments: 1, reviewer: axis-marbell, comment: 'https://github.com/vantasnerdan/substrate-framework/issues/124#issuecomment-5348554893'}
+  - {claim: P238-S17, issue: 125, state: open, comments: 1, reviewer: axis-marbell, comment: 'https://github.com/vantasnerdan/substrate-framework/issues/125#issuecomment-5348555092'}
+  - {claim: P238-S18, issue: 126, state: open, comments: 1, reviewer: axis-marbell, comment: 'https://github.com/vantasnerdan/substrate-framework/issues/126#issuecomment-5348555237'}
+administrative_duplicates:
+  - {issue: 127, canonical: 109, state: closed}
+  - {issue: 128, canonical: 110, state: closed}
+  - {issue: 129, canonical: 111, state: closed}
+  - {issue: 130, canonical: 112, state: closed}
+  - {issue: 131, canonical: 113, state: closed}
+  - {issue: 132, canonical: 114, state: closed}
+  - {issue: 133, canonical: 115, state: closed}
+  - {issue: 134, canonical: 116, state: closed}
+  - {issue: 135, canonical: 117, state: closed}
+  - {issue: 136, canonical: 118, state: closed}
+  - {issue: 137, canonical: 119, state: closed}
+  - {issue: 138, canonical: 120, state: closed}
+  - {issue: 139, canonical: 121, state: closed}
+  - {issue: 140, canonical: 122, state: closed}
+  - {issue: 141, canonical: 123, state: closed}
+  - {issue: 142, canonical: 124, state: closed}
+  - {issue: 143, canonical: 125, state: closed}
+  - {issue: 144, canonical: 126, state: closed}
+pull_request:
+  url: https://github.com/vantasnerdan/substrate-framework/pull/145
+  scientific_head: c277959237917e559d42b9ac3b41d10055e7301a
+  closing_references: '#108 and #109-#126'
+review_debt_open: 0
