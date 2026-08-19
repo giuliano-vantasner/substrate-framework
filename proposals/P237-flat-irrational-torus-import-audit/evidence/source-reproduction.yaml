@@ -1,0 +1,78 @@
+environment:
+  python: 3.12.2
+  numpy: 1.26.4
+  scipy: 1.14.1
+runs:
+  - command: python Master_Verification_Engine_Final.py
+    exit_code: 0
+    observed: OVERALL SCORE 12/12 VERIFIED; reports generated
+    evidential_verdict: >-
+      Reproduces the advertised tally but not its scientific meaning. Modules
+      3, 5, 7, and 8 return literal or hard-coded VERIFIED results; other
+      modules compare formulas or inputs to broad thresholds.
+  - command: python geometry/spectral_gap_calculator.py
+    exit_code: 0
+    observed: >-
+      Printed claimed Q=11/24 while the same generated spectrum listed
+      Q=1/12 below it.
+    evidential_verdict: >-
+      The iterator mixes integer and half-integer labels. Its
+      find_spectral_gap(max_n=1) returns eigenvalue 3.2898681336964524 at
+      (0,0,-0.5), not the asserted 18.09427473533049 at
+      (+/-0.5,+/-0.5,+/-0.5).
+  - command: python run_all.py
+    exit_code: 1
+    observed: analysis/mcmc_run.py aborts on missing emcee
+    evidential_verdict: >-
+      Native pipeline is not reproducible from requirements.txt, which omits
+      emcee, corner, and classy. Later run_all stages also name absent
+      analysis/generate_figures.py and analysis/desi_validation.py files.
+  - command: python verify_results.py
+    exit_code: 1
+    observed: aborts on missing corner
+    evidential_verdict: >-
+      Compatibility/reproducibility failure. Independently, source inspection
+      shows the model comparison is computed from embedded reference chi-square
+      values rather than either supplied chain.
+  - command: MPLBACKEND=Agg python scripts/b_modes_IT3.py
+    exit_code: 0
+    observed: predicted oscillations ell=3-8 were 0.00 percent
+    evidential_verdict: >-
+      No advertised nonzero oscillation was reproduced. The continuum
+      comparator samples one k_peak rather than evaluating its stated
+      continuum integral, so this run supplies no B-mode model validation.
+  - command: MPLBACKEND=Agg python scripts/hubble_tension_torus.py
+    exit_code: 1
+    observed: >-
+      printed LCDM sound horizon 0.00 Mpc, then aborted with NameError for IT
+      inside an f-string
+    evidential_verdict: >-
+      Scientific route is also inapplicable: radiation is omitted over a
+      z=1090 to 1000000 integral and the load-bearing correction factor 0.965
+      is hard-coded rather than derived from torus modes.
+  - command: python scripts/run_all_tests.py
+    exit_code: 1
+    observed: aborts on missing healpy
+    evidential_verdict: >-
+      Compatibility/reproducibility failure. Required Planck maps and mask are
+      absent as well; no data download was attempted because the exact source
+      audit already shows that the BiPoSH routine measures the observed map
+      without computing an IT3 prediction.
+compatibility_note: >-
+  Missing optional scientific packages were not assigned a false scientific
+  verdict. Installing them would not repair the independently demonstrated
+  hard-coded outputs, absent files, incorrect boundary-condition enumeration,
+  underflowing A_s transformation, or missing model-to-observable bridges.
+harvest_reproduction:
+  command: >-
+    PYTHONPATH=src python -c "from substrate_framework.flat_torus import
+    rectangular_epstein_refinement; ..."
+  observed:
+    cutoff_4: 5.20195459904694
+    cutoff_6: 5.42883803531233
+    cutoff_8: 5.54964226459134
+    cutoff_10: 5.62460658337393
+  verdict: >-
+    The imported cutoff-10 value reproduces the v13 finite sum while exposing
+    its still-positive refinement increments. It is therefore preserved as a
+    partial sum, not mislabeled as a completed regularization or vacuum energy.

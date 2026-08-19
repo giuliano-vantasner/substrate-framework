@@ -1,0 +1,70 @@
+id: P237
+base_release: v0.163.0
+source_baseline: substrate-framework@56f10e18848331f1ab57e97c4ec4a358f5124cc7
+question: >-
+  Which exact, reproducible, novel, and maintainable units from
+  Viktar-Pi/FlatIrrationalTorus at commit
+  ba487f6361f1f8740a4fe518bf86584847ab518b survive source-level and
+  executable audit and can be imported into Substrate without promoting the
+  repository's advertised full physical model beyond its evidence?
+source_inventory:
+  - source: >-
+      Viktar-Pi/FlatIrrationalTorus GitHub repository, main commit
+      ba487f6361f1f8740a4fe518bf86584847ab518b
+    access: >-
+      open URL and in-hand clean external audit checkout at the pinned commit
+    extracted: >-
+      README v13.0 headline and modules 1-12; Master_Verification_Engine_Final.py;
+      verify_results.py; run_all.py; scripts/*.py; analysis/*.py; stored final
+      report; requirements and license
+  - source: >-
+      Victor Logvinovich, Comprehensive Analytical Guide to the IT3 Master
+      Verification Engine v13.0, Paper_4.pdf, Zenodo record 19599505
+    access: >-
+      open URL and in hand; sha256
+      5624a9978b1be2405e58ad119fdedbbe6bd9fa7836fd365dbee7a7f53b5663c6
+    extracted: >-
+      pp. 1-3 and Eqs. (1)-(11): geometric constants, finite lattice sum and
+      KK-suppression assertions, defect scaling, reciprocal-spectrum form,
+      gauge-topology residual mapping, dark-energy crossover, last-scattering
+      containment, and low-multipole cutoff
+invariants:
+  - accepted release v0.163.0 and governance/claims.yaml remain unchanged in this harvest
+  - every imported result is conditional on explicitly supplied rectangular-torus side lengths and observation radius
+  - topology is T3 only unless a concrete Z2 action and its operator domains are supplied
+  - observed constants and cosmological values remain comparators, never derivation inputs disguised as geometry
+  - exact geometric identities are not promoted into particle, gravity, inflation, dark-energy, or CMB-likelihood claims without typed physical bridges
+allowed_imports:
+  - Python standard library and NumPy under repository conventions
+  - accepted C-STG-001 and C-DOS-001 as non-overlapping scope cross-checks
+  - elementary Euclidean sphere-intersection and rectangular flat-torus Fourier geometry
+  - MIT-licensed upstream source as a pinned source object under audit
+candidates:
+  - id: A
+    description: >-
+      Clean-room extraction of exact rectangular-torus reciprocal modes,
+      Laplacian eigenvalues, lattice translations, and matched-circle geometry.
+  - id: B
+    description: >-
+      Refactor the upstream observational scripts into model-versus-data
+      prediction APIs only where the scripts compute a genuine IT3 observable
+      with declared estimators, units, data provenance, and convergence.
+  - id: C
+    description: >-
+      Import the advertised constants, gravity, inflation, gauge-RG,
+      dark-energy, and CMB conclusions where their dependency closure is
+      actually derived from the stated topology.
+uniqueness_evidence: null
+selection_criteria:
+  - explicit mathematical object and operator domain
+  - no hidden observed comparator or fitted sector-specific constant
+  - exact dimensions signs symmetries and limiting behavior
+  - mutation sensitivity and numeric convergence where applicable
+  - novelty against accepted framework modules
+  - maintainable dependency footprint and explanatory reach
+claims_proposed: []
+comparators_blinded_until: >-
+  not blindable because the requester supplied an already executed public
+  repository and its README claims; structural criteria were frozen before
+  implementation and no comparator value may select an imported unit
+status: draft
