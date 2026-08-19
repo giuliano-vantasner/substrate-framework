@@ -2,7 +2,7 @@ id: attempt-0002
 campaign: P236
 canonical_issue: "96"
 base_pr_head: 5ba1fe63a0c4e37acb0f3ce2e796f12e64c82ea4
-status: corrected_validated_pending_merge
+status: corrected_validated_merged
 objective: >-
   Repair PR #101 without reducing issue #96: correct the field frame,
   relaxation, interaction observable, force oracle, convergence axes,
@@ -33,3 +33,8 @@ headline_results:
 claims_changed: []
 open_obligations_inside_scope: []
 validation_receipt: attempts/0002/validation-receipt.yaml (added after the content commit; receipt-only metadata does not stale the oracle)
+landing:
+  merge_commit: 11a7094eae3e9073c5f663d11ab4d64cbf64accb
+  pull_requests: ["101", "102"]
+  issue_state: closed
+  branch_cleanup: complete

@@ -3,7 +3,7 @@ canonical_issue: "96"
 transaction: PR-101-corrected-evidence
 base_release: v0.163.0
 source_pr_head: 5ba1fe63a0c4e37acb0f3ce2e796f12e64c82ea4
-disposition: correct_then_merge
+disposition: merged_evidence_no_promotion
 target_kind: simulation_evidence
 claim_registry_delta: []
 accepted_claims_consumed:
@@ -48,6 +48,12 @@ terminal_history:
     Superseded as measurement evidence because its frame, relaxation,
     observable, exponent oracle, verifier, and numeric coupling dictionary
     were defective.  Preserved append-only for provenance.
-merge_condition: >-
-  Final correction check and scoped repository validation pass on the exact
-  corrected tree; then merge PR #101 under the user's explicit owner override.
+landing_record:
+  corrected_head: 1f8b7281b39d23d6030b5fc4f13494abeeecb62c
+  frozen_scientific_tree: 8de54c3407c8203f2071b60e650a400586aa9036
+  merge_commit: 11a7094eae3e9073c5f663d11ab4d64cbf64accb
+  pull_requests:
+    - "101"
+    - "102"
+  issue_state: closed
+  branch_cleanup: complete
