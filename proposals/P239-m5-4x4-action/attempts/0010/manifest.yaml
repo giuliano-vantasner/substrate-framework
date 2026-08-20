@@ -1,0 +1,60 @@
+id: attempt-0010
+campaign: P239
+canonical_issue: "147"
+branch: research/p239-m5-4x4-action
+base_release: v0.163.0
+source_baseline: substrate-framework@6e5a4ba001bfdb41ea6e5157a43b0a854d118e1a
+candidate: I_clock_branch_guard
+status: complete
+objective: >-
+  Establish a stationary finite-gap Candidate-I fixed-J hedgehog with its
+  coupled timelike scalar and determine the smallest structural guard scale
+  that removes the permutation escape without a force/frequency comparator.
+frozen_delta_from_attempt_0008: >-
+  Add A(phi)*V_guard to the matter Hamiltonian and no other term, with
+  V_guard=zeta*(lambda_theta-lambda_phi)^4/
+  ((lambda_n-lambda_theta)^2*(lambda_n-lambda_phi)^2).
+guard_strength_ladder: [0.000001, 0.0001, 0.01]
+selection_rule: >-
+  Select the smallest zeta that passes stationarity and keeps both director
+  gaps above 0.02 outside the two-cell core. Tail or frequency closeness may
+  not select zeta.
+numerical_contract:
+  inherit: attempt-0008 except for the frozen guard delta
+  preflight_grid: {spacing: 0.5, rho_cells: 8, z_cells: 16}
+  adam_steps: 4000
+  lbfgsb_max_iterations: 4000
+gates:
+  stationarity_relative_inf_norm_max: 0.0005
+  principal_gap_outside_core_min: 0.02
+  finite_positive_inertia: true
+  finite_nonzero_frequency: true
+  simple_timelike_gap_min: 0.5
+  scalar_field_sign: negative for positive alpha and positive matter energy
+  scalar_tail_relative_fit_residual_max_after_refinement: 0.08
+commands:
+  - >-
+    python proposals/P239-m5-4x4-action/attempts/0008/solve_coupled_hedgehog.py
+    --guard-strength 0.0001 --lbfgsb-iterations 4000
+    --output proposals/P239-m5-4x4-action/attempts/0010/result-zeta-1e-4.json
+artifacts:
+  - proposals/P239-m5-4x4-action/attempts/0008/solve_coupled_hedgehog.py
+  - proposals/P239-m5-4x4-action/attempts/0010/result-zeta-1e-4.json
+next_if_success: >-
+  Complete the guard ladder around the passing scale, refine the grid/domain,
+  and instantiate the common-action two-body contract.
+next_if_failure: >-
+  If every finite zeta either closes the gap or destroys stationarity, reject
+  Candidate I and introduce an explicit covariant clock-axis field.
+verdict: >-
+  Candidate I fails the branch gate. At zeta=1e-4 the minimum exterior gap is
+  5.44e-4; at zeta=1e-2 it is 2.11e-3, both below 0.02 and both nonstationary.
+  At each minimum all three eigenvalues coalesce near 0.44 while tangent
+  splitting is below 1.7e-4, so the guard is correctly negligible: this is an
+  isotropic M5.17 melt surface, not a clock-active permutation. A spectral
+  guard cannot exclude it while remaining exactly inactive on the retained
+  melt sector. Candidate I is rejected.
+diagnosed_layer: representation and auxiliary field content
+next_route: >-
+  Make the continuous clock-axis label an explicit constrained spacelike
+  auxiliary field which remains defined when M becomes isotropic.

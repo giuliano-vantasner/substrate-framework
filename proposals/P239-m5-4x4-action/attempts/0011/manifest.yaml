@@ -1,0 +1,49 @@
+id: attempt-0011
+campaign: P239
+canonical_issue: "147"
+branch: research/p239-m5-4x4-action
+base_release: v0.163.0
+source_baseline: substrate-framework@6e5a4ba001bfdb41ea6e5157a43b0a854d118e1a
+candidate: J_auxiliary_clock_axis_lift
+status: complete
+objective: >-
+  Define and exactly verify the parameter-free local Lorentz-covariant
+  constrained clock-axis lift that continues the M5 eigenframe through a
+  melted core without changing the Candidate-H Hamiltonian or any uniaxial
+  M5.17/Coulomb configuration.
+frozen_constraints: >-
+  Add a spacelike vector N^a and P_N=N (eta N)^T. Impose
+  eta(N,N)=1, P_t N=0, P_N^2=P_N, and [Y,P_N]=0 using local covariant
+  Lagrange multipliers. The multipliers and residuals transform in dual
+  Lorentz representations, so their contractions are scalars. They vanish
+  on shell and introduce no energy coefficient.
+exact_gates:
+  - P_N is a rank-one Lorentz-similarity projector for unit spacelike N
+  - all constraint residuals transform covariantly
+  - the multiplier density is a Lorentz scalar
+  - the uniaxial M5.17 director supplies an exact constraint solution
+  - N can remain continuous when Y is isotropic because the alignment residual then vanishes for every N
+  - the clock derivative vanishes when the tangent eigenvalues coincide
+  - deleting N makes continuation through an isotropic region nonunique
+commands:
+  - >-
+    PYTHONPATH=src python
+    proposals/P239-m5-4x4-action/attempts/0011/verify_auxiliary_clock_axis.py
+  - PYTHONPATH=src python -m pytest -q tests/test_m5_covariant_action.py
+artifacts:
+  - src/substrate_framework/m5_covariant_action.py
+  - tests/test_m5_covariant_action.py
+  - proposals/P239-m5-4x4-action/attempts/0011/verify_auxiliary_clock_axis.py
+  - proposals/P239-m5-4x4-action/attempts/0011/result.json
+next_if_success: >-
+  Reclassify the labeled-axis Candidate-H solver as Candidate J, converge its
+  one-body branch without a principal-gap gate, and refine its scalar flux.
+next_if_failure: >-
+  Reject the M-derived clock program and compare an independent complex
+  Lorentz-scalar clock field rather than hiding label history in M.
+verdict: >-
+  Candidate J passed all 12 exact constraint, covariance, uniaxial, melt, and
+  mutation checks. Its local multiplier density is a Lorentz scalar, the
+  constrained clock axis selects the exterior director, remains continuous
+  through isotropic M, and adds no on-shell energy coefficient. Numerical
+  stationarity and refinement remain open.

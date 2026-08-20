@@ -1,0 +1,124 @@
+{
+  "campaign": "P239",
+  "attempt": "0006",
+  "parameters": {
+    "spacing": 0.5,
+    "rho_cells": 12,
+    "z_cells": 24,
+    "angular_momentum": 20.0,
+    "projector_stiffness": 1.0,
+    "g": 8.0,
+    "curvature_c2": 1.0,
+    "beta": 1.0,
+    "cscale": 0.0037705544498939964,
+    "core_radius": 1.5,
+    "splitting_seed": 0.25,
+    "boost_seed": 0.08,
+    "max_iterations": 220
+  },
+  "starts": [
+    {
+      "boost_seed_sign": 0.0,
+      "success": false,
+      "message": "STOP: TOTAL NO. of ITERATIONS REACHED LIMIT",
+      "iterations": 220,
+      "evaluations": 248,
+      "objective": 1.0553675947060783,
+      "gradient_inf_norm": 0.15278615956549713,
+      "stationarity_relative_inf_norm": 0.1447705617757274,
+      "branch_gap": 6.803307244411325,
+      "meridional_director_gap": -1.287107694607026,
+      "max_abs_b_rho": 0.0,
+      "max_abs_b_z": 0.0,
+      "observables": {
+        "curvature": 0.0333445539384961,
+        "projector": 0.0,
+        "potential": 0.9806815219875955,
+        "inertia": 2418.875816638095,
+        "static": 1.0140260759260915,
+        "rotational": 0.04134151877998692,
+        "total": 1.0553675947060783,
+        "frequency": 0.004134151877998692
+      }
+    },
+    {
+      "boost_seed_sign": 1.0,
+      "success": false,
+      "message": "STOP: TOTAL NO. of ITERATIONS REACHED LIMIT",
+      "iterations": 220,
+      "evaluations": 235,
+      "objective": 1.923171865913456,
+      "gradient_inf_norm": 3.6638497677287014,
+      "stationarity_relative_inf_norm": 1.9051078235217782,
+      "branch_gap": 6.662589714451309,
+      "meridional_director_gap": -1.6096474403419578,
+      "max_abs_b_rho": 0.006242189501387615,
+      "max_abs_b_z": 0.014791416929208049,
+      "observables": {
+        "curvature": 0.6928359743999889,
+        "projector": 0.009753431516765314,
+        "potential": 1.1530294635404217,
+        "inertia": 1480.3192344653319,
+        "static": 1.8556188694571758,
+        "rotational": 0.06755299645628021,
+        "total": 1.923171865913456,
+        "frequency": 0.006755299645628022
+      }
+    },
+    {
+      "boost_seed_sign": -1.0,
+      "success": false,
+      "message": "STOP: TOTAL NO. of ITERATIONS REACHED LIMIT",
+      "iterations": 220,
+      "evaluations": 235,
+      "objective": 1.923171865913456,
+      "gradient_inf_norm": 3.6638497677287014,
+      "stationarity_relative_inf_norm": 1.9051078235217782,
+      "branch_gap": 6.662589714451309,
+      "meridional_director_gap": -1.6096474403419578,
+      "max_abs_b_rho": 0.006242189501387615,
+      "max_abs_b_z": 0.014791416929208049,
+      "observables": {
+        "curvature": 0.6928359743999889,
+        "projector": 0.009753431516765314,
+        "potential": 1.1530294635404217,
+        "inertia": 1480.3192344653319,
+        "static": 1.8556188694571758,
+        "rotational": 0.06755299645628021,
+        "total": 1.923171865913456,
+        "frequency": 0.006755299645628022
+      }
+    }
+  ],
+  "selected": {
+    "boost_seed_sign": 0.0,
+    "success": false,
+    "message": "STOP: TOTAL NO. of ITERATIONS REACHED LIMIT",
+    "iterations": 220,
+    "evaluations": 248,
+    "objective": 1.0553675947060783,
+    "gradient_inf_norm": 0.15278615956549713,
+    "stationarity_relative_inf_norm": 0.1447705617757274,
+    "branch_gap": 6.803307244411325,
+    "meridional_director_gap": -1.287107694607026,
+    "max_abs_b_rho": 0.0,
+    "max_abs_b_z": 0.0,
+    "observables": {
+      "curvature": 0.0333445539384961,
+      "projector": 0.0,
+      "potential": 0.9806815219875955,
+      "inertia": 2418.875816638095,
+      "static": 1.0140260759260915,
+      "rotational": 0.04134151877998692,
+      "total": 1.0553675947060783,
+      "frequency": 0.004134151877998692
+    }
+  },
+  "tail_decomposition": {
+    "fit_point_count": 168,
+    "radial_vector_r_minus_2_coefficient": 0.0,
+    "fixed_z_monopole_r_minus_1_coefficient": 0.0,
+    "relative_rms_residual": 0.0
+  },
+  "status": "preflight"
+}

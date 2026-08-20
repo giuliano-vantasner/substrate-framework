@@ -1,0 +1,12 @@
+{
+  "campaign": "P239",
+  "attempt": "0004",
+  "representation": "radial profiles on a moving biaxial eigenframe",
+  "field_pole_coefficient": "2*(lambda_2-lambda_3)^2",
+  "projector_pole_coefficient": "sinh(chi)^2",
+  "angular_integral": "integral dtheta/sin(theta)",
+  "verdict": "A nonzero radial-only tangential boost or asymptotically biaxial tangent frame has logarithmically divergent angular energy. The single-axis numerical branch is representation-obstructed and cannot support C-M5-002 or C-M5-004.",
+  "strongest_surviving_result": "The exact selected action and projector-current construction from attempts 0002-0003 survive; the radial biaxial stationary ansatz does not.",
+  "next_route": "Use the M5.17 uniaxial exterior and relax angular/axisymmetric fields so tangent splitting and boost dressing vanish regularly on the axis.",
+  "check_count": 6
+}

@@ -1,0 +1,113 @@
+id: attempt-0006
+campaign: P239
+canonical_issue: "147"
+branch: research/p239-m5-4x4-action
+base_release: v0.163.0
+source_baseline: substrate-framework@6e5a4ba001bfdb41ea6e5157a43b0a854d118e1a
+candidate: G_uniaxial_axisymmetric_completion
+status: complete
+objective: >-
+  Determine whether the completed spectral-Cartan plus projector-current
+  action admits a regular nonzero-inertia fixed-J hedgehog when every
+  reflection-even axisymmetric spatial and boost component is relaxed, and
+  whether its exterior projector field contains a massless monopole eligible
+  for the Newton two-body gate.
+field_contract: >-
+  At phi=0 vary the labeled director, meridional-tangent, and azimuthal
+  eigenvalues, the meridional director angle, and boost rapidities b_rho,b_z
+  on a cell-centred (rho,z) half-plane. These coordinates span every
+  reflection-even spatial matrix while keeping the topological clock label
+  smooth when eigenvalues meet. Form D=diag(-g,S), the exact meridional
+  Lorentz boost B(b_rho,b_z), M=B D B^T, P_t=B^-1 P_0 B, and
+  h^ab=eta^ab-2 P_t^a_c eta^cb. Extend by
+  M(rho,phi,z)=R_z(phi) M(rho,0,z) R_z(phi)^T. The rho ghost uses the exact
+  R_z(pi) parity, and the outer boundary is the pure-director M5.17 hedgehog
+  with zero boost.
+clock_contract: >-
+  The collective clock rotates the two spatial tangent directions about the
+  labeled topological spatial director inside the static boost dressing.
+  Reflection symmetry places that director in the meridional plane. When its
+  eigenvalue meets a tangent eigenvalue the corresponding clock commutator
+  vanishes continuously, so no eigenvector differentiation or branch jump is
+  used. Its derivative is B [G_n,D] B^T. The fixed-J functional is
+  E_J=E_static+J^2/(4I), omega=J/(2I), and J is a state constraint rather
+  than an action coefficient.
+action_parameters:
+  g: 8.0
+  spatial_curvature_c2: 1.0
+  beta: 1.0
+  cscale: 0.0037705544498939964
+  projector_stiffness_ladder: [0.25, 1.0, 4.0]
+  provenance: >-
+    g, c2, beta, and cscale are the pinned M5.17 grid-unit values. Projector
+    stiffness is the sole new action coefficient and is explored by a
+    predeclared factor-four structural ladder, not selected by a force or
+    frequency comparator.
+numerical_preflight:
+  precision: float64
+  grids:
+    - {spacing: 0.5, rho_cells: 12, z_cells: 24}
+    - {spacing: 0.4, rho_cells: 16, z_cells: 32}
+  angular_derivative: exact equivariant commutator divided by cell-centre rho
+  radial_and_z_derivatives: centred differences with exact parity ghost
+  optimizer: L-BFGS-B with analytic automatic-differentiation gradient
+  optimizer_max_iterations: 220
+  multistarts:
+    - positive localized tangent splitting and zero boost
+    - positive localized tangent splitting and positive axial boost
+    - positive localized tangent splitting and negative axial boost
+  angular_momentum_ladder: [5.0, 20.0, 50.0]
+gates:
+  optimizer_success: true
+  finite_energy_and_inertia: true
+  stationarity_relative_inf_norm_max: 0.0005
+  minimum_inertia: 0.001
+  minimum_nonzero_frequency: 0.000001
+  simple_timelike_gap_min: 0.5
+  meridional_director_gap_min: >-
+    Positive away from a shrinking defect core; a zero at the melted core is
+    permitted, but a macroscopic crossing surface rejects the clock branch.
+  axis_string_fraction_max: 0.02
+  grid_frequency_relative_spread_max: 0.12
+  grid_energy_relative_spread_max: 0.08
+  exterior_test: >-
+    Decompose the relaxed boost into a fixed-axis l=0 component and radial or
+    higher-multipole components. Only a nonzero converged 1/r coefficient in
+    the former opens the Newton pair run; a radial-vector 1/r^2 tail is not a
+    Newton success.
+mutations:
+  - J=0 must remove the fixed-J barrier and cannot count as C-M5-002
+  - zero tangent splitting makes the pure-director clock inertia vanish
+  - deleting the azimuthal derivative must fail the axis-regularity oracle
+  - replacing the full relaxation by an imposed radial profile is forbidden
+  - rotating about the coordinate radius after the field director relaxes is forbidden because it manufactures non-collective extensive inertia
+commands:
+  - >-
+    python proposals/P239-m5-4x4-action/attempts/0006/solve_axisymmetric_fixed_j.py
+artifacts:
+  - proposals/P239-m5-4x4-action/attempts/0006/solve_axisymmetric_fixed_j.py
+  - proposals/P239-m5-4x4-action/attempts/0006/result.json
+next_if_success: >-
+  Reimplement the frozen density and gradient in a dependency-light canonical
+  module, reproduce the branch independently, then run separately relaxed
+  one- and two-defect Coulomb/Newton functionals.
+next_if_failure: >-
+  Classify whether the obstruction is numerical, clock representation, or
+  absence of a scalar mass monopole. Preserve any finite-frequency branch,
+  then register the minimum distinct local covariant current that repairs the
+  failed layer without changing the exact M5.17 sector.
+verdict: >-
+  The regular axisymmetric representation removes the pole string and admits
+  positive fixed-J inertia, but no run passed the stationarity/refinement gate
+  and the selected branch kept b_rho=b_z=0 exactly. Three independent
+  484-variable boost-only relaxations from random nonzero fields returned to
+  max amplitudes below 0.0028 with energy above the zero-boost branch. Thus
+  Candidate G has no sourced scalar projector monopole and cannot establish
+  C-M5-004. The positive action and potential layers survive; the branch
+  values are preflight evidence only and C-M5-002 remains open.
+diagnosed_layer: candidate mass mechanism
+next_route: >-
+  Use the selected timelike eigenvalue tau=Tr(P_t eta^-1 M), which is a
+  Lorentz scalar rather than a little-group vector, as the massless Newton
+  channel. Couple its positive kinetic term universally to the positive M5
+  matter Hamiltonian while leaving tau=g exactly equal to M5.17.

@@ -1,0 +1,38 @@
+id: attempt-0003
+campaign: P239
+canonical_issue: "147"
+branch: research/p239-m5-4x4-action
+base_release: v0.163.0
+source_baseline: substrate-framework@6e5a4ba001bfdb41ea6e5157a43b0a854d118e1a
+candidate: F_projector_current_completion
+status: complete
+objective: >-
+  Determine whether the curvature-only spectral-Cartan action can possess the
+  required vacuum-orbit tail and finite-size branch, and, if not, prove that
+  the timelike-projector current is the minimum local covariant completion
+  that remains exactly invisible to the full 3x3 sector.
+commands:
+  - >-
+    PYTHONPATH=src python
+    proposals/P239-m5-4x4-action/attempts/0003/verify_projector_current.py
+  - PYTHONPATH=src python -m pytest -q tests/test_m5_covariant_action.py
+artifacts:
+  - src/substrate_framework/m5_covariant_action.py
+  - tests/test_m5_covariant_action.py
+  - proposals/P239-m5-4x4-action/attempts/0003/verify_projector_current.py
+  - proposals/P239-m5-4x4-action/attempts/0003/result.json
+verdict: >-
+  Candidate E alone is rejected as the completed action: its vacuum-orbit
+  curvature density starts at fourth perturbative order, supplies no
+  linearized massless operator, and has only 1/R Derrick scaling. Candidate F
+  adds one positive projector stiffness. The term is a local Lorentz scalar,
+  is positive in the Hamiltonian, vanishes identically throughout the
+  uniform-time-row 3x3 sector, supplies the Laplace operator, and combines
+  with curvature energy to give a unique strict finite scale at fixed J in
+  the exact scale reduction. Existence of the full stationary profile and
+  relaxed pair remains unproved.
+diagnosed_layer: candidate_concept_completed
+next_route: >-
+  Derive the symmetry-reduced Euler-Lagrange system including the
+  field-dependent Cartan metric, freeze radial boundary and refinement gates,
+  and solve the fixed-J one-defect branch.

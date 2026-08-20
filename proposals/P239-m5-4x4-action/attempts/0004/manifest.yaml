@@ -1,0 +1,77 @@
+id: attempt-0004
+campaign: P239
+canonical_issue: "147"
+branch: research/p239-m5-4x4-action
+base_release: v0.163.0
+source_baseline: substrate-framework@6e5a4ba001bfdb41ea6e5157a43b0a854d118e1a
+candidate: F_projector_current_completion
+status: complete
+objective: >-
+  Derive and solve the fixed-J Lorentz-orbit biaxial hedgehog with all three
+  spatial eigenvalue profiles and one boost profile varied, select among the
+  radial and two clock-noncommuting boost axes, and determine whether its
+  relaxed exterior can carry the required Newton 1/r field.
+frozen_ansatz: >-
+  M=C diag(-g,lambda_1,lambda_2,lambda_3) C^T with the standard spatial
+  biaxial hedgehog frame, C containing one radial-profile boost along a
+  preregistered eigenframe axis. Regularity imposes chi(0)=0 and coincident
+  spatial eigenvalues at the origin; the outer boundary is
+  (chi,lambda_1,lambda_2,lambda_3)=(0,1,0.3,0).
+fixed_j_equations: >-
+  For q_A=(chi,lambda_1,lambda_2,lambda_3), stationary profiles solve
+  d/dr partial_(q_A') [4*pi*r^2*(H_static-omega^2*I_density)]
+  - partial_(q_A) [4*pi*r^2*(H_static-omega^2*I_density)]=0,
+  with I=4*pi integral r^2 I_density dr and omega=J/(2I).
+axis_candidates:
+  - id: radial_axis_1
+    criterion: commutes with the clock; retained as the zero-dressing control
+  - id: polar_axis_2
+    criterion: noncommutes with the clock and is selected only by lower relaxed fixed-J energy
+  - id: azimuthal_axis_3
+    criterion: noncommutes with the clock and is selected only by lower relaxed fixed-J energy
+parameters:
+  g: 4.0
+  spatial_spectrum: [1.0, 0.3, 0.0]
+  projector_stiffness: 1.0
+  spectrum_weights: [1.0, 1.0, 1.0, 1.0]
+  angular_momentum: 50.0
+numerical_gates:
+  optimizer_success: true
+  stationarity_inf_norm_max: 0.002
+  selected_branch_gap_min: 2.0
+  minimum_nonzero_boost_amplitude: 0.02
+  basis_counts: [5, 6, 7]
+  domain_radii: [10.0, 12.0, 16.0]
+  quadrature_counts: [120, 180, 240]
+  final_frequency_relative_spread_max: 0.08
+  final_energy_relative_spread_max: 0.05
+tail_gate:
+  required_newton_field: chi proportional to 1/r
+  decisive_check: >-
+    Linearize the selected-axis projector current including its angular
+    connection. A nonzero l(l+1)/r^2 term forces r^l or r^(-l-1) rather than
+    the required monopole 1/r and rejects this candidate for C-M5-004 without
+    a two-body production run.
+commands:
+  - >-
+    PYTHONPATH=src python
+    proposals/P239-m5-4x4-action/attempts/0004/verify_biaxial_radial_obstruction.py
+  - PYTHONPATH=src python -m pytest -q tests/test_m5_stationary_fields.py
+artifacts:
+  - src/substrate_framework/m5_stationary_fields.py
+  - tests/test_m5_stationary_fields.py
+  - proposals/P239-m5-4x4-action/attempts/0004/verify_biaxial_radial_obstruction.py
+  - proposals/P239-m5-4x4-action/attempts/0004/result.json
+verdict: >-
+  The polar and azimuthal boost axes produce nonzero coarse stationary points,
+  but the exact angular connection has a positive coefficient divided by
+  sin(theta)^2. Its sphere integral diverges logarithmically at the frame
+  poles. The radial-axis boost relaxes to zero. Therefore the radial biaxial
+  representation cannot establish a finite fully relaxed hedgehog or Newton
+  tail and is rejected; no force comparator is opened.
+diagnosed_layer: representation
+next_route: >-
+  Restore the established M5.17 uniaxial exterior spectrum (g,1,0,0) and use
+  an axisymmetric field relaxation in which tangent splitting and boost
+  dressing are independent fields constrained to vanish regularly on the
+  axis, rather than frozen radial functions on a singular frame.

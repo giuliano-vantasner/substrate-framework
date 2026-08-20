@@ -1,0 +1,60 @@
+id: attempt-0012
+campaign: P239
+canonical_issue: "147"
+branch: research/p239-m5-4x4-action
+base_release: v0.163.0
+source_baseline: substrate-framework@6e5a4ba001bfdb41ea6e5157a43b0a854d118e1a
+candidate: J_auxiliary_clock_axis_lift
+status: complete
+objective: >-
+  Converge and refine the coupled fixed-J Candidate-J one-body branch using
+  the legitimate labeled auxiliary clock axis through melted regions.
+delta_from_attempt_0008: >-
+  Interpret the first spatial coordinate as the director-axis eigenvalue
+  itself, not a positive principal-gap coordinate; set V_guard=0. The local
+  Candidate-J constraints preserve the axis label when eigenvalues meet.
+numerical_contract:
+  precision: float64
+  optimizer: Adam warm start plus L-BFGS-B analytic gradient
+  preflight_grid: {spacing: 0.5, rho_cells: 8, z_cells: 16}
+  adam_steps: 4000
+  lbfgsb_max_iterations: 8000
+  refinement_grids:
+    - {spacing: 0.5, rho_cells: 12, z_cells: 24}
+    - {spacing: 0.4, rho_cells: 16, z_cells: 32}
+gates:
+  stationarity_relative_inf_norm_max: 0.0005
+  finite_positive_inertia: true
+  finite_nonzero_frequency: true
+  simple_timelike_gap_min: 0.5
+  scalar_field_sign: negative for positive alpha and localized positive energy
+  scalar_tail_relative_fit_residual_max_after_refinement: 0.08
+  scalar_flux_relative_spread_max: 0.12
+  grid_frequency_relative_spread_max: 0.12
+  grid_energy_relative_spread_max: 0.08
+commands:
+  - >-
+    python proposals/P239-m5-4x4-action/attempts/0008/solve_coupled_hedgehog.py
+    --auxiliary-clock-axis --lbfgsb-iterations 8000
+    --output proposals/P239-m5-4x4-action/attempts/0012/result-small.json
+artifacts:
+  - proposals/P239-m5-4x4-action/attempts/0008/solve_coupled_hedgehog.py
+  - proposals/P239-m5-4x4-action/attempts/0012/result-small.json
+next_if_success: >-
+  Run both refinement grids, freeze the one-body receipt, and instantiate the
+  common-action separately relaxed two-body contract.
+next_if_failure: >-
+  Reject Candidate J only if the legitimate constrained branch fails after
+  the correction budget; then compare an independent complex scalar clock.
+verdict: >-
+  Candidate J fails the finite-frequency stationarity gate. After 8000
+  L-BFGS-B iterations its relative gradient is 3.97e-3 and inertia has grown
+  to 3286 while omega falls to 0.00304. The auxiliary label passes through an
+  isotropic melt and emerges on a zero eigenline of a permuted uniaxial
+  vacuum; rotating about it is an extensive ordinary rotation at zero M5.17
+  potential cost. The local covariant lift survives, but it needs an
+  on-shell-zero axis-lock term to distinguish the physical director.
+diagnosed_layer: candidate clock energetics
+next_route: >-
+  Add zeta*(Tr(Y^2)-Tr(P_N Y)^2), which is zero for every correctly aligned
+  pure-director amplitude and positive on the permuted vacuum.

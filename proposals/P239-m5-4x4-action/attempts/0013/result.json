@@ -1,0 +1,10 @@
+{
+  "campaign": "P239",
+  "attempt": "0013",
+  "candidate": "K_auxiliary_axis_lock",
+  "term": "zeta*(Tr(Y^2)-Tr(P_N Y)^2)",
+  "constrained_form": "zeta*(lambda_theta^2+lambda_phi^2)",
+  "verdict": "The axis lock is a positive Lorentz scalar on the Candidate-J constraint surface. It is exactly zero for every aligned M5.17 pure-director amplitude and positive for both permuted uniaxial vacua.",
+  "scope": "A stationary Candidate-K branch remains required.",
+  "check_count": 8
+}

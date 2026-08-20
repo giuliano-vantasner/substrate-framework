@@ -1,0 +1,48 @@
+id: attempt-0009
+campaign: P239
+canonical_issue: "147"
+branch: research/p239-m5-4x4-action
+base_release: v0.163.0
+source_baseline: substrate-framework@6e5a4ba001bfdb41ea6e5157a43b0a854d118e1a
+candidate: I_clock_branch_guard
+status: complete
+objective: >-
+  Construct and verify the minimum positive Lorentz-spectral term that
+  excludes clock-active spatial eigenvalue permutations while remaining
+  exactly inactive on the full uniaxial M5.17 hedgehog and Coulomb sector.
+frozen_term: >-
+  On the open branch with selected director eigenvalue lambda_n and tangent
+  eigenvalues lambda_theta,lambda_phi, add
+  V_guard=zeta*(lambda_theta-lambda_phi)^4/
+  ((lambda_n-lambda_theta)^2*(lambda_n-lambda_phi)^2), zeta>0.
+exact_gates:
+  - all three eigenvalues and V_guard are Lorentz scalars
+  - V_guard is invariant under tangent-label exchange
+  - V_guard is nonnegative on the real simple branch
+  - V_guard vanishes identically whenever the tangent eigenvalues coincide
+  - the complete pure-director M5.17 amplitude family is unchanged
+  - a clock-active closure of either director gap diverges
+  - deleting the denominator reproduces a finite permutation escape
+commands:
+  - >-
+    PYTHONPATH=src python
+    proposals/P239-m5-4x4-action/attempts/0009/verify_clock_branch_guard.py
+  - PYTHONPATH=src python -m pytest -q tests/test_m5_covariant_action.py
+artifacts:
+  - src/substrate_framework/m5_covariant_action.py
+  - tests/test_m5_covariant_action.py
+  - proposals/P239-m5-4x4-action/attempts/0009/verify_clock_branch_guard.py
+  - proposals/P239-m5-4x4-action/attempts/0009/result.json
+next_if_success: >-
+  Rerun the coupled Candidate-I branch over a predeclared guard-strength
+  ladder, select only by stationarity/gap/parameter-economy criteria, and then
+  refine the one-body scalar flux.
+next_if_failure: >-
+  Reject I and introduce an explicit covariant clock-axis field rather than
+  hiding an eigenvalue ordering constraint in the solver.
+verdict: >-
+  Candidate I passed all 10 exact checks. The term is a positive
+  Lorentz-spectral scalar, is tangent-label symmetric, vanishes identically on
+  every uniaxial M5.17 director/amplitude field, and diverges at either
+  clock-active selected-director gap closure. Nonlinear stationary evidence
+  remains open.

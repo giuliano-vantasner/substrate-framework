@@ -1,0 +1,45 @@
+{
+  "campaign": "P239",
+  "attempt": "0001",
+  "source_symmetries": {
+    "spacetime_antisymmetry": true,
+    "internal_antisymmetry": true,
+    "pair_exchange_counterexample": true,
+    "bianchi_counterexample": true,
+    "pair_exchange_max_abs": 208,
+    "bianchi_max_abs": 234
+  },
+  "metric_pairing_diagrams": 60,
+  "parity_even_rank": 6,
+  "epsilon_metric_diagrams": 156,
+  "parity_odd_rank": 4,
+  "total_quadratic_rank": 10,
+  "parity_even_basis": {
+    "I1_norm": "F_abcd F^abcd",
+    "I2_pair_exchange": "F_abcd F^cdab",
+    "I3_cross": "F_abcd F^acbd",
+    "I4_ricci_norm": "R_ac R^ac, R_ac=F_abc^b",
+    "I5_ricci_transpose": "R_ac R^ca, R_ac=F_abc^b",
+    "I6_scalar_squared": "R^2, R=R_a^a"
+  },
+  "parity_odd_basis": {
+    "J1_pseudoscalar_times_scalar": "epsilon^abcd F_abcd R",
+    "J2_mixed_trace_left": "epsilon^abce F_abcd F_efg^f eta^dg",
+    "J3_mixed_trace_right": "epsilon^abcg F_abcd F_efgh eta^de eta^fh",
+    "J4_pair_pontryagin": "epsilon^abef F_abcd F_ef^cd"
+  },
+  "spatial_even_rank": 3,
+  "spatial_nullspace": {
+    "N1": "I3-(I1+I2)/4",
+    "N2": "(I1-I2)/4-I4+I5",
+    "N3": "I1-4*I4+I6"
+  },
+  "source_clock_witness": {
+    "derivatives": "D0=omega*diag(1,0,0,0), D1=E01+E10, D2=D3=0",
+    "even_invariant_vector": "omega^2*(4,4,2,2,2,4)",
+    "N1_N2_N3": "(0,0,0)",
+    "baseline_action_coefficient": "-4"
+  },
+  "scope": "Complete quadratic basis for a four-dimensional double two-form with only within-pair antisymmetry. The parity-even issue-147 candidate family has six coefficients before reductions; its complete 3x3-preserving subspace is blind to an explicit negative clock mode built from symmetric field derivatives. Four additional proper-Lorentz pseudoscalars are classified but not selected.",
+  "check_count": 41
+}

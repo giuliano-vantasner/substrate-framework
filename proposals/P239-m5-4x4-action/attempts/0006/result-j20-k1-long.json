@@ -1,0 +1,76 @@
+{
+  "campaign": "P239",
+  "attempt": "0006",
+  "parameters": {
+    "spacing": 0.5,
+    "rho_cells": 12,
+    "z_cells": 24,
+    "angular_momentum": 20.0,
+    "projector_stiffness": 1.0,
+    "g": 8.0,
+    "curvature_c2": 1.0,
+    "beta": 1.0,
+    "cscale": 0.0037705544498939964,
+    "core_radius": 1.5,
+    "splitting_seed": 0.25,
+    "boost_seed": 0.08,
+    "max_iterations": 2000
+  },
+  "starts": [
+    {
+      "boost_seed_sign": 0.0,
+      "success": false,
+      "message": "STOP: TOTAL NO. of ITERATIONS REACHED LIMIT",
+      "iterations": 2000,
+      "evaluations": 2118,
+      "objective": 0.5702156575916907,
+      "gradient_inf_norm": 0.018445227744040324,
+      "stationarity_relative_inf_norm": 0.018445227744040324,
+      "branch_gap": 6.9339782416490365,
+      "meridional_director_gap": -1.119548406601991,
+      "max_abs_b_rho": 0.0,
+      "max_abs_b_z": 0.0,
+      "observables": {
+        "curvature": 0.007267391679011756,
+        "projector": 0.0,
+        "potential": 0.5377288128057629,
+        "inertia": 3965.193042690406,
+        "static": 0.5449962044847747,
+        "rotational": 0.02521945310691593,
+        "total": 0.5702156575916907,
+        "frequency": 0.0025219453106915934
+      }
+    }
+  ],
+  "selected": {
+    "boost_seed_sign": 0.0,
+    "success": false,
+    "message": "STOP: TOTAL NO. of ITERATIONS REACHED LIMIT",
+    "iterations": 2000,
+    "evaluations": 2118,
+    "objective": 0.5702156575916907,
+    "gradient_inf_norm": 0.018445227744040324,
+    "stationarity_relative_inf_norm": 0.018445227744040324,
+    "branch_gap": 6.9339782416490365,
+    "meridional_director_gap": -1.119548406601991,
+    "max_abs_b_rho": 0.0,
+    "max_abs_b_z": 0.0,
+    "observables": {
+      "curvature": 0.007267391679011756,
+      "projector": 0.0,
+      "potential": 0.5377288128057629,
+      "inertia": 3965.193042690406,
+      "static": 0.5449962044847747,
+      "rotational": 0.02521945310691593,
+      "total": 0.5702156575916907,
+      "frequency": 0.0025219453106915934
+    }
+  },
+  "tail_decomposition": {
+    "fit_point_count": 168,
+    "radial_vector_r_minus_2_coefficient": 0.0,
+    "fixed_z_monopole_r_minus_1_coefficient": 0.0,
+    "relative_rms_residual": 0.0
+  },
+  "status": "preflight"
+}

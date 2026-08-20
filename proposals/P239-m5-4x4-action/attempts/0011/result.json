@@ -1,0 +1,15 @@
+{
+  "campaign": "P239",
+  "attempt": "0011",
+  "candidate": "J_auxiliary_clock_axis_lift",
+  "fields": "M_ab plus constrained unit spacelike clock axis N^a",
+  "constraints": [
+    "eta(N,N)=1",
+    "P_t N=0",
+    "P_N^2=P_N",
+    "[Y,P_N]=0"
+  ],
+  "verdict": "The auxiliary eigenframe lift is local, Lorentz covariant, and parameter-free on shell. It selects the M5.17 director outside the core, remains continuous when M is isotropic, and contributes zero clock derivative throughout the tangent-degenerate uniaxial sector.",
+  "scope": "This verifies the constrained field space only. The labeled-axis fixed-J branch must still pass stationarity and refinement.",
+  "check_count": 12
+}

@@ -1,0 +1,13 @@
+{
+  "campaign": "P239",
+  "attempt": "0007",
+  "candidate": "H_timelike_dilaton_completion",
+  "action_addition": "A(tau)=exp(2*alpha*(tau-g)); L_tau=-(kappa_tau/2)*eta^munu*d_mu tau*d_nu tau",
+  "weak_field_equation": "kappa_tau*Laplacian(phi)=2*alpha*rho",
+  "one_body_tail": "phi=-alpha*m/(2*pi*kappa_tau*r)",
+  "two_body_interaction": "U_N=-alpha^2*m1*m2/(pi*kappa_tau*r)",
+  "physical_coupling": "alpha^2/kappa_tau",
+  "verdict": "Candidate H is a local Lorentz-covariant positive-energy scalar completion. It is exactly Candidate G and M5.17 at tau=g, and its linearized stationary exchange between positive localized M5 energies is necessarily attractive with a 1/r potential.",
+  "scope": "This exact result establishes the action and infrared sign/kernel. Existence and refinement of the nonlinear relaxed one- and two-body branches remain required before C-M5-004 promotion.",
+  "check_count": 14
+}

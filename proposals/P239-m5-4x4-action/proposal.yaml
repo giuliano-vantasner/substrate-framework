@@ -1,0 +1,266 @@
+id: P239
+base_release: v0.163.0
+source_baseline: substrate-framework@6e5a4ba001bfdb41ea6e5157a43b0a854d118e1a
+canonical_issue: "147"
+question: >-
+  Which smallest local Lorentz-covariant action for the real symmetric M5 4x4
+  order-parameter field retains the established spatial 3x3 and Coulomb
+  reductions, has a bounded finite-frequency fixed-angular-momentum hedgehog
+  branch, and produces an attractive inverse-square interaction between two
+  fully relaxed mass defects from that same action?
+positive_objective: >-
+  Select one explicit local 4x4 action from a preregistered invariant family;
+  derive its independent coefficients, Euler-Lagrange equations, spatial,
+  charge, boost, and hedgehog reductions; solve refined one- and two-defect
+  stationary branches; and promote individually reviewed claims for the
+  action, finite nonzero hedgehog frequency, retained Coulomb tail, and
+  attractive Newton tail.
+coordination_boundary: >-
+  This campaign resolves issue #147 on branch
+  research/p239-m5-4x4-action. It may reuse pinned public OpenWave equations
+  and P236 measurement machinery after source audit, but it does not edit
+  OpenWave MODELS.md, immutable prior campaigns, the active P236 worktree, or
+  generated documentation by hand.
+source_inventory:
+  - source: openwave-labs/openwave@c001aa26afc344806781153fd8f71816e347e70e
+    access: public Git repository; HEAD verified with git ls-remote on 2026-08-20
+    extracted: >-
+      Current M5 canonical action and public M5.21.14 through M5.21.16
+      derivation, fixed-J, contraction, and two-defect source surfaces; exact
+      file hashes and equation inventory will be frozen before execution.
+  - source: openwave-labs/openwave@614a223fff01b768550b0917d0f96621d6bbe155
+    access: in-hand detached checkout; machine-local source root is not durable provenance
+    extracted: >-
+      P236's pinned M5.8/M5.17/M5.21 source boundary and the M5.21.14 through
+      M5.21.16 action evidence cited by issue #147.
+  - source: substrate-framework P236 and issue #96
+    access: >-
+      merged immutable campaign plus open corrective branch
+      origin/research/p236-two-clock-gem-newton at 1f8b728
+    extracted: >-
+      Reusable stationary-field, source-centred quadrature, subtraction, and
+      force-fit machinery only; the reopened imposed-core headline is not an
+      accepted claim or a P239 conclusion.
+  - source: accepted release v0.163.0
+    access: governance/releases/current.yaml and governance/claims.yaml
+    extracted: >-
+      C-LOR-002 conventions, C-KRN-001 inverse-kernel theorem, C-VAR-003
+      relaxed-interaction ledger, and C-IGR-004/C-GRV-002 conditional
+      gravitational coupling and attractive-sign map.
+invariants:
+  - spacetime uses the accepted mostly-plus eta=diag(-1,1,1,1) convention
+  - every action term is a typed local Lorentz scalar in one frozen index convention
+  - the selected 4x4 action reduces to the audited 3x3 spatial action without coefficient reinterpretation
+  - charge and mass defects use one common action, admissible field space, boundary data, and relaxation definition
+  - Coulomb and Newton observables are direct differences of separately relaxed energies and not imposed overlap profiles
+  - finite frequency is assessed at fixed nonzero angular momentum with positive inertia and a strict interior energy minimum
+  - no observed Coulomb, Newton, electron-frequency, or gravitational-normalization value enters candidate selection
+  - a candidate with a scale-free negative channel is rejected unless the same selected local action supplies its covariant stabilizer
+allowed_imports:
+  - C-LOR-002 for the accepted mostly-plus Lorentz-generator convention only
+  - C-KRN-001 for the exact three-dimensional 1/r Green-kernel implication after the candidate selects a massless quadratic branch
+  - C-VAR-003 for the typed interaction of separately relaxed common functionals
+  - C-IGR-004 and C-GRV-002 for the conditional total-coupling bridge and its exact sign regimes
+  - C-GSK-001 as accepted evidence for local higher-order radial scaling logic, not as an M5 coefficient or physical identification
+  - pinned public OpenWave M5 source equations and Jarek Duda's issue-146 direction as approved proposal inputs, not accepted framework claims
+candidates:
+  - id: A_quadratic_complete
+    description: >-
+      Complete independent curvature-squared Lorentz-scalar basis, beginning
+      with c0 F_abcd F^abcd + c1 R_ac R^ac + c2 R^2 and adding only contractions
+      surviving the source tensor's exact algebraic symmetries.
+  - id: B_quartic_stabilized
+    description: >-
+      Candidate A plus the minimum local quartic curvature/current invariant
+      that is inactive or coefficient-preserving in the established 3x3 and
+      Coulomb reductions while bounding the time-mixing sector.
+  - id: C_sextic_spectral
+    description: >-
+      Candidate A plus a local sextic current/curvature invariant and a
+      Lorentz-scalar eigenspectrum potential whose coefficients are selected
+      by exact boundedness, reduction, and stationary-branch conditions.
+  - id: D_auxiliary_local
+    description: >-
+      A local Lorentz-covariant auxiliary-mediator formulation whose exact
+      algebraic elimination yields a current-current term in the 4x4 action;
+      it remains eligible only if the elimination is local and adds no hidden
+      fitted kernel.
+  - id: E_spectral_cartan
+    description: >-
+      Construct the isolated timelike g-eigenprojector covariantly from the
+      mixed order parameter eta^-1 M and use it to build the positive internal
+      Cartan metric h^ab=eta^ab-2 P_g^a_c eta^cb. Contract curvature with h on
+      its internal indices and eta on spacetime indices. This equals the
+      healthy Frobenius contraction in the vacuum eigenframe, preserves the
+      spatial 3x3 action, and remains Lorentz scalar because h transforms with
+      M.
+  - id: F_projector_current_completion
+    description: >-
+      Candidate E plus the minimum two-derivative Lorentz scalar of its own
+      timelike spectral projector,
+      -kappa eta^munu q(partial_mu P_t,partial_nu P_t), with
+      q(A,B)=-Tr(AB)/2 and kappa>0. The current vanishes identically when the
+      time row is uniform, so it preserves every 3x3/Coulomb coefficient. It
+      supplies the boost sector's missing linearized Laplace operator and an
+      R-scaling static energy to balance the curvature term's 1/R scaling.
+  - id: G_uniaxial_axisymmetric_completion
+    description: >-
+      Candidate F with the M5.18 trace-power potential replaced by the exact
+      projector-defined Lorentz lift of M5.17's full Landau-de Gennes
+      potential. With X=eta^-1 M, Q=I-P_t, and Y=QXQ, use
+      a Tr(Y^2)-b Tr(Y^3)+c Tr(Y^2)^2-V_vac plus a positive term pinning
+      Tr(P_t X)=g. Its exterior spectrum is (g,1,0,0). The two tangent
+      eigenvalues and boost components are then relaxed independently on an
+      axisymmetric half-plane; localized tangent splitting and non-radial
+      projector components must obey exact axis parity. This removes the
+      moving-frame string while retaining the complete M5.17 spatial
+      functional and Coulomb coefficient exactly.
+  - id: H_timelike_dilaton_completion
+    description: >-
+      Candidate G plus the minimum massless scalar current of the selected
+      timelike eigenvalue tau=Tr(P_t eta^-1 M). Remove its algebraic pinning,
+      add -(kappa_tau/2) eta^munu partial_mu tau partial_nu tau, and multiply
+      the positive M5 matter sector by
+      A(tau)=exp(2 alpha (tau-g)). At tau=g this is exactly Candidate G and
+      hence exactly M5.17 spatially. For localized positive stationary energy
+      the linearized tau equation has a scalar 1/r monopole and its on-shell
+      cross energy is -alpha^2 m1 m2/(pi kappa_tau r). A field rescaling leaves
+      only alpha^2/kappa_tau, which is typed by the accepted conditional
+      gravitational-coupling bridge rather than fitted to a force value.
+  - id: I_clock_branch_guard
+    description: >-
+      Candidate H on an additional simple selected spatial eigenline P_n,
+      continued from the uniaxial director at the boundary, plus the positive
+      rational spectral guard
+      zeta*(lambda_theta-lambda_phi)^4/
+      ((lambda_n-lambda_theta)^2*(lambda_n-lambda_phi)^2).
+      It vanishes identically on every uniaxial M5.17 director/amplitude field
+      and therefore leaves the established hedgehog exterior and Coulomb
+      coefficient exact. It acts only when the tangent plane is clock-biaxial
+      and sends a clock-active permutation of the selected director branch to
+      infinite energy. Its open-branch hypothesis is the spatial analogue of
+      the already explicit simple timelike spectral hypothesis.
+  - id: J_auxiliary_clock_axis_lift
+    description: >-
+      Candidate H on a local constrained eigenframe lift (M,N), where N is a
+      unit spacelike clock axis orthogonal to P_t and P_N=N(eta N)^T commutes
+      with the projected spatial mixed tensor Y. Local covariant Lagrange
+      multipliers impose N.eta.N=1, P_t N=0, and [Y,P_N]=0. The constraints
+      add no on-shell energy or coefficient, select the uniaxial director in
+      the M5.17 exterior, and keep its continuous label through an isotropic
+      melted core where M alone cannot remember an eigenline. The clock is
+      rotation of the tangent eigenspace about N.
+  - id: K_auxiliary_axis_lock
+    description: >-
+      Candidate J plus the positive local Lorentz scalar
+      V_lock=zeta*(Tr(Y^2)-Tr(P_N Y)^2), zeta>0. On the aligned constrained
+      branch this is zeta*(lambda_theta^2+lambda_phi^2). It vanishes exactly
+      for every correctly aligned M5.17 pure-director amplitude, including
+      its melted limit, but assigns positive cost to a uniaxial vacuum whose
+      auxiliary clock axis emerges along a zero eigenline. It therefore
+      distinguishes internal tangent clock inertia from an extensive ordinary
+      rotation without altering the established Coulomb field.
+uniqueness_evidence: null
+selection_criteria:
+  - exact Lorentz-scalar and index-symmetry validity
+  - boundedness and existence of a regular stationary fixed-J hedgehog branch
+  - exact recovery of the spatial 3x3 and charge-sector reductions
+  - one common mechanism for positive Coulomb and attractive Newton coefficients
+  - fewer new assumptions, fields, coefficients, and derivative orders
+  - correct dimensions, topology, origin and asymptotic limits
+  - compatibility with accepted C-KRN-001, C-VAR-003, C-IGR-004, and C-GRV-002
+  - numerical robustness under representation, domain, mesh, and solver refinement
+claims_proposed:
+  - C-M5-001
+  - C-M5-002
+  - C-M5-003
+  - C-M5-004
+comparators_blinded_until: >-
+  The source/action convention inventory, complete invariant basis, exact
+  sector reductions, candidate coefficient domains, solver equations,
+  boundary data, error models, selection criteria, and mutation gates are
+  frozen. Issue #147 and its cited public sources already disclosed prior
+  P236/OpenWave values before this campaign began; those values are recorded
+  as unavoidable prior exposure and are not P239 selection inputs. No new
+  P239 force or frequency output is opened before this gate.
+status: active
+revisions:
+  - date: '2026-08-20'
+    after_attempt: '0001'
+    change: >-
+      Added E_spectral_cartan after the exhaustive constant-coefficient basis
+      showed that every exact-3x3-preserving quadratic combination leaves four
+      source clock/boost directions unchanged and negative. Selection criteria
+      and comparator gate are unchanged; no new P239 force/frequency value was
+      inspected.
+  - date: '2026-08-20'
+    after_attempt: '0002'
+    change: >-
+      Registered F_projector_current_completion before any relaxed P239
+      force/frequency output. Exact power counting shows that Candidate E's
+      curvature is quartic in vacuum-orbit perturbations, has no linearized
+      massless operator, and scales as 1/R in three spatial dimensions. The
+      projector current is the minimum covariant term that is invisible to
+      the complete 3x3 sector while adding both a Laplace kernel and the
+      missing R side of Derrick balance. Selection criteria and comparator
+      gate are unchanged.
+  - date: '2026-08-20'
+    after_attempt: '0004'
+    change: >-
+      Registered G_uniaxial_axisymmetric_completion after exact angular
+      analysis rejected the radial biaxial representation: both unequal
+      tangent eigenvalues and a nonzero tangential projector boost have a
+      positive coefficient multiplying integral dtheta/sin(theta). The new
+      route restores M5.17's actual uniaxial exterior and relaxes the angular
+      fields with regular axis parity. No new force comparator was inspected.
+  - date: '2026-08-20'
+    after_attempt: '0004-source-reconciliation'
+    change: >-
+      Strengthened Candidate G from vacuum-spectrum replacement to an exact
+      covariant lift of the complete off-shell M5.17 Landau-de Gennes
+      potential. The later M5.18 trace-power potential was source-verified as
+      a distinct replacement, not an exact reduction. The projector-defined
+      spatial operator Y=(I-P_t)(eta^-1 M)(I-P_t) makes the original traces
+      Lorentz scalar while a separate positive scalar pins the g eigenvalue.
+      No comparator or relaxed output was inspected.
+  - date: '2026-08-20'
+    after_attempt: '0006'
+    change: >-
+      Registered H_timelike_dilaton_completion after Candidate G's regular
+      axisymmetric functional retained exactly zero boost. Three independent
+      484-variable boost-only relaxations returned to the zero branch, while
+      the projector perturbation is a spatial little-group vector and has no
+      rotational scalar monopole. Candidate H promotes the already present
+      timelike eigenvalue to the minimum massless scalar channel; its exchange
+      sign and 1/r kernel are fixed before any force comparator is opened.
+  - date: '2026-08-20'
+    after_attempt: '0008'
+    change: >-
+      Registered I_clock_branch_guard after the coupled Candidate-H solve
+      drove the selected director gap from order one to 4.9e-5 outside the
+      core while retaining clock-active tangent splitting. This is an
+      eigenvalue-permutation boundary escape, not a stationary hedgehog. The
+      rational guard is the minimum positive local spectral term that is
+      exactly zero throughout the established uniaxial M5.17/Coulomb sector
+      yet excludes that clock-active branch exchange. No force comparator was
+      inspected and Candidate H's exact scalar-exchange theorem is unchanged.
+  - date: '2026-08-20'
+    after_attempt: '0010'
+    change: >-
+      Registered J_auxiliary_clock_axis_lift after Candidate I showed that its
+      minimum gap occurs on an isotropic melt surface where tangent splitting
+      and the guard both vanish. Excluding that surface would contradict the
+      retained M5.17 melt sector. Candidate J instead makes the clock-axis
+      continuation explicit as a parameter-free local constrained auxiliary
+      field, the preregistered auxiliary route. The M5 energy and exact Newton
+      theorem are unchanged; no comparator was opened.
+  - date: '2026-08-20'
+    after_attempt: '0012'
+    change: >-
+      Registered K_auxiliary_axis_lock after the legitimate Candidate-J lift
+      let N emerge from a melt surface on a zero eigenline. The interior then
+      approached a permuted uniaxial vacuum with nonzero ordinary-rotation
+      inertia, growing I to 3286 and lowering omega to 0.00304 without
+      stationarity. V_lock is the minimum N-dependent positive invariant that
+      is zero on the correctly aligned M5.17 director family but positive on
+      that permutation. No force/frequency comparator selected it.

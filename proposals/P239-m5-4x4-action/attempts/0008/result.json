@@ -1,0 +1,51 @@
+{
+  "campaign": "P239",
+  "attempt": "0008",
+  "status": "preflight",
+  "parameters": {
+    "spacing": 0.5,
+    "rho_cells": 8,
+    "z_cells": 16,
+    "g": 8.0,
+    "curvature_c2": 1.0,
+    "beta": 1.0,
+    "cscale": 0.0037705544498939964,
+    "projector_stiffness": 1.0,
+    "scalar_stiffness": 1.0,
+    "scalar_coupling": 0.05,
+    "angular_momentum": 20.0,
+    "core_radius": 1.5,
+    "adam_steps": 4000,
+    "adam_learning_rate": 0.01,
+    "lbfgsb_iterations": 1200
+  },
+  "solution": {
+    "optimizer_success": false,
+    "optimizer_message": "STOP: TOTAL NO. of ITERATIONS REACHED LIMIT",
+    "lbfgsb_iterations": 1200,
+    "lbfgsb_evaluations": 1256,
+    "gradient_inf_norm": 0.04664998206428093,
+    "stationarity_relative_inf_norm": 0.04664998206428093,
+    "principal_gap_outside_core": 0.00426607457469641,
+    "timelike_gap": 6.843649562210378,
+    "max_abs_boost": 0.0,
+    "min_phi": -0.0037082888605142563,
+    "max_phi": 0.00045774376925472354,
+    "observables": {
+      "curvature": 0.012869279318637301,
+      "projector": 0.0,
+      "potential": 0.25302200543470377,
+      "scalar": 4.6888795625849724e-05,
+      "inertia": 1392.219768329322,
+      "static": 0.2659381735489669,
+      "rotational": 0.07182774032867026,
+      "total": 0.3377659138776372,
+      "frequency": 0.007182774032867025
+    }
+  },
+  "scalar_tail": {
+    "fit_point_count": 32,
+    "one_over_r_coefficient": -0.0054740184865114255,
+    "relative_rms_residual": 0.6944997691155668
+  }
+}

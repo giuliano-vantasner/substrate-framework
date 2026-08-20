@@ -1,0 +1,11 @@
+{
+  "campaign": "P239",
+  "attempt": "0005",
+  "candidate": "G_uniaxial_axisymmetric_completion",
+  "potential": "a Tr(Y^2)-b Tr(Y^3)+c Tr(Y^2)^2-V_vac+w_t(Tr(P_t X)-g)^2",
+  "definitions": "X=eta^-1 M; Q=I-P_t; Y=Q X Q",
+  "parameter_domain": "c>0, w_t>0, 0<beta=b/c<2",
+  "verdict": "The projector-defined potential is an exact Lorentz scalar and recovers the complete off-shell M5.17 Landau-de Gennes potential. It has the regular uniaxial exterior spectrum (g,1,0,0), pins g, and admits the repeated tangent eigenvalues required at a regular hedgehog axis.",
+  "next_route": "Freeze and solve the regular axisymmetric fixed-J field problem using this potential and the exact M5.17 equivariant derivative channels.",
+  "check_count": 14
+}

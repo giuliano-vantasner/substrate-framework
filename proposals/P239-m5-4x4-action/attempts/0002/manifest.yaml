@@ -1,0 +1,37 @@
+id: attempt-0002
+campaign: P239
+canonical_issue: "147"
+branch: research/p239-m5-4x4-action
+base_release: v0.163.0
+source_baseline: substrate-framework@6e5a4ba001bfdb41ea6e5157a43b0a854d118e1a
+candidate: E_spectral_cartan
+status: complete
+objective: >-
+  Build the covariant positive internal metric from M's isolated timelike
+  spectral projector and establish exact Lorentz covariance, spatial-sector
+  recovery, positive Hamiltonian density on the admissible g-timelike branch,
+  and sensitivity to the noncovariant fixed-Frobenius mutation.
+commands:
+  - >-
+    PYTHONPATH=src python
+    proposals/P239-m5-4x4-action/attempts/0002/verify_spectral_cartan.py
+  - PYTHONPATH=src python -m pytest -q tests/test_m5_covariant_action.py
+artifacts:
+  - src/substrate_framework/m5_covariant_action.py
+  - tests/test_m5_covariant_action.py
+  - proposals/P239-m5-4x4-action/evidence/spectral-cartan-action.md
+  - proposals/P239-m5-4x4-action/attempts/0002/verify_spectral_cartan.py
+  - proposals/P239-m5-4x4-action/attempts/0002/result.json
+verdict: >-
+  Candidate E supplies an explicit local Lorentz-scalar action on the simple
+  timelike spectral branch. Its Hamiltonian is nonnegative, its static 3x3
+  reduction is coefficient-exact, and it reverses an explicit negative clock
+  coefficient without the boost-covariance failure of a fixed Frobenius
+  metric. A finite nonzero fixed-J frequency follows conditionally from any
+  stationary solution with finite positive inertia; existence of that
+  relaxed solution and the two-defect force are not established by this
+  attempt.
+diagnosed_layer: candidate_concept_repaired
+next_route: >-
+  Derive the selected action's fixed-J hedgehog and asymptotic one-defect
+  reductions, then freeze the relaxed pair solver.
