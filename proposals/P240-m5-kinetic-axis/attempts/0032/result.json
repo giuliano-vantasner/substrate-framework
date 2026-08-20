@@ -1,0 +1,64 @@
+{
+  "campaign": "P240",
+  "attempt": "0032",
+  "canonical_goal_issue": "146",
+  "candidate_source_issue": "147",
+  "candidate": "A_same_order_curvature_contractions",
+  "method": "fresh exact polynomial enumeration plus source-map dominance certificate",
+  "even_diagram_count": 60,
+  "even_rank": 6,
+  "one_epsilon_diagram_count": 156,
+  "one_epsilon_rank": 4,
+  "spatial_even_rank": 3,
+  "spatial_preserving_basis": {
+    "N1": "I3-(I1+I2)/4",
+    "N2": "(I1-I2)/4-I4+I5",
+    "N3": "I1-4*I4+I6"
+  },
+  "source_static_map": {
+    "jacobian_rank": 9,
+    "pivot_columns": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      6,
+      7,
+      8,
+      9
+    ],
+    "minor_determinant": "362040",
+    "evaluation_point": [
+      5,
+      2,
+      5,
+      1,
+      3,
+      -2,
+      -1,
+      6,
+      6,
+      -1,
+      -2,
+      3,
+      1,
+      5,
+      2,
+      5,
+      1,
+      3
+    ],
+    "interpretation": "nonzero minor proves a locally open source image, so the generic spatial polynomial nullspace is not an over-broad stand-in restriction"
+  },
+  "clock_witness": {
+    "field": "M(t,x)=omega*t*diag(1,0,0,0)+x^1*(E01+E10)",
+    "even_invariants": "omega^2*(4,4,2,2,2,4)",
+    "all_static_preserving_even_deformations": "0",
+    "all_one_epsilon_deformations": "0",
+    "hamiltonian_density": "-4*omega^2"
+  },
+  "verdict": "reject_constant_coefficient_curvature_quadratic_family",
+  "verdict_scope": "Exact boundedness failure for the complete constant-coefficient eta/one-epsilon curvature-quadratic family while preserving the full source-generated static 3x3 action. This is not a verdict on field-dependent contractions, higher-order currents, or issue 146.",
+  "check_count": 25
+}

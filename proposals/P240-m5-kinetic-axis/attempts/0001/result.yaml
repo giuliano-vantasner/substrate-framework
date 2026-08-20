@@ -1,0 +1,7 @@
+attempt: '0001'
+status: compatibility_abort
+exit_status: 127
+stdout: ''
+stderr: '/bin/bash: line 1: .venv/bin/python: No such file or directory'
+scientific_candidate_status: not_opened
+elapsed_seconds: 0.1

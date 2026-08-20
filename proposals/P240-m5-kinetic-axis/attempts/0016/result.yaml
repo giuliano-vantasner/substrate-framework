@@ -1,0 +1,37 @@
+campaign: P240
+attempt: '0016'
+status: complete_discrete_mode_confirmed_translation_gap_found
+stationary_state:
+  root_success: true
+  residual_inf_relative: 9.220449391268993e-09
+  independent_directional_relative_max: 1.8929575723631737e-09
+discrete_negative_mode:
+  ad_eigenvalue: -14.893267478547317
+  eigen_residual_relative: 8.170098264792946e-09
+  control_power_fractions:
+    boost_rho: 0.7100231099613542
+    boost_z: 0.28997689003864574
+    all_other_controls_combined: 1.5987211554602254e-18
+  outer_interior_shell_fraction: 0.08061776134103446
+independent_correction_check:
+  energy_curvature_h_0_005: -14.859917090177532
+  energy_curvature_h_0_0025: -14.884930025829135
+  energy_curvature_h_0_00125: -14.89118311724269
+  smallest_energy_relative_error: 0.00013995325790590551
+  gradient_hvp_relative_error_h_0_0003125: 2.6319841140717215e-05
+  unchanged_thresholds_pass: true
+translation_gap: >-
+  The implemented alternating inertia contracts only the three rest-frame
+  spatial current components and is independent of both boost controls. The
+  declared candidate instead contains the dynamic M-derived spatial metric
+  q_(mu nu)(P_t) contracted with the full B^mu current. Consequently this
+  confirmed discrete boost mode diagnoses the incomplete rest-slice
+  implementation, not the full Lorentz-covariant candidate.
+candidate_effect: >-
+  Exact symbolic structure remains active. No continuum refinement or
+  candidate rejection is permitted until the dynamic-projector contraction
+  and projector conventions are derived and translation-tested.
+goal_146_effect: >-
+  The current numerical action cannot test the issue-146 Newton/boost target,
+  so it supplies no completion or rejection evidence for that goal.
+next_action: attempt_0017_exact_dynamic_projector_bridge

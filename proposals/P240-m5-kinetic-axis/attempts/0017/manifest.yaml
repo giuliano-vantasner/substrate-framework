@@ -1,0 +1,39 @@
+attempt: '0017'
+campaign: P240
+canonical_issue: '146'
+candidate_source_issue: '147'
+status: frozen_before_execution
+classification: exact_dynamic_projector_alternating_current_bridge
+objective: >-
+  Derive the coordinate-frame alternating-sextic density with the full
+  M-derived spatial metric, determine its exact boost response, and prove the
+  rest-frame reduction used by attempt 0015 is insufficient off the
+  zero-boost slice before any further numerical solve.
+definitions:
+  mixed_order_parameter: X=eta^-1 M
+  timelike_projector: P_t=-u(eta u)^T
+  spatial_mixed: Y=(I-P_t)X(I-P_t)
+  axis_projector: P_N_transforms_by_the_same_similarity_as_Y
+  projected_derivative: Z_mu=(I-P_t)(partial_mu Y)(I-P_t)
+  current: K_mu=[Y,Z_mu]
+  alternating_current: B^mu=epsilon^(mu nu rho sigma)Tr(K_nu K_rho K_sigma)/6
+  spatial_covariant_metric: q_mu_nu=eta_mu_nu-(eta P_t)_mu_nu
+  density: kappa*Tr(P_N Y)^2*q_mu_nu*B^mu*B^nu
+exact_gates:
+  - q is symmetric, annihilates the selected timelike vector, and reduces to diag(0,1,1,1)
+  - the full density reduces to the attempt-0014 rest-frame spatial B norm at zero boost
+  - a finite Lorentz boost produces the exact q contraction rather than an invariant bare sum of coordinate spatial components
+  - the second boost variation is positive for a current component aligned with the boost when B0=0
+  - the old rest-only contraction has identically zero boost response and a deliberate boost mutation distinguishes it
+  - P_N and Y use the same mixed similarity and preserve Tr(P_N Y); the opposite conjugation fails a noncommuting witness
+  - arbitrary static 3x3 data remain null because only B0 can survive and q00=0 on the rest slice
+  - literal epsilon and determinant current normalizations remain identical
+selection_rule: >-
+  Only the exact full coordinate-frame formula may enter a corrected numerical
+  action. A rest-frame shortcut is allowed only after proving that it carries
+  the dynamic q and current transformation without losing boost response.
+next_if_success: >-
+  Implement the exact bridge in the campaign solver, mutation-test the boost
+  Hessian contribution, then freeze a fresh stationary/refinement attempt.
+next_if_failure: Repair or replace the candidate without numerical refinement.
+comparators_opened: false

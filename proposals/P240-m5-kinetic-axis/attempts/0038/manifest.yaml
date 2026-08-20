@@ -1,0 +1,35 @@
+campaign: P240
+attempt: '0038'
+canonical_goal_issue: '146'
+candidate_source_issue: '147'
+candidate: D_fixed_j_two_clock_spectral_cartan_one_body
+frozen_question: >-
+  Does any distinct smooth stationary basin of the unchanged spectral-Cartan
+  fixed-J functional survive basis continuation as a stable one-body branch?
+method:
+  initial_1x1_split_amplitudes: [0.125, 0.5, 2.0]
+  branch_rule: solve every seed, then deduplicate only coefficient vectors equal within 1.0e-8 relative norm
+  stages: [1x1, 2x1, 2x2, 3x2, 4x3]
+  transfer: exact zero-padding
+  primary_root: scipy hybr with exact AD Hessian
+  correction_root: >-
+    scipy Levenberg-Marquardt root from the failed hybr state, using the same
+    exact residual and Jacobian. Its success flag is ignored unless the
+    physical gradient residual is at most 1.0e-9.
+  action_changes: none
+predeclared_branch_gates:
+  exact_root_gradient_inf_relative_max: 1.0e-9
+  final_independent_directional_relative_max: 2.0e-8
+  final_hessian_symmetry_relative_max: 1.0e-10
+  final_minimum_hessian_eigenvalue_min: -1.0e-8
+  centered_curvature_relative_error_max: 1.0e-4
+  withheld_order_5x4_gradient_inf_relative_max: 1.0e-6
+  higher_quadrature_energy_relative_change_max: 1.0e-6
+  higher_quadrature_gradient_inf_relative_max: 2.0e-7
+interpretation_boundary: >-
+  LM is basin recovery only, not a minimization oracle. A root with a negative
+  mode is a saddle. A failed branch does not erase another passing branch.
+  The action is rejected at this chart/order only if every distinct basin
+  either fails the exact root or has a negative mode corroborated by centered
+  energy curvature. Basis/domain refinement is still required for a broad
+  action verdict.

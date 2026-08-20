@@ -1,0 +1,39 @@
+attempt: '0026'
+campaign: P240
+canonical_issue: '146'
+candidate_source_issue: '147'
+status: frozen_before_execution
+classification: exact_hessian_galerkin_root_correction
+objective: >-
+  Determine whether attempt 0025's matrix-free Krylov stall can be corrected
+  to a genuine stationary point in the same 45-dimensional smooth Galerkin
+  space using the exact AD Hessian as the Euler-Lagrange Jacobian.
+frozen_input:
+  path: attempts/0025/coefficients-order3-mesh12x24.npz
+  epistemic_role: failed_root_continuation_state_only
+representation:
+  radial_order: 3
+  axial_modes: 3
+  evaluation_mesh: 12x24
+  spacing: 0.3333333333333333
+solver:
+  method: scipy_least_squares_Levenberg_Marquardt
+  residual: exact_PyTorch_AD_coefficient_gradient
+  jacobian: exact_PyTorch_AD_coefficient_Hessian
+  device: NVIDIA_GeForce_RTX_3060
+  torch: 2.4.1+cu124
+oracles:
+  hessian_symmetry_relative_max: 1.0e-10
+  hessian_vector_finite_difference_relative_max: 1.0e-5
+  solver_success_required: true
+  normalized_coefficient_gradient_inf_max: 1.0e-8
+  independent_directional_first_variation_relative_max: 2.0e-8
+  exact_boundary_residual: 0.0
+  upper_half_DCT_power_fraction_max: 0.10
+interpretation: >-
+  Passing establishes only a smooth restricted stationary point. Failing
+  establishes that this stalled start is not repaired by an exact-Jacobian
+  local corrector; it is not a global nonexistence result.
+next_if_pass: resume_attempt_0025_basis_and_mesh_ladder
+next_if_fail: freeze_a_structured_parameter_homotopy_or_alternative_smooth_start
+comparators_opened: false

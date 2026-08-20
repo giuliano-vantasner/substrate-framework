@@ -1,0 +1,25 @@
+campaign: P240
+attempt: '0015'
+status: complete_single_grid_diagnostic_candidate_active
+classification: direct_variational_alternating_sextic_one_body
+plus_branch:
+  residual_inf_relative: 5.516541260591485e-09
+  independent_directional_relative_max: 9.465629078533284e-10
+  converged_negative_hvp_modes: [-11.620472613535627, -6.4681262789465634, -0.30738078337908825]
+minus_branch:
+  residual_inf_relative: 2.637047372233327e-08
+  independent_directional_relative_max: 1.3335899944301861e-09
+  converged_negative_hvp_modes: [-19.93007051047423, -11.74714560332064, -1.6108407824224575]
+exact_translation:
+  epsilon_vs_axial_relative_error_max: 1.1102230246251565e-16
+  omitted_spatial_current_inertia_both_branches: 0.0
+interpretation_correction: >-
+  These results do not reject the symbolically supported candidate. They show
+  negative AD-HVP directions on one 8x16 discretization. The numerical
+  methodology itself must now be tested through independent centred energy
+  curvature, mode diagnostics, and mesh/domain persistence.
+goal_146_effect: >-
+  No issue-146 completion gate opens or closes. Exact candidate structure
+  remains supported; finite-frequency stable existence, Coulomb relaxation,
+  and the Newton tail remain unestablished.
+next_action: attempt_0016_independent_negative_mode_and_refinement_audit

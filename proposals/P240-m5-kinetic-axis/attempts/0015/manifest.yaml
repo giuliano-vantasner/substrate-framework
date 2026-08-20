@@ -1,0 +1,90 @@
+attempt: '0015'
+campaign: P240
+canonical_issue: '146'
+candidate_source_issue: '147'
+status: implementation_preflight_passed
+classification: direct_variational_alternating_sextic_one_body
+selected_action: L2_axis_weighted_alternating_derivative_sextic
+source_selection_attempt: '0014'
+objective: >-
+  Determine whether the symbolically selected alternating derivative-sextic
+  representative admits a stable stationary fixed-J one-body branch on the
+  fresh primary grid.
+action:
+  static: >-
+    Unchanged spectral-Cartan spatial curvature, M5.17 polynomial potential,
+    projector term, and Candidate-H scalar sector used throughout P240.
+  currents: K_mu=[Y,Z_mu]
+  alternating_current: >-
+    B^mu=epsilon^(mu nu rho sigma)Tr(K_nu K_rho K_sigma)/6
+  clock_inertia_density: >-
+    kappa*Tr(P_N Y)^2*sum_(i=1)^3 (B^i)^2 in the M-derived comoving frame.
+    B^0 is excluded by the spatial projector.
+  fixed_J_energy: E_static+J^2/(4*I_alternating)
+regular_chart: unchanged_from_attempt_0007
+discretization:
+  dtype: float64
+  spacing: 0.5
+  rho_cells: 8
+  z_cells: 16
+  interior_unknowns: 686
+  spatial_derivatives: centred_rho_and_z_with_axis_parity_ghost_plus_exact_azimuthal_generator
+unknown_domains: all seven regular-chart controls are unconstrained real variables
+branches:
+  starts: [1.0, -1.0]
+  interpretation: >-
+    Each root is classified independently. Energy agreement is descriptive,
+    not a gate; descent is only a Newton-basin warm start.
+warm_start:
+  adam_steps: 1800
+  adam_learning_rate: 0.008
+  unconstrained_lbfgs_max_iterations: 6000
+direct_oracle:
+  euler_lagrange_method: scipy_krylov_root_with_armijo_line_search
+  root_maximum_outer_iterations: 120
+  normalized_residual_inf_max: 1.0e-8
+  solver_success_required: true
+  independent_first_variation: centred_energy_differences_in_three_deterministic_directions
+  root_directional_derivative_relative_max: 2.0e-8
+  probe_ad_vs_fd_relative_error_max: 5.0e-7
+  hessian_method: reverse_mode_HVP_plus_ARPACK_six_smallest_algebraic
+  hessian_bilinear_symmetry_relative_max: 1.0e-8
+  eigensolver_success_required: true
+  local_stability_minimum_eigenvalue_min: -1.0e-6
+translation_gates:
+  - full epsilon-trace current equals the independent axial-vector determinant form to 5e-12
+  - finite positive inertia above the domain scale floor and finite frequency
+  - timelike gap greater than 2
+  - exact boundary data
+  - strictly negative scalar response
+  - deleting one load-bearing spatial current either makes inertia fall below its domain-scale floor or changes the relative Euler-Lagrange gradient by at least 1e-4
+  - unweighted-axis mutation relative gradient at least 1e-4
+  - finite regular-axis diagnostics
+comparators_opened: false
+success: >-
+  At least one branch must be an actual Euler-Lagrange root with independent
+  first-variation agreement, no negative Hessian mode, and every translation
+  gate. This opens but does not replace mesh/domain convergence.
+next_if_stable_root: Freeze continuation of that exact branch across mesh/domain refinements.
+next_if_only_saddles: >-
+  Mark the registered issue-147 L1/L2 local kinetic candidates exhausted for
+  this action and ansatz, preserve the strongest exact results, and keep issue
+  146 open for a newly coordinated candidate.
+next_if_numerical_failure: Repair the root method without changing the selected action.
+implementation_smoke:
+  scope: 3_by_6_grid_5_warm_iterations_1_root_iteration_plus_only
+  status: executed_non_evidentiary
+  observations:
+    - alternating inertia and fixed-J energy remained finite
+    - literal epsilon trace and independent axial determinant agreed at 1.39e-17
+    - Hessian-vector symmetry and six-mode ARPACK paths executed
+    - deleting the load-bearing current made inertia exactly zero on the smoke ansatz
+  oracle_correction_before_primary_run: >-
+    Treat an omitted-current inertia below the already declared domain-scale
+    floor as the stronger mutation response; evaluate a gradient change only
+    when the mutated fixed-J energy remains finite.
+  scientific_use: none
+preflight:
+  legacy_np_trapz_access: absent
+  python_compile: pass
+  diff_check: pass

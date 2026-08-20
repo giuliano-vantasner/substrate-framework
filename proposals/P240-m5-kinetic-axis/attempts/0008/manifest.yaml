@@ -1,0 +1,65 @@
+attempt: '0008'
+campaign: P240
+canonical_issue: '146'
+candidate_source_issue: '147'
+status: complete_oracle_inadequate
+classification: bounded_optimizer_repair
+source_attempt: '0007'
+selected_action: L2_axis_weighted_external_pontryagin_square
+action_and_regular_chart_changed: false
+objective: >-
+  Remove the active artificial boxes and exhaust convergence of both frozen
+  regular-chart starts before classifying the remaining branch split.
+unchanged:
+  - physical action and all coefficients
+  - J and primary physical domain and mesh
+  - origin/axis-regular coordinate definitions
+  - two opposite split seeds
+  - all one-body scientific thresholds
+numerical_repairs:
+  control_bounds:
+    radial_anisotropy: [-6.0, 6.0]
+    common_spatial_eigenvalue: [-6.0, 6.0]
+    transverse_split: [-6.0, 6.0]
+    director_angle_deviation: [-3.141592653589793, 3.141592653589793]
+    radial_rapidity: [-2.0, 2.0]
+    axial_rapidity: [-2.0, 2.0]
+    scalar: [-4.0, 4.0]
+  adam_steps: 1800
+  adam_learning_rate: 0.008
+  lbfgsb_max_iterations: 12000
+  lbfgsb_gtol: 1.0e-10
+  lbfgsb_ftol: 1.0e-15
+  lbfgsb_maxcor: 50
+new_diagnostics:
+  - active bound counts by control component
+  - maximum absolute raw controls by component
+gates:
+  optimizer_success_both: true
+  projected_gradient_relative_max: 1.0e-5
+  active_nonperiodic_bound_fraction_max: 0.0
+  opposite_start_total_energy_relative_difference_max: 1.0e-4
+  opposite_start_frequency_relative_difference_max: 0.05
+  inherited_physical_gates: >-
+    finite positive inertia/frequency, timelike gap > 2, exact boundary,
+    negative scalar, independent epsilon error <= 5e-12, axis-weight mutation
+    gradient >= 1e-4, finite regular-chart diagnostics
+comparators_opened: false
+next_if_success: Freeze the fresh production refinement ladder.
+next_if_failure: >-
+  If stationary bound-free branches remain distinct, compare their Hessian
+  stability and continue the true minimum from a common radial seed. If no
+  positive stable L2 quartic branch survives, continue the remaining L2
+  quartic invariant basis before considering sextic order.
+preflight:
+  legacy_np_trapz_access: absent
+  python_compile: pass
+  diff_check: pass
+verdict: >-
+  Both starts are projected-stationary only because one radial-anisotropy and
+  one transverse-split control pin the widened bound. Their total energies
+  differ by 0.28419. More importantly, minimizer termination and seed
+  agreement are not the right existence/stability oracle. Retain this run as
+  optimizer evidence only and replace the gate with a direct unprojected
+  Euler-Lagrange residual, independent first-variation check, and second-
+  variation spectrum.

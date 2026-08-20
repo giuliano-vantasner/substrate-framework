@@ -1,0 +1,48 @@
+attempt: '0013'
+campaign: P240
+canonical_issue: '146'
+candidate_source_issue: '147'
+status: complete_polynomial_subfamily_exhausted
+classification: symbolic_polynomial_skyrme_exhaustion
+objective: >-
+  Determine whether another constant-coefficient polynomial Skyrme current is
+  an eligible next member after the standard current produced only saddle
+  branches.
+family: >-
+  K_p=[p(Y),Z] with p(Y)=a Y+b Y^2 modulo the identity. Cayley-Hamilton spans
+  every constant-coefficient polynomial current on a three-dimensional
+  spatial subspace by these two nontrivial powers.
+gates:
+  - exact eigenbasis sum-of-squares response for general a,b
+  - positive inertia for every unequal real tangent-eigenvalue pair
+  - no additional clock-blind spectral hyperplane
+  - exact comparison of Y and Y2 representatives
+  - field-order and free-parameter economy
+  - preservation of the outer n^2 wrong-axis repair
+selection_rule: >-
+  A pure next member is eligible only if it remains strictly active for every
+  unequal tangent pair. A positive sum containing both norms is not selected
+  without an independent principle fixing its new coupling ratio; numerical
+  stabilization may not fit that ratio.
+next_if_unique_standard: >-
+  Record the issue-147 timelike Skyrme family as exhausted through its allowed
+  sextic repair; do not run a blind higher-power numerical term.
+next_if_new_member: Freeze its direct residual/Hessian oracle before values.
+setup_corrections:
+  - >-
+    The first run's Cayley-Hamilton check evaluated only a symbolic matrix
+    shape and was therefore non-evidentiary. It was replaced by the exact
+    characteristic-polynomial residual for three independent eigenvalues;
+    candidate definitions and the other eight checks are unchanged.
+  - >-
+    The first correction used SymPy's unevaluated Identity matrix, so
+    elementwise factorization did not discharge the otherwise exact residual.
+    Replacing it with the explicit identity matrix is representation-only.
+verdict: >-
+  Nine exact checks show that the standard Y current is the only
+  constant-polynomial current with no extra split-spectrum blind line. Pure
+  Y2 fails at opposite eigenvalues; every mixed Y+Y2 member fails on another
+  hyperplane. A positive combined norm retains the standard current and adds
+  an unfixed coupling ratio. The polynomial-current subfamily is exhausted,
+  but the derivative-sextic alternating/topological current remains a distinct
+  Skyrme class to screen symbolically.

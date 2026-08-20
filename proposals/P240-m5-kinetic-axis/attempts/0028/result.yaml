@@ -1,0 +1,39 @@
+campaign: P240
+attempt: '0028'
+status: order4_zero_padding_continuation_failed
+environment:
+  torch: 2.4.1+cu124
+  cuda_runtime: '12.4'
+  device: NVIDIA_GeForce_RTX_3060
+representation:
+  radial_order: 4
+  axial_modes: 4
+  coefficient_count: 80
+solver:
+  success: false
+  reason: maximum_240_function_evaluations_exceeded
+  initial_normalized_coefficient_gradient_inf: 0.09168669597996736
+  final_normalized_coefficient_gradient_inf: 0.0037697589538951393
+  final_independent_directional_relative_max: 0.001480261465336979
+  hessian_symmetry_relative_max: 1.3417130741595716e-16
+refinement:
+  order3_full_pointwise_residual_inf_relative: 0.03082054476231251
+  incomplete_order4_full_pointwise_residual_inf_relative: 0.04632002791945783
+  residual_decreases: false
+  energy_relative_difference: 0.02518045857553204
+  frequency_relative_difference: 0.05127929761373288
+smoothness:
+  maximum_nontrivial_high_half_DCT_power_fraction: 0.03835239111613746
+inadmissible_nonstationary_mode_diagnostic:
+  computed_eigenvalue: -1034.7444463698585
+  centered_curvature_at_0_00125: -1034.5405664338614
+  reason_inadmissible: >-
+    The coefficient gradient and independent first variation failed the
+    stationary gate. Curvature at this point cannot adjudicate branch
+    stability.
+classification: basis_branch_tracking_method_failure
+scientific_scope: >-
+  Simple zero-padding does not continue the passing order-3 saddle branch to
+  an order-4 stationary point. This is not a global absence result for the
+  smooth order-4 action.
+continuation: penalized_new_mode_homotopy_to_zero_penalty

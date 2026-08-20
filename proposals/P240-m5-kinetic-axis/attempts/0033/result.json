@@ -1,0 +1,24 @@
+{
+  "campaign": "P240",
+  "attempt": "0033",
+  "candidate": "B_contraction_signature_parameter_free_endpoints",
+  "fixed_frobenius": {
+    "static_3x3_recovery": "exact",
+    "hamiltonian": "positive in the preferred frame",
+    "symmetry": "SO(3), exact rational boost mutation fails",
+    "disposition": "not selected because the spectral-Cartan endpoint supplies the same sign repair covariantly"
+  },
+  "spectral_cartan": {
+    "action": "L=-1/2 F_munuab F_rscd eta^murho eta^nusigma h^ac(M) h^bd(M)-V",
+    "internal_metric": "h^ab=eta^ab-2 P_t^a_c eta^cb",
+    "static_3x3_recovery": "exact",
+    "hamiltonian": "positive on the simple timelike spectral branch",
+    "symmetry": "local proper Lorentz scalar",
+    "affine_clock_sign": "repaired exactly",
+    "constant_vacuum_derivative_order": 4,
+    "single_scalar_fixed_axis_boost_curvature": 0
+  },
+  "goal_scope": "The spectral-Cartan endpoint is retained as the parameter-free positive covariant base action. By itself it supplies neither a quadratic mass-gradient kernel about a constant vacuum nor any curvature for a single-scalar fixed-axis boost orbit. The conditional formula omega=J/(2I) does not establish a stationary hedgehog. A nonlinear two-clock/textured interaction remains open and is a distinct issue-147 candidate, so no endpoint-only numerical validation is opened here.",
+  "verdict": "retain_spectral_cartan_base_continue_to_two_clock_interaction",
+  "check_count": 21
+}

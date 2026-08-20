@@ -1,0 +1,25 @@
+attempt: '0030'
+campaign: P240
+canonical_issue: '146'
+candidate_source_issue: '147'
+status: frozen_before_execution
+classification: fine_penalty_homotopy_fold_localization
+objective: >-
+  Distinguish attempt 0029's factor-of-ten continuation failure from a branch
+  fold by following smaller penalty steps and tracking Hessian invertibility.
+input:
+  path: attempts/0029/coefficients-mu-10000.npz
+  status: exact_modified_action_root
+penalty_ladder: [8000.0, 6000.0, 5000.0, 4000.0, 3000.0, 2500.0, 2000.0, 1750.0, 1500.0, 1250.0, 1000.0]
+stage_oracles:
+  solver_success_required: true
+  normalized_modified_gradient_inf_max: 1.0e-8
+  exact_AD_gradient_and_Hessian: true
+  report_Hessian_eigenvalue_closest_to_zero: true
+  maximum_function_evaluations: 80
+interpretation: >-
+  Passing to 1000 classifies attempt 0029 as a coarse-step failure. Loss of a
+  root together with a Hessian eigenvalue tending to zero localizes a fold but
+  does not by itself rule out a pseudo-arclength path to zero penalty.
+physical_action_verdict: none_penalty_never_zero
+comparators_opened: false

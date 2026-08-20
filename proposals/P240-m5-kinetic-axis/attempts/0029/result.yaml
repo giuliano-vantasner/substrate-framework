@@ -1,0 +1,21 @@
+campaign: P240
+attempt: '0029'
+status: homotopy_step_failed_before_physical_endpoint
+environment:
+  torch: 2.4.1+cu124
+  cuda_runtime: '12.4'
+  device: NVIDIA_GeForce_RTX_3060
+stages:
+  - penalty: 10000.0
+    success: true
+    normalized_modified_gradient_inf: 3.889107010206138e-16
+    new_mode_coefficient_norm: 0.00153641112943071
+  - penalty: 1000.0
+    success: false
+    solver_status_only: xtol_satisfied
+    normalized_modified_gradient_inf: 5.986067000619065e-05
+    new_mode_coefficient_norm: 0.015428868670438958
+zero_penalty_reached: false
+physical_action_verdict: none
+classification: homotopy_step_too_large_or_branch_fold
+continuation: smaller_penalty_steps_with_Hessian_near_zero_tracking

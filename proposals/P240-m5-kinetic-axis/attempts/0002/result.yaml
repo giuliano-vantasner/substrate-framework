@@ -1,0 +1,62 @@
+campaign: P240
+attempt: '0002'
+status: complete
+selected_candidate: L1_field_dependent_kinetic_axis
+rejected_candidates:
+  - candidate: L2_quartic_timelike_current
+    classification: rejected_for_framework_fit
+    reason: >-
+      Its clock inertia is independent of the selected axis eigenvalue and
+      remains positive when P_N selects a zero eigenline, so the prior
+      wrong-axis escape survives.
+deselected_candidates:
+  - candidate: L2_sextic_axis_weighted_current
+    reason: >-
+      Multiplication by Tr(P_N Y)^2 repairs the wrong-axis gate exactly but
+      adds two field powers without closing any structural gate left open by
+      L1.
+selected_density: >-
+  -kappa_1/2 * Tr(P_N Y)^2 * P_t^(mu nu) * Tr(Z_mu Z_nu),
+  Z_mu=(I-P_t)(partial_mu Y)(I-P_t)
+exact_clock_reduction: >-
+  In the comoving eigenframe with Y=diag(0,n,lambda_theta,lambda_phi) and
+  rotation about P_N=diag(0,1,0,0), both the Lagrangian time term and
+  Hamiltonian contribution equal
+  kappa_1*n^2*(lambda_theta-lambda_phi)^2*omega^2.
+static_reduction: >-
+  The added density vanishes identically when P_t is the uniform time
+  projector and partial_0 Y=0, for arbitrary spatial Y and spatial
+  derivatives. The complete static 3x3 action and its Coulomb coefficient are
+  therefore unchanged by this term.
+wrong_axis_reduction: >-
+  When P_N selects a zero eigenline, Tr(P_N Y)=0 and L1 inertia vanishes even
+  if an ordinary rotation of unequal eigenvalues would have nonzero derivative
+  norm. A fixed nonzero J cannot use that escape.
+fixed_j_scale_energy: >-
+  E(R)=A/R+C*R+B*R^3+J^2/(4*I0*R^3), with positive coefficients. It diverges
+  at R->0+ and R->infinity and has strictly positive second derivative
+  2*A/R^3+6*B*R+3*J^2/(I0*R^5).
+commands:
+  - command: >-
+      PYTHONPATH=src /home/dan/substrate-framework/.venv/bin/python
+      proposals/P240-m5-kinetic-axis/attempts/0002/verify_kinetic_axis.py
+    exit_status: 0
+    verdict: ALL 12 CHECKS PASS [P240/kinetic-axis-structural-selection]
+  - command: >-
+      PYTHONPATH=src /home/dan/substrate-framework/.venv/bin/python -m pytest -q
+      tests/test_m5_kinetic_axis.py
+    exit_status: 0
+    verdict: 4 passed
+check_inventory:
+  lexical_ledger_check_sites: 12
+  runtime_ledger_checks: 12
+  pytest_assertion_nodes: 11
+evidence_scope: exact_action_structure_and_scaling_only
+not_established:
+  - existence or stationarity of a nonlinear one-body fixed-J field
+  - refined finite nonzero frequency
+  - relaxed Coulomb or Newton pair interactions
+  - accepted C-M5 claim
+next_action: >-
+  Freeze and run a new L1 fixed-J one-body solver contract. Only a successful
+  scale-relative stationary refined branch can open any pair calculation.

@@ -1,0 +1,32 @@
+campaign: P240
+attempt: '0026'
+status: incomplete_exact_corrector_hit_evaluation_cap
+environment:
+  torch: 2.4.1+cu124
+  cuda_runtime: '12.4'
+  device: NVIDIA_GeForce_RTX_3060
+oracle_audit:
+  initial_hessian_symmetry_relative_max: 4.976278720916527e-16
+  final_hessian_symmetry_relative_max: 2.249593874067531e-16
+  hessian_vector_fd_relative_error: 1.1486838192628722e-10
+solver:
+  success: false
+  reason: maximum_160_function_evaluations_exceeded
+  initial_normalized_coefficient_gradient_inf: 0.35019237841063333
+  final_normalized_coefficient_gradient_inf: 0.00010027139725370129
+  final_independent_directional_relative_max: 2.9441173263214273e-05
+  stationary_gate_pass: false
+smoothness:
+  maximum_nontrivial_high_half_DCT_power_fraction: 0.0155513291598613
+observables_at_incomplete_point:
+  total_energy: 81.08870108277965
+  inertia: 0.018906264318203556
+  frequency: 26.4462609632821
+  curvature: 45.24451010287408
+  potential: 21.943792662854793
+  fixed_j_clock: 13.22313048164105
+coefficient_artifact:
+  path: proposals/P240-m5-kinetic-axis/attempts/0026/coefficients-corrected-order3-mesh12x24.npz
+  role: incomplete_exact_corrector_continuation_state
+classification: finite_solver_budget_not_candidate_obstruction
+continuation: rerun_same_exact_Hessian_corrector_from_saved_state_with_new_frozen_budget

@@ -1,0 +1,17 @@
+campaign: P240
+attempt: '0020'
+projector_stiffness: 2.0
+status: eigensolver_method_failure_no_stability_verdict
+root:
+  success: true
+  residual_inf_relative: 7.373027120976133e-09
+  root_state_identical_to_kappa_1: true
+arpack:
+  success: false
+  hessian_vector_calls: 30022
+  converged_eigenvalues: []
+classification: >-
+  The iterative smallest-mode method is unsuitable near the coefficient
+  crossing on this finite 686-variable grid. No sign or stability inference is
+  permitted. Replace it once with an explicit symmetric dense Hessian and
+  direct diagonalization while preserving this failure.

@@ -1,0 +1,36 @@
+campaign: P240
+attempt: '0018'
+status: complete_exact_adverse_single_term_continue_combination
+clock_polynomial:
+  lagrangian: A+2*C*omega+I*omega^2
+  momentum: J=2*C+2*I*omega
+  fixed_j_hamiltonian: (J-2*C)^2/(4*I)-A
+exact_boost_witness:
+  A: kappa*B0^2*sinh(rapidity)^2
+  C: kappa*B0*b*sinh(rapidity)*cosh(rapidity)
+  I: kappa*b^2*cosh(rapidity)^2
+  H_J: >-
+    J^2/(4*kappa*b^2*cosh(rapidity)^2)
+    -(J*B0/b)*tanh(rapidity)
+exact_results:
+  rest_slice_recovers_J2_over_4I: true
+  B0_zero_fixed_J_second_boost_variation: -J^2/(2*kappa*b^2)
+  held_omega_second_boost_variation: 2*kappa*omega^2*b^2
+  old_rest_only_fixed_J_boost_variation: 0
+command: >-
+  PYTHONPATH=src /home/dan/substrate-framework/.venv/bin/python
+  proposals/P240-m5-kinetic-axis/attempts/0018/verify_fixed_j_legendre.py
+command_verdict: ALL 9 CHECKS PASS [P240/alternating-fixed-J]
+strongest_result: >-
+  The full alternating term has adverse fixed-J boost curvature in the exact
+  B0=0 aligned witness even though its held-omega curvature is positive. The
+  rest-only numerical action omits this response and is inequivalent.
+scope_limit: >-
+  This is not a no-go for a combined Skyrme action or for a nonzero-boost
+  stationary branch. It proves that this alternating term alone is not an
+  independently positive boost stabilizer and that fixed-omega numerics may
+  not select it for issue 146.
+goal_146_effect: >-
+  The single-term candidate does not yet meet the joint finite-omega and
+  boost/Newton mechanism gate. Continue with a preregistered static-null
+  covariant boost stabilizer and test the combined fixed-J Hessian exactly.

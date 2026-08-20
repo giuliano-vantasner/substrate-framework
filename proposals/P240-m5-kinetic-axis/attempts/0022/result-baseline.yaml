@@ -1,0 +1,24 @@
+campaign: P240
+attempt: '0022'
+grid: baseline
+status: stationary_gate_pass
+parameters:
+  spacing: 0.5
+  rho_cells: 8
+  z_cells: 16
+  physical_extents: [4.0, 8.0]
+stationary:
+  root_success: true
+  normalized_residual_inf: 9.628218398120127e-09
+  independent_directional_derivative_relative_max: 1.30654010454916e-09
+  boundary_residual: 0.0
+  total_energy: 6.8999113984848
+  inertia: 0.19712185087412043
+  frequency: 2.5365021573346214
+  timelike_gap: 6.872874231502041
+  max_abs_boost: 0.0
+state_artifact:
+  path: proposals/P240-m5-kinetic-axis/attempts/0022/state-baseline.npz
+  sha256: 05fd935458cda581276b35d2b9ff8a230508b90bc9a8abc1050f9ab4d71c1816
+  role: branch_tracking_initial_state_only
+continuation: interpolate_to_medium_and_reimpose_exact_boundaries

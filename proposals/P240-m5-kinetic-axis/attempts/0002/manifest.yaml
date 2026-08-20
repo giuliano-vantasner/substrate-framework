@@ -1,0 +1,61 @@
+attempt: '0002'
+campaign: P240
+canonical_issue: '146'
+candidate_source_issue: '147'
+branch: research/p240-m5-kinetic-axis
+base_release: v0.163.0
+source_baseline: substrate-framework@a34b5f584165b86d1fc62af0ede5fbf37b0aa5b7
+status: complete
+objective: >-
+  Enumerate and compare the lowest-order L1 kinetic-axis density, the L2
+  quartic timelike-current density, and only if required its sextic
+  axis-weighted repair before any P240 numerical output is opened.
+frozen_constructions:
+  L1: >-
+    -kappa_1/2 * Tr(P_N Y)^2 * P_t^(mu nu) * Tr(Z_mu Z_nu), with
+    Z_mu=(I-P_t)(partial_mu Y)(I-P_t).
+  L2_quartic: >-
+    -kappa_2 * P_t^(mu nu) * q([Y,Z_mu],[Y,Z_nu]), with
+    q(A,B)=-Tr(AB)/2.
+  L2_sextic: >-
+    L2_quartic multiplied by Tr(P_N Y)^2.
+exact_gates:
+  - exact Lorentz covariance including derivative-covector transformation
+  - identity-level nullity on every arbitrary static uniform-time-row 3x3 field
+  - exact Coulomb-coefficient preservation as a consequence of the static null identity
+  - nonnegative comoving Hamiltonian and positive clock inertia on the declared active branch
+  - zero inertia for a zero-eigenline clock axis and positive inertia for the physical director when tangent eigenvalues split
+  - parameter and polynomial-order economy
+  - fixed-J Derrick energy diverges at both scale endpoints and is strictly convex for positive coefficients
+mutations:
+  - remove the axis eigenvalue weight and require the zero-eigenline escape to regain positive inertia
+  - use the axis-blind quartic L2 current and require the wrong-axis gate to fail
+selection_rule: >-
+  Select L1 if it passes every structural gate. Select axis-weighted sextic L2
+  only if L1 fails and the sextic repair passes. Do not select the quartic L2
+  current if it remains positive on the zero-eigenline escape.
+comparators_opened: false
+commands:
+  - >-
+    PYTHONPATH=src /home/dan/substrate-framework/.venv/bin/python
+    proposals/P240-m5-kinetic-axis/attempts/0002/verify_kinetic_axis.py
+  - >-
+    PYTHONPATH=src /home/dan/substrate-framework/.venv/bin/python -m pytest -q
+    tests/test_m5_kinetic_axis.py
+historical_validation_excluded:
+  - P239 verifier tallies
+  - P239 test counts
+  - P239 validation receipt
+next_if_success: >-
+  Freeze the selected L1 one-body equations, boundary data, solver, error norm,
+  scale-relative stationarity threshold, and refinement ladder before running
+  a fixed-J hedgehog.
+next_if_failure: >-
+  Diagnose implementation versus representation; if scientific, continue to
+  the next eligible L2 order without changing the issue-146 objective.
+verdict: >-
+  L1 passed every frozen structural gate and is selected. The axis-blind L2
+  quartic current fails the zero-eigenline escape gate. Its axis-weighted
+  sextic repair passes but is deselected by the frozen polynomial-order and
+  parameter-economy criterion because L1 already closes the same risk at lower
+  field order. No numerical comparator was opened.

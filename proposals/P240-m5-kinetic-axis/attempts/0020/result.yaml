@@ -1,0 +1,42 @@
+campaign: P240
+attempt: '0020'
+status: complete_small_grid_bracket_selected_for_refinement
+root:
+  projector_stiffness_independent_zero_boost_state: true
+  success: true
+  residual_inf_relative: 7.373027120976133e-09
+  independent_directional_relative_max: 1.1424180717111591e-09
+dense_hessian:
+  dimension: 686
+  H0_symmetry_relative_max: 1.2255662023399883e-16
+  projector_delta_symmetry_relative_max: 2.6335504943350614e-14
+  decomposition: H(kappa_b)=H0+kappa_b*(H1-H0)
+coefficient_map:
+  - kappa_b: 1.0
+    six_smallest: [-9.171313693142263, -2.6565998468129317, -0.243389663923224, 0.00033599125182148023, 0.005951559903401617, 0.006055078698397636]
+    minimum_mode: boost_only
+  - kappa_b: 2.0
+    six_smallest: [0.00033599125112788325, 0.005951559899030205, 0.006055078693379338, 0.007043901208651745, 0.00788131410864246, 0.009537240965593816]
+    minimum_mode: nonboost_shape
+  - kappa_b: 4.0
+    minimum: 0.0003359912512365158
+  - kappa_b: 8.0
+    minimum: 0.00033599125312354806
+  - kappa_b: 16.0
+    minimum: 0.0003359912538127563
+  - kappa_b: 32.0
+    minimum: 0.00033599125170802443
+independent_curvature:
+  kappa_1_h_0_00125: -9.169161189674924
+  kappa_2_h_0_00125: 0.00033604067084525013
+selected_refinement_coefficient: 2.0
+selection_reason: >-
+  It is the smallest preregistered coefficient with a positive complete
+  six-mode dense spectrum. No observed frequency, force, or empirical
+  comparator selected it.
+scope_limit: >-
+  This is an 8x16 coefficient bracket only. The small positive shape mode and
+  all observables require fixed-domain mesh refinement, larger-domain replay,
+  and an independent spatial check before a stable one-body claim.
+goal_146_effect: >-
+  The combined action remains active. Pair/Coulomb/Newton gates remain closed.

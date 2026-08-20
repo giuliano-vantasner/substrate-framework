@@ -1,0 +1,35 @@
+campaign: P240
+attempt: '0009'
+branch: minus_split_seed
+status: stationary_saddle
+root:
+  success: true
+  message: solution_found_at_specified_tolerance
+  outer_iterations: 16
+  evaluations: 561
+  euler_lagrange_gradient_inf: 9.860128295643914e-10
+  residual_inf_relative: 9.848602701635743e-11
+first_variation:
+  root_directional_derivative_relative_max: 4.524415121155589e-10
+  probe_ad_vs_fd_relative_error_max: 4.306373459217472e-09
+second_variation:
+  eigensolver_success: false
+  converged_eigenpair_count: 5
+  hessian_bilinear_symmetry_relative_error: 2.0793189422930894e-16
+  converged_eigenvalues:
+    - -14.923534423017745
+    - -12.559925597023485
+    - -5.868876931709282
+    - -1.7113420343919807
+    - -0.715957738826184
+observables:
+  total_energy: 10.011702770796365
+  inertia: 0.2922690646869028
+  frequency: 1.7107523867968435
+  axis_connection_over_spacing: 2.8668882941475533
+  timelike_gap: 6.696758685114714
+  independent_full_epsilon_relative_error: 2.747404707066191e-16
+classification: >-
+  The root and first variation pass, but every converged lowest Hessian mode
+  is negative. Failure of the sixth ARPACK pair cannot erase five explicit
+  negative directions, so this branch is decisively unstable.

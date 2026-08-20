@@ -1,0 +1,18 @@
+attempt: '0001'
+campaign: P240
+kind: environment_compatibility
+status: compatibility_abort
+base_commit: a34b5f584165b86d1fc62af0ede5fbf37b0aa5b7
+command: PYTHONPATH=src .venv/bin/python scripts/validate_repository.py
+environment:
+  working_directory: /home/dan/substrate-framework-p240
+  python_path: .venv/bin/python
+candidate_evaluated: none
+verdict: >-
+  The proposal schema command did not execute because a linked worktree does
+  not contain the primary checkout's ignored project virtual environment.
+  This is compatibility provenance only and supplies no scientific verdict.
+diagnosis: environment_compatibility
+next_action: >-
+  Rerun the unchanged validator from this worktree with
+  /home/dan/substrate-framework/.venv/bin/python and proceed only if it passes.

@@ -1,0 +1,96 @@
+attempt: '0005'
+campaign: P240
+canonical_issue: '146'
+candidate_source_issue: '147'
+branch: research/p240-m5-kinetic-axis
+base_release: v0.163.0
+source_baseline: substrate-framework@a34b5f584165b86d1fc62af0ede5fbf37b0aa5b7
+status: complete_primary_gate_failed
+candidate: L2_axis_pontryagin_square
+objective: >-
+  Find a regular stationary fixed-J axisymmetric one-body branch of the exact
+  L2 action before any relaxed pair calculation.
+equations_and_discretization:
+  field: >-
+    Seven cell-centred half-plane controls: director, meridional tangent and
+    azimuthal eigenvalues; director angle; rho/z boost rapidities; and the
+    timelike scalar tau-g.
+  static_action: >-
+    P239-source spatial spectral-Cartan curvature, timelike-projector current,
+    projected M5.17 Landau-de Gennes potential, and Candidate-H scalar current
+    with exp(2 alpha (tau-g)) matter factor. No P239 guard or axis-lock term.
+  clock_action: >-
+    gamma*lambda_N^2*P_N(F)^2/2 from attempt 0004; the old time-curvature
+    inertia and rejected L1 term are absent.
+  fixed_j: E_total=E_static+J^2/(4 I_L2), omega=J/(2 I_L2)
+  domain: >-
+    Axisymmetric rho>=0 half-plane, cell-centred rho, centred z, second-order
+    centred differences, exact azimuthal equivariance, parity ghost at rho=0,
+    and fixed pure-director hedgehog/tau=0/boost=0 outer boundaries.
+  precision: IEEE-754 float64
+  solver: >-
+    PyTorch analytic reverse-mode gradient followed by SciPy L-BFGS-B with
+    explicit bounds; two opposite tangent-splitting starts.
+frozen_dimensionless_parameters:
+  g: 8.0
+  curvature_c2: 1.0
+  beta: 1.0
+  potential_scale: 1.0
+  projector_stiffness: 1.0
+  scalar_stiffness: 1.0
+  scalar_coupling_alpha: 0.1
+  l2_strength_gamma: 1.0
+  angular_momentum_J: 1.0
+  core_seed_radius: 1.0
+primary_run:
+  spacing: 0.5
+  rho_cells: 8
+  z_cells: 16
+  adam_steps: 1200
+  adam_learning_rate: 0.01
+  lbfgsb_max_iterations: 3000
+  lbfgsb_gtol: 1.0e-8
+refinement_ladder:
+  mesh: {spacing: 0.4, rho_cells: 10, z_cells: 20}
+  domain: {spacing: 0.5, rho_cells: 12, z_cells: 24}
+  tolerance: {lbfgsb_max_iterations: 6000, lbfgsb_gtol: 2.5e-9}
+frozen_gates:
+  optimizer_success: true
+  stationarity_projected_inf_over_energy_max: 1.0e-5
+  finite_outputs: true
+  positive_inertia_scale_floor: sqrt_machine_epsilon_times_coordinate_domain_volume
+  finite_positive_frequency: true
+  timelike_eigenvalue_gap_min: 2.0
+  exact_boundary_residual_max: 64_machine_epsilon
+  active_nonperiodic_bound_fraction_max: 0.0
+  opposite_start_total_energy_relative_difference_max: 1.0e-4
+  opposite_start_frequency_relative_difference_max: 0.05
+  independent_full_epsilon_inertia_relative_error_max: 5.0e-12
+  unweighted_axis_mutation_relative_gradient_min: 1.0e-4
+  scalar_response: min_tau_minus_g_negative_beyond_sqrt_machine_epsilon
+  mesh_observable_relative_change_max: 0.15
+  domain_observable_relative_change_max: 0.15
+  tolerance_observable_relative_change_max: 0.02
+  axis_regularity: connection_over_spacing_finite_and_nonincreasing_under_mesh_refinement
+comparators_opened: false
+compatibility_preflight: >-
+  The mutable solver contains no direct, imported, or dynamic np.trapz access.
+  It uses no numerical quadrature alias; cell weights are explicit.
+commands:
+  - >-
+    python proposals/P240-m5-kinetic-axis/attempts/0005/solve_l2_fixed_j.py
+    --spacing 0.5 --rho-cells 8 --z-cells 16 --adam-steps 1200
+    --lbfgsb-iterations 3000 --lbfgsb-gtol 1e-8
+  - mesh, domain, and tolerance commands after the primary gate passes
+next_if_success: >-
+  Complete all three refinements and only then freeze a common-action relaxed
+  pair calculation.
+next_if_failure: >-
+  Diagnose implementation, representation, or L2 concept. Repair technical
+  failures; otherwise continue the remaining L2 quartic basis before sextic.
+verdict: >-
+  Both starts are finite and individually stationary, but the primary gate
+  fails: their total energies differ by 0.2419 and frequencies by 0.5311,
+  above the frozen 1e-4 and 0.05 limits. The lower-energy branch also has a
+  much larger axis-connection-over-spacing diagnostic. No refinement or pair
+  calculation is opened from this result.

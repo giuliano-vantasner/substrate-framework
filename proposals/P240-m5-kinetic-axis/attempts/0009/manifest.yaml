@@ -1,0 +1,123 @@
+attempt: '0009'
+campaign: P240
+canonical_issue: '146'
+candidate_source_issue: '147'
+status: complete_no_stable_tested_branch
+classification: direct_variational_one_body_oracle
+selected_action: L2_axis_weighted_external_pontryagin_square
+action_and_regular_chart_changed: false
+objective: >-
+  Test existence and local stability of stationary one-body branches by the
+  unprojected discrete Euler-Lagrange equations, not by descent termination or
+  agreement between seeds.
+discretization:
+  dtype: float64
+  spacing: 0.5
+  rho_cells: 8
+  z_cells: 16
+  interior_unknowns: 686
+  action_quadrature: same cell-centred axisymmetric action as attempt 0007
+unknown_domains: >-
+  All seven regular-chart controls are unconstrained real variables. Angle
+  periodicity is represented by sine/cosine in the decoded matrices;
+  rapidities remain timelike for every finite real value. Non-finite trial
+  action values abort rather than being clipped into a verdict.
+branch_generation:
+  starts: [1.0, -1.0]
+  warm_start: >-
+    Adam followed by unconstrained L-BFGS is permitted only to enter a Newton
+    basin. Neither minimizer status nor its gradient carries a scientific
+    verdict.
+  warm_adam_steps: 1800
+  warm_adam_learning_rate: 0.008
+  warm_lbfgs_max_iterations: 6000
+euler_lagrange_solver:
+  residual: exact_float64_reverse_mode_gradient_of_discrete_fixed_J_energy
+  method: scipy_krylov_root_with_armijo_line_search
+  maximum_outer_iterations: 120
+  normalized_residual_inf_max: 1.0e-8
+  solver_success_required: true
+independent_first_variation:
+  method: centred_energy_difference_in_three_deterministic_unit_directions
+  step: 2.0e-5
+  probe_offset: 1.0e-4
+  root_directional_derivative_relative_max: 2.0e-8
+  probe_ad_vs_fd_relative_error_max: 5.0e-7
+second_variation:
+  method: reverse_mode_Hessian_vector_operator_plus_ARPACK_smallest_algebraic
+  eigenpairs: 6
+  eigensolver_tolerance: 1.0e-7
+  eigensolver_success_required: true
+  hessian_bilinear_symmetry_relative_max: 1.0e-8
+  local_stability_minimum_eigenvalue_min: -1.0e-6
+  interpretation: >-
+    A branch below the eigenvalue threshold is a saddle, not a stable
+    one-body solution. Distinct stable roots remain separate branches; their
+    existence is not invalidated merely because their energies differ.
+physical_translation_gates:
+  - finite positive inertia above the scale floor and finite frequency
+  - timelike gap greater than 2
+  - exact boundary data
+  - strictly negative scalar response
+  - independent full-epsilon relative error at most 5e-12
+  - unweighted-axis mutation relative gradient at least 1e-4
+  - finite axis-regularity diagnostics
+comparators_opened: false
+success: >-
+  At least one root passes the Euler-Lagrange, independent first-variation,
+  local-stability, and physical-translation gates. A passing coarse branch is
+  still not a refined one-body claim; it only opens continuation of that exact
+  branch across the fresh mesh/domain ladder.
+next_if_no_root: Repair scaling or the numerical root method without changing the action.
+next_if_only_saddles: Continue the remaining preregistered L2 quartic basis.
+next_if_stable_root: Freeze branch continuation and mesh/domain convergence.
+implementation_smoke:
+  command_scope: 3_by_6_grid_5_warm_iterations_1_root_iteration_plus_only
+  status: executed_non_evidentiary
+  observations:
+    - the unconstrained root path executed and correctly reported nonconvergence
+    - the independent first-variation comparison executed
+    - the Hessian operator was bilinearly symmetric to printed precision
+    - ARPACK returned six smallest modes
+  scientific_use: none
+preflight:
+  legacy_np_trapz_access: absent
+  python_compile: pass
+  diff_check: pass
+plus_branch_interim:
+  root_success: false
+  root_outer_iterations: 120
+  euler_lagrange_residual_inf_relative: 5.097776106167745e-08
+  root_directional_derivative_relative_max: 1.8999424991092554e-09
+  probe_ad_vs_fd_relative_error_max: 5.374498318611032e-09
+  hessian_eigensolver_success: true
+  six_smallest_hessian_eigenvalues:
+    - -20.30800067605281
+    - -12.301266122376157
+    - -10.932788464890656
+    - -8.101060450862777
+    - -6.63994827218061
+    - -0.6035224616865715
+  classification: near_stationary_saddle_not_a_stable_solution
+minus_branch_final:
+  root_success: true
+  root_outer_iterations: 16
+  euler_lagrange_residual_inf_relative: 9.848602701635743e-11
+  root_directional_derivative_relative_max: 4.524415121155589e-10
+  probe_ad_vs_fd_relative_error_max: 4.306373459217472e-09
+  hessian_eigensolver_success: false
+  converged_smallest_eigenvalues:
+    - -14.923534423017745
+    - -12.559925597023485
+    - -5.868876931709282
+    - -1.7113420343919807
+    - -0.715957738826184
+  classification: stationary_saddle_not_a_stable_solution
+verdict: >-
+  The minus branch is a high-accuracy Euler-Lagrange root and the independent
+  first-variation oracle passes, but five converged negative Hessian modes
+  prove it is a saddle. The plus branch is near-stationary and has six
+  negative modes. Neither is the stable one-body solution required by #146.
+  This exhausts the two frozen branches for this L2 quartic member and
+  continues the remaining preregistered quartic invariant basis. No
+  refinement or pair calculation opens.

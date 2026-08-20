@@ -1,0 +1,48 @@
+campaign: P240
+attempt: '0034'
+canonical_goal_issue: '146'
+candidate_source_issue: '147'
+candidate: D_fixed_j_two_clock
+frozen_question: >-
+  Under exactly which inertia-matrix conditions does the parameter-free
+  spectral-Cartan two-clock sector yield a finite common-clock frequency and
+  an attractive 1/r fixed-J interaction?
+typed_variables:
+  inertia_matrix: I_ab(r), symmetric positive definite
+  momenta: J_a, conserved momenta conjugate to the two collective clock coordinates
+  frequencies: omega=(1/2)*I^-1*J under L_clock=omega^T I omega
+  relaxed_static_energy: E_stat(r), evaluated on the same two-defect stationary field
+predeclared_oracles:
+  - exact inverse and Legendre transform for a generic symmetric 2x2 inertia matrix
+  - exact common-clock and counter-rotating eigenchannels
+  - exact fixed-J versus fixed-omega ensemble comparison
+  - exact large-r expansion when I12(r)=A/r+O(r^-2)
+  - sign mutations I12 to -I12 and J2 to -J2
+success_boundary: >-
+  The symbolic candidate survives only conditionally: for like nonzero J,
+  positive finite diagonal inertia, |I12| below it, and positive
+  I12=A/r+O(r^-2), the fixed-J interaction must be negative with a positive
+  Newton coefficient. No claim that these conditions hold for the M5 fields
+  is allowed until a separately relaxed common-action pair oracle measures
+  them.
+failure_boundary: >-
+  If the exact Legendre transform has the wrong sign even for positive I12,
+  reject the concept. If the algebra is healthy but M5 fields give I12<=0 or
+  the wrong exponent under refinement, reject or reformulate the field
+  realization without changing the algebraic conditional result.
+parameter_policy: >-
+  No action coefficient, penalty, interpolation lambda, or fitted Newton
+  value is introduced. J labels the variational ensemble and is not an action
+  parameter.
+next_if_symbolically_open: >-
+  Build a fresh P240 smooth stationary one-body/two-body oracle for the
+  spectral-Cartan action and measure I12(r) directly on PyTorch 2.4 CUDA.
+technical_replay:
+  native_abort: >-
+    The first run reached five passes, then compared two algebraically equal
+    rational expressions by SymPy structural equality. The determinant form
+    had not been canonicalized, so no scientific sign verdict was reached.
+  correction: >-
+    Use simplify(lhs-rhs)==0 for every rational equivalence and type the
+    fixed-frequency magnitude as positive for the strict sign probe. Equations
+    and candidate conditions are unchanged.

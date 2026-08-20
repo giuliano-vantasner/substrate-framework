@@ -1,0 +1,9 @@
+campaign: P240
+attempt: '0033'
+status: technical_abort_before_scientific_verdict
+completed_checks_before_abort: 17
+exception: >-
+  CheckFailure at the zero-curvature inventory because iterating a SymPy
+  rank-4 NDimArray yielded nested subarrays rather than scalar components.
+scientific_classification: none
+repair: explicit four-index component inventory only

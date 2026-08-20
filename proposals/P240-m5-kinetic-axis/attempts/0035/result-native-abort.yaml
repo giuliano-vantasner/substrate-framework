@@ -1,0 +1,7 @@
+campaign: P240
+attempt: '0035'
+status: technical_abort_before_scientific_verdict
+completed_checks_before_abort: 1
+exception: structural equality between expanded and factored equal polynomials
+scientific_classification: none
+repair: simplify(lhs-rhs)==0 for the repaired pole identity

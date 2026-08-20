@@ -1,0 +1,35 @@
+campaign: P240
+attempt: '0015'
+branch: minus_split_seed
+status: near_stationary_single_grid_saddle_diagnostic
+root:
+  success: false
+  message: maximum_outer_iterations_reached
+  outer_iterations: 120
+  residual_inf_relative: 2.637047372233327e-08
+first_variation:
+  root_directional_derivative_relative_max: 1.3335899944301861e-09
+  probe_ad_vs_fd_relative_error_max: 4.778932201354724e-09
+translation:
+  independent_alternating_current_relative_error: 1.1102230246251565e-16
+  unweighted_axis_mutation_relative_gradient: 0.24337214484922787
+  omitted_spatial_current_inertia: 0.0
+  omitted_spatial_current_below_inertia_floor: true
+second_variation:
+  eigensolver_success: false
+  converged_negative_eigenvalues:
+    - -19.93007051047423
+    - -11.74714560332064
+    - -1.6108407824224575
+observables:
+  total_energy: 5.261444330668537
+  inertia: 0.6683828635465304
+  frequency: 0.7480742359954173
+  axis_connection_over_spacing: 2.5842034154963667
+  transverse_split_over_rho_squared: 9.39376586981793
+  timelike_gap: 6.495643810986434
+classification: >-
+  The branch misses the frozen root threshold but has small independently
+  checked first variations and three converged negative AD-HVP modes. It is a
+  single-grid saddle diagnostic only; candidate rejection requires the fresh
+  independent negative-mode and refinement audit.

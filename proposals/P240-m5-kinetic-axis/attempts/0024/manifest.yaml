@@ -1,0 +1,36 @@
+attempt: '0024'
+campaign: P240
+canonical_issue: '146'
+candidate_source_issue: '147'
+status: frozen_before_execution
+classification: gpu_projection_failure_localization
+objective: >-
+  Localize attempt 0023's actual-state projection failure among saved-state
+  reconstruction, near-axis extrapolation, boundary reimposition, and
+  unresolved grid-scale content.
+environment:
+  torch: 2.4.1+cu124
+  cuda_runtime: '12.4'
+  device: NVIDIA_GeForce_RTX_3060
+diagnostics:
+  - reproduce_baseline_energy_and_stationary_residual_from_saved_state
+  - same_grid_interpolation_identity
+  - compare_linear_extrapolation_with_even_axis_extension
+  - compare_roundtrip_with_and_without_boundary_reimposition
+  - decompose_roundtrip_error_by_component_and_boundary_shell
+  - report_DCT_high_frequency_power_and_checkerboard_projection
+  - decompose_projected_energy_into_action_terms
+interpretation_rules:
+  saved_state_mismatch: baseline_reproduction_fails
+  axis_extrapolation_defect: even_axis_extension_materially_repairs_projection
+  boundary_transfer_defect: no_boundary_roundtrip_materially_repairs_projection
+  coarse_grid_underresolution: >-
+    reconstruction passes but all reasonable projections retain large
+    roundtrip error together with large high-frequency content or derivative
+    energy inflation
+non_oracles:
+  - no_candidate_stability_verdict
+  - no_stationary_branch_nonexistence_verdict
+  - no_coefficient_selection
+next: choose_the_minimum_representation_repair_supported_by_the_localization
+comparators_opened: false

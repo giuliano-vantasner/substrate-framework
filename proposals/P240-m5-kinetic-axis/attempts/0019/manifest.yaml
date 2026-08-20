@@ -1,0 +1,37 @@
+attempt: '0019'
+campaign: P240
+canonical_issue: '146'
+candidate_source_issue: '147'
+status: frozen_before_execution
+classification: symbolic_projector_current_plus_skyrme_completion
+objective: >-
+  Test the issue-147 projector-current completion as the minimum covariant
+  static-3x3-null boost stabilizer for the symbolically retained alternating
+  Skyrme clock term, and derive the combined fixed-J stability inequality
+  before selecting a numerical coefficient.
+combined_action_delta:
+  clock_term: >-
+    kappa_s*Tr(P_N Y)^2*q_mu_nu(P_t)*B^mu*B^nu with its exact fixed-J
+    Legendre transform from attempt 0018.
+  boost_term: >-
+    L_P=-kappa_b*eta^mu_nu*q_P(partial_mu P_t,partial_nu P_t),
+    q_P(A,B)=-Tr(A B)/2, kappa_b>0.
+exact_gates:
+  - pure rapidity variation has q_P(dP,dP)=1 exactly at every rapidity
+  - projector-current Hamiltonian is positive in time and spatial derivatives
+  - uniform-time-row arbitrary 3x3 fields remain exactly unchanged
+  - the projector current is inactive for the spatial tangent-plane clock and therefore does not duplicate the Skyrme inertia
+  - the Skyrme term is clock-active while the projector term is boost-gradient-active
+  - on a bounded Dirichlet domain derive a sufficient combined fixed-J Hessian inequality from the first Laplacian eigenvalue
+  - setting kappa_b=0 must restore the adverse boost direction
+  - no numerical eigenvalue, observed frequency, Newton coefficient, or historical P239 receipt selects kappa_b
+coefficient_policy: >-
+  The exact screen may establish a nonempty conditional coefficient region but
+  may not choose a value. A subsequent fresh generalized-eigenvalue calculation
+  freezes its domain/refinement oracle before opening the critical ratio.
+next_if_success: >-
+  Freeze a direct generalized boost-Hessian coefficient map and refinement
+  ladder for the combined action; only afterward solve the nonlinear one-body
+  branch.
+next_if_failure: Return to the issue-147 same-order curvature contractions.
+comparators_opened: false

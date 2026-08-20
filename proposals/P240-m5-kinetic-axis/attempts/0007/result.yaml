@@ -1,0 +1,59 @@
+campaign: P240
+attempt: '0007'
+status: primary_gate_failed
+environment:
+  numpy: 1.26.4
+  scipy: 1.14.1
+  torch: 2.3.0.post301
+  dtype: float64
+parameters:
+  spacing: 0.5
+  rho_cells: 8
+  z_cells: 16
+  adam_steps: 1200
+  lbfgsb_iterations: 6000
+  lbfgsb_gtol: 2.5e-9
+starts:
+  - split_sign: 1.0
+    optimizer_success: true
+    stationarity_relative: 3.5254757609730292e-06
+    active_nonperiodic_bound_fraction: 0.003401360544217687
+    total_energy: 13.62922089418655
+    inertia: 0.07980051296391419
+    frequency: 6.265623884223653
+    axis_connection_over_spacing: 0.09927715478432032
+    transverse_split_over_rho_squared: 1.7793412534801847
+    independent_full_epsilon_relative_error: 8.326672684688674e-17
+    unweighted_axis_mutation_relative_gradient: 0.4638602141616065
+  - split_sign: -1.0
+    optimizer_success: false
+    optimizer_message: STOP_TOTAL_ITERATIONS_REACHED_LIMIT
+    stationarity_relative: 0.00024849997541052157
+    active_nonperiodic_bound_fraction: 0.003401360544217687
+    total_energy: 15.603272678752468
+    inertia: 0.09849785298470698
+    frequency: 5.076252779617757
+    axis_connection_over_spacing: 0.17226324180220343
+    transverse_split_over_rho_squared: 1.781737190000869
+    independent_full_epsilon_relative_error: 5.551115123125783e-17
+    unweighted_axis_mutation_relative_gradient: 0.5490489231482073
+comparison:
+  total_energy_relative_difference: 0.1265152397967161
+  frequency_relative_difference: 0.18982484850401546
+common_successes:
+  - finite positive inertia and frequency
+  - timelike gap
+  - exact raw boundary data
+  - negative scalar response
+  - independent full-epsilon translation
+  - axis-weight mutation sensitivity
+  - finite regular-chart diagnostics
+blocking_gates:
+  active_nonperiodic_bounds: true
+  minus_start_optimizer_success: false
+  opposite_start_total_energy_relative_difference: 0.1265152397967161
+  opposite_start_frequency_relative_difference: 0.18982484850401546
+classification: numerical_box_and_convergence_failure
+not_opened:
+  - production refinement ladder
+  - pair calculation

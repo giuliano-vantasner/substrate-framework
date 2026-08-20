@@ -1,0 +1,48 @@
+campaign: P240
+attempt: '0008'
+status: oracle_inadequate
+parameters:
+  spacing: 0.5
+  rho_cells: 8
+  z_cells: 16
+  adam_steps: 1800
+  lbfgsb_iterations: 12000
+  lbfgsb_gtol: 1.0e-10
+starts:
+  - split_sign: 1.0
+    optimizer_success: true
+    projected_stationarity_relative: 2.1292165380440824e-08
+    raw_gradient_inf: 0.0821830891444545
+    active_bounds:
+      radial_anisotropy: 1
+      transverse_split: 1
+      director_angle_deviation: 2
+    total_energy: 13.415536523523636
+    inertia: 0.0797953415146894
+    frequency: 6.266029952487337
+    axis_connection_over_spacing: 0.20745081715486574
+    independent_full_epsilon_relative_error: 5.551115123125783e-17
+  - split_sign: -1.0
+    optimizer_success: true
+    projected_stationarity_relative: 7.968779626178569e-08
+    raw_gradient_inf: 0.5818107493733107
+    active_bounds:
+      radial_anisotropy: 1
+      transverse_split: 1
+      director_angle_deviation: 2
+    total_energy: 18.741643734034536
+    inertia: 0.09795032044102765
+    frequency: 5.104628527489422
+    axis_connection_over_spacing: 0.12564001836737274
+    independent_full_epsilon_relative_error: 5.551115123125783e-17
+comparison:
+  total_energy_relative_difference: 0.28418570356445155
+  frequency_relative_difference: 0.18534884668671106
+scientific_interpretation: >-
+  These are neither roots of the unconstrained discrete Euler-Lagrange
+  equations nor stability-certified stationary states. They cannot validate
+  or reject the L2 one-body claim. They are warm-start and conditioning
+  evidence for the replacement residual-based oracle.
+not_opened:
+  - production refinement ladder
+  - pair calculation

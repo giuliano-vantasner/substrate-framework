@@ -1,0 +1,23 @@
+campaign: P240
+attempt: '0031'
+status: unmodified_exact_Newton_root_failed
+environment:
+  torch: 2.4.1+cu124
+  cuda_runtime: '12.4'
+  device: NVIDIA_GeForce_RTX_3060
+solver:
+  method: scipy_root_hybr_with_exact_AD_Hessian
+  success: false
+  function_evaluations: 13
+  jacobian_evaluations: 2
+  message: iteration_not_making_good_progress
+  initial_normalized_coefficient_gradient_inf: 0.0037697589538951393
+  final_normalized_coefficient_gradient_inf: 0.0037697589538951393
+stationary_gate_pass: false
+full_pointwise_grid_residual_inf_relative: 0.04632002791945783
+classification: natural_order3_branch_does_not_continue_from_available_unmodified_order4_start
+scientific_scope: >-
+  The order-3 smooth root is not basis-converged and cannot support issue 146.
+  This local failure is not a global nonexistence or refutation of the exact
+  action. The nonstationary Hessian sign remains inadmissible for stability.
+continuation: return_to_issue147_exact_candidate_space_before_new_numerical_route

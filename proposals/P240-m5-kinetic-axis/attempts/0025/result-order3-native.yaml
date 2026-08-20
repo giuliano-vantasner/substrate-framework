@@ -1,0 +1,28 @@
+campaign: P240
+attempt: '0025'
+grid: order3_mesh12x24
+status: root_method_failure_then_reporting_error
+environment:
+  torch: 2.4.1+cu124
+  cuda_runtime: '12.4'
+  device: NVIDIA_GeForce_RTX_3060
+representation:
+  radial_order: 3
+  axial_modes: 3
+  coefficient_count: 45
+root_diagnostic:
+  method: scipy_krylov
+  evaluations: greater_than_9600
+  terminal_observed_energy: 94.5831706065336
+  terminal_observed_normalized_coefficient_gradient_inf: 0.35019229309960376
+  stationary_gate_pass: false
+postprocessing_error:
+  type: KeyError_scalar
+  stage: physical_DCT_summary_after_coefficient_artifact_was_saved
+  scientific_effect: none_root_had_already_failed
+coefficient_artifact:
+  path: proposals/P240-m5-kinetic-axis/attempts/0025/coefficients-order3-mesh12x24.npz
+  role: failed_root_continuation_state_only
+classification: matrix_free_root_method_failure
+candidate_disposition: active_exact_action_not_adjudicated
+continuation: exact_AD_Hessian_Newton_or_Levenberg_root_correction

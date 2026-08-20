@@ -1,0 +1,31 @@
+attempt: '0031'
+campaign: P240
+canonical_issue: '146'
+candidate_source_issue: '147'
+status: frozen_before_execution
+classification: unmodified_order4_exact_Newton_root
+objective: >-
+  Solve the unmodified 80-equation order-4 Galerkin Euler-Lagrange system with
+  an exact-Jacobian Newton root method, without optimizer, penalty, homotopy,
+  or fitted continuation parameter.
+input:
+  path: attempts/0028/coefficients-converged-order4-mesh12x24.npz
+  role: unmodified_action_failed_LM_state
+solver:
+  method: scipy_root_hybr
+  residual: exact_PyTorch_AD_physical_coefficient_gradient
+  jacobian: exact_PyTorch_AD_physical_Hessian
+  maximum_function_evaluations: 200
+  device: NVIDIA_GeForce_RTX_3060
+oracles:
+  solver_success_required: true
+  normalized_coefficient_gradient_inf_max: 1.0e-8
+  independent_directional_first_variation_relative_max: 2.0e-8
+  hessian_symmetry_relative_max: 1.0e-10
+  upper_half_DCT_power_fraction_max: 0.10
+  full_pointwise_grid_residual_below_order3_value: 0.03082054476231251
+interpretation: >-
+  Passing establishes the order-4 restricted stationary branch. Failure is
+  local evidence about this natural unmodified start and is not global
+  nonexistence. No Hessian sign is adjudicated unless the root gate passes.
+comparators_opened: false

@@ -1,0 +1,45 @@
+campaign: P240
+attempt: '0006'
+status: representation_defect
+parameters:
+  spacing: 0.4
+  rho_cells: 10
+  z_cells: 20
+  adam_steps: 1200
+  lbfgsb_iterations: 3000
+  lbfgsb_gtol: 1.0e-8
+starts:
+  - split_sign: 1.0
+    optimizer_success: false
+    optimizer_message: STOP_TOTAL_ITERATIONS_REACHED_LIMIT
+    stationarity_relative: 9.750303286445872e-05
+    total_energy: 10.579909048917479
+    inertia: 0.1177913176809862
+    frequency: 4.244795031108729
+    axis_connection_over_spacing: 0.1319207551042517
+    independent_full_epsilon_relative_error: 1.6653345369377348e-16
+    unweighted_axis_mutation_relative_gradient: 0.45793006936170777
+  - split_sign: -1.0
+    optimizer_success: true
+    stationarity_relative: 3.7844741050901485e-07
+    total_energy: 17.24089407469932
+    inertia: 0.10718941866930054
+    frequency: 4.6646395344543645
+    axis_connection_over_spacing: 3.472301385572204
+    independent_full_epsilon_relative_error: 6.938893903907228e-18
+    unweighted_axis_mutation_relative_gradient: 0.26897047563384724
+comparison:
+  total_energy_relative_difference: 0.3863480047451082
+  frequency_relative_difference: 0.09000577649023979
+diagnostic_rule_results:
+  persistent_start_split: true
+  irregular_branch_axis_diagnostic_grew: true
+  regular_branch_retained_stationarity: false
+verdict: >-
+  The unconstrained eigenframe chart admits an axis-irregular stationary
+  branch and does not give a mesh-stable seed-independent result. This is a
+  representation failure, not evidence against the L2 action. Enforce the
+  rotationally smooth axis conditions in the coordinates before rerunning.
+not_opened:
+  - production refinement ladder
+  - pair calculation

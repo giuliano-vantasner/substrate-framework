@@ -1,0 +1,42 @@
+attempt: '0023'
+campaign: P240
+canonical_issue: '146'
+candidate_source_issue: '147'
+status: frozen_before_execution
+classification: gpu_projection_oracle
+objective: >-
+  Determine whether the 8x16 to 10x20 branch projection used in attempt 0022
+  faithfully transfers regular axisymmetric fields, before any optimizer,
+  root correction, or stability spectrum is allowed.
+environment:
+  interpreter: .venv-p240-torch24/bin/python
+  torch: 2.4.1+cu124
+  cuda_runtime: '12.4'
+  device: NVIDIA_GeForce_RTX_3060
+projection_candidates:
+  - regularized_control_bilinear
+  - physical_component_bilinear_then_exact_inverse
+wrong_method_mutation: nearest_neighbour_controls
+oracles:
+  affine_control_reproduction_max_abs: 1.0e-12
+  manufactured_axis_regular_error_must_decrease_from_8_to_10_vs_10_to_12: true
+  wrong_method_error_must_exceed_bilinear_error: true
+  actual_state_8_to_10_to_8_physical_relative_l2_max: 0.05
+  exact_boundary_residual: 0.0
+  projected_timelike_gap_min: 2.0
+  projected_inertia_positive: true
+  projected_energy_and_gradient_finite: true
+non_oracles:
+  - optimizer_loss
+  - projected_field_being_stationary
+  - projected_energy_closeness_as_proof_of_same_branch
+  - any_hessian_or_stability_sign
+interpretation: >-
+  A pass validates a prolongation as a starting representation only. The fine
+  discrete Euler-Lagrange residual is expected to be nonzero and is reported
+  to size the subsequent direct trust-region/root correction.
+next_if_pass: >-
+  Run direct root correction from both passing projections with no Adam or
+  L-BFGS stage; require convergence to the same stationary branch.
+next_if_fail: repair_projection_representation_before_any_branch_or_stability_test
+comparators_opened: false

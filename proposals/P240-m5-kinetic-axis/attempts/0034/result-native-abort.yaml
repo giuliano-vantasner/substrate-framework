@@ -1,0 +1,9 @@
+campaign: P240
+attempt: '0034'
+status: technical_abort_before_scientific_verdict
+completed_checks_before_abort: 5
+exception: >-
+  CheckFailure from structural equality on algebraically equal rational
+  expressions whose determinant factors had different syntax.
+scientific_classification: none
+repair: symbolic simplify(lhs-rhs)==0 equivalence comparisons only

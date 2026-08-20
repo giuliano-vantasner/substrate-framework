@@ -1,0 +1,102 @@
+campaign: P240
+canonical_goal_issue: '146'
+candidate_source_issue: '147'
+base_release: v0.163.0
+source_baseline: substrate-framework@a34b5f584165b86d1fc62af0ede5fbf37b0aa5b7
+frozen_after_attempt: '0040'
+candidate_status: selected_for_independent_validation
+candidate:
+  name: spectral_Cartan_fixed_J_two_clock
+  action: >-
+    L=-1/2 F_munuab F_rscd eta^murho eta^nusigma
+    h^ac(M) h^bd(M)-V_M5.17(M)
+  internal_inverse_metric: h^ab(M)=eta^ab-2*P_t^a_c*eta^cb
+  branch: >-
+    P_t is the simple real timelike spectral projector of eta^-1 M connected
+    continuously to the vacuum timelike line.
+  two_clock_reduction: >-
+    E_J(r)=E_stat(r)+(1/4)J^T I(r)^-1 J and
+    omega=(1/2)I(r)^-1 J.
+positive_results:
+  - proposition: >-
+      The complete constant-coefficient curvature-quadratic family has six
+      parity-even and four one-epsilon independent scalars, and every
+      deformation preserving the complete source-generated static 3x3 action
+      is blind to an explicit negative affine clock.
+    role: exact_proof
+    evidence:
+      - attempts/0032/result.yaml
+    consequence: >-
+      The field-dependent contraction is a necessary conceptual move rather
+      than an arbitrary numerical preference.
+  - proposition: >-
+      The spectral-Cartan action is a proper Lorentz scalar, has a positive
+      curvature Hamiltonian on its declared timelike branch, reverses the
+      explicit negative clock sign, and recovers the arbitrary static 3x3
+      action coefficient-exactly.
+    role: exact_proof
+    evidence:
+      - attempts/0033/result.yaml
+    bridge_to_goal_146: >-
+      Exact static recovery preserves the established spatial/Coulomb
+      coefficient; the positive field-dependent contraction repairs the
+      kinetic sign without a fitted interpolation parameter.
+  - proposition: >-
+      For equal defects with diagonal inertia I0 and positive cross inertia C,
+      the like-clock fixed-J interaction is
+      -j^2*C/[2*I0*(I0+C)]. If C(r)=A/r+O(r^-2), A>0, then
+      Delta E_J=-j^2*A/(2*I0^2*r)+O(r^-2).
+    role: exact_proof
+    evidence:
+      - attempts/0034/result.yaml
+    exclusions: >-
+      This implication does not assert that relaxed M5 fields have A>0 or a
+      1/r cross-inertia tail. Fixed omega is a different ensemble and has the
+      opposite leading sign.
+  - proposition: >-
+      Delta=d(r)*sin(theta)^2 with q=O(r^2) and d=O(r^4) removes the hedgehog
+      pole string while retaining nonzero off-axis clock response.
+    role: exact_proof
+    evidence:
+      - attempts/0035/result.json
+  - proposition: >-
+      The smooth restricted variational spaces contain a finite-positive-
+      inertia stationary branch through 6x5 modes.
+    role: applicability
+    verification: simulation_evidence
+    evidence:
+      - attempts/0038/result.yaml
+      - attempts/0039/result.yaml
+      - attempts/0040/result.yaml
+    scope: >-
+      Resolution-bounded direct Euler-Lagrange roots only; no continuum
+      existence, local minimum, or empirical electron claim.
+current_negative_result:
+  proposition: >-
+    The one smooth branch found and continued is a saddle in the tested
+    regular chart: at 6x5 the lowest Hessian eigenvalue is -2.8680736658 and
+    centered energy curvature is -2.8679670834.
+  evidence_role: applicability
+  evidence:
+    - attempts/0040/result.yaml
+  scope: >-
+    This refutes local-minimum stability of that discrete branch. It is not a
+    counterexample to the action-level exact statements and does not exclude
+    another stationary branch or an independent continuum representation.
+open_validation_questions:
+  - >-
+    Does an independently represented admissible hedgehog have a stable
+    finite-inertia stationary branch, or does the tangential-split negative
+    mode persist in the continuum?
+  - >-
+    For separately relaxed two-defect fields of the same action at fixed
+    individual J, what are the sign and asymptotic exponent of I12(r)?
+not_established:
+  - stable continuum finite-frequency electron hedgehog
+  - relaxed Coulomb pair replay for the selected action
+  - positive A/r two-clock cross inertia
+  - attractive relaxed Newton tail
+  - accepted C-M5 claim or issue-146 completion
+historical_exclusion: >-
+  This receipt uses only fresh P240 evidence. P239/P236 tests, tallies,
+  receipts, and numerical values are not validation for this candidate.

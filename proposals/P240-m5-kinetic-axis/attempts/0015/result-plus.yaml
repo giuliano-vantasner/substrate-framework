@@ -1,0 +1,35 @@
+campaign: P240
+attempt: '0015'
+branch: plus_split_seed
+status: near_stationary_saddle
+root:
+  success: false
+  message: maximum_outer_iterations_reached
+  outer_iterations: 120
+  residual_inf_relative: 5.516541260591485e-09
+first_variation:
+  root_directional_derivative_relative_max: 9.465629078533284e-10
+  probe_ad_vs_fd_relative_error_max: 8.533917086883669e-09
+translation:
+  independent_alternating_current_relative_error: 2.7755575615628914e-17
+  unweighted_axis_mutation_relative_gradient: 0.3538656554223033
+  omitted_spatial_current_inertia: 0.0
+  omitted_spatial_current_below_inertia_floor: true
+second_variation:
+  eigensolver_success: false
+  converged_negative_eigenvalues:
+    - -11.620472613535627
+    - -6.4681262789465634
+    - -0.30738078337908825
+observables:
+  total_energy: 6.943564184958904
+  inertia: 0.19648647092708052
+  frequency: 2.5447044656095357
+  axis_connection_over_spacing: 0.2560004190270293
+  transverse_split_over_rho_squared: 9.377612365986064
+  timelike_gap: 6.872146629441565
+classification: >-
+  The residual and independent first variations establish a near-stationary
+  neighborhood, while three converged negative Hessian modes establish a
+  saddle. Solver-success and stability gates fail; this branch cannot open
+  refinement.

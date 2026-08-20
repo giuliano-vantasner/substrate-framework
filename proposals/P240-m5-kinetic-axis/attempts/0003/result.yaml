@@ -1,0 +1,29 @@
+campaign: P240
+attempt: '0003'
+status: complete
+classification: constructive_correction
+corrected_selected_action: >-
+  Replace the old external eta contraction by the M-derived spatial inverse
+  S=eta^-1-P_t eta^-1 for the curvature term and use L1 as the complete clock
+  kinetic channel. Do not add L1 while retaining old time-curvature inertia.
+commands:
+  - command: >-
+      PYTHONPATH=src /home/dan/substrate-framework/.venv/bin/python
+      proposals/P240-m5-kinetic-axis/attempts/0003/verify_kinetic_axis_replacement.py
+    exit_status: 0
+    verdict: ALL 8 CHECKS PASS [P240/kinetic-axis-replacement]
+  - command: >-
+      PYTHONPATH=src /home/dan/substrate-framework/.venv/bin/python -m pytest -q
+      tests/test_m5_kinetic_axis.py::test_l1_replaces_the_axis_blind_time_curvature_channel
+    exit_status: 0
+    verdict: 1 passed
+check_inventory:
+  lexical_ledger_check_sites: 8
+  runtime_ledger_checks: 8
+  pytest_assertion_nodes_in_selector: 3
+evidence_scope: exact_corrected_action_structure
+not_established:
+  - nonlinear one-body stationarity or refinement
+  - relaxed pair interactions
+  - accepted C-M5 claim
+next_action: Freeze and run the corrected L1 fixed-J one-body numerical gate.

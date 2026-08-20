@@ -1,0 +1,48 @@
+attempt: '0025'
+campaign: P240
+canonical_issue: '146'
+candidate_source_issue: '147'
+status: frozen_before_execution
+classification: smooth_chebyshev_galerkin_one_body
+objective: >-
+  Determine whether the exact alternating-Skyrme plus timelike-projector
+  action has a smooth fixed-J one-body stationary branch after removing the
+  free pointwise representation that produced attempt 0024's lattice artifact.
+representation:
+  radial_coordinate: Chebyshev_in_2_rho_squared_over_R_squared_minus_1
+  axial_coordinate: Chebyshev_in_z_over_Z
+  parity:
+    even_z: [anisotropy, common, split, scalar]
+    odd_z: [angle_control]
+  boost_background: exactly_zero
+  boundary: analytic_seed_plus_envelope_and_exact_boundary_cells
+  unknowns: smooth_modal_coefficients_only
+solver:
+  method: scipy_krylov_root_of_PyTorch_AD_coefficient_gradient
+  device: NVIDIA_GeForce_RTX_3060
+  torch: 2.4.1+cu124
+  dtype: float64
+  prohibited: [Adam, L-BFGS, optimizer_loss_as_oracle]
+ladder:
+  - {id: order3_mesh12x24, radial_order: 3, axial_modes: 3, spacing: 0.3333333333333333, rho_cells: 12, z_cells: 24}
+  - {id: order4_mesh12x24, radial_order: 4, axial_modes: 4, spacing: 0.3333333333333333, rho_cells: 12, z_cells: 24}
+  - {id: order4_mesh16x32, radial_order: 4, axial_modes: 4, spacing: 0.25, rho_cells: 16, z_cells: 32}
+stationary_oracle:
+  root_success_required: true
+  normalized_coefficient_gradient_inf_max: 1.0e-8
+  independent_directional_first_variation_relative_max: 2.0e-8
+  exact_boundary_residual: 0.0
+  finite_positive_inertia: true
+  finite_nonzero_frequency: true
+representation_oracle:
+  upper_half_DCT_power_fraction_max: 0.10
+  order3_to_order4_full_grid_residual_must_decrease: true
+  order4_mesh_energy_relative_max: 0.05
+  order4_mesh_frequency_relative_max: 0.05
+interpretation: >-
+  Passing proves a stationary branch only in a converged smooth Galerkin
+  sequence. Full constrained stability and an independent spatial method
+  remain separate issue-146 gates.
+next_if_pass: full_variation_smooth_mode_stability_then_independent_spatial_check
+next_if_fail: classify_ansatz_or_candidate_without_reusing_pointwise_grid_verdicts
+comparators_opened: false

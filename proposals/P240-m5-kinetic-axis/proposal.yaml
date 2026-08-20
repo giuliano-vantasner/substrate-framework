@@ -1,0 +1,299 @@
+id: P240
+base_release: v0.163.0
+source_baseline: substrate-framework@a34b5f584165b86d1fc62af0ede5fbf37b0aa5b7
+canonical_issue: "146"
+candidate_source_issue: "147"
+question: >-
+  Which local Lorentz-covariant completion in the ordered candidate families
+  of issue #147 yields one explicit M5 4x4 action that preserves
+  the complete static uniform-time-row 3x3 action and Coulomb coefficient,
+  has a bounded positive-inertia finite-frequency fixed-J hedgehog, and gives
+  an attractive relaxed Newton tail from that same action?
+positive_objective: >-
+  Resolve issue #146 with one explicit selected local 4x4 action, its exact
+  coefficient relations and field equations, a refined stationary one-body
+  fixed-J branch, common-action relaxed Coulomb and Newton pair branches,
+  reusable APIs, individually reviewed claims, registry acceptance, and a
+  pinned release.
+coordination_boundary: >-
+  P240 uses issue #146 as its sole canonical goal and issue #147 only as the
+  ordered source of candidate families, beginning with its preferred
+  same-curvature-order contraction completion. It runs on branch
+  research/p240-m5-kinetic-axis from merged main a34b5f5. P239 artifacts,
+  checks, receipts, and issue-147 goal status are prior proposal provenance,
+  not P240 validation or completion evidence. OpenWave MODELS.md, immutable
+  campaigns, docs/generated, and the user's dirty primary worktree are out of
+  scope.
+source_inventory:
+  - source: GitHub issue #146 and Jarek Duda comment 5352977929
+    access: open GitHub issue and comment, read 2026-08-20
+    extracted: >-
+      Preserve Coulomb from spatial dynamics, reverse the boost/Newton sign,
+      and make electron-hedgehog energy select finite nonzero omega with a
+      preferably Lorentz-covariant local kinetic correction.
+  - source: GitHub issue #147 body and comment 5355624676
+    access: open GitHub issue and comment, reread 2026-08-20
+    extracted: >-
+      Start with the complete same-order Lorentz-covariant curvature
+      contractions, then continue through field-dependent contraction and
+      higher-order current/Skyrme families under the same staged gates.
+  - source: substrate-framework P239 merged checkpoint at a34b5f5
+    access: in-hand repository source
+    extracted: >-
+      Conditional unpromoted M5 action/projector/timelike-scalar APIs and
+      append-only rejection history only. P239's tests and receipts are not
+      inherited by P240.
+  - source: accepted release v0.163.0
+    access: governance/releases/current.yaml and governance/claims.yaml
+    extracted: >-
+      C-LOR-002 convention, C-KRN-001 inverse kernel, C-VAR-003 separately
+      relaxed interaction ledger, and C-IGR-004/C-GRV-002 conditional
+      gravitational coupling/sign map.
+invariants:
+  - spacetime uses eta=diag(-1,1,1,1) in the accepted C-LOR-002 convention
+  - every candidate term is a typed local Lorentz scalar with explicit index contractions
+  - every added term vanishes identically on every static uniform-time-row 3x3 field with arbitrary symbolic spatial entries
+  - the complete static 3x3 action and Coulomb coefficient are recovered exactly without coefficient reinterpretation
+  - the physical director is distinguished from a zero-eigenline or permuted-vacuum clock escape
+  - the selected Hamiltonian is bounded below on its declared branch and the fixed-J clock inertia is finite and positive
+  - no external phase charge, imposed clock profile, fitted Newton value, or observed frequency enters selection
+  - charge and mass defects use one action, admissible space, boundary data, and stationary definition
+  - pair interactions are differences of separately relaxed common-action energies
+allowed_imports:
+  - C-LOR-002 for the accepted mostly-plus Lorentz-generator convention only
+  - C-KRN-001 after the selected action independently supplies a massless quadratic branch
+  - C-VAR-003 for the typed separately relaxed interaction definition
+  - C-IGR-004 and C-GRV-002 only for a later conditional coupling/sign bridge
+  - issue-146 author direction and the ordered issue-147 candidate families as approved proposal inputs
+  - P239 merged APIs at a34b5f5 as conditional unpromoted infrastructure after source audit
+candidates:
+  - id: A_same_order_curvature_contractions
+    description: >-
+      Exhaust every independent quadratic contraction of the canonical M5
+      curvature using its actual algebraic symmetries. Derive, on the image of
+      symmetric M-field derivatives rather than an unconstrained stand-in
+      tensor, the complete coefficient subspace that preserves the working
+      static 3x3 action. Test that subspace exactly on source-admissible
+      time-mixing directions before opening a numerical coefficient map.
+  - id: B_contraction_signature
+    description: >-
+      Compare the two parameter-free endpoints of issue 147's contraction
+      family: a fixed positive internal Frobenius metric with exact SO(3) but
+      broken boosts, and its local field-dependent spectral-Cartan lift built
+      from M's simple timelike eigenprojector. Require exact static recovery,
+      an explicit symmetry ledger, positive Hamiltonian, and a typed
+      long-range mass channel before any interpolation coefficient is allowed.
+  - id: D_fixed_j_two_clock
+    description: >-
+      Use the parameter-free spectral-Cartan base action with two independently
+      typed collective clock coordinates. Derive the full two-by-two inertia
+      matrix and perform the fixed-J Legendre transform exactly. The candidate
+      advances only if separately relaxed common-action fields produce a
+      positive off-diagonal inertia with the required 1/r asymptotic; the
+      matrix formula alone is not interaction evidence.
+  - id: L1_field_dependent_kinetic_axis
+    description: >-
+      Enumerate the lowest-order local Lorentz scalars built from the M-derived
+      timelike projector P_t, constrained P_N only when essential, the
+      projected spatial mixed tensor Y=(I-P_t)(eta^-1 M)(I-P_t), and covariant
+      derivatives. Every eligible monomial contains a genuine covariant
+      timelike-derivative channel and is therefore exactly null on every
+      static uniform-time-row 3x3 field while changing clock inertia.
+  - id: L2_timelike_current_skyrme
+    description: >-
+      Enumerate quartic timelike-current or curvature contractions and use a
+      sextic contraction only if the quartic family cannot meet the frozen
+      structural gates. Every eligible monomial contains at least one genuine
+      time-mixing factor, is exactly null on the complete static 3x3 sector,
+      preserves the Coulomb coefficient, and adds no external phase charge.
+uniqueness_evidence: null
+selection_criteria:
+  - exact Lorentz and index validity
+  - identity-level recovery of the complete arbitrary static 3x3 action
+  - exact Coulomb-sector coefficient preservation
+  - positive clock inertia and Hamiltonian boundedness
+  - sensitivity to the wrong-axis and permuted-vacuum escape
+  - parameter and derivative-order economy
+  - fixed-J Derrick scaling and limiting behavior
+claims_proposed:
+  - C-M5-005
+  - C-M5-006
+  - C-M5-007
+  - C-M5-008
+comparators_blinded_until: >-
+  The complete eligible invariant enumeration, exact contraction conventions,
+  arbitrary-symbolic-field 3x3 null proof, Coulomb reduction, Hamiltonian and
+  clock-inertia signs, wrong-axis mutation, coefficient domain, fixed-J scale
+  analysis, one-body equations, domain, boundary data, solver, error norm,
+  scale-relative stationarity threshold, and refinement ladder are frozen.
+  Values disclosed by P239 or issues #146/#147 are prior exposure and may not
+  select a P240 candidate or tolerance.
+status: active
+phase: candidate_selected_independent_validation_requested
+revisions:
+  - date: '2026-08-20'
+    after_attempt: '0040'
+    change: >-
+      Froze the strongest positive result after operator correction of the
+      validation framing. The current candidate is the parameter-free
+      spectral-Cartan action in its fixed-J two-clock sector. Exact action,
+      covariance, static-3x3/Coulomb, positive-Hamiltonian, regular-chart, and
+      conditional attractive-interaction statements survive. Smooth direct
+      roots through 6x5 supply resolution-bounded existence evidence for a
+      finite-inertia stationary branch, but the branch has a corroborated
+      negative tangential-split mode and does not establish the stable
+      electron. This branch-specific result does not demote the candidate.
+      No future unwritten test is a prerequisite for candidate status. P240
+      requests independent validation of continuum one-body stability and
+      relaxed two-clock cross inertia rather than adding another local hurdle.
+  - date: '2026-08-20'
+    after_attempt: '0039'
+    change: >-
+      Candidate status is now explicit: the parameter-free spectral-Cartan
+      action in the fixed-J two-clock sector is P240's current candidate. Its
+      exact action, symmetry, static-sector, positive-Hamiltonian, and
+      conditional interaction mechanism gates pass. Per operator direction,
+      attempt 0040 is the terminal one-body basis refinement rather than the
+      start of an open-ended validation ladder. The 7x6 withheld residual is
+      diagnostic only. After 0040 the branch receives a fixed verdict and no
+      additional basis-order hurdle is introduced.
+  - date: '2026-08-20'
+    after_attempt: '0034'
+    change: >-
+      The two-clock Legendre map is symbolically healthy without a new action
+      coefficient. For equal defects, positive cross inertia C lowers the
+      like-clock fixed-J energy by j^2*C/[2*I0*(I0+C)], while the
+      counter-rotating channel has the opposite sign. If C=A/r+O(r^-2) with
+      A>0, the conditional Newton coefficient is positive. Fixed omega has
+      the opposite leading sign, so the field oracle must hold individual
+      momenta fixed. The exact result remains conditional: no M5 sign or
+      exponent is inferred before relaxed fields measure C(r).
+  - date: '2026-08-20'
+    after_attempt: '0033'
+    change: >-
+      The parameter-free fixed-Frobenius endpoint exactly recovers the static
+      3x3 action and repairs the affine clock sign, but fails a rational boost
+      covariance mutation. Its field-dependent spectral-Cartan lift passes
+      Lorentz covariance, full static recovery, and positive-Hamiltonian
+      identities and is retained as a base action. Endpoint-only completion is
+      not claimed: the curvature density begins at fourth derivative-amplitude
+      order around a constant vacuum and is exactly zero on a fixed-axis
+      one-scalar boost orbit. P240 next tests issue 147's distinct fixed-J
+      two-clock interaction without adding an interpolation or scalar coupling.
+  - date: '2026-08-20'
+    after_attempt: '0032'
+    change: >-
+      A fresh exact P240 enumeration found 60 eta-only contractions of rank
+      six and 156 one-epsilon contractions of rank four. Unlike the historical
+      generic-tensor test, P240 also proved with a nonzero exact 9x9 Jacobian
+      minor (determinant 362040) that symmetric static M derivatives locally
+      fill all nine spatial curvature coordinates. Every full-3x3-preserving
+      quadratic deformation nevertheless vanishes on a globally affine
+      source clock with Hamiltonian -4*omega^2. Candidate A is therefore
+      rejected for boundedness at exactly its constant-coefficient scope.
+      Candidate B's parameter-free contraction endpoints are next; no
+      interpolation parameter is opened.
+  - date: '2026-08-20'
+    after_attempt: '0031'
+    change: >-
+      Corrected the candidate-source scope after rereading the live issue-147
+      body. The earlier P240 contract had narrowed the source to later L1/L2
+      comments, but issue 147 explicitly makes the complete same-order
+      curvature-contraction family its preferred first move. The issue-146
+      objective and validation gates are unchanged. Attempt 0032 therefore
+      reopens that family with a fresh exact, source-restricted polynomial
+      test; no P239 receipt, tally, or candidate verdict is inherited.
+  - date: '2026-08-20'
+    after_attempt: '0002'
+    change: >-
+      Selected L1_field_dependent_kinetic_axis after 12 exact P240 checks and
+      four focused P240 tests. The L2 quartic current is axis blind and fails
+      the zero-eigenline escape gate; its sextic axis-weighted repair passes
+      but is higher field order than the already successful L1 term. No
+      numerical comparator opened. The next gate is a newly frozen L1
+      fixed-J one-body stationary and refinement calculation.
+  - date: '2026-08-20'
+    after_attempt: '0003'
+    change: >-
+      Corrected L1 from an additive term to a replacement of the old
+      axis-blind time-curvature channel. The M-derived external spatial metric
+      retains the complete static 3x3 curvature action, while L1 supplies the
+      complete clock inertia. Eight exact checks and one focused correction
+      selector pass. No numerical output opened.
+  - date: '2026-08-20'
+    after_attempt: '0004'
+    change: >-
+      Rejected L1 after its full canonical Hamiltonian admitted an exact
+      tilted-projector high-frequency channel unbounded below. Continued the
+      preregistered L2 quartic-curvature family and selected the axis-weighted
+      square of an external-Pontryagin pseudoscalar. It is proper-Lorentz
+      invariant, parity even after squaring, static-3x3 null, positive and
+      velocity quadratic on a nonzero source-admissible clock witness, and
+      zero for a zero-eigenline axis. No numerical comparator opened.
+  - date: '2026-08-20'
+    after_attempt: '0006'
+    change: >-
+      The unconstrained one-body eigenframe chart failed the seed-independence
+      gate and its irregular branch's axis diagnostic grew under the one
+      frozen finer-mesh diagnostic. Classified this as a representation
+      defect, not an L2 action failure. The next attempt keeps the action and
+      enforces transverse eigenvalue degeneracy and hedgehog alignment at the
+      symmetry axis before optimization.
+  - date: '2026-08-20'
+    after_attempt: '0008'
+    change: >-
+      Reclassified the one-body descent runs as optimizer evidence only.
+      Active raw-control boxes make projected gradients non-diagnostic, and
+      convergence of opposite seeds to one energy is not an existence or
+      stability theorem. The fresh numerical oracle will solve the
+      unconstrained discrete Euler-Lagrange residual, independently check the
+      first variation, inspect the lowest Hessian modes, and only then run
+      mesh/domain convergence. The L2 action is unchanged and no pair result
+      is opened.
+  - date: '2026-08-20'
+    after_attempt: '0011'
+    change: >-
+      Corrected the post-L1 candidate ordering after the operator requested a
+      symbolic equivalence test. The axis-weighted timelike Skyrme current is
+      the unique commuting-null single-trace quartic class with the unique
+      minimum nonnegative quadratic wrong-axis weight. It is inequivalent to
+      L1 and Pontryagin and has the favorable I~R^3 fixed-J collapse barrier.
+      Fourteen exact checks and two focused tests select it for a fresh direct
+      variational one-body oracle. The unexecuted attempt-0010 Pontryagin
+      polynomial screen remains frontier only.
+  - date: '2026-08-20'
+    after_attempt: '0014'
+    change: >-
+      The standard polynomial Skyrme current produced only saddle branches,
+      and the polynomial hierarchy has no additional parameter-economical
+      member without an extra spectral blind line. The inequivalent
+      alternating three-current derivative-sextic passes ten exact gates when
+      its static B0 component is projected out by the M-derived timelike line.
+      It is selected for one direct residual/Hessian solve. The BPS-Skyrme
+      literature supplies structural motivation only; no SU(2), baryon, QCD,
+      coefficient, or empirical claim is imported.
+  - date: '2026-08-20'
+    after_attempt: '0020'
+    change: >-
+      Exact dynamic-projector and fixed-J Legendre audits corrected the first
+      alternating-current numerical translation. The alternating term alone
+      is not a positive fixed-J boost stabilizer. Adding the independent
+      timelike-projector current supplies an exact sufficient positive
+      coefficient region while remaining null on the complete static 3x3
+      sector. A complete 8x16 dense Hessian selected kappa_b=2 only as a
+      small-grid refinement bracket; it was never a continuum verdict.
+  - date: '2026-08-20'
+    after_attempt: '0024'
+    change: >-
+      The 8x16 positive bracket is withdrawn as refinement evidence. Its saved
+      field reproduces exactly under PyTorch 2.4 CUDA, and generic bilinear
+      projection passes affine, manufactured-solution, mutation, and
+      same-grid checks. Nevertheless all reasonable 8x16-to-10x20 transfers
+      have about 29 percent physical roundtrip error and inflate curvature
+      energy from 1.27 to 426--448. The nontrivial coarse fields carry 59--85
+      percent of DCT power in the upper half of resolved modes. This
+      classifies the free pointwise solution as a lattice-scale artifact and
+      invalidates its stability/coefficient evidence without refuting the
+      exact combined action. The next oracle uses a smooth
+      symmetry-respecting Galerkin or spectral representation with
+      basis-order refinement.

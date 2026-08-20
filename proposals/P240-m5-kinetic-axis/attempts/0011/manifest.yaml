@@ -1,0 +1,61 @@
+attempt: '0011'
+campaign: P240
+canonical_issue: '146'
+candidate_source_issue: '147'
+status: complete_selected_for_one_body
+classification: symbolic_skyrme_equivalence_selection
+objective: >-
+  Decide the axis-weighted timelike Skyrme current at the symbolic
+  equivalence-class level before any further numerical one-body solve.
+candidate: L2_sextic_axis_weighted_timelike_skyrme_current
+candidate_density: >-
+  -kappa Tr(P_N Y)^2 P_t^(mu nu)
+  [-Tr([Y,Z_mu][Y,Z_nu])/2], Z_mu=Q(partial_mu Y)Q.
+equivalence_domain:
+  - rank-one M-derived P_t and constrained rank-one eigenprojector P_N
+  - spatial-self-adjoint Y and Z on the positive Q subspace
+  - arbitrary algebraically independent spatial eigenvalues
+  - arbitrary symmetric projected clock derivative
+  - polynomial weights through the minimum quadratic wrong-axis repair
+symbolic_gates:
+  - >-
+    The standard Skyrme trace difference Tr(Y^2 Z^2)-Tr(Y Z Y Z) equals
+    -Tr([Y,Z]^2)/2 exactly and is the unique commuting-null single-trace
+    invariant with two Y and two Z factors, up to normalization.
+  - the current norm is a manifest sum of nonnegative eigenvalue-gap squares
+  - the comoving physical-axis inertia is n^2*(lambda_2-lambda_3)^4
+  - the unweighted quartic remains active on the zero-axis mutation
+  - n^2 is the unique minimum nonnegative quadratic polynomial axis weight
+  - Tr(P_N Y)^2 and Tr(P_N Y^2) are equivalent on the constraint surface
+  - the sextic current is not constant-proportional to L1 for arbitrary spectrum
+  - a homogeneous clock separates it exactly from every curvature-Pontryagin route
+  - its fixed-J inertia scales as R^3 and supplies an R^-3 collapse barrier
+  - the static 3x3/Coulomb sector remains identically unchanged
+selection_rule: >-
+  Select the axis-weighted Skyrme representative only if every equivalence,
+  positivity, wrong-axis, inequivalence, and scaling gate passes. Numerical
+  descent is not selection evidence.
+comparators_opened: false
+commands:
+  - >-
+    PYTHONPATH=src /home/dan/substrate-framework/.venv/bin/python
+    proposals/P240-m5-kinetic-axis/attempts/0011/verify_skyrme_equivalence.py
+  - focused P240 pytest selectors added for the equivalence and separation identities
+next_if_success: >-
+  Freeze a fresh direct Euler-Lagrange and Hessian one-body oracle for this
+  exact Skyrme representative, with descent used only as a warm start.
+next_if_failure: Continue the remaining inequivalent Skyrme class before Pontryagin or sextic escalation.
+setup_corrections:
+  - >-
+    The first verifier run passed the first thirteen checks but SymPy did not
+    infer positivity from the unfactored second derivative object. The
+    correction compares it exactly with the explicit sum of three positive
+    terms before asking the positivity predicate; the candidate and gate are
+    unchanged.
+verdict: >-
+  Selected. Fourteen exact checks establish the standard Skyrme equivalence
+  class, manifest positivity, unique minimal n^2 wrong-axis repair,
+  inequivalence to L1 and Pontryagin, exact static-3x3 nullity, and the R^3
+  inertia scaling. Two focused package selectors pass. This representative,
+  not another Pontryagin insertion, opens the next direct variational one-body
+  oracle.

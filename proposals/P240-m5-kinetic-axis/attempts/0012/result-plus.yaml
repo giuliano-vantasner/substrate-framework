@@ -1,0 +1,25 @@
+campaign: P240
+attempt: '0012'
+branch: plus_split_seed
+status: near_stationary_saddle
+root:
+  success: false
+  outer_iterations: 120
+  residual_inf_relative: 3.4550085596983334e-08
+first_variation:
+  root_directional_derivative_relative_max: 3.739090571034375e-09
+  probe_ad_vs_fd_relative_error_max: 3.824857687517724e-09
+translation:
+  independent_skyrme_trace_relative_error: 1.3877787807814457e-17
+second_variation:
+  eigensolver_success: false
+  converged_negative_eigenvalue: -9.24141768853299
+observables:
+  total_energy: 2.7940480347424765
+  inertia: 0.3043503192671798
+  frequency: 1.642843684882306
+  axis_connection_over_spacing: 0.093890531204647
+  timelike_gap: 6.9410121639512585
+classification: >-
+  The branch misses the root gate and has an explicit negative Hessian mode.
+  It is not a stable one-body solution.
