@@ -1,0 +1,25 @@
+source:
+  title: >-
+    From 2+1D Nonlinear Klein-Gordon Energy Lumps to Geodesic Propagation in
+    an Effective Metric Induced by Substrate Inhomogeneity, Anisotropy and Flow
+  subtitle: >-
+    A Construction-Site First Draft Generalizing the 1+1D Sine-Gordon Synthesis
+  version: 0.1 corrected
+  dated: '2026-08-19'
+  author: Tiziano Fulceri
+  supplied_at: https://github.com/vantasnerdan/substrate-framework/issues/108
+  attachment: https://github.com/user-attachments/files/31238673/2026-08-19_NLKG_2plus1D_energy_lumps_effective_metric_v0.1.pdf
+  sha256: 7cd35b8c397e874b581ce6da83c05b7047c256439d615d2f05cbbfb33536dd36
+  bytes: 543726
+  pages: 17
+  pdf_created_at: '2026-08-19T17:01:19Z'
+acquisition:
+  source_gate: >-
+    P238 proposal and research-arc contract validated before the PDF body was
+    opened; the source criteria and three oracle routes were frozen first.
+  extraction: >-
+    pypdf layout extraction in a temporary environment because Poppler tools
+    were absent; equations and page anchors were checked against the PDF source.
+  redistribution: >-
+    PDF bytes remain ignored; the link, digest, claim inventory, independent
+    oracle sources, and results are tracked.

@@ -1,0 +1,212 @@
+schema_version: 1
+campaign: P238
+source_sha256: 7cd35b8c397e874b581ce6da83c05b7047c256439d615d2f05cbbfb33536dd36
+frozen_at: '2026-08-19T20:18:00+00:00'
+inventory_rule: >-
+  One unit per semantically distinct claim with a shared dependency closure and
+  falsifier. Definitions and explicitly declared hypotheses are retained but
+  are not promoted as empirical conclusions.
+claims:
+  - id: P238-S01
+    source: pages 3-4, equations (1)-(5)
+    kind: exact_construction
+    statement: >-
+      The displayed material derivative and 2+1D real-scalar action expand as
+      stated, and equation (2) is the most general Lagrangian density that
+      incorporates the prescribed substrate flow.
+    dependencies: [smooth real scalar field, prescribed rho Theta and V, SPD Theta]
+    oracle: Lean polynomial identity plus SymPy algebra and model-scope audit
+    acceptance: expansion is exact and the model is described as conditional rather than uniquely most general
+    status: reviewed_revision_required
+    issue: https://github.com/vantasnerdan/substrate-framework/issues/109
+  - id: P238-S02
+    source: page 4, equations (6)-(9), and page 6 equation (21)
+    kind: exact_derivation
+    statement: >-
+      Variation gives the displayed Euler-Lagrange equation and its product-rule,
+      homogeneous non-flowing, and constant-background convective-wave limits.
+    dependencies: [P238-S01, fixed background fields, discarded boundary terms]
+    oracle: SymPy variational coefficient and substitution checks
+    acceptance: every residual simplifies identically to zero with declared index conventions
+    status: reviewed_revision_required
+    issue: https://github.com/vantasnerdan/substrate-framework/issues/110
+  - id: P238-S03
+    source: pages 4-5, equations (10)-(13)
+    kind: constitutive_claim
+    statement: >-
+      The determinant condition rho times det(Theta)^(1/d) equals a constant is
+      the natural anisotropic scalar-impedance generalization and eliminates
+      reflection while permitting refraction.
+    dependencies: [positive rho, SPD Theta, local orthonormal frame]
+    oracle: SymPy isotropic/dimensional reduction plus anisotropic interface counterexample
+    acceptance: algebra and dimensions pass, and the reflectionless statement follows for arbitrary direction rather than only determinant matching
+    status: reviewed_revision_required
+    issue: https://github.com/vantasnerdan/substrate-framework/issues/111
+  - id: P238-S04
+    source: pages 5-6, equations (14)-(20)
+    kind: exact_construction
+    statement: >-
+      Under determinant matching, A=Theta/rho determines rho and Theta, and the
+      SPD refractive tensor N=c0*A^(-1/2) has principal eigenvalues c0/sqrt(lambda_a).
+    dependencies: [P238-S03 determinant constraint, SPD A, c0^2=Theta0/rho0]
+    oracle: SymPy diagonal spectral reconstruction and determinant identity
+    acceptance: recovered fields satisfy A=Theta/rho and the matching condition identically
+    status: reviewed_supported
+    issue: https://github.com/vantasnerdan/substrate-framework/issues/112
+  - id: P238-S05
+    source: page 6, equations (21)-(22)
+    kind: exact_wave_claim
+    statement: >-
+      The principal symbol gives (omega minus V dot k)^2=k^T A k and the
+      directional index is equivalently the quadratic form of N, so the phase
+      speed is V dot khat plus c0/n(khat).
+    dependencies: [P238-S02, SPD A, local plane-wave approximation]
+    oracle: SymPy diagonal anisotropic counterexample plus eigenaxis and isotropic limits
+    acceptance: the two proposed directional-index definitions agree for generic directions and anisotropy
+    status: reviewed_revision_required
+    issue: https://github.com/vantasnerdan/substrate-framework/issues/113
+  - id: P238-S06
+    source: pages 6-7, section 4
+    kind: theorem_application
+    statement: >-
+      Benci-Fortunato theory guarantees finite-energy localized Q-ball-like and
+      vortex solutions of the paper's real-scalar equation for any potential in
+      the stated even admissible class.
+    dependencies: [real scalar u, stated potential conditions, cited references 2 and 3]
+    oracle: primary-source hypothesis audit plus SymPy Derrick-scaling countermodel
+    acceptance: cited theorems apply to the paper's field type charge dimension and exact stated hypotheses
+    status: reviewed_revision_required
+    issue: https://github.com/vantasnerdan/substrate-framework/issues/114
+  - id: P238-S07
+    source: page 7, equation (23)
+    kind: declared_hypothesis
+    statement: >-
+      A localized profile with scale ell in backgrounds varying on L much
+      greater than ell may be treated by the displayed adiabatic collective-coordinate ansatz.
+    dependencies: [existence of a suitable localized family, scale separation, controlled internal modes]
+    oracle: assumption ledger and residual-order requirement
+    acceptance: retained as a declared hypothesis until a concrete profile gives a bounded residual and gradient expansion
+    status: reviewed_revision_required
+    issue: https://github.com/vantasnerdan/substrate-framework/issues/115
+  - id: P238-S08
+    source: pages 7-8, equation (24)
+    kind: reduction_claim
+    statement: >-
+      Substituting the adiabatic ansatz into the field action yields the
+      relativistic square-root particle Lagrangian in an induced Lorentzian metric.
+    dependencies: [P238-S01, P238-S06, P238-S07, explicit profile integrals]
+    oracle: SymPy velocity-degree audit of the rigid ansatz and dependency closure
+    acceptance: the field integral derives the square root and metric coefficients without assuming the desired worldline action
+    status: reviewed_revision_required
+    issue: https://github.com/vantasnerdan/substrate-framework/issues/116
+  - id: P238-S09
+    source: pages 7-8, equations (25)-(28) and geodesic paragraph
+    kind: exact_conditional_identity
+    statement: >-
+      Given a nondegenerate Lorentzian metric, the einbein action is equivalent
+      to the massive square-root action, has a regular null specialization, and
+      yields affine geodesics after constant-einbein gauge fixing.
+    dependencies: [supplied metric, positive einbein, timelike or null constraint]
+    oracle: independent SymPy elimination null-variation and generic 2D Euler-Lagrange reconstruction plus Lean exact algebra
+    acceptance: all three conditional identities follow from equations (25)-(28) without importing an external framework claim
+    status: reviewed_supported
+    issue: https://github.com/vantasnerdan/substrate-framework/issues/117
+  - id: P238-S10
+    source: pages 8-9, equations (29)-(32)
+    kind: exact_wave_geometry
+    statement: >-
+      The convective dispersion relation is the null condition of the displayed
+      contravariant metric, with A/c0^2=N^(-2), up to a declared phase-covector sign convention.
+    dependencies: [P238-S04, P238-S05 dispersion relation]
+    oracle: SymPy quadratic-form reconstruction and sign-convention mutation
+    acceptance: contraction with the phase covector reproduces the dispersion polynomial exactly
+    status: reviewed_supported
+    issue: https://github.com/vantasnerdan/substrate-framework/issues/118
+  - id: P238-S11
+    source: page 9, equations (33)-(38)
+    kind: exact_matrix_claim
+    statement: >-
+      After one scalar conformal rescaling, the covariant inverse has spatial
+      block N and equivalently c0*A^(-1/2), with the displayed mixed and temporal components.
+    dependencies: [P238-S10, SPD anisotropic A]
+    oracle: SymPy exact block inversion plus diagonal anisotropic counterexample; Lean rational counterexample
+    acceptance: claimed covariant and contravariant matrices multiply to the identity up to one scalar for unequal principal indices
+    status: reviewed_revision_required
+    issue: https://github.com/vantasnerdan/substrate-framework/issues/119
+  - id: P238-S12
+    source: page 8, section 6 consequence bullets
+    kind: physical_bridge
+    statement: >-
+      Index gradients and flow give lump time dilation, anisotropic length
+      contraction, geodesic free fall, and gravito-inertial equivalence for massive and massless energy concentrations.
+    dependencies: [P238-S06, P238-S07, P238-S08, correct induced metric, operational clock and ruler observables]
+    oracle: dependency-closure and countermodel audit
+    acceptance: each observable is derived from a concrete lump family and survives internal-mode and finite-size corrections
+    status: reviewed_revision_required
+    issue: https://github.com/vantasnerdan/substrate-framework/issues/120
+  - id: P238-S13
+    source: pages 10-11, equations (39), (43)-(49), and (53)-(54)
+    kind: exact_null_cone_construction
+    statement: >-
+      The stated anisotropic acoustic eigenvalues reproduce the equatorial
+      Schwarzschild null cone and its radial and tangential coordinate speeds outside r=rs.
+    dependencies: [r greater than rs, V=0, local orthonormal radial/tangential frame]
+    oracle: SymPy conformal-equivalence and null-speed reconstruction
+    acceptance: one positive scalar conformal factor maps the correct acoustic metric to the target 2+1 equatorial metric
+    status: reviewed_supported
+    issue: https://github.com/vantasnerdan/substrate-framework/issues/121
+  - id: P238-S14
+    source: page 11, equations (50)-(52)
+    kind: exact_constitutive_construction
+    statement: >-
+      The Schwarzschild acoustic profiles imply the displayed density and radial
+      and angular stiffness profiles and preserve determinant matching.
+    dependencies: [P238-S04, P238-S13, r greater than rs]
+    oracle: SymPy exponent determinant and ratio checks plus SciPy domain sampling
+    acceptance: A=Theta/rho and rho*sqrt(det Theta)=rho0*Theta0 hold identically and sampled profiles stay SPD outside the horizon
+    status: reviewed_supported
+    issue: https://github.com/vantasnerdan/substrate-framework/issues/122
+  - id: P238-S15
+    source: pages 12-13, equations (55)-(59)
+    kind: target_mapping_claim
+    statement: >-
+      The paper's acoustic covariant map with zero radial flow can be matched to
+      the equatorial Boyer-Lindquist Kerr metric coefficient by coefficient.
+    dependencies: [P238-S11, target Kerr metric, coordinate-basis conventions]
+    oracle: SymPy metric-ratio and matrix-inverse audit
+    acceptance: the mapping supplies all independent Kerr coefficient ratios with consistent signs and dimensions
+    status: reviewed_revision_required
+    issue: https://github.com/vantasnerdan/substrate-framework/issues/123
+  - id: P238-S16
+    source: page 13, equations (60)-(67)
+    kind: analogue_geometry_claim
+    statement: >-
+      The minimal rotating acoustic tensor and Vphi=c0*a/r^2 explicitly
+      reconstruct Kerr in canonical coordinates, with derived matched constitutive profiles.
+    dependencies: [P238-S03, P238-S04, P238-S15]
+    oracle: SymPy comparison with equatorial Kerr coefficient ratios and asymptotic expansion
+    acceptance: the analogue is conformal to equatorial Kerr for generic nonzero a and rs, not merely at selected surfaces
+    status: reviewed_revision_required
+    issue: https://github.com/vantasnerdan/substrate-framework/issues/124
+  - id: P238-S17
+    source: page 14, equations (68)-(72)
+    kind: causal_structure_claim
+    statement: >-
+      The minimal rotating model has the displayed radial and azimuthal roots
+      and realizes the Kerr outer horizon, ergoregion, frame dragging, and asymptotic flatness.
+    dependencies: [P238-S16, positive exterior acoustic eigenvalues]
+    oracle: SymPy roots and surface equations plus SciPy sign sampling across exterior ergoregion
+    acceptance: roots are algebraically correct and their signs support the stated co/counter-rotating interpretation at both characteristic surfaces
+    status: reviewed_revision_required
+    issue: https://github.com/vantasnerdan/substrate-framework/issues/125
+  - id: P238-S18
+    source: pages 15-16, section 9 summary
+    kind: headline_physical_claim
+    statement: >-
+      Special-relativistic particle kinematics and effective general-relativistic
+      geodesic gravity both emerge from the same nonrelativistic substrate, with the logical chain fully explicit.
+    dependencies: [P238-S01 through P238-S17]
+    oracle: claim dependency graph and surviving-disposition audit
+    acceptance: every load-bearing bridge is derived and validated rather than listed as an open point
+    status: reviewed_revision_required
+    issue: https://github.com/vantasnerdan/substrate-framework/issues/126

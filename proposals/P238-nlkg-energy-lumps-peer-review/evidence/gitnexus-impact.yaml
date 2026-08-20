@@ -1,0 +1,80 @@
+schema_version: 1
+campaign: P238
+index:
+  repository: /home/axis/worktrees/substrate-paper-peer-review
+  alias: substrate-paper-review-108
+  indexed_at: '2026-08-19T20:12:47+00:00'
+  indexed_commit: f00d11b0fca02fd5ac27c80b0d00d8b7f5de8853
+  current_commit_at_query: f00d11b0fca02fd5ac27c80b0d00d8b7f5de8853
+  graph:
+    nodes: 37079
+    edges: 57248
+    clusters: 522
+    flows: 1
+schema_probe: >-
+  MATCH (n) RETURN labels(n), keys(n), n LIMIT 5 was executed before custom
+  Cypher use; subsequent semantic queries used the indexed schema.
+semantic_queries:
+  - query: effective acoustic metric Gordon metric anisotropic refractive
+    principal_results:
+      - src/substrate_framework/gordon_metric.py
+      - src/substrate_framework/substrate_metric.py
+      - src/substrate_framework/gordon_scalar_compatibility.py
+    conclusion: >-
+      Operational impact search only: these existing files are not inputs to
+      the scientific adjudication and P238 changes none of them.
+  - query: einbein relativistic particle massless geodesic
+    principal_results:
+      - src/substrate_framework/relativistic_particle.py
+      - campaigns/P227-einbein-worldline-harvest/verify.py
+      - tests/test_relativistic_particle.py
+    conclusion: >-
+      Operational impact search only. P238-S09 is independently rederived from
+      the paper and no existing einbein claim is used as an oracle.
+  - query: nonlinear Klein Gordon oscillon localized
+    principal_results:
+      - campaigns/P044-p3d1-radial-sine-gordon-oscillon/verify.py
+      - src/substrate_framework/radial_harmonic_balance.py
+    conclusion: >-
+      Operational impact search only. Existing repository oscillon work is
+      excluded from the paper's existence-claim adjudication.
+change_detection:
+  command: gitnexus detect-changes --scope all --repo substrate-paper-review-108
+  changed_files: 18
+  changed_symbols: 22
+  affected_processes: 0
+  risk: low
+  explanation: >-
+    The transaction adds proposal evidence, review prose, standalone oracle
+    sources, and one memory contract plus an ignore rule. It changes no
+    accepted package, test, formal, claim-registry, release, or generated-doc
+    surface. Direct P238 oracle replay and fixed repository validation are the
+    complete impact-bounded gate.
+scope_correction_detection:
+  command: gitnexus detect-changes --scope all --repo substrate-paper-review-108
+  changed_files: 17
+  changed_symbols: 19
+  affected_processes: 0
+  risk: low
+  explanation: >-
+    The follow-up replaces framework-comparison language with manuscript-internal
+    peer review, remaps the canonical issues, and adds standalone constructive
+    SymPy/SciPy/Lean repairs. It still changes no accepted runtime consumer.
+final_pr_detection:
+  indexed_commit: c277959237917e559d42b9ac3b41d10055e7301a
+  indexed_at: '2026-08-19T22:21:27+00:00'
+  graph:
+    nodes: 37247
+    edges: 57462
+    clusters: 527
+    flows: 1
+  command: gitnexus detect-changes --scope compare --base-ref origin/main --repo substrate-paper-review-108
+  changed_files: 25
+  changed_symbols: 159
+  affected_processes: 0
+  risk: low
+  explanation: >-
+    The final PR adds only proposal, portable companion, review, evidence, and
+    repository-memory surfaces. The repository primitives named in
+    solution-reuse-audit.yaml were transformed into standalone paper solutions
+    but are themselves unchanged, and no indexed runtime process is affected.
