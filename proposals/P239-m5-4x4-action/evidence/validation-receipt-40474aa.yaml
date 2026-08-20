@@ -1,0 +1,49 @@
+campaign: P239
+canonical_issue: "147"
+boundary_kind: active-campaign checkpoint
+base_commit: 6e5a4ba001bfdb41ea6e5157a43b0a854d118e1a
+validated_head: 40474aa
+date: '2026-08-20'
+impact_surface:
+  - new proposal and append-only attempts 0001-0014
+  - new conditional M5 action and stationary-field modules
+  - focused M5 unit tests
+  - active proposal and effort memory
+  - no accepted claim, release, migration disposition, or generated documentation change
+commands:
+  - command: >-
+      scripts/validate.sh --pytest-scope tests/test_m5_covariant_action.py
+      tests/test_m5_stationary_fields.py
+    result: pass; all fixed checks and 17 focused tests pass
+  - command: >-
+      PYTHONPATH=src python scripts/validate_repository.py
+    result: pass; 222 accepted claims and five proposals valid
+  - command: >-
+      memory validate --base "$PWD"
+      "$PWD/memory/codex/proposals/P239-m5-4x4-action.md"
+    result: pass
+  - command: >-
+      memory validate --base "$PWD"
+      "$PWD/memory/codex/efforts/P239-m5-4x4-action.md"
+    result: pass with one nonblocking prose-before-list suggestion
+  - command: git diff --check
+    result: pass
+  - command: >-
+      npx gitnexus detect-changes -r /home/dan/substrate-framework-p239
+      --scope compare --base-ref origin/main
+    result: low risk; no affected process flow
+scientific_oracles:
+  - attempt 0001: 41/41 exact quadratic-basis checks pass
+  - attempt 0002: 23/23 exact spectral-Cartan checks pass
+  - attempt 0003: 17/17 exact projector-current checks pass
+  - attempt 0004: 6/6 exact pole-obstruction checks pass
+  - attempt 0005: 14/14 exact projected-M5.17-potential checks pass
+  - attempt 0007: 14/14 exact timelike-scalar/Newton-kernel checks pass
+  - attempt 0009: 10/10 exact clock-branch-guard checks pass
+  - attempt 0011: 12/12 exact auxiliary-clock-axis checks pass
+  - attempt 0013: 8/8 exact auxiliary-axis-lock checks pass
+open_gates:
+  - attempt 0014 is active and has not passed stationary one-body refinement
+  - no relaxed two-body Coulomb or Newton result exists
+  - C-M5-001 through C-M5-004 are not proposed for acceptance
+  - issue 147 remains open and this checkpoint must use Advances, not Fixes
