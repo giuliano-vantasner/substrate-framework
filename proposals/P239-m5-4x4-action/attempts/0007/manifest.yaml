@@ -1,0 +1,52 @@
+id: attempt-0007
+campaign: P239
+canonical_issue: "147"
+branch: research/p239-m5-4x4-action
+base_release: v0.163.0
+source_baseline: substrate-framework@6e5a4ba001bfdb41ea6e5157a43b0a854d118e1a
+candidate: H_timelike_dilaton_completion
+status: complete
+objective: >-
+  Construct and exactly verify the minimum local Lorentz-covariant scalar
+  completion that gives the selected M5 action a positive massless monopole,
+  an attractive on-shell 1/r interaction, and exact recovery of Candidate G
+  and M5.17 at the tau=g spatial restriction.
+frozen_action: >-
+  Let tau=Tr(P_t X), X=eta^-1 M, A(tau)=exp(2 alpha (tau-g)), and H_G be the
+  nonnegative Candidate-G Hamiltonian. Add
+  L_tau=-(kappa_tau/2) eta^munu partial_mu tau partial_nu tau and multiply the
+  complete G matter Lagrangian by A. The inertial-frame Hamiltonian is
+  A H_G+(kappa_tau/2) sum_mu (partial_mu tau)^2 for A>0,kappa_tau>0.
+exact_gates:
+  - tau and A are Lorentz scalars on the simple timelike branch
+  - the scalar kinetic term is Lorentz invariant with positive Hamiltonian
+  - tau=g with zero derivatives recovers Candidate G and complete M5.17 exactly
+  - field rescaling leaves one physical coupling ratio alpha^2/kappa_tau
+  - the weak-field stationary equation is kappa_tau Laplacian(phi)=2 alpha rho
+  - a localized positive source has phi=-alpha*m/(2*pi*kappa_tau*r)
+  - two positive sources have U=-alpha^2*m1*m2/(pi*kappa_tau*r)
+  - flipping one source sign flips the interaction and deleting alpha removes it
+  - the accepted C-KRN-001 and conditional C-IGR-004/C-GRV-002 bridges are typed without importing a fitted number
+commands:
+  - >-
+    PYTHONPATH=src python
+    proposals/P239-m5-4x4-action/attempts/0007/verify_timelike_dilaton.py
+  - PYTHONPATH=src python -m pytest -q tests/test_m5_covariant_action.py
+artifacts:
+  - src/substrate_framework/m5_covariant_action.py
+  - tests/test_m5_covariant_action.py
+  - proposals/P239-m5-4x4-action/attempts/0007/verify_timelike_dilaton.py
+  - proposals/P239-m5-4x4-action/attempts/0007/result.json
+next_if_success: >-
+  Add tau to the regular fixed-J half-plane relaxation, freeze a scalar-tail
+  refinement ladder, and then solve common-action one- and two-body branches.
+next_if_failure: >-
+  Reject H and compare a separately declared auxiliary scalar mediator; do
+  not return to an unsourced projector profile or fit a Green kernel.
+verdict: >-
+  Candidate H passed all 14 exact checks. Its timelike eigenvalue and
+  exponential matter factor are Lorentz scalars, its scalar current has a
+  positive Hamiltonian, tau=g recovers Candidate G and M5.17 exactly, and
+  weak-field elimination gives
+  U_N=-alpha^2*m1*m2/(pi*kappa_tau*r). This establishes the action-level
+  kernel and sign, not nonlinear branch existence or refinement.

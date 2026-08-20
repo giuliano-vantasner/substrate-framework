@@ -1,0 +1,10 @@
+{
+  "campaign": "P239",
+  "attempt": "0009",
+  "candidate": "I_clock_branch_guard",
+  "term": "zeta*(lambda_theta-lambda_phi)^4/((lambda_n-lambda_theta)^2*(lambda_n-lambda_phi)^2)",
+  "domain": "zeta>0 and the selected director eigenvalue is simple whenever the tangent plane is clock-biaxial",
+  "verdict": "The guard is a positive Lorentz-spectral scalar, is exactly zero on every uniaxial M5.17 director/amplitude field, and excludes both clock-active eigenvalue-permutation boundaries.",
+  "scope": "This establishes the guard's structural fit only. A relaxed finite-gap Candidate-I hedgehog is still required.",
+  "check_count": 10
+}

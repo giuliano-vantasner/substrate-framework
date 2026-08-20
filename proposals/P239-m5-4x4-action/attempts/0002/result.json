@@ -1,0 +1,25 @@
+{
+  "campaign": "P239",
+  "attempt": "0002",
+  "candidate": "E_spectral_cartan",
+  "action": "L=-sum_(mu<nu) eta^mumu eta^nunu F_munuab F_munucd h^ac h^bd - V_spec",
+  "cartan_inverse_metric": "h^ab=eta^ab-2 P_t^a_c eta^cb",
+  "spectral_branch": "P_t is the simple real timelike spectral idempotent of eta^-1 M continuously connected to the vacuum g eigenline",
+  "hamiltonian": "H=sum_(mu<nu) F_munuab F_munucd h^ac h^bd + V_spec >= 0",
+  "leading_principal_minors_under_test_boost": [
+    "41/9",
+    "1",
+    "1",
+    "1"
+  ],
+  "clock_coefficients": {
+    "source": "-2",
+    "spectral_cartan": "2"
+  },
+  "fixed_j_implication": {
+    "energy": "E_static+J^2/(4I)",
+    "frequency": "J/(2I)",
+    "scope": "algebraic consequence for any stationary branch with finite positive inertia; existence of the relaxed branch is not proved here"
+  },
+  "check_count": 23
+}

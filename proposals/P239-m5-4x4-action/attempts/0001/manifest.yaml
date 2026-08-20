@@ -1,0 +1,32 @@
+id: attempt-0001
+campaign: P239
+canonical_issue: "147"
+branch: research/p239-m5-4x4-action
+base_release: v0.163.0
+source_baseline: substrate-framework@6e5a4ba001bfdb41ea6e5157a43b0a854d118e1a
+status: complete
+objective: >-
+  Freeze the exact OpenWave M5 field, curvature, action, index symmetries,
+  spacetime convention, and complete current-order Lorentz-scalar contraction
+  basis before evaluating any new P239 force or frequency comparator.
+commands:
+  - >-
+    PYTHONPATH=src python
+    proposals/P239-m5-4x4-action/attempts/0001/enumerate_quadratic_basis.py
+artifacts:
+  - proposals/P239-m5-4x4-action/evidence/source-freeze.yaml
+  - proposals/P239-m5-4x4-action/evidence/quadratic-basis-note.md
+  - proposals/P239-m5-4x4-action/attempts/0001/enumerate_quadratic_basis.py
+  - proposals/P239-m5-4x4-action/attempts/0001/result.json
+verdict: >-
+  Exact complete quadratic basis derived: six parity-even scalars and four
+  parity-odd pseudoscalars. Candidate A is rejected because its complete
+  three-dimensional-preserving coefficient nullspace is identically blind to
+  an explicit negative clock direction constructed from symmetric M5 field
+  derivatives.
+diagnosed_layer: candidate_concept
+next_route: >-
+  Construct and test the covariant spectral-Cartan internal metric obtained
+  from M's isolated timelike g-eigenprojector; it reproduces the healthy
+  Frobenius contraction in the vacuum frame without explicitly breaking
+  Lorentz covariance.

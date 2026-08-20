@@ -1,0 +1,23 @@
+{
+  "campaign": "P239",
+  "attempt": "0003",
+  "rejected_completion": "E_spectral_cartan_without_projector_current",
+  "selected_for_stationary_testing": "F_projector_current_completion",
+  "power_counting": {
+    "curvature_energy": "O(epsilon^4)",
+    "projector_current_energy": "O(epsilon^2)"
+  },
+  "three_dimensional_scaling": {
+    "projector_current": "kappa*A_2*R",
+    "spectral_cartan_curvature": "A_4/R",
+    "static_radius": "sqrt(A_4/(kappa*A_2))"
+  },
+  "fixed_j_scale": {
+    "energy": "kappa*A_2*R+A_4/R+J^2/(4*C_I*R^3)",
+    "radius_squared": "(A_4 + sqrt(3*A_2*J**2*kappa/C_I + A_4**2))/(2*A_2*kappa)",
+    "frequency": "J/(2*C_I*R_*^3)"
+  },
+  "linearized_boost_operator": "-2*kappa*Delta",
+  "scope": "Exact structural and scale reduction. It does not prove that a full radial or three-dimensional stationary solution realizes the positive shape coefficients used here.",
+  "check_count": 17
+}

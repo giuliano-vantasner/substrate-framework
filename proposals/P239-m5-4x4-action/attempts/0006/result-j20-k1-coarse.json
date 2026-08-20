@@ -1,0 +1,74 @@
+{
+  "campaign": "P239",
+  "attempt": "0006",
+  "parameters": {
+    "spacing": 0.5,
+    "rho_cells": 12,
+    "z_cells": 24,
+    "angular_momentum": 20.0,
+    "projector_stiffness": 1.0,
+    "g": 8.0,
+    "curvature_c2": 1.0,
+    "beta": 1.0,
+    "cscale": 0.0037705544498939964,
+    "core_radius": 1.5,
+    "splitting_seed": 0.25,
+    "boost_seed": 0.08,
+    "max_iterations": 1000
+  },
+  "starts": [
+    {
+      "boost_seed_sign": 0.0,
+      "success": false,
+      "message": "STOP: TOTAL NO. of ITERATIONS REACHED LIMIT",
+      "iterations": 1000,
+      "evaluations": 1051,
+      "objective": 0.037639750634354166,
+      "gradient_inf_norm": 0.05950009418088555,
+      "stationarity_relative_inf_norm": 0.05950009418088555,
+      "branch_gap": 6.92358125697972,
+      "max_abs_b_rho": 0.0,
+      "max_abs_b_z": 0.0,
+      "observables": {
+        "curvature": 0.0007024903086401763,
+        "projector": 0.0,
+        "potential": 0.015577506835312237,
+        "inertia": 4681.701970246808,
+        "static": 0.016279997143952413,
+        "rotational": 0.02135975349040175,
+        "total": 0.037639750634354166,
+        "frequency": 0.0021359753490401753
+      }
+    }
+  ],
+  "selected": {
+    "boost_seed_sign": 0.0,
+    "success": false,
+    "message": "STOP: TOTAL NO. of ITERATIONS REACHED LIMIT",
+    "iterations": 1000,
+    "evaluations": 1051,
+    "objective": 0.037639750634354166,
+    "gradient_inf_norm": 0.05950009418088555,
+    "stationarity_relative_inf_norm": 0.05950009418088555,
+    "branch_gap": 6.92358125697972,
+    "max_abs_b_rho": 0.0,
+    "max_abs_b_z": 0.0,
+    "observables": {
+      "curvature": 0.0007024903086401763,
+      "projector": 0.0,
+      "potential": 0.015577506835312237,
+      "inertia": 4681.701970246808,
+      "static": 0.016279997143952413,
+      "rotational": 0.02135975349040175,
+      "total": 0.037639750634354166,
+      "frequency": 0.0021359753490401753
+    }
+  },
+  "tail_decomposition": {
+    "fit_point_count": 168,
+    "radial_vector_r_minus_2_coefficient": 0.0,
+    "fixed_z_monopole_r_minus_1_coefficient": 0.0,
+    "relative_rms_residual": 0.0
+  },
+  "status": "preflight"
+}

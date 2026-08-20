@@ -1,0 +1,46 @@
+id: attempt-0014
+campaign: P239
+canonical_issue: "147"
+branch: research/p239-m5-4x4-action
+base_release: v0.163.0
+source_baseline: substrate-framework@6e5a4ba001bfdb41ea6e5157a43b0a854d118e1a
+candidate: K_auxiliary_axis_lock
+status: active
+objective: >-
+  Find the smallest structurally normalized auxiliary-axis lock that gives a
+  stationary finite-frequency Candidate-K hedgehog without selecting on a
+  frequency or force comparator.
+axis_lock_ladder:
+  - 0.0009426386124734991
+  - 0.0037705544498939964
+  - 0.015082217799575986
+selection_rule: >-
+  These are cscale/4, cscale, and 4*cscale. Select the smallest value passing
+  stationarity, finite inertia/frequency, timelike gap, and domain/grid gates.
+  The numerical value of omega and every force comparator are excluded.
+numerical_contract:
+  inherit: attempt-0012 with Candidate-K V_lock as the only delta
+  preflight_grid: {spacing: 0.5, rho_cells: 8, z_cells: 16}
+  adam_steps: 4000
+  lbfgsb_max_iterations: 8000
+gates:
+  stationarity_relative_inf_norm_max: 0.0005
+  finite_positive_inertia: true
+  finite_nonzero_frequency: true
+  simple_timelike_gap_min: 0.5
+  no_permuted_vacuum_bulk: true
+commands:
+  - >-
+    python proposals/P239-m5-4x4-action/attempts/0008/solve_coupled_hedgehog.py
+    --auxiliary-clock-axis --axis-lock-strength 0.0037705544498939964
+    --lbfgsb-iterations 8000
+    --output proposals/P239-m5-4x4-action/attempts/0014/result-lock-cscale.json
+artifacts:
+  - proposals/P239-m5-4x4-action/attempts/0008/solve_coupled_hedgehog.py
+  - proposals/P239-m5-4x4-action/attempts/0014/result-lock-cscale.json
+next_if_success: >-
+  Complete the adjacent ladder point needed by the smallest-passing rule,
+  refine the one-body branch, then open the common-action two-body attempt.
+next_if_failure: >-
+  Complete the ladder. If all fail, reject K and move to an independent
+  complex Lorentz-scalar clock field.

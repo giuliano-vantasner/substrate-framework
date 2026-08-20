@@ -1,0 +1,51 @@
+id: attempt-0005
+campaign: P239
+canonical_issue: "147"
+branch: research/p239-m5-4x4-action
+base_release: v0.163.0
+source_baseline: substrate-framework@6e5a4ba001bfdb41ea6e5157a43b0a854d118e1a
+candidate: G_uniaxial_axisymmetric_completion
+status: complete
+objective: >-
+  Construct and verify the smallest Lorentz-scalar potential that lifts the
+  complete off-shell M5.17 spatial Landau-de Gennes functional to the simple
+  timelike spectral branch, pins the selected time eigenvalue, and retains
+  the regular uniaxial exterior spectrum (g,1,0,0).
+frozen_construction: >-
+  With X=eta^-1 M, P_t the rank-one simple timelike spectral idempotent, and
+  Q=I-P_t, set Y=Q X Q. Define V_G=a Tr(Y^2)-b Tr(Y^3)
+  +c Tr(Y^2)^2-V_vac+w_t(Tr(P_t X)-g)^2, where b=beta*c,
+  a=(3b-4c)/2, V_vac=a-b+c, c>0, w_t>0, and 0<beta<2.
+exact_gates:
+  - V_G is invariant under simultaneous Lorentz similarity of X and P_t
+  - in the rest frame with a uniform time row it is exactly the M5.17 potential, not merely equal on the vacuum
+  - the time-eigenvalue term is zero in the complete M5.17 spatial sector
+  - V_G vanishes on mixed spectrum (g,1,0,0)
+  - the uniaxial vacuum is stationary and the melt cost is c-b/2>0
+  - repeated zero tangent eigenvalues do not invalidate the simple timelike projector
+  - deleting Q or using a fixed coordinate projector fails covariance or exact reduction
+commands:
+  - >-
+    PYTHONPATH=src python
+    proposals/P239-m5-4x4-action/attempts/0005/verify_projected_ldg_potential.py
+  - PYTHONPATH=src python -m pytest -q tests/test_m5_covariant_action.py
+artifacts:
+  - src/substrate_framework/m5_covariant_action.py
+  - tests/test_m5_covariant_action.py
+  - proposals/P239-m5-4x4-action/attempts/0005/verify_projected_ldg_potential.py
+  - proposals/P239-m5-4x4-action/attempts/0005/result.json
+next_if_success: >-
+  Freeze an axisymmetric fixed-J field contract using the exact M5.17
+  equivariant half-plane representation, then relax every eligible spatial
+  and boost component with regular axis parity.
+next_if_failure: >-
+  Reject Candidate G if no projector-defined Lorentz scalar reproduces the
+  full M5.17 potential off shell; compare an explicitly auxiliary covariant
+  spatial metric rather than silently weakening the reduction gate.
+verdict: >-
+  Candidate G's projected Landau-de Gennes potential passed all 14 exact
+  covariance, reduction, vacuum, coefficient, and mutation checks. It
+  recovers the full M5.17 potential off shell, pins the selected g eigenvalue,
+  and permits the repeated tangent eigenvalues needed for a regular uniaxial
+  exterior. This establishes the potential layer only; stationary and force
+  claims remain open.

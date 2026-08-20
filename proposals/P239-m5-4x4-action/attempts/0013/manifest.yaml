@@ -1,0 +1,43 @@
+id: attempt-0013
+campaign: P239
+canonical_issue: "147"
+branch: research/p239-m5-4x4-action
+base_release: v0.163.0
+source_baseline: substrate-framework@6e5a4ba001bfdb41ea6e5157a43b0a854d118e1a
+candidate: K_auxiliary_axis_lock
+status: complete
+objective: >-
+  Construct and verify the minimum positive auxiliary-axis invariant that
+  excludes permuted uniaxial rotation while preserving every aligned M5.17
+  pure-director/Coulomb amplitude exactly.
+frozen_term: >-
+  V_lock=zeta*(Tr(Y^2)-Tr(P_N Y)^2), zeta>0, on the Candidate-J constrained
+  branch [Y,P_N]=0 with rank-one P_N.
+exact_gates:
+  - V_lock is a Lorentz scalar
+  - on the aligned eigenframe it equals zeta*(lambda_theta^2+lambda_phi^2)
+  - it is nonnegative for real spatial eigenvalues
+  - it vanishes for every aligned uniaxial amplitude (s,0,0), including s=0
+  - it is positive for either permuted uniaxial vacuum (0,1,0) or (0,0,1)
+  - deleting P_N loses the distinction between aligned and permuted vacua
+commands:
+  - >-
+    PYTHONPATH=src python
+    proposals/P239-m5-4x4-action/attempts/0013/verify_auxiliary_axis_lock.py
+  - PYTHONPATH=src python -m pytest -q tests/test_m5_covariant_action.py
+artifacts:
+  - src/substrate_framework/m5_covariant_action.py
+  - tests/test_m5_covariant_action.py
+  - proposals/P239-m5-4x4-action/attempts/0013/verify_auxiliary_axis_lock.py
+  - proposals/P239-m5-4x4-action/attempts/0013/result.json
+next_if_success: >-
+  Run a structural zeta ladder centered on the inherited M5.17 cscale and
+  require a stationary finite-frequency Candidate-K one-body branch.
+next_if_failure: >-
+  Reject the eigenframe clock family and move to an independent complex
+  Lorentz-scalar clock field.
+verdict: >-
+  Candidate K passed all 8 exact checks. V_lock is Lorentz scalar and
+  nonnegative on the constrained branch, vanishes for every aligned
+  pure-director amplitude including melt, and assigns positive cost to both
+  permuted uniaxial vacua. Nonlinear stationarity remains open.

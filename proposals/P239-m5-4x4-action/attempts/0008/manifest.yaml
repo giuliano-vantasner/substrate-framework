@@ -1,0 +1,91 @@
+id: attempt-0008
+campaign: P239
+canonical_issue: "147"
+branch: research/p239-m5-4x4-action
+base_release: v0.163.0
+source_baseline: substrate-framework@6e5a4ba001bfdb41ea6e5157a43b0a854d118e1a
+candidate: H_timelike_dilaton_completion
+status: complete
+objective: >-
+  Solve the coupled Candidate-H fixed-J hedgehog with a genuinely principal
+  topological director branch and a relaxed timelike scalar, then test its
+  one-body frequency and scalar 1/r tail under grid/domain refinement.
+representation: >-
+  Axisymmetric cell-centred half-plane fields are
+  (q,lambda_theta,lambda_phi,angle,b_rho,b_z,phi), where
+  lambda_n=max_smooth(lambda_theta,lambda_phi)+softplus(q) so the clock axis
+  is the unique principal director away from a core where its positive gap
+  may tend to zero. tau=g+phi. The full covariant M, P_t, Cartan metric,
+  equivariant angular derivative, parity ghost, and M5.17 boundary are built
+  exactly as in attempt 0006.
+functional: >-
+  E_J=integral[A(phi)*(H_curv+H_projector+V_LdG)
+  +(kappa_tau/2)*|grad phi|^2] + J^2/(4 I_A), where
+  I_A=integral A(phi)*I_clock and A=exp(2 alpha phi).
+parameters:
+  g: 8.0
+  spatial_curvature_c2: 1.0
+  beta: 1.0
+  cscale: 0.0037705544498939964
+  projector_stiffness: 1.0
+  scalar_stiffness: 1.0
+  scalar_coupling: 0.05
+  angular_momentum: 20.0
+  note: >-
+    The dimensionless scalar coupling is a structural preflight value. Force
+    comparison is forbidden; accepted coupling is the ratio typed by
+    C-IGR-004/C-GRV-002 after branch validation.
+numerical_contract:
+  precision: float64
+  optimizer: Adam warm start followed by L-BFGS-B analytic-gradient correction
+  adam_steps: 4000
+  adam_learning_rate: 0.01
+  lbfgsb_max_iterations: 1200
+  grids:
+    - {spacing: 0.5, rho_cells: 8, z_cells: 16}
+    - {spacing: 0.5, rho_cells: 12, z_cells: 24}
+    - {spacing: 0.4, rho_cells: 16, z_cells: 32}
+  outer_boundary: pure M5.17 director, zero boost, phi=0
+gates:
+  stationarity_relative_inf_norm_max: 0.0005
+  finite_positive_inertia: true
+  finite_nonzero_frequency: true
+  principal_gap: positive outside the innermost two physical cells
+  simple_timelike_gap_min: 0.5
+  scalar_tail_relative_fit_residual_max: 0.08
+  scalar_flux_relative_spread_max: 0.12
+  grid_frequency_relative_spread_max: 0.12
+  grid_energy_relative_spread_max: 0.08
+mutations:
+  - alpha=0 must give phi=0 and no scalar tail
+  - J=0 must remove the clock barrier
+  - permitting eigenvalue-label swaps must reproduce the invalid vacuum-permutation escape
+  - reversing the source coupling must reverse phi but leave the attractive like-source alpha-squared sign
+commands:
+  - >-
+    python proposals/P239-m5-4x4-action/attempts/0008/solve_coupled_hedgehog.py
+artifacts:
+  - proposals/P239-m5-4x4-action/attempts/0008/solve_coupled_hedgehog.py
+  - proposals/P239-m5-4x4-action/attempts/0008/result.json
+next_if_success: >-
+  Freeze a common-action two-centre half-plane contract and compute direct
+  separately relaxed one/two energies for both scalar mass and spatial charge
+  orientations.
+next_if_failure: >-
+  Diagnose coercivity, topology, discretization, or clock definition. Preserve
+  the exact Candidate-H action theorem and add the minimum covariant
+  stabilizer only if the failure is physical rather than numerical.
+verdict: >-
+  The coupled scalar has the exact predicted negative sign and the fixed-J
+  field has finite positive inertia, but the best correction run misses the
+  stationarity gate (6.69e-4 versus 5e-4), its small-domain scalar-tail fit
+  residual is 0.617, and most decisively the selected director gap collapses
+  to 4.93e-5 outside the core. Thus the branch approaches an eigenvalue-label
+  permutation boundary rather than a regular simple spectral clock solution.
+  Candidate H's action and Newton theorem survive; C-M5-002 and nonlinear
+  C-M5-004 remain unpromoted.
+diagnosed_layer: candidate clock branch
+next_route: >-
+  Add a positive spectral guard which vanishes for tangent-degenerate
+  uniaxial M5.17 fields but diverges when a clock-biaxial configuration closes
+  either selected-director eigenvalue gap.

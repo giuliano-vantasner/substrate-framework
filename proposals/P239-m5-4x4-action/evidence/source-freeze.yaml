@@ -1,0 +1,93 @@
+campaign: P239
+attempt: attempt-0001
+framework_base:
+  release: v0.163.0
+  commit: 6e5a4ba001bfdb41ea6e5157a43b0a854d118e1a
+openwave_sources:
+  repository: https://github.com/openwave-labs/openwave
+  commit: c001aa26afc344806781153fd8f71816e347e70e
+  prior_p236_commit: 614a223fff01b768550b0917d0f96621d6bbe155
+  files:
+    - path: openwave/xperiments/m5_liquid_crystal/research/scripts/m5_18_lorentz_check.py
+      sha256: 3f859fbd5c3ceae2c5d661e3379132d470ad5a40486508baffbd03539250161b
+      role: >-
+        Canonical four-index curvature, Lorentz transformation, covariant
+        action, spectral potential, and Hamiltonian convention.
+    - path: openwave/xperiments/m5_liquid_crystal/research/findings/m5_18_verification_note.md
+      sha256: 982e6cbe35faf09f46d5f5890994d179acc6a6db1b3eb27293c895a992209f61
+      role: Independent source-side derivation and audit of the M5.18 action.
+    - path: openwave/xperiments/m5_liquid_crystal/research/scripts/m5_17_energy.py
+      sha256: b7e152d7515333277fb5095aacd4bf9059c76d49553ff8fc2dbb951c40a1bfd7
+      role: Established spatial 3x3 action, potential, and Coulomb reduction.
+    - path: openwave/xperiments/m5_liquid_crystal/research/scripts/m5_21_14_a_symbolic.py
+      sha256: aa303b5e054c572ff91fc7b1b2439c8f93266df9319a455a056913f574f4dfbb
+      role: Exact boost-hedgehog expansion and time-mixing instability.
+    - path: openwave/xperiments/m5_liquid_crystal/research/scripts/m5_21_15_a_baseline.py
+      sha256: fe56a83c5ba8d2174d4283a46e1665a275993c804057e641839195cf4c752a61
+      role: Exact affine-in-omega-squared/free-envelope result.
+    - path: openwave/xperiments/m5_liquid_crystal/research/scripts/m5_21_15_b_coupled.py
+      sha256: 9e288cd89a8457bb40637303788402b01e13bf10433d27421dbd88842ef3a85b
+      role: Coupled dressing and channel-resolved inertia machinery.
+    - path: openwave/xperiments/m5_liquid_crystal/research/scripts/m5_21_15_c_fixedj.py
+      sha256: bda4d5d60a7fd66d9a330b0c60f62527c3b2f5f7c2bb4d57b6fb696056a298a4
+      role: Fixed-angular-momentum energy-Casimir construction.
+    - path: openwave/xperiments/m5_liquid_crystal/research/scripts/m5_21_16_a_symbolic.py
+      sha256: 0f8667fec4948e06ab1aef5d21a75f1ae66efcf76e9b114e15930e77afb2c47a
+      role: Exact internal-contraction sign comparison and source bridge.
+    - path: openwave/xperiments/m5_liquid_crystal/research/scripts/m5_21_16_b_field.py
+      sha256: 587609b3787309ad92acc241aeb18c4d15446f3ac85cf640e7295251e7b7ff7b
+      role: Field-level contraction and Lorentz-invariance comparison.
+    - path: openwave/xperiments/m5_liquid_crystal/research/scripts/m5_21_16_c_fixedj.py
+      sha256: 5d3f4f7e6e88ee104f482baa97eb114b4eab4c9ff2c6fb7a38940cd111c310cb
+      role: Fixed-J comparison for the eta and noncovariant flip contractions.
+    - path: openwave/xperiments/m5_liquid_crystal/research/tasks/m5_5a_lagrangian_evolution.md
+      sha256: 994f6d0a8fe5bcdd0cb729283d964267836953852aa1e668c03563a5e7f53f10
+      role: Eq.18 source transcription and four-index M5.8 construction.
+frozen_definitions:
+  metric: eta_ab=diag(-1,1,1,1)
+  field: M_ab is a real symmetric covariant rank-two field
+  derivative: D_mu_ab=partial_mu M_ab is symmetric in a,b
+  eta_commutator: '[A,B]_eta = A eta^{-1} B - B eta^{-1} A'
+  curvature: F_munuab='[D_mu,D_nu]_eta_ab'
+  source_symmetries:
+    - F_munuab=-F_numuab
+    - F_munuab=-F_munuba
+  absent_source_symmetries:
+    - no pair-exchange identity F_munuab=F_abmunu
+    - no algebraic Bianchi identity F_[munua]b=0
+  baseline_action: >-
+    L0=-sum_(mu<nu) eta^mumu eta^nunu
+    F_munuab F_munu^ab - V_spec(M), equivalently the full four-index
+    metric contraction up to the source's ordered-pair normalization.
+  spectral_potential: >-
+    V_spec=sum_(p=1)^4 (Tr((eta M)^p)-sum_i Lambda_i^p)^2 with preferred
+    mixed-tensor spectrum Lambda=(g,1,delta,0); independent term weights are
+    not fixed by the source.
+  spatial_reduction: >-
+    A uniform time row reduces the eta commutator and internal contraction
+    exactly to the M5.17 plain 3x3 commutator/Frobenius curvature action.
+    The later M5.18 trace-power potential does not equal M5.17's quartic
+    Landau-de Gennes potential off shell.
+  m5_17_spatial_potential: >-
+    V_LdG(S)=a Tr(S^2)-b Tr(S^3)+c Tr(S^2)^2-(a-b+c), with
+    b=beta*c, a=(3b-4c)/2, c>0, and 0<beta<2. Its established exterior is
+    the uniaxial pure-director field S=n n^T with spectrum (1,0,0).
+  source_tension: >-
+    M5.18 later replaces V_LdG by a trace-power potential that pins the
+    biaxial mixed spectrum (g,1,delta,0). That replacement is proposal input,
+    not an accepted framework claim, and it does not satisfy P239's stricter
+    exact-M5.17 off-shell reduction gate. A moving biaxial tangent frame is
+    also singular at a hedgehog pole when delta is nonzero. Candidate G
+    therefore retains the M5.17 uniaxial exterior and covariantly lifts its
+    full potential with the timelike spectral projector.
+scope_decision:
+  parity_even: all independent eta-only quadratic contractions remain eligible
+  parity_odd: >-
+    Enumerate and record every one-epsilon pseudoscalar contraction, but do not
+    select one without a separate parity/chirality rationale because the
+    established 3x3 action and issue-147 objective are parity even.
+prior_exposure: >-
+  Issue #147 and its cited OpenWave records disclosed previous force,
+  frequency, and contraction-comparison values before P239. They are not
+  inputs to the P239 structural selection; new P239 outputs remain blinded
+  until the exact reduction and numerical gates freeze.
