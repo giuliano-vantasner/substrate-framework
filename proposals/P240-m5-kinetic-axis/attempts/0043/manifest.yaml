@@ -1,0 +1,188 @@
+campaign: P240
+attempt: '0043'
+canonical_goal_issue: '151'
+parent_attempt: '0042'
+candidate: relaxed_fixed_J_pair_oracle
+frozen_question: >-
+  Do separately relaxed two-defect hedgehog fields of the certified spectral-Cartan
+  action, at fixed individual typed momenta, produce a positive cross inertia with
+  a 1/r asymptotic (C(r) = A/r + O(r^-2), A > 0)? Sign and exponent of C(d) are
+  the deliverables; the conditional Newton formula Delta_E_J = -j^2 C/[2 I0 (I0+C)]
+  becomes a prediction only in the positive-1/r case.
+derivation_basis:
+  exact_algebra: >-
+    attempts/0034/verify_two_clock_legendre.py (18/18 exact checks): inertia matrix
+    [[I1,C],[C,I2]], E_J = (I2 J1^2 - 2 C J1 J2 + I1 J2^2)/(4 (I1 I2 - C^2)),
+    like-clock channel eigenvector (1,1) with eigenvalue I0+C. Fixed-J ensemble
+    exclusively; fixed omega has the opposite leading sign (+2 C omega^2).
+  observable_rule: >-
+    Pair observables are differences of separately relaxed common-action energies
+    on one common mask (P236 formula-freeze.yaml; P240 invariant). Cross inertia is
+    the mixed second derivative of the kinetic form:
+    I_ab = int 4 sum_i <[[N_a,M],d_i M],[[N_b,M],d_i M]]> d^3x.
+  composition_rule: >-
+    Additive shared-field superposition per P236 repair (attempts/0001 manifest:
+    product ansatz rejected as non-decaying artifact; theta(x)=theta_1+theta_2).
+    Translated to the certified cpu_energy chart where the vacuum decode is
+    eigenvalues (1,0,0) at every wall, the forced form is deviation-additive in
+    profile space: q = q1 + q2 - 1, tangent = t1 + t2, split = s1 + s2, evaluated
+    per center at r_a = |x - x_a| on ONE shared global spherical frame centered at
+    the pair midpoint. Exact one-defect recovery: switching a defect off returns
+    the certified one-body field identically. Raw profile sums are prohibited:
+    they violate the (1,0,0) outer decode (attempts/0007 gate).
+  pole_rule: delta = split * sin^2(theta_global) (attempts/0035 pole-free rule,
+    global-axis reading; per-center angle reading was considered and rejected as
+    chart-inconsistent).
+  ensemble_reading: >-
+    'Separately relaxed' means each defect is individually relaxed (the certified
+    roots); the pair field is assembled, not jointly re-relaxed. Joint relaxation
+    corrections enter at higher order in the overlap and are recorded as a caveat;
+    if the measured tail is power-law, a joint-relaxation follow-up is mandatory
+    before any promotion; if exponential, the conditional route closes regardless.
+configuration:
+  chart: cpu_energy.py (attempts/0041) verbatim functional; certified lineage
+    0036 -> 0040 -> 0041 -> 0042
+  defect_root: 'R=8 order-20 radial root from attempts/0041/radial-results.json
+    (reference values at load: E=50.445846, I0=0.676382, omega=0.739227)'
+  geometry: centers (+/-d/2, 0, 0) on z; shared frame spherical about origin;
+    union-domain ball radius L = d/2 + 8; profiles pinned to vacuum (q=1, t=0,
+    s=0) beyond each defect ball (hard Dirichlet extension, kink diagnostic G5)
+  separations: 'd in {18, 20, 24, 28, 32}'
+  generators: N_a = cross-product matrix of n_a(x) = (x - x_a)/|x - x_a|
+gates:
+  G1_certification: >-
+    One-body limit of the pair evaluator (co-located centers, single active
+    profile, L = 8) reproduces cpu_energy/XOracle total, curvature, potential,
+    and inertia to relative 1e-10 before any pair number is inspected.
+  G2_self_recovery: >-
+    I_11 at the largest separation matches the one-body inertia I0 within
+    3x the quadrature-refinement spread.
+  G3_rotational_covariance: >-
+    One separation re-run with the pair along x (full 3D quadrature) reproduces
+    C(d) to relative 1e-8.
+  G4_quadrature_refinement: >-
+    Two node levels; spread < 5% at d=18; absolute noise floor rule from 0042:
+    |C| counts only above 3x the enclosure half-width.
+  G5_kink_diagnostic: >-
+    Integrated |contribution| from shells |r_a - 8| < 0.25 reported at every d;
+    flagged if > 10% of |C|.
+interpretation_frozen_before_data:
+  newton_tail_confirmed: >-
+    C(d) > 0 at every measured d AND A(d) = C(d)*d constant across the three
+    largest separations within G4 spreads AND the exponential model rejected by
+    direct fit comparison. Only then does Delta_E_J become a parameter-free
+    prediction (evidence record; promotion is a separate governed step).
+  mechanism_refuted_repulsive: C(d) < 0 with sign stable under G4 refinements.
+  no_long_range_channel: >-
+    Exponential decay wins the fit comparison (effective exponent p(d) =
+    -dln|C|/dlnd growing approximately linear in d); the conditional Newton
+    route closes for the separately-relaxed realization.
+  otherwise: report measured sign and effective exponent without promotion.
+scope_boundary: >-
+  Evidence only; no claim promotion. Phase 2 item 5 (Coulomb sector at R >= 7.5)
+  is scoped separately: no in-repo charge-density definition exists for the
+  certified chart (P236 charge machinery lives in the OpenWave-pinned M5.17
+  source); item 5 will be recorded as defined-blocked unless implementation
+  precedes data inspection.
+amendment_protocol: >-
+  Any revision after data inspection must be appended below with reason and
+  timestamp before corrected results are interpreted (0042 discipline).
+environment: NumPy 1.26.4, SciPy 1.11.4, PyTorch 2.13.0+cpu float64; no CUDA
+
+amendments:
+  - id: AMEND-1
+    timestamp: '2026-08-21T15:20Z'
+    trigger: >-
+      Gate G2 failure on the first executed configuration set (declared
+      gate-invalid, not interpreted): single-defect inertia integrated over the
+      extended union domain is 794.14 (L=17) versus the certified 0.676621 --
+      the hard-Dirichlet exterior fill (director winding about the midpoint)
+      carries macroscopic gradient energy, so full-domain integrals measure the
+      extension choice, not defect overlap.
+    reason: >-
+      Geometric fact recognized: at all preregistered separations d >= 18 > 2*8,
+      the deviation supports of the two separately relaxed defects are DISJOINT;
+      inside each defect ball the composed field equals that defect's certified
+      field identically. The certified box model therefore contains no deviation
+      overlap channel; extending it beyond the boxes is un-certified modeling.
+    change: >-
+      The observable is redefined on the common mask equal to the union of the
+      two defect balls (precedent: P236 formula-freeze 'common pair mask';
+      m5_96 active-mask integration). C_ball(d) = ball-masked cross-inertia;
+      I11_ball, I22_ball likewise; static interaction on this mask is predicted
+      to vanish identically (no deviation overlap) and is retained as a
+      structural check of the composition rule. Full-domain values remain in
+      the results file labeled 'ambient_inclusive' for transparency.
+    frozen_interpretation_corrected:
+      newton_tail: >-
+        Model comparison on {C=A/d} vs {C=C_inf+A/d} vs {C=A*exp(-kappa d)}
+        (least squares on fine-level values); Newton tail confirmed only if the
+        pure 1/r model wins AND A>0 within G4 spreads.
+      constant_shift_no_force: >-
+        C_inf term dominant: like-clock energy tends to a constant; no
+        coordinate-dependent interaction exists in the separately-relaxed box
+        ensemble; the 1/r question transfers to the de-boxed/jointly-relaxed
+        setting (issue #151 Phase 3).
+      repulsive: C_ball < 0 robust under refinement at every separation.
+  - id: AMEND-2
+    timestamp: '2026-08-21T15:55Z'
+    trigger: >-
+      Gate G2 failure persisted under AMEND-1 masking (single-defect ball-masked
+      inertia 70.58 versus certified 0.676621): the shared midpoint spherical
+      frame cannot represent either defect's certified field, because the
+      hedgehog eigenframe is tied to the radial direction of its own center.
+    reason: >-
+      The committed P236 composition prescribes the summed polar-angle frame
+      Theta(x) = sum_a q_a * arctan2(rho, z - z_a) with activity weights q_a
+      (m5_96 orthogonal_frame charges parameter), not a shared midpoint chart.
+      Near core a, Theta = theta_a + pi + O(R/d), and since every frame vector
+      enters the field as an outer product, the pi offset leaves the field
+      exactly invariant while restoring defect a's own chart; activity weighting
+      preserves exact one-body recovery (G1).
+    change: >-
+      Frame replaced by the summed-angle construction with activity weights;
+      the pole-free rule becomes delta = split * sin^2(Theta) (the azimuthal
+      degeneracy lives at the zeros of the summed-angle frame). Ball mask from
+      AMEND-1 retained. Interpretation gates of AMEND-1 (model comparison on
+      fine-level C(d)) remain frozen and unchanged.
+  - id: AMEND-3
+    timestamp: '2026-08-21T16:40Z'
+    trigger: >-
+      Completion of the corrected measurement plus three independent structural
+      findings about the two-clock kinetic reduction in the certified box model.
+    findings_frozen_before_interpretation:
+      s1_disjoint_supports: >-
+        At every admissible separation d > 2*box_radius the deviation supports of
+        separately relaxed defects are disjoint BY ANSATZ (profiles vanish at each
+        wall); no direct field-overlap channel exists in the model class.
+      s2_singular_reduction: >-
+        In the committed summed-angle chart both clock phases enter only through
+        Theta = theta_1 + theta_2; the counter-rotating combination leaves the
+        field exactly invariant, so the counter-channel inertia vanishes
+        identically, det I(r) = 0, and the two-clock fixed-J Legendre transform
+        (attempts/0034 algebra) is ill-posed: C(r) is undefined in this chart.
+      s3_spd_violation_for_misaligned_generators: >-
+        Evaluating the kinetic matrix with per-center radial generators gives
+        |C| ~ 100-200 versus I0 = 0.6766, far outside the algebraic domain
+        |C| < I0; the diagnostic decomposition shows this is dominated by the
+        misaligned generator probing the far defect's non-soft directions
+        (matched-generator ball integral 27.0 vs certified 0.677 scale;
+        misaligned probe 321.7). Not a small-overlap expansion.
+      s4_static_channel: >-
+        The only well-defined interaction channel is the shared-frame static
+        coupling: repulsive (E_int > 0), decaying as a power law with fitted
+        exponent recorded in pair-results.json static_channel_fit, magnitude
+        small against one-body static energies.
+      g3_status: >-
+        The 3D covariance path did not validate (inconsistent with the meridian
+        path); with the kinetic C declared invalid under S2/S3 the gate is moot
+        for surviving observables and is recorded as not passed.
+    frozen_conclusion: >-
+      The conditional Newton tail C(r) = A/r, A > 0 is UNCONFIRMED and, stronger,
+      UNMEASURABLE within the separately-relaxed certified box model class: the
+      model contains no overlap channel (S1) and no nondegenerate two-clock
+      kinetic reduction (S2). The mechanism is not refuted -- it is outside the
+      reach of this model class. Advancing item 4 requires de-boxed profiles
+      (issue #151 Phase 3: natural/Robin or soliton-tail boundaries) or jointly
+      relaxed pairs; de-boxing is thereby on the critical path of the mechanism
+      itself, not merely of gap #5. No claim promotion.
