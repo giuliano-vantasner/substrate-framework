@@ -1,0 +1,112 @@
+{
+  "ladder": {
+    "R=8.0": {
+      "orders": {
+        "16": {
+          "converged": true,
+          "relative_gradient": 2.4663244055559483e-15,
+          "energy": 50.529660345343714,
+          "inertia": 0.6671436976233913,
+          "omega": 0.7494637239041334,
+          "hess_lambda_min_N": 4.540025235932597e-05,
+          "frozen_spectrum_Mplus4": [
+            9.686803187167481e-06,
+            0.0013288927205300151,
+            0.022386816849354948,
+            0.038780013918154506
+          ],
+          "soft_mode_ratio": 0.034163970994753094,
+          "minutes": 1.8
+        },
+        "18": {
+          "converged": true,
+          "relative_gradient": 5.002253847284242e-15,
+          "energy": 50.479729418858,
+          "inertia": 0.6724412839432503,
+          "omega": 0.7435593440485382,
+          "hess_lambda_min_N": 2.0204608009636336e-05,
+          "frozen_spectrum_Mplus4": [
+            5.0925215440121805e-06,
+            0.0006575616937630893,
+            0.01619575634207807,
+            0.018736607108920934
+          ],
+          "soft_mode_ratio": 0.03072655874159815,
+          "minutes": 1.0
+        },
+        "20": {
+          "converged": true,
+          "relative_gradient": 4.266842658230459e-15,
+          "energy": 50.44584629433424,
+          "inertia": 0.676382337402241,
+          "omega": 0.7392268726595276,
+          "hess_lambda_min_N": 9.704864223631395e-06,
+          "frozen_spectrum_Mplus4": [
+            2.8057789417028574e-06,
+            0.0003463063153088513,
+            0.009597530884161884,
+            0.01206597204241684
+          ],
+          "soft_mode_ratio": 0.02802393082256143,
+          "minutes": 1.2
+        }
+      },
+      "complete": true
+    },
+    "R=10.0": {
+      "orders": {
+        "16": {
+          "converged": true,
+          "relative_gradient": 1.4868244582403503e-62,
+          "energy": 1.5206628926978872e+246,
+          "inertia": 4.39424856140579e+246,
+          "omega": 1.1378509727270459e-247,
+          "hess_lambda_min_N": -5.305650831427035e+120,
+          "frozen_spectrum_Mplus4": [
+            2.3924633609121472e+117,
+            2.4331033263727622e+119,
+            2.842497278614259e+119,
+            1.3590306140032127e+120
+          ],
+          "soft_mode_ratio": -21.806105700149725,
+          "minutes": 14.2
+        },
+        "18": {
+          "converged": true,
+          "relative_gradient": 0.0,
+          "energy": Infinity,
+          "inertia": Infinity,
+          "omega": 0.0,
+          "hess_lambda_min_N": 7.639537909122584e+148,
+          "frozen_spectrum_Mplus4": [
+            1.8087329247483005e+148,
+            2.1421181592162547e+150,
+            3.697027785601081e+150,
+            2.098825200387442e+151
+          ],
+          "soft_mode_ratio": 0.03566347578098909,
+          "minutes": 6.0
+        },
+        "20": {
+          "converged": true,
+          "relative_gradient": 0.0,
+          "energy": Infinity,
+          "inertia": Infinity,
+          "omega": 0.0,
+          "hess_lambda_min_N": 3.565790968952101e+148,
+          "frozen_spectrum_Mplus4": [
+            -5.0699176079556e+152,
+            1.0590698038449422e+148,
+            1.371882325463972e+150,
+            2.2278488111137133e+150
+          ],
+          "soft_mode_ratio": 3.3669083529778043,
+          "minutes": 0.2
+        }
+      },
+      "complete": true
+    }
+  },
+  "bisection": [],
+  "enclosure": {}
+}

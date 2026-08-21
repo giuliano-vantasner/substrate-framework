@@ -1,0 +1,71 @@
+campaign: P240
+attempt: '0042'
+canonical_goal_issue: '151'
+parent_attempt: '0041'
+frozen_question: >-
+  Is the R >= 7.5 spherically symmetric fixed-J branch an intrinsic minimum of
+  the action, a boundary artifact, or a near-critical state? Locate and explain
+  the critical radius.
+slice: 'issue #151 Phase 1 items 1-3, restructured mid-attempt to a
+  derivation-first protocol at explicit owner direction'
+method_revision_note: >-
+  The attempt began as a numerical R-ladder + bisection (phase1_ladder.py,
+  phase1-results.json -- retained as evidence of the retired route). At owner
+  steering ("derive first; tests are not the goal") the attempt was restructured:
+  an exact algebraic scaling identity now carries the classification, and
+  numerics only confirm derived structure. Manifest interpretation gates were
+  frozen before any ladder value was inspected; the derivation revision happened
+  before any pencil value was inspected.
+exact_scaling_identity:
+  statement: 'E(R)[c] = R^3 V[c] + (C[c] + Phi[c])/R with Phi[c] = 1/(4 I[c])'
+  status: verified exact at the discrete level; xspace_energy.XOracle reproduces
+    cpu_energy totals to 2e-14 at fixed nodes, and H(R) = R^3 A + R^-1 D
+    reconstructs H(10) from radii {6,8} to 1.8e-12
+  consequence: 'lambda_min(R) = R^3 lambda_min(A + R^-4 D); the R -> infinity
+    verdict is the spectrum of A = nabla^2 V on the branch background;
+    stability for ALL radii holds iff lambda_min(A) > 0.'
+findings:
+  - implementation_defects_repaired_and_recorded:
+      - 'ladder seeded each radius from the R=6 root: radii R >= 10 require
+         chained continuation (implementation, not science)'
+      - 'convergence gate accepted overflowed rows (E ~ 1e300): finite-energy
+         guard required'
+      - 'separate-component double-backward produces a spurious inertia
+         Hessian; whole-Hessian autograd validated against cross-difference
+         finite differences (max diff 1e-4 at eps=1e-3). Attempt 0041 used
+         whole Hessians only and is unaffected.'
+      - 'hand transcription dropped delta = split_amplitude * sine(mu)^2 in the
+         polar/azimuthal coupling (caught by component comparison against the
+         certified cpu_energy port)'
+  - potential_second_variation_negative_on_every_background:
+      'lambda_min(A): -9.94e-4 (R=6 bg), -1.08e-4 (R=8), -6.1e-6 (R=10),
+       -2.10e-6 (R=12, converged under N=18->20 refinement). Negative at every
+       measured branch background; quadrature-independent (identical to 8
+       digits across 48x16 / 72x24 / 96x28).'
+  - branch_lambda_min_in_window:
+      '+5.7e-5 (R=10) .. +1.4e-5 (R=12, N=20): positive but decaying with basis
+       order; the R^-4-scaled positive-curvature class D rescues a genuinely
+       negative potential direction within a finite window.'
+verdict: >-
+  Finite stability window, structural marginality. The potential second
+  variation has a persistent negative direction on every branch background
+  (lambda_min(A) < 0 throughout, approaching a small negative constant), so the
+  branch is NOT an intrinsic minimum: beyond a second crossing (order-of-
+  magnitude estimate R ~ 80, from equating the R^-4 rescue term against the
+  converged lambda_min(A) at R=12 -- hypothesis grade) the branch is unstable
+  with lambda_min growing like R^3 lambda_min(A). Within the window it is
+  stable only marginally, which explains why every lambda measurement sat
+  2-6 digits above the noise floor: the marginality is structure, not numerics.
+consequence: >-
+  Issue #151 Phase 1 answered: neither "intrinsic minimum" nor "box artifact".
+  The clock exists in a finite radius window and is nowhere robustly bound.
+  This reframes Phase 2: the pair oracle should be run inside the window at a
+  radius chosen with the pencil (not at maximal stability), and the near-null
+  potential direction (4 -> 1 negative directions as R grows) is itself a
+  physical object worth identifying -- likely the incipient collapse channel.
+next: >-
+  (1) Identify the eigenvector of A in its negative direction along the branch
+  (which field channel, which radial profile). (2) Verify the second-crossing
+  prediction with converged roots at R in [60, 100]. (3) Then the relaxed
+  fixed-J pair oracle at a window radius.
+environment: NumPy 1.26.4, SciPy 1.11.4, PyTorch 2.13.0+cpu float64; no CUDA
