@@ -1,0 +1,68 @@
+campaign: P240
+attempt: '0043'
+canonical_goal_issue: '151'
+parent_attempt: '0042'
+candidate: relaxed_fixed_J_pair_oracle
+frozen_question: >-
+  Do separately relaxed two-defect hedgehog fields of the certified
+  spectral-Cartan action, at fixed individual typed momenta, produce a positive
+  cross inertia with a 1/r asymptotic (C(r) = A/r + O(r^-2), A > 0)?
+method: >-
+  Derivation-first per owner direction. Exact two-clock algebra (attempt 0034,
+  18/18 checks) fixes the observable; composition rule taken from committed P236
+  prior art (additive shared-field form; product ansatz rejected historically);
+  evaluator built in the certified cpu_energy chart on the summed-angle frame;
+  G1 certification against cpu_energy required before any pair number was
+  inspected; two protocol amendments (AMEND-1 ball mask, AMEND-2 summed-angle
+  frame) documented before corrected results were interpreted; AMEND-3 froze the
+  structural conclusion.
+gates:
+  G1_certification: passed at machine precision (total rel err 3.5e-16, inertia
+    1.1e-14, curvature/potential exact to the digit)
+  G2_self_recovery: passed after AMEND-2 (single-defect ball-masked inertia
+    0.6798 vs certified 0.676621, 0.47 percent)
+  G3_rotational_covariance: not passed (3D path inconsistent); moot for
+    surviving observables under AMEND-3
+  G4_quadrature: passed except the d=32 tail (12 percent)
+  G5_kink: reported; moot under AMEND-3
+findings:
+  - structural_disjoint_supports: >-
+      At every admissible separation d > 16 the deviation supports of separately
+      relaxed defects are disjoint by ansatz (profiles vanish at each wall): the
+      certified box model contains no direct field-overlap channel.
+  - singular_two_clock_reduction: >-
+      In the summed-angle chart both clock phases enter only through
+      Theta = theta_1 + theta_2; the counter-rotating combination leaves the
+      field exactly invariant, the counter-channel inertia vanishes identically,
+      det I = 0, and the attempt-0034 fixed-J Legendre transform is ill-posed:
+      C(r) is undefined in this chart.
+  - spd_violation_for_naive_generators: >-
+      Per-center radial generators give |C| ~ 100-200 versus I0 = 0.6766, far
+      outside |C| < I0; decomposition shows domination by misaligned-generator
+      probing of the far defect (matched 27.0 vs misaligned 321.7 ball
+      integrals). The hedgehog clock is soft only for its own radial generator.
+  - static_frame_coupling_repulsive_power_law: >-
+      The only well-defined interaction channel is the shared-frame static
+      coupling: E_int(d) = +456.6 * d^-1.696 (fit residual max 3.5 percent),
+      repulsive, small against one-body static energies (~60).
+verdict: >-
+  The conditional Newton tail C(r) = A/r, A > 0 is unconfirmed and, stronger,
+  unmeasurable within the separately-relaxed certified box model class: no
+  overlap channel exists (disjoint supports by ansatz) and no nondegenerate
+  two-clock kinetic reduction exists (singular in the committed chart; SPD-
+  violating under naive generators). The mechanism is NOT refuted -- it is
+  outside the reach of this model class.
+consequence: >-
+  Issue #151 item 4 resolves negatively for the boxed realization: the pair
+  oracle cannot certify or kill the Newton mechanism inside boxes. De-boxing
+  (Phase 3: natural/Robin or soliton-tail boundaries) or jointly relaxed pairs
+  is now on the critical path of the mechanism itself, not merely of gap #5.
+  The electron candidate's score is unchanged on gaps 1-5 but gap 2 (the claim)
+  is now known to be unreachable without Phase 3.
+next: >-
+  (1) Phase 3 de-boxing derivation: replace pinned rank-1 walls with natural or
+  Robin conditions; retest one-body stability (the 0042 pencil applies
+  unchanged). (2) If stable tails exist, rerun the pair oracle on de-boxed
+  profiles where overlap channels are nonzero. (3) Coulomb sector item 5 remains
+  defined-blocked (no in-repo charge density for the certified chart).
+environment: NumPy 1.26.4, SciPy 1.11.4, PyTorch 2.13.0+cpu float64; no CUDA
