@@ -39,4 +39,3 @@ Three mechanisms from this attempt are reusable by later P240 work.
 ## Continuation State
 
 Attempt 0042 landed as evidence; the campaign objective (issue #151 ladder through Phase 4) stays open. Next decisive actions recorded in attempts/0042/result.yaml: identify the negative eigenvector channel of A, verify the second-crossing prediction near R ~ 80 with converged roots, then run the relaxed fixed-J pair oracle inside the window.
-
