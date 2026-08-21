@@ -1,0 +1,77 @@
+campaign: P240
+attempt: '0041'
+candidate: D_fixed_j_two_clock_spectral_cartan_one_body
+
+reimplementation_check:
+  method: verbatim CPU port of the attempt-0036 energy evaluated on the saved attempt-0040 6x5 root
+  inertia: 0.4607131379
+  frequency: 1.0852740217
+  minimum_hessian_eigenvalue: -2.8680736658
+  saved_mode_rayleigh_quotient: -2.8680736658
+  verdict: exact agreement with all saved 6x5 quantities to reported precision
+
+radial_reduction:
+  orders: [8, 10, 12, 14, 16, 18, 20]
+  lambda_min_per_order: [-0.326387, -0.169702, -0.115003, -0.094445, -0.080026, -0.069270, -0.062556]
+  morse_index_per_order: [1, 1, 1, 1, 1, 1, 1]
+  lowest_mode_split_fraction: '>= 0.9995 at every order'
+  energy_N20: 46.58357120
+  inertia_N20: 0.507464
+  frequency_N20: 0.985292
+
+frozen_profile_certification:
+  basis_orders: [20, 24, 28, 32]
+  lambda_min: [-0.062544, -0.063747, -0.063853, -0.063957]
+  monotone_nonincreasing: true
+  quadrature_checks:
+    - '48x16 vs 56x20 vs 64x24 agree to 6 digits at M=20'
+  lowest_mode:
+    field_fractions: [0.00043, 0.0, 0.99957]
+    interior_radial_nodes_split: 1
+    node_location_x: 0.655
+  second_eigenvalue_M32: 2.55e-07
+  second_mode_field: split channel
+
+branch_hunt:
+  seeds: [split_const, tangent_const, q_const, random_a, random_b]
+  order: 12
+  outcome: no seed converged to any additional stationary point; no stable branch found
+
+radius_stability_scan:
+  method: same coefficient vector carries the branch to any radius (profiles are functions of x=r/R)
+  R6: 'lambda_min = -0.0640, Morse index 1 (certified saddle; basis-free Q[eta] = -0.06395716)'
+  R7_5: 'lambda_min = +4.5e-5, index 0, converged'
+  R8: 'lambda_min = +9.7e-6 at N=20; frozen M=22/24: +5.1e-6 / +2.8e-6; basis-free Q[eta_lowest] = +2.5e-6 matches eigenvalue'
+  R10: 'lambda_min = +5.7e-5 at N=16; frozen M=20: +1.1e-5'
+  R7: 'excluded: root did not converge (|g|/|E| ~ 4e-2)'
+  critical_radius: 'R* in (6, 7.5); the split-channel instability exists only below R*'
+
+verdict: >-
+  Two-stage result. (1) At R=6 the tangential-split negative mode persists in the
+  continuum and is now proven basis-free: an explicit degree-32 admissible trial
+  function has Rayleigh quotient Q[eta] = -0.06395716, identical across quadrature
+  orders and step sizes -- a representation-independent saddle proof with no
+  min-max extrapolation. The degree-16 truncation of the same mode has
+  Q[eta] = +0.47, so the instability lives in fine radial structure (degrees
+  17-32) concentrated near the outer boundary; the lambda_2 ~ +2.5e-7 companion
+  is a positive boundary-layer soft mode, not a symmetry zero mode. The delta == 0
+  subsector is not stationary (split-channel force ~1e12 at delta=0; the action is
+  not even in delta), so the symmetric-state escape route is closed.
+  (2) Stability is radius-dependent: the branch is marginally stable for R >= 7.5,
+  with critical radius R* in (6, 7.5).
+
+consequence: >-
+  The fixed-J pair oracle remains closed at R=6 but is open for the marginally
+  stable R >= 7.5 realization, per the predeclared attempt-0040 gate, provided the
+  marginal stability survives independent scrutiny. The R=6 instability is a
+  domain-size effect tied to the boundary condition at r=R, not an intrinsic
+  property of the action.
+
+candidate_status: radius_dependent_one_body_stability
+next: >-
+  (1) Independent confirmation of marginal stability at R >= 7.5 (positive
+  lambda_min sits only 2-3 digits above the float64 noise floor at frozen bases).
+  (2) Locate R* by bisection with converged roots. (3) If stability is confirmed,
+  run the relaxed fixed-J pair oracle at R >= 7.5 and measure the sign and power
+  law of I_12(r). (4) The symbolic H_split derivation remains open to explain the
+  boundary softness analytically.
