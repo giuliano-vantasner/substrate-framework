@@ -1,0 +1,31 @@
+campaign: P240
+attempt: '0041'
+canonical_goal_issue: '146'
+candidate_source_issue: '147'
+candidate: D_fixed_j_two_clock_spectral_cartan_one_body
+frozen_question: >-
+  Does the tangential-split negative mode persist for the continuum admissible
+  spherically symmetric hedgehog, and does any stable finite-inertia stationary
+  branch exist in that sector?
+validation_request: issue #146 comment 5359719475
+method_source: issue #146 comment 5360116141 (mlops-kelvin radial reduction with certified Morse index)
+initial_state: angular-degree-0 projection of the exact attempt-0040 6x5 root, zero-padded per order
+action_and_domain: unchanged spectral-Cartan fixed-J action, radius 6, J=1, restricted to mu-independent profiles
+representation:
+  profiles: q(r), tangent(r), split(r), each radial Chebyshev only (angular degree 0)
+  orders_scanned: [8, 10, 12, 14, 16, 18, 20]
+  quadrature: 32 radial by 16 mu Gauss-Legendre nodes
+solver: scipy hybr with exact autograd Hessian, float64 CPU (NumPy/SciPy/PyTorch-CPU, no CUDA)
+stages:
+  - solve_radial_1d.py stationary roots and discrete Morse index per order
+  - certify_morse_index.py frozen-profile second variation in nested bases M=20..32,
+    quadrature refinement 56x20 and 64x24, nodal census, five-seed branch hunt
+predeclared_gates:
+  frozen_profile_lambda_min_monotone_nonincreasing: true
+  frozen_profile_lambda_min_quadrature_independent: true
+  stable_branch_required_for_pair_oracle: true
+interpretation_boundary: >-
+  This attempt validates one-body stability only. The fixed-J pair oracle stays
+  closed unless a stable branch exists, per the predeclared gate recorded in the
+  attempt-0040 manifest.
+environment: NumPy 1.26.4, SciPy 1.11.4, PyTorch 2.13.0+cpu float64; no CUDA device used
