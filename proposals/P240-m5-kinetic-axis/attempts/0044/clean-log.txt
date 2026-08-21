@@ -1,0 +1,4 @@
+/home/administrator/projects/substrate-framework/proposals/P240-m5-kinetic-axis/attempts/0044/debox_ladder.py:70: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /__w/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:822.)
+  e_seed = float(
+anchor R=13.0 order=16 E=55.89961066

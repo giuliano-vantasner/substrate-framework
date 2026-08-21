@@ -1,0 +1,51 @@
+campaign: P240
+attempt: '0044'
+canonical_goal_issue: '151'
+parent_attempt: '0043'
+candidate: de_boxed_hedgehog_limit_and_boundary_variation
+frozen_question: >-
+  Does the certified fixed-J hedgehog survive without walls? Specifically:
+  (a) does the R -> infinity limit of the pinned-wall branch exist as a finite-
+  energy de-boxed configuration; (b) is that limit stable (does lambda_min(A)
+  converge negative, zero, or positive); (c) do any fluctuation channels carry
+  power-law (non-exponential) tails, which alone could host an overlap-mediated
+  pair interaction; (d) does a natural/Robin boundary condition change the
+  stability window. This is issue #151 Phase 3, items 6-7.
+method: >-
+  Derivation first. Step 1 is a symbolic computation (sympy, committed script)
+  of the potential's second variation around the rank-1 projector background
+  P = n n^T, checked numerically against the certified cpu_energy potential on
+  random admissible perturbations BEFORE any root is inspected. Steps 2-4 use
+  only the certified evaluators (solve_radial_1d.energy_radial,
+  xspace_energy.XOracle) with chained continuation in R.
+preregistered_gates:
+  G1_symbolic_vacuum_curvature: >-
+    The sympy expansion of V[eta] to quadratic order around P must reproduce,
+    component by component, the coefficients implied by direct substitution,
+    and the numeric check against cpu_energy must agree to <= 1e-12 relative.
+  G2_limit_existence: >-
+    Chained roots at R = 12, 16, 20, 24 must converge (finite-energy guard);
+    E(R), I(R), omega(R) trends recorded; the de-boxed limit is declared to
+    exist only if observables change by < 5 percent between the last two
+    radii OR converge monotonically with a fitted exponential/power rate.
+  G3_quadrature_independence: >-
+    lambda_min(A[c(R)]) must agree between 48x16 and 72x24 quadratures to
+    8 digits at R = 16 before any asymptotic claim.
+  G4_robin_certification: >-
+    The Robin/natural-BC variant at R = 8 must reproduce the cpu_energy chart
+    total on its own background to <= 1e-10 relative before its lambda_min is
+    read.
+frozen_interpretation:
+  - if lambda_min(A) converges to a negative constant: the de-boxed limit is a
+    saddle; walls are the stabilizer (the R^-4 D rescue); gap #5 closes
+    negatively; the mechanism claim stays conditional and unreachable without
+    confinement; record which channel the negative direction occupies.
+  - if lambda_min(A) converges to zero within the noise floor: marginality
+    persists in the limit; escalate to interval arithmetic before any claim.
+  - if lambda_min(A) converges positive: the de-boxed soliton is stable; gap #5
+    closes positively; the pair oracle reruns on de-boxed tails immediately.
+  - tail law rule: a channel counts as power-law only if the fitted exponent is
+    stable across the last two radii and the exponential model is rejected by
+    residual ratio > 3; otherwise exponential with the derived mass.
+  - failures become mechanisms; no claim promotion in this attempt.
+environment: NumPy 1.26.4, SciPy 1.11.4, PyTorch 2.13.0+cpu float64; no CUDA

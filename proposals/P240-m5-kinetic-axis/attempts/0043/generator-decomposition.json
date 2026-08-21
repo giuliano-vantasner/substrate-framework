@@ -1,0 +1,29 @@
+{
+  "configuration": "d=20 base level (80x40), full domain (no ball mask)",
+  "purpose": "provenance for attempt-0043 AMEND-3/S3 misaligned-generator diagnosis",
+  "regions": [
+    "ball1",
+    "ball2",
+    "outside"
+  ],
+  "I11_by_region": [
+    27.041055178763823,
+    321.73062717546327,
+    1053.1805470261033
+  ],
+  "I22_by_region": [
+    321.73062717546327,
+    27.041055178763834,
+    1053.1805470261036
+  ],
+  "static_by_region": [
+    24.495923000972333,
+    24.49592300097234,
+    8.847809922617863
+  ],
+  "I12_by_region": [
+    88.53659906759339,
+    88.5365990675934,
+    912.9461687412752
+  ]
+}
