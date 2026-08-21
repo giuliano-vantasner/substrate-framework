@@ -37,22 +37,41 @@ branch_hunt:
   order: 12
   outcome: no seed converged to any additional stationary point; no stable branch found
 
+radius_stability_scan:
+  method: same coefficient vector carries the branch to any radius (profiles are functions of x=r/R)
+  R6: 'lambda_min = -0.0640, Morse index 1 (certified saddle; basis-free Q[eta] = -0.06395716)'
+  R7_5: 'lambda_min = +4.5e-5, index 0, converged'
+  R8: 'lambda_min = +9.7e-6 at N=20; frozen M=22/24: +5.1e-6 / +2.8e-6; basis-free Q[eta_lowest] = +2.5e-6 matches eigenvalue'
+  R10: 'lambda_min = +5.7e-5 at N=16; frozen M=20: +1.1e-5'
+  R7: 'excluded: root did not converge (|g|/|E| ~ 4e-2)'
+  critical_radius: 'R* in (6, 7.5); the split-channel instability exists only below R*'
+
 verdict: >-
-  The tangential-split negative mode persists in the continuum. The frozen-profile
-  second variation converges monotonically under basis refinement to
-  lambda_min = -0.064, bounded away from zero and independent of quadrature, so the
-  spherically symmetric stationary branch is a genuine Morse-index-one saddle, not a
-  representation artifact of the 6x5 basis. No alternative stable stationary branch
-  was found in the searched sector.
+  Two-stage result. (1) At R=6 the tangential-split negative mode persists in the
+  continuum and is now proven basis-free: an explicit degree-32 admissible trial
+  function has Rayleigh quotient Q[eta] = -0.06395716, identical across quadrature
+  orders and step sizes -- a representation-independent saddle proof with no
+  min-max extrapolation. The degree-16 truncation of the same mode has
+  Q[eta] = +0.47, so the instability lives in fine radial structure (degrees
+  17-32) concentrated near the outer boundary; the lambda_2 ~ +2.5e-7 companion
+  is a positive boundary-layer soft mode, not a symmetry zero mode. The delta == 0
+  subsector is not stationary (split-channel force ~1e12 at delta=0; the action is
+  not even in delta), so the symmetric-state escape route is closed.
+  (2) Stability is radius-dependent: the branch is marginally stable for R >= 7.5,
+  with critical radius R* in (6, 7.5).
 
 consequence: >-
-  Per the predeclared gate in the attempt-0040 manifest, an unstable one-body root
-  leaves the exact action/mechanism candidate intact but closes this tested hedgehog
-  realization; the relaxed fixed-J pair oracle and the I_12(r) measurement remain
-  closed on this branch.
+  The fixed-J pair oracle remains closed at R=6 but is open for the marginally
+  stable R >= 7.5 realization, per the predeclared attempt-0040 gate, provided the
+  marginal stability survives independent scrutiny. The R=6 instability is a
+  domain-size effect tied to the boundary condition at r=R, not an intrinsic
+  property of the action.
 
-candidate_status: one_body_stability_refuted_for_this_realization
+candidate_status: radius_dependent_one_body_stability
 next: >-
-  A stable one-body realization requires either a different branch (none found here)
-  or an action modification that lifts the tangential-split instability while
-  preserving the exact 3x3 recovery and fixed-J algebra.
+  (1) Independent confirmation of marginal stability at R >= 7.5 (positive
+  lambda_min sits only 2-3 digits above the float64 noise floor at frozen bases).
+  (2) Locate R* by bisection with converged roots. (3) If stability is confirmed,
+  run the relaxed fixed-J pair oracle at R >= 7.5 and measure the sign and power
+  law of I_12(r). (4) The symbolic H_split derivation remains open to explain the
+  boundary softness analytically.
