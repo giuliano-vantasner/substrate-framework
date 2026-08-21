@@ -1,0 +1,59 @@
+attempt: '0003'
+campaign: P240
+canonical_issue: '146'
+candidate_source_issue: '147'
+branch: research/p240-m5-kinetic-axis
+base_release: v0.163.0
+source_baseline: substrate-framework@a34b5f584165b86d1fc62af0ede5fbf37b0aa5b7
+status: complete
+classification: constructive_correction
+objective: >-
+  Correct attempt 0002's additive L1 interpretation by proving that the old
+  axis-blind time-curvature channel must be replaced by the M-derived
+  spatial-only curvature contraction, leaving L1 as the complete clock
+  kinetic term.
+diagnosed_gap: >-
+  An additive positive L1 density does not remove the baseline
+  spectral-Cartan curvature inertia. The zero-eigenline ordinary-rotation
+  escape could still carry fixed J through that retained baseline channel.
+corrected_action_boundary:
+  spatial_curvature: >-
+    -1/2 times the double-two-form contraction with external inverse metric
+    S^(mu nu)=eta^(mu nu)-P_t^(mu nu) and the existing positive internal
+    Cartan metric.
+  clock_kinetic: >-
+    L1 from attempt 0002 is the complete clock kinetic channel, not an
+    addition to the old time-space curvature contraction.
+  unchanged_terms: >-
+    The projected M5.17 potential, timelike-projector current, Candidate-H
+    timelike scalar current/matter factor, local constraints, and source data.
+exact_gates:
+  - exact Lorentz covariance of the M-derived spatial inverse metric and curvature contraction
+  - coefficient-exact equality to the old curvature action on every static spatial double two-form
+  - exact removal of every curvature component with a timelike spacetime leg in the comoving frame
+  - positive spatial-curvature Hamiltonian on the declared Cartan branch
+  - positive physical-axis L1 inertia and zero total clock inertia for the zero-eigenline mutation
+mutation: >-
+  Retain the old full external contraction and require a wrong-axis clock
+  witness to regain nonzero inertia, demonstrating why addition is
+  insufficient.
+comparators_opened: false
+commands:
+  - >-
+    PYTHONPATH=src /home/dan/substrate-framework/.venv/bin/python
+    proposals/P240-m5-kinetic-axis/attempts/0003/verify_kinetic_axis_replacement.py
+  - >-
+    PYTHONPATH=src /home/dan/substrate-framework/.venv/bin/python -m pytest -q
+    tests/test_m5_kinetic_axis.py::test_l1_replaces_the_axis_blind_time_curvature_channel
+next_if_success: >-
+  Freeze the corrected action's one-body numerical equations and run no
+  pair calculation until a stationary refined branch passes.
+next_if_failure: >-
+  Reject L1 and continue to the axis-weighted L2 sextic replacement without
+  changing issue #146.
+verdict: >-
+  The corrected L1 replacement passed all eight exact checks. The external
+  spatial metric recovers the complete static 3x3 curvature coefficient,
+  removes the old axis-blind time-curvature channel, is Lorentz covariant, and
+  leaves positive L1 inertia only on the selected physical-axis clock branch.
+  No numerical comparator was opened.

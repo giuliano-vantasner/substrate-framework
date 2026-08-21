@@ -1,0 +1,47 @@
+campaign: P240
+attempt: '0032'
+canonical_goal_issue: '146'
+candidate_source_issue: '147'
+candidate: A_same_order_curvature_contractions
+frozen_question: >-
+  Does the complete curvature-quadratic Lorentz-scalar family contain a
+  deformation that preserves the full source-generated static 3x3 action yet
+  repairs every negative source-generated time-mixing direction?
+methodological_correction: >-
+  Do not inherit P239's generic-double-two-form verdict. Derive the invariant
+  polynomials afresh and prove that the static pair-curvature coordinates are
+  actually reached with full local rank by commutators of arbitrary symmetric
+  M-field derivatives. This distinguishes a genuine source identity from a
+  possibly over-broad stand-in tensor test.
+frozen_scope:
+  parity_even: every eta-only complete contraction of two F tensors
+  parity_odd: every one-epsilon-plus-eta complete contraction of two F tensors
+  curvature_symmetry: F_abcd=-F_bacd=-F_abdc only, unless a stronger identity is derived from the source map
+  static_sector: D_0=0 and three arbitrary symmetric spatial 3x3 derivative matrices
+  time_mixing_witness: >-
+    D_0=omega*diag(1,0,0,0), D_1=E_01+E_10, D_2=D_3=0,
+    realized globally by an affine symmetric M(t,x)
+predeclared_success:
+  - exact enumeration and polynomial rank of all even and one-epsilon contractions
+  - exact source-map local-rank witness for the static 3x3 curvature coordinates
+  - exact coefficient nullspace preserving the complete static 3x3 action
+  - at least one preserving coefficient direction changes every negative unbounded source clock witness required by boundedness
+predeclared_failure: >-
+  If a globally realizable affine source clock has negative quadratic
+  Hamiltonian coefficient and every complete static-preserving quadratic
+  deformation vanishes on it, this same-order family fails boundedness. That
+  rejects only the constant-coefficient curvature-quadratic family, not issue
+  146 or field-dependent/higher-order candidates.
+oracles:
+  - exact SymPy polynomial coefficient matrices, with no optimizer or floating-point tolerance
+  - exact nonzero Jacobian minor proving the source-map image is locally full-dimensional
+  - independent direct invariant formulas evaluated on the canonical curvature constructor
+mutations:
+  - pair-exchange and Bianchi identities must fail on a source-generated counterexample
+  - improper parity must preserve even and reverse odd representatives
+historical_exclusion: >-
+  P239 files may explain why this audit is necessary, but its scripts, results,
+  tests, check counts, and receipt are not P240 evidence.
+next_if_failure: >-
+  Continue to the next conceptually distinct issue-147 family; do not add a
+  numerical continuation penalty or tune a solver around the exact no-go.

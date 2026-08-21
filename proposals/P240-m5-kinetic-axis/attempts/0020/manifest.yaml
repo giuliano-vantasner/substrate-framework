@@ -1,0 +1,67 @@
+attempt: '0020'
+campaign: P240
+canonical_issue: '146'
+candidate_source_issue: '147'
+status: frozen_before_execution
+classification: corrected_fixed_j_projector_skyrme_coefficient_map
+objective: >-
+  Map a preregistered projector-current stiffness ladder using the exact
+  integrated fixed-J Hamiltonian of attempts 0018-0019, solely to locate a
+  possible stability bracket for later continuum refinement.
+corrected_global_hamiltonian:
+  integrated_clock_lagrangian: A[field]+2*C[field]*omega+I[field]*omega^2
+  momentum: J=2*C+2*I*omega
+  energy: E_static+(J-2*C)^2/(4*I)-A
+  projector_energy: kappa_b*sum_i q_P(partial_i P_t,partial_i P_t)
+  axis_similarity: P_N and Y use the same inverse-boost/boost mixed similarity
+grid_role:
+  spacing: 0.5
+  rho_cells: 8
+  z_cells: 16
+  interpretation: coefficient_bracketing_only_not_continuum_stability
+coefficient_ladder:
+  kappa_s: 1.0
+  kappa_b: [1.0, 2.0, 4.0, 8.0, 16.0, 32.0]
+  selection_blinding: values_frozen_before_any_corrected_solve
+branches:
+  initial_split_sign: 1.0
+  each_coefficient_classified_independently: true
+  optimizer_role: root_basin_only
+direct_oracle:
+  root: scipy_krylov_armijo
+  root_maximum_outer_iterations: 240
+  normalized_residual_inf_max: 1.0e-8
+  solver_success_required: true
+  independent_first_variation: centred_energy_differences
+  smallest_hessian_mode: reverse_mode_HVP_plus_ARPACK
+  independent_mode_curvature: centred_energy_second_difference_step_ladder
+translation_gates:
+  - literal epsilon current equals axial determinant
+  - A C I reproduce the exact clock polynomial and fixed-J Legendre formula
+  - dynamic q is symmetric and differs from the rest-only spatial sum under a boost mutation
+  - finite I above the domain scale floor and finite omega
+  - exact boundary data and timelike gap above 2
+  - projector stiffness mutation changes the boost Hessian
+success_interpretation: >-
+  A stable small-grid root only identifies a coefficient bracket. It cannot
+  accept or reject the candidate. The same branch and mode must survive
+  fixed-extent mesh refinement, larger-domain refinement, and an independent
+  spatial discretization.
+next_if_bracket: Freeze the refinement ladder without opening pair observables.
+next_if_no_bracket: Return to the issue-147 same-order curvature family.
+comparators_opened: false
+correction_check:
+  trigger: >-
+    At kappa_b=2 the direct root converged to the identical zero-boost state
+    seen at kappa_b=1, but ARPACK returned no eigenvalue after 30022 HVP calls.
+  preserved_failure: result-kappa-2-arpack.yaml
+  method: >-
+    Build the complete 686x686 Hessians H0 and H1 by basis HVPs, verify
+    symmetry, form H(kappa_b)=H0+kappa_b*(H1-H0), and use direct dense
+    symmetric diagonalization for every preregistered coefficient.
+  scientific_boundary_unchanged: >-
+    Same grid, root, action, coefficient ladder, residual, and independent
+    energy-curvature oracle. Only the failed eigenvalue extraction changes.
+  landing_check: >-
+    Every coefficient has a direct lowest eigenpair, the root gradient remains
+    below 1e-8, and centred energy curvature agrees with that eigenvalue.

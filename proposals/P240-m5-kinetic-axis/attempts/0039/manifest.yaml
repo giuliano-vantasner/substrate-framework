@@ -1,0 +1,33 @@
+campaign: P240
+attempt: '0039'
+canonical_goal_issue: '146'
+candidate_source_issue: '147'
+candidate: D_fixed_j_two_clock_spectral_cartan_one_body
+frozen_question: >-
+  Does the exact 4x3 saddle persist after solving the large withheld residual
+  in the next 5x4 smooth basis?
+initial_state: attempt 0038 branch-0 exact root, zero-padded coefficientwise
+action_and_domain: unchanged spectral-Cartan fixed-J action, radius 6, J=1
+representation:
+  modes: 5 radial by 4 even angular per field
+  coefficient_count: 60
+  quadrature: 28 radial by 24 mu Gauss-Legendre nodes
+solver:
+  primary: scipy hybr root with exact PyTorch 2.4 CUDA Hessian
+  correction: scipy LM root on the identical residual/Jacobian only if needed
+  acceptance: physical gradient residual, never solver flag alone
+predeclared_gates:
+  normalized_gradient_inf_max: 1.0e-9
+  independent_directional_relative_max: 2.0e-8
+  hessian_symmetry_relative_max: 1.0e-10
+  minimum_hessian_eigenvalue_min: -1.0e-8
+  smallest_two_centered_curvature_relative_error_max: 2.0e-4
+  withheld_order_6x5_gradient_inf_max: 1.0e-6
+  higher_quadrature_energy_relative_change_max: 1.0e-6
+  higher_quadrature_gradient_inf_max: 2.0e-7
+mode_diagnostic: report field-component and highest-retained-mode norm fractions
+interpretation_boundary: >-
+  A converged negative mode corroborated by direct curvature rejects this
+  branch at 5x4. It becomes strong action-level evidence only if it is no
+  longer concentrated at the truncation edge and the withheld 6x5 residual is
+  controlled. Otherwise continue basis refinement without tolerance changes.

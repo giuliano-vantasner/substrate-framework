@@ -1,0 +1,36 @@
+attempt: '0029'
+campaign: P240
+canonical_issue: '146'
+candidate_source_issue: '147'
+status: frozen_before_execution
+classification: order4_new_mode_penalty_homotopy
+objective: >-
+  Track the passing order-3 stationary branch into the order-4 space by
+  solving a sequence that penalizes only newly introduced modes and then
+  removes that numerical continuation penalty exactly.
+physical_action_endpoint: penalty_zero_only
+input:
+  path: attempts/0027/coefficients-converged-order3-mesh12x24.npz
+homotopy:
+  penalized_modes: radial_index_3_or_axial_index_3
+  penalty_energy: mu_over_2_times_new_mode_coefficient_norm_squared
+  mu_ladder: [10000.0, 1000.0, 100.0, 10.0, 1.0, 0.0]
+  rule: require_each_stage_root_before_decreasing_mu
+solver:
+  exact_AD_gradient_and_Hessian: true
+  method: scipy_least_squares_Levenberg_Marquardt
+  maximum_function_evaluations_per_stage: 100
+  device: NVIDIA_GeForce_RTX_3060
+stage_oracles:
+  solver_success_required: true
+  normalized_modified_gradient_inf_max: 1.0e-8
+endpoint_oracles:
+  normalized_physical_coefficient_gradient_inf_max: 1.0e-8
+  independent_directional_first_variation_relative_max: 2.0e-8
+  hessian_symmetry_relative_max: 1.0e-10
+  upper_half_DCT_power_fraction_max: 0.10
+  full_pointwise_grid_residual_below_order3_value: 0.03082054476231251
+interpretation: >-
+  Intermediate roots are numerical continuation states, not scientific
+  claims. Only a passing mu=0 endpoint is a stationary result for the action.
+comparators_opened: false

@@ -1,0 +1,33 @@
+attempt: '0027'
+campaign: P240
+canonical_issue: '146'
+candidate_source_issue: '147'
+status: frozen_before_execution
+classification: continued_exact_hessian_galerkin_root
+objective: >-
+  Continue attempt 0026's controlled exact-Hessian residual reduction from its
+  saved smooth state and determine whether it reaches the unchanged strict
+  stationary gate.
+frozen_input:
+  path: attempts/0026/coefficients-corrected-order3-mesh12x24.npz
+  normalized_coefficient_gradient_inf: 0.00010027139725370129
+solver:
+  method: scipy_least_squares_Levenberg_Marquardt
+  exact_AD_gradient_and_Hessian: true
+  maximum_function_evaluations: 240
+  device: NVIDIA_GeForce_RTX_3060
+  torch: 2.4.1+cu124
+oracles:
+  solver_success_required: true
+  normalized_coefficient_gradient_inf_max: 1.0e-8
+  independent_directional_first_variation_relative_max: 2.0e-8
+  hessian_symmetry_relative_max: 1.0e-10
+  exact_boundary_residual: 0.0
+  upper_half_DCT_power_fraction_max: 0.10
+reported_nonpromotion_diagnostic:
+  - full_pointwise_grid_residual_for_basis_order_refinement
+interpretation: >-
+  A pass resumes the preregistered basis/mesh ladder. It is not full-space
+  stability. A failure after exact-Jacobian convergence is local evidence
+  about this smooth start, not a global action no-go.
+comparators_opened: false

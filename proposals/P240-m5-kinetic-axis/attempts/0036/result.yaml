@@ -1,0 +1,30 @@
+campaign: P240
+attempt: '0036'
+candidate: D_fixed_j_two_clock_spectral_cartan_one_body
+environment:
+  torch: 2.4.1+cu124
+  cuda_runtime: '12.4'
+  device: NVIDIA GeForce RTX 3060
+  dtype: float64
+solver:
+  success: false
+  status: 4
+  message: iteration not making good progress
+  exact_oracle_evaluations: 64
+diagnostics:
+  normalized_modal_gradient_inf: 0.061176744716539826
+  independent_directional_relative_max: 0.023488460042159043
+  hessian_symmetry_relative_max: 1.1542121542054292e-16
+  minimum_restricted_hessian_eigenvalue: -2.651877010679668
+  withheld_order_5x4_gradient_inf: 0.09995981225325402
+  higher_quadrature_energy_relative_change: 5.338560898601265e-16
+  higher_quadrature_gradient_inf: 0.06117674471653998
+invalid_observables:
+  inertia: 199.53009376839813
+  frequency: 0.0025058876611383156
+  reason: root and stationarity gates failed
+verdict: root_basin_failure_no_action_verdict
+next: >-
+  Generate an initial guess through roots of the same unmodified functional
+  in nested smooth subspaces, then require a fresh full 4x3 root and the
+  unchanged withheld/quadrature gates. Intermediate roots are not evidence.

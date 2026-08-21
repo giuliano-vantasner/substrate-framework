@@ -1,0 +1,40 @@
+campaign: P240
+attempt: '0027'
+status: restricted_stationary_gate_pass
+environment:
+  torch: 2.4.1+cu124
+  cuda_runtime: '12.4'
+  device: NVIDIA_GeForce_RTX_3060
+representation:
+  radial_order: 3
+  axial_modes: 3
+  coefficient_count: 45
+solver:
+  success: true
+  exact_hessian_evaluations: 17
+  normalized_coefficient_gradient_inf: 1.3226513789498664e-15
+  independent_directional_relative_max: 3.1108322287516524e-10
+  hessian_symmetry_relative_max: 1.785230992176518e-16
+  boundary_residual: 0.0
+smoothness:
+  maximum_nontrivial_high_half_DCT_power_fraction: 0.015092796780075022
+observables:
+  total_energy: 81.08527000058056
+  curvature: 45.23422716752975
+  potential: 21.95614835720594
+  scalar: 0.6783612019450489
+  fixed_j_clock: 13.216533273899833
+  inertia: 0.018915701630601044
+  frequency: 26.433066547799665
+open_refinement_diagnostics:
+  full_pointwise_grid_residual_inf_relative: 0.03082054476231251
+  minimum_restricted_hessian_eigenvalue: -621.019917020365
+scope: >-
+  Exact stationarity is established only in the 45-dimensional smooth
+  Galerkin space. The full-grid residual and negative restricted mode keep the
+  one-body existence/stability gate open pending basis refinement and an
+  independently centred mode-curvature audit.
+coefficient_artifact:
+  path: proposals/P240-m5-kinetic-axis/attempts/0027/coefficients-converged-order3-mesh12x24.npz
+  role: passing_restricted_branch_state
+continuation: pad_to_order4_and_solve_same_branch_with_exact_Hessian

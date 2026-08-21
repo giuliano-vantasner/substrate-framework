@@ -1,0 +1,17 @@
+{
+  "campaign": "P240",
+  "attempt": "0035",
+  "candidate": "D_fixed_j_two_clock_smooth_hedgehog_chart",
+  "uncorrected_pole": "8*Delta^2/sin(theta)^2",
+  "axis_repair": "Delta(r,theta)=d(r)*sin(theta)^2",
+  "repaired_pole_limit": "2*(lambda_n-lambda_t)^2",
+  "core_factors": {
+    "director_anisotropy": "O(r^2)",
+    "common_tangent": "even in r",
+    "tangential_split": "O(r^4)"
+  },
+  "clock_response_norm": "8*d(r)^2*sin(theta)^4",
+  "verdict": "smooth_parameter_free_galerkin_chart_open",
+  "scope": "Exact representation regularity only; no stationary field or interaction is established.",
+  "check_count": 12
+}

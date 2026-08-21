@@ -1,0 +1,30 @@
+campaign: P240
+attempt: '0035'
+canonical_goal_issue: '146'
+candidate_source_issue: '147'
+candidate: D_fixed_j_two_clock_smooth_hedgehog_chart
+frozen_question: >-
+  What exact axis and core factors make a biaxial tangential clock field on a
+  hedgehog a smooth finite-energy numerical representation rather than a pole
+  string or lattice artifact?
+ansatz: >-
+  S=lambda_n*n*n^T+(lambda_t+Delta)*e_theta*e_theta^T+
+  (lambda_t-Delta)*e_phi*e_phi^T, with n the radial hedgehog director.
+predeclared_oracles:
+  - exact physical azimuthal derivative norm before and after Delta=d(r)*sin(theta)^2
+  - exact pole limits, retaining the ordinary smooth director contribution
+  - exact Cartesian rewrites of q(r)*n*n^T and the axis-repaired split tensor
+  - core regularity powers q=O(r^2) and d=O(r^4)
+success_boundary: >-
+  The split chart must eliminate the 1/sin(theta)^2 pole without deleting the
+  clock response away from the axis. Radial envelopes must make every tensor
+  component continuous at the core and recover the pure-director outer
+  boundary exactly.
+numerical_consequence: >-
+  The next Galerkin solve varies smooth modal coefficients inside these exact
+  factors. They are boundary/topology constraints, not tunable penalties.
+technical_replay:
+  native_abort: >-
+    The first run passed the uncorrected pole coefficient, then compared the
+    expanded repaired limit to a factored square by structural equality.
+  correction: use simplify(lhs-rhs)==0 for that polynomial equivalence only

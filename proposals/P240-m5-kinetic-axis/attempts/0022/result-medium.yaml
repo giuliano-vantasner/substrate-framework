@@ -1,0 +1,23 @@
+campaign: P240
+attempt: '0022'
+grid: medium
+status: numerical_method_failure_no_stability_map
+branch_source: state-baseline.npz
+stationary:
+  warm_optimizer_success: false
+  warm_optimizer_iterations: 12000
+  root_success: false
+  root_outer_iterations: 480
+  normalized_residual_inf: 2.5905710310767002e-08
+  independent_directional_derivative_relative_max: 4.574479448727991e-10
+  boundary_residual: 0.0
+  total_energy: 4.417127516836145
+  inertia: 0.28612530678269826
+  frequency: 1.7474861123687033
+  timelike_gap: 6.764745926679284
+gate_verdict: >-
+  Failed: the residual exceeds 1e-8 and the Krylov root solver exhausted its
+  iteration budget. Per the frozen protocol no Hessian or stiffness map was
+  computed.
+classification: numerical_branch_continuation_not_candidate_refutation
+goal_146_effect: none

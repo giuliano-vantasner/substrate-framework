@@ -1,0 +1,61 @@
+campaign: P240
+attempt: '0005'
+status: primary_gate_failed
+environment:
+  numpy: 1.26.4
+  scipy: 1.14.1
+  torch: 2.3.0.post301
+  dtype: float64
+compatibility_preflight:
+  first_command: shell_quoting_abort_before_execution
+  repaired_command: no_legacy_np_trapz_access_and_py_compile_passed
+parameters:
+  spacing: 0.5
+  rho_cells: 8
+  z_cells: 16
+  angular_momentum: 1.0
+  l2_strength: 1.0
+starts:
+  - split_sign: 1.0
+    optimizer_success: true
+    stationarity_relative: 2.0615223567280204e-06
+    total_energy: 21.286391414456386
+    inertia: 0.07059435909022961
+    frequency: 7.08271888071013
+    axis_connection_over_spacing: 0.19170875368483162
+    independent_full_epsilon_relative_error: 2.7755575615628914e-17
+    unweighted_axis_mutation_relative_gradient: 0.19682829841424124
+  - split_sign: -1.0
+    optimizer_success: true
+    stationarity_relative: 1.4660013698742128e-06
+    total_energy: 16.137815770062023
+    inertia: 0.15056294125370964
+    frequency: 3.32087030073
+    axis_connection_over_spacing: 3.272836616515229
+    independent_full_epsilon_relative_error: 1.1102230246251565e-16
+    unweighted_axis_mutation_relative_gradient: 1.569213607256181
+common_gates_passed:
+  - optimizer success
+  - projected stationarity
+  - finite positive inertia and frequency
+  - timelike gap
+  - exact boundary data
+  - no active nonperiodic bounds
+  - negative scalar response
+  - independent full-epsilon translation
+  - axis-weight mutation sensitivity
+blocking_gates:
+  opposite_start_total_energy_relative_difference:
+    observed: 0.24187169840810935
+    maximum: 0.0001
+  opposite_start_frequency_relative_difference:
+    observed: 0.5311305789963753
+    maximum: 0.05
+diagnosis: representation_or_multiple_stationary_branches
+not_opened:
+  - declared mesh/domain/tolerance refinement ladder
+  - relaxed pair calculation
+next_action: >-
+  Run one mesh diagnostic of both starts and the axis connection to determine
+  whether the lower branch is a shrinking regular configuration or a
+  pole-sensitive representation escape.

@@ -1,0 +1,28 @@
+campaign: P240
+attempt: '0033'
+candidate: B_contraction_signature_parameter_free_endpoints
+technical_replay: >-
+  The native run aborted after 17 passes because a SymPy rank-4 array was
+  inventoried by nested iteration. Explicit component indexing was the sole
+  correction; the unchanged route then passed 21 checks.
+fixed_frobenius:
+  static_3x3_recovery: exact
+  clock_sign: repaired
+  symmetry: exact SO(3), rational boost covariance fails
+  disposition: not_selected
+spectral_cartan:
+  action: L=-1/2 F_munuab F_rscd eta^murho eta^nusigma h^ac(M) h^bd(M)-V
+  internal_metric: h^ab=eta^ab-2*P_t^a_c*eta^cb
+  static_3x3_recovery: exact
+  clock_sign: repaired
+  hamiltonian: positive on the simple timelike spectral branch
+  symmetry: proper Lorentz scalar
+  derivative_amplitude_leading_order_about_constant_vacuum: 4
+  fixed_axis_single_scalar_boost_curvature: 0
+verdict: retain_spectral_cartan_base_continue_to_two_clock_interaction
+scope: >-
+  Positive action-level result only. Conditional omega=J/(2I) does not prove a
+  stationary one-body field, and the endpoint alone does not derive a
+  conventional scalar 1/r mass channel. Nonlinear textured/two-clock
+  interaction remains open as a distinct issue-147 candidate.
+checks: 21

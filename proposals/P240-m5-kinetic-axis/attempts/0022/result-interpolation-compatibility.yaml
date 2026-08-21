@@ -1,0 +1,14 @@
+campaign: P240
+attempt: '0022'
+stage: baseline_to_medium_interpolation
+status: aborted_before_scientific_execution
+error: ValueError_requested_radial_coordinate_out_of_bounds
+cause: >-
+  On cell-centred grids the refined first radial centre h_new/2 lies inside the
+  coarse first radial centre h_old/2. The original bounds check rejected this
+  normal half-cell near-axis continuation.
+repair: >-
+  Permit SciPy's linear continuation across that half-cell, retain bilinear
+  interpolation elsewhere, assert every interpolated control is finite, and
+  reimpose the analytic boundary cells exactly.
+scientific_disposition: no_candidate_or_stability_verdict

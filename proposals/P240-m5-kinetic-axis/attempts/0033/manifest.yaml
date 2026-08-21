@@ -1,0 +1,54 @@
+campaign: P240
+attempt: '0033'
+canonical_goal_issue: '146'
+candidate_source_issue: '147'
+candidate: B_contraction_signature_parameter_free_endpoints
+frozen_question: >-
+  Can either parameter-free positive-contraction endpoint meet issue 146's
+  action, symmetry, boundedness, clock, and long-range mass-channel gates
+  without introducing an interpolation parameter?
+endpoints:
+  fixed_frobenius: >-
+    L=-1/2 F_munuab F_rscd eta^murho eta^nusigma delta^ac delta^bd - V.
+    It has a fixed preferred frame and is tested as an SO(3)-symmetric endpoint,
+    not mislabeled as Lorentz invariant.
+  spectral_cartan: >-
+    Replace delta^ab by h^ab(M)=eta^ab-2 P_t^a_c eta^cb, where P_t is the
+    simple timelike spectral projector of eta^-1 M. This is the local
+    field-dependent covariant lift, with no interpolation coefficient.
+predeclared_exact_gates:
+  - identity-level full static 3x3 recovery
+  - fixed-Frobenius boost-covariance mutation must fail
+  - spectral-Cartan simultaneous M/F transformation must be invariant
+  - positive inertial-frame curvature Hamiltonian on the declared simple timelike branch
+  - exact derivative-order expansion about a constant vacuum
+  - exact single-scalar boost-orbit reduction
+goal_specific_rule: >-
+  Positive energy and conditional finite omega are insufficient for issue 146.
+  Before a nonlinear solve, identify the field channel that can carry the
+  asymptotic mass interaction and whether this action supplies a load-bearing
+  spatial operator for it. A missing linear scalar kernel does not by itself
+  refute every nonlinear topological tail, but it closes any claim that the
+  contraction endpoint alone derives a conventional relaxed 1/r scalar tail.
+oracles:
+  - exact SymPy contractions through canonical P240-audited source APIs
+  - independent epsilon-scaling coefficient extraction around the vacuum
+  - explicit affine one-scalar boost field, not a sampled profile
+parameter_policy: >-
+  Do not open the continuous lambda interpolation. It is not a theory
+  parameter justified by issue 146 and would turn structural validation into
+  parameter search.
+next_if_structurally_open: >-
+  Freeze a smooth direct Euler-Lagrange one-body and pair oracle for the
+  endpoint, using PyTorch 2.4 CUDA only for the unresolved nonlinear part.
+next_if_closed: >-
+  Preserve the exact positive-action result and continue to issue 147's
+  fixed-J two-clock interaction or another distinct local family.
+technical_replay:
+  native_abort: >-
+    The first execution reached 17 exact passes and then used Python iteration
+    over a rank-4 SymPy NDimArray to inventory zero components. SymPy yielded
+    nested subarrays, so the structural equality was not evaluated componentwise.
+  correction: >-
+    Replace only that inventory expression by explicit product(range(4),repeat=4)
+    indexing and rerun the unchanged symbolic construction.

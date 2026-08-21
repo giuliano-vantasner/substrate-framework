@@ -1,0 +1,24 @@
+campaign: P240
+attempt: '0013'
+status: complete_polynomial_subfamily_exhausted
+general_response: >-
+  (x-y)^2 * (a+b*(x+y))^2 * Z_xy^2
+results:
+  standard_Y:
+    extra_blind_spectrum: false
+  pure_Y2:
+    extra_blind_spectrum: x=-y
+  mixed_Y_plus_Y2:
+    extra_blind_spectrum: x+y=-a/b
+  positive_sum_of_norms:
+    removes_blind_only_by_retaining_standard_Y: true
+    additional_unfixed_parameter: c2/c1
+  cayley_hamilton_basis: [identity, Y, Y2]
+verdict: >-
+  No next constant-polynomial current satisfies both universal split-spectrum
+  activity and the frozen parameter-economy gate. This does not cover the
+  distinct alternating three-current derivative-sextic class.
+command: >-
+  PYTHONPATH=src /home/dan/substrate-framework/.venv/bin/python
+  proposals/P240-m5-kinetic-axis/attempts/0013/verify_polynomial_skyrme_hierarchy.py
+command_verdict: ALL 9 CHECKS PASS [P240/polynomial-skyrme-hierarchy]

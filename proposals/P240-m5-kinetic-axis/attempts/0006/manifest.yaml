@@ -1,0 +1,38 @@
+attempt: '0006'
+campaign: P240
+canonical_issue: '146'
+status: complete_representation_defect
+classification: bounded_representation_diagnostic
+source_attempt: '0005'
+objective: >-
+  Distinguish a coarse-grid/local-minimum split from an axis-regularity escape
+  by rerunning both frozen starts on the same physical domain with spacing
+  reduced from 0.5 to 0.4.
+unchanged_action_and_parameters: true
+grid:
+  spacing: 0.4
+  rho_cells: 10
+  z_cells: 20
+solver:
+  adam_steps: 1200
+  lbfgsb_max_iterations: 3000
+  lbfgsb_gtol: 1.0e-8
+diagnostic_rule: >-
+  A regular continuation must retain optimizer/stationarity gates and its
+  axis_connection_over_spacing must not increase. Persistent start splitting
+  or growth of the low-energy branch's axis diagnostic triggers a regular
+  chart repair before any production refinement. This run cannot validate the
+  one-body claim by itself.
+command: >-
+  python proposals/P240-m5-kinetic-axis/attempts/0005/solve_l2_fixed_j.py
+  --spacing 0.4 --rho-cells 10 --z-cells 20 --adam-steps 1200
+  --lbfgsb-iterations 3000 --lbfgsb-gtol 1e-8
+next_if_regular: Implement a multi-start branch comparison in a regular axis chart.
+next_if_irregular: Implement the same regular axis chart before continuing L2 numerics.
+verdict: >-
+  The start split persists on the finer same-domain grid: total energy differs
+  by 0.38635 and frequency by 0.09001. The minus start's
+  axis-connection-over-spacing grows from 3.27284 to 3.47230, while the plus
+  start decreases from 0.19171 to 0.13192 but reaches the iteration limit and
+  misses stationarity. Under the frozen rule this identifies an unconstrained
+  axis chart as a representation defect. No production refinement opens.

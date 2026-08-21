@@ -1,0 +1,37 @@
+campaign: P240
+attempt: '0037'
+canonical_goal_issue: '146'
+candidate_source_issue: '147'
+candidate: D_fixed_j_two_clock_spectral_cartan_one_body
+frozen_question: >-
+  Can nested roots of the same unmodified spectral-Cartan fixed-J functional
+  supply a basin for a genuine 4x3 smooth Euler-Lagrange root?
+method:
+  stages:
+    - 1x1 modes
+    - 2x1 modes
+    - 2x2 modes
+    - 3x2 modes
+    - 4x3 modes
+  transfer: exact zero-padding of Chebyshev coefficients
+  equations: identical action, boundary data, J=1, radius=6, and 24x20 quadrature at every stage
+  solver: scipy hybr root with exact PyTorch 2.4 CUDA Hessian
+  initial_split_amplitudes_for_1x1: [0.125, 0.5, 2.0]
+interpretation_boundary: >-
+  This is representation continuation, not a penalty or modified model.
+  Intermediate roots only construct an initial guess. They cannot validate
+  stationarity, stability, inertia, frequency, or issue 146. The 4x3 result
+  must independently meet attempt 0036's original thresholds, including the
+  withheld 5x4 modes and denser quadrature.
+predeclared_final_gates:
+  solver_success: true
+  normalized_modal_gradient_inf_max: 1.0e-9
+  independent_centered_directional_derivative_max: 2.0e-8
+  hessian_symmetry_relative_max: 1.0e-10
+  restricted_minimum_hessian_eigenvalue_min: -1.0e-8
+  withheld_order_5x4_gradient_inf_max: 1.0e-6
+  higher_quadrature_energy_relative_change_max: 1.0e-6
+  higher_quadrature_gradient_inf_max: 2.0e-7
+next_if_failure: >-
+  If the hierarchy fails before the full root, inspect the first failed
+  unmodified subspace. Do not introduce a penalty coefficient.

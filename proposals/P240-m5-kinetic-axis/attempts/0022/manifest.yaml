@@ -1,0 +1,47 @@
+attempt: '0022'
+campaign: P240
+canonical_issue: '146'
+candidate_source_issue: '147'
+status: frozen_before_execution
+classification: branch_tracked_refinement_and_stiffness_map
+objective: >-
+  Repair attempt 0021's mesh-restart defect by tracking one converged
+  stationary branch from 8x16 through 10x20 and 12x24, and determine whether
+  the exact combined action has a refinement-stable projector-stiffness
+  bracket.
+selected_action: projector_current_plus_full_dynamic_q_alternating_skyrme
+branch_tracking:
+  sequence:
+    - {id: baseline, spacing: 0.5, rho_cells: 8, z_cells: 16}
+    - {id: medium, spacing: 0.4, rho_cells: 10, z_cells: 20}
+    - {id: fine, spacing: 0.3333333333333333, rho_cells: 12, z_cells: 24}
+  physical_extents: [4.0, 8.0]
+  interpolation: bilinear_in_control_fields_with_exact_boundary_reimposition
+  initial_baseline: analytic_seed
+  subsequent_initial_state: immediately_preceding_converged_grid
+stationary_oracle:
+  root_success_required: true
+  normalized_residual_inf_max: 1.0e-8
+  independent_directional_derivative_relative_max: 2.0e-8
+  boundary_residual: 0.0
+  rule: abort_stability_map_if_stationary_oracle_fails
+stiffness_map:
+  exact_structure: H_kappa_equals_H0_plus_kappa_HP_at_zero_boost
+  projector_stiffness_ladder: [2.0, 4.0, 8.0, 16.0, 32.0]
+  construction: explicit_dense_H0_and_H1_from_AD_HVP_columns
+  eigensolver: scipy_linalg_eigh_six_lowest
+  symmetry_relative_max: 1.0e-10
+  minimum_eigenvalue_min: -1.0e-6
+  independent_mode_curvature_required: true
+  root_rechecked_at_each_stiffness: true
+selection_rule: >-
+  Select the smallest preregistered stiffness whose complete six-mode spectrum
+  passes on both medium and fine grids. No physical comparator is open.
+interpretation: >-
+  A pass establishes refinement evidence for this axisymmetric discretization,
+  not yet the independent-spatial-method or two-body gates of issue 146.
+next_if_pass: larger_domain_replay_then_independent_spatial_or_soluble_limit_check
+next_if_fail: classify_branch_representation_or_candidate_and_repair_without_lowering_gates
+comparators_opened: false
+device: cpu
+device_reason: measured_faster_for_this_float64_small_grid_workload

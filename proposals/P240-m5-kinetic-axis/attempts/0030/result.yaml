@@ -1,0 +1,24 @@
+campaign: P240
+attempt: '0030'
+status: stopped_after_methodological_reconsideration
+reason: >-
+  The operator correctly challenged the growing number of artificial penalty
+  choices in the validation model. The run was stopped during mu=2500 before
+  any zero-penalty physical-action endpoint.
+completed_modified_action_roots:
+  - {penalty: 8000.0, normalized_modified_gradient_inf: 9.06578353713372e-16}
+  - {penalty: 6000.0, normalized_modified_gradient_inf: 4.2729545495088803e-16}
+  - {penalty: 5000.0, normalized_modified_gradient_inf: 7.943697922066004e-16}
+  - {penalty: 4000.0, normalized_modified_gradient_inf: 5.560992620026021e-16}
+  - {penalty: 3000.0, normalized_modified_gradient_inf: 7.17811068604956e-16}
+interrupted_stage:
+  penalty: 2500.0
+  last_observed_normalized_modified_gradient_inf: 3.467245905378039e-08
+  process_exit: 130
+zero_penalty_reached: false
+scientific_role: numerical_method_provenance_only
+physical_action_verdict: none
+continuation: >-
+  Do not use a penalty family as issue-146 validation. Return to an unmodified
+  action oracle with a fixed independently defined smooth BVP, finite-element,
+  or spectral formulation.

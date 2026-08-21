@@ -1,0 +1,41 @@
+attempt: '0028'
+campaign: P240
+canonical_issue: '146'
+candidate_source_issue: '147'
+status: frozen_before_execution
+classification: order4_smooth_galerkin_refinement
+objective: >-
+  Pad attempt 0027's passing order-3 smooth branch into the order-4 Galerkin
+  space, solve the exact coefficient Euler-Lagrange equations, and determine
+  whether the unresolved pointwise residual decreases while the branch remains
+  smooth and finite-frequency.
+input:
+  path: attempts/0027/coefficients-converged-order3-mesh12x24.npz
+  role: passing_restricted_branch_state
+representation:
+  radial_order: 4
+  axial_modes: 4
+  coefficient_count: 80
+  evaluation_mesh: 12x24
+solver:
+  exact_AD_gradient_and_Hessian: true
+  method: scipy_least_squares_Levenberg_Marquardt
+  maximum_function_evaluations: 240
+  device: NVIDIA_GeForce_RTX_3060
+stationary_oracles:
+  solver_success_required: true
+  normalized_coefficient_gradient_inf_max: 1.0e-8
+  independent_directional_first_variation_relative_max: 2.0e-8
+  hessian_symmetry_relative_max: 1.0e-10
+  upper_half_DCT_power_fraction_max: 0.10
+refinement_oracles:
+  full_pointwise_grid_residual_must_be_below_order3_value: 0.03082054476231251
+negative_mode_audit_if_present:
+  - direct_symmetric_eigenpair
+  - centered_energy_curvature_at_multiple_steps
+  - modal_component_power
+interpretation: >-
+  Passing advances the branch to mesh refinement. A persistent audited
+  negative restricted mode is stability evidence at this basis order only and
+  must survive the order-4 mesh refinement before candidate adjudication.
+comparators_opened: false

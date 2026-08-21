@@ -1,0 +1,101 @@
+campaign: P240
+canonical_goal_issue: '146'
+candidate_source_issue: '147'
+base_release: v0.163.0
+base_commit: a34b5f584165b86d1fc62af0ede5fbf37b0aa5b7
+validated_tree: 2eedbf9c36141821aaec71f450b465b3b847818f
+validated_at: '2026-08-20T20:10:49+02:00'
+frozen_impact_surface:
+  - src/substrate_framework/m5_kinetic_axis.py
+  - tests/test_m5_kinetic_axis.py
+  - proposals/P240-m5-kinetic-axis
+  - memory/codex/proposals/P240-m5-kinetic-axis.md
+authority_boundary:
+  artifact: candidate implementation and evidence proposed for distinct review
+  claim_promotion: none
+  goal_completion: false
+  historical_exclusion: >-
+    No P239/P236 receipt, tally, test result, or numerical comparator is reused
+    as P240 validation. The conditional P239 tensor API is an implementation
+    dependency only.
+commands:
+  - command: >-
+      PYTHONPATH=src python
+      proposals/P240-m5-kinetic-axis/attempts/0032/verify_source_restricted_quadratic_family.py
+    exit_status: 0
+    result: 25/25 exact checks pass
+  - command: >-
+      PYTHONPATH=src python
+      proposals/P240-m5-kinetic-axis/attempts/0033/verify_contraction_endpoints.py
+    exit_status: 0
+    result: 21/21 exact checks pass
+  - command: >-
+      PYTHONPATH=src python
+      proposals/P240-m5-kinetic-axis/attempts/0034/verify_two_clock_legendre.py
+    exit_status: 0
+    result: 18/18 exact checks pass
+  - command: >-
+      PYTHONPATH=src python
+      proposals/P240-m5-kinetic-axis/attempts/0035/verify_smooth_hedgehog_chart.py
+    exit_status: 0
+    result: 12/12 exact checks pass
+  - command: PYTHONPATH=src python -m pytest -q tests/test_m5_kinetic_axis.py
+    exit_status: 0
+    result: 10 passed
+  - command: scripts/validate.sh --pytest-scope tests/test_m5_kinetic_axis.py
+    exit_status: 0
+    result: all fixed repository checks and requested pytest scope pass
+  - command: >-
+      memory validate --base "$PWD"
+      "$PWD/memory/codex/proposals/P240-m5-kinetic-axis.md"
+    exit_status: 0
+    result: all 1 memory files valid
+  - command: YAML and JSON parse preflight under proposals/P240-m5-kinetic-axis
+    exit_status: 0
+    result: 94 YAML and 4 JSON files parse
+  - command: >-
+      rg compatibility preflight for direct np.trapz, imported trapz, and
+      dynamic getattr(np, "trapz") in P240 Python files
+    exit_status: 0
+    result: no legacy trapz access found
+  - command: git diff --cached --check
+    exit_status: 0
+    result: no whitespace errors after mechanical EOF normalization
+correction_check:
+  initial_result: >-
+    Repository validation stopped because the descriptive proposal status was
+    not a permitted schema enum.
+  correction: >-
+    Set proposal status to active and retained the descriptive state in the
+    separate phase field. No scientific statement, oracle, threshold, or
+    result changed.
+  landing_check: >-
+    The same scoped repository validation then passed, including proposal
+    schema validation and the focused pytest file.
+gitnexus:
+  baseline_index_commit: a34b5f584165b86d1fc62af0ede5fbf37b0aa5b7
+  refreshed_for_new_files: true
+  upstream_symbol: kinetic_axis_lagrangian_density
+  risk: LOW
+  direct_existing_dependents: 0
+  affected_processes: 0
+  affected_modules: 0
+  staged_detection_limitation: >-
+    Change detection mapped the new proposal-memory sections but did not
+    enumerate symbols added in the new Python file. Direct source search found
+    consumers only in P240 attempt scripts and tests/test_m5_kinetic_axis.py.
+gpu_applicability_evidence:
+  source: proposals/P240-m5-kinetic-axis/attempts/0040/result.yaml
+  environment: PyTorch 2.4.1+cu124 float64 on NVIDIA GeForce RTX 3060
+  status: reused unchanged frozen P240 result; not rerun as a new selection gate
+  root_gradient_inf_relative: 6.801562632380235e-15
+  inertia: 0.4607131378721025
+  frequency: 1.0852740217249977
+  minimum_hessian_eigenvalue: -2.8680736658121413
+  centered_energy_curvature: -2.8679670833753335
+  interpretation: >-
+    The tested 6x5 branch is a resolution-bounded stationary saddle. This does
+    not refute or demote the exact spectral-Cartan fixed-J candidate.
+excluded_host_artifacts:
+  - .venv-p240-torch24 (4.9 GB local CUDA environment)
+  - Python bytecode caches

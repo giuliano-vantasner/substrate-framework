@@ -1,0 +1,28 @@
+campaign: P240
+attempt: '0020'
+projector_stiffness: 1.0
+status: converged_discrete_boost_saddle
+root:
+  success: true
+  residual_inf_relative: 7.373027120976133e-09
+  independent_directional_relative_max: 1.1424180717111591e-09
+mode:
+  minimum_eigenvalue: -9.171313693143736
+  boost_rho_fraction: 0.602116717914391
+  boost_z_fraction: 0.39788328208560925
+  projector_hessian_rayleigh_contribution: 14.01862909064767
+  energy_curvature_h_0_00125: -9.169161189674924
+  gradient_hvp_relative_error_h_0_0003125: 5.005657574561149e-05
+observables:
+  total_energy: 6.899911398488091
+  inertia: 0.1971218508582359
+  frequency: 2.5365021575390188
+  clock_static: 0.0
+  clock_linear: 0.0
+translation:
+  epsilon_vs_determinant_relative_error: 2.7755575615628914e-17
+  spatial_metric_symmetry_max_abs: 0.0
+classification: >-
+  Exact corrected Hamiltonian and direct discrete root pass, but the
+  independent boost-mode curvature is negative. This coefficient is below the
+  small-grid stability bracket and makes no continuum candidate verdict.

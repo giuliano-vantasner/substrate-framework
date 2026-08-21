@@ -1,0 +1,44 @@
+attempt: '0010'
+campaign: P240
+canonical_issue: '146'
+candidate_source_issue: '147'
+status: withdrawn_before_execution_selection_order_correction
+classification: remaining_quartic_insertion_basis
+objective: >-
+  Exhaust the next natural external-Pontryagin quartic members after the
+  axis-projector insertion produced only saddle branches.
+construction: >-
+  Keep the external epsilon and the positive square, but replace the internal
+  insertion P_N by an M-derived polynomial in the projected spatial mixed
+  tensor Y. For three spatial eigenvalues, the lowest polynomial insertions
+  modulo the identity are Y and Y^2; the identity insertion is the source
+  Pontryagin cancellation. The outer Tr(P_N Y)^2 factor remains the wrong-axis
+  discriminator.
+ordered_candidates:
+  - id: L2_external_pontryagin_Y
+    insertion: Y
+    priority_reason: lowest nonconstant M-derived polynomial insertion
+  - id: L2_external_pontryagin_Y2
+    insertion: Y_squared
+    priority_reason: next Cayley-Hamilton polynomial member if Y fails
+exact_gates:
+  - external epsilon makes every arbitrary static 3x3 curvature exactly null
+  - identity insertion cancels on source curvature
+  - candidate is nonzero and clock-velocity-linear on a source-admissible witness
+  - proper-Lorentz pseudoscalar and parity-even positive square
+  - outer axis weight kills the selected zero-eigenline mutation
+  - Y and Y2 responses are compared for independence before selection
+  - fixed-J endpoint divergence and strict minimum scaling
+selection_rule: >-
+  Select Y if it passes all exact gates because it has lower polynomial field
+  order. Open Y2 only after a structural or stable-one-body failure of Y.
+comparators_opened: false
+next_if_Y_exact_success: Run Y with the attempt-0009 direct variational oracle.
+next_if_Y_stable_failure: Run Y2 with the same oracle.
+next_if_all_quartic_fail: Continue the preregistered sextic current member.
+verdict: >-
+  Not executed. Before opening its symbolic values, the operator identified
+  that the already-preregistered axis-weighted Skyrme current had not received
+  the full equivalence-class test required by the derivative-order and
+  framework-fit criteria. That lower-derivative candidate must be resolved
+  first. Preserve this manifest and verifier as unexecuted frontier only.

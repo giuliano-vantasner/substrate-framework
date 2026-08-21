@@ -1,0 +1,48 @@
+campaign: P240
+attempt: '0023'
+status: projection_gate_failed
+environment:
+  torch: 2.4.1+cu124
+  cuda_runtime: '12.4'
+  device: NVIDIA_GeForce_RTX_3060
+  dtype: float64
+mechanical_oracles:
+  affine_control_reproduction_max_abs: 1.1102230246251565e-16
+  affine_gate_pass: true
+  wrong_nearest_affine_error_max_abs: 0.010000000000000009
+  wrong_method_mutation_breaks_oracle: true
+manufactured_axis_regular:
+  regularized_control_bilinear:
+    physical_relative_l2_8_to_10: 0.0023704057937674293
+    physical_relative_l2_10_to_12: 0.0015483197717223787
+    error_decreases: true
+  physical_component_bilinear:
+    physical_relative_l2_8_to_10: 0.002580122976242606
+    physical_relative_l2_10_to_12: 0.0017026747791137812
+    error_decreases: true
+actual_baseline_state:
+  coarse_total_energy: 6.8999113984848
+  regularized_control_bilinear:
+    physical_roundtrip_relative_l2: 0.290460284107907
+    projected_total_energy: 461.4424929035877
+    projected_normalized_euler_lagrange_residual_inf: 0.374294163095314
+    projected_inertia: 0.025702872816544594
+    projected_frequency: 19.453078399787152
+    boundary_residual: 0.0
+  physical_component_bilinear:
+    physical_roundtrip_relative_l2: 0.2853945642767253
+    projected_total_energy: 448.7615896330583
+    projected_normalized_euler_lagrange_residual_inf: 0.5915431911764002
+    projected_inertia: 0.013235095926761156
+    projected_frequency: 37.77834348665414
+    boundary_residual: 0.0
+verdict: >-
+  Neither projection is a controlled starting representation for the actual
+  8x16 state. Generic bilinear interpolation is verified on exact smooth
+  fields, so the failure must be localized to the saved-state reconstruction,
+  boundary transfer, or unresolved/grid-scale structure of this coarse branch.
+scientific_scope: >-
+  This is a numerical representation failure only. It proves neither
+  stationary-branch nonexistence nor candidate instability and closes no issue
+  146 gate.
+continuation: localize_boundary_reconstruction_and_grid_scale_contributions

@@ -1,0 +1,99 @@
+attempt: '0007'
+campaign: P240
+canonical_issue: '146'
+candidate_source_issue: '147'
+status: complete_primary_gate_failed
+classification: representation_repair_and_one_body_gate
+selected_action: L2_axis_weighted_external_pontryagin_square
+action_changed_from_attempt_0005: false
+objective: >-
+  Rerun the fresh fixed-J one-body gate in a chart that represents every
+  bounded control as an origin- and axis-regular order parameter, eliminating
+  the coordinate escape diagnosed by attempts 0005 and 0006.
+regular_chart:
+  controls:
+    - radial_anisotropy
+    - common_spatial_eigenvalue
+    - transverse_split
+    - director_angle_deviation
+    - radial_rapidity
+    - axial_rapidity
+    - scalar
+  definitions:
+    q_radius: r_squared/(r_squared+core_radius_squared)
+    q_axis: rho_squared/(rho_squared+core_radius_squared)
+    q_vector: rho/sqrt(rho_squared+core_radius_squared)
+    director_eigenvalue: common+q_radius*radial_anisotropy
+    tangent_eigenvalue: common+q_axis*transverse_split
+    azimuthal_eigenvalue: common-q_axis*transverse_split
+    director_angle: atan2(z,rho)+q_vector*director_angle_deviation
+    physical_radial_rapidity: q_vector*radial_rapidity
+  exact_chart_gates:
+    - all three spatial eigenvalues coincide at the origin
+    - tangent and azimuthal eigenvalues coincide on the symmetry axis
+    - radial rapidity vanishes on the symmetry axis
+    - the anisotropic origin terms are at least quadratic in radius
+    - the vacuum boundary controls decode to eigenvalues (1,0,0)
+    - removing q_axis or q_vector fails a regularity mutation
+numerical_boundary: >-
+  Same cell-centred half-plane, float64 Torch automatic differentiation and
+  SciPy L-BFGS-B as attempt 0005. The controls, not decoded eigenvalues, are
+  optimized. The physical action, coefficients, J, domain, primary mesh,
+  seeds, solver budget, and all original one-body thresholds are unchanged.
+primary:
+  spacing: 0.5
+  rho_cells: 8
+  z_cells: 16
+  adam_steps: 1200
+  adam_learning_rate: 0.01
+  lbfgsb_max_iterations: 6000
+  lbfgsb_gtol: 2.5e-9
+  split_starts: [1.0, -1.0]
+thresholds:
+  optimizer_success_required: true
+  projected_gradient_relative_max: 1.0e-5
+  inertia_scale_floor: sqrt_machine_epsilon_times_domain_volume
+  timelike_gap_min: 2.0
+  boundary_residual_max: 1.4210854715202004e-14
+  active_nonperiodic_bound_fraction_max: 0.0
+  opposite_start_total_energy_relative_difference_max: 1.0e-4
+  opposite_start_frequency_relative_difference_max: 0.05
+  independent_full_epsilon_relative_error_max: 5.0e-12
+  unweighted_axis_mutation_relative_gradient_min: 1.0e-4
+  scalar_minimum_strictly_negative: true
+  axis_connection_over_spacing_finite: true
+  transverse_split_over_rho_squared_finite: true
+comparators_opened: false
+command_sequence:
+  - exact chart verifier
+  - compatibility preflight and compile
+  - primary two-start solve
+  - only after the primary gate, freeze fresh mesh/domain/tolerance refinements
+setup_corrections:
+  - CheckLedger was first instantiated without its required claim identifier;
+    no check executed before the TypeError.
+  - The first wrong-chart mutation used a sign-indefinite symbolic control and
+    therefore could not resolve a one-sided infinite limit. The correction
+    uses a declared positive nonzero mutation magnitude; the seven preceding
+    gates had already passed and the scientific chart is unchanged.
+next_if_success: >-
+  Freeze and run the regular-chart production refinement ladder; only a
+  stationary refined one-body result may open the common-action pair solve.
+next_if_failure: >-
+  Classify optimizer versus remaining representation versus L2 concept. A
+  technical failure is repaired; a genuine L2 quartic failure continues the
+  remaining preregistered quartic basis before any sextic term.
+pre_primary_receipt:
+  exact_chart_verifier: ALL_9_CHECKS_PASS
+  repository_schema: >-
+    WORKFLOW VALID: 222 claims, 222 accepted, 6 proposals, 3 skills;
+    MIGRATION QUEUE: 218 units, 0 pending, 0 partial
+  compatibility_preflight: no_direct_imported_or_dynamic_np_trapz_access
+  python_compile: pass
+verdict: >-
+  The regular chart removes the divergent axis branch, but the primary solve
+  does not pass. Both starts pin two non-angle controls at artificial bounds;
+  the minus start also reaches the 6000-iteration ceiling. Their energies
+  differ by 0.12652 and frequencies by 0.18982. Widen the numerical boxes,
+  expose per-component active bounds, and continue both seeds before judging
+  the L2 action. No production refinement or pair calculation opens.

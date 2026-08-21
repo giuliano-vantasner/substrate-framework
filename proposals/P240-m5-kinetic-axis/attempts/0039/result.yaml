@@ -1,0 +1,25 @@
+campaign: P240
+attempt: '0039'
+candidate: D_fixed_j_two_clock_spectral_cartan_one_body
+environment: PyTorch 2.4.1+cu124 float64 on NVIDIA GeForce RTX 3060
+root:
+  success: true
+  exact_oracle_evaluations: 33
+  gradient_inf_relative: 6.157385494591896e-15
+  independent_directional_relative_max: 8.410723760342918e-10
+  hessian_symmetry_relative_max: 1.241393424382658e-16
+stability:
+  minimum_hessian_eigenvalue: -3.3805450004349042
+  smallest_step_centered_curvature: -3.3804345207499864
+  smallest_step_relative_error: 3.268102773476709e-05
+  split_field_mode_fraction: 0.988050224185781
+  highest_angular_mode_fraction: 0.4214270702633419
+refinement:
+  quadrature_energy_relative_change: 1.0374461025973642e-15
+  quadrature_gradient_inf_relative: 5.7662103183755605e-15
+  withheld_order_6x5_gradient_inf_relative: 0.1390772776730652
+invalid_observables:
+  inertia: 0.4481245667654562
+  frequency: 1.1157611902622935
+  reason: negative mode and withheld-basis gate failures
+verdict: exact_5x4_saddle_requires_6x5_representation_refinement

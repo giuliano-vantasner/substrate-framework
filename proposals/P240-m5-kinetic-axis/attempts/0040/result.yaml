@@ -1,0 +1,33 @@
+campaign: P240
+attempt: '0040'
+candidate: D_fixed_j_two_clock_spectral_cartan_one_body
+environment: PyTorch 2.4.1+cu124 float64 on NVIDIA GeForce RTX 3060
+root:
+  success: true
+  exact_oracle_evaluations: 30
+  gradient_inf_relative: 6.801562632380235e-15
+  independent_directional_relative_max: 4.4529099121643484e-10
+  hessian_symmetry_relative_max: 2.2071632164924668e-16
+stationary_branch:
+  inertia: 0.4607131378721025
+  frequency: 1.0852740217249977
+  evidence_role: resolution_bounded_stationary_saddle
+stability:
+  minimum_hessian_eigenvalue: -2.8680736658121413
+  smallest_step_centered_curvature: -2.8679670833753335
+  smallest_step_relative_error: 3.7161680356509715e-05
+  split_field_mode_fraction: 0.9841640316099795
+  highest_angular_mode_fraction: 0.15499978808532958
+refinement_diagnostics:
+  quadrature_energy_relative_change: 4.340651679084557e-15
+  quadrature_gradient_inf_relative: 7.269889948509884e-15
+  withheld_order_7x6_gradient_inf_relative: 0.12095724358004081
+verdict: >-
+  The 6x5 restricted smooth branch is an exact discrete stationary saddle, not
+  a stable electron. This is branch-specific applicability evidence. It does
+  not refute or demote the exact spectral-Cartan fixed-J two-clock candidate.
+candidate_status: selected_for_independent_validation
+next: >-
+  Seek an independent representation or validated-numerics treatment of
+  one-body stability and, if a stable branch exists, the relaxed fixed-J
+  two-clock cross inertia. Do not add another local basis-order prerequisite.

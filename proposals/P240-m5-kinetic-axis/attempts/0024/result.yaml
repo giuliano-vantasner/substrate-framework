@@ -1,0 +1,50 @@
+campaign: P240
+attempt: '0024'
+status: projection_failure_localized
+environment:
+  torch: 2.4.1+cu124
+  cuda_runtime: '12.4'
+  device: NVIDIA_GeForce_RTX_3060
+saved_state_reconstruction:
+  total_energy: 6.899911398484796
+  normalized_residual_inf: 9.628218396027783e-09
+  matches_attempt_0022: true
+same_grid_control_identity_max_abs: 0.0
+reasonable_projection_variants:
+  control_linear:
+    roundtrip_relative_l2: 0.290460284107907
+    medium_total_energy: 461.4424929035877
+    medium_curvature_energy: 448.07256110897595
+  physical_linear:
+    roundtrip_relative_l2: 0.2853945642767253
+    medium_total_energy: 448.7615896330583
+    medium_curvature_energy: 426.6464299218777
+  even_axis_control_linear:
+    roundtrip_relative_l2: 0.2906209069581869
+    medium_total_energy: 453.75225971677907
+    medium_curvature_energy: 440.36399720761284
+boundary_localization:
+  roundtrip_error_unchanged_without_boundary_reimposition: true
+  axis_row_error_fraction_max: 0.0036350813630926194
+spectral_localization:
+  actual_high_half_DCT_power_fractions:
+    director: 0.7844712676008576
+    tangent: 0.8271075826079571
+    azimuthal: 0.6515075263908873
+    angle_residual: 0.5854839383589288
+    scalar: 0.8490338654016817
+  smooth_manufactured_high_half_DCT_power_fraction_max: 0.040349141542966524
+classification: coarse_grid_lattice_scale_stationary_artifact
+verdict: >-
+  The saved state and interpolation implementation reproduce correctly, while
+  axis and boundary variants do not repair transfer. The nontrivial physical
+  fields are dominated by upper-half discrete modes, and interpolation inflates
+  the curvature energy by more than two orders of magnitude. The 8x16 green
+  state is therefore inadmissible as continuum/refinement evidence.
+scientific_scope: >-
+  This invalidates only the coarse numerical realization and its coefficient
+  selection. It does not contradict the exact combined-action identities or
+  prove that no smooth stationary branch exists.
+continuation: >-
+  Replace free pointwise controls with a smooth symmetry-reduced or spectral
+  representation, derive its Euler-Lagrange problem, and refine basis order.

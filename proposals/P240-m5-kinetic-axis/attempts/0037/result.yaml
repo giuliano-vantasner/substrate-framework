@@ -1,0 +1,32 @@
+campaign: P240
+attempt: '0037'
+candidate: D_fixed_j_two_clock_spectral_cartan_one_body
+method: nested roots of the unchanged physical functional
+stages:
+  - modes: 1x1
+    coefficients: 3
+    root_success: true
+    gradient_inf_relative: 2.6464364917715807e-15
+    minimum_hessian_eigenvalue: 79.11809284722499
+  - modes: 2x1
+    coefficients: 6
+    root_success: true
+    gradient_inf_relative: 4.681062284697074e-16
+    minimum_hessian_eigenvalue: -9.673572464837733
+  - modes: 2x2
+    coefficients: 12
+    root_success: true
+    gradient_inf_relative: 3.216057596635525e-15
+    minimum_hessian_eigenvalue: -16.926708550421726
+  - modes: 3x2
+    coefficients: 18
+    root_success: false
+    gradient_inf_relative: 0.0004440516657640684
+    minimum_hessian_eigenvalue: -3.13848719245144
+verdict: smooth_branch_continuation_failed_before_full_root
+scope: >-
+  The two negative restricted modes are serious smooth instability evidence,
+  but no action verdict follows because the 18-coefficient root failed and
+  the run stopped after the first successful initial basin. Intermediate
+  inertias and frequencies are invalid for the one-body claim.
+next: enumerate and continue every distinct preregistered root basin

@@ -1,0 +1,37 @@
+campaign: P240
+attempt: '0017'
+status: complete_exact_bridge_selected_for_legendre_reduction
+exact_results:
+  dynamic_q_symmetric: true
+  dynamic_q_annihilates_selected_time_line: true
+  rest_reduction: diag_0_1_1_1
+  epsilon_equals_determinant: true
+  full_boost_witness_density: baseline_times_cosh_rapidity_squared
+  aligned_zero_boost_second_variation: two_times_positive_baseline
+  rest_only_spatial_sum_equivalent_off_slice: false
+  correct_axis_similarity_preserves_selected_eigenvalue: true
+  opposite_axis_conjugation_preserves_selected_eigenvalue: false
+  arbitrary_static_rest_slice_null: true
+commands:
+  - >-
+    PYTHONPATH=src /home/dan/substrate-framework/.venv/bin/python
+    proposals/P240-m5-kinetic-axis/attempts/0017/verify_dynamic_projector_bridge.py
+  - >-
+    PYTHONPATH=src /home/dan/substrate-framework/.venv/bin/python -m pytest -q
+    tests/test_m5_kinetic_axis.py -k
+    'alternating_sextic_uses or opposite_axis_conjugation'
+verdicts:
+  exact_verifier: ALL_9_CHECKS_PASS
+  focused_tests: 2_passed_8_deselected
+strongest_result: >-
+  The full coordinate-frame candidate differs exactly from the rest-only
+  numerical shortcut whenever the M-derived time line is boosted. The full
+  q contraction supplies a nonzero boost response and P_N must transform by
+  the same mixed similarity as Y.
+new_obligation: >-
+  Off the rest slice q_mu_nu B^mu B^nu contains omega-independent,
+  omega-linear, and omega-quadratic pieces. Derive the exact fixed-J Legendre
+  transform before implementing or interpreting a corrected numerical action.
+goal_146_effect: >-
+  Rest-slice numerical results remain non-adjudicative for the Newton/boost
+  target. The exact candidate stays active through the Legendre reduction.

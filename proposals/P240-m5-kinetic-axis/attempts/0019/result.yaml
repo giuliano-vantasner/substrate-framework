@@ -1,0 +1,30 @@
+campaign: P240
+attempt: '0019'
+status: complete_selected_for_corrected_coefficient_map
+selected_combination: alternating_skyrme_plus_timelike_projector_current
+exact_results:
+  projector_rapidity_target_metric: 1
+  projector_lagrangian: >-
+    kappa_b*(r_t^2-r_x^2-r_y^2-r_z^2)
+  projector_hamiltonian: >-
+    kappa_b*(r_t^2+r_x^2+r_y^2+r_z^2)
+  arbitrary_uniform_time_row_3x3_null: true
+  alternating_clock_active_with_constant_projector: true
+  derivative_channels_independent: true
+  bounded_domain_hessian_lower_bound: >-
+    [kappa_b*lambda_1-J^2/(4*kappa_s*b^2)]*norm(delta_r)^2
+  sufficient_critical_stiffness: J^2/(4*kappa_s*b^2*lambda_1)
+  zero_projector_stiffness_restores_adverse_direction: true
+  three_dimensional_projector_energy_scaling: R
+command: >-
+  PYTHONPATH=src /home/dan/substrate-framework/.venv/bin/python
+  proposals/P240-m5-kinetic-axis/attempts/0019/verify_projector_skyrme_completion.py
+command_verdict: ALL 9 CHECKS PASS [P240/projector-plus-skyrme]
+scope_limit: >-
+  The exact inequality proves a nonempty conditional coefficient region, not
+  the critical value for the nonlinear hedgehog or the Newton sign. No
+  coefficient is selected here.
+next_action: >-
+  Fresh direct spectral coefficient map of the integrated corrected
+  fixed-J Hamiltonian H=E_static+(J-2C)^2/(4I)-A, followed by refinement only
+  for a stable branch.

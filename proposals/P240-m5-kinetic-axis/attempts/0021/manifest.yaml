@@ -1,0 +1,71 @@
+attempt: '0021'
+campaign: P240
+canonical_issue: '146'
+candidate_source_issue: '147'
+status: frozen_before_execution
+classification: fixed_domain_and_domain_refinement_projector_skyrme
+objective: >-
+  Determine whether the kappa_b=2 corrected stationary branch and its small
+  positive lowest mode persist under fixed-physical-domain mesh refinement
+  and a larger-domain replay.
+selected_action: projector_current_plus_full_dynamic_q_alternating_skyrme
+coefficients:
+  kappa_s: 1.0
+  kappa_b: 2.0
+  selection_source: attempt_0020_smallest_preregistered_positive_dense_bracket
+refinement_ladder:
+  - id: baseline
+    spacing: 0.5
+    rho_cells: 8
+    z_cells: 16
+    physical_extents: [4.0, 8.0]
+    source: attempt_0020
+  - id: fixed_extent_medium
+    spacing: 0.4
+    rho_cells: 10
+    z_cells: 20
+    physical_extents: [4.0, 8.0]
+  - id: fixed_extent_fine
+    spacing: 0.3333333333333333
+    rho_cells: 12
+    z_cells: 24
+    physical_extents: [4.0, 8.0]
+  - id: larger_domain
+    spacing: 0.5
+    rho_cells: 10
+    z_cells: 20
+    physical_extents: [5.0, 10.0]
+direct_oracle:
+  root_success_required: true
+  normalized_residual_inf_max: 1.0e-8
+  independent_first_variation_relative_max: 2.0e-8
+  hessian: explicit_dense_symmetric_HVP_matrix_and_direct_six_lowest_eigenpairs
+  hessian_symmetry_relative_max: 1.0e-10
+  minimum_eigenvalue_min: -1.0e-6
+  independent_mode_curvature_required: true
+convergence_gates:
+  medium_to_fine_total_energy_relative_max: 0.05
+  medium_to_fine_frequency_relative_max: 0.05
+  baseline_to_larger_domain_total_energy_relative_max: 0.05
+  baseline_to_larger_domain_frequency_relative_max: 0.05
+  sign_of_six_lowest_modes_must_not_change: true
+translation_gates:
+  - full A C I fixed-J decomposition and literal epsilon translation
+  - dynamic q symmetry and projector-stiffness mode sensitivity
+  - exact boundaries, positive inertia, finite frequency, timelike gap above 2
+interpretation: >-
+  Passing this ladder supplies resolution/domain evidence for this
+  axisymmetric discretization only. An independent spatial discretization or
+  soluble-limit comparison remains required before claim promotion.
+next_if_pass: Freeze independent spatial check, then the common-action pair bench.
+next_if_fail: Classify numerical representation or candidate mechanism and repair without lowering thresholds.
+comparators_opened: false
+device_preflight:
+  grid: fixed_extent_fine_12x24
+  dtype: float64
+  cpu_seconds_per_energy_gradient: 0.013899247796507553
+  cuda_seconds_per_energy_gradient: 0.016424866003217176
+  cpu_seconds_per_hvp: 0.036765228398144244
+  cuda_seconds_per_hvp: 0.04056628979742527
+  selected_device: cpu
+  scientific_role: none_performance_only

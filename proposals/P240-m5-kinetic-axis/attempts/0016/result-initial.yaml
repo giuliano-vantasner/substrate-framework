@@ -1,0 +1,38 @@
+campaign: P240
+attempt: '0016'
+stage: initial_frozen_step_ladder
+status: correction_check_required
+stationary_state:
+  root_success: true
+  residual_inf_relative: 9.220449391268993e-09
+  independent_directional_relative_max: 1.8929575723631737e-09
+mode:
+  ad_eigenvalue: -14.893267478547317
+  eigensolver_success: true
+  eigen_residual_relative: 8.170098264792946e-09
+  control_power_fractions:
+    boost_rho: 0.7100231099613542
+    boost_z: 0.28997689003864574
+    all_other_controls_combined: 1.5987211554602254e-18
+  axis_row_fraction: 0.025195902674031555
+  outer_interior_shell_fraction: 0.08061776134103446
+independent_energy_curvature:
+  h_0_04: -12.755698905869139
+  h_0_02: -14.359474170735353
+  h_0_01: -14.759856571409102
+  h_0_005: -14.859917090177532
+  smallest_available_relative_error: 0.0022392929165935944
+  all_negative: true
+  frozen_three_smallest_within_two_percent: false
+independent_gradient_hvp_relative_error:
+  h_0_01: 0.026955629119664065
+  h_0_005: 0.006738122601254142
+  h_0_0025: 0.0016844816144562184
+  h_0_00125: 0.00042111731569829936
+  frozen_smallest_within_1e_4: false
+truncation_diagnostic: >-
+  Both independent ladders converge toward the AD result at approximately the
+  factor-of-four rate expected for centred O(h^2) differences. Preserve the
+  failed frozen rows; extend amplitudes downward once without changing either
+  tolerance, then apply the original tolerances to the new asymptotic rows.
+candidate_effect: none

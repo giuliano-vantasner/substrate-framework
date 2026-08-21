@@ -1,0 +1,52 @@
+attempt: '0014'
+campaign: P240
+canonical_issue: '146'
+candidate_source_issue: '147'
+status: complete_selected_for_one_body
+classification: symbolic_alternating_sextic_skyrme
+objective: >-
+  Screen the derivative-sextic alternating three-current construction, which
+  is inequivalent to the exhausted polynomial-current hierarchy and is the
+  remaining natural issue-147 Skyrme class.
+primary_motivation:
+  source: https://arxiv.org/abs/1107.5433
+  reused_structure_only: >-
+    The BPS Skyrme term is the square of the baryon/topological current, cubic
+    in first-derivative currents and at most quadratic in time derivatives.
+    No SU(2), QCD, baryon-number, coefficient, or empirical conclusion is
+    imported into M5.
+m5_candidate:
+  currents: K_mu=[Y,Z_mu]
+  alternating_current: >-
+    B^mu=epsilon^(mu nu rho sigma) Tr(K_nu K_rho K_sigma)/6
+  density: >-
+    kappa*Tr(P_N Y)^2*q_(mu nu)(P_t)*B^mu*B^nu, where q is the positive
+    spatial metric orthogonal to the M-derived timelike line.
+  distinction_from_full_BPS_term: >-
+    The B^0 static topological-density square is projected out. Only spatial
+    B components remain; each contains K_0 and is exactly static-3x3 null.
+exact_gates:
+  - proper-Lorentz scalar and parity-even density
+  - exact arbitrary-static-3x3 nullity after the spatial projection
+  - manifest positive comoving Hamiltonian and velocity-linearity of B^i
+  - nonzero witness with every K_mu generated as [Y,Z_mu] from one Y
+  - zero-eigenline wrong-axis nullity from the unique n^2 repair
+  - inequivalence to the polynomial-current norm by spatial-derivative dependence
+  - fixed-J scale endpoint divergence and strict minimum
+  - no external phase, baryon charge, fitted coefficient, or empirical comparator
+normalization: >-
+  The factor 1/6 removes the six permutations of three currents. Its overall
+  square normalization is absorbed into the single positive kappa and is not
+  fitted in the symbolic screen.
+selection_rule: >-
+  Open a numerical one-body oracle only if every exact gate passes and the
+  witness survives deliberate removal of one load-bearing spatial current.
+comparators_opened: false
+next_if_success: Freeze the direct residual/Hessian one-body action before numerical values.
+next_if_failure: Mark the issue-147 Skyrme family exhausted.
+verdict: >-
+  Selected. Ten exact checks establish a source-admissible nonzero alternating
+  current, load-bearing two-spatial-current dependence, static-3x3 nullity,
+  covariance, parity-even positivity, wrong-axis sensitivity, and viable
+  fixed-J scaling. This is inequivalent to the failed polynomial-current
+  class and opens one direct variational one-body transaction.

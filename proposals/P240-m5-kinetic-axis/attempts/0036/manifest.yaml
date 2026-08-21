@@ -1,0 +1,49 @@
+campaign: P240
+attempt: '0036'
+canonical_goal_issue: '146'
+candidate_source_issue: '147'
+candidate: D_fixed_j_two_clock_spectral_cartan_one_body
+frozen_question: >-
+  Does the parameter-free spectral-Cartan base action have a smooth stationary
+  finite-inertia fixed-J hedgehog in the exact regular chart from attempt 0035?
+action:
+  curvature: 4*sum_(i<j) norm([D_i,D_j])^2
+  potential: exact M5.17 Landau-de Gennes potential with beta=1 and unit choices c2=c=1
+  clock_inertia: 4*sum_i norm([[G_n,S],D_i])^2
+  variational_energy: E_J=E_static+J^2/(4I), J=1
+parameter_typing: >-
+  c2=c=1 fixes energy and length units, beta=1 is the established dimensionless
+  M5.17 shape used by the current working sector, and J labels the fixed-momentum
+  ensemble rather than the action. No fitted, penalty, continuation, or
+  interpolation coefficient is present.
+representation:
+  domain_radius: 6.0
+  quadrature: tensor Gauss-Legendre, 24 radial by 20 mu nodes
+  fields: q=lambda_n-lambda_t, lambda_t, and repaired split amplitude d
+  regularity: q=t^2+O(t^2*(1-t^2)); lambda_t even at the core and zero outside; d=O(t^4*(1-t^2)); Delta=d*(1-mu^2)
+  modes: 4 radial Chebyshev by 3 even angular Chebyshev modes for each field
+  coefficient_count: 36
+solver:
+  environment: PyTorch 2.4.1 float64 CUDA with exact automatic-differentiation Hessian
+  method: scipy hybr root of the modal Euler-Lagrange gradient
+  max_function_evaluations: 120
+  xtol: 1.0e-11
+  note: no descent warm start and no modified functional
+predeclared_gates:
+  solver_success: true
+  normalized_modal_gradient_inf_max: 1.0e-9
+  independent_centered_directional_derivative_max: 2.0e-8
+  hessian_symmetry_relative_max: 1.0e-10
+  restricted_minimum_hessian_eigenvalue_min: -1.0e-8
+  finite_positive_inertia: true
+  finite_nonzero_frequency: true
+  withheld_order_5x4_gradient_inf_max: 1.0e-6
+  higher_quadrature_energy_relative_change_max: 1.0e-6
+  higher_quadrature_gradient_inf_max: 2.0e-7
+interpretation_boundary: >-
+  Passing is a smooth restricted-axisymmetric one-body branch eligible for
+  basis/domain refinement, not yet the full one-body claim. A failure is
+  localized to this action/chart/order unless a mode or exact limit proves a
+  broader obstruction. No pair calculation opens from a failed root.
+next_if_pass: refine basis order and domain before the two-body inertia oracle
+next_if_fail: inspect the failed residual or physical Hessian mode, then change representation or candidate rather than tuning a penalty

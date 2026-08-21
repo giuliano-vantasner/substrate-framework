@@ -1,0 +1,104 @@
+attempt: '0012'
+campaign: P240
+canonical_issue: '146'
+candidate_source_issue: '147'
+status: complete_no_stable_tested_branch
+classification: direct_variational_skyrme_one_body
+selected_action: L2_sextic_axis_weighted_timelike_skyrme_current
+source_selection_attempt: '0011'
+objective: >-
+  Determine whether the symbolically selected Skyrme representative admits a
+  stable stationary fixed-J one-body branch on the fresh primary grid.
+action:
+  static: >-
+    Unchanged spectral-Cartan spatial curvature, M5.17 polynomial potential,
+    projector term, and Candidate-H scalar sector used throughout P240.
+  clock_inertia_density: >-
+    kappa*Tr(P_N Y)^2*[-Tr([Y,Z_0]^2)/2], with unit clock velocity and
+    Z_0=Q(partial_0 Y)Q.
+  fixed_J_energy: E_static+J^2/(4*I_skyrme)
+regular_chart: unchanged_from_attempt_0007
+discretization:
+  dtype: float64
+  spacing: 0.5
+  rho_cells: 8
+  z_cells: 16
+  interior_unknowns: 686
+unknown_domains: all seven regular-chart controls are unconstrained real variables
+branches:
+  starts: [1.0, -1.0]
+  interpretation: >-
+    Each root is classified independently. Energy agreement is descriptive,
+    not a gate; descent is only a Newton-basin warm start.
+warm_start:
+  adam_steps: 1800
+  adam_learning_rate: 0.008
+  unconstrained_lbfgs_max_iterations: 6000
+direct_oracle:
+  euler_lagrange_method: scipy_krylov_root_with_armijo_line_search
+  root_maximum_outer_iterations: 120
+  normalized_residual_inf_max: 1.0e-8
+  solver_success_required: true
+  independent_first_variation: centred_energy_differences_in_three_deterministic_directions
+  root_directional_derivative_relative_max: 2.0e-8
+  probe_ad_vs_fd_relative_error_max: 5.0e-7
+  hessian_method: reverse_mode_HVP_plus_ARPACK_six_smallest_algebraic
+  hessian_bilinear_symmetry_relative_max: 1.0e-8
+  eigensolver_success_required: true
+  local_stability_minimum_eigenvalue_min: -1.0e-6
+translation_gates:
+  - Skyrme commutator norm equals the independent trace-difference form to 5e-12
+  - finite positive inertia above the domain scale floor and finite frequency
+  - timelike gap greater than 2
+  - exact boundary data
+  - strictly negative scalar response
+  - unweighted-axis mutation relative gradient at least 1e-4
+  - finite regular-axis diagnostics
+comparators_opened: false
+success: >-
+  At least one branch must be an actual Euler-Lagrange root with independent
+  first-variation agreement, no negative Hessian mode, and every translation
+  gate. This opens but does not replace mesh/domain convergence.
+next_if_stable_root: Freeze continuation of that exact branch across mesh/domain refinements.
+next_if_only_saddles: Continue the next inequivalent Skyrme class.
+next_if_numerical_failure: Repair the root method without changing the selected action.
+implementation_smoke:
+  scope: 3_by_6_grid_5_warm_iterations_1_root_iteration_plus_only
+  status: executed_non_evidentiary
+  observations:
+    - Skyrme inertia and fixed-J energy remained finite
+    - independent commutator/trace translation agreed at 2.17e-19
+    - nonconvergence was correctly reported at the one-iteration root ceiling
+    - Hessian-vector symmetry and six-mode ARPACK paths executed
+  scientific_use: none
+preflight:
+  legacy_np_trapz_access: absent
+  python_compile: pass
+  diff_check: pass
+plus_branch_interim:
+  root_success: false
+  root_outer_iterations: 120
+  euler_lagrange_residual_inf_relative: 3.4550085596983334e-08
+  root_directional_derivative_relative_max: 3.739090571034375e-09
+  probe_ad_vs_fd_relative_error_max: 3.824857687517724e-09
+  independent_skyrme_trace_relative_error: 1.3877787807814457e-17
+  hessian_eigensolver_success: false
+  converged_negative_eigenvalue: -9.24141768853299
+  classification: near_stationary_saddle
+minus_branch_final:
+  root_success: false
+  root_outer_iterations: 120
+  euler_lagrange_residual_inf_relative: 2.3379104734781693e-08
+  root_directional_derivative_relative_max: 4.411218450968667e-09
+  probe_ad_vs_fd_relative_error_max: 4.31177651916137e-09
+  independent_skyrme_trace_relative_error: 1.1102230246251565e-16
+  hessian_eigensolver_success: false
+  converged_negative_eigenvalues: [-5.130028200462588, -4.241188532721162]
+  classification: near_stationary_saddle
+verdict: >-
+  Neither frozen branch is a stable one-body solution. Both independent
+  first-variation translations pass and both have explicit negative Hessian
+  modes. The standard axis-weighted Skyrme representative therefore fails
+  the primary stability gate on this action and ansatz. No refinement or pair
+  calculation opens. Symbolically exhaust the remaining polynomial-current
+  hierarchy before leaving the Skyrme direction.

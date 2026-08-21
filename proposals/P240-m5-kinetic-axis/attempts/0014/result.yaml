@@ -1,0 +1,30 @@
+campaign: P240
+attempt: '0014'
+status: complete_selected_for_one_body
+selected_candidate: L2_alternating_derivative_sextic
+definition: >-
+  B^mu=epsilon^(mu nu rho sigma)Tr(K_nu K_rho K_sigma)/6,
+  K_mu=[Y,Z_mu]
+density: >-
+  kappa*Tr(P_N Y)^2*q_(mu nu)(P_t)B^mu B^nu
+exact_results:
+  source_admissible_nonzero_witness: true
+  one_spatial_current_mutation_kills_witness: true
+  arbitrary_static_spatial_projection_null: true
+  proper_lorentz_scalar: true
+  parity_even_square: true
+  positive_velocity_square: true
+  zero_axis_null: true
+  inertia_scaling: I0/R
+  fixed_J_rotational_scaling: J^2*R/(4*I0)
+  full_scale_minimum: strict_for_positive_curvature_and_potential
+external_structure_reference: https://arxiv.org/abs/1107.5433
+imported_claims: none
+command: >-
+  PYTHONPATH=src /home/dan/substrate-framework/.venv/bin/python
+  proposals/P240-m5-kinetic-axis/attempts/0014/verify_alternating_sextic.py
+command_verdict: ALL 10 CHECKS PASS [P240/alternating-sextic]
+not_established:
+  - stable nonlinear one-body branch
+  - refinement
+  - pair interaction

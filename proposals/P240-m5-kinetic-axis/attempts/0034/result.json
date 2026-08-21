@@ -1,0 +1,19 @@
+{
+  "campaign": "P240",
+  "attempt": "0034",
+  "candidate": "D_fixed_j_two_clock",
+  "generic_fixed_j_energy": "(I2*J1^2-2*C*J1*J2+I1*J2^2)/(4*(I1*I2-C^2))",
+  "frequency": "omega=(1/2)*I^-1*J",
+  "equal_defects": {
+    "like_interaction": "-j^2*C/(2*I0*(I0+C))",
+    "counter_rotating_interaction": "+j^2*C/(2*I0*(I0-C))",
+    "spd_domain": "I0>0 and |C|<I0"
+  },
+  "asymptotic_condition": "C(r)=A/r+O(r^-2), A>0",
+  "asymptotic_result": "Delta E_J=-j^2*A/(2*I0^2*r)+O(r^-2)",
+  "conditional_newton_coefficient": "K_N=j^2*A/(2*I0^2*m^2)>0",
+  "ensemble_warning": "At fixed omega the leading like-clock cross energy is +2*C*omega^2. Attraction is a fixed-J result and the numerical oracle must hold the typed momenta fixed.",
+  "verdict": "symbolically_open_requires_relaxed_positive_one_over_r_cross_inertia",
+  "scope": "Exact implication only. It does not establish the sign, exponent, or nonzero value of C(r) for M5 fields, nor one-body stationarity.",
+  "check_count": 18
+}

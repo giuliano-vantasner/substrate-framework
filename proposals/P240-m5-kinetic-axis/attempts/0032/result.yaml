@@ -1,0 +1,33 @@
+campaign: P240
+attempt: '0032'
+candidate: A_same_order_curvature_contractions
+environment: exact SymPy rational polynomial algebra on CPU
+enumeration:
+  eta_only_diagrams: 60
+  eta_only_rank: 6
+  one_epsilon_diagrams: 156
+  one_epsilon_rank: 4
+source_restriction_audit:
+  static_curvature_coordinates: 9
+  symmetric_derivative_source_jacobian_rank: 9
+  exact_minor_determinant: 362040
+  conclusion: >-
+    The arbitrary spatial double-two-form polynomial test is exact on the M5
+    source image rather than an over-broad validation surrogate.
+static_preserving_even_basis:
+  N1: I3-(I1+I2)/4
+  N2: (I1-I2)/4-I4+I5
+  N3: I1-4*I4+I6
+clock_witness:
+  field: M(t,x)=omega*t*diag(1,0,0,0)+x^1*(E01+E10)
+  invariant_vector: omega^2*(4,4,2,2,2,4)
+  preserving_even_deformations: 0
+  all_one_epsilon_deformations: 0
+  hamiltonian_density: -4*omega^2
+verdict: reject_constant_coefficient_curvature_quadratic_family
+scope: >-
+  Exact boundedness failure for the complete constant-coefficient eta-only
+  and one-epsilon curvature-quadratic family while retaining the complete
+  source-generated static 3x3 action. Field-dependent contractions,
+  higher-order currents, and issue 146 remain open.
+checks: 25

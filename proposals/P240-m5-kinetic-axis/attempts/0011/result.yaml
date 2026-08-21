@@ -1,0 +1,50 @@
+campaign: P240
+attempt: '0011'
+status: complete_selected_for_one_body
+selected_candidate: L2_sextic_axis_weighted_timelike_skyrme_current
+equivalence_result:
+  standard_trace_form: Tr(Y^2 Z^2)-Tr(Y Z Y Z)
+  commutator_form: -Tr([Y,Z]^2)/2
+  eigenbasis_form: sum_i_less_j (lambda_i-lambda_j)^2 Z_ij^2
+  uniqueness: >-
+    Within the single-trace two-Y/two-Z class, vanishing for every commuting
+    Y,Z forces the two trace coefficients to be opposite.
+clock_reduction: >-
+  kappa*n^2*omega^2*(lambda_theta-lambda_phi)^4
+minimal_axis_weight: >-
+  A nonnegative real quadratic weight that vanishes at n=0 cannot contain a
+  linear term; up to positive normalization the minimum repair is n^2.
+constraint_equivalence: Tr(P_N Y)^2 = Tr(P_N Y^2) = n^2
+inequivalence:
+  L1: ratio is (lambda_theta-lambda_phi)^2, not a constant
+  Pontryagin: >-
+    A homogeneous nonzero Skyrme clock has zero curvature and hence zero
+    Pontryagin factor.
+scaling:
+  skyrme_inertia: I0*R^3
+  skyrme_fixed_J_rotational_energy: J^2/(4*I0*R^3)
+  pontryagin_inertia: I0/R^3
+  pontryagin_fixed_J_rotational_energy: J^2*R^3/(4*I0)
+commands:
+  - command: >-
+      PYTHONPATH=src /home/dan/substrate-framework/.venv/bin/python
+      proposals/P240-m5-kinetic-axis/attempts/0011/verify_skyrme_equivalence.py
+    exit_status: 0
+    verdict: ALL 14 CHECKS PASS [P240/skyrme-equivalence]
+  - command: >-
+      PYTHONPATH=src /home/dan/substrate-framework/.venv/bin/python -m pytest -q
+      tests/test_m5_kinetic_axis.py::test_skyrme_commutator_is_the_unique_positive_gap_trace_representative
+      tests/test_m5_kinetic_axis.py::test_axis_weighted_skyrme_is_inequivalent_to_homogeneous_pontryagin
+    exit_status: 0
+    verdict: 2 passed
+check_inventory:
+  lexical_ledger_check_sites: 14
+  runtime_ledger_checks: 14
+  focused_pytest_assertion_nodes: 5
+not_established:
+  - nonlinear stationary stable one-body branch
+  - mesh/domain convergence
+  - pair interaction
+next_action: >-
+  Use the direct unprojected Euler-Lagrange, independent first-variation, and
+  lowest-Hessian-mode oracle for the selected Skyrme density.

@@ -1,0 +1,101 @@
+attempt: '0016'
+campaign: P240
+canonical_issue: '146'
+candidate_source_issue: '147'
+status: implementation_preflight_passed
+classification: independent_single_grid_negative_mode_audit
+source_diagnostic_attempt: '0015'
+objective: >-
+  Test whether the strongest alleged negative mode on the plus branch is a
+  real curvature direction of the discrete energy, rather than an AD-HVP,
+  ARPACK, optimizer, or bookkeeping artifact. This does not make a continuum
+  candidate verdict.
+candidate_status: active_symbolically_supported
+grid:
+  dtype: float64
+  spacing: 0.5
+  rho_cells: 8
+  z_cells: 16
+  role: reproduce_attempt_0015_plus_discrete_branch_only
+stationary_state:
+  warm_start: 1800_step_Adam_plus_unconstrained_LBFGS_up_to_6000
+  direct_root: scipy_krylov_with_armijo_up_to_240_outer_iterations
+  solver_success_required: true
+  normalized_residual_inf_max: 1.0e-8
+mode_construction:
+  operator: reverse_mode_AD_Hessian_vector_product
+  solver: ARPACK_smallest_algebraic_one_mode
+  eigensolver_success_required: true
+  eigen_residual_relative_max: 1.0e-6
+independent_curvature_oracles:
+  energy_only_centered_second_difference:
+    normalized_mode_amplitudes: [0.04, 0.02, 0.01, 0.005]
+    requirement: >-
+      The curvature is negative at every amplitude and the three smallest
+      amplitudes agree with the AD Rayleigh quotient within 2 percent.
+  first_gradient_centered_difference:
+    normalized_mode_amplitudes: [0.01, 0.005, 0.0025, 0.00125]
+    requirement: >-
+      The finite-difference gradient HVP agrees with the reverse-mode HVP to
+      relative l2 error at most 1e-4 at the smaller amplitude.
+mode_diagnostics:
+  - report squared-norm fraction in every one of the seven regular-chart controls
+  - report axis-row and outer-interior-shell norm fractions without using them as arbitrary pass thresholds
+  - verify exact fixed boundary exclusion from the mode
+  - verify finite perturbed energies, positive inertia, and timelike gap above 2 at every amplitude
+  - retain the exact epsilon-versus-axial and load-bearing mutation checks
+interpretation:
+  if_confirmed: >-
+    The direction is a genuine negative mode of this discrete functional only.
+    Freeze fixed-extent mesh refinement, larger-domain continuation, and an
+    independent spatial discretization before any candidate rejection.
+  if_not_confirmed: >-
+    Withdraw the attempt-0015 Hessian interpretation and repair the numerical
+    method while retaining all exact symbolic candidate results.
+explicit_non_claims:
+  - continuum instability
+  - candidate rejection
+  - issue-147 family exhaustion
+  - issue-146 resolution
+comparators_opened: false
+device_preflight:
+  hardware: NVIDIA_GeForce_RTX_3060_12GB_compute_capability_8.6
+  driver: 560.28.03
+  pytorch: 2.3.0.post301_cuda_12.0_available
+  benchmark_scope: >-
+    Ten actual P240 8x16 float64 energy-gradient evaluations and ten actual
+    Hessian-vector products after two warmups on each device.
+  cpu_seconds_per_energy_gradient: 0.009609823097707703
+  cuda_seconds_per_energy_gradient: 0.01521523540141061
+  cpu_seconds_per_hvp: 0.024370737298158928
+  cuda_seconds_per_hvp: 0.03977618459903169
+  selected_device: cpu
+  rationale: >-
+    CPU is about 1.6 times faster for both load-bearing paths at this grid.
+    Device selection is performance-only and supplies no scientific evidence.
+implementation_preflight:
+  explicit_cross_product_determinant: >-
+    Replaces torch.linalg.det in the action path while retaining the literal
+    epsilon-trace current as the independent translation oracle.
+  python_compile: pass
+  diff_check: pass
+  non_evidentiary_smoke: >-
+    The 3x6 one-iteration path reproduced the AD eigenvalue with independent
+    energy curvature, exposed the expected outer-shell localization of that
+    deliberately tiny grid, and showed O(h^2) gradient-HVP truncation. The
+    primary gradient step ladder was extended downward before evidence to
+    avoid confusing truncation error with an implementation mismatch.
+correction_check:
+  trigger: >-
+    The initial primary ladders failed their fixed agreement thresholds but
+    displayed clean centred O(h^2) convergence, so truncation rather than a
+    changed scientific mode is the directly affected issue.
+  preserved_failure: result-initial.yaml
+  energy_amplitudes_added: [0.0025, 0.00125]
+  gradient_amplitudes_added: [0.000625, 0.0003125]
+  tolerances_unchanged:
+    energy_relative: 0.02
+    gradient_hvp_relative: 1.0e-4
+  landing_check: >-
+    Apply the unchanged energy tolerance to 0.005, 0.0025, and 0.00125 and the
+    unchanged gradient tolerance to 0.0003125. Do not begin another audit.

@@ -1,0 +1,33 @@
+campaign: P240
+attempt: '0038'
+candidate: D_fixed_j_two_clock_spectral_cartan_one_body
+environment:
+  torch: 2.4.1+cu124
+  cuda_runtime: '12.4'
+  device: NVIDIA GeForce RTX 3060
+root_basin_inventory:
+  initial_split_amplitudes: [0.125, 0.5, 2.0]
+  distinct_1x1_roots: 1
+  all_three_seeds_duplicate_same_root: true
+full_order_4x3_root:
+  gradient_inf_relative: 2.933622185817704e-15
+  independent_directional_relative_max: 2.2978146818736345e-09
+  hessian_symmetry_relative_max: 3.3104094634874535e-16
+  minimum_hessian_eigenvalue: -3.002359744065601
+  centered_curvatures: [-2.9759750850644195, -2.9957562227878043, -3.0007084023964126, -3.0019468840691843]
+  quadrature_energy_relative_change: 1.4543130897934397e-16
+  quadrature_gradient_inf_relative: 3.192671704937161e-15
+  withheld_order_5x4_gradient_inf_relative: 0.16470090200321438
+negative_mode_structure:
+  split_field_norm_fraction: 0.9929904531248782
+  highest_retained_angular_mode_norm_fraction: 0.8056560242157612
+  interpretation: >-
+    The saddle direction is physical inside the chart, but it is concentrated
+    at the angular truncation edge. Its persistence must be tested after
+    resolving the large withheld 5x4 residual.
+invalid_observables:
+  inertia: 0.42953347771165473
+  frequency: 1.1640536208347638
+  reason: stability and representation-refinement gates fail
+verdict: exact_smooth_saddle_not_representation_converged
+next: solve the unmodified 5x4 equations from exact coefficient zero-padding

@@ -1,0 +1,33 @@
+attempt: '0018'
+campaign: P240
+canonical_issue: '146'
+candidate_source_issue: '147'
+status: frozen_before_execution
+classification: exact_fixed_j_legendre_boost_reduction
+objective: >-
+  Derive the exact fixed-J Hamiltonian of the full dynamic-projector
+  alternating-sextic term and determine the sign of its boost curvature before
+  any corrected numerical solve.
+clock_polynomial:
+  lagrangian: L_alt=A(b)+2*C(b)*omega+I(b)*omega^2
+  momentum: J=partial_L_alt/partial_omega
+  hypotheses: I(b)>0
+exact_gates:
+  - eliminate omega exactly without inserting an observed frequency
+  - prove H_J=(J-2C)^2/(4I)-A
+  - recover J^2/(4I) only on the rest slice A=C=0
+  - evaluate A C and I for one exact rapidity boost and B=(B0,0,0,omega*b)
+  - compare fixed-omega and fixed-J second boost variations at the rest slice
+  - test the B0=0 physical subcase without treating it as universal
+  - require the dynamic-q mutation to change the old rest-only verdict
+  - keep exact candidate structure separate from numerical existence
+selection_rule: >-
+  The corrected numerical action must use this exact Hamiltonian decomposition.
+  If the candidate contribution has the wrong fixed-J boost sign, do not hide
+  it by reverting to the inequivalent rest-only inertia or by holding omega
+  fixed.
+next_if_healthy: Implement the full fixed-J density and rerun direct variation.
+next_if_adverse_but_conditional: >-
+  Determine symbolically whether another registered issue-147 invariant can
+  supply the missing positive boost curvature before numerical work.
+comparators_opened: false

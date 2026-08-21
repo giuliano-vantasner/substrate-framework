@@ -1,0 +1,84 @@
+campaign: P240
+canonical_goal_issue: '146'
+candidate_source_issue: '147'
+frozen_after_attempt: '0015'
+status: active_goal_specific_validation_contract
+live_source_audit:
+  date: '2026-08-20'
+  issue_146: https://github.com/vantasnerdan/substrate-framework/issues/146
+  issue_147: https://github.com/vantasnerdan/substrate-framework/issues/147
+  issue_146_target: >-
+    One 4x4 action retains established 3x3 and Coulomb behavior, selects a
+    finite nonzero clock frequency for the electron hedgehog, and produces an
+    attractive mass-mass interaction between relaxed two-defect states with a
+    clear spacetime symmetry.
+  coordination_interpretation: >-
+    Issue 146 is the P240 goal by explicit operator direction. Issue 147 is a
+    candidate and construction source only. No P239 test, receipt, goal state,
+    or candidate verdict is P240 evidence.
+goal_oracles:
+  explicit_action_and_exact_reduction:
+    positive_object:
+      - one explicit typed local 4x4 action with coefficients and field equations
+      - declared Lorentz symmetry or a separately justified replacement
+      - identity-level recovery of the complete arbitrary static 3x3 action
+      - identity-level preservation of the charge-sector Coulomb coefficient
+    strongest_oracle:
+      - SymPy exact contractions, substitutions, static reductions, and limits
+      - independent index/convention derivation and load-bearing mutations
+      - Lean only for finite exact statements whose encoding improves auditability
+    failure_boundary: >-
+      Failure here rejects or repairs the exact candidate statement. Numerical
+      agreement cannot replace these identities.
+  finite_frequency_one_body:
+    positive_object:
+      - a finite positive inertia and 0 < omega < infinity on a stationary hedgehog
+      - the declared fixed-J or fixed-omega variational principle and their bridge
+      - local stability in the physical constrained variation space
+    strongest_oracle:
+      - direct unconstrained discrete Euler-Lagrange residual, not optimizer loss
+      - independent centred first and second energy variations
+      - a physical-mode audit of any alleged negative Hessian direction
+      - mesh, domain, representation, and solver refinement of the same branch
+      - load-bearing wrong-axis and current-deletion mutations
+    failure_boundary: >-
+      A single-grid optimizer, root, or Hessian-vector result diagnoses only that
+      discretization and branch. It does not reject an exact candidate until the
+      alleged obstruction survives independent curvature and refinement checks.
+  coulomb_and_newton_interactions:
+    positive_object:
+      - separately relaxed one-charge and two-charge states from the selected action
+      - separately relaxed one-mass and two-mass states from the same action
+      - U_C=K_C q1 q2/r+o(1/r) with K_C>0
+      - U_N=-K_N m1 m2/r+o(1/r) with K_N>0
+      - corresponding inverse-square force signs
+    strongest_oracle:
+      - common-action stationary solves and common-node subtraction
+      - direct finite-separation energy differences and force estimates
+      - asymptotic exponent/sign windows frozen before values are opened
+      - field-representation, mesh, domain, quadrature, and solver refinement
+      - one independent evaluator or analytic linearized-tail rederivation
+    failure_boundary: >-
+      A one-body result says nothing about the Newton sign. Historical P236/P239
+      values may motivate machinery but cannot validate the selected P240 action.
+  framework_promotion:
+    positive_object:
+      - reusable action, derivative, one-body, and pair APIs with focused tests
+      - individually reviewed positive claims
+      - impact-bounded replay, accepted registry entry, and pinned release
+    strongest_oracle:
+      - one content-addressed P240 receipt over only the frozen affected boundary
+    failure_boundary: >-
+      Merge, check counts, documentation, or exact subclaims do not close issue 146
+      while either finite-frequency stability or the relaxed Newton tail is absent.
+explicit_non_oracles:
+  - descent loss or convergence to a mean low-noise state
+  - opposite-seed energy agreement
+  - one discretization's negative Hessian eigenvalue without mode scrutiny
+  - symbolic identities presented as numerical existence or empirical interaction evidence
+  - numerical closeness presented as exact equivalence
+  - P239 or other historical validation receipts
+completion_rule: >-
+  P240 may resolve issue 146 only when all four goal-oracle blocks pass for one
+  and the same selected action. Exact subclaims survive an inconclusive or failed
+  numerical branch and are preserved as independently reviewable progress.

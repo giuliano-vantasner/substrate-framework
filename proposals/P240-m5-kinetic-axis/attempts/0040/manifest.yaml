@@ -1,0 +1,31 @@
+campaign: P240
+attempt: '0040'
+canonical_goal_issue: '146'
+candidate_source_issue: '147'
+candidate: D_fixed_j_two_clock_spectral_cartan_one_body
+frozen_question: >-
+  Does the negative smooth tangential-split mode persist at the 6x5 root, and
+  is it no longer a truncation-edge effect?
+initial_state: exact attempt-0039 5x4 root, coefficientwise zero-padded
+action_and_domain: unchanged spectral-Cartan fixed-J action, radius 6, J=1
+representation:
+  modes: 6 radial by 5 even angular per field
+  coefficient_count: 90
+  quadrature: 32 radial by 28 mu Gauss-Legendre nodes
+solver: scipy hybr, then only if required LM, with exact PyTorch 2.4 CUDA Hessian
+predeclared_gates:
+  normalized_gradient_inf_max: 1.0e-9
+  independent_directional_relative_max: 2.0e-8
+  hessian_symmetry_relative_max: 1.0e-10
+  minimum_hessian_eigenvalue_min: -1.0e-8
+  smallest_two_centered_curvature_relative_error_max: 2.0e-4
+  withheld_order_7x6_gradient_inf_max: 1.0e-6
+  higher_quadrature_energy_relative_change_max: 1.0e-6
+  higher_quadrature_gradient_inf_max: 2.0e-7
+interpretation_boundary: >-
+  This is the terminal one-body basis refinement by operator direction.
+  Persistence with decreasing highest-mode concentration is convergence
+  evidence for a physical saddle. The withheld 7x6 residual is reported as a
+  diagnostic and will not trigger another basis-order gate. A stable 6x5 root
+  opens the original pair oracle; an unstable 6x5 root leaves the exact
+  action/mechanism candidate intact but closes this tested hedgehog realization.

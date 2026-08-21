@@ -1,0 +1,47 @@
+campaign: P240
+attempt: '0021'
+grid: fixed_extent_fine
+status: numerical_method_failure_no_scientific_spectrum
+environment:
+  device: cpu
+  dtype: float64
+  torch: 2.3.0.post301
+parameters:
+  spacing: 0.3333333333333333
+  rho_cells: 12
+  z_cells: 24
+  physical_extents: [4.0, 8.0]
+  kappa_s: 1.0
+  kappa_b: 2.0
+stationary_point:
+  warm_optimizer_success: false
+  warm_optimizer_iterations: 6000
+  root_success: false
+  root_outer_iterations: 240
+  normalized_residual_inf: 5.406760601106161e-04
+  independent_directional_derivative_relative_max: 7.752526231802792e-06
+  total_energy: 1.391193889753298
+  inertia: 1.4615619825401582
+  frequency: 0.34209975763806644
+translation_checks:
+  independent_alternating_current_relative_error: 6.122381811164336e-16
+  probe_ad_vs_fd_relative_error_max: 8.960771222255026e-09
+inadmissible_post_failure_diagnostic:
+  computed_minimum_hessian_eigenvalue: -0.001244156289505245
+  reason_inadmissible: >-
+    The Hessian was evaluated at a point that failed the preregistered root and
+    first-variation gates. Its sign cannot adjudicate stationary-branch
+    stability and is retained only to diagnose the runner.
+method_failure:
+  classification: representation_and_branch_tracking
+  evidence: >-
+    Each mesh restarted from the analytic seed instead of interpolating the
+    converged coarser stationary point. The fine solve drifted to a branch with
+    total energy and frequency far from the medium result and did not converge.
+  repair: >-
+    Save the converged coarse/medium field, interpolate it onto the next mesh,
+    solve the unchanged Euler-Lagrange residual, and abort Hessian adjudication
+    unless root and independent first-variation gates pass.
+goal_146_effect: >-
+  No fine-grid stability verdict. The medium kappa_b=2 negative mode remains
+  valid single-grid evidence; the exact combined-action candidate remains open.

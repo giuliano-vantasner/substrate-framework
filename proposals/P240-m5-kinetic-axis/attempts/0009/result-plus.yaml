@@ -1,0 +1,35 @@
+campaign: P240
+attempt: '0009'
+branch: plus_split_seed
+status: near_stationary_saddle
+root:
+  success: false
+  message: maximum_outer_iterations_reached
+  outer_iterations: 120
+  evaluations: 5106
+  euler_lagrange_gradient_inf: 6.851384893617079e-07
+  residual_inf_relative: 5.097776106167745e-08
+first_variation:
+  root_directional_derivative_relative_max: 1.8999424991092554e-09
+  probe_ad_vs_fd_relative_error_max: 5.374498318611032e-09
+second_variation:
+  eigensolver_success: true
+  hessian_bilinear_symmetry_relative_error: 1.5731717835736186e-16
+  eigenvalues:
+    - -20.30800067605281
+    - -12.301266122376157
+    - -10.932788464890656
+    - -8.101060450862777
+    - -6.63994827218061
+    - -0.6035224616865715
+observables:
+  total_energy: 13.439948618629332
+  inertia: 0.08128999482215876
+  frequency: 6.150818450583853
+  axis_connection_over_spacing: 0.6226501462329762
+  timelike_gap: 6.873212051835132
+  independent_full_epsilon_relative_error: 2.7755575615628914e-17
+classification: >-
+  The independent first-variation translation is accurate, but the branch
+  misses the frozen root tolerance and has six resolved negative modes. It is
+  not a stable one-body solution and cannot open refinement or pair gates.
