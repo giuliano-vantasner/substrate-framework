@@ -335,50 +335,55 @@
       "success": false,
       "energy": 113.08725175075934,
       "relative_gradient": 0.04771109101347754,
-      "lambda_min": 0.00010835381675463601,
-      "morse_index": 0,
-      "inertia": 144.61726023841533,
-      "frequency": 0.0034574019669277537
+      "converged": false,
+      "lambda_min": null,
+      "morse_index": null,
+      "inertia": null,
+      "frequency": null
     },
     {
       "seed": "tangent_const",
       "success": false,
       "energy": 1.80027221988804e+27,
       "relative_gradient": 5885189444003.739,
-      "lambda_min": -3.644738733832172e+56,
-      "morse_index": 12,
-      "inertia": 1.3886788744401536e-28,
-      "frequency": 3.60054443977608e+27
+      "converged": false,
+      "lambda_min": null,
+      "morse_index": null,
+      "inertia": null,
+      "frequency": null
     },
     {
       "seed": "q_const",
       "success": false,
       "energy": 3.0472591727403944e+26,
       "relative_gradient": 2617854223510.1143,
-      "lambda_min": -1.2202598506336174e+55,
-      "morse_index": 11,
-      "inertia": 8.204093771754093e-28,
-      "frequency": 6.094518345480789e+26
+      "converged": false,
+      "lambda_min": null,
+      "morse_index": null,
+      "inertia": null,
+      "frequency": null
     },
     {
       "seed": "random_a",
       "success": false,
       "energy": 1497413.2906920575,
       "relative_gradient": 0.009263460202958058,
-      "lambda_min": -0.023936718583126862,
-      "morse_index": 1,
-      "inertia": 325633.44052218774,
-      "frequency": 1.5354688363645852e-06
+      "converged": false,
+      "lambda_min": null,
+      "morse_index": null,
+      "inertia": null,
+      "frequency": null
     },
     {
       "seed": "random_b",
       "success": false,
       "energy": 3.8466926385672906e+188,
       "relative_gradient": 1.5314959359919572e-47,
-      "lambda_min": -8.254621339746988e+93,
-      "morse_index": 4,
-      "inertia": 2.148241792015412e+190,
-      "frequency": 2.3274847452386442e-191
+      "converged": false,
+      "lambda_min": null,
+      "morse_index": null,
+      "inertia": null,
+      "frequency": null
     }
   ]
 }

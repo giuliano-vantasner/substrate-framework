@@ -119,16 +119,31 @@ def main():
         rel = float(np.max(np.abs(grad)) / max(1.0, abs(total)))
         eig = np.linalg.eigvalsh((hess + hess.T) / 2)
         idx = int(np.sum(eig < -1e-8 * max(1.0, float(np.max(np.abs(eig))))))
+        # A non-converged trajectory is optimizer output, not stationary-point
+        # data: record convergence explicitly and withhold spectral claims for
+        # diverged rows rather than tabulating meaningless Morse indices.
+        converged = bool(sol.success) and rel < 1e-8 and np.isfinite(total)
         findings.append(dict(seed=name, success=bool(sol.success), energy=total,
-                             relative_gradient=rel, lambda_min=float(eig[0]),
-                             morse_index=idx, inertia=comp["inertia"],
-                             frequency=comp["frequency"]))
-        print(
-            f"{name:>14s}  conv={sol.success}  |g|/|E|={rel:.1e}  E={total:.8f}  "
-            f"inertia={comp['inertia']:.6f}  omega={comp['frequency']:.6f}  "
-            f"lambda_min={eig[0]:.6f}  index={idx}",
-            flush=True,
-        )
+                             relative_gradient=rel,
+                             converged=converged,
+                             lambda_min=float(eig[0]) if converged else None,
+                             morse_index=idx if converged else None,
+                             inertia=comp["inertia"] if converged else None,
+                             frequency=comp["frequency"] if converged else None))
+        if converged:
+            print(
+                f"{name:>14s}  conv={sol.success}  |g|/|E|={rel:.1e}  E={total:.8f}  "
+                f"inertia={comp['inertia']:.6f}  omega={comp['frequency']:.6f}  "
+                f"lambda_min={eig[0]:.6f}  index={idx}",
+                flush=True,
+            )
+        else:
+            print(
+                f"{name:>14s}  conv={sol.success}  |g|/|E|={rel:.1e}  "
+                f"E={'overflow' if not np.isfinite(total) else f'{total:.4e}'}  "
+                "-> no stationary point reached; spectral quantities withheld",
+                flush=True,
+            )
 
     (HERE / "certify-results.json").write_text(json.dumps(
         {"spectrum": {str(k): v for k, v in spectrum.items()},
