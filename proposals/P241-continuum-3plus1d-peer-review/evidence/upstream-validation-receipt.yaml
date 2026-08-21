@@ -1,0 +1,13 @@
+schema_version: 1
+campaign: P241
+receipt_kind: upstream-validation-receipt
+scope: >-
+  Reserved for the substrate-framework harvest PR (proposals/P241-* and any
+  reusable corpus pieces). To be finalized with the base/head tree hashes of
+  that PR at submission time; the destination-side boundary above is already
+  final.
+destination_boundary:
+  receipt: review/provenance/destination-validation-receipt.yaml
+  status: final
+upstream_boundary:
+  status: pending_harvest_pr

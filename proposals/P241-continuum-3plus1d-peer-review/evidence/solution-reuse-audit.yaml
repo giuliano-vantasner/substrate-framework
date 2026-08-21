@@ -1,0 +1,39 @@
+schema_version: 1
+campaign: P241
+purpose: >-
+  Record how substrate-framework primitives informed the portable replacement
+  SymPy, SciPy, and Lean solutions for the manuscript review.
+scientific_role: >-
+  Implementation source only. Repository artifacts are not premises,
+  comparators, or acceptance criteria for the manuscript's claims; all oracle
+  mathematics was re-derived in the paper's own variables.
+portability: >-
+  The corpus intentionally does not import substrate_framework. Shared-helper
+  patterns (verification tally, trapezoid compatibility fallback, radial
+  Laplacian, impedance scattering) were restated standalone so the companion
+  subtree moves to an author-owned repository unchanged.
+replacement_claims:
+  - claims: [P241-S01, P241-S03]
+    sources:
+      - src/substrate_framework/numerics.py (tally/verification discipline only)
+    transferred_solution: verifier structure and PASS-tally pattern
+    modification: rewritten as per-claim standalone modules with JSON records
+    destination: review/corpus/checks/sympy/
+  - claims: [P241-S08]
+    sources:
+      - tests/test_boundary_scattering.py (impedance test shapes)
+    transferred_solution: matched-vs-mismatched interface energy accounting
+    modification: reduced to 1D variable-coefficient wave equation with directional-impedance framing
+    destination: review/corpus/checks/scipy/N03_impedance_interface.py
+  - claims: [P241-S05, P241-S06]
+    sources:
+      - proposals/P238-nlkg-energy-lumps-peer-review/companion/scipy_checks.py (protocol shape)
+    transferred_solution: refinement-pair + independent-integrator cross-check protocol
+    modification: replaced oscillon existence run with decay-plus-breather-control design
+    destination: review/corpus/checks/scipy/N01_oscillon_existence.py
+  - claims: [P241-S15, P241-S18, P241-S19, P241-S21, P241-S20]
+    sources:
+      - proposals/P238-nlkg-energy-lumps-peer-review/companion/P238PaperChecks.lean (statement style)
+    transferred_solution: counterexample-as-positive-theorem Lean idiom
+    modification: new identities (Kerr core identity, Derrick monotonicity, factor-two law) derived fresh
+    destination: review/corpus/lean/

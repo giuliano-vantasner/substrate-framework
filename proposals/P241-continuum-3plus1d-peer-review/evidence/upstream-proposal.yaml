@@ -1,0 +1,26 @@
+campaign: P241
+proposal:
+  id: P241
+  title: >-
+    Peer review and constructive repair of the 3+1D solitonic-matter
+    equivalence-principle manuscript (v1.0, 2026-08-21)
+  kind: peer-review-companion
+  canonical_issue: https://github.com/vantasnerdan/substrate-framework/issues/154
+  predecessor_campaigns: [P237, P238, P239, P240]
+scope:
+  - Extract every checkable claim from the manuscript (23 claims, S01..S23).
+  - Build standalone executable oracles (SymPy exact, SciPy numerical,
+    Lean/mathlib identities) judged against the manuscript's own mathematics.
+  - Supply minimum-honest repairs for every revision-required claim.
+  - Land the full companion corpus in the author-owned destination repository.
+out_of_scope:
+  - Accepting or promoting substrate-framework claims from this review.
+  - Re-adjudicating accepted substrate claims (C-GOR-001 et al.) except as
+    implementation provenance.
+success_gate: review/verify.py all-checks-green at the frozen paper SHA.
+selection_criteria_frozen_before_comparator_contact: true
+comparator_blinding_note: >-
+  No empirical comparator exists; the manuscript is analytic. The published
+  2+1D companion (frozen text) served as the only cross-source anchor for
+  claim S22 and the Section 9 convention audit (S21), read after the oracle
+  plan was fixed.

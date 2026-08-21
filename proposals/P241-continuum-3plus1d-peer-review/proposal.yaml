@@ -1,0 +1,74 @@
+id: P241
+base_release: v0.163.0
+source_baseline: substrate-framework@2de7244
+question: >-
+  Which explicit mathematical, numerical, and physical claims in
+  2026-08-21_continuum_dynamics_3plus1D_solitonic_matter_equivalence_
+  principle_v1.0.pdf survive independent claim-by-claim reconstruction from
+  the manuscript's own definitions, equations, assumptions, and cited
+  dependencies with the strongest practical SymPy, Lean, or SciPy oracle?
+source_inventory:
+  - source: >-
+      2026-08-21_continuum_dynamics_3plus1D_solitonic_matter_equivalence_
+      principle_v1.0.pdf, attached by vantasnerdan to canonical GitHub issue 154
+    access: >-
+      authoritative issue attachment URL; locally acquired after the proposal
+      instantiated; SHA-256 dc23cbd98a551cb95d2409ab6bef0b1720303d420b6fb0d2
+      b44a9ddd2f580783; bytes 347317; pages 14
+    extracted: >-
+      all 14 pages, equations (1)-(60), Section 10 composition, references,
+      and 23 unique claim units frozen in the P241 claim inventory
+invariants:
+  - the manuscript is judged against its own frozen claims rather than against accepted Substrate claims or narrative
+  - every extracted claim keeps its source section equation assumptions domain and stated evidential strength
+  - exact identities numerical observations and physical interpretations remain distinct claim types
+  - all unit convention coordinate dimension signature and normalization conventions are frozen before validation
+  - the published 2+1D companion paper serves as provenance anchor only, read after the oracle plan was fixed
+allowed_imports:
+  - SymPy for exact algebra differentiation tensor identities dimensions and counterexamples
+  - SciPy for finite-time PDE evidence geodesic dynamics interface scattering and residual scaling audits
+  - Lean through the repository setup (mathlib v4.28.0) for finite exact identities including counterexample theorems
+  - repository tools only as workflow infrastructure, never as scientific premises
+candidates:
+  - id: A
+    description: >-
+      Per-claim standalone SymPy modules with mutation/counterexample probes,
+      aggregated by a boundary runner.
+  - id: B
+    description: >-
+      Single monolithic verification script per oracle family.
+selection: candidate A
+selection_rationale: >-
+  Chosen before comparator contact; monolith rejected after it exceeded ~500
+  lines and a mid-flight edit corrupted an unrelated function, localizing
+  failures poorly. Per-claim modules make each failure addressable and each
+  pass independently meaningful.
+outcome_summary:
+  disposition: request_changes_delivered
+  supported: 13
+  revision_required: 10
+  headline_repairs:
+    - corrected Newtonian limit sign and factor (Eq 43)
+    - massless rays curve exactly twice massive lumps (Section 7 scope)
+    - convex-potential oscillon language requires nonconvex declaration (S06)
+    - Kerr dictionary determinant/c0-power defects with corrected dictionary (S21)
+  artifacts:
+    destination_repository: vantasner-T/2026-08-21_continuum_dynamics_3plus1D_solitonic_matter_equivalence_principle_v1.0
+    destination_pr: "2"
+    destination_issue: "1"
+    canonical_upstream_issue: https://github.com/vantasnerdan/substrate-framework/issues/154
+selection_criteria:
+  - exact agreement between extracted claim and oracle obligation
+  - explicit dependency closure with no paper result reused as an input
+  - convention dimension sign symmetry and limit compatibility
+  - mutation sensitivity or explicit counterexample coverage
+  - numerical convergence stability error model and independent route where applicable
+  - independence from repository claims, implementations, and narrative conclusions
+  - maintainable importable implementation with minimum assumption cost
+claims_proposed: []
+comparators_blinded_until: >-
+  the proposal instantiated and the source claim inventory froze each
+  statement, assumptions, claim type, oracle, and acceptance threshold; the
+  published 2+1D companion was opened only after that freeze, and solely as a
+  provenance anchor for claim S22 and the Section 9 convention audit (S21)
+status: active
