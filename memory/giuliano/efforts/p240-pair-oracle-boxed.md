@@ -37,4 +37,3 @@ The pair oracle resolves negatively for the boxed realization, structurally rath
 ## Continuation State
 
 Attempt 0043 records the negative structural result; no claim promotion. The Newton mechanism question transfers to de-boxed profiles or jointly relaxed pairs: issue 151 Phase 3 (natural/Robin or soliton-tail boundaries) is now on the critical path of the mechanism itself. The Coulomb sector item 5 remains defined-blocked (no in-repo charge density for the certified chart).
-
