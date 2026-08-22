@@ -1,0 +1,7 @@
+PASS [C-ELS-004] transverse on-shell field satisfies the constrained dynamics
+PASS [C-ELS-004] projected amplitude satisfies k.a = 0 with y,z preserved
+PASS [C-ELS-004] compressible branch carries both P and S speeds
+PASS [C-ELS-004] incompressible limit sends the P branch to infinite stiffness
+PASS [C-ELS-004] nu: compressible 1/4 at lam=mu vs incompressible limit 1/2
+PASS [C-ELS-004] mutation: S-speed dispersion fails for the longitudinal field unless the lambda term is retained
+ALL 6 CHECKS PASS [C-ELS-004]

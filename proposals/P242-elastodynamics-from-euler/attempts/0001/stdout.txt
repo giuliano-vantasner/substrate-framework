@@ -1,0 +1,15 @@
+PASS [C-ELS-001] tophat m_0 normalized
+PASS [C-ELS-001] tophat m_2 exact
+PASS [C-ELS-001] tophat m_4 exact
+PASS [C-ELS-001] moment series == direct integral (degree 2)
+PASS [C-ELS-001] moment series == direct integral (degree 3)
+PASS [C-ELS-001] moment series == direct integral (degree 4)
+PASS [C-ELS-001] moment series == direct integral (degree 3)
+PASS [C-ELS-001] [S, d/dx] == 0 on monomial basis degree 1..5
+PASS [C-ELS-001] declared fields solve microscopic Euler exactly
+PASS [C-ELS-001] filtered balance residual vanishes identically
+PASS [C-ELS-001] Pi quadratic in amplitude with exact Delta^2 coefficient
+PASS [C-ELS-001] Pi off-diagonal vanishes for this symmetric class
+PASS [C-ELS-001] mutation: flipped pressure sign breaks the Euler solution
+PASS [C-ELS-001] mutation: divergent field rejected
+ALL 14 CHECKS PASS [C-ELS-001]

@@ -1,0 +1,6 @@
+PASS [C-ELS-007] fluid: median |final projection| = 0.448 well below elastic memory 1
+PASS [C-ELS-007] fluid: majority of ensembles flip stress sign (no restored state)
+PASS [C-ELS-007] integration control: relative Hamiltonian drift below 1e-2
+PASS [C-ELS-007] mutation control: frozen positions keep unit persistence
+PASS [C-ELS-007] solid: transverse speed squared from phonons equals mu/rho (restoring stress exists)
+ALL 5 CHECKS PASS [C-ELS-007]
