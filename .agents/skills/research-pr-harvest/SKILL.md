@@ -47,7 +47,10 @@ audit neighboring accepted claims, historical artifacts, count labels, or
 workflow rules. A finding blocks only if it falsifies a selected unit, exposes
 an absent/circular load-bearing step, removes a proposition used from its
 declared dependency closure, or breaks a consumer in the recorded impact
-boundary. Record everything else once as follow-up.
+boundary. Record everything else once as follow-up. Follow-ups are advisory for the
+next agent; a later reviewer may not elevate a recorded follow-up into a blocker or a
+merge gate without new evidence, because that elevation is how hedging compounds across
+generations.
 
 Merge a unit only when all three answers are yes:
 
