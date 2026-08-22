@@ -36,16 +36,20 @@ preregistered_gates:
     total on its own background to <= 1e-10 relative before its lambda_min is
     read.
 frozen_interpretation:
-  - if lambda_min(A) converges to a negative constant: the de-boxed limit is a
-    saddle; walls are the stabilizer (the R^-4 D rescue); gap #5 closes
+  - >-
+    if lambda_min(A) converges to a negative constant: the de-boxed limit is
+    a saddle; walls are the stabilizer (the R^-4 D rescue); gap five closes
     negatively; the mechanism claim stays conditional and unreachable without
     confinement; record which channel the negative direction occupies.
-  - if lambda_min(A) converges to zero within the noise floor: marginality
+  - >-
+    if lambda_min(A) converges to zero within the noise floor: marginality
     persists in the limit; escalate to interval arithmetic before any claim.
-  - if lambda_min(A) converges positive: the de-boxed soliton is stable; gap #5
-    closes positively; the pair oracle reruns on de-boxed tails immediately.
-  - tail law rule: a channel counts as power-law only if the fitted exponent is
-    stable across the last two radii and the exponential model is rejected by
-    residual ratio > 3; otherwise exponential with the derived mass.
+  - >-
+    if lambda_min(A) converges positive: the de-boxed soliton is stable; gap
+    five closes positively; the pair oracle reruns on de-boxed tails at once.
+  - >-
+    tail law rule: a channel counts as power-law only if the fitted exponent
+    is stable across the last two radii and the exponential model is rejected
+    by residual ratio greater than three; otherwise exponential with the
+    derived mass.
   - failures become mechanisms; no claim promotion in this attempt.
-environment: NumPy 1.26.4, SciPy 1.11.4, PyTorch 2.13.0+cpu float64; no CUDA

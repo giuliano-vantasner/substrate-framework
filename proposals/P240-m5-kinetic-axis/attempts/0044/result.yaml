@@ -1,0 +1,94 @@
+campaign: P240
+attempt: '0044'
+canonical_goal_issue: '151'
+parent_attempt: '0043'
+candidate: de_boxed_hedgehog_limit_and_boundary_variation
+frozen_question: >-
+  Does the certified fixed-J hedgehog survive without walls? (a) does the
+  R -> infinity limit of the pinned-wall branch exist as a finite-energy
+  configuration; (b) is that limit stable; (c) do any channels carry power-law
+  tails; (d) does a natural/free-wall boundary condition change the picture.
+  Issue #151 Phase 3, items 6-7.
+method: >-
+  Derivation first: symbolic (sympy) second variation of the potential around
+  the rank-1 projector background, Richardson-verified against the certified
+  cpu_energy formula pointwise (gate G1) BEFORE any root was inspected.
+  Numerics: chained clean continuation in R with two new hard gates — solving
+  quadrature scaled to the basis (radial_nodes >= 4*order) and cross-quadrature
+  acceptance (energy must reproduce at doubled nodes to 1e-6) — after the
+  aliasing hazard was caught producing spurious stationary points.
+gates:
+  G1_symbolic_vacuum_curvature: passed (symbolic H matches hand derivation
+    exactly; Richardson pointwise check 1.2e-07 relative)
+  G2_limit_existence: FAILED in the strong sense — E(R) grows linearly along
+    the clean branch (no finite-energy de-boxed limit)
+  G3_quadrature_independence: passed (lambda_min(A) identical to 5e-16 across
+    48x16 / 72x24; direct and two-radius extractions agree to 7 digits)
+  G4_robin_certification: passed (a=1 reproduces certified chart at 3.54e-16;
+    relaxation converged to relgrad 6.2e-15)
+findings:
+  - symbolic_vacuum_curvature: >-
+      V2 around P = nn^T is exactly diag(5,3,3,0,0,6)/2 in the local frame:
+      massive channels with masses sqrt(5), sqrt(3), sqrt(6), and TWO EXACTLY
+      FLAT shear channels (np, na) whose stiffness is purely gradient-generated.
+      The flat channels are the only candidates for long-range (power-law)
+      multipoles; the diagonal channels can only have exponential tails.
+  - aliasing_hazard: >-
+      Fixed-order large-R roots exploit quadrature aliasing: they reproduce
+      their solving-grid energy but diverge by up to 15 orders of magnitude
+      under independent quadrature (spurious stationary points with huge
+      oscillatory coefficients). Only cross-quadrature-validated roots are
+      evidence. This invalidates naive fixed-order ladders and is the concrete
+      mechanism behind "results that move when the mesh changes".
+  - clean_pinned_branch: >-
+      Clean roots R = 12..18 (orders 16..36, all accepted at shift <= 1e-14):
+      E(R) grows linearly (~0.33 per unit R, no plateau); lambda_min(A[c(R)])
+      is NEGATIVE at every background, flattening at -(5+/-2)e-7 with no zero
+      crossing; Morse index exactly 1 everywhere; the negative direction is
+      purely split-channel and its boundary concentration vanishes as R grows.
+  - stability_windows: >-
+      Exact pencil on clean backgrounds: each frozen background is stable only
+      in a finite R-band; the self-consistent branch is stable for R in
+      approximately [8, 34] (upper edge saturating at 32-38 across backgrounds
+      13-18), then unstable again. Replaces the hypothesis-grade R~80 estimate
+      of attempt 0042 with clean-data-derived edges.
+  - free_wall_variation: >-
+      Freeing the wall value (natural condition, q(1) = a variational): at
+      R=8 the relaxation converges to a STABLE minimum (index 0) with
+      E = 50.439 versus pinned 60.168 (-16 percent), wall value self-selecting
+      to 0.99625 (near vacuum), and the clock sector INVARIANT (inertia
+      0.67638 vs 0.67662; omega 0.73923 vs 0.73929). At R=16 free and pinned
+      coincide (delta E = 0.05), still index 0: the pinning distorted the
+      profile's dress (slow forced tail, ~10 energy units of constraint cost)
+      but never the clock itself.
+verdict: >-
+  Phase 3 items 6-7 resolved. (6) The split channel IS the soft direction:
+  the negative potential direction is purely split-channel at every radius,
+  now derived from the exact vacuum curvature and tracked into the large-R
+  limit. (7) Stability does NOT survive de-boxing: on the pinned branch the
+  de-boxed limit does not exist as a finite-energy object (linear E growth)
+  and is nowhere a potential minimum (lambda_min(A) < 0 always, flattening
+  negative); the free-wall variation confirms the reading — releasing the
+  wall recovers a lighter, faster-tailed stable minimum with an untouched
+  clock inside the window, and converges back to the pinned behavior at
+  larger R. The stabilizing ingredient is quantified: confinement plus the
+  gradient-class (R^-4 D) rescue against a persistent split-channel negative
+  potential direction. The clock is a finite-size-confined state, stable in
+  R in [~8, ~34]; it is not an isolated particle in this model class.
+consequence: >-
+  Issue #151 gap #5 closes with a definite answer: the boundary condition is
+  not an artifact dressing a real particle — confinement is load-bearing for
+  the object's existence. The electron-candidate score is unchanged on gaps
+  1-5 but the mechanism claim (item 4) stays closed: with no stable isolated
+  object, the pair/Newton question has no de-boxed realization; it remains
+  closed unless a different model class (jointly relaxed or genuinely
+  long-ranged) is introduced. The two exactly flat shear channels are the
+  concrete handle any such extension must exploit (asymptotic pairing per
+  owner issue #155 section 3).
+next: >-
+  (1) If confinement is accepted as physical, the ladder within [R*, R2] is
+  the object; characterize the R=8 free-wall minimizer as the preferred state
+  (lighter, same clock). (2) If an isolated particle is required, the model
+  class must change: the flat np/na channels define the long-range sector to
+  be paired asymptotically. (3) Coulomb item 5 remains defined-blocked.
+environment: NumPy 1.26.4, SciPy 1.11.4, PyTorch 2.13.0+cpu float64; no CUDA

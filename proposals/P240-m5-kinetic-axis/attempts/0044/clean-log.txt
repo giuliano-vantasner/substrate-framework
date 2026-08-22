@@ -2,3 +2,17 @@
 Consider using tensor.detach() first. (Triggered internally at /__w/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:822.)
   e_seed = float(
 anchor R=13.0 order=16 E=55.89961066
+R=14.0 order=20 nodes=80 E=56.22021311 verify=56.22021311 shift=8.8e-16 relgrad=2.4e-14 ACCEPT
+  lambda_min(A) = -7.649567e-07 (recon 2.9e-11)
+/home/administrator/projects/substrate-framework/proposals/P240-m5-kinetic-axis/attempts/0044/debox_ladder.py:70: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /__w/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:822.)
+  e_seed = float(
+R=15.0 order=24 nodes=96 E=56.57094834 verify=56.57094834 shift=9.8e-15 relgrad=4.2e-14 ACCEPT
+  lambda_min(A) = -4.984163e-07 (recon 2.9e-11)
+R=16.0 order=28 nodes=112 E=56.91088904 verify=56.91088904 shift=7.5e-15 relgrad=5.7e-14 ACCEPT
+  lambda_min(A) = -4.024661e-07 (recon 2.9e-11)
+R=17.0 order=32 nodes=128 E=57.22791431 verify=57.22791431 shift=9.6e-15 relgrad=9.2e-14 ACCEPT
+  lambda_min(A) = -5.798664e-07 (recon 2.9e-11)
+R=18.0 order=36 nodes=144 E=57.51939388 verify=57.51939388 shift=8.9e-15 relgrad=1.8e-13 ACCEPT
+  lambda_min(A) = -6.845408e-07 (recon 4.4e-11)
+clean ladder done
