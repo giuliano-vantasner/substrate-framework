@@ -125,4 +125,4 @@ claims:
     disposition: revision_required
     resolved: true
     repair_class: conditional_chain_composition
-    evidence: ["review/peer-review.md composition audit"]
+    evidence: ["reviews/peer-review.md composition audit"]

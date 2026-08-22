@@ -12,7 +12,7 @@ import yaml
 
 HERE = Path(__file__).resolve().parent
 REPOSITORY = HERE.parent
-CORPUS = HERE / "corpus"
+CORPUS = REPOSITORY / "corpus"
 EXPECTED_IDS = {f"P241-S{index:02d}" for index in range(1, 24)}
 PAPER_SHA256 = (
     "dc23cbd98a551cb95d2409ab6bef0b1720303d420b6fb0d2b44a9ddd2f580783"
@@ -66,8 +66,8 @@ def run_lean() -> list[subprocess.CompletedProcess[str]]:
 
 
 def main() -> int:
-    inventory = yaml.safe_load((HERE / "claims" / "inventory.yaml").read_text())
-    results = yaml.safe_load((HERE / "claims" / "results.yaml").read_text())
+    inventory = yaml.safe_load((REPOSITORY / "claims" / "inventory.yaml").read_text())
+    results = yaml.safe_load((REPOSITORY / "claims" / "results.yaml").read_text())
 
     inventory_ids = {item["id"] for item in inventory["claims"]}
     result_items = results["claims"]

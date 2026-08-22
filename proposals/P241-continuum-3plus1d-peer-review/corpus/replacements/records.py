@@ -155,7 +155,7 @@ RECORDS: list[dict[str, object]] = [
                        "Schwarzschild/Kerr realizations). The headline sentence "
                        "'first fundamental advancement since Einstein 1907' "
                        "must be deleted or restated as the scoped theorem.",
-        "oracle": "review/peer-review.md (composition audit)",
+        "oracle": "reviews/peer-review.md (composition audit)",
     },
 ]
 
