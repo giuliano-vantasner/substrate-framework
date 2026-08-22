@@ -34,4 +34,3 @@ The symbolic derivation explains the structure: V2 around the projector is exact
 ## Continuation State
 
 Gap five closes negatively: confinement is load-bearing; the object exists as a finite-size-confined state in R in [~8, ~34]. The pair/Newton question has no de-boxed realization in this model class; any extension must exploit the two exactly flat shear channels as the long-range multipole sector (asymptotic pairing). Coulomb item 5 remains defined-blocked.
-
