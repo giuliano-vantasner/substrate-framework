@@ -114,9 +114,15 @@ After the final merge boundary is known, update the goal issue—not only the PR
 ### Frontier
 - Claims promoted: <none or ids>; goal: <open or complete>.
 - Strongest result retained: <statement>.
-- One next decisive action: <command, derivation, or experiment>.
+- One next decisive action: <command, derivation, or experiment>, stated as the
+  object it constructs, the question it closes, or the distinction it establishes.
 - Reconsider a blocker if: <specific counterevidence>, or `not applicable`.
 ```
+Every handoff states its next action as a positive contribution to resolution: what
+becomes true in the record when it succeeds. A refutation counts when stated through
+its mechanism; an action phrased entirely as avoidance or risk reduction is returned
+to the author for a directional statement, because the inheriting agent follows
+directions and drifts along boundaries.
 
 Keep this handoff short and unit-level. Link exact files, evidence, and commits so
 the next agent can resume without reconstructing the PR. Add lifecycle or

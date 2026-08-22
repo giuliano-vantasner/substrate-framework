@@ -5,7 +5,9 @@ technique that worked, a failure mode worth naming, a number another attempt wil
 cite. It is a lab notebook page, not a compliance form: keep the sections that
 earn their place and drop the rest; the only fixed contract is the frontmatter
 and the prose-first rule. Store the filled record in memory under `efforts` (or
-link it from the attempt's result file).
+link it from the attempt's result file). When the check leaves an open question,
+state the next step as its positive contribution to resolution — the object it
+constructs, the question it closes, or the distinction it establishes.
 
 Begin every section with a plain-prose sentence. Inline code, a table, or a list
 does not satisfy the memory index's first-content disclosure contract.
