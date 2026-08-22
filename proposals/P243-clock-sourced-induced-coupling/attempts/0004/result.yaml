@@ -1,0 +1,75 @@
+claim: C-M5S-002 (scale selection, candidate D)
+verdict: >
+  Refuted.  The preregistered Morse-index critical radius does not exist:
+  there is no radius at which the clock sector flips from index 1 to
+  index 0, because the certified P240 R=6 root and the stable window
+  roots lie on two distinct stationary-point families.  Numeric
+  Delta(1/G) evaluation stays blinded; a family-aware successor
+  construction is registered (candidate E, below).
+established_along_the_way:
+  - >
+    Bisection on the discrete Morse index initially located a flip inside
+    [6.0, 6.01171875], reproduced identically at solver orders 16/18/20
+    (all orders negative at R=6.0, positive at R=6.0117).
+  - >
+    Frozen-field quadrature sweep (nodes 32..96, orders 16..24) proves
+    the certified R=6 instability lambda_1 = -6.255e-2 is not a coarse-
+    grid artifact; lambda_1 is quadrature-stable to all printed digits
+    from 48 nodes up.
+  - >
+    The apparent flip is a seed-history artifact: continuation seeds
+    switched families.  Two families coexist near R ~ 6:
+    family U contains the certified R=6 root (E=46.5836,
+    lambda_1=-6.26e-2) and remains unstable through R=8.0
+    (lambda_1=-1.38e-2 at E=50.706, a root distinct from the certified
+    stable R=8 window root at E=50.446);
+    family S carries every certified window root R >= 7.5, is stable
+    (lambda_1 ~ +8e-6 plateau) from at least R=14 down to R=5.9, and
+    shows no fold in that range (smooth E decrease toward smaller R).
+refutations:
+  candidate_D:
+    statement: Lambda = 1/R* with R* the Morse-index critical radius
+      (index 1 below, index 0 above)
+    mechanism: >
+      False premise -- single-branch assumption.  Index(R) is
+      family-dependent: family S already has index 0 at R=5.9 < 6, and
+      family U still has index >= 1 at R=8.0 > 7.5.  No radius separates
+      "index 1 below" from "index 0 above" along one connected branch.
+    evidence: family-resolution.json (S-descent to 5.9 all index 0;
+      U-ascent to 8.0 all index >= 1)
+negative_subrecords:
+  - >
+    Re-solve-based independence checks are unsound near flat directions:
+    a fine-quadrature re-solve jumped from family U to family S and
+    mimicked a sign flip.  Independence must be tested at frozen field
+    values (quadrature-probe protocol).
+  - >
+    lambda_min on the stable side halves roughly geometrically per
+    solver order (3.69e-5, 1.67e-5, 8.08e-6, 3.06e-6, 1.49e-6 at
+    N16..N24) without saturating; the continuum-side value is consistent
+    with a marginal (zero) mode.  Recorded as a declared systematic; it
+    does not affect the refutation, which rests on discrete indices.
+registered_next_construction:
+  id: candidate_E
+  statement: >
+    Lambda = 1/R_U* where R_U* is the stabilization radius of family U,
+    the branch containing the certified P240 R=6 root: bisection on
+    U's discrete Morse index between R=8.0 (index >= 1 measured) and
+    the extrapolated crossing region R ~ 8.3-8.5 (lambda_1 slope decays
+    geometrically, factor ~0.83 per 0.25 in R).  Ontology argument is
+    unchanged from D: an action-level instability threshold of the
+    certified sector configuration is box-independent by definition;
+    the repair is only that the threshold must be taken along the
+    certified branch itself, not across families.
+  status: registered, not yet computed; requires its own preregistration
+    wave before any solve
+consequence_for_campaign: >
+  Scale selection remains open; selection.json keeps selected_candidate
+  null and numeric_evaluation.py stays gated.  The symbolic composition
+  results of attempt 0003 are Lambda-independent and unaffected.
+downstream_flag_for_user: >
+  The two-family discovery touches P240's territory: its certified R=6
+  kinetic-axis root is an unstable saddle while a stable twin family
+  coexists at the same radius.  Whether the kinetic-axis campaign's
+  claims need a family qualifier is a P240 governance question, flagged
+  here and not acted on unilaterally.

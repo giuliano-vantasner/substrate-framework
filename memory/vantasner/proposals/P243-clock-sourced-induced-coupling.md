@@ -165,6 +165,31 @@ canonical energy-minimizing relaxer cannot reach the excited clock
 branch from cold starts (selects a droplet branch); continuation
 seeding required.
 
+### Attempt 0004 (complete — candidate D refuted; two-family structure discovered)
+
+Candidate D (Lambda = 1/R*, R* the Morse-index critical radius,
+preregistered before any solve) is refuted: no such radius exists.
+Bisection initially located an index flip inside [6.0, 6.0117],
+order-stable (16/18/20) and quadrature-stable at frozen fields (the
+certified lambda_1 = -6.255e-2 at R=6 is real, nodes 32..96), but the
+flip was seed-history: the certified P240 R=6 root and the stable
+window roots lie on TWO distinct stationary-point families.
+Family U (certified root): unstable through R=8.0 (lambda_1=-1.38e-2,
+E=50.706 vs the certified stable window root E=50.446).  Family S
+(all window roots R>=7.5): stable with lambda_1 ~ +8e-6 plateau from
+R=14 down through R=5.9, no fold.  Systematic recorded: stable-side
+lambda_min halves geometrically per order (N16..N24, no saturation —
+marginal-mode-like).  Negative sub-record: fine-quadrature RE-SOLVES
+jump families near flat directions; independence checks must evaluate
+frozen field values.  Registered candidate E (not yet computed):
+Lambda = 1/R_U*, R_U* = stabilization radius of family U, bisection
+between measured index>=1 at R=8.0 and the extrapolated crossing
+R~8.3-8.5; family identity enforced by continuation seeding from the
+certified root.  Flag for user/P240 governance: the certified R=6
+kinetic-axis root is an unstable saddle with a stable twin family at
+the same radius; family qualifier question left to P240.  Numerics
+stay blinded (selection.json still null).
+
 ## Debt Ledger
 
 Empty at instantiation. Declared hypotheses live in the manifest; honest

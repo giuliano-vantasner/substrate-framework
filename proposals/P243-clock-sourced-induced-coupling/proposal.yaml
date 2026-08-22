@@ -51,6 +51,34 @@ candidates:
   - id: C
     description: Lambda^2 = max pinned spectral target (4.0) of the spectrum
       potential; expected reject unless a length ontology is supplied
+  - id: D
+    description: >-
+      Lambda = 1/R* with R* the Morse-index critical radius of the confined-
+      clock branch: the radius at which the branch tangential-split Hessian
+      eigenvalue changes sign (index 1 below, index 0 above; certified R=6
+      index 1, window R=7.5 index 0).  An action-level instability threshold
+      of the sector itself, so cutoff-ontology closure holds by construction;
+      box-independence is tested as invariance of the crossing under solver
+      order and quadrature refinement, not against an external container.
+    registered_in: attempts/0004 (preregistered before any solve at radii in
+      (6, 7.5) was executed)
+    frozen_criteria: same four selection criteria as A/B/C above
+    disposition: refuted (attempts/0004/result.yaml) -- single-branch
+      premise false; two stationary-point families coexist near R=6
+  - id: E
+    description: >-
+      Lambda = 1/R_U* with R_U* the stabilization radius of family U,
+      the stationary-point family containing the certified P240 R=6
+      root: bisection on U's discrete Morse index (measured index >= 1
+      at R=8.0 with lambda_1 = -1.38e-2 and geometrically decaying
+      slope; expected crossing R ~ 8.3-8.5).  Same action-level
+      threshold ontology as D, applied along the certified branch
+      itself; family identity is enforced by continuation seeding from
+      the certified root and checked by energy continuity against the
+      U-branch trajectory.
+    registered_in: attempts/0004/result.yaml (registered before any
+      solve at radii in (8.0, 9.0) was executed)
+    frozen_criteria: same four selection criteria as A/B/C above
 uniqueness_evidence: null
 selection_criteria:
   - cutoff-ontology closure (a substrate length, not a regulator artifact)

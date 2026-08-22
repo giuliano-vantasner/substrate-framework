@@ -1,0 +1,31 @@
+attempt: "0004"
+campaign: P243-clock-sourced-induced-coupling
+title: candidate D (Morse-index critical radius) test and clock-branch family resolution
+question: >
+  Does Lambda = 1/R*, R* the Morse-index critical radius of the confined-
+  clock branch, satisfy the four frozen selection criteria and provide the
+  box-independent UV length for Delta(1/G)?
+method:
+  - preregistration of candidate D in proposal.yaml before any solve at
+    radii in (6, 7.5)
+  - coarse index map + bisection on the discrete Morse index along
+    continuation-seeded roots (orders 16/18/20 ladders, certified
+    pipeline settings radial_nodes=32 angular_nodes=16)
+  - frozen-field quadrature sweep (nodes 32..96 x orders 16..24) to
+    separate eigenvalue response from root identity
+  - order-ladder extension to N22/N24 on the stable side (geometric-vs-
+    saturated lambda_min systematics)
+  - two-family resolution walks: U-ascent from the certified branch,
+    S-descent from the window-root family
+comparator_blinding: >
+  Delta(1/G)/G_total numerics stayed blinded; all verdicts are structural.
+inputs:
+  - proposals/P240-m5-kinetic-axis/attempts/0041/radial-results.json
+  - proposals/P240-m5-kinetic-axis/attempts/0041/solve_radial_1d.py
+outputs:
+  - attempts/0004/morse_bisection.py (+ morse-run1.log, morse-results.json)
+  - attempts/0004/quadrature_probe.py (+ quadrature-probe.json)
+  - attempts/0004/refine_stable_side.py (+ stable-side-refinement.json)
+  - attempts/0004/family_resolution.py (+ family-resolution.json,
+    family.log)
+verdict: refuted-with-named-missing-construction
