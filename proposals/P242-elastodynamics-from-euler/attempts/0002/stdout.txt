@@ -1,0 +1,7 @@
+PASS [C-ELS-002] longitudinal on-shell field satisfies Navier-Cauchy exactly
+PASS [C-ELS-002] off-shell residual is proportional to the dispersion defect
+PASS [C-ELS-002] Christoffel spectrum == {c_P^2, c_S^2}
+PASS [C-ELS-002] mutation: sign-flipped closure cannot satisfy the balance
+PASS [C-ELS-002] mutation: mu -> 0 collapses the transverse branch
+PASS [C-ELS-002] mutation: lam = -2mu loses strong ellipticity
+ALL 6 CHECKS PASS [C-ELS-002]

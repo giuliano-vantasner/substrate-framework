@@ -1,0 +1,6 @@
+PASS [C-ELS-002-dynamics] measured omega == c_S*k = 6.000000 within 1e-6
+PASS [C-ELS-002-dynamics] oscillator energy conserved across the integration window
+PASS [C-ELS-002-dynamics] frequency estimate stable under sampling/tolerance refinement
+PASS [C-ELS-002-dynamics] mutation: half-strength medium oscillates off the claimed shell
+PASS [C-ELS-002-dynamics] mutation control: it does match its own half-strength dispersion
+ALL 5 CHECKS PASS [C-ELS-002-dynamics]

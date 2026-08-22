@@ -1,0 +1,12 @@
+PASS [C-ELS-003] <n_i n_j> = delta_ij/3
+PASS [C-ELS-003] all 15 unique fourth moments: direct == closure
+PASS [C-ELS-003] <(n eps n)^2> == ((tr eps)^2 + 2 eps:eps)/15 on general strain
+PASS [C-ELS-003] lambda = E_f L_v / 15
+PASS [C-ELS-003] mu = E_f L_v / 15
+PASS [C-ELS-003] nu = 1/4
+PASS [C-ELS-003] c_P^2/c_S^2 = 3 (i.e. c_P/c_S = sqrt(3))
+PASS [C-ELS-003] T = rho Gamma^2 ln(R/a) / (4 pi) from integrated Biot-Savart energy
+PASS [C-ELS-003] mutation: halved circulation prefactor breaks the lemma
+PASS [C-ELS-003] identity holds componentwise even with sparse strains
+PASS [C-ELS-003] mutation: doubled L_v doubles both moduli
+ALL 11 CHECKS PASS [C-ELS-003]

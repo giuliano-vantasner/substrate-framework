@@ -1,0 +1,8 @@
+PASS [C-ELS-005] chain output: positive computed moduli for positive premises
+PASS [C-ELS-005] P speed squared = E_f L_v / (5 rho)
+PASS [C-ELS-005] S speed squared = E_f L_v / (15 rho)
+PASS [C-ELS-005] numeric instance: longitudinal wave is exactly on shell
+PASS [C-ELS-005] mutation: L_v = 0 collapses the medium (no elasticity)
+PASS [C-ELS-005] mutation: negative axial stiffness cannot define a stable medium
+PASS [C-ELS-005] line-tension scale available as declared input to the premises
+ALL 7 CHECKS PASS [C-ELS-005]

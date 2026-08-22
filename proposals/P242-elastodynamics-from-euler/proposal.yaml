@@ -1,0 +1,67 @@
+id: P242
+base_release: v0.163.0
+source_baseline: substrate-framework@e9b67af4
+question: >-
+  Does coarse-graining a declared ensemble of vortex filaments evolving under
+  constant-density incompressible Euler dynamics yield an exact conditional
+  derivation of isotropic elastodynamics (Navier-Cauchy with computed positive
+  effective Lame moduli and wave speeds), with the load-bearing ensemble
+  premises named, independently falsifiable, and with the no-elasticity side
+  (unconstrained ergodic ensembles) demonstrated by simulation?
+source_inventory:
+  - source: MIT 2.25 Advanced Fluid Dynamics, Section 9 (vorticity and circulation)
+    access: open https://web.mit.edu/2.25/www/225_sect_9.html
+    extracted: >-
+      Circulation definition and Biot-Savart law (9.2); Kelvin's circulation
+      theorem (9.3); vortex lines move with the fluid (9.4a). Verified
+      accessible 2026-08-22; basis of the frozen-line premise and the
+      straight-line energy lemma.
+  - source: arXiv:2602.03770 ultrastable glasses, centrosymmetry and non-affine relaxation
+    access: open https://arxiv.org/abs/2602.03770
+    extracted: >-
+      Non-affine relaxations lower the shear modulus; local centrosymmetry
+      suppresses them. Context for C-ELS-006 only; no formula imported.
+  - source: arXiv:2605.21021 microscopic nonaffine deformation theory
+    access: open https://arxiv.org/abs/2605.21021
+    extracted: Non-affine formalism context for network elasticity (C-ELS-006 context only).
+  - source: arXiv:2603.27352 stoichiometric rigidity and Maxwell counting
+    access: open https://arxiv.org/abs/2603.27352
+    extracted: Maxwell counting isostatic threshold context (C-ELS-006 context only).
+  - source: vantasnerdan/substrate-framework issue 158 attachment PDF and four SymPy scripts
+    access: in-hand /tmp/issue158 and GitHub attachment
+    extracted: >-
+      Conditional sketches under triage; secondary LLM output. Not load-bearing
+      for any exact claim; its premises are absorbed as explicitly declared
+      hypotheses of this campaign.
+invariants:
+  - no edits to accepted claims, campaigns, generated docs, or migration queues
+  - constant-density incompressible Euler is the sole microscopic dynamics
+  - every emergent elasticity statement is conditional on explicitly declared ensemble premises; no hidden fitted constant
+  - exact claims use SymPy oracles; numeric claims use scipy with declared refinement and mutation probes
+  - the incompressible constraint branch and the compressible branch are never mixed inside one computation
+allowed_imports:
+  - sympy/numpy/scipy stack in .venv
+  - MIT 2.25 Section 9 classical statements (Kelvin theorem, Biot-Savart field) as declared classical mechanics
+candidates:
+  - id: A
+    description: frozen-connectivity affine Cauchy-Born tangle with axial line stiffness E_f; declared ensemble premises
+  - id: B
+    description: ergodic Reynolds-stress closure without topology locking (issue 158 optimistic sketch)
+uniqueness_evidence: null
+selection_criteria:
+  - framework invariant compatibility (fluid limit recovers Euler, solid limit Navier-Cauchy)
+  - assumption and parameter economy (each premise named and independently falsifiable)
+  - correct limits and cross-sector composition (compressible vs incompressible branches separated)
+  - implementability with claim-appropriate oracles
+claims_proposed:
+  - C-ELS-001
+  - C-ELS-002
+  - C-ELS-003
+  - C-ELS-004
+  - C-ELS-005
+  - C-ELS-006
+  - C-ELS-007
+comparators_blinded_until: >-
+  no empirical comparator is used; every claim is exact-conditional or
+  simulation-against-declared-model, so the blinding point is structural freeze
+status: draft

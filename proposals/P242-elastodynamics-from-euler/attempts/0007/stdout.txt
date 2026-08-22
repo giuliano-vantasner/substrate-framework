@@ -1,0 +1,11 @@
+PASS [C-ELS-006] f=0 network (z=6): relaxed modulus exactly zero
+PASS [C-ELS-006] f=0 network: no propagating transverse branch (soft modes)
+PASS [C-ELS-006] relaxed modulus strictly increases with connectivity above threshold
+PASS [C-ELS-006] Maxwell count z=6 satisfied while mu = 0: necessary, not sufficient
+PASS [C-ELS-006] centrosymmetric Bravais network: non-affine correction vanishes
+PASS [C-ELS-006] relaxed == affine == 4/3 for the isotropic network
+PASS [C-ELS-006] static and phonon routes agree to 1e-8 (isotropic network)
+PASS [C-ELS-006] Bloch matrix is symmetric positive semidefinite at small q
+PASS [C-ELS-006] mutation: doubled stiffness doubles the modulus (linear springs)
+PASS [C-ELS-006] mutation: sign-flipped stiffness yields a detected negative mode
+ALL 10 CHECKS PASS [C-ELS-006]
