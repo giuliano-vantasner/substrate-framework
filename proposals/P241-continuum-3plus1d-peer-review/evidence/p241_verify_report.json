@@ -1,0 +1,28 @@
+{
+  "campaign": "P241",
+  "checks": {
+    "inventory_exact": true,
+    "results_exact": true,
+    "reviews_complete": true,
+    "revision_set_matches": true,
+    "counts_match": true,
+    "no_open_debt": true,
+    "paper_sha_matches": true,
+    "sympy": true,
+    "scipy": true,
+    "replacement_records": true,
+    "revision_replacement_coverage": true,
+    "lean": true
+  },
+  "oracle_counts": {
+    "sympy_modules": 21,
+    "scipy_modules": 5,
+    "lean_theorems": 20,
+    "replacement_records": 10
+  },
+  "claim_counts": {
+    "revision_required": 10,
+    "supported": 13
+  },
+  "lean_stderr": []
+}

@@ -1,0 +1,21 @@
+schema_version: 1
+campaign: P241
+issue:
+  repository: vantasnerdan/substrate-framework
+  number: 154
+  title: >-
+    Peer review request: continuum dynamics 3+1D solitonic matter and the
+    equivalence principle (Fulceri v1.0, 2026-08-21)
+  state_at_review_start: open
+audit:
+  attachment_sha256: dc23cbd98a551cb95d2409ab6bef0b1720303d420b6fb0d2b44a9ddd2f580783
+  identical_to_destination_repo_pdf: true
+  duplicate_in_flight_work: none_found
+  prior_campaign_ids_checked: [P237, P238, P239, P240]
+  next_free_claim_namespace: P241-S01..S23
+memory_and_index_checks:
+  - memory search: kerr conformal determinant eigenvalue physical (no direct precedent; nearest shape P142 determinant/eigen-signature oracle)
+  - gitnexus: substrate-framework index consulted for boundary_scattering tests and P238 companion layout
+disposition_update_obligation: >-
+  The canonical issue #154 must be updated with the destination PR link and a
+  compact record of what landed when this review PR is opened.

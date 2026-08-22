@@ -78,6 +78,7 @@ Build the smallest dependency-first ladder. Each row names the strongest practic
 
 ## Importable Implementation
 Name canonical package APIs to add or reuse. Campaign scripts must call these APIs and must not duplicate constants, solvers, profiles, convention conversions, or check helpers. For numerical work, state whether `substrate_framework.numerics` applies and identify the claim-owned equation, operator, initial/boundary data, mesh, tolerances, and error metric. Route canonical sampled trapezoidal integration through its compatibility helper; mutable standalone scripts for the current environment use `np.trapezoid`, never removed `np.trapz`, and tractable exact integrals stay symbolic. Preflight direct attributes, imported names, and dynamic `getattr` access; nested fallback defaults are eager, so use a two-step `None` fallback.
+Structure the verifier corpus as one small standalone module per claim with a thin aggregator; a monolithic multi-hundred-line script localizes failures poorly.
 
 ## Harvest Checkpoints
 Record each locally complete unit as soon as it becomes independently correct and reusable. Use `$research-pr-harvest` to decide whether to merge it unchanged, refactor it into a clean unit, or leave it in PR history. A harvested unit does not complete the parent objective or promote its headline claim. Missing campaign links belong in the active frontier, not the debt ledger.

@@ -1,0 +1,128 @@
+campaign: P241
+open_debt: []
+claims:
+  - id: P241-S01
+    disposition: supported
+    resolved: true
+    repair_class: none
+    evidence: [corpus/checks/sympy/S01_el_equation.py]
+  - id: P241-S02
+    disposition: revision_required
+    resolved: true
+    repair_class: unit_table_correction
+    evidence: [corpus/checks/sympy/S02_dimension_declarations.py]
+  - id: P241-S03
+    disposition: supported
+    resolved: true
+    repair_class: none
+    evidence: [corpus/checks/sympy/S03_isotropic_reduction.py]
+  - id: P241-S04
+    disposition: supported
+    resolved: true
+    repair_class: scaling_only_qualifier
+    evidence: [corpus/checks/sympy/S04_compton_scales.py]
+  - id: P241-S05
+    disposition: revision_required
+    resolved: true
+    repair_class: existence_scope_restriction
+    evidence: [corpus/checks/sympy/S05_derrick_obstruction.py, corpus/lean/P241PaperChecks.lean]
+  - id: P241-S06
+    disposition: revision_required
+    resolved: true
+    repair_class: potential_convexity_qualification
+    evidence: [corpus/checks/scipy/N01_oscillon_existence.py]
+  - id: P241-S07
+    disposition: supported
+    resolved: true
+    repair_class: hypothesis_declared_ok
+    evidence: [corpus/checks/scipy/N04_eikonal_residual.py]
+  - id: P241-S08
+    disposition: revision_required
+    resolved: true
+    repair_class: directional_impedance_condition
+    evidence:
+      - corpus/checks/sympy/S08_directional_impedance.py
+      - corpus/checks/scipy/N03_impedance_interface.py
+  - id: P241-S09
+    disposition: supported
+    resolved: true
+    repair_class: none
+    evidence: [corpus/checks/scipy/N02_geodesic_universality.py]
+  - id: P241-S10
+    disposition: revision_required
+    resolved: true
+    repair_class: add_E0_constancy_hypothesis
+    evidence: [corpus/checks/sympy/S10_rest_mass_variation.py]
+  - id: P241-S11
+    disposition: supported
+    resolved: true
+    repair_class: conditional_reduction_noted
+    evidence:
+      - corpus/checks/sympy/S11_squareroot_canonical.py
+      - corpus/checks/sympy/S11_boosted_family.py
+  - id: P241-S12
+    disposition: supported
+    resolved: true
+    repair_class: none
+    evidence: [corpus/checks/sympy/S12_einbein_constraint.py]
+  - id: P241-S13
+    disposition: supported
+    resolved: true
+    repair_class: none
+    evidence: [corpus/checks/sympy/S13_geodesic_affine.py]
+  - id: P241-S14
+    disposition: supported
+    resolved: true
+    repair_class: none
+    evidence: [corpus/checks/sympy/S14_optical_metric.py]
+  - id: P241-S15
+    disposition: supported
+    resolved: true
+    repair_class: none
+    evidence: [corpus/checks/sympy/S15_time_dilation.py, corpus/lean/P241PaperChecks.lean]
+  - id: P241-S16
+    disposition: supported
+    resolved: true
+    repair_class: premises_stated_ok
+    evidence: [corpus/checks/sympy/S16_S17_contraction_speeds.py]
+  - id: P241-S17
+    disposition: supported
+    resolved: true
+    repair_class: premises_stated_ok
+    evidence: [corpus/checks/sympy/S16_S17_contraction_speeds.py]
+  - id: P241-S18
+    disposition: revision_required
+    resolved: true
+    repair_class: sign_and_factor_correction
+    evidence:
+      - corpus/checks/sympy/S18_newtonian_limit_sign.py
+      - corpus/lean/P241ReplacementProofs.lean
+  - id: P241-S19
+    disposition: revision_required
+    resolved: true
+    repair_class: scope_to_massive_universality
+    evidence:
+      - corpus/checks/sympy/S19_massless_factor_two.py
+      - corpus/checks/scipy/N05_null_massive_deflection.py
+  - id: P241-S20
+    disposition: revision_required
+    resolved: true
+    repair_class: explicit_conformal_profiles
+    evidence: [corpus/checks/sympy/S20_schwarzschild_corrected.py]
+  - id: P241-S21
+    disposition: revision_required
+    resolved: true
+    repair_class: corrected_kerr_dictionary
+    evidence:
+      - corpus/checks/sympy/S21_kerr_dictionary_audit.py
+      - corpus/checks/sympy/S21_kerr_corrected_dictionary.py
+  - id: P241-S22
+    disposition: supported
+    resolved: true
+    repair_class: rename_and_cite_provenance
+    evidence: [corpus/checks/sympy/S22_minimal_model_published.py]
+  - id: P241-S23
+    disposition: revision_required
+    resolved: true
+    repair_class: conditional_chain_composition
+    evidence: ["reviews/peer-review.md composition audit"]

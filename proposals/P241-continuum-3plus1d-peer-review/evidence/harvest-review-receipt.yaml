@@ -1,0 +1,45 @@
+schema_version: 1
+campaign: P241
+kind: harvest_review_receipt
+boundary:
+  base_commit: 2de7244
+  review_pr: vantasnerdan/substrate-framework#156
+  paper_sha256: dc23cbd98a551cb95d2409ab6bef0b1720303d420b6fb0d2b44a9ddd2f580783
+  lean_project: mathlib v4.28.0 built checkout (formal/.lake), leanprover/lean4:v4.28.0
+commands_and_results:
+  - command: python3 corpus/checks/run_sympy.py
+    result: 21/21 modules passed (rc=0)
+  - command: python3 corpus/checks/run_scipy.py
+    result: 5/5 modules passed (rc=0) after the N01 criterion repair recorded below;
+      standalone module additionally bit-stable across repeated runs
+  - command: python3 corpus/replacements/records.py
+    result: 10 records, no missing oracles (rc=0)
+  - command: LEAN_PROJECT_DIR=<built mathlib v4.28.0> python3 reviews/verify.py
+    result: all 12 boundary checks true; claim counts revision_required=10,
+      supported=13; open_debt empty; Lean pair compiles clean (20 theorems)
+repairs_in_this_review:
+  - path: reviews/verify.py
+    reason: >-
+      The harvest move re-rooted the upstream flat review/ layout into
+      claims/, corpus/, and reviews/ without updating the verifier's internal
+      paths; as committed, verify.py could not run at all from its harvested
+      location (FileNotFoundError before any oracle ran).
+    change: CORPUS and the two claims/ reads now resolve from REPOSITORY.
+  - path: corpus/checks/scipy/N01_oscillon_existence.py
+    reason: >-
+      Part A compared near-empty core-energy remnants across resolutions
+      against an absolute 4e-3 spread. Once the lump has radiated, the remnant
+      is grid debris rather than a converged observable; last-bit solver
+      differences under a different process environment were observed to flip
+      a level between ~4e-2 retained and fully emptied, changing the verdict
+      while the physics conclusion was unchanged.
+    change: >-
+      Runs retaining >= 5e-3 of initial core energy are compared (frequency
+      >= 0.995 among them, finest-pair refinement agreement < 4e-3); runs
+      below the floor count as fully radiated. The binding-detection guards
+      (max fraction < 0.15; sine-Gordon control) are unchanged.
+  - path: corpus/replacements/records.py and claims/results.yaml
+    reason: Live records still pointed at the pre-harvest review/peer-review.md path.
+    change: Repointed to reviews/peer-review.md. Frozen destination-repo
+      receipts keep their historical layout strings untouched.
+receipt_status: final

@@ -1,0 +1,110 @@
+paper: "2026-08-21_continuum_dynamics_3plus1D_solitonic_matter_equivalence_principle_v1.0"
+author: Tiziano Fulceri
+version: "1.0 (2026-08-21)"
+paper_sha256: dc23cbd98a551cb95d2409ab6bef0b1720303d420b6fb0d2b44a9ddd2f580783
+campaign: P241
+upstream_issue: "https://github.com/vantasnerdan/substrate-framework/issues/154"
+claims:
+  - id: P241-S01
+    title: Euler-Lagrange equation (5) follows from Lagrangian density (2)
+    anchor: "Sec 2, Eq (1)-(5)"
+    oracles: [corpus/checks/sympy/S01_el_equation.py]
+  - id: P241-S02
+    title: Constitutive unit declarations are internally consistent
+    anchor: "Sec 2 bullets after Eq (2)-(3), Eq (6)-(10)"
+    oracles: [corpus/checks/sympy/S02_dimension_declarations.py]
+  - id: P241-S03
+    title: Isotropic reduction (6)-(8) to NLKG with c0^2 = Theta0/rho0
+    anchor: "Sec 3, Eq (6)-(10)"
+    oracles: [corpus/checks/sympy/S03_isotropic_reduction.py]
+  - id: P241-S04
+    title: Compton/Einstein-de-Broglie scales (11)-(12); M0 proportional scaling only
+    anchor: "Sec 3, Eq (11)-(12)"
+    oracles: [corpus/checks/sympy/S04_compton_scales.py]
+  - id: P241-S05
+    title: Static-lump existence framing vs Derrick scaling in d=3
+    anchor: "Sec 3, Eq (13)-(15) discussion"
+    oracles: [corpus/checks/sympy/S05_derrick_obstruction.py]
+  - id: P241-S06
+    title: The displayed model admits oscillons/pulsons (existence language)
+    anchor: "Abstract, Sec 1, Sec 3 closing paragraph"
+    oracles: [corpus/checks/scipy/N01_oscillon_existence.py]
+  - id: P241-S07
+    title: Eikonal hypothesis declared; frozen-background reduction is first-order
+    anchor: "Sec 5 opening"
+    oracles: [corpus/checks/scipy/N04_eikonal_residual.py]
+  - id: P241-S08
+    title: Impedance matching rho(det Theta)^(1/3) = Z0 makes interfaces reflectionless
+    anchor: "Sec 4, Eq (16)-(17)"
+    oracles:
+      - corpus/checks/sympy/S08_impedance_recovery.py
+      - corpus/checks/sympy/S08_directional_impedance.py
+      - corpus/checks/scipy/N03_impedance_interface.py
+  - id: P241-S09
+    title: Centroid motion of localized lump follows effective particle dynamics
+    anchor: "Sec 5, Eq (18)-(20)"
+    oracles: [corpus/checks/scipy/N02_geodesic_universality.py]
+  - id: P241-S10
+    title: M0 = E0/c0^2 is constant along the path without further hypothesis
+    anchor: "Sec 5, Eq (20)-(21)"
+    oracles: [corpus/checks/sympy/S10_rest_mass_variation.py]
+  - id: P241-S11
+    title: Leff square-root form (21)-(25) identification
+    anchor: "Sec 5, Eq (21)-(25)"
+    oracles:
+      - corpus/checks/sympy/S11_squareroot_canonical.py
+      - corpus/checks/sympy/S11_boosted_family.py
+  - id: P241-S12
+    title: Einbein constraint (27) recovers the square root (26)
+    anchor: "Sec 6, Eq (26)-(28)"
+    oracles: [corpus/checks/sympy/S12_einbein_constraint.py]
+  - id: P241-S13
+    title: Einbein EL equations give geodesics (28)-(30)
+    anchor: "Sec 6, Eq (28)-(30)"
+    oracles: [corpus/checks/sympy/S13_geodesic_affine.py]
+  - id: P241-S14
+    title: Optical metric components (31)-(34) coincide with (23)-(25)
+    anchor: "Sec 6, Eq (31)-(34)"
+    oracles: [corpus/checks/sympy/S14_optical_metric.py]
+  - id: P241-S15
+    title: Time dilation dtau/dt = sqrt(-g00) = 1/sqrt(nbar)
+    anchor: "Sec 7, Eq (35)-(36)"
+    oracles: [corpus/checks/sympy/S15_time_dilation.py]
+  - id: P241-S16
+    title: Anisotropic length contraction (37)-(39)
+    anchor: "Sec 7, Eq (37)-(39)"
+    oracles: [corpus/checks/sympy/S16_S17_contraction_speeds.py]
+  - id: P241-S17
+    title: Principal-axis coordinate speeds (40)-(42)
+    anchor: "Sec 7, Eq (40)-(42)"
+    oracles: [corpus/checks/sympy/S16_S17_contraction_speeds.py]
+  - id: P241-S18
+    title: Displayed Newtonian limit (43) sign and factor
+    anchor: "Sec 7, Eq (43)"
+    oracles:
+      - corpus/checks/sympy/S18_newtonian_limit_sign.py
+      - corpus/checks/scipy/N02_geodesic_universality.py
+  - id: P241-S19
+    title: Massless probes follow the same acceleration law as massive lumps
+    anchor: "Sec 7 closing equivalence-principle claim"
+    oracles:
+      - corpus/checks/sympy/S19_massless_factor_two.py
+      - corpus/checks/scipy/N05_null_massive_deflection.py
+  - id: P241-S20
+    title: Schwarzschild realization (44)-(47) explicit conformal profiles
+    anchor: "Sec 9, Eq (44)-(47)"
+    oracles: [corpus/checks/sympy/S20_schwarzschild_corrected.py]
+  - id: P241-S21
+    title: Kerr dictionary (48)-(57) correctness
+    anchor: "Sec 9, Eq (48)-(57)"
+    oracles:
+      - corpus/checks/sympy/S21_kerr_dictionary_audit.py
+      - corpus/checks/sympy/S21_kerr_corrected_dictionary.py
+  - id: P241-S22
+    title: Minimal rotating model (58)-(60) provenance vs published 2+1D
+    anchor: "Sec 9, Eq (58)-(60)"
+    oracles: [corpus/checks/sympy/S22_minimal_model_published.py]
+  - id: P241-S23
+    title: Section 10 chain composition and headline claim
+    anchor: "Sec 10 incl. 'first fundamental advancement since Einstein 1907'"
+    oracles: ["review composition audit (see peer-review.md)"]

@@ -1,0 +1,27 @@
+source:
+  title: >-
+    Continuum Dynamics in 3+1 Dimensions: Solitonic Matter and the Equivalence
+    Principle
+  subtitle: >-
+    Systematic generalization of the 1+1D sine-Gordon synthesis and the 2+1D
+    nonlinear Klein-Gordon treatment to three spatial dimensions
+  version: 1.0
+  dated: '2026-08-21'
+  author: Tiziano Fulceri
+  collaboration_note: in collaboration with SuperGrok Heavy 4.5 (xAI)
+  supplied_at: https://github.com/vantasnerdan/substrate-framework/issues/154
+  sha256: dc23cbd98a551cb95d2409ab6bef0b1720303d420b6fb0d2b44a9ddd2f580783
+  bytes: 347317
+  pages: 14
+  pdf_created_at: '2026-08-21T12:36:46Z'
+acquisition:
+  source_gate: >-
+    P241 proposal and research-arc contract instantiated before the PDF body
+    was opened; the claim inventory (P241-S01..S23), oracle routes, and review
+    transaction were frozen first.
+  extraction: >-
+    pypdf layout extraction plus page-image inspection for exact equation
+    forms; equation anchors cross-checked against rendered pages.
+  redistribution: >-
+    PDF bytes remain unredistributed; link, digest, claim inventory,
+    independent oracle sources, and results are tracked.

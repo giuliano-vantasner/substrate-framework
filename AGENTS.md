@@ -221,7 +221,14 @@ For each serious claim:
 - independently rederive load-bearing normalization factors;
 - inspect the precise formal theorem—proof of a weak encoding is not proof of its intended physics interpretation.
 
-Use `src/substrate_framework/verification.py` rather than copying local check helpers.
+Keep verification corpora modular: one small standalone module per claim or
+narrow topic plus a thin aggregator, each module well under a few hundred
+lines. A monolithic multi-hundred-line verifier localizes failures poorly,
+turns one bad hunk into an unrunnable suite, and invites edit collisions;
+per-claim modules make every pass and every failure individually addressable
+(demonstrated by the P241 split after its monolith corrupted mid-edit). Use
+`src/substrate_framework/verification.py` rather than copying local check
+helpers.
 
 ## Continuation after failure
 

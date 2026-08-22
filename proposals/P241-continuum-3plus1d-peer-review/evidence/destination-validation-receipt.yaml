@@ -1,0 +1,22 @@
+schema_version: 1
+campaign: P241
+boundary:
+  paper_sha256: dc23cbd98a551cb95d2409ab6bef0b1720303d420b6fb0d2b44a9ddd2f580783
+  runner: review/verify.py
+  lean_project: mathlib v4.28.0 (leanprover/lean4:v4.28.0), prebuilt cache
+commands_and_results:
+  - command: python3 checks/run_sympy.py
+    result: 21/21 modules passed (rc=0)
+  - command: python3 checks/run_scipy.py
+    result: 5/5 modules passed (rc=0)
+  - command: python3 replacements/records.py
+    result: 10 records, no missing oracles (rc=0)
+  - command: lake env lean P241PaperChecks.lean && lake env lean P241ReplacementProofs.lean
+    result: both compile, zero errors and warnings (20 theorems)
+  - command: python3 review/verify.py   # with LEAN_PROJECT_DIR at a built mathlib checkout
+    result: "all 12 boundary checks true; claim counts revision_required=10,
+      supported=13; open_debt empty"
+declared_impact_surface: >-
+  Additive companion subtree review/** plus root README/.gitignore; no
+  existing file other than README.md touched; PDF bytes unchanged.
+receipt_status: final
