@@ -9,6 +9,27 @@ contract when the two documents differ.
 
 ## Goal
 The sole purpose of this repository and every agent working in it is the advancement and full promotion of meaningful validated claims. Review exists to find and protect the strongest useful statement the evidence supports, not to maximize caution, exclusions, check counts, or process artifacts.
+Recursive claim weakening is a known systemic failure mode of multi-agent research
+repositories, and guarding against it is part of this contract, not an exception to it.
+Across agent generations hedging compounds: one reviewer narrows scope, the next adds a
+gate protecting the narrowed residue, a third demands stronger evidence for what
+remains — until solution spaces close, hurdles cannot be cleared, and only vacuous
+claims survive. That is not rigor; it is the objective silently replaced by process.
+Therefore:
+
+- Every acceptance gate must name the concrete failure mode it prevents and what it
+  would have changed in a past attempt. A gate with no such pedigree is removed, not
+  enforced. Gates accrete only through named mechanisms, never through caution alone.
+- Every attempt cycle terminates in exactly one decisive verdict per open question:
+  established as stated, refuted with the mechanism named, or blocked with the one
+  missing construction named. `qualified` is a waypoint toward one of these three,
+  never a resting place.
+- Scope reduction must argue that the reduction changes what downstream work can
+  conclude. Reduction that leaves no consumer better-informed is drift, not honesty.
+- After a claim survives two independent evidence passes, the burden shifts: further
+  narrowing requires new contrary evidence, not new caution. When successive reviews
+  keep shrinking a claim without such evidence, the review chain — not the claim — is
+  failing; escalate to the user instead of narrowing again.
 
 An effort is complete only when its positive claims have passed their applicable success gates, undergone individual review, entered the accepted registry, and been pinned in a release. Partial harvest remains useful progress and keeps the larger objective open, but does not substitute for claim promotion. Merge activity, documentation, and validation are scaffolding; apply only the amount that advances or protects the scientific result.
 
@@ -62,6 +83,9 @@ Never silently edit an earlier campaign. Never edit files under `docs/generated/
 ## Start every durable task this way
 
 1. Load `.agents/skills/physics-erdos-loop/SKILL.md` for physics, derivation, simulation, formalization, campaign, claim, or framework-reconciliation work. Also load `.agents/skills/theorem-synthesis/SKILL.md` when composing accepted claims into a higher theorem.
+   Load `.agents/skills/small-ratio-numerics/SKILL.md` when the work turns on a
+   small ratio: a soft Hessian eigenvalue, a weak interaction, a tiny energy
+   splitting, or any quantity orders of magnitude below the dominant energy scale.
 2. Read `governance/releases/current.yaml`, `governance/claims.yaml`, and the relevant accepted source modules. For predecessor migration, also locate the source unit in `migration/source-claims.yaml` and read its current disposition and scope policy.
 3. Search durable memory with the bundled `memory` CLI, then verify every reused fact at its source. Memory is an index and work record, not authority.
 4. Inspect git status and history. Separate committed baseline, uncommitted work, generated outputs, and attempt artifacts.

@@ -44,7 +44,11 @@ Record and discharge every new import, assumption, parameter, residual, conventi
 Return the positive result, changed paths, status axes, reproduction commands, and claim delta. Failed attempts stay here while the contract remains active.
 
 ## Done Gate
-Confirm the deliverable and applicable success conditions from `AGENTS.md`; otherwise name the next route.
+Confirm the deliverable and applicable success conditions from `AGENTS.md`; otherwise
+name the next route as its positive contribution to resolution — the object it
+constructs, the question it closes, or the distinction it establishes, phrased as what
+becomes true in the record when it succeeds. A refutation counts when stated through
+its mechanism; pure avoidance or risk reduction is an unfinished answer.
 
 ## Cross-References
 Link parent contract, proposal, claims, artifacts, and sibling awareness paths.

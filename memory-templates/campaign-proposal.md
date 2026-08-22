@@ -72,7 +72,14 @@ never hand-edit the queue. Record one impact-selected validation receipt and
 reuse it. After corrections, check only changed statements and affected edges.
 
 ## Done Gate
-The campaign closes only on the complete positive success contract in `AGENTS.md`. If any gate fails, state the next attempt and continue.
+The campaign closes only on the complete positive success contract in `AGENTS.md`. If
+a gate fails, state the next attempt and continue. Each next step is stated as its
+positive contribution to resolution: name the object it constructs, the question it
+closes, or the distinction it establishes, phrased as what becomes true in the record
+when it succeeds. A refutation counts when stated through its mechanism — the test
+distinguishes X from Y by observable O. Prohibitions and avoided failure modes do not
+describe a step; if the statement reads entirely as avoidance or risk reduction, the
+plan is not ready — find the move whose success advances the objective and state that.
 ```
 
 Matching manifest:

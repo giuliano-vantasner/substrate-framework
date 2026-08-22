@@ -69,6 +69,12 @@ does not supply what is used, or an affected-consumer failure.
 
 Reserve `refuted` for an explicit falsifier under the stated hypotheses. Use
 `unverified`, `qualified`, or a narrower evidence role for missing support.
+Every narrowing finding carries its upgrade path in the same row: what specific
+evidence would restore or extend the stronger form. A finding without an upgrade path
+is incomplete, because it hands the next agent a smaller question instead of a next
+step. If prior reviews of this claim already reduced its scope without new contrary
+evidence arriving in between, say so here and escalate to the user rather than narrow
+a third time.
 
 ## Compatibility and Consumers
 Record assumptions, imports, units, conventions, invariants, and the result of

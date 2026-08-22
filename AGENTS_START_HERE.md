@@ -150,6 +150,10 @@ must read the corresponding `SKILL.md` in full and follow the same workflow.
   scientific PR URL or number is supplied, when deciding what is mergeable, or
   when harvesting durable units from an incomplete campaign. Also load
   `physics-erdos-loop` when the PR contains physics claims.
+- Use [`small-ratio-numerics`](.agents/skills/small-ratio-numerics/SKILL.md) when a
+  computed quantity of interest is orders of magnitude below the dominant scale —
+  soft modes, weak forces, tiny splittings — or when results move with box size,
+  mesh, or execution environment.
 
 Skills specialize the root contract; they do not relax it. Read any reference
 files the selected skill routes to before taking the corresponding action.

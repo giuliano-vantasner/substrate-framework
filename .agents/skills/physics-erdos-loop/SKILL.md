@@ -10,6 +10,15 @@ Use this loop to produce a positive, framework-consistent, verified result—not
 ## Non-negotiable outcome
 
 Honesty is required but is not itself success. Classify a failed candidate, no-go, obstruction, residual, bound, or inconclusive computation as attempt evidence and continue. Do not close the effort on it. Equally, do not turn honest review into a ratchet toward trivial claims: preserve the strongest meaningful positive result, make the minimum truthful scope repair, and leave the larger objective open when it is not yet met.
+Weakening is subject to the same persistence discipline as failure-chasing. Each
+attempt must change something material — candidate concept, numerical method, oracle
+class, formalism, or target statement — rather than re-examine a known route under
+tighter standards; repeating a route with only stricter evidence thresholds is drift,
+not diligence. A new acceptance criterion invented mid-campaign must name the observed
+failure it prevents, be recorded once, and bind future attempts rather than
+retroactively invalidating finished ones. Close each attempt with a decisive verdict on
+its own question — established, refuted with mechanism, or blocked with the missing
+construction named — so the next agent inherits a direction, not a smaller question.
 
 Success requires the requested object plus all of these gates:
 
@@ -201,6 +210,13 @@ statement, exact unsupported extension, minimum repair, and evidence that would
 restore the stronger version. Prefer a correct quantifier, explicit hypothesis,
 layer split, or evidence-role change over deletion. Reject the whole statement
 only when no useful positive core survives.
+Scope reduction is legitimate only when it changes what downstream work can conclude;
+reduction that leaves every consumer equally informed is drift, and the reviewer states
+alongside any narrowing what evidence would restore the stronger form, so the next
+agent inherits a path forward. When successive reviews of one claim have each reduced
+its scope without new contrary evidence, stop narrowing: name the shrink history in
+the review record and escalate to the user, because the review chain — not the claim —
+is failing.
 
 Assign each claim independent verification, review, compatibility, and epistemic statuses. Unaccepted work stays under `proposals/`. Use `challenges` until a replacement claim is accepted; only then add `supersedes`.
 

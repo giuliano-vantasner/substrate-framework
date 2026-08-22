@@ -108,7 +108,14 @@ exclusions, adjacent observations, and the uncompleted parent goal are not debt.
 List individually accepted claims, source API/tests, immutable campaign record, release id, generated outputs, memory synchronization, commit, PR, and review evidence.
 
 ## Results and Next Action
-Record the verified positive result and every harvested unit. If the parent objective is incomplete, use `Advances #N`, preserve the exact next decisive action, and leave the goal active. A clean harvest handoff may end this PR or agent run without pretending the campaign is complete.
+Record the verified positive result and every harvested unit. If the parent objective
+is incomplete, use `Advances #N`, preserve the exact next decisive action, and leave
+the goal active. State that action as its positive contribution to resolution — the
+object it constructs, the question it closes, or the distinction it establishes, as
+what becomes true in the record when it succeeds; a refutation counts when stated
+through its mechanism, and pure avoidance or risk reduction is an unfinished answer.
+A clean harvest handoff may end this PR or agent run without pretending the campaign
+is complete.
 
 ## Done Gate
 For campaign completion, check applicable success conditions from `AGENTS.md`
