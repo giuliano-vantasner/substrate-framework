@@ -1,0 +1,58 @@
+campaign: P243
+attempt: '0001'
+canonical_goal_issue: '163'
+candidate: aligned_vacuum_fluctuation_census
+frozen_question: >-
+  What is the exact free-fluctuation content of the aligned spectral-Cartan
+  vacuum M0 with mixed targets (4, 1, 3/10, 0), classified into massive,
+  massless, and inert directions on the symmetric order-parameter space?
+method: >-
+  The curvature sector of the conditional P239 action is quadratic in first
+  derivatives, so about an aligned vacuum it contributes nothing at quadratic
+  order. The free fluctuation theory is therefore exactly the pinned spectrum
+  potential (stiffness K) plus the projector current (kinetic metric G). Both
+  are computed as exact rational matrices on the 10-dimensional symmetric
+  basis via series expansion of canonical primitives; the projector first
+  variation dP = -(du u^T eta + u du^T eta) with induced rotations du_a =
+  x_mixed[a,t]/(lambda_t - lambda_a) is certified by exact affine uniqueness
+  against its linearized defining system (right/left eigen-relations,
+  idempotence, eta self-adjointness).
+gates:
+  census_structure: passed (10 basis directions: 3 massless / 4 stiff / 3 inert)
+  exact_values: passed (kinetic 1/9, 100/1369, 1/16; stiff gaps 67905, 30,
+    361141/250000, 1)
+  certification: passed (affine system satisfied exactly, kernel trivial in
+    all 10 directions)
+  mutation_degenerate_target: passed (raises ValueError)
+  mutation_kappa_rescale: passed (coefficients move)
+  mutation_weight_drop: passed (stiff gaps move)
+findings:
+  - three_massless_propagating_species: >-
+      The timelike-eigenvector orbit (boost directions E_0a + E_a0) carries
+      zero stiffness (trace powers are stationary to second order along every
+      off-diagonal direction) and strictly positive kinetic metric from the
+      projector current. These are the long-range sector: exactly massless,
+      three real propagating species.
+  - four_stiff_static_directions: >-
+      Diagonal eigenvalue-changing directions carry positive potential
+      stiffness but no quadratic kinetics (dP_t vanishes on diagonal
+      perturbations): non-dynamical at quadratic order, excluded from species
+      counting with this named reason. Their exact squared stiffness values
+      are recorded for the ledger.
+  - three_inert_directions: >-
+      Spatial-symmetric off-diagonal directions have no quadratic dynamics
+      either way.
+verdict: established
+consequence: >-
+  The substrate supplies a derived fluctuation multiplicity N=3 for the
+  induced composition, all propagating species exactly massless (z=0), so the
+  accepted scale factor evaluates to J(0)=1 exactly and the sharp/smooth
+  scheme spread collapses identically (R(0)=1 per C-IGR-004). Delta(1/G) =
+  3*(1-6*xi)*Lambda^2/(12*pi) reduces to sourcing Lambda alone. The z >=
+  z_min control-domain predeclaration does not bind at the leading term; the
+  tau^-1 higher-curvature control class diverges logarithmically at m^2=0 and
+  is quoted as a declared boundary of the composition, not hidden debt.
+next: >-
+  Attempt 0002 sources Lambda from preregistered substrate-length candidates
+  (A gradient-energy centroid of relaxed window backgrounds; B box scale;
+  C pinned spectral target) under the frozen selection criteria.

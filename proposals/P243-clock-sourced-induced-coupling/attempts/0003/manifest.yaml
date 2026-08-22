@@ -1,0 +1,18 @@
+attempt: '0003'
+date: '2026-08-22T16:20:00+00:00'
+command: >-
+  PYTHONPATH=src .venv/bin/python
+  proposals/P243-clock-sourced-induced-coupling/attempts/0001/composition.py
+environment:
+  python: 3.12
+  sympy: pinned repository venv
+  blas_threads: default (symbolic exact arithmetic; no BLAS in the loop)
+inputs:
+  - src/substrate_framework/m5_covariant_action.py
+  - src/substrate_framework/m5_fluctuation_spectrum.py
+  - src/substrate_framework/verification.py
+outputs:
+  - proposals/P243-clock-sourced-induced-coupling/attempts/0001/stdout.txt
+  - proposals/P243-clock-sourced-induced-coupling/attempts/0001/stderr.txt
+  - proposals/P243-clock-sourced-induced-coupling/attempts/0001/result.yaml
+verdict: established

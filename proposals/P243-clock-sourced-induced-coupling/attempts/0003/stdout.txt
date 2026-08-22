@@ -1,0 +1,20 @@
+PASS [P243-attempt-0003] species_additivity_identity
+PASS [P243-attempt-0003] massless_delta_closed_form
+PASS [P243-attempt-0003] scheme_values_equal_at_z0
+PASS [P243-attempt-0003] spread_ratio_exactly_one_at_z0
+PASS [P243-attempt-0003] purely_induced_newton_constant
+PASS [P243-attempt-0003] conformal_coupling_nulls_shift
+PASS [P243-attempt-0003] species_count_moves_shift
+PASS [P243-attempt-0003] baseline_enters_additively
+PASS [P243-attempt-0003] positive_xi_below_conformal_is_attractive
+PASS [P243-attempt-0003] induced_sign_follows_weight
+{
+  "induced_symbolic": "Lambda**2/(4*pi)",
+  "newton_purely_induced": "4*pi/Lambda**2",
+  "schemes": [
+    "sharp",
+    "smooth"
+  ],
+  "numeric_evaluation": "blinded until Lambda selection"
+}
+ALL 10 CHECKS PASS [P243-attempt-0003]

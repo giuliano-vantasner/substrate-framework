@@ -1,0 +1,5 @@
+{
+ "selected_candidate": null,
+ "verdict": "refuted: no preregistered candidate satisfies the frozen criteria; the clock-branch gradient energy is domain-filling",
+ "missing_construction": "a box-independent UV length of the confined-clock sector; registered next construction: Lambda = 1/R* where R* is the Morse-index critical radius of the branch"
+}

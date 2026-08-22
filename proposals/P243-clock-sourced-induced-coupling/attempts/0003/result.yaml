@@ -1,0 +1,30 @@
+campaign: P243
+attempt: "0003"
+canonical_goal_issue: '163'
+candidate: multispecies_massless_composition
+frozen_question: >-
+  Does the accepted one-loop composition extend additively over substrate
+  species, and does the exactly-massless census collapse the usable scheme
+  set to a single exact induced shift Delta(1/G)?
+method: >-
+  Per-species shifts from the accepted exact_mass_inverse_newton_shift
+  families; equal-mass pooled-count linearity certified symbolically; the
+  N=3 massless ledger evaluated in closed form; scheme equality and spread
+  ratio checked against total_gravitational_coupling primitives.
+gates:
+  additivity: passed
+  massless_closed_form: passed (Delta = Lambda^2/(4*pi) at N=3, xi=0)
+  scheme_collapse: passed (J_sharp(0)=J_smooth(0)=1, R(0)=1)
+  purely_induced_newton: passed (G_total = 4*pi/Lambda^2 under B=0 reading)
+  mutation_conformal_null: passed
+  mutation_species_count: passed
+  mutation_baseline_additive: passed
+  mutation_sign_weight: passed
+verdict: established
+consequence: >-
+  With the attempt-0001 multiplicity the induced shift is exactly
+  Delta(1/G) = (1-6*xi)*Lambda^2/(4*pi); the only remaining premise is the
+  cutoff scale Lambda and the declared readings of xi and B.
+next: >-
+  Attempt 0002 selects Lambda among preregistered substrate-length
+  candidates; numeric evaluation opens after that structural verdict.

@@ -1,0 +1,70 @@
+id: P243
+base_release: v0.163.0
+source_baseline: substrate-framework@fda76ef
+question: >-
+  Can the confined-clock substrate source its own gravitational premises: do the
+  second-variation channels of the relaxed radial hedgehog supply a derived
+  fluctuation census N and squared-gap spectrum {m_i^2}, does the same action
+  supply a cutoff scale Lambda with cutoff-ontology closure, and does the
+  accepted composition C-IGR-004 then yield a numeric Delta(1/G) that drives a
+  canonical weak-field consumer and settles the flat-channel force question?
+source_inventory:
+  - source: substrate-framework accepted registry C-IGR-001..004, C-GRV-001/002, C-STG-001/002
+    access: in-hand governance/claims.yaml at fda76ef
+    extracted: exact composition 1/G_total=B+N*(1-6*xi)*Lambda^2*J(z)/(12*pi); usable
+      scheme set {sharp, smooth}; sign map; baseline provenance
+  - source: canonical modules m5_stationary_fields.py, m5_covariant_action.py,
+      m5_kinetic_axis.py, total_gravitational_coupling.py, scalar_induced_newton.py,
+      linearized_einstein.py
+    access: in-hand src/substrate_framework/ at fda76ef
+    extracted: radial hedgehog relaxation API, pinned spectral targets
+      (4, 1, 0.3, 0), J(z) families, one-loop shift coefficient, weak-field monopole
+  - source: P240 attempts 0041-0043 committed artifacts
+    access: in-hand proposals/P240-m5-kinetic-axis/attempts/
+    extracted: independent torch-autograd Hessian route; finite window R in [~8,~34]
+      with structural marginality; boxed pair oracle negative (disjoint supports,
+      singular chart); static-frame coupling +456.6*d^-1.696
+invariants:
+  - no propagating collective tensor is rescaled into a metric (Route-2 no-go, metric-rescaling trap)
+  - comparator blinding until structural selection freezes
+  - usable scheme set is derived by legs L1/L2/L3, never chosen
+  - baseline B stays declared per C-GRV-001; dimensions do not set B=0
+  - small-ratio numerics discipline per .agents/skills/small-ratio-numerics
+allowed_imports:
+  - C-GRV-001
+  - C-IGR-001
+  - C-IGR-002
+  - C-IGR-003
+  - C-IGR-004
+  - C-GRV-002
+  - C-STG-001
+  - canonical modules listed in source_inventory
+candidates:
+  - id: A
+    description: >-
+      Lambda = 1/L_grad with L_grad the preregistered gradient-energy centroid
+      radius of the relaxed hedgehog; a genuine object-level length with
+      cutoff-ontology closure via C-GRV-001's E_cut=hbar*c/a
+  - id: B
+    description: Lambda = pi/R_box, the box quantization scale; expected reject as
+      IR and box-dependent
+  - id: C
+    description: Lambda^2 = max pinned spectral target (4.0) of the spectrum
+      potential; expected reject unless a length ontology is supplied
+uniqueness_evidence: null
+selection_criteria:
+  - cutoff-ontology closure (a substrate length, not a regulator artifact)
+  - box-independence (UV scale must not move with domain radius)
+  - refinement stability of z_i = m_i^2/Lambda^2 under control/quadrature refinement
+  - assumption and parameter economy
+claims_proposed:
+  - C-M5S-001
+  - C-M5S-002
+  - C-M5S-003
+  - C-M5S-004
+  - C-M5S-005
+comparators_blinded_until: >-
+  After the fluctuation spectrum (C-M5S-001) and the scale selection criteria are
+  frozen; J(z) values and Delta(1/G) numbers are opened only after C-M5S-002
+  selection records its structural verdict.
+status: draft
