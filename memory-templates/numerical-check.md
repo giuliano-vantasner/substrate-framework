@@ -1,18 +1,18 @@
 # Numerical Check Template
 
-Instantiate whenever a numerical check produces evidence that a claim or attempt will
-cite, and always when the checked quantity is smaller than 1e-3 relative to the
-computation's dominant scale. Store the filled record in memory under `efforts` (or
-link it from the attempt's result file) before the citing claim is promoted. Run
-`memory validate --base "$PWD" "$PWD/memory/<path>.md"` on the instantiated record;
-a template that does not validate is not a record.
+Instantiate whenever a numerical check produces evidence worth remembering — a
+technique that worked, a failure mode worth naming, a number another attempt will
+cite. It is a lab notebook page, not a compliance form: keep the sections that
+earn their place and drop the rest; the only fixed contract is the frontmatter
+and the prose-first rule. Store the filled record in memory under `efforts` (or
+link it from the attempt's result file).
 
 Begin every section with a plain-prose sentence. Inline code, a table, or a list
 does not satisfy the memory index's first-content disclosure contract.
 
 ```md
 ---
-description: <what question this check answers and its verdict in one line>
+description: <what question this check answers and what it found, in one line>
 author: <agent-id>
 created: '<ISO-8601>'
 updated: '<ISO-8601>'
@@ -24,31 +24,23 @@ confidence: working
 status: active
 ---
 
-## Question and Checked Quantity
+## Question
 
-State what was computed, at what value relative to the dominant scale, and why that small ratio needs this record.
+What was being computed, and why it was delicate — usually because the quantity of interest is orders of magnitude below the dominant scale.
 
-## Evaluator and Certification
+## Method
 
-Name the evaluator function, its certification status, and any transforms applied to it for this check.
+How it was computed: the formulation chosen (and rejected alternatives when the choice is instructive), the evaluator used, and the execution context worth knowing later (thread pins, invocation path, versions) if results sit near the 1e-13-relative level where runner settings matter.
 
-## Execution Context
+## What Was Seen
 
-Record thread pins, library versions, invocation path used (.py direct, importlib, harness), and the measured runner-noise floor with how it was measured (which two settings disagreed by how much).
+The numbers and behaviour actually observed — including how values moved under changes of mesh, domain, quadrature, or method, since that movement is often the most informative part.
 
-## Acceptance Tolerances and Rationale
+## Reading
 
-State each acceptance tolerance and tie it explicitly above the noise floor and the conditioning of the operation; a tolerance below the floor invalidates the check.
+What the observations mean in small-ratio terms: which cross-checks agree, whether the soft direction is bulk or boundary, what remains hypothesis versus established. Name failure modes plainly when they occurred; a named mechanism is the reusable part.
 
-## Cross-Validation Performed
+## Artifacts
 
-Describe the independent axis used (doubled quadrature, second extraction method, independent discretization) and the observed agreement value.
-
-## Monitors and Residuals
-
-Report conservation or identity residuals and whether they close at the claimed accuracy.
-
-## Verdict and Artifacts
-
-State pass, fail, or gate-invalid with the failing mechanism named when applicable, and list artifact paths.
+Paths to scripts, data files, and logs.
 ```
