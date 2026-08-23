@@ -102,13 +102,15 @@ fd_route:
     - {n_r: 96, value: 8.6450e-09}
   preregistered_verdicts: "GRID ARTIFACT for all six bottom-block modes"
   reliability_flag: >
-    relgrad of the sampled background under the FD functional reads 46-58,
-    i.e. the modal root is far from stationary for the FD-discretized
-    functional -- an O(1)-level inconsistency between discretizations that
-    remains unexplained. The artifact verdicts follow the pre-declared
-    rule, but they should be re-confirmed once this gradient inconsistency
-    is diagnosed (compare FD gradient against the projected modal gradient
-    on common support). Confidence: moderate, not registry-grade.
+    RESOLVED (was: relgrad 46-58). The earlier number was a reporting bug
+    -- jac.norm() is the HESSIAN OPERATOR NORM over |E|, not a gradient.
+    True background gradient decomposes as healthy discretization
+    mismatch: |grad|/E = 0.049/0.042/0.037 across N_r=48/72/96, dominated
+    by grid-scale components while the smooth modal-representable part is
+    0.07-0.33 (near-stationary). Verdicts confirmed on the corrected run;
+    stdout-fd-route.txt now reports both quantities separately.
+  confidence: solid pending independent review (pre-declared rule, clean
+    transfer, converging ladder, resolved diagnostics)
   interpretation: >
     Three independent lines now point the same way: mesh refinement
     collapses the soft eigenvalues (this route), box growth does NOT

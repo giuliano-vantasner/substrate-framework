@@ -191,13 +191,17 @@ def run_ladder(values16: np.ndarray):
 
         jac = torch.autograd.functional.jacobian(
             grad_of, torch.zeros(3 * n_r, dtype=DTYPE))
-        relgrad = float((jac.detach().norm()
-                         / max(1.0, abs(e0))).item())
         hess = np.asarray(jac.detach().numpy(), dtype=float)
+        # TRUE background gradient (first derivative only): the earlier
+        # 'relgrad' rows mislabeled jac.norm() (the Hessian operator norm)
+        # as a gradient; the diagnostic probe resolved this.
+        g0_vec = grad_of(torch.zeros(3 * n_r, dtype=DTYPE))
+        grad_relnorm = float(g0_vec.norm().item()) / max(1.0, abs(e0))
+        hess_opnorm_ratio = float(jac.norm().item()) / max(1.0, abs(e0))
         vals, vecs, nodes = analyze(hess, n_r)
         row = {"n_r": n_r, "e_fd": e0,
-               "relgrad_fd": float(jac.detach().norm().item()) /
-               max(1.0, abs(e0)),
+               "true_gradient_relnorm": grad_relnorm,
+               "hessian_opnorm_over_E": hess_opnorm_ratio,
                "bottom": [float(v) for v in vals],
                "nodes_per_mode_qtd": nodes}
         if prev is not None:
@@ -208,7 +212,8 @@ def run_ladder(values16: np.ndarray):
                 for a, b in zip(la, lb)]
         rows.append(row)
         print(f"[grid {n_r}] E={e0:.6f} bottom={vals[0]:+.4e} "
-              f"relgrad={row['relgrad_fd']:.2e}", flush=True)
+              f"|grad|/E={row['true_gradient_relnorm']:.2e} "
+              f"|H|/E={row['hessian_opnorm_over_E']:.2e}", flush=True)
         prev = row
     return rows
 
