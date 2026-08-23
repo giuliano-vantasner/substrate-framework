@@ -58,3 +58,17 @@ verdict:
 outputs:
   - attempts/0010/shear_channel_verdict.py (+ stdout.txt,
     shear-verdict.json)
+
+# ERRATUM (2026-08-23, appended after review; original content above stands
+# as history per append-only discipline)
+erratum: >
+  RevC008's review established that this attempt's exterior-factorization
+  lemma held only for a meridian-restricted two-directional surrogate
+  (no phi-channel, density over rho/z pairs only) absent from every
+  committed artifact. Under the committed three-pair functional the
+  exterior projector texture carries rho_ext = 8 sin^2(Theta)(grad
+  Theta)^2/(r^2 sin^2 theta_p) > 0 off-axis, and the boxed repulsive
+  channel +456.6*d^-1.696 was measured at NON-overlapping separations
+  d = 18..32 -- so 'pairing integral zero for d > 2 max(R_box)' and
+  'pure gauge' are false as stated. Attempt 0012 supersedes with the
+  corrected POSITIVE criterion-D verdict. See attempts/0012/.

@@ -12689,7 +12689,10 @@ claims:
       unaffected by the window background at adjudicable resolution. Scope: one root (R=12,
       family S, order 16) plus the recorded R=10 ladder divergence; the soft omega^2 values remain
       uncertified at ~10% quadrature sensitivity (declared), which bounds but does not overturn the
-      artifact verdict since the collapse spans four orders of magnitude.
+      artifact verdict since the softest candidate falls 61x across the FD
+      ladder (5.27e-07 -> 8.64e-09, ~1.8 orders) and about four orders of
+      magnitude from the modal soft eigenvalue 7.450258186e-05 to the
+      finest-grid value 8.6449797e-09.
     provenance: campaigns/P243-clock-sourced-induced-coupling/adjudication.yaml
     verification: numeric_evidence
     review: unaudited
@@ -12741,8 +12744,10 @@ claims:
       which enters only as C-GRV-001's declared additive-ledger premise (consistent with C-M5S-003's
       baseline clause). NEW QUANTITATIVE RESULT: weak-field validity of the sourced consumer at
       field level epsilon* requires B >= (M/R)/epsilon* - Delta(1/G), with M/R fixed by the
-      committed B=0 consumer verdict (epsilon_0 = G_total*M/R = 213.396523069221 and
-      Delta(1/G)|_{xi=0,N=3} = 0.02136432626854447, so M/R = epsilon_0 * Delta): B_min = 4.537709
+      committed B=0 consumer verdict (the numerically solved boundary magnitude
+      |Phi(R)| = 213.396523069221 recorded by C-M5S-004 at its declared 1e-3 gate -- equal
+      to the exact product G_total*M/R = 46.80699908016004 * M to 2.4e-6 relative -- and
+      Delta(1/G)|_{xi=0,N=3} = 0.02136432626854447, so M/R = |Phi(R)| * Delta): B_min = 4.537709
       (marginal, 212.4 Delta) at epsilon* = 1, 45.569365 (2133.0 Delta) at epsilon* = 0.1, and
       455.885930 (21338.7 Delta) at epsilon* = 0.01. Consequence: the strong-coupling escape list
       collapses to an exact dichotomy — gravity in this sector is either induced and strongly
@@ -12791,9 +12796,20 @@ claims:
 
   - id: C-M5S-008
     statement: >-
-      C-M5S-008 (symbolic_verified): No long-range np/na-mediated interaction exists between two
-      stable confined clocks — structural refutation of the transverse shear channels as force
-      carriers. In the committed deviation-additive two-clock family (VACUUM_Q = 1, each clock's
+      C-M5S-008 (numeric_evidence; corrected by review erratum 0010 -> 0012): A long-range mediated
+      interaction between two stable confined clocks EXISTS and is REPULSIVE with algebraic decay:
+      E_int(d) = +456.6 * d^(-1.696) (fit residual 3.5%; P240 attempt 0043 boxed pair oracle;
+      separations d = 18..32, disjoint supports, G4 quadrature passed except the d = 32 tail at
+      12%). The interaction is carried by the summed-angle winding composition Theta_1 + Theta_2,
+      which modifies the static integrands inside each clock's support at ANY separation: under the
+      committed three-pair functional (azimuthal channel included, cpu_energy.py; 3D director
+      (st*sp, st*cp, ct), pair_oracle.py evaluate_pair_3d) the exterior projector texture carries
+      density rho_ext = 8 sin^2(Theta) * (grad Theta)^2 / (r^2 sin^2 theta_p), strictly positive
+      almost everywhere off-axis (symbolic ||[B_n, A]||_F^2 = 2 sin^2(Theta); committed-functional
+      reproduction at 1.4e-11 relative; scan max 4.3e-03). Erratum history: attempt 0010 first
+      claimed a structural refutation (zero exterior density, zero pairing beyond overlap) from a
+      meridian-restricted two-directional surrogate absent from every committed artifact; attempt
+      0012 superseded it under review. In the committed deviation-additive two-clock family (VACUUM_Q = 1, each clock's
       (q, tangent, split) profile pinned to (1, 0, 0) outside its own box), the field exterior to
       both support balls is the exact rank-one projector n n^T with n = n(Theta_1 + Theta_2): a
       point on the trace potential's vacuum manifold. Every spatial derivative of such a pure
@@ -12812,36 +12828,41 @@ claims:
       overlap by this lemma and remains classified as a static-frame observable per C-M5S-005's
       review.
     provenance: campaigns/P243-clock-sourced-induced-coupling/adjudication.yaml
-    verification: symbolic_verified
+    verification: numeric_evidence
     review: unaudited
     compatibility: native
     epistemic: proposed
     category: synthesized
     exclusions:
-      - "Conclusions hold within the compact-support confinement convention of the committed family; freed-wall families are out of scope."
+      - "The power law is measured over d = 18..32 in the boxed fixed-J oracle; extrapolation beyond that window is not claimed."
+      - "The boxed static channel remains a different observable class from the induced far-field force per C-M5S-005's accepted review; no mapping between them is constructed here."
       - "The labels np/na and H_split = diag(5,3,3,0,0,6)/2 originate in issue prose with no repository derivation site; this claim is stated over the repo-real channel objects (q, tangent, split; polar/azimuthal pair t +/- delta)."
-      - "No claim about gravitational spin-couplings beyond the accepted Newton kernel composition."
     composition:
       dependencies:
         - C-M5S-005
         - C-M5S-006
       structural_gap: "Closes the co-equal force objective of issue #163 (criterion 4) with a decisive negative: the force sector carries exactly one long-range channel, the delivered induced Newton pairing."
       glue:
-        method: sympy
-        artifact: campaigns/P243-clock-sourced-induced-coupling/attempts/0010/shear_channel_verdict.py
+        method: numerical
+        artifact: campaigns/P243-clock-sourced-induced-coupling/attempts/0012/shear_channel_repair.py
         entrypoint: main
     dependencies:
       - C-M5S-005
       - C-M5S-006
     evidence:
+      - campaigns/P243-clock-sourced-induced-coupling/attempts/0012/result.yaml
+      - campaigns/P243-clock-sourced-induced-coupling/attempts/0012/shear_channel_repair.py
+      - campaigns/P243-clock-sourced-induced-coupling/attempts/0012/shear-repair-verdict.json
       - campaigns/P243-clock-sourced-induced-coupling/attempts/0010/result.yaml
       - campaigns/P243-clock-sourced-induced-coupling/attempts/0010/shear_channel_verdict.py
       - campaigns/P243-clock-sourced-induced-coupling/attempts/0010/shear-verdict.json
       - proposals/P240-m5-kinetic-axis/attempts/0041/result.yaml
       - proposals/P240-m5-kinetic-axis/attempts/0043/pair_oracle.py
+      - proposals/P240-m5-kinetic-axis/attempts/0043/result.yaml
+      - proposals/P240-m5-kinetic-axis/attempts/0041/cpu_energy.py
     assumptions:
-      - "First-draft 'exterior equals identity' lemma was refuted by its own check C1a during development; the superseded draft is preserved verbatim in the module docstring per append-only discipline."
-      - "Numeric probes use central differences at h = 1e-5 with BLAS threads pinned; exact symbolic identities C1a/C1b carry the verdict."
+      - "Erratum chain 0010 -> 0012 preserved append-only; the superseded lemma and its refutation-by-review are part of the claim's recorded history."
+      - "Numeric probes use central differences at h = 1e-5 with BLAS threads pinned; the symbolic identity ||[B_n,A]||_F^2 = 2 sin^2(Theta) carries the density formula."
     comparators: []
     accepted_in: null
     challenges: []
@@ -12856,9 +12877,10 @@ claims:
       spectrum is strictly positive-frequency with positive kinetic metric and every ultra-light
       candidate is a proven resolution artifact (C-M5S-006); (ii) no classical radiation — the
       clock is a stationary point of an elliptic variational problem, hence time-independent;
-      (iii) no exterior radiative carrier — the field tail outside confinement is pure gauge in
-      the vacuum manifold (C-M5S-008's exterior-factorization lemma), feeding no propagating
-      channel. PREDICTION (blocked): the renormalized zero-point self-energy
+      (iii) the ground state is time-independent — its exterior tail, though carrying nonzero
+      static gradient energy under the committed functional (C-M5S-008 correction), is itself
+      stationary and sources no waves; radiation requires time-dependent multipoles, which the
+      ground state lacks. PREDICTION (blocked): the renormalized zero-point self-energy
       delta-E = (1/2)*sum_i omega_i, a genuine one-loop radiative correction to M in the weak-field
       consumer, is NOT computable to registry standard because soft-mode omega^2 carries ~10%
       quadrature sensitivity (recorded stage-2 gate G2 failure at 9.9%) and the complete-spectrum
@@ -12891,8 +12913,11 @@ claims:
       - campaigns/P243-clock-sourced-induced-coupling/attempts/0011/result.yaml
       - campaigns/P243-clock-sourced-induced-coupling/attempts/0011/radiative_stability.py
       - campaigns/P243-clock-sourced-induced-coupling/attempts/0011/radiative-verdict.json
+      - campaigns/P243-clock-sourced-induced-coupling/attempts/0011/stdout.txt
+      - campaigns/P243-clock-sourced-induced-coupling/attempts/0008/fd-verdict.json
       - campaigns/P243-clock-sourced-induced-coupling/attempts/0008/kinetic-stage2.json
       - campaigns/P243-clock-sourced-induced-coupling/attempts/0008/cross-order.json
+      - campaigns/P243-clock-sourced-induced-coupling/attempts/0010/shear-verdict.json
     assumptions:
       - "All premise records loaded read-only from committed attempt artifacts; expected contents fixed ex ante in the verifier docstring."
     comparators: []

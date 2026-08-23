@@ -1,7 +1,7 @@
-[C1] GRID ARTIFACT x6, lambda0 ladder [5.273531800250659e-07, 4.945872382691154e-08, 8.644979672269492e-09] (decreasing=True) pass=True
+[C1] GRID ARTIFACT x6, ladder [5.273531800250659e-07, 4.945872382691154e-08, 8.644979672269492e-09] (decreasing=True) pass=True
 [C2] 8 recorded omega values, min 1.546e-04, all positive: True
 [C3] 0010 shear-verdict tally = 7/7 CHECKS PASS pass=True
-[C4] stage-2 G2 drift ~9.9% recorded at '.checks[1].max_rel_drift' pass=True
-[C5] cross-order stiff-band drift ~52% recorded at '.base_reference.bottom_block[4]' pass=True
+[C4] G2 drift .checks[1].max_rel_drift = 0.09897 pass=True
+[C5] cross-order drift .rows[0].stiff_band_max_rel_drift = 0.5189032862 pass=True
 5/5 CHECKS PASS
 [DONE] radiative-verdict.json written

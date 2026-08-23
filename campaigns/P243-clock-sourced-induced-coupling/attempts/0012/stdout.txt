@@ -1,0 +1,6 @@
+[C1] ||[B_n,A]||_F^2 = 2*sin(Theta)**2 == 2 sin^2(Theta): True
+[C2] rho_num=4.8299e-05 rho_formula=4.8299e-05 (rel 1.41e-11) pass=True
+[C3] committed exterior density max=4.267e-03 median=1.130e-04 over 120 pts pass=True
+[C4] 0043 records +456.6*d^-1.696 at disjoint supports: True
+4/4 CHECKS PASS
+[DONE] shear-repair-verdict.json written

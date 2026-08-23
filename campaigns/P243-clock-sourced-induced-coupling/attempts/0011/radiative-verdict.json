@@ -1,8 +1,8 @@
 {
  "attempt": "0011",
  "title": "radiative attempt -- stability theorem + named blocking",
- "preregistration": "module docstring (pre-inspection)",
- "verdict": "R1 COMPLETED -- the confined clock is RADIATIVELY STABLE within the model class, by composition of three exact premises: (i) no internal decay channel -- the physical bound spectrum is strictly positive-frequency with positive kinetic metric and every ultra-light candidate is a proven grid artifact (0008), so the ground state has no lower state; (ii) no classical radiation -- a stationary point of an elliptic problem is time-independent and sources no waves; (iii) no exterior carrier -- the field tail outside confinement is pure gauge in the vacuum manifold (0010 [A,A]=0 lemma), so the core feeds no propagating channel. R2 BLOCKED with the missing construction named -- the quantitative radiative prediction (renormalized zero-point self-energy delta-E = (1/2)*sum_i omega_i feeding M in the consumer) is not computable to registry standard: soft-mode omega^2 carries ~10% quadrature sensitivity (stage-2 G2 failure, 9.9%) and the required complete-spectrum refinement ladder is obstructed (cross-order mechanism: seeded enrichment lands on a different stationary point, 52% stiff-band drift). MISSING CONSTRUCTION: a certified complete kinetic-normalized spectrum table with independent-discretization agreement at a declared scale-relative tolerance across the full band. Criterion 3's radiative clause is thereby satisfied as 'attempted and recorded either way': the decidable half is decided (stable), the quantitative half is blocked with the construction named.",
+ "preregistration": "module docstring (pre-inspection); includes the C5-provenance erratum per review",
+ "verdict": "R1 COMPLETED -- the confined clock is RADIATIVELY STABLE within the model class by composition of three exact premises: (i) no internal decay channel (physical spectrum strictly positive-frequency, ultra-light candidates proven grid artifacts per 0008/C-M5S-006); (ii) no classical radiation (time-independent stationary point of an elliptic problem sources no waves); (iii) no exterior carrier (tail pure gauge in the vacuum manifold per 0010 [A,A]=0 lemma). R2 BLOCKED with the missing construction named: the renormalized zero-point self-energy delta-E = (1/2)*sum_i omega_i feeding M requires certified omega_i across the FULL band (~10% quadrature sensitivity recorded at stage-2 G2, 9.9%) and an unobstructed complete-spectrum refinement ladder (cross-order mechanism obstructs it, 52% stiff-band drift). MISSING CONSTRUCTION: a certified complete kinetic-normalized spectrum table with independent-discretization agreement at a declared scale-relative tolerance across the full band.",
  "checks": [
   {
    "name": "C1_grid_artifact_record",
@@ -19,9 +19,6 @@
    "name": "C2_positive_generalized_omegas",
    "n_values": 8,
    "min": 0.00015459806449519801,
-   "keys": [
-    "generalized_omega_sq_low"
-   ],
    "passed": true
   },
   {
@@ -30,19 +27,22 @@
    "passed": true
   },
   {
-   "name": "C4_soft_omega_quadrature_drift_recorded",
+   "name": "C4_soft_omega_quadrature_drift",
    "path": ".checks[1].max_rel_drift",
+   "value": 0.09897338795580601,
    "expected_near": 0.099,
    "passed": true
   },
   {
-   "name": "C5_cross_order_drift_recorded",
-   "path": ".base_reference.bottom_block[4]",
+   "name": "C5_cross_order_drift",
+   "path": ".rows[0].stiff_band_max_rel_drift",
+   "value": 0.5189032861699523,
    "expected_near": 0.52,
    "passed": true
   }
  ],
  "tally": "5/5 CHECKS PASS",
+ "erratum": "First execution used a fuzzy value matcher that misattributed the C5 match to base_reference.bottom_block[4] (an eigenvalue, not a drift). Re-anchored to exact paths per review; this file supersedes that record.",
  "runtime_seconds": 0.0,
  "thread_pin": "not numerically loaded; env pinned regardless",
  "outputs": [
