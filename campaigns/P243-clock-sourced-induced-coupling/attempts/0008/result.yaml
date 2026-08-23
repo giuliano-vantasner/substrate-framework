@@ -98,6 +98,27 @@ fd_route:
     forbidden. G0 verdict: INCONCLUSIVE, nothing downstream read.
   queued: isolate the factor-2 definitionally (trace-potential convention
     or hedgehog angular-measure convention), then rerun ladder.
+box_trend_diagnostic:
+  source: small-ratio-numerics skill (finite-domain-gift test), run on
+    already-committed order-16 window roots, no new solves
+  data:
+    - {R: 10, lambda0: 5.705042e-05, lambda1: 1.187097e-02,
+       ratio: 4.806e-03, dominant_nodes: 13}
+    - {R: 12, lambda0: 7.450258e-05, lambda1: 1.901708e-02,
+       ratio: 3.918e-03, dominant_nodes: 13}
+    - {R: 14, lambda0: 1.013732e-04, lambda2_ratio_ref: 3.498e-03,
+       dominant_nodes: 15}
+  reading: >
+    lambda0 does NOT collapse as the box grows -- it rises modestly with
+    stable nodal count. The finite-domain-gift hypothesis is DISFAVORED.
+    Combined with positive kinetic metric (stage 2), the soft modes now
+    lean PHYSICAL; the nodal-count-near-order signature remains the one
+    unexplained suspicious datum and keeps the question open pending the
+    FD route (after its factor-2 fix) or a symmetry-adapted analytic
+    classification.
+  reporting_habit_adopted: quote lambda_min/lambda_2 alongside every
+    soft-mode claim (values above; ~4e-3, i.e. inside the regime the
+    skill flags as truncation-dominated on any single mesh).
 outputs:
   - attempts/0008/fd_route.py (+ stdout-fd-route.txt, fd-verdict.json)
   - attempts/0008/window_census.py (+ stdout-run1-gates-failed.txt,

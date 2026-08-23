@@ -1,0 +1,8 @@
+box trend of bottom-block stiffness (order-16 window roots):
+    R       lambda0       lambda1  lam0/lam1  nodes0
+   10 +5.705042e-05 +1.187097e-02  4.806e-03      13
+   12 +7.450258e-05 +1.901708e-02  3.918e-03      13
+   14 +1.013732e-04 +2.897654e-02  3.498e-03      15
+
+lambda0 collapsing toward 0 as R grows => finite-domain gift;
+lambda0 stable/rising => bound structure.
