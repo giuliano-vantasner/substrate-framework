@@ -2,7 +2,7 @@
 description: P243 clock-sourced induced coupling — derive N and Lambda from the confined-clock fluctuation spectrum and drive Delta(1/G) numeric through the accepted composition
 author: ox-alpha
 created: '2026-08-22T14:30:00+00:00'
-updated: '2026-08-22T14:30:00+00:00'
+updated: '2026-08-23T12:45:00+00:00'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -266,3 +266,21 @@ generated docs and memory agree, and the in-boundary debt ledger is empty —
 or when a leg terminates at a named gate whose mechanism is recorded, in which
 case the objective stays open with the next construction queued. Each next
 step states what becomes true in the record when it succeeds.
+
+## Adjudication Handoff (2026-08-23)
+
+All five proposed claims reviewed individually by a distinct reviewer agent
+(P243Reviewer; files memory/vantasner/decisions/C-M5S-00{1..5}-review.md):
+zero blocking findings; 001/002/005 accepted with minimum corrections, 003/004
+accepted as drafted. Comparator blinding confirmed at commit level; candidate
+F's mid-attempt preregistration recorded as attestation-based (four criteria
+are commit-verifiably ex ante). Claims C-M5S-001..005 promoted into
+governance/claims.yaml with release v0.164.0 pinned at the campaign stack head
+c2efa38; campaign record moved to campaigns/P243-clock-sourced-induced-coupling/
+with adjudication.yaml. Canonical modules carry unit tests
+(tests/test_m5_fluctuation_spectrum.py, tests/test_m5_induced_coupling.py).
+Open frontier (recorded, non-debt): window-background spectrum census,
+order-18 refinement construction, radiative attempt, R>14 stabilization
+loophole, static-frame pairing map; process follow-ups recorded in the review
+files (literal-True tally rows relabel, force-verdict.json coefficient string
+wording, module float-signature wart in numeric_induced_shift).
