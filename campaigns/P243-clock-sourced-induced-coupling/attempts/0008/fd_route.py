@@ -74,12 +74,15 @@ def fd_energy(values16: np.ndarray, n_r: int):
     """Return scalar energy(control_vector) plus a zero-control evaluator."""
     j_idx = torch.arange(n_r, dtype=DTYPE) + 0.5
     x_c = ((j_idx / n_r).clone().requires_grad_(True))
+    xn = torch.sqrt(x_c)  # xn = r/R; committed formulas take r/R
     mu_x, mu_w = np.polynomial.legendre.leggauss(N_MU)
     mug = torch.tensor(mu_x, dtype=DTYPE)[None, :] \
         .repeat(n_r, 1).clone().requires_grad_(True)
     w_mu = torch.tensor(mu_w, dtype=DTYPE)[None, :]
     coeffs = torch.tensor(values16.reshape(3, 16), dtype=DTYPE)
-    angle = torch.acos(torch.clamp(2 * x_c.detach()**2 - 1, -1.0, 1.0))
+    # grid variable x_c IS (r/R)^2, so the committed Chebyshev
+    # argument 2*(r/R)^2 - 1 is exactly 2*x_c - 1
+    angle = torch.acos(torch.clamp(2 * x_c.detach() - 1, -1.0, 1.0))
     basis = torch.stack(tuple(torch.cos(k * angle)
                               for k in range(16)), dim=-1)
     modal = torch.einsum("xi,ci->xc", basis, coeffs)
@@ -89,9 +92,9 @@ def fd_energy(values16: np.ndarray, n_r: int):
     measure = 2 * torch.pi * (RADIUS**3 / 2) \
         * torch.sqrt(x_c.detach())[:, None] * dx * w_mu
     sine = torch.sqrt(torch.clamp(1 - mug**2, min=0.0))
-    env_q = x_c[:, None]**2 * (1 - x_c[:, None]**2)
-    env_t = 1 - x_c[:, None]**2
-    env_d = x_c[:, None]**4 * (1 - x_c[:, None]**2)
+    env_q = xn[:, None]**2 * (1 - xn[:, None]**2)
+    env_t = 1 - xn[:, None]**2
+    env_d = xn[:, None]**4 * (1 - xn[:, None]**2)
     zero = torch.zeros_like(sine)
     ones = torch.ones_like(sine)
     director = torch.stack((sine, zero, mug), dim=-1)
@@ -146,8 +149,8 @@ def fd_energy(values16: np.ndarray, n_r: int):
 
     # assemble must close over the SAME graph objects as energy uses:
     def assemble(mq, mt, md):
-        q = x_c[:, None]**2 + env_q * mq[:, None]
-        t = ((1 - x_c[:, None]**2)
+        q = xn[:, None]**2 + env_q * mq[:, None]
+        t = ((1 - xn[:, None]**2)
              * (torch.tensor(1 / 3, dtype=DTYPE) + mt[:, None]))
         dd_amp = env_d * md[:, None]
         delta = dd_amp * sine**2

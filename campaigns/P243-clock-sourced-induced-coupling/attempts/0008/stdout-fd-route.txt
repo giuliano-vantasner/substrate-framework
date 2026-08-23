@@ -1,2 +1,11 @@
-[G0] transfer=2.1108 tol=0.05 pass=False
-[STOP] G0 failed; nothing downstream read
+[G0] transfer=0.0002 tol=0.05 pass=True
+[grid 48] E=55.116871 bottom=+5.2735e-07 relgrad=5.80e+01
+[grid 72] E=55.431894 bottom=+4.9459e-08 relgrad=4.88e+01
+[grid 96] E=55.371977 bottom=+8.6450e-09 relgrad=4.59e+01
+[VERDICT mode_0] GRID ARTIFACT
+[VERDICT mode_1] GRID ARTIFACT
+[VERDICT mode_2] GRID ARTIFACT
+[VERDICT mode_3] GRID ARTIFACT
+[VERDICT mode_4] GRID ARTIFACT
+[VERDICT mode_5] GRID ARTIFACT
+[DONE] fd-verdict.json written

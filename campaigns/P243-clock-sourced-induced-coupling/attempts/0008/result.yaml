@@ -85,19 +85,41 @@ cross_order:
       high resolution; a soft eigenvalue reproducing with FIXED nodal
       structure would certify physicality)
 fd_route:
-  status: BLOCKED at preregistered gate G0 (transfer sanity)
-  bugs_fixed_before_block:
+  status: G0 PASSED after root-cause fix; ladder EXECUTED; verdicts
+    delivered with one reliability flag
+  bugs_fixed_en_route:
     - shared (1,N_mu) mu-grid made autograd sum d_mu over all radial rows
       (fixed by committed-style repeated grid + Gauss nodes)
     - missing -sine/r factors in theta/phi derivatives (inflated ~600x)
-  residual_obstruction: >
-    After both fixes the FD density still exceeds the committed density by
-    a factor 2.11 with matching total measure (7240 vs 7238) and matching
-    field norm within 12% -- a definitional mismatch between derivations,
-    not noise. Not isolated this session; guessing a calibration factor is
-    forbidden. G0 verdict: INCONCLUSIVE, nothing downstream read.
-  queued: isolate the factor-2 definitionally (trace-potential convention
-    or hedgehog angular-measure convention), then rerun ladder.
+    - "ROOT CAUSE of the transfer failure: the FD grid variable x=(r/R)^2
+      was fed into committed formulas expecting r/R, double-squaring the
+      Chebyshev argument and corrupting all envelope factors; corrected to
+      2*x_c-1 with xn=r/R-based envelopes"
+  g0_transfer_rel: 2.0e-04 (E_fd=55.1169 vs modal 55.1042) PASS
+  ladder_bottom_lambda0:
+    - {n_r: 48, value: 5.2735e-07}
+    - {n_r: 72, value: 4.9459e-08}
+    - {n_r: 96, value: 8.6450e-09}
+  preregistered_verdicts: "GRID ARTIFACT for all six bottom-block modes"
+  reliability_flag: >
+    relgrad of the sampled background under the FD functional reads 46-58,
+    i.e. the modal root is far from stationary for the FD-discretized
+    functional -- an O(1)-level inconsistency between discretizations that
+    remains unexplained. The artifact verdicts follow the pre-declared
+    rule, but they should be re-confirmed once this gradient inconsistency
+    is diagnosed (compare FD gradient against the projected modal gradient
+    on common support). Confidence: moderate, not registry-grade.
+  interpretation: >
+    Three independent lines now point the same way: mesh refinement
+    collapses the soft eigenvalues (this route), box growth does NOT
+    rescue them into bound structure (box-trend diagnostic), and the
+    family-S lambda_min halving across orders matches the grid-mode
+    signature. Working hypothesis for the next session: P240's marginal
+    plateau is a spectral-resolution artifact; the window background's
+    propagating content is carried by the stiffer block, not by the two
+    ultra-soft modes.
+  queued: diagnose the relgrad~50 inconsistency, rerun the ladder, then
+    write the soft-mode adjudication claim.
 box_trend_diagnostic:
   source: small-ratio-numerics skill (finite-domain-gift test), run on
     already-committed order-16 window roots, no new solves

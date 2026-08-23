@@ -2,7 +2,7 @@
 description: P243 continuation — finish issue #163's four open criteria (window-background census, B settlement, np/nâ pairing verdict, radiative attempt) on top of the promoted v0.164.0 claims
 author: ox-alpha
 created: '2026-08-23T13:30:00+00:00'
-updated: '2026-08-23T17:30:00+00:00'
+updated: '2026-08-23T18:40:00+00:00'
 tags:
 - substrate-framework
 - effort
@@ -182,7 +182,7 @@ first-execution stdout; superseded verifier runs kept verbatim).
 | 0005 | Candidate E refuted; F selected; UNBLIND | attempts/0005 | F PASS (all 7 checks) | U-family λ₁ asymptote −2e-4 never crosses; F=E_U−E_S box-stable 3.23% | order-18 row declared-unavailable (named obstruction) |
 | 0006 | Consumer Poisson BVP | attempts/0006 | PASS + regime INVALID at ξ=0 | GM/R≈213≫1; flux-form FD; GL-sum mass identity (never trapezoid over weights) | escapes registered |
 | 0007 | Massless induced-channel pairing | attempts/0007 | PASS (attractive/cancel/repulsive ξ-structure) | moment pairing, no energy subtraction; chebyshev endpoint NaN clamp | np/nâ verdict owed → item D |
-| 0008 | Census stage 1 + cross-order + stage-2 kinetic metric + FD route | attempts/0008 (window_census.py, cross_order.py, kinetic_stage2.py, fd_route.py + jsons) | S1: 5/5 PASS; X-order: OBSTRUCTION; S2: 1/3 gates; FD: BLOCKED at G0 (density factor 2.11 unisolated) | tangent channel = structural kinetic null; ultra-light omega^2 uncertified; FD bugs fixed: shared-mu autograd summation, missing sine/r | isolate FD factor-2 definitionally, then rerun ladder |
+| 0008 | Census stage 1 + cross-order + stage-2 kinetic metric + FD route | attempts/0008 (4 scripts + 4 jsons + all stdout logs) | S1: 5/5 PASS; X-order: OBSTRUCTION; S2: 1/3 gates; **FD: G0 PASSED (transfer 2e-4), ladder verdict GRID ARTIFACT x6, moderate confidence** | ROOT BUG: grid var (r/R)^2 double-squared into Chebyshev arg + envelopes; also shared-mu autograd summation and missing sine/r | re-confirm after relgrad~50 diagnosis; then soft-mode adjudication claim |
 
 ## Validation Plan (per item)
 
