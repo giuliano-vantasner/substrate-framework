@@ -2,7 +2,7 @@
 description: P243 continuation — finish issue #163's four open criteria (window-background census, B settlement, np/nâ pairing verdict, radiative attempt) on top of the promoted v0.164.0 claims
 author: ox-alpha
 created: '2026-08-23T13:30:00+00:00'
-updated: '2026-08-23T16:45:00+00:00'
+updated: '2026-08-23T17:30:00+00:00'
 tags:
 - substrate-framework
 - effort
@@ -88,14 +88,15 @@ collision-search clean before allocation (C-M5S-006+ verified free
 ## Decomposition
 
 1. [x] Recall, source verification, reconciliation ledger.
-2. [~] A: window-background census — STAGE 1 COMPLETE (attempt 0008, 5/5
-   checks): bottom-block stiffness spectrum about the frozen R=12 root
-   certified; two soft modes + six stiff; FD cross-route agrees autograd to
-   ~3e-7 relative on the stiff band. Cross-order sub-leg EXECUTED and
-   terminated at a named obstruction (order ladders cannot adjudicate).
-   Pending inside item A: stage 2 kinetic metric (propagating-vs-static
-   classification of both soft modes) and/or an independent-discretization
-   (FD radial Hessian) route to settle the grid-mode suspicion.
+2. [~] A: window-background census — stage 1 COMPLETE (5/5), cross-order
+   leg = named obstruction, STAGE 2 EXECUTED (1/3 gates): kinetic metric
+   built; all eight stiffness modes are positive-metric PROPAGATING
+   candidates with ultra-light omega^2 (lowest 1.55e-04); pure tangent
+   channel is a STRUCTURAL KINETIC NULL (velocity = tdot*Identity commutes
+   with all background gradients). G2 failed honestly: soft omega^2 drift
+   9.9% between quadratures — ultra-light values not certified. Remaining
+   in item A: independent-discretization (FD radial Hessian) adjudication
+   of the grid-mode suspicion + constrained-subspace projection labels.
 3. [ ] B: baseline settlement (attempt 0009+; can run parallel to A's remainder).
 4. [ ] D: np/nâ shear-channel pairing verdict (needs A's channel structure).
 5. [ ] C: radiative attempt (independent; last).
@@ -157,6 +158,16 @@ Thread the logic so a fresh session can rebuild the chain without re-deriving:
   scales make preregistered gates vacuous (use block-local s_b); float64
   second differences of E≈55 cannot resolve curvatures below ~1e-2·s_b at
   any stable step (soft-band FD exclusion is permanent).
+- **Tangent-channel structural null (stage 2)**: the pure tangent velocity
+  is tdot(r)*Identity — commutes with every background gradient, so its
+  kinetic metric vanishes identically (Rayleigh 2e-26). This is the
+  trace/constraint direction; any "propagating" label on tangent-heavy
+  mixed modes comes from small q/d admixtures scaled by large metric
+  weights (mode 4: 98.9% tangent, reads PROPAGATING via 1.1% q). Use
+  constrained-subspace projection weights for per-mode labels.
+  Also: soft omega^2 are quadrature-sensitive at the ~10% level (G2
+  failure recorded) — treat 1.5e-04-class values as uncertified until the
+  FD route rules on them.
 
 ## Attempts
 
@@ -171,7 +182,7 @@ first-execution stdout; superseded verifier runs kept verbatim).
 | 0005 | Candidate E refuted; F selected; UNBLIND | attempts/0005 | F PASS (all 7 checks) | U-family λ₁ asymptote −2e-4 never crosses; F=E_U−E_S box-stable 3.23% | order-18 row declared-unavailable (named obstruction) |
 | 0006 | Consumer Poisson BVP | attempts/0006 | PASS + regime INVALID at ξ=0 | GM/R≈213≫1; flux-form FD; GL-sum mass identity (never trapezoid over weights) | escapes registered |
 | 0007 | Massless induced-channel pairing | attempts/0007 | PASS (attractive/cancel/repulsive ξ-structure) | moment pairing, no energy subtraction; chebyshev endpoint NaN clamp | np/nâ verdict owed → item D |
-| 0008 | Window census stage 1 + cross-order leg | attempts/0008 (window_census.py, cross_order.py, census-v3.json, cross-order.json) | Stage 1: 5/5 PASS. Cross-order: NAMED OBSTRUCTION | route-B units scar (~18×); base-quad bias bound 8.9e-6 < 1e-5·s_b; grid-mode suspicion UNADJUDICABLE at R=12 — seeded N=18 lands on a different stationary point (branch probe relgrad 0.73) | stage 2 kinetic metric + independent-discretization route |
+| 0008 | Window census stage 1 + cross-order leg + stage-2 kinetic metric | attempts/0008 (window_census.py, cross_order.py, kinetic_stage2.py, census-v3.json, cross-order.json, kinetic-stage2.json) | Stage 1: 5/5 PASS. Cross-order: NAMED OBSTRUCTION. Stage 2: 1/3 gates, classification delivered | tangent channel = structural kinetic null (tdot*Identity commutes with all gradients); all 8 modes positive-metric; ultra-light omega^2 1.5e-04.. quadrature-sensitive 9.9% (uncertified) | FD-discretization adjudication + constrained-subspace labels |
 
 ## Validation Plan (per item)
 

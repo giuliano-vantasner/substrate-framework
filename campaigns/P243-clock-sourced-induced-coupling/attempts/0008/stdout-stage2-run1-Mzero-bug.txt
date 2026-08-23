@@ -1,0 +1,23 @@
+[M] asym=0.00e+00 psd_defect=0.00e+00 rank_floor=0.000e+00
+[mode 0] lam=+7.450258e-05 m_ray=0.000000e+00 -> CONSTRAINED/STATIC
+[mode 1] lam=+1.901708e-02 m_ray=0.000000e+00 -> CONSTRAINED/STATIC
+[mode 2] lam=+8.557937e-02 m_ray=0.000000e+00 -> CONSTRAINED/STATIC
+[mode 3] lam=+3.493413e-01 m_ray=0.000000e+00 -> CONSTRAINED/STATIC
+[mode 4] lam=+5.968956e-01 m_ray=0.000000e+00 -> CONSTRAINED/STATIC
+[mode 5] lam=+1.536387e+00 m_ray=0.000000e+00 -> CONSTRAINED/STATIC
+[mode 6] lam=+1.993536e+00 m_ray=0.000000e+00 -> CONSTRAINED/STATIC
+[mode 7] lam=+2.982251e+00 m_ray=0.000000e+00 -> CONSTRAINED/STATIC
+[omega^2] lowest 0: []
+Traceback (most recent call last):
+  File "/home/dan/substrate-framework/campaigns/P243-clock-sourced-induced-coupling/attempts/0008/kinetic_stage2.py", line 326, in <module>
+    main()
+  File "/home/dan/substrate-framework/campaigns/P243-clock-sourced-induced-coupling/attempts/0008/kinetic_stage2.py", line 283, in main
+    scale_w = max(1.0, float(np.max(np.abs(omega_sq[:n_cmp]))))
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dan/anaconda3/lib/python3.12/site-packages/numpy/core/fromnumeric.py", line 2810, in max
+    return _wrapreduction(a, np.maximum, 'max', axis, None, out,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dan/anaconda3/lib/python3.12/site-packages/numpy/core/fromnumeric.py", line 88, in _wrapreduction
+    return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: zero-size array to reduction operation maximum which has no identity
