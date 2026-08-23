@@ -57,8 +57,34 @@ interpretation_guards:
 pending_rows:
   - stage 2: fluctuation kinetic metric construction and
     propagating-vs-static classification of both soft modes
-  - cross-order structural leg at R=8/R=12 (re-solves under the 0004/0005
-    hardening protocol) to adjudicate the grid-mode suspicion
+  - cross-order structural leg: EXECUTED and TERMINATED at a named
+    obstruction (see cross_order section below)
+cross_order:
+  preregistration: v2 amendment inside cross_order.py docstring (declared
+    before any N>=18 spectrum was read; run-1 stdout preserved as
+    stdout-cross-order.txt)
+  executed:
+    - "N=18 continuation-seeded solve (zero-pad from N16): converges to a
+      genuine stationary point (relgrad 1.83e-14, E=54.9483034233) but
+      FAILS the structural branch-identity gate -- stiff-band relative
+      drift 51.9% >> 25% gate"
+    - "branch probe (stdout-branch-probe.txt): the truncated N=18 root is
+      NOT near-stationary on the N16 functional (relgrad 7.3e-01, E +5%)"
+  verdict: >
+    Order-enrichment re-solves about the R=12 S-family window root do not
+    stay on branch: the seeded N=18 solve lands on a DIFFERENT stationary
+    configuration. Consistent with three independent precedents (R=10
+    ladder divergence at N>=18; 0005's order-18 obstruction; frozen-field
+    order-change impossibility). The grid-mode suspicion on the two soft
+    modes therefore CANNOT be adjudicated by cross-order comparison in this
+    model family at R=12 and remains OPEN as a named obstruction.
+  queued_constructions:
+    - stage-2 kinetic metric classification (independent evidence channel)
+    - independent-discretization route (finite-difference radial Hessian at
+      high resolution; a soft eigenvalue reproducing with FIXED nodal
+      structure would certify physicality)
 outputs:
   - attempts/0008/window_census.py (+ stdout-run1-gates-failed.txt,
     stdout-v2.txt, stdout-v3.txt, census-v3.json)
+  - attempts/0008/cross_order.py (+ stdout-cross-order.txt,
+    stdout-cross-order-v2.txt, stdout-branch-probe.txt, cross-order.json)

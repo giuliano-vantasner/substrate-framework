@@ -1,0 +1,3 @@
+[probe] N16-functional at truncated-N18 root: E=57.8848757643 (N16 root E=55.1041827804) relgrad=7.321e-01
+[probe] relgrad ~ 1e-3 => distinct stationary points (branch change);
+[probe] relgrad ~ gradient tolerance 1e-10 => same branch, order-refined

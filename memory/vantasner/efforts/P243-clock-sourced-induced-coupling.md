@@ -2,7 +2,7 @@
 description: P243 continuation — finish issue #163's four open criteria (window-background census, B settlement, np/nâ pairing verdict, radiative attempt) on top of the promoted v0.164.0 claims
 author: ox-alpha
 created: '2026-08-23T13:30:00+00:00'
-updated: '2026-08-23T15:05:00+00:00'
+updated: '2026-08-23T16:45:00+00:00'
 tags:
 - substrate-framework
 - effort
@@ -81,19 +81,22 @@ no-go). Numerics per `.agents/skills/small-ratio-numerics`: scale-relative
 error models, frozen-field discretization tests, two independent routes at
 1e-8 where exactness unavailable, pinned BLAS threads recorded. Attempts
 append-only under `campaigns/P243-clock-sourced-induced-coupling/attempts/`
-(0009 next). New claim IDs must collision-search clean before allocation
-(C-M5S-006+ verified free 2026-08-23).
+(stage-2 rows extend 0008; next fresh attempt 0009). New claim IDs must
+collision-search clean before allocation (C-M5S-006+ verified free
+2026-08-23).
 
 ## Decomposition
 
 1. [x] Recall, source verification, reconciliation ledger.
 2. [~] A: window-background census — STAGE 1 COMPLETE (attempt 0008, 5/5
    checks): bottom-block stiffness spectrum about the frozen R=12 root
-   certified; two soft modes + six stiff; route-B FD agrees autograd to
-   ~3e-7 relative on the stiff band. Pending inside item A: stage 2
-   (fluctuation kinetic metric → propagating-vs-static classification of
-   both soft modes) and the cross-order grid-mode adjudication leg.
-3. [ ] B: baseline settlement (attempt 0009+, may parallel A after its background exists).
+   certified; two soft modes + six stiff; FD cross-route agrees autograd to
+   ~3e-7 relative on the stiff band. Cross-order sub-leg EXECUTED and
+   terminated at a named obstruction (order ladders cannot adjudicate).
+   Pending inside item A: stage 2 kinetic metric (propagating-vs-static
+   classification of both soft modes) and/or an independent-discretization
+   (FD radial Hessian) route to settle the grid-mode suspicion.
+3. [ ] B: baseline settlement (attempt 0009+; can run parallel to A's remainder).
 4. [ ] D: np/nâ shear-channel pairing verdict (needs A's channel structure).
 5. [ ] C: radiative attempt (independent; last).
 6. [ ] Governance: individual reviews, promotion, release bump, docs/memory sync, close #163 against its letter.
@@ -139,9 +142,15 @@ Thread the logic so a fresh session can rebuild the chain without re-deriving:
   committed R=8 ladder (4.5e-5 → 2.0e-5 → 9.7e-6). Nodal count ≈ order plus
   geometric halving is the classic spectral grid-scale-artifact signature —
   i.e. P240's "marginal plateau" may be a resolution artifact rather than
-  near-flat physics. Adjudicate via cross-order re-solves under the
-  0004/0005 hardening protocol BEFORE trusting any soft-mode count
-  downstream.
+  near-flat physics.
+- **Cross-order obstruction mechanism (attempt 0008)**: order-enrichment
+  about window roots is systematically obstructed — seeded N=18 converges
+  (relgrad 1.8e-14) to a DIFFERENT stationary point (stiff-band drift 52%;
+  truncated root sits at relgrad 0.73 on the N=16 functional). Any future
+  "just re-solve at higher order" plan about R=10/R=12 window roots is dead
+  on arrival; adjudication of the soft-mode suspicion must come from either
+  the kinetic-metric channel or an independent discretization (FD radial
+  Hessian), not from order ladders.
 - **Verifier-defect scars from 0008 runs 1–2**: `centered_curvature`
   normalizes by max(1,|E|)≈55.1, not by block scale — un-normalize by that
   exact factor or FD cross-routes are off by ~18×; global-top-eigenvalue
@@ -162,7 +171,7 @@ first-execution stdout; superseded verifier runs kept verbatim).
 | 0005 | Candidate E refuted; F selected; UNBLIND | attempts/0005 | F PASS (all 7 checks) | U-family λ₁ asymptote −2e-4 never crosses; F=E_U−E_S box-stable 3.23% | order-18 row declared-unavailable (named obstruction) |
 | 0006 | Consumer Poisson BVP | attempts/0006 | PASS + regime INVALID at ξ=0 | GM/R≈213≫1; flux-form FD; GL-sum mass identity (never trapezoid over weights) | escapes registered |
 | 0007 | Massless induced-channel pairing | attempts/0007 | PASS (attractive/cancel/repulsive ξ-structure) | moment pairing, no energy subtraction; chebyshev endpoint NaN clamp | np/nâ verdict owed → item D |
-| 0008 | Window census STAGE 1: stiffness bottom-block about frozen R=12 root, banded gates | attempts/0008 (window_census.py, census-v3.json) | 5/5 PASS | route-B units scar; base-quad bias bound 8.9e-6 < 1e-5·s_b; GRID-MODE SUSPICION on softest mode (13–14 nodes @ order 16) | stage 2 kinetic metric + cross-order adjudication |
+| 0008 | Window census stage 1 + cross-order leg | attempts/0008 (window_census.py, cross_order.py, census-v3.json, cross-order.json) | Stage 1: 5/5 PASS. Cross-order: NAMED OBSTRUCTION | route-B units scar (~18×); base-quad bias bound 8.9e-6 < 1e-5·s_b; grid-mode suspicion UNADJUDICABLE at R=12 — seeded N=18 lands on a different stationary point (branch probe relgrad 0.73) | stage 2 kinetic metric + independent-discretization route |
 
 ## Validation Plan (per item)
 
@@ -195,9 +204,10 @@ bite-mark.
   distinct-merger practice).**
 - Update THIS file (updated timestamp + attempt row + reasoning additions)
   at every milestone; push via memory-status PR so state survives crashes.
-- Edit discipline learned twice over in this file: NEVER chain anchored
-  edits from remembered line numbers here — re-read, then either one
-  content-exact hunk per call or a full-file rewrite.
+- Edit discipline learned five times over in this file and its scripts:
+  NEVER chain anchored edits from remembered line numbers — re-read
+  immediately before editing, one content-exact hunk per call, and after
+  two failed patch rounds switch to a single full-file rewrite.
 
 ## Debt Ledger
 

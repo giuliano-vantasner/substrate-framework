@@ -1,0 +1,5 @@
+[base N=16] E=55.1041827804 bottom=+7.450258e-05 lam1=+1.901708e-02
+[solve N=18] conv=True E=54.9483034233 dE_rel=2.829e-03 stiff_drift=5.189e-01 (0.5min)
+[VERDICT mode_0] INCONCLUSIVE (no guarded solve)
+[VERDICT mode_1] INCONCLUSIVE (no guarded solve)
+[DONE] cross-order.json written
