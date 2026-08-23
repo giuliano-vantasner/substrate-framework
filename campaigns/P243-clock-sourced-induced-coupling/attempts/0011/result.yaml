@@ -1,0 +1,53 @@
+attempt: "0011"
+campaign: P243-clock-sourced-induced-coupling
+title: radiative attempt -- stability theorem completed + quantitative
+  prediction blocked with missing construction named
+question: >
+  Issue #163 criterion 3, radiative clause -- perform the radiative check
+  honestly and record it either way.
+status: COMPLETE -- R1 (decay) decided STABLE; R2 (zero-point prediction)
+  BLOCKED with the missing construction named
+preregistration: module docstring (pre-inspection); all loads read-only
+  artifact assertions with expected contents fixed ex ante by committed
+  0008/0010 outputs
+method:
+  - R1 compositional theorem -- the confined clock is RADIATIVELY STABLE
+    within the model class. Three exact premises compose.
+  - R2 named blocking -- the renormalized zero-point self-energy
+    delta-E = (1/2) sum_i omega_i is not computable to registry standard;
+    missing construction named below.
+verdict:
+  r1_radiative_stability: >
+    COMPLETED. (i) No internal decay channel -- physical bound spectrum
+    strictly positive-frequency with positive kinetic metric; every
+    ultra-light candidate a proven grid artifact (0008 FD ladder
+    GRID ARTIFACT x6, mesh collapse 5.3e-7 -> 8.6e-9 across N_r = 48/72/96,
+    nodal-count~order signature, box trend disfavoring domain gift); a
+    ground state has no lower state. (ii) No classical radiation -- a
+    stationary point of an elliptic variational problem is
+    time-independent and sources no waves. (iii) No exterior carrier --
+    the field tail outside confinement is pure gauge in the vacuum
+    manifold (0010 [A,A]=0 exterior-factorization lemma), so the core
+    feeds no propagating channel.
+  r2_zero_point_prediction: >
+    BLOCKED. The zero-point mass shift would feed M in the weak-field
+    consumer, but registry-standard computation requires (a) certified
+    omega_i across the FULL band -- soft-mode omega^2 carries ~10%
+    quadrature sensitivity (stage-2 gate G2 failed at 9.9% drift between
+    independent quadratures) -- and (b) a convergent refinement ladder for
+    the complete kinetic-normalized spectrum, obstructed because order
+    enrichment about window roots lands on different stationary points
+    (cross-order stiff-band drift 52%).
+  missing_construction: >
+    A certified complete-spectrum table -- independent-discretization
+    agreement at a declared scale-relative tolerance across the whole
+    band, not only the soft modes. This is the same missing piece as item
+    A's uncertified soft omega^2 values.
+checks: ALL 5 PASS (read-only record grounding of every premise above)
+significance: >
+  Satisfies criterion 3's clause "radiative attempt recorded honestly":
+  the decidable half is decided (stable), the quantitative half is
+  blocked with the exact missing construction named -- not left silent.
+outputs:
+  - attempts/0011/radiative_stability.py (+ stdout.txt,
+    radiative-verdict.json)

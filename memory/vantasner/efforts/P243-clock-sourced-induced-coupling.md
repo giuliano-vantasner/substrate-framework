@@ -2,7 +2,7 @@
 description: P243 continuation — finish issue #163's four open criteria (window-background census, B settlement, np/nâ pairing verdict, radiative attempt) on top of the promoted v0.164.0 claims
 author: ox-alpha
 created: '2026-08-23T13:30:00+00:00'
-updated: '2026-08-23T20:40:00+00:00'
+updated: '2026-08-23T21:30:00+00:00'
 tags:
 - substrate-framework
 - effort
@@ -108,8 +108,14 @@ attempts/`. New claim IDs collision-searched clean (C-M5S-006+ free).
    physical background; only long-range kernel in the accepted composition
    is Newton (0007). First-draft identity lemma refuted by its own check,
    superseded draft recorded verbatim.
-5. [ ] C: radiative attempt (independent; last).
-6. [ ] Governance: individual reviews, promotion, release bump, docs/memory sync, close #163 against its letter.
+5. [x] C: radiative attempt — COMPLETE (attempt 0011, 5/5 checks).
+   R1 decay decided STABLE (composition of exact premises: massive
+   positive-metric spectrum with grid-artifact light modes excluded;
+   static ground state; pure-gauge exterior tail). R2 zero-point mass
+   shift BLOCKED with missing construction named — certified
+   complete-spectrum table (full-band independent-discretization
+   agreement); blockers recorded: 9.9% soft-ω² quadrature drift,
+   cross-order 52% stationary-point jump.
 
 ## Reasoning Thread and Decision Log
 
@@ -176,6 +182,7 @@ first-execution stdout; superseded verifier runs kept verbatim).
 | 0008 | Census S1 + X-order + S2 kinetic metric + FD route + box trend | attempts/0008 (window_census.py, cross_order.py, kinetic_stage2.py, fd_route.py + jsons/logs) | S1: 5/5 PASS; X-order: OBSTRUCTION; S2: 1/3 gates; FD: G0 PASSED, **GRID ARTIFACT x6**; box: gift disfavored | tangent null; double-square sampling root bug; shared-μ summation; sine/r factors; jac.norm mislabeling | adjudication claim → governance |
 | 0009 | B settlement: irreducibility + weak-field bound | attempts/0009 (baseline_settlement.py, baseline-verdict.json) | 5/5 PASS — **B IRREDUCIBLE**; B_min = 212Δ–21339Δ for ε*=1..0.01 | criterion-3 dichotomy: induced+strong-coupled OR bare-dominated+weak-field; middle empty by exact arithmetic | feeds final report criterion-3 wording |
 | 0010 | np/nâ shear-channel verdict | attempts/0010 (shear_channel_verdict.py, shear-verdict.json) | 7/7 PASS — **STRUCTURAL REFUTATION**: no long-range np/nâ channel | exterior factorization: pinned field = exact projector nn^T(Θ₁+Θ₂), single-generator [A,A]=0 ⇒ exterior density ≡ 0 (probe 1.4e-23; mutation contrast 1e18); first-draft identity lemma refuted by own check C1a, recorded | criterion-4 wording in final report |
+| 0011 | Radiative attempt | attempts/0011 (radiative_stability.py, radiative-verdict.json) | 5/5 PASS — **R1 STABLE** (no decay channel); **R2 BLOCKED** (zero-point shift) | stability = massive spectrum + static ground state + pure-gauge tail; blocker: full-band certified spectrum table missing (9.9% soft drift; 52% cross-order jump) | criterion-3 clause satisfied either-way |
 
 ## Validation Plan (per item)
 
@@ -230,4 +237,4 @@ release: `governance/releases/v0.164.0.yaml`;
 reviews: `memory/vantasner/decisions/C-M5S-00{1..5}-review.md`;
 issue: https://github.com/vantasnerdan/substrate-framework/issues/163
 (scorecard comment 2026-08-23); PRs #167/#168 merged;
-continuation PR: #169 (this file + attempts 0008..0010 artifacts).
+continuation PR: #169 (this file + attempts 0008..0011 artifacts).
