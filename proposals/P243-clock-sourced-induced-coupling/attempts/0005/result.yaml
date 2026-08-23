@@ -1,0 +1,65 @@
+claim: C-M5S-002 (scale selection, candidate E)
+verdict: >
+  Refuted within the accessible regime.  Family U -- the stationary-point
+  family containing the certified P240 R=6 root -- has no stabilization
+  radius for R <= 14: its soft eigenvalue lambda_1 rises from -6.26e-2
+  (R=6.05) to -1.42e-3 (R=14) with geometrically decaying increments
+  (ratio drifting 0.83 -> 0.87 per 0.25-0.5 step), whose partial sums
+  bound all future rise below |lambda_1(R=14)|.  The eigenvalue
+  approaches a strictly negative asymptote of order -(1..3)e-4 rather
+  than crossing zero.  Per the frozen interpretation rule this is a
+  named-mechanism refutation, not a conversion into another
+  construction.
+established_along_the_way:
+  - >
+    The attempt-0004 U-chain replays bit-for-bit (13 radii, zero energy
+    mismatches, thread-pinned environment), then extends cleanly to
+    R=14 with continuous family monitors throughout: soft-mode overlap
+    >= 0.9947 at every step, energy interpolation gaps <= 0.041,
+    lambda_min/lambda_2 quoted per row.
+  - >
+    Order artifact exposed: the apparent U-S energy-gap closure near
+    R=12-14 came from comparing 0042 order-16 S roots against order-20
+    U roots.  Same-order (20) splittings are Delta_E = +0.260 (R=8)
+    and +0.265 (R=10).
+missing_construction: >
+  Either continuum evidence that lambda_1(U) < 0 for all finite R
+  (closing the R>14 loophole), or a box-independent scale construction
+  that does not require branch stabilization.
+declared_caveat: >
+  The asymptotic argument is numerical on R in [6,14] at order 20 with
+  pinned threads, not a continuum proof; stabilization beyond R=14 is
+  outside the certifiable domain and is recorded as the residual
+  hypothesis the refutation rests on.
+candidate_F_registered_separately: >
+  The same-order U-S splitting data motivate candidate F (Lambda^2 :=
+  E_U - E_S), registered in proposal.yaml with frozen criteria before
+  the R=12/14 order-20 S-root comparators were evaluated.
+candidate_F_selected:
+  statement: Lambda^2 := E_U - E_S, mean over R in {8,10,12,14} at
+    matched solver order 20
+  frozen_criteria_verdicts:
+    ontology: "pass -- sector-intrinsic spectral splitting, no
+      container length in the definition"
+    box_independence: pass -- series 0.260055/0.265235/0.271457/
+      0.277141, mean 0.268472, max spread 3.23% < 5%
+    refinement_stability: "pass on quadrature rows (frozen fields,
+      48x24: shifts 2.0e-4 at R=12, 2.45e-4 at R=14); order-18 row
+      declared unavailable -- every U-leaning order-18 solve lands in
+      the S18 basin or diverges (three-seed search recorded in
+      splitting-final.log); substitution documented, not silent"
+    economy: pass -- one constructed scale
+  selected_values:
+    Lambda: 0.5181428778016915
+    Lambda_squared: 0.26847204181661866
+    Lambda_bounds: [0.5099555108736403, 0.5264421235095168]
+  ledger: attempts/0005/selection-f.log (ALL 7 CHECKS PASS)
+unblinded_numerics:
+  Delta_invG_xi0_N3: 0.02136432626854447
+  G_total_B0: 46.80699908016004
+  closed_form_confirmation: Delta = Lambda^2/(4 pi) exact to 1e-12;
+    G_total = 4 pi / Lambda^2 exact to 1e-12
+  band_ratios: [0.9686469448018972, 1.032291137393413]
+  ledger: attempts/0003/numeric-unblinded.log (ALL 4 CHECKS PASS)
+  method_note: exact-symbolic pipeline fed nsimplify rationals of the
+    measured splitting; floats never cross the canonical boundary

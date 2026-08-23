@@ -1,0 +1,47 @@
+attempt: "0005"
+campaign: P243-clock-sourced-induced-coupling
+title: candidate E test, candidate F selection, and numeric unblinding
+question: >
+  Does Lambda = 1/R_U*, R_U* the radius where family U's discrete Morse
+  index falls to 0, satisfy the frozen selection criteria and provide
+  the box-independent UV length for Delta(1/G)?  Followed by: the
+  family-splitting construction F registered mid-attempt after E's
+  refutation exposed the U-S splitting data.
+method:
+  - continuation re-walk of the U chain from the certified anchor with
+    per-step family monitors (soft-vector overlap, energy
+    interpolation gap, node count, lambda_1/lambda_2 ratio)
+  - extension to R=14 with the frozen interpretation rule fixed in the
+    script docstring before launch
+  - bisection + per-order/frozen-field confirmation armed but never
+    triggered: no crossing occurred (E refuted)
+  - candidate F comparators: order-20 S ladders at R=12/14 from the
+    committed order-16 roots; U@12 rebuilt by monitored descent from
+    the saved R=13 chain values; frozen-field quadrature rows; a
+    multi-seed order-18 U search (documented negative result)
+comparator_blinding: >
+  Delta(1/G)/G_total stayed blinded until selection_f.py passed the
+  frozen criteria and wrote selection.json; numeric_evaluation.py then
+  unblinded through the exact-symbolic boundary (nsimplify rationals).
+inputs:
+  - attempts/0004/stable-side-refinement.json (U anchor values)
+  - attempts/0004/family-resolution.json + family.log (replay targets)
+  - proposals/P240-m5-kinetic-axis/attempts/0042/largeR-roots.json
+outputs:
+  - attempts/0005/candidate_e.py (+ candidate-e.log, candidate-e.json)
+  - attempts/0005/splitting_scale.py (+ splitting.log,
+    splitting-scale.json; U-side ladders family-jumped, preserved)
+  - attempts/0005/splitting_fixed.py (+ splitting-fixed.log; order-18
+    oracle rejects order-20-length fields -- protocol lesson)
+  - attempts/0005/splitting_final.py (+ splitting-final.log;
+    S-side rows valid, U18 search negative, R=12 rows logged)
+  - attempts/0005/dq14.py (+ dq14.log, splitting-dq14.json)
+  - attempts/0005/selection_f.py (+ selection-f.log,
+    ../0002/selection.json)
+verdict: >
+  Candidate E refuted with named mechanism (no stabilization within
+  R <= 14; lambda_1(U) approaches a negative asymptote).  Candidate F
+  selected: Lambda = 0.5181428778016915, Lambda^2 = 0.26847204181661866
+  (ALL 7 SELECTION CHECKS PASS).  Unblinded: Delta(1/G) at xi=0, N=3 =
+  0.02136432626854447; G_total(B=0) = 46.80699908016004 (ALL 4 CHECKS
+  PASS); band +-3.23 percent.

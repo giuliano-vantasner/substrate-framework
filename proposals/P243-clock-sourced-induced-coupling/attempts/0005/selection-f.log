@@ -1,0 +1,20 @@
+PASS [P243-attempt-0005-selection-F] splitting_series_consistent_with_records
+PASS [P243-attempt-0005-selection-F] family_fingerprints_hold
+PASS [P243-attempt-0005-selection-F] ontology_closure_sector_intrinsic_splitting
+PASS [P243-attempt-0005-selection-F] box_independence_window_spread_under_5pct
+PASS [P243-attempt-0005-selection-F] refinement_stability_quadrature_rows
+PASS [P243-attempt-0005-selection-F] refinement_order_row_declared_unavailable
+PASS [P243-attempt-0005-selection-F] economy_single_constructed_scale
+{
+  "selected_candidate": "F",
+  "definition": "Lambda^2 := E_U - E_S, mean over R in {8,10,12,14} at matched order 20",
+  "Lambda": 0.5181428778016915,
+  "Lambda_squared": 0.26847204181661866,
+  "Lambda_bounds": [
+    0.5099555108736403,
+    0.5264421235095168
+  ],
+  "source_attempt": "0005",
+  "deviations": "order-18 refinement row unavailable (named obstruction); quadrature rows operative"
+}
+ALL 7 CHECKS PASS [P243-attempt-0005-selection-F]

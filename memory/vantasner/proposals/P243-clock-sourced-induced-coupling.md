@@ -190,6 +190,33 @@ kinetic-axis root is an unstable saddle with a stable twin family at
 the same radius; family qualifier question left to P240.  Numerics
 stay blinded (selection.json still null).
 
+### Attempt 0005 (complete — E refuted, F selected, numerics UNBLINDED)
+
+Candidate E (Lambda = 1/R_U*, family-U stabilization) is REFUTED: U's
+soft eigenvalue rises from -6.26e-2 (R=6.05) to only -1.42e-3 at
+R=14 with geometrically decaying increments (ratio ~0.85 rising), whose
+partial sums bound all future rise below |lambda_1(14)| — negative
+asymptote ~-2e-4, no crossing in the certifiable regime.  Chain replay
+of the whole 0004 route was bit-exact (thread-pinned).  Candidate F,
+registered mid-attempt before its comparators ran:
+Lambda^2 := E_U - E_S (same-order U-S stationary-family splitting),
+mean over R in {8,10,12,14} = 0.26847204181661866, Lambda =
+0.5181428778016915, bounds +-1.7%.  Frozen criteria: box-independence
+3.23% spread (<5%); quadrature rows (frozen fields, 48x24) shift
+Delta_E by 2.0e-4/2.45e-4; order-18 row DECLARED UNAVAILABLE — every
+U-leaning order-18 solve lands in S18 or diverges (named obstruction,
+documented, not silently substituted).  ALL 7 SELECTION CHECKS PASS.
+UNBLINDED via exact-symbolic boundary (nsimplify rationals; floats
+never cross; canonical modules reject float cutoffs AND float zeros):
+Delta(1/G) xi=0 N=3 = 0.02136432626854447 (=Lambda^2/4pi exact to
+1e-12); G_total(B=0) = 46.80699908016004 (=4pi/Lambda^2); band
+[0.9686, 1.0323].  total_inverse_newton field IS 1/G_total when
+baseline=0 — invert for G_total.  Method scars: coefficient-vector
+length IS the order (order changes cannot be tested at frozen fields —
+quadrature can); re-solve ladders near flat directions jump families a
+third time; acceptance guards on solver output need energy-continuity
+bounds, not just lambda sign + relgrad (a diverged root passed both).
+
 ## Debt Ledger
 
 Empty at instantiation. Declared hypotheses live in the manifest; honest

@@ -1,0 +1,18 @@
+PASS [P243-attempt-0003-numeric] delta_matches_closed_form
+PASS [P243-attempt-0003-numeric] g_total_purely_induced
+PASS [P243-attempt-0003-numeric] count_mutation_linear
+PASS [P243-attempt-0003-numeric] sensitivity_band_recorded
+{
+  "Lambda": 0.5181428778016915,
+  "Lambda_bounds": [
+    0.50995551087364,
+    0.526442123509517
+  ],
+  "Delta_invG_xi0": 0.02136432626854447,
+  "G_total_B0": 46.80699908016004,
+  "band_ratios": [
+    0.9686469448018972,
+    1.032291137393413
+  ]
+}
+ALL 4 CHECKS PASS [P243-attempt-0003-numeric]

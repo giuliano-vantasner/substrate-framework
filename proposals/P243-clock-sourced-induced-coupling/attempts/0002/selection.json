@@ -1,5 +1,12 @@
 {
- "selected_candidate": null,
- "verdict": "refuted: no preregistered candidate satisfies the frozen criteria; the clock-branch gradient energy is domain-filling",
- "missing_construction": "a box-independent UV length of the confined-clock sector; registered next construction: Lambda = 1/R* where R* is the Morse-index critical radius of the branch"
+ "selected_candidate": "F",
+ "definition": "Lambda^2 := E_U - E_S, mean over R in {8,10,12,14} at matched order 20",
+ "Lambda": 0.5181428778016915,
+ "Lambda_squared": 0.26847204181661866,
+ "Lambda_bounds": [
+  0.5099555108736403,
+  0.5264421235095168
+ ],
+ "source_attempt": "0005",
+ "deviations": "order-18 refinement row unavailable (named obstruction); quadrature rows operative"
 }
