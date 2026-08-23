@@ -1,0 +1,34 @@
+PASS [P243-attempt-0001] basis_dimension_is_sym4
+PASS [P243-attempt-0001] massless_species_count_is_three
+PASS [P243-attempt-0001] stiff_static_directions_are_four
+PASS [P243-attempt-0001] inert_directions_are_three
+PASS [P243-attempt-0001] kinetic_coefficients_exact
+PASS [P243-attempt-0001] stiff_gaps_exact
+PASS [P243-attempt-0001] projector_variation_certified_unique
+PASS [P243-attempt-0001] degenerate_target_rejected
+PASS [P243-attempt-0001] kinetic_rescaling_moves_coefficients
+PASS [P243-attempt-0001] weight_mutation_moves_stiff_gaps
+{
+  "inert_count": 3,
+  "kinetic_coefficients": [
+    "1/9",
+    "100/1369",
+    "1/16"
+  ],
+  "kinetic_rank": 3,
+  "massive_stiff_gaps": [
+    "67905",
+    "30",
+    "361141/250000",
+    "1"
+  ],
+  "massless_count": 3,
+  "stiffness_rank": 4,
+  "targets": [
+    "Expr(4)",
+    "Expr(1)",
+    "Expr(3/10)",
+    "Expr(0)"
+  ]
+}
+ALL 10 CHECKS PASS [P243-attempt-0001]

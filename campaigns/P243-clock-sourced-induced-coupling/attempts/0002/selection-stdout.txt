@@ -1,0 +1,14 @@
+PASS [P243-attempt-0002-selection] clock_branch_identity
+PASS [P243-attempt-0002-selection] root_converged_R8_0
+PASS [P243-attempt-0002-selection] root_converged_R10_0
+PASS [P243-attempt-0002-selection] candidate_A_full_refuted_by_box_drift
+PASS [P243-attempt-0002-selection] candidate_A_core_refuted_by_box_drift
+PASS [P243-attempt-0002-selection] candidate_A_loose_refuted_by_box_drift
+PASS [P243-attempt-0002-selection] candidate_B_refuted_by_domain_scaling
+PASS [P243-attempt-0002-selection] candidate_C_refuted_by_ontology
+{
+  "selected_candidate": null,
+  "verdict": "refuted: no preregistered candidate satisfies the frozen criteria; the clock-branch gradient energy is domain-filling",
+  "missing_construction": "a box-independent UV length of the confined-clock sector; registered next construction: Lambda = 1/R* where R* is the Morse-index critical radius of the branch (action-level threshold, box-independent by definition)"
+}
+ALL 8 CHECKS PASS [P243-attempt-0002-selection]

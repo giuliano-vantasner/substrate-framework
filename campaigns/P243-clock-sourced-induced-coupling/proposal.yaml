@@ -1,0 +1,129 @@
+id: P243
+base_release: v0.163.0
+source_baseline: substrate-framework@fda76ef
+question: >-
+  Can the confined-clock substrate source its own gravitational premises: do the
+  second-variation channels of the relaxed radial hedgehog supply a derived
+  fluctuation census N and squared-gap spectrum {m_i^2}, does the same action
+  supply a cutoff scale Lambda with cutoff-ontology closure, and does the
+  accepted composition C-IGR-004 then yield a numeric Delta(1/G) that drives a
+  canonical weak-field consumer and settles the flat-channel force question?
+source_inventory:
+  - source: substrate-framework accepted registry C-IGR-001..004, C-GRV-001/002, C-STG-001/002
+    access: in-hand governance/claims.yaml at fda76ef
+    extracted: exact composition 1/G_total=B+N*(1-6*xi)*Lambda^2*J(z)/(12*pi); usable
+      scheme set {sharp, smooth}; sign map; baseline provenance
+  - source: canonical modules m5_stationary_fields.py, m5_covariant_action.py,
+      m5_kinetic_axis.py, total_gravitational_coupling.py, scalar_induced_newton.py,
+      linearized_einstein.py
+    access: in-hand src/substrate_framework/ at fda76ef
+    extracted: radial hedgehog relaxation API, pinned spectral targets
+      (4, 1, 0.3, 0), J(z) families, one-loop shift coefficient, weak-field monopole
+  - source: P240 attempts 0041-0043 committed artifacts
+    access: in-hand proposals/P240-m5-kinetic-axis/attempts/
+    extracted: independent torch-autograd Hessian route; finite window R in [~8,~34]
+      with structural marginality; boxed pair oracle negative (disjoint supports,
+      singular chart); static-frame coupling +456.6*d^-1.696
+invariants:
+  - no propagating collective tensor is rescaled into a metric (Route-2 no-go, metric-rescaling trap)
+  - comparator blinding until structural selection freezes
+  - usable scheme set is derived by legs L1/L2/L3, never chosen
+  - baseline B stays declared per C-GRV-001; dimensions do not set B=0
+  - small-ratio numerics discipline per .agents/skills/small-ratio-numerics
+allowed_imports:
+  - C-GRV-001
+  - C-IGR-001
+  - C-IGR-002
+  - C-IGR-003
+  - C-IGR-004
+  - C-GRV-002
+  - C-STG-001
+  - canonical modules listed in source_inventory
+candidates:
+  - id: A
+    description: >-
+      Lambda = 1/L_grad with L_grad the preregistered gradient-energy centroid
+      radius of the relaxed hedgehog; a genuine object-level length with
+      cutoff-ontology closure via C-GRV-001's E_cut=hbar*c/a
+  - id: B
+    description: Lambda = pi/R_box, the box quantization scale; expected reject as
+      IR and box-dependent
+  - id: C
+    description: Lambda^2 = max pinned spectral target (4.0) of the spectrum
+      potential; expected reject unless a length ontology is supplied
+  - id: D
+    description: >-
+      Lambda = 1/R* with R* the Morse-index critical radius of the confined-
+      clock branch: the radius at which the branch tangential-split Hessian
+      eigenvalue changes sign (index 1 below, index 0 above; certified R=6
+      index 1, window R=7.5 index 0).  An action-level instability threshold
+      of the sector itself, so cutoff-ontology closure holds by construction;
+      box-independence is tested as invariance of the crossing under solver
+      order and quadrature refinement, not against an external container.
+    registered_in: attempts/0004 (preregistered before any solve at radii in
+      (6, 7.5) was executed)
+    frozen_criteria: same four selection criteria as A/B/C above
+    disposition: refuted (attempts/0004/result.yaml) -- single-branch
+      premise false; two stationary-point families coexist near R=6
+  - id: E
+    description: >-
+      Lambda = 1/R_U* with R_U* the stabilization radius of family U,
+      the stationary-point family containing the certified P240 R=6
+      root: bisection on U's discrete Morse index (measured index >= 1
+      at R=8.0 with lambda_1 = -1.38e-2 and geometrically decaying
+      slope; expected crossing R ~ 8.3-8.5).  Same action-level
+      threshold ontology as D, applied along the certified branch
+      itself; family identity is enforced by continuation seeding from
+      the certified root and checked by energy continuity against the
+      U-branch trajectory.
+    registered_in: attempts/0004/result.yaml (registered before any
+      solve at radii in (8.0, 9.0) was executed)
+    frozen_criteria: same four selection criteria as A/B/C above
+    disposition: refuted (attempts/0005/result.yaml) -- no stabilization
+      within R <= 14; lambda_1(U) approaches a negative asymptote
+  - id: F
+    description: >-
+      Lambda^2 := E_U - E_S, the same-order energy splitting between
+      the two coexisting clock-sector stationary-point families (U =
+      certified P240 branch, S = stable window family).  Ontology: an
+      intrinsic spectral splitting of the sector's stationary
+      structure, defined without reference to a container edge.
+      Partially observed during family mapping at order 20:
+      Delta_E = +0.260 (R=8), +0.265 (R=10); the decisive comparators
+      are the not-yet-evaluated order-20 S roots at R=12 and R=14.
+    registered_in: attempts/0005/result.yaml (registered before the
+      R=12/14 order-20 S-root solves were executed)
+    frozen_criteria: |-
+      1. ontology: Lambda^2 is the U-S splitting itself (sector-
+         intrinsic; no container length enters the definition);
+      2. box-independence: max_R |Delta_E(R) - mean| / mean < 5% over
+         R in {8, 10, 12, 14} at matched solver order;
+      3. refinement stability: Delta_E stable across orders 18/20 at
+         fixed field values within the same 5% envelope, and frozen-
+         field quadrature stability of both family energies;
+      4. economy: one constructed scale; no new species or coupling
+         inputs beyond accepted census values.
+    disposition: selected (attempts/0005/result.yaml,
+      selection-f.log ALL 7 CHECKS PASS) -- Lambda =
+      0.5181428778016915, Lambda^2 = 0.26847204181661866; numerics
+      unblinded (Delta(1/G)=0.02136432626854447 at xi=0 N=3;
+      G_total=46.80699908016004 at B=0); order-18 refinement row
+      declared unavailable with named obstruction, quadrature rows
+      carry the criterion
+uniqueness_evidence: null
+selection_criteria:
+  - cutoff-ontology closure (a substrate length, not a regulator artifact)
+  - box-independence (UV scale must not move with domain radius)
+  - refinement stability of z_i = m_i^2/Lambda^2 under control/quadrature refinement
+  - assumption and parameter economy
+claims_proposed:
+  - C-M5S-001
+  - C-M5S-002
+  - C-M5S-003
+  - C-M5S-004
+  - C-M5S-005
+comparators_blinded_until: >-
+  After the fluctuation spectrum (C-M5S-001) and the scale selection criteria are
+  frozen; J(z) values and Delta(1/G) numbers are opened only after C-M5S-002
+  selection records its structural verdict.
+status: draft

@@ -1,0 +1,10 @@
+{
+ "verdict": "ATTRACTIVE at xi=0",
+ "coefficient": "F = G_total M1 M2 / d^2, G_total = Delta(1/G) = N Lambda^2/(12 pi)",
+ "G_total": 46.80699908016004,
+ "xi_structure": {
+  "attractive": "xi < 1/6",
+  "cancelled": "xi = 1/6",
+  "repulsive": "xi > 1/6"
+ }
+}

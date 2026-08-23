@@ -1,0 +1,37 @@
+attempt: "0002"
+campaign: P243-clock-sourced-induced-coupling
+title: window-branch continuation, cutoff-scale candidates, frozen-criteria selection
+question: >
+  Does one of the preregistered cutoff-scale candidates (A: Lambda = 1/L_grad
+  gradient-energy centroid; B: Lambda = pi/R_box; C: Lambda^2 = pinned spectral
+  target) provide a box-independent inverse-length scale for the composed
+  coupling Delta(1/G) = N(1-6xi)Lambda^2/(12pi)?
+method:
+  - continuation of the committed P240 R=6 order-20 root through the
+    validated Kelvin-method 1D pipeline (solve_radial_1d.py, order ladders
+    16->18->20 at radial_nodes=32, angular_nodes=16)
+  - branch identity certified against committed comparators (R=8 energy vs
+    phase1 ladder; R=10 cross-seeded re-solve from committed largeR-roots
+    coefficients converging onto the same root to 1e-15)
+  - pointwise reassembly of the certified energy integrand (adaptation of
+    committed 0041 code, cited provenance) giving the angular-averaged
+    gradient-energy density; centroid/RMS observables in full-box and
+    UV-core (10%, 5% of peak) variants
+  - extension of the drift measurement across the entire committed stable
+    family (largeR-roots.json R=10/12/14 coefficient values)
+comparator_blinding: >
+  J(z)/Delta(1/G) numeric evaluation stayed blinded throughout; the scale
+  verdict is structural.
+inputs:
+  - proposals/P240-m5-kinetic-axis/attempts/0041/radial-results.json
+  - proposals/P240-m5-kinetic-axis/attempts/0042/phase1-results.json
+  - proposals/P240-m5-kinetic-axis/attempts/0042/largeR-roots.json
+outputs:
+  - attempts/0002/window_continuation.py
+  - attempts/0002/scale_selection.py
+  - attempts/0002/continuation.log
+  - attempts/0002/scale-results.json
+  - attempts/0002/largeR-centroids.json
+  - attempts/0002/selection.json
+  - attempts/0002/selection-stdout.txt
+verdict: refuted-with-named-missing-construction

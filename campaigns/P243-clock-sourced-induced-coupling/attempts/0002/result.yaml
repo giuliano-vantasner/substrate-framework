@@ -1,0 +1,59 @@
+claim: C-M5S-002 (scale selection)
+verdict: >
+  Refuted for all three preregistered candidates, with the missing
+  construction named.  No cutoff scale is selected; numeric evaluation of
+  Delta(1/G) and G_total remains blinded.
+established_along_the_way:
+  - >
+    The certified clock branch was reproduced inside the campaign at R=8
+    and R=10: energies match the committed phase1 order-20 ladder exactly
+    at R=8, and the R=10 root is the same stationary point as the
+    committed largeR-roots entry (cross-seeded re-solve converges to it at
+    relative gap 1.07e-15; order-16 lambda_min matches to 9 significant
+    digits).
+  - >
+    The clock branch's gradient-energy cloud is domain-filling, not
+    localized: L_grad grows approximately as R^0.5 across the entire
+    committed stable family with no saturation
+    (L/R = 0.434, 0.391, 0.358, 0.332 at R = 8, 10, 12, 14).  UV-core
+    restriction does not repair this: the core carries 97-99% of the
+    gradient weight already.
+refutations:
+  candidate_A:
+    statement: Lambda = 1/L_grad (gradient-energy centroid radius)
+    mechanism: box-independence failure under frozen criterion 2
+    evidence: >
+      drift across R=8 -> R=10 exceeds the 5% gate for every declared
+      variant (full 12.6%, 10%-core 11.0%, 5%-loose 12.3%), and the drift
+      grows without saturation across the committed family to R=14
+  candidate_B:
+    statement: Lambda = pi/R_box
+    mechanism: IR scale by construction; moves with the container
+    evidence: analytic; 25% per radius step
+  candidate_C:
+    statement: Lambda^2 = pinned spectral target 4.0
+    mechanism: ontology closure failure; dimensionless action constant,
+      no canon mapping to a length
+missing_construction_named:
+  construction: >
+    A box-independent UV length of the confined-clock sector.  Registered
+    next construction (attempt 0003 candidate D): Lambda = 1/R* where R*
+    is the Morse-index critical radius of the clock branch, i.e. the
+    radius below which the tangential-split mode destabilizes.  R* is an
+    action-level threshold (box-independent by definition), computable by
+    Morse-index bisection between the certified R=6 index-1 saddle and
+    the R=7.5 index-0 window root, and its inverse is a genuine UV
+    threshold of the sector rather than a property of the analysis
+    domain.
+  status: registered, not yet computed
+consequence_for_campaign: >
+  Attempt 0003's numeric completion, attempt 0004 (consumer), and attempt
+  0005 (force verdict) remain blocked on the scale question.  The
+  symbolic composition results of attempt 0003 (species additivity,
+  Delta(1/G) = (1-6xi)N Lambda^2/(12pi), z=0 scheme-collapse) are
+  unaffected: they are exact identities holding for any Lambda.
+negative_subrecord: >
+  The canonical energy-minimizing relaxer cannot reach the excited clock
+  branch from cold starts (it selects a lower-energy droplet branch,
+  attempts/0002/backgrounds.json); branch access requires continuation
+  seeding, consistent with the committed P240 pipeline design.

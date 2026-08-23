@@ -1,0 +1,19 @@
+[U-desc] R=12.5: E=55.491304244 ovl=0.9988
+[U-desc] R=12.0: E=55.114618222 ovl=0.9985
+Traceback (most recent call last):
+  File "/home/dan/substrate-framework/proposals/P243-clock-sourced-induced-coupling/attempts/0005/splitting_fixed.py", line 153, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/dan/substrate-framework/proposals/P243-clock-sourced-induced-coupling/attempts/0005/splitting_fixed.py", line 102, in main
+    d18f = (frozen_energy(u_vals[radius], radius, order=18)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dan/substrate-framework/proposals/P243-clock-sourced-induced-coupling/attempts/0005/splitting_fixed.py", line 38, in frozen_energy
+    angular).evaluate(np.asarray(values))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dan/substrate-framework/proposals/P240-m5-kinetic-axis/attempts/0041/solve_radial_1d.py", line 159, in evaluate
+    total, components = energy_radial(variable, **self.settings)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dan/substrate-framework/proposals/P240-m5-kinetic-axis/attempts/0041/solve_radial_1d.py", line 56, in energy_radial
+    coefficients = flat.reshape(3, radial_order)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: shape '[3, 18]' is invalid for input of size 60
