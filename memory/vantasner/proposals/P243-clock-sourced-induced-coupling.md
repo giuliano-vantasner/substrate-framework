@@ -8,7 +8,7 @@ tags:
 - campaign-proposal
 category: proposals
 confidence: exploratory
-status: active
+status: archived
 ---
 
 ## Question and Positive Deliverable
