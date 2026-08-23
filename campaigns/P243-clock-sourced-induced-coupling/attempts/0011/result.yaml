@@ -51,3 +51,15 @@ significance: >
 outputs:
   - attempts/0011/radiative_stability.py (+ stdout.txt,
     radiative-verdict.json)
+
+# ERRATUM (2026-08-23, appended after review; original content above stands
+# as first-execution history)
+erratum: >
+  Premise (iii) originally cited 0010's pure-gauge exterior lemma,
+  superseded by attempt 0012's committed-functional correction. Restated:
+  the ground state is time-independent -- its exterior tail, though
+  carrying nonzero static gradient energy under the committed functional,
+  is itself stationary and sources no waves. radiative_stability.py was
+  rerun with exact-path C4/C5 anchors (first execution's fuzzy matcher
+  misattributed C5 provenance) and the corrected premise; rerun passes
+  5/5. Stability conclusion unchanged.

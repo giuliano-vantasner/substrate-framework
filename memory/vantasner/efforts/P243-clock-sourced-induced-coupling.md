@@ -2,7 +2,7 @@
 description: P243 continuation — finish issue #163's four open criteria (window-background census, B settlement, np/nâ pairing verdict, radiative attempt) on top of the promoted v0.164.0 claims
 author: ox-alpha
 created: '2026-08-23T13:30:00+00:00'
-updated: '2026-08-23T21:30:00+00:00'
+updated: '2026-08-23T22:40:00+00:00'
 tags:
 - substrate-framework
 - effort
@@ -98,24 +98,22 @@ attempts/`. New claim IDs collision-searched clean (C-M5S-006+ free).
    validity requires B ≥ (M/R)/ε* − Δ = 212Δ (marginal) to 21339Δ
    (0.1% field). Criterion-3 dichotomy now exact — induced+strong-coupled
    (B~0) or bare-dominated+weak-field (B≫Δ); middle ground empty.
-4. [x] D: np/nâ shear-channel pairing verdict — COMPLETE (attempt 0010,
-   7/7 checks): STRUCTURAL REFUTATION with mechanism. Exterior
-   factorization lemma (exact): compact-support pinning makes the
-   two-clock field outside both supports the exact rank-1 projector
-   nn^T(Θ₁+Θ₂); every derivative is a scalar times one generator A with
-   [A,A]=0, so exterior static density ≡ 0 (numeric max 1.4e-23 over 150
-   configs; mutation contrast ~1e18). No protected flat direction on the
-   physical background; only long-range kernel in the accepted composition
-   is Newton (0007). First-draft identity lemma refuted by its own check,
-   superseded draft recorded verbatim.
-5. [x] C: radiative attempt — COMPLETE (attempt 0011, 5/5 checks).
-   R1 decay decided STABLE (composition of exact premises: massive
-   positive-metric spectrum with grid-artifact light modes excluded;
-   static ground state; pure-gauge exterior tail). R2 zero-point mass
-   shift BLOCKED with missing construction named — certified
-   complete-spectrum table (full-band independent-discretization
-   agreement); blockers recorded: 9.9% soft-ω² quadrature drift,
-   cross-order 52% stationary-point jump.
+4. [~] D: np/nâ shear-channel pairing verdict — CORRECTED UNDER REVIEW
+   (attempts 0010 → erratum → 0012). First verdict (structural
+   refutation) was REFUTED by RevC008: the lemma used a meridian
+   surrogate; the committed three-pair functional carries nonzero
+   exterior density ρ_ext = 8sin²Θ(∇Θ)²/(r²sin²θ_p) > 0 off-axis.
+   CORRECTED VERDICT (0012, 4/4 checks): POSITIVE — repulsive winding
+   pairing E_int ≈ +456.6·d^−1.696 exists at non-overlapping separations
+   d = 18–32 (P240 0043's own measurement); force sector carries TWO
+   long-range channels (Newton attraction + winding repulsion).
+5. [x] C: radiative attempt — COMPLETE after correction check (attempt
+   0011, rerun 5/5 exact-path checks). R1 decay decided STABLE on
+   premises (i)+(ii)+(iii'): massive positive-metric spectrum with grid-
+   artifact light modes excluded; static ground state; stationary tail
+   sources no waves. R2 zero-point mass shift BLOCKED with missing
+   construction named — certified complete-spectrum table; blockers
+   recorded: 9.9% soft-ω² quadrature drift, cross-order 52% jump.
 
 ## Reasoning Thread and Decision Log
 
@@ -129,14 +127,16 @@ Thread the logic so a fresh session can rebuild the chain without re-deriving:
 - **Why B matters physically**: 1/G_total = B + Δ(1/G); at B=0 the wall
   GM/R≈213 exists; 0009 proves any B large enough to cross it is
   bare-dominated (≥212Δ), so criterion 3 becomes a clean dichotomy.
-- **Why np/nâ was separate work, and its resolution (0010)**: 0007 paired
-  massless induced-channel moments; the transverse shear channels needed
-  their own verdict. Attempt 0010 proved the exterior-factorization lemma
-  (exact): compact support + [A,A]=0 single-generator identity zeroes every
-  internal tail beyond overlap; no flat direction survives on confined
-  roots; Newton is the only long-range kernel in the composition. The
-  issue's H_split/np-nâ labels have NO repo derivation site (scout-verified)
-  — the claim draft must state the repo-real channel objects.
+- **np/nâ resolution — corrected under review (0010 → 0012)**: the first
+  refutation used a meridian surrogate (no φ-channel); RevC008 refuted it
+  at source — the committed three-pair functional includes the azimuthal
+  rotation channel, exterior density is positive off-axis, and P240 0043
+  had MEASURED the repulsive winding pairing at non-overlapping d = 18–32.
+  Corrected verdict: POSITIVE, two long-range channels. The issue's
+  H_split/np-nâ labels have NO repo derivation site (scout-verified) —
+  claims state the repo-real channel objects. Lesson: verify a lemma's
+  premises against the COMMITTED functional conventions before trusting
+  an exact-looking derivation built on a reimplementation.
 - **Why radiative last**: independent of all outcomes; honest-blocked is
   acceptable terminal if construction is named.
 - **Grid-mode suspicion → RESOLVED as artifact (0008)**: softest mode had
@@ -181,8 +181,9 @@ first-execution stdout; superseded verifier runs kept verbatim).
 | 0007 | Massless induced-channel pairing | attempts/0007 | PASS (ξ-structure of attraction/cancellation) | moment pairing, no energy subtraction; endpoint NaN clamp | np/nâ verdict owed → item D |
 | 0008 | Census S1 + X-order + S2 kinetic metric + FD route + box trend | attempts/0008 (window_census.py, cross_order.py, kinetic_stage2.py, fd_route.py + jsons/logs) | S1: 5/5 PASS; X-order: OBSTRUCTION; S2: 1/3 gates; FD: G0 PASSED, **GRID ARTIFACT x6**; box: gift disfavored | tangent null; double-square sampling root bug; shared-μ summation; sine/r factors; jac.norm mislabeling | adjudication claim → governance |
 | 0009 | B settlement: irreducibility + weak-field bound | attempts/0009 (baseline_settlement.py, baseline-verdict.json) | 5/5 PASS — **B IRREDUCIBLE**; B_min = 212Δ–21339Δ for ε*=1..0.01 | criterion-3 dichotomy: induced+strong-coupled OR bare-dominated+weak-field; middle empty by exact arithmetic | feeds final report criterion-3 wording |
-| 0010 | np/nâ shear-channel verdict | attempts/0010 (shear_channel_verdict.py, shear-verdict.json) | 7/7 PASS — **STRUCTURAL REFUTATION**: no long-range np/nâ channel | exterior factorization: pinned field = exact projector nn^T(Θ₁+Θ₂), single-generator [A,A]=0 ⇒ exterior density ≡ 0 (probe 1.4e-23; mutation contrast 1e18); first-draft identity lemma refuted by own check C1a, recorded | criterion-4 wording in final report |
-| 0011 | Radiative attempt | attempts/0011 (radiative_stability.py, radiative-verdict.json) | 5/5 PASS — **R1 STABLE** (no decay channel); **R2 BLOCKED** (zero-point shift) | stability = massive spectrum + static ground state + pure-gauge tail; blocker: full-band certified spectrum table missing (9.9% soft drift; 52% cross-order jump) | criterion-3 clause satisfied either-way |
+| 0010 | np/nâ verdict (SUPERSEDED by erratum → 0012) | attempts/0010 (+ appended ERRATUM in result.yaml) | 7/7 checks passed on a MERIDIAN SURROGATE — lemma false under committed convention | reviewer caught: three-pair functional has independent φ-generator; boxed +456.6·d^−1.696 measured at disjoint supports | superseded → 0012 |
+| 0011 | Radiative attempt | attempts/0011 | 5/5 PASS (rerun with exact paths + restated premise) — **R1 STABLE**; **R2 BLOCKED** | stability = massive spectrum + static ground state + stationary tail; blocker: certified complete-spectrum table missing | criterion-3 clause satisfied either-way |
+| 0012 | Shear-channel repair (committed functional) | attempts/0012 | 4/4 PASS — **criterion-D CORRECTED TO POSITIVE**: repulsive winding pairing +456.6·d^−1.696 at d=18–32 | ‖[B_n,A]‖² = 2sin²Θ exact; committed density reproduced to 1.4e-11; two long-range channels total | C-M5S-008 registry entry rewritten |
 
 ## Validation Plan (per item)
 
@@ -232,9 +233,9 @@ letter), not debt. Named non-blocking follow-ups live in review files
 Proposal (archived):
 `memory/vantasner/proposals/P243-clock-sourced-induced-coupling.md`;
 campaign: `campaigns/P243-clock-sourced-induced-coupling/`;
-claims: `governance/claims.yaml` (C-M5S-001..005);
-release: `governance/releases/v0.164.0.yaml`;
-reviews: `memory/vantasner/decisions/C-M5S-00{1..5}-review.md`;
+claims: `governance/claims.yaml` (C-M5S-001..009);
+release: `governance/releases/v0.164.0.yaml` (v0.165.0 pending promotion);
+reviews: `memory/vantasner/decisions/C-M5S-00{1..9}-review.md`;
 issue: https://github.com/vantasnerdan/substrate-framework/issues/163
 (scorecard comment 2026-08-23); PRs #167/#168 merged;
-continuation PR: #169 (this file + attempts 0008..0011 artifacts).
+continuation PR: #169 (this file + attempts 0008..0012 artifacts).
