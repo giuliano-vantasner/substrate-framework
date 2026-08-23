@@ -2,7 +2,7 @@
 description: P243 continuation — finish issue #163's four open criteria (window-background census, B settlement, np/nâ pairing verdict, radiative attempt) on top of the promoted v0.164.0 claims
 author: ox-alpha
 created: '2026-08-23T13:30:00+00:00'
-updated: '2026-08-23T19:55:00+00:00'
+updated: '2026-08-23T20:40:00+00:00'
 tags:
 - substrate-framework
 - effort
@@ -98,7 +98,16 @@ attempts/`. New claim IDs collision-searched clean (C-M5S-006+ free).
    validity requires B ≥ (M/R)/ε* − Δ = 212Δ (marginal) to 21339Δ
    (0.1% field). Criterion-3 dichotomy now exact — induced+strong-coupled
    (B~0) or bare-dominated+weak-field (B≫Δ); middle ground empty.
-4. [ ] D: np/nâ shear-channel pairing verdict.
+4. [x] D: np/nâ shear-channel pairing verdict — COMPLETE (attempt 0010,
+   7/7 checks): STRUCTURAL REFUTATION with mechanism. Exterior
+   factorization lemma (exact): compact-support pinning makes the
+   two-clock field outside both supports the exact rank-1 projector
+   nn^T(Θ₁+Θ₂); every derivative is a scalar times one generator A with
+   [A,A]=0, so exterior static density ≡ 0 (numeric max 1.4e-23 over 150
+   configs; mutation contrast ~1e18). No protected flat direction on the
+   physical background; only long-range kernel in the accepted composition
+   is Newton (0007). First-draft identity lemma refuted by its own check,
+   superseded draft recorded verbatim.
 5. [ ] C: radiative attempt (independent; last).
 6. [ ] Governance: individual reviews, promotion, release bump, docs/memory sync, close #163 against its letter.
 
@@ -114,10 +123,14 @@ Thread the logic so a fresh session can rebuild the chain without re-deriving:
 - **Why B matters physically**: 1/G_total = B + Δ(1/G); at B=0 the wall
   GM/R≈213 exists; 0009 proves any B large enough to cross it is
   bare-dominated (≥212Δ), so criterion 3 becomes a clean dichotomy.
-- **Why np/nâ is separate work**: 0007 paired massless induced-channel
-  moments; H_split shear channels are a different object (P240 boxed
-  oracle negative for overlap channels; static-frame power law is another
-  observable class entirely).
+- **Why np/nâ was separate work, and its resolution (0010)**: 0007 paired
+  massless induced-channel moments; the transverse shear channels needed
+  their own verdict. Attempt 0010 proved the exterior-factorization lemma
+  (exact): compact support + [A,A]=0 single-generator identity zeroes every
+  internal tail beyond overlap; no flat direction survives on confined
+  roots; Newton is the only long-range kernel in the composition. The
+  issue's H_split/np-nâ labels have NO repo derivation site (scout-verified)
+  — the claim draft must state the repo-real channel objects.
 - **Why radiative last**: independent of all outcomes; honest-blocked is
   acceptable terminal if construction is named.
 - **Grid-mode suspicion → RESOLVED as artifact (0008)**: softest mode had
@@ -162,6 +175,7 @@ first-execution stdout; superseded verifier runs kept verbatim).
 | 0007 | Massless induced-channel pairing | attempts/0007 | PASS (ξ-structure of attraction/cancellation) | moment pairing, no energy subtraction; endpoint NaN clamp | np/nâ verdict owed → item D |
 | 0008 | Census S1 + X-order + S2 kinetic metric + FD route + box trend | attempts/0008 (window_census.py, cross_order.py, kinetic_stage2.py, fd_route.py + jsons/logs) | S1: 5/5 PASS; X-order: OBSTRUCTION; S2: 1/3 gates; FD: G0 PASSED, **GRID ARTIFACT x6**; box: gift disfavored | tangent null; double-square sampling root bug; shared-μ summation; sine/r factors; jac.norm mislabeling | adjudication claim → governance |
 | 0009 | B settlement: irreducibility + weak-field bound | attempts/0009 (baseline_settlement.py, baseline-verdict.json) | 5/5 PASS — **B IRREDUCIBLE**; B_min = 212Δ–21339Δ for ε*=1..0.01 | criterion-3 dichotomy: induced+strong-coupled OR bare-dominated+weak-field; middle empty by exact arithmetic | feeds final report criterion-3 wording |
+| 0010 | np/nâ shear-channel verdict | attempts/0010 (shear_channel_verdict.py, shear-verdict.json) | 7/7 PASS — **STRUCTURAL REFUTATION**: no long-range np/nâ channel | exterior factorization: pinned field = exact projector nn^T(Θ₁+Θ₂), single-generator [A,A]=0 ⇒ exterior density ≡ 0 (probe 1.4e-23; mutation contrast 1e18); first-draft identity lemma refuted by own check C1a, recorded | criterion-4 wording in final report |
 
 ## Validation Plan (per item)
 
@@ -216,4 +230,4 @@ release: `governance/releases/v0.164.0.yaml`;
 reviews: `memory/vantasner/decisions/C-M5S-00{1..5}-review.md`;
 issue: https://github.com/vantasnerdan/substrate-framework/issues/163
 (scorecard comment 2026-08-23); PRs #167/#168 merged;
-continuation PR: #169 (this file + attempts 0008/0009 artifacts).
+continuation PR: #169 (this file + attempts 0008..0010 artifacts).

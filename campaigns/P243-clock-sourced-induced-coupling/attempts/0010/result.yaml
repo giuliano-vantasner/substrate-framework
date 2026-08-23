@@ -1,0 +1,60 @@
+attempt: "0010"
+campaign: P243-clock-sourced-induced-coupling
+title: np/na shear-channel pairing verdict -- structural refutation with
+  mechanism
+question: >
+  Issue #163 criterion 4 -- sign and power law of any np/na-mediated
+  interaction between two stable confined clocks.
+status: COMPLETE -- structural refutation; no long-range np/na channel exists
+preregistration: module docstring (pre-computation). Provenance note -- the
+  labels np/na and H_split = diag(5,3,3,0,0,6)/2 exist only in issue prose;
+  repo-real objects are the (q, tangent, split) channels with transverse
+  shear = polar/azimuthal pair t +/- delta. The first-draft "exterior =
+  identity" lemma was refuted by its own check C1a during development and
+  superseded by the projector lemma; both drafts recorded verbatim.
+method:
+  - L1 exact exterior-factorization lemma (corrected form) -- with
+    VACUUM_Q=1
+    is the exact rank-1 projector n n^T(Theta_1 + Theta_2); every spatial
+    derivative is a scalar times the single generator A = m n^T + n m^T,
+    so all commutator pairs in the static density vanish identically --
+    zero energy density at any separation, vanishing internal multipoles,
+    exactly zero direct pairing for d > 2 max(R_box)
+  - L2 read-only record corroboration -- no protected flat direction on the
+    physical confined background (0008 GRID ARTIFACT x6; 0041 delta==0
+    non-stationary at ~1e12 force)
+  - L3 composition closure -- the accepted induced composition's unique
+    long-range kernel is the universal Newton one already paired in 0007;
+    shear excitations enter only as subleading stress multipoles of that
+    same interaction
+checks: ALL 7 PASS
+verdict:
+  refutation: >
+    The np/na shear channels mediate NO long-range interaction between
+    confined clocks. Mechanism (i): compact-support confinement plus the
+    single-generator identity ([A,A]=0) zeroes every internal-channel tail
+    exactly beyond support overlap; the residual global winding is pure
+    gauge within the vacuum manifold {rank-1 projectors}. Mechanism (ii):
+    no protected flat direction survives on the physical background --
+    aligned-vacuum flatness does not transfer to confined roots. Mechanism
+    (iii): the only long-range mediator in the accepted composition is the
+    Newton channel whose pairing attempt 0007 delivered (attractive xi<1/6,
+    cancellation at xi=1/6).
+  evidence_strength:
+    symbolic_exact: C1a projector substitution; C1b dX/dtheta == A
+    numeric_probe: unmutated exterior density max 1.4e-23 over 150 random
+      strictly-exterior two-clock configurations (gate 1e-8)
+    mutation_contrast: split-tail perturbation raises density to 1.9e-05
+      (contrast ~1e18) -- lemma load-bearing
+    interior_control: three-eigenvalue interior configuration is not
+      projectorial (||XX-X|| = 2.91, |det| = 0.075)
+  scope_note: >
+    The boxed repulsive static channel (+457 d^-1.70, P240 0043) lives
+    inside the overlap region d < 2 R_box by L1 and remains correctly
+    classified as a static-frame category mismatch. This verdict closes
+    the co-equal objective of the issue letter with a decisive negative:
+    the force sector carries exactly one long-range channel (induced
+    Newton, delivered), and no independent np/na sign or power law exists.
+outputs:
+  - attempts/0010/shear_channel_verdict.py (+ stdout.txt,
+    shear-verdict.json)

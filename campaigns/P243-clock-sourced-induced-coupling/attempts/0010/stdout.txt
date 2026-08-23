@@ -1,0 +1,9 @@
+[C1a] exterior X == n n^T exactly: True
+[C1b] dX/dtheta == m n^T + n m^T (all commutator pairs vanish identically): True
+[C1c] exterior static density max = 1.415e-23 over 150 pts (<1e-8 required)
+[C3] interior ||XX-X|| = 2.9091, |det| = 0.0752 (nonzero required) pass=True
+[C2] mutated exterior density max = 1.936e-05 (unmutated max 1.415e-23, contrast 1.4e+18) pass=True
+[C4] fd-verdict.json GRID ARTIFACT count = 6
+[C5] 0041 delta==0 non-stationary (~1e12) recorded: True
+7/7 CHECKS PASS
+[DONE] shear-verdict.json written
