@@ -1,0 +1,64 @@
+attempt: "0008"
+campaign: P243-clock-sourced-induced-coupling
+title: window-background bound-channel stiffness census (stage 1)
+question: >
+  What is the low-lying second-variation spectrum about the confined-clock
+  window background itself (issue #163 criterion 1), as distinct from the
+  aligned-vacuum census that C-M5S-001 delivered?
+status: stage_1_complete_stage_2_pending
+preregistration: v3 (runs 1-2 verifier-gate failures archived; see module
+  docstring and stdout-run1-gates-failed.txt / stdout-v2.txt)
+method:
+  - exact autograd Hessian of the radial energy on the frozen R=12 order-16
+    S-family window root (largeR-roots.json R12; provenance re-verified in
+    attempt 0006), bottom block of 8 eigenvalues with per-channel nodal
+    census
+  - frozen-field quadrature ladder (48x16) -> (64x24) -> (80x32)
+  - centered-FD cross-route on the stiff band only, un-normalized by
+    max(1,|E|), two steps {3e-4, 1e-4} with step agreement gate
+  - banded scale-relative error model (soft | stiff) with preregistered
+    gates; mutations M1 continuity / M2 R10 swap / M3 split-zeroing
+checks: ALL 5 PASS (census-v3.json; tally 5/5)
+verdict:
+  block_scale_s_b: 2.982251210281484
+  soft_band: two modes below 1e-2*s_b
+  modes:
+    - {index: 0, stiffness: 7.450258186e-05, band: soft, dominant: split,
+       nodes_q_t_d: [14, 11, 13]}
+    - {index: 1, stiffness: 1.901708285e-02, band: soft, dominant: split,
+       nodes_q_t_d: [12, 12, 15]}
+    - {index: 2, stiffness: 8.557937373e-02, band: stiff, dominant: q,
+       nodes_q_t_d: [15, 12, 13]}
+    - {index: 3, stiffness: 3.493412697e-01, band: stiff, dominant: split,
+       nodes_q_t_d: [13, 12, 15]}
+    - {index: 4, stiffness: 5.968956361e-01, band: stiff, dominant: tangent,
+       nodes_q_t_d: [11, 15, 15]}
+    - {index: 5, stiffness: 1.536387123e+00, band: stiff, dominant: split,
+       nodes_q_t_d: [13, 11, 12]}
+    - {index: 6, stiffness: 1.993536290e+00, band: stiff, dominant: split,
+       nodes_q_t_d: [13, 11, 14]}
+    - {index: 7, stiffness: 2.982251210e+00, band: stiff, dominant: q,
+       nodes_q_t_d: [13, 12, 15]}
+  route_b_worst_residual: "~3.5e-7 relative (mode 7); all six stiff modes pass"
+  refinement: refined pair mutually converged <=5.1e-12; base (48x16)
+    carries declared per-mode bias <=8.9e-6 (< 1e-5 s_b bound)
+interpretation_guards:
+  - static stiffness eigenvalues are NOT frequencies; propagating-vs-static
+    classification needs the fluctuation kinetic metric (projector-current
+    term; curvature commutators vanish for co-diagonal fluctuations).
+    Stage 2 pending.
+  - GRID-MODE SUSPICION (recorded, not adjudicated): the softest mode is
+    split-dominant with 13-14 radial nodes at order 16 -- nodal count near
+    the order is the classic spectral grid-scale-artifact signature. The
+    family-S lambda_min halving across orders (4.5e-5 -> 2.0e-5 -> 9.7e-6,
+    P240 phase1 R=8 ladder) is consistent with a resolution artifact rather
+    than physical near-flatness. Formal adjudication requires the pending
+    cross-order leg (continuation re-solves at N=18/20 with family guards).
+pending_rows:
+  - stage 2: fluctuation kinetic metric construction and
+    propagating-vs-static classification of both soft modes
+  - cross-order structural leg at R=8/R=12 (re-solves under the 0004/0005
+    hardening protocol) to adjudicate the grid-mode suspicion
+outputs:
+  - attempts/0008/window_census.py (+ stdout-run1-gates-failed.txt,
+    stdout-v2.txt, stdout-v3.txt, census-v3.json)

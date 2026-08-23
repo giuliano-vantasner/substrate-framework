@@ -1,0 +1,23 @@
+[bg] E=55.1041827804 s_b=2.982251 soft_band<2.9823e-02
+[mode 0] lam=+7.450258186e-05 soft  frac=[0.0, 0.0, 1.0] nodes=[14, 11, 13]
+[mode 1] lam=+1.901708285e-02 soft  frac=[0.0, 0.0, 1.0] nodes=[12, 12, 15]
+[mode 2] lam=+8.557937373e-02 stiff frac=[0.999, 0.0008, 0.0002] nodes=[15, 12, 13]
+[mode 3] lam=+3.493412697e-01 stiff frac=[0.0005, 0.0, 0.9995] nodes=[13, 12, 15]
+[mode 4] lam=+5.968956361e-01 stiff frac=[0.0108, 0.9892, 0.0] nodes=[11, 15, 15]
+[mode 5] lam=+1.536387123e+00 stiff frac=[0.0001, 0.0, 0.9999] nodes=[13, 11, 12]
+[mode 6] lam=+1.993536290e+00 stiff frac=[0.0009, 0.0, 0.9991] nodes=[13, 11, 14]
+[mode 7] lam=+2.982251210e+00 stiff frac=[0.9894, 0.0105, 0.0] nodes=[13, 12, 15]
+[quad (64, 24)] E=55.1041827800
+[quad (80, 32)] E=55.1041827800
+[drift] soft_rel_worst=1.303e-06 mutual_worst=5.108e-12 (gate 2.982e-06) base_stiff_worst=8.937e-06 (bound 2.982e-05)
+[routeB 2] fd(3e-4)=+8.558337249e-02 fd(1e-4)=+8.559837283e-02 lam=+8.557937373e-02 pass=True
+[routeB 3] fd(3e-4)=+3.493430730e-01 fd(1e-4)=+3.493674683e-01 lam=+3.493412697e-01 pass=True
+[routeB 4] fd(3e-4)=+5.968956095e-01 fd(1e-4)=+5.969198469e-01 lam=+5.968956361e-01 pass=True
+[routeB 5] fd(3e-4)=+1.536387610e+00 fd(1e-4)=+1.536395899e+00 lam=+1.536387123e+00 pass=True
+[routeB 6] fd(3e-4)=+1.993537858e+00 fd(1e-4)=+1.993545595e+00 lam=+1.993536290e+00 pass=True
+[routeB 7] fd(3e-4)=+2.982251917e+00 fd(1e-4)=+2.982250180e+00 lam=+2.982251210e+00 pass=True
+[M1] shift_abs=5.846e-09 > 10.0*2.819e-11 pass=True
+[M2] mean=1.545e-01 above_10pct=5 pass=True
+[M3] mean=5.665e+63 above_10pct=8 pass=True
+5/5 CHECKS PASS
+[DONE] census-v3.json written

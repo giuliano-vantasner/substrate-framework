@@ -2,7 +2,7 @@
 description: P243 continuation — finish issue #163's four open criteria (window-background census, B settlement, np/nâ pairing verdict, radiative attempt) on top of the promoted v0.164.0 claims
 author: ox-alpha
 created: '2026-08-23T13:30:00+00:00'
-updated: '2026-08-23T13:30:00+00:00'
+updated: '2026-08-23T15:05:00+00:00'
 tags:
 - substrate-framework
 - effort
@@ -81,13 +81,18 @@ no-go). Numerics per `.agents/skills/small-ratio-numerics`: scale-relative
 error models, frozen-field discretization tests, two independent routes at
 1e-8 where exactness unavailable, pinned BLAS threads recorded. Attempts
 append-only under `campaigns/P243-clock-sourced-induced-coupling/attempts/`
-(0008 next). New claim IDs must collision-search clean before allocation
+(0009 next). New claim IDs must collision-search clean before allocation
 (C-M5S-006+ verified free 2026-08-23).
 
 ## Decomposition
 
 1. [x] Recall, source verification, reconciliation ledger.
-2. [ ] A: window-background census (attempt 0008).
+2. [~] A: window-background census — STAGE 1 COMPLETE (attempt 0008, 5/5
+   checks): bottom-block stiffness spectrum about the frozen R=12 root
+   certified; two soft modes + six stiff; route-B FD agrees autograd to
+   ~3e-7 relative on the stiff band. Pending inside item A: stage 2
+   (fluctuation kinetic metric → propagating-vs-static classification of
+   both soft modes) and the cross-order grid-mode adjudication leg.
 3. [ ] B: baseline settlement (attempt 0009+, may parallel A after its background exists).
 4. [ ] D: np/nâ shear-channel pairing verdict (needs A's channel structure).
 5. [ ] C: radiative attempt (independent; last).
@@ -128,11 +133,26 @@ Thread the logic so a fresh session can rebuild the chain without re-deriving:
   stationary families under re-solve; all discretization/order tests run at
   FROZEN field values; acceptance guards need energy-continuity bounds, not
   λ-sign + relgrad alone (a diverged root once passed both).
+- **Grid-mode suspicion (attempt 0008; must survive into stage 2)**: the
+  softest window-background mode is split-channel-dominant with 13–14 radial
+  nodes at basis order 16, and family-S λ_min halves per order across the
+  committed R=8 ladder (4.5e-5 → 2.0e-5 → 9.7e-6). Nodal count ≈ order plus
+  geometric halving is the classic spectral grid-scale-artifact signature —
+  i.e. P240's "marginal plateau" may be a resolution artifact rather than
+  near-flat physics. Adjudicate via cross-order re-solves under the
+  0004/0005 hardening protocol BEFORE trusting any soft-mode count
+  downstream.
+- **Verifier-defect scars from 0008 runs 1–2**: `centered_curvature`
+  normalizes by max(1,|E|)≈55.1, not by block scale — un-normalize by that
+  exact factor or FD cross-routes are off by ~18×; global-top-eigenvalue
+  scales make preregistered gates vacuous (use block-local s_b); float64
+  second differences of E≈55 cannot resolve curvatures below ~1e-2·s_b at
+  any stable step (soft-band FD exclusion is permanent).
 
 ## Attempts
 
 Append-only. Full detail lives in `attempts/000N/` (result.yaml + scripts +
-first-execution stdout).
+first-execution stdout; superseded verifier runs kept verbatim).
 
 | Attempt | Candidate or repair | Artifact | Verdict | Mechanism / lesson | Next |
 | --- | --- | --- | --- | --- | --- |
@@ -142,7 +162,7 @@ first-execution stdout).
 | 0005 | Candidate E refuted; F selected; UNBLIND | attempts/0005 | F PASS (all 7 checks) | U-family λ₁ asymptote −2e-4 never crosses; F=E_U−E_S box-stable 3.23% | order-18 row declared-unavailable (named obstruction) |
 | 0006 | Consumer Poisson BVP | attempts/0006 | PASS + regime INVALID at ξ=0 | GM/R≈213≫1; flux-form FD; GL-sum mass identity (never trapezoid over weights) | escapes registered |
 | 0007 | Massless induced-channel pairing | attempts/0007 | PASS (attractive/cancel/repulsive ξ-structure) | moment pairing, no energy subtraction; chebyshev endpoint NaN clamp | np/nâ verdict owed → item D |
-| 0008 | Window-background census (item A) | campaigns/.../attempts/0008 | pending | — | — |
+| 0008 | Window census STAGE 1: stiffness bottom-block about frozen R=12 root, banded gates | attempts/0008 (window_census.py, census-v3.json) | 5/5 PASS | route-B units scar; base-quad bias bound 8.9e-6 < 1e-5·s_b; GRID-MODE SUSPICION on softest mode (13–14 nodes @ order 16) | stage 2 kinetic metric + cross-order adjudication |
 
 ## Validation Plan (per item)
 
@@ -160,12 +180,12 @@ shared numerics or existing contracts → full).
 This section exists so any fresh session can resume without re-deriving
 session history. Follow it top to bottom; every entry earned its place by
 bite-mark.
+
 - Working dir `/home/dan/substrate-framework`, branch off latest origin/main.
 - Verifiers: `PYTHONPATH=src python campaigns/P243-clock-sourced-induced-coupling/attempts/NNNN/<script>.py`.
 - Module semantics: `numeric_induced_shift(...)` takes cutoff=**Λ** (value ∝ Λ²)
   and rejects floats (`exact_real`) — pass exact rationals/`sp.sqrt`;
   `MINKOWSKI_MOSTLY_PLUS` = (−,+,+,+); m5_* modules NOT re-exported in `__init__`.
-- Attempt-dir scripts resolve repo root via `HERE.parents[3]` (not [4]).
 - torch grids need `requires_grad_()` before elementwise derivatives; system
   numpy is 1.26 (no `np.trapezoid`) on the torch host — use canonical
   `trapezoid_integral` or two-step fallback.
@@ -175,6 +195,9 @@ bite-mark.
   distinct-merger practice).**
 - Update THIS file (updated timestamp + attempt row + reasoning additions)
   at every milestone; push via memory-status PR so state survives crashes.
+- Edit discipline learned twice over in this file: NEVER chain anchored
+  edits from remembered line numbers here — re-read, then either one
+  content-exact hunk per call or a full-file rewrite.
 
 ## Debt Ledger
 
@@ -192,4 +215,5 @@ claims: `governance/claims.yaml` (C-M5S-001..005);
 release: `governance/releases/v0.164.0.yaml`;
 reviews: `memory/vantasner/decisions/C-M5S-00{1..5}-review.md`;
 issue: https://github.com/vantasnerdan/substrate-framework/issues/163
-(scorecard comment 2026-08-23); PRs #167/#168 merged.
+(scorecard comment 2026-08-23); PRs #167/#168 merged;
+continuation PR: #169 (this file + attempt 0008 artifacts).
