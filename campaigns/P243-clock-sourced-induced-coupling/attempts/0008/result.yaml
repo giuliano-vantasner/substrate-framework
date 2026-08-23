@@ -84,7 +84,22 @@ cross_order:
     - independent-discretization route (finite-difference radial Hessian at
       high resolution; a soft eigenvalue reproducing with FIXED nodal
       structure would certify physicality)
+fd_route:
+  status: BLOCKED at preregistered gate G0 (transfer sanity)
+  bugs_fixed_before_block:
+    - shared (1,N_mu) mu-grid made autograd sum d_mu over all radial rows
+      (fixed by committed-style repeated grid + Gauss nodes)
+    - missing -sine/r factors in theta/phi derivatives (inflated ~600x)
+  residual_obstruction: >
+    After both fixes the FD density still exceeds the committed density by
+    a factor 2.11 with matching total measure (7240 vs 7238) and matching
+    field norm within 12% -- a definitional mismatch between derivations,
+    not noise. Not isolated this session; guessing a calibration factor is
+    forbidden. G0 verdict: INCONCLUSIVE, nothing downstream read.
+  queued: isolate the factor-2 definitionally (trace-potential convention
+    or hedgehog angular-measure convention), then rerun ladder.
 outputs:
+  - attempts/0008/fd_route.py (+ stdout-fd-route.txt, fd-verdict.json)
   - attempts/0008/window_census.py (+ stdout-run1-gates-failed.txt,
     stdout-v2.txt, stdout-v3.txt, census-v3.json)
   - attempts/0008/cross_order.py (+ stdout-cross-order.txt,

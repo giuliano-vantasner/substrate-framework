@@ -182,7 +182,7 @@ first-execution stdout; superseded verifier runs kept verbatim).
 | 0005 | Candidate E refuted; F selected; UNBLIND | attempts/0005 | F PASS (all 7 checks) | U-family λ₁ asymptote −2e-4 never crosses; F=E_U−E_S box-stable 3.23% | order-18 row declared-unavailable (named obstruction) |
 | 0006 | Consumer Poisson BVP | attempts/0006 | PASS + regime INVALID at ξ=0 | GM/R≈213≫1; flux-form FD; GL-sum mass identity (never trapezoid over weights) | escapes registered |
 | 0007 | Massless induced-channel pairing | attempts/0007 | PASS (attractive/cancel/repulsive ξ-structure) | moment pairing, no energy subtraction; chebyshev endpoint NaN clamp | np/nâ verdict owed → item D |
-| 0008 | Window census stage 1 + cross-order leg + stage-2 kinetic metric | attempts/0008 (window_census.py, cross_order.py, kinetic_stage2.py, census-v3.json, cross-order.json, kinetic-stage2.json) | Stage 1: 5/5 PASS. Cross-order: NAMED OBSTRUCTION. Stage 2: 1/3 gates, classification delivered | tangent channel = structural kinetic null (tdot*Identity commutes with all gradients); all 8 modes positive-metric; ultra-light omega^2 1.5e-04.. quadrature-sensitive 9.9% (uncertified) | FD-discretization adjudication + constrained-subspace labels |
+| 0008 | Census stage 1 + cross-order + stage-2 kinetic metric + FD route | attempts/0008 (window_census.py, cross_order.py, kinetic_stage2.py, fd_route.py + jsons) | S1: 5/5 PASS; X-order: OBSTRUCTION; S2: 1/3 gates; FD: BLOCKED at G0 (density factor 2.11 unisolated) | tangent channel = structural kinetic null; ultra-light omega^2 uncertified; FD bugs fixed: shared-mu autograd summation, missing sine/r | isolate FD factor-2 definitionally, then rerun ladder |
 
 ## Validation Plan (per item)
 

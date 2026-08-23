@@ -1,0 +1,2 @@
+[G0] transfer=2.1108 tol=0.05 pass=False
+[STOP] G0 failed; nothing downstream read

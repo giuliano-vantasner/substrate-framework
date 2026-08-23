@@ -1,0 +1,12 @@
+{
+ "attempt": "0008-fd-route",
+ "preregistration": "module docstring (pre-computation)",
+ "g0_transfer_rel": 2.110807575280334,
+ "g0_passed": false,
+ "rows": [],
+ "verdicts": {
+  "all": "INCONCLUSIVE -- G0 transfer gate failed"
+ },
+ "runtime_seconds": null,
+ "thread_pin": "torch.set_num_threads(1)"
+}
