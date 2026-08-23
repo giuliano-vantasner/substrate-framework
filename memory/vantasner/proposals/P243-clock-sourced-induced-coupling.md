@@ -216,6 +216,27 @@ length IS the order (order changes cannot be tested at frozen fields —
 quadrature can); re-solve ladders near flat directions jump families a
 third time; acceptance guards on solver output need energy-continuity
 bounds, not just lambda sign + relgrad (a diverged root passed both).
+### Attempts 0006-0007 (complete — consumer BVP solved; force verdict ATTRACTIVE; regime INVALID at xi=0)
+
+Consumer BVP (0006): the committed R=12 order-16 window root's own
+static density sources Poisson with G_total=46.807; second-order
+flux-form FD, regular origin, Robin exterior match.  ALL 7 CHECKS
+PASS (mass identity via plain GL sum — never trapezoid over weighted
+values; drifts 1.15e-5->4.63e-6; Gauss law <5e-3; Phi(R)=-213.397=
+-GM/R exact; mutation linear to solver floor).  HEADLINE: G*M/R=
+213.4 >> 1 — at xi=0 the sector is STRONGLY coupled to its own
+gravity; linearized consumer formally solved but outside its regime.
+Escape routes: xi near 1/6 (Delta->0), weaker sector, or nonlinear
+treatment.  Force pairing (0007): moment-pairing method (no energy
+subtraction): F = G_total M1 M2/d^2, ATTRACTIVE at xi=0,
+G_total = 1/Delta(1/G) = 46.807; flat channel (z==0, J(0)=1) adds no
+independent term; Delta(xi) sign structure: attraction <1/6,
+cancellation AT 1/6, repulsion >1/6.  ALL 6 CHECKS PASS.  Scars:
+chebyshev_stack acos-backward NaNs at Chebyshev endpoints r=R exactly
+(clamp evaluation inside domain); torch grids need requires_grad_
+for elementwise_derivative; HERE.parents[3] not [4] from attempt dirs;
+solver-acceptance gates must sit above sparse-solve roundoff (~1e-9).
+
 
 ## Debt Ledger
 

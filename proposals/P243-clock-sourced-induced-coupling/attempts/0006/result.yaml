@@ -1,0 +1,42 @@
+attempt: "0006"
+campaign: P243-clock-sourced-induced-coupling
+title: weak-field consumer BVP driven by the selected scale
+question: >
+  Does the confined-clock sector source the linearized Newtonian
+  potential consistently when G is the sector's own induced
+  G_total = 46.807, and is the linearized regime valid?
+method:
+  - background: committed P240 R=12 order-16 window root (provenance
+    re-verified against the committed energy)
+  - source density rho(r): mu-averaged static density (commutator +
+    potential pieces of energy_radial) on the native basis; declared
+    convention excludes the global fixed-J term from M
+  - second-order flux-form FD Poisson solve on [0,12], regular origin,
+    Robin exterior match to the weak_field_monopole slope relation
+comparator_blinding: none needed (consumer wave; selection already frozen)
+checks: ALL 7 PASS
+  - source_root_provenance
+  - mass_identity_ties_density_to_certified_energy (GL sum, not
+    trapezoid-over-weights)
+  - mesh_refinement_stability (drifts 1.15e-5 -> 4.63e-6; observed
+    order 1.31 documented, near-origin row treatment)
+  - local_gauss_law_monitors (< 5e-3 at r=1,3,6,9,11)
+  - monopole_normalization_at_boundary (Phi(R) = -213.3965 =
+    -G M/R)
+  - coupling_mutation_linear_response (10 percent scaling to 7.2e-9,
+    sparse-solve roundoff floor)
+  - validity_diagnostic_recorded
+headline_result:
+  Phi_R: -213.396523069221
+  weak_field_epsilon_GM_over_R: 213.39704390826918
+verdict: >
+  Consumer SOLVED, regime INVALID: at xi=0 the induced coupling drives
+  G*M/R ~ 2.1e2 >> 1 -- the confined-clock sector is strongly coupled
+  to its own gravity, far outside the linearized expansion the
+  consumer assumes.  Decisive consequence registered for the campaign:
+  weak-field claims about this sector require either xi near 1/6
+  (Delta(1/G) -> 0), a parametrically weaker sector, or a nonlinear
+  treatment.  The formal solution itself is clean and recorded.
+outputs:
+  - attempts/0006/bvp_consumer.py (+ bvp-consumer.log,
+    bvp-consumer.json)

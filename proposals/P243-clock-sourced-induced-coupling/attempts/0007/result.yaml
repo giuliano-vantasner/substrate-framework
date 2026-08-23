@@ -1,0 +1,31 @@
+attempt: "0007"
+campaign: P243-clock-sourced-induced-coupling
+title: massless-channel force pairing verdict
+question: >
+  What is the sign, coefficient, and xi-dependence of the force between
+  two well-separated confined-clock lumps through the induced channel?
+method:
+  - far-field moment pairing on the attempt-0006 verified monopole
+    tail (no energy subtraction ever formed)
+  - canonical exact-symbolic machinery: weak_field_monopole kernel
+    identity and massless_substrate_coupling sign probes at
+    xi in {0, 1/6, 1/5} with the selected Lambda (exact rationals)
+checks: ALL 6 PASS
+verdict:
+  force: ATTRACTIVE at xi=0
+  coefficient: "F = G_total M1 M2 / d^2, G_total = 1/Delta(1/G) =
+    46.80699908016004"
+  xi_structure:
+    attractive: xi < 1/6
+    cancelled: xi = 1/6 (Delta(1/G) = 0 exactly)
+    repulsive: xi > 1/6
+  flat_channel_role: z == 0 and J(0) = 1 fix the Newton-kernel
+    normalization; no independent or sign-flipped long-range term
+regime_warning: >
+  attempt 0006 measured G*M/R ~ 2.1e2 for the sector's own gravity;
+  the pairing law is the correct leading far-field term but its direct
+  application to this self-gravitating sector at xi=0 sits outside the
+  weak-field regime
+outputs:
+  - attempts/0007/force_pairing.py (+ force-pairing.log,
+    force-verdict.json)

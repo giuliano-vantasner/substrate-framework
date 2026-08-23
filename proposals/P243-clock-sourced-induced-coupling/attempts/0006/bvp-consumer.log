@@ -1,0 +1,17 @@
+PASS [P243-attempt-0006-consumer-bvp] source_root_provenance
+PASS [P243-attempt-0006-consumer-bvp] mass_identity_ties_density_to_certified_energy
+PASS [P243-attempt-0006-consumer-bvp] mesh_refinement_stability
+PASS [P243-attempt-0006-consumer-bvp] local_gauss_law_monitors
+PASS [P243-attempt-0006-consumer-bvp] monopole_normalization_at_boundary
+PASS [P243-attempt-0006-consumer-bvp] coupling_mutation_linear_response
+PASS [P243-attempt-0006-consumer-bvp] validity_diagnostic_recorded
+{
+  "background": "P240 R12 order-16 window root",
+  "E_static": 54.708985952122134,
+  "M_enclosed": 54.70900884959007,
+  "Phi_R": -213.396523069221,
+  "weak_field_epsilon_GM_over_R": 213.39704390826918,
+  "regime": "weak-field expansion parameter >> 1; the linearized consumer is formally solved but physically outside its regime for this sector at xi=0"
+}
+[DONE] bvp-consumer.json written
+ALL 7 CHECKS PASS [P243-attempt-0006-consumer-bvp]
