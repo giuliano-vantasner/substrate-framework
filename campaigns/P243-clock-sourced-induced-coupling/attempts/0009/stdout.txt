@@ -1,0 +1,11 @@
+[I1 proper_time_sharp] b-coefficient = 1, total degree in b = 0
+[I1 proper_time_smooth_essential] b-coefficient = 1, total degree in b = 0
+[C1] pass=True
+[C2] shift pure J(0)-class, no constant: pass=True
+[M1] attractive=False (expected False) pass=True
+[M2] field_count=0 raised=True
+[bound] eps*=1.0: B_min=4.537709 = 212.4 x Delta (round-trip True)
+[bound] eps*=0.1: B_min=45.569365 = 2133.0 x Delta (round-trip True)
+[bound] eps*=0.01: B_min=455.885930 = 21338.7 x Delta (round-trip True)
+5/5 CHECKS PASS
+[DONE] baseline-verdict.json written

@@ -1,0 +1,59 @@
+{
+ "attempt": "0009",
+ "title": "baseline settlement: irreducible within the accepted composition + quantitative weak-field bound",
+ "preregistration": "module docstring (pre-computation)",
+ "checks": [
+  {
+   "name": "C1_scheme_independent_baseline",
+   "b_coefficients": {
+    "proper_time_sharp": "1",
+    "proper_time_smooth_essential": "1"
+   },
+   "regulator_difference_b_free": true,
+   "passed": true
+  },
+  {
+   "name": "C2_shift_no_additive_constant",
+   "shift_equals_N_Lambda2_over_12pi": true,
+   "passed": true
+  },
+  {
+   "name": "M1_negative_baseline_breaks_attraction",
+   "attractive_newtonian": false,
+   "passed": true
+  },
+  {
+   "name": "M2_field_count_gate",
+   "raised": true,
+   "passed": true
+  },
+  {
+   "name": "C5_bound_round_trip",
+   "bounds": [
+    {
+     "eps_star": 1.0,
+     "B_min_exact_float": 4.537708617155264,
+     "B_min_over_Delta": 212.396523069221,
+     "round_trip_ok": true
+    },
+    {
+     "eps_star": 0.1,
+     "B_min_exact_float": 45.56936510796954,
+     "B_min_over_Delta": 2132.96523069221,
+     "round_trip_ok": true
+    },
+    {
+     "eps_star": 0.01,
+     "B_min_exact_float": 455.8859300161123,
+     "B_min_over_Delta": 21338.6523069221,
+     "round_trip_ok": true
+    }
+   ],
+   "passed": true
+  }
+ ],
+ "verdict": "B is IRREDUCIBLE within the accepted composition (canon: declared premise of C-GRV-001's additive ledger; demonstrated through the API: unit b-coefficient under every usable regulator, b-free regulator differences, shift carrying no additive constant). New quantitative result: weak-field validity of the consumer requires B >= (M/R)/eps* - Delta, i.e. B_min ~ 4.54 x Delta (marginal), ~45.6 (1% field), ~456 (0.1% field) -- any escape from the criterion-3 strong-coupling wall via B is necessarily BARE-DOMINATED: the sector's gravity would then be mostly bare Newton coupling, not induced coupling.",
+ "tally": "5/5 CHECKS PASS",
+ "runtime_seconds": 0.1,
+ "thread_pin": "torch.set_num_threads(1)"
+}

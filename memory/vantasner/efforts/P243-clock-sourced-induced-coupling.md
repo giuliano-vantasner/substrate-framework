@@ -2,7 +2,7 @@
 description: P243 continuation — finish issue #163's four open criteria (window-background census, B settlement, np/nâ pairing verdict, radiative attempt) on top of the promoted v0.164.0 claims
 author: ox-alpha
 created: '2026-08-23T13:30:00+00:00'
-updated: '2026-08-23T18:40:00+00:00'
+updated: '2026-08-23T19:55:00+00:00'
 tags:
 - substrate-framework
 - effort
@@ -64,41 +64,41 @@ the authoritative answer to "what do we still owe issue #163".
 | --- | --- | --- |
 | C-M5S-001 proposed as window-background census ("about window backgrounds") | Delivered as aligned-vacuum M0 census (targets 4/1/0.3/0): N=3 massless species, exact gaps; reviewer rescoped claim to aligned vacuum | Claim stands; issue criterion 1 keeps the window-background census OPEN → item A |
 | Λ from preregistered gradient-length candidate A | A/B/C/D/E refuted with named mechanisms; F = E_U−E_S selected mid-attempt-0005 under frozen criteria (attestation-based preregistration, commit-verifiably ex ante) | Settled: Λ²=0.26847204181661866, spread 3.23%; order-18 refinement row remains declared-unavailable obstruction (non-blocking) |
-| B treated as declared purely-induced reading (B=0 per C-GRV-002) | Same — never derived, bounded, nor shown irreducible | UNSETTLED → item B; interacts with criterion-3 wall (see Goal §B) |
-| Consumer "controlled static weak-field result" | Solved cleanly (7 checks) with regime verdict G_total·M/R ≈ 213.4 ≫ 1 at ξ=0 — formally valid, physically outside linearized regime | Verdict IS the result; escapes registered (ξ→1/6, weaker sector, nonlinear). Item B may weaken the wall numerically |
-| Force question = "exactly-flat channels" | Delivered for massless induced channel (z=0): attractive ξ<1/6, cancellation at ξ=1/6; boxed-static +456.6·d^−1.696 dropped as category mismatch (static-frame observable, P240) | np/nâ gradient-stiffness shear channels have NO dedicated verdict → item D |
-| Radiative check "attempted and recorded either way" | Never attempted; listed as open frontier only | Falls short of criterion 3's bar → item C |
-| Campaign memory said "closed end-to-end" | Wrong; corrected in durable memory 2026-08-23, issue reopened with scorecard comment | This effort file supersedes that status |
+| B treated as declared purely-induced reading (B=0 per C-GRV-002) | Attempt 0009: shown IRREDUCIBLE within the composition + quantitative weak-field bound derived (B_min = 212Δ–21339Δ) | SETTLED → item B complete; sharpens criterion 3 into a dichotomy |
+| Consumer "controlled static weak-field result" | Solved cleanly (7 checks) with regime verdict G_total·M/R ≈ 213.4 ≫ 1 at ξ=0 — formally valid, physically outside linearized regime | Verdict IS the result; 0009 shows any B-escape is bare-dominated |
+| Force question = "exactly-flat channels" | Delivered for massless induced channel (z=0): attractive ξ<1/6, cancellation at ξ=1/6; boxed-static dropped as category mismatch | np/nâ gradient-stiffness shear channels have NO dedicated verdict → item D |
+| Radiative check attempted either way | Never attempted | Falls short of criterion 3's bar → item C |
+| Campaign memory said "closed end-to-end" | Wrong; corrected, issue reopened with scorecard | This effort file supersedes that status |
 
 ## Constraints and Invariants (carried forward)
 
 Allowed imports stay exactly the accepted claim set plus canonical modules;
 no fitted constant enters any statement. Blinding discipline is LIFTED
-(selection froze in 0005; J(z)/Δ(1/G) numbers are public in the record).
-Units: action dimensionless, gaps O(1), energies O(50); no observed-value
-insertion. No propagating collective tensor rescaled into a metric (Route-2
-no-go). Numerics per `.agents/skills/small-ratio-numerics`: scale-relative
-error models, frozen-field discretization tests, two independent routes at
-1e-8 where exactness unavailable, pinned BLAS threads recorded. Attempts
-append-only under `campaigns/P243-clock-sourced-induced-coupling/attempts/`
-(stage-2 rows extend 0008; next fresh attempt 0009). New claim IDs must
-collision-search clean before allocation (C-M5S-006+ verified free
-2026-08-23).
+(selection froze in 0005). Units: action dimensionless, gaps O(1), energies
+O(50); no observed-value insertion. No propagating collective tensor
+rescaled into a metric (Route-2 no-go). Numerics per
+`.agents/skills/small-ratio-numerics` — explicitly applied in 0008:
+λ_min/λ₂ quoted (~4e-3), box extrapolation run, mesh Richardson via FD
+ladder, frozen-field discretization tests, pinned BLAS threads recorded.
+Attempts append-only under `campaigns/P243-clock-sourced-induced-coupling/
+attempts/`. New claim IDs collision-searched clean (C-M5S-006+ free).
 
 ## Decomposition
 
 1. [x] Recall, source verification, reconciliation ledger.
-2. [~] A: window-background census — stage 1 COMPLETE (5/5), cross-order
-   leg = named obstruction, STAGE 2 EXECUTED (1/3 gates): kinetic metric
-   built; all eight stiffness modes are positive-metric PROPAGATING
-   candidates with ultra-light omega^2 (lowest 1.55e-04); pure tangent
-   channel is a STRUCTURAL KINETIC NULL (velocity = tdot*Identity commutes
-   with all background gradients). G2 failed honestly: soft omega^2 drift
-   9.9% between quadratures — ultra-light values not certified. Remaining
-   in item A: independent-discretization (FD radial Hessian) adjudication
-   of the grid-mode suspicion + constrained-subspace projection labels.
-3. [ ] B: baseline settlement (attempt 0009+; can run parallel to A's remainder).
-4. [ ] D: np/nâ shear-channel pairing verdict (needs A's channel structure).
+2. [~] A: window-background census — stage 1 COMPLETE (5/5); cross-order =
+   named obstruction; stage 2 kinetic metric EXECUTED (positive metric on
+   all modes; tangent channel = structural null); FD route G0 PASSED
+   (transfer 2e-4) with GRID ARTIFACT x6 verdicts; box trend disfavors
+   domain-gift. Remaining in item A: relgrad-consistency note is resolved;
+   outstanding = constrained-subspace labels + writing the soft-mode
+   adjudication claim (moves to governance as C-M5S-006 draft).
+3. [x] B: baseline settlement — COMPLETE (attempt 0009, 5/5 checks):
+   B IRREDUCIBLE within the accepted composition + NEW bound: weak-field
+   validity requires B ≥ (M/R)/ε* − Δ = 212Δ (marginal) to 21339Δ
+   (0.1% field). Criterion-3 dichotomy now exact — induced+strong-coupled
+   (B~0) or bare-dominated+weak-field (B≫Δ); middle ground empty.
+4. [ ] D: np/nâ shear-channel pairing verdict.
 5. [ ] C: radiative attempt (independent; last).
 6. [ ] Governance: individual reviews, promotion, release bump, docs/memory sync, close #163 against its letter.
 
@@ -106,68 +106,46 @@ collision-search clean before allocation (C-M5S-006+ verified free
 
 Thread the logic so a fresh session can rebuild the chain without re-deriving:
 
-- **Why N=3 stands but is vacuum-scoped**: the census certified exact affine
-  uniqueness of the kinetic matrix dP against its defining system (exact
-  rationals; mutations move coefficients/gaps). That certifies the ALIGNED
-  VACUUM answer only. The hedgehog clock background has different symmetry
-  breaking (radial profile breaks O(3)-ish structure), so its soft-mode count
-  is genuinely open — not a formality: if the window census finds a fourth
-  light species or demotes one, Δ(1/G) = Σ_i s_i Λ² J(z_i) changes value and
-  possibly z-structure (J(z_i) ≠ 1 for massive species).
-- **Why item A goes first**: every downstream number (Δ(1/G), G_total=46.807,
-  Φ(R)=−213.397, force normalization) consumes N and {z_i}. A change ripples
-  everywhere; running B/D/C first risks rework.
-- **Why B matters physically, not just bookkeeping**: 1/G_total = B + Δ(1/G).
-  At B=0, G_total=46.8 makes the clock's own field strong (GM/R≈213). Any
-  positive derived B lowers G_total toward the weak-field regime and could
-  dissolve criterion 3's wall without exotic escapes. Conversely, proving B
-  irreducible-with-bound pins the wall as real sector physics. Either outcome
-  advances criterion 3.
-- **Why np/nâ is separate work**: 0007 paired MASSLESS induced-channel
-  moments (z=0, J(0)=1 fixes Newton-kernel normalization). The H_split
-  shear channels are exactly potential-flat with gradient-generated stiffness
-  — their mediated interaction, if any, is a different object; P240's boxed
-  oracle resolved overlap channels negatively and the static-frame
-  +456.6·d^−1.696 is another observable class entirely (dropped as
-  cross-check during review for category mismatch).
-- **Why radiative last**: fully independent of A/B/D outcomes; nothing
-  downstream consumes it; honest-blocked is an acceptable terminal if the
-  construction is named.
-- **Decision rule carried from 0004/0005 scars**: near-flat directions jump
-  stationary families under re-solve; all discretization/order tests run at
-  FROZEN field values; acceptance guards need energy-continuity bounds, not
-  λ-sign + relgrad alone (a diverged root once passed both).
-- **Grid-mode suspicion (attempt 0008; must survive into stage 2)**: the
-  softest window-background mode is split-channel-dominant with 13–14 radial
-  nodes at basis order 16, and family-S λ_min halves per order across the
-  committed R=8 ladder (4.5e-5 → 2.0e-5 → 9.7e-6). Nodal count ≈ order plus
-  geometric halving is the classic spectral grid-scale-artifact signature —
-  i.e. P240's "marginal plateau" may be a resolution artifact rather than
-  near-flat physics.
-- **Cross-order obstruction mechanism (attempt 0008)**: order-enrichment
-  about window roots is systematically obstructed — seeded N=18 converges
+- **Why N=3 stands but is vacuum-scoped**: exact affine-uniqueness
+  certification covers the ALIGNED VACUUM only; the hedgehog background's
+  soft-mode count was genuinely open — this effort's item A settles it
+  (see FD verdict below): no fourth light species survives scrutiny.
+- **Why item A went first**: every downstream number consumes N and {z_i}.
+- **Why B matters physically**: 1/G_total = B + Δ(1/G); at B=0 the wall
+  GM/R≈213 exists; 0009 proves any B large enough to cross it is
+  bare-dominated (≥212Δ), so criterion 3 becomes a clean dichotomy.
+- **Why np/nâ is separate work**: 0007 paired massless induced-channel
+  moments; H_split shear channels are a different object (P240 boxed
+  oracle negative for overlap channels; static-frame power law is another
+  observable class entirely).
+- **Why radiative last**: independent of all outcomes; honest-blocked is
+  acceptable terminal if construction is named.
+- **Grid-mode suspicion → RESOLVED as artifact (0008)**: softest mode had
+  13–14 nodes at order 16 with λ_min halving per order (classic grid-mode
+  signature). FD route (independent radial discretization, G0 transfer
+  2e-4) shows λ₀ collapsing 5.3e-7 → 4.9e-8 → 8.6e-9 across N_r=48/72/96.
+  Box trend does NOT rescue it (λ₀ rises with R). Kinetic metric positive
+  but quadrature-sensitive. Conclusion: P240's marginal plateau is a
+  spectral-resolution artifact; family-S window roots carry no ultra-light
+  physical modes. Confidence solid pending independent review.
+- **Cross-order obstruction mechanism (0008)**: seeded N=18 converges
   (relgrad 1.8e-14) to a DIFFERENT stationary point (stiff-band drift 52%;
-  truncated root sits at relgrad 0.73 on the N=16 functional). Any future
-  "just re-solve at higher order" plan about R=10/R=12 window roots is dead
-  on arrival; adjudication of the soft-mode suspicion must come from either
-  the kinetic-metric channel or an independent discretization (FD radial
-  Hessian), not from order ladders.
-- **Verifier-defect scars from 0008 runs 1–2**: `centered_curvature`
-  normalizes by max(1,|E|)≈55.1, not by block scale — un-normalize by that
-  exact factor or FD cross-routes are off by ~18×; global-top-eigenvalue
-  scales make preregistered gates vacuous (use block-local s_b); float64
-  second differences of E≈55 cannot resolve curvatures below ~1e-2·s_b at
-  any stable step (soft-band FD exclusion is permanent).
-- **Tangent-channel structural null (stage 2)**: the pure tangent velocity
-  is tdot(r)*Identity — commutes with every background gradient, so its
-  kinetic metric vanishes identically (Rayleigh 2e-26). This is the
-  trace/constraint direction; any "propagating" label on tangent-heavy
-  mixed modes comes from small q/d admixtures scaled by large metric
-  weights (mode 4: 98.9% tangent, reads PROPAGATING via 1.1% q). Use
-  constrained-subspace projection weights for per-mode labels.
-  Also: soft omega^2 are quadrature-sensitive at the ~10% level (G2
-  failure recorded) — treat 1.5e-04-class values as uncertified until the
-  FD route rules on them.
+  truncated root at relgrad 0.73 on N=16 functional). Order ladders about
+  window roots are dead; use independent discretizations instead.
+- **Verifier-defect scars (0008)**: `centered_curvature` normalizes by
+  max(1,|E|)≈55.1 not block scale (~18× errors if unnormalized);
+  global-top-eigenvalue scales make gates vacuous (use block-local s_b);
+  float64 second differences cannot resolve curvatures below ~1e-2·s_b;
+  shared (1,N_μ) μ-tensor makes autograd SUM derivatives over radial rows
+  (repeat the grid like committed code does); missing −sine/r factors
+  inflate θ/φ derivatives ~600×; **the FD grid variable (r/R)² must NOT be
+  re-squared inside committed formulas expecting r/R** (root cause of the
+  transfer failure); `jac.norm()` is a Hessian operator norm, not a
+  gradient norm — label them separately (the phantom relgrad≈50).
+- **Tangent-channel structural null (stage 2)**: pure tangent velocity is
+  tdot(r)·Identity, commuting with every gradient — kinetic metric
+  vanishes identically (trace/constraint direction). Tangent-heavy mixed
+  modes need constrained-subspace projection weights for honest labels.
 
 ## Attempts
 
@@ -177,12 +155,13 @@ first-execution stdout; superseded verifier runs kept verbatim).
 | Attempt | Candidate or repair | Artifact | Verdict | Mechanism / lesson | Next |
 | --- | --- | --- | --- | --- | --- |
 | 0001 | Aligned-vacuum exact census | attempts/0001 (vacuum_census.py) | PASS (N=3 massless; 4 stiff; 3 inert) | affine-uniqueness certification; mutations gate | vacuum-scoped; window census owed → 0008 |
-| 0002 | Scale candidates A/B/C | attempts/0002 | ALL REFUTED | L_grad ~ R^0.5 domain-filling (11–13% drift vs 5% gate); B IR; C no ontology | candidate D registered |
-| 0004 | Candidate D (Λ=1/R*, Morse radius) | attempts/0004 | REFUTED | bisection flip was seed-history across TWO coexisting families U/S; hardening protocol born | candidate E registered |
-| 0005 | Candidate E refuted; F selected; UNBLIND | attempts/0005 | F PASS (all 7 checks) | U-family λ₁ asymptote −2e-4 never crosses; F=E_U−E_S box-stable 3.23% | order-18 row declared-unavailable (named obstruction) |
-| 0006 | Consumer Poisson BVP | attempts/0006 | PASS + regime INVALID at ξ=0 | GM/R≈213≫1; flux-form FD; GL-sum mass identity (never trapezoid over weights) | escapes registered |
-| 0007 | Massless induced-channel pairing | attempts/0007 | PASS (attractive/cancel/repulsive ξ-structure) | moment pairing, no energy subtraction; chebyshev endpoint NaN clamp | np/nâ verdict owed → item D |
-| 0008 | Census stage 1 + cross-order + stage-2 kinetic metric + FD route | attempts/0008 (4 scripts + 4 jsons + all stdout logs) | S1: 5/5 PASS; X-order: OBSTRUCTION; S2: 1/3 gates; **FD: G0 PASSED (transfer 2e-4), ladder verdict GRID ARTIFACT x6, moderate confidence** | ROOT BUG: grid var (r/R)^2 double-squared into Chebyshev arg + envelopes; also shared-mu autograd summation and missing sine/r | re-confirm after relgrad~50 diagnosis; then soft-mode adjudication claim |
+| 0002 | Scale candidates A/B/C | attempts/0002 | ALL REFUTED | L_grad ~ R^0.5 domain-filling; B IR; C no ontology | candidate D registered |
+| 0004 | Candidate D (Λ=1/R*, Morse radius) | attempts/0004 | REFUTED | bisection flip was seed-history across families U/S; hardening protocol born | candidate E registered |
+| 0005 | Candidate E refuted; F selected; UNBLIND | attempts/0005 | F PASS (7 checks) | U-family λ₁ never crosses zero; F=E_U−E_S box-stable 3.23% | order-18 row declared-unavailable |
+| 0006 | Consumer Poisson BVP | attempts/0006 | PASS + regime INVALID at ξ=0 | GM/R≈213≫1; flux-form FD; GL-sum mass identity | escapes registered |
+| 0007 | Massless induced-channel pairing | attempts/0007 | PASS (ξ-structure of attraction/cancellation) | moment pairing, no energy subtraction; endpoint NaN clamp | np/nâ verdict owed → item D |
+| 0008 | Census S1 + X-order + S2 kinetic metric + FD route + box trend | attempts/0008 (window_census.py, cross_order.py, kinetic_stage2.py, fd_route.py + jsons/logs) | S1: 5/5 PASS; X-order: OBSTRUCTION; S2: 1/3 gates; FD: G0 PASSED, **GRID ARTIFACT x6**; box: gift disfavored | tangent null; double-square sampling root bug; shared-μ summation; sine/r factors; jac.norm mislabeling | adjudication claim → governance |
+| 0009 | B settlement: irreducibility + weak-field bound | attempts/0009 (baseline_settlement.py, baseline-verdict.json) | 5/5 PASS — **B IRREDUCIBLE**; B_min = 212Δ–21339Δ for ε*=1..0.01 | criterion-3 dichotomy: induced+strong-coupled OR bare-dominated+weak-field; middle empty by exact arithmetic | feeds final report criterion-3 wording |
 
 ## Validation Plan (per item)
 
@@ -211,14 +190,14 @@ bite-mark.
   `trapezoid_integral` or two-step fallback.
 - After any `governance/claims.yaml` edit: `scripts/render_memory.py` then
   validate. Author never merges own PR: **PRs stay OPEN — the user reviews
-  and merges next session (user directive 2026-08-23, supersedes earlier
-  distinct-merger practice).**
+  and merges next session (user directive 2026-08-23).**
 - Update THIS file (updated timestamp + attempt row + reasoning additions)
   at every milestone; push via memory-status PR so state survives crashes.
-- Edit discipline learned five times over in this file and its scripts:
-  NEVER chain anchored edits from remembered line numbers — re-read
-  immediately before editing, one content-exact hunk per call, and after
-  two failed patch rounds switch to a single full-file rewrite.
+- Edit discipline learned many times over here and in scripts: NEVER chain
+  anchored edits from remembered line numbers — re-read immediately before
+  editing, one content-exact hunk per call, and after two failed patch
+  rounds switch to a single full-file rewrite. YAML plain scalars must not
+  contain ": " — quote or rephrase.
 
 ## Debt Ledger
 
@@ -237,4 +216,4 @@ release: `governance/releases/v0.164.0.yaml`;
 reviews: `memory/vantasner/decisions/C-M5S-00{1..5}-review.md`;
 issue: https://github.com/vantasnerdan/substrate-framework/issues/163
 (scorecard comment 2026-08-23); PRs #167/#168 merged;
-continuation PR: #169 (this file + attempt 0008 artifacts).
+continuation PR: #169 (this file + attempts 0008/0009 artifacts).
