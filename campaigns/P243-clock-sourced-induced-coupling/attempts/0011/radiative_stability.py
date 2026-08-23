@@ -17,9 +17,14 @@ R1 (decay) -> compositional theorem: the confined clock ground state is
       state has no lower state.
   (ii) no classical radiation: stationary point of an elliptic problem
        is time-independent and sources no waves.
-  (iii) no exterior carrier: the tail outside confinement is pure gauge
-        in the vacuum manifold (0010 exterior-factorization lemma,
-        [A,A] = 0), feeding no propagating channel.
+  (iii') time-independent ground state: the exterior tail, though
+        carrying nonzero static gradient energy under the committed
+        functional (0012 correction), is itself stationary -- a
+        stationary configuration sources no waves; radiation requires
+        time-dependent multipoles, which the ground state lacks.
+  ERRATUM (second): the original (iii) cited 0010's pure-gauge lemma,
+  superseded by attempt 0012's committed-functional correction; this
+  rerun restates premise (iii) accordingly.
 
 R2 (prediction) -> BLOCKED with the missing construction named: the
   renormalized zero-point self-energy delta-E = (1/2)*sum_i omega_i is
@@ -88,13 +93,24 @@ def main() -> int:
     print(f"[C2] {len(omegas)} recorded omega values, min "
           f"{min(omegas):.3e}, all positive: {c2}", flush=True)
 
-    # ---------------- C3: exterior-factorization premise ---------------------
+    # ---------------- C3: exterior-record premise (corrected chain) --------
+    # Grounds that the exterior-tail facts used here come from the
+    # CORRECTED chain (0010 -> erratum -> 0012), not the surrogate lemma.
     sv = json.loads((ATT10 / "shear-verdict.json").read_text())
-    c3 = bool(sv.get("tally") == "7/7 CHECKS PASS")
-    checks.append({"name": "C3_exterior_lemma_premise",
-                   "shear_tally": sv.get("tally"), "passed": c3})
-    print(f"[C3] 0010 shear-verdict tally = {sv.get('tally')} pass={c3}",
-          flush=True)
+    repair_json = (REPO / "campaigns/P243-clock-sourced-induced-coupling"
+                   "/attempts/0012/shear-repair-verdict.json")
+    rv = json.loads(repair_json.read_text()) if repair_json.exists() \
+        else {}
+    repair_ok = str(rv.get("tally", "")) == "4/4 CHECKS PASS"
+    c3 = bool(sv.get("tally") == "7/7 CHECKS PASS" and repair_ok)
+    checks.append({"name": "C3_exterior_record_premise_corrected_chain",
+                   "shear_0010_tally": sv.get("tally"),
+                   "repair_0012_tally": rv.get("tally"),
+                   "note": ("premise (iii) rests on time-independence, "
+                            "not on the superseded pure-gauge lemma"),
+                   "passed": c3})
+    print(f"[C3] 0010 tally={sv.get('tally')} + 0012 repair "
+          f"tally={rv.get('tally')} pass={c3}", flush=True)
 
     # ---------------- C4/C5: named R2 blockers (exact paths) -----------------
     g2_val = float(ks["checks"][1]["max_rel_drift"])
@@ -128,8 +144,11 @@ def main() -> int:
             "strictly positive-frequency, ultra-light candidates proven "
             "grid artifacts per 0008/C-M5S-006); (ii) no classical "
             "radiation (time-independent stationary point of an elliptic "
-            "problem sources no waves); (iii) no exterior carrier (tail "
-            "pure gauge in the vacuum manifold per 0010 [A,A]=0 lemma). "
+            "problem sources no waves); (iii) the ground state is "
+            "time-independent -- its static exterior tail sources no "
+            "waves (radiation needs time-dependent multipoles); the "
+            "superseded pure-gauge premise of the first execution was "
+            "corrected by attempt 0012. "
             "R2 BLOCKED with the missing construction named: the "
             "renormalized zero-point self-energy delta-E = "
             "(1/2)*sum_i omega_i feeding M requires certified omega_i "

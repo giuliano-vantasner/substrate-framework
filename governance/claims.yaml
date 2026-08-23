@@ -12801,32 +12801,23 @@ claims:
       E_int(d) = +456.6 * d^(-1.696) (fit residual 3.5%; P240 attempt 0043 boxed pair oracle;
       separations d = 18..32, disjoint supports, G4 quadrature passed except the d = 32 tail at
       12%). The interaction is carried by the summed-angle winding composition Theta_1 + Theta_2,
-      which modifies the static integrands inside each clock's support at ANY separation: under the
-      committed three-pair functional (azimuthal channel included, cpu_energy.py; 3D director
-      (st*sp, st*cp, ct), pair_oracle.py evaluate_pair_3d) the exterior projector texture carries
-      density rho_ext = 8 sin^2(Theta) * (grad Theta)^2 / (r^2 sin^2 theta_p), strictly positive
-      almost everywhere off-axis (symbolic ||[B_n, A]||_F^2 = 2 sin^2(Theta); committed-functional
-      reproduction at 1.4e-11 relative; scan max 4.3e-03). Erratum history: attempt 0010 first
-      claimed a structural refutation (zero exterior density, zero pairing beyond overlap) from a
-      meridian-restricted two-directional surrogate absent from every committed artifact; attempt
-      0012 superseded it under review. In the committed deviation-additive two-clock family (VACUUM_Q = 1, each clock's
-      (q, tangent, split) profile pinned to (1, 0, 0) outside its own box), the field exterior to
-      both support balls is the exact rank-one projector n n^T with n = n(Theta_1 + Theta_2): a
-      point on the trace potential's vacuum manifold. Every spatial derivative of such a pure
-      projector-angle texture is a scalar times the single generator A = m n^T + n m^T, and all
-      commutator pairs [d_i X, d_j X] vanish identically, so the static energy density vanishes
-      EXACTLY everywhere outside support overlap: internal-channel multipole moments are zero and
-      the direct pairing integral is zero for separations d > 2*max(R_box). Numeric probe: the
-      unmutated construction's exterior density peaks at 1.4e-23 over 150 random strictly-exterior
-      two-clock configurations, while giving the split profile an exterior tail raises the density
-      to 1.9e-05 (contrast ~1e18), confirming the pinning is load-bearing. With no protected flat
-      direction surviving on the physical confined background (P240 attempt 0041: delta == 0 is not
-      stationary at ~1e12 force; C-M5S-006: soft candidates are grid artifacts) and the universal
-      Newton kernel as the composition's unique long-range mediator (C-M5S-005 delivered its
-      pairing), the shear channels add no independent sign or power law. Scope: the committed model
-      class with compact-support confinement; the boxed static channel (+457*d^-1.70) lives inside
-      overlap by this lemma and remains classified as a static-frame observable per C-M5S-005's
-      review.
+      which modifies the static integrands inside each clock's support at ANY separation. Under
+      the committed three-pair functional (azimuthal rotation channel included, cpu_energy.py
+      L106-119; 3D director (st*sp, st*cp, ct), pair_oracle.py evaluate_pair_3d L293), the
+      exterior projector texture n n^T(Theta_1 + Theta_2) carries static density rho_ext =
+      8 sin^2(Theta) * (grad Theta)^2 / (r^2 sin^2 theta_p), strictly positive almost everywhere
+      off-axis: the single-generator norm ||[B_n, A]||_F^2 = 2 sin^2(Theta) holds exactly
+      (symbolic), the committed functional reproduces the formula to 1.4e-11 relative at an
+      independent probe point (rho = 12, z = 3), and a 120-point exterior scan gives max 4.3e-03,
+      median 1.1e-04. ERRATUM HISTORY (append-only): attempt 0010 first claimed a structural
+      refutation -- zero exterior density, vanishing multipoles, zero pairing beyond overlap,
+      'pure gauge' winding -- from a meridian-restricted two-directional surrogate absent from
+      every committed artifact; RevC008's review refuted that lemma at source and attempt 0012
+      superseded it; superseded clauses live only in the attempt records, not here. With
+      C-M5S-005's attractive induced Newton pairing, the force sector carries TWO long-range
+      channels: gravitational attraction F = G_total M1 M2 / d^2 and repulsive winding
+      interaction ~ +456.6 d^-1.696 with slower decay; within the measured window the Newton
+      channel dominates in magnitude.
     provenance: campaigns/P243-clock-sourced-induced-coupling/adjudication.yaml
     verification: numeric_evidence
     review: unaudited
@@ -12841,7 +12832,7 @@ claims:
       dependencies:
         - C-M5S-005
         - C-M5S-006
-      structural_gap: "Closes the co-equal force objective of issue #163 (criterion 4) with a decisive negative: the force sector carries exactly one long-range channel, the delivered induced Newton pairing."
+      structural_gap: "Answers the co-equal force objective of issue #163 (criterion 4) positively: the force sector carries TWO long-range channels -- the delivered induced Newton attraction (C-M5S-005) and the measured repulsive winding pairing -- replacing the earlier one-channel negative reading."
       glue:
         method: numerical
         artifact: campaigns/P243-clock-sourced-induced-coupling/attempts/0012/shear_channel_repair.py
@@ -12856,10 +12847,10 @@ claims:
       - campaigns/P243-clock-sourced-induced-coupling/attempts/0010/result.yaml
       - campaigns/P243-clock-sourced-induced-coupling/attempts/0010/shear_channel_verdict.py
       - campaigns/P243-clock-sourced-induced-coupling/attempts/0010/shear-verdict.json
+      - proposals/P240-m5-kinetic-axis/attempts/0041/cpu_energy.py
       - proposals/P240-m5-kinetic-axis/attempts/0041/result.yaml
       - proposals/P240-m5-kinetic-axis/attempts/0043/pair_oracle.py
       - proposals/P240-m5-kinetic-axis/attempts/0043/result.yaml
-      - proposals/P240-m5-kinetic-axis/attempts/0041/cpu_energy.py
     assumptions:
       - "Erratum chain 0010 -> 0012 preserved append-only; the superseded lemma and its refutation-by-review are part of the claim's recorded history."
       - "Numeric probes use central differences at h = 1e-5 with BLAS threads pinned; the symbolic identity ||[B_n,A]||_F^2 = 2 sin^2(Theta) carries the density formula."

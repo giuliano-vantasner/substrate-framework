@@ -2,7 +2,7 @@
  "attempt": "0011",
  "title": "radiative attempt -- stability theorem + named blocking",
  "preregistration": "module docstring (pre-inspection); includes the C5-provenance erratum per review",
- "verdict": "R1 COMPLETED -- the confined clock is RADIATIVELY STABLE within the model class by composition of three exact premises: (i) no internal decay channel (physical spectrum strictly positive-frequency, ultra-light candidates proven grid artifacts per 0008/C-M5S-006); (ii) no classical radiation (time-independent stationary point of an elliptic problem sources no waves); (iii) no exterior carrier (tail pure gauge in the vacuum manifold per 0010 [A,A]=0 lemma). R2 BLOCKED with the missing construction named: the renormalized zero-point self-energy delta-E = (1/2)*sum_i omega_i feeding M requires certified omega_i across the FULL band (~10% quadrature sensitivity recorded at stage-2 G2, 9.9%) and an unobstructed complete-spectrum refinement ladder (cross-order mechanism obstructs it, 52% stiff-band drift). MISSING CONSTRUCTION: a certified complete kinetic-normalized spectrum table with independent-discretization agreement at a declared scale-relative tolerance across the full band.",
+ "verdict": "R1 COMPLETED -- the confined clock is RADIATIVELY STABLE within the model class by composition of three exact premises: (i) no internal decay channel (physical spectrum strictly positive-frequency, ultra-light candidates proven grid artifacts per 0008/C-M5S-006); (ii) no classical radiation (time-independent stationary point of an elliptic problem sources no waves); (iii) the ground state is time-independent -- its static exterior tail sources no waves (radiation needs time-dependent multipoles); the superseded pure-gauge premise of the first execution was corrected by attempt 0012. R2 BLOCKED with the missing construction named: the renormalized zero-point self-energy delta-E = (1/2)*sum_i omega_i feeding M requires certified omega_i across the FULL band (~10% quadrature sensitivity recorded at stage-2 G2, 9.9%) and an unobstructed complete-spectrum refinement ladder (cross-order mechanism obstructs it, 52% stiff-band drift). MISSING CONSTRUCTION: a certified complete kinetic-normalized spectrum table with independent-discretization agreement at a declared scale-relative tolerance across the full band.",
  "checks": [
   {
    "name": "C1_grid_artifact_record",
@@ -22,8 +22,10 @@
    "passed": true
   },
   {
-   "name": "C3_exterior_lemma_premise",
-   "shear_tally": "7/7 CHECKS PASS",
+   "name": "C3_exterior_record_premise_corrected_chain",
+   "shear_0010_tally": "7/7 CHECKS PASS",
+   "repair_0012_tally": "4/4 CHECKS PASS",
+   "note": "premise (iii) rests on time-independence, not on the superseded pure-gauge lemma",
    "passed": true
   },
   {
