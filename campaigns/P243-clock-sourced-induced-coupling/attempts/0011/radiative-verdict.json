@@ -1,0 +1,55 @@
+{
+ "attempt": "0011",
+ "title": "radiative attempt -- stability theorem + named blocking",
+ "preregistration": "module docstring (pre-inspection); includes the C5-provenance erratum per review",
+ "verdict": "R1 COMPLETED -- the confined clock is RADIATIVELY STABLE within the model class by composition of three exact premises: (i) no internal decay channel (physical spectrum strictly positive-frequency, ultra-light candidates proven grid artifacts per 0008/C-M5S-006); (ii) no classical radiation (time-independent stationary point of an elliptic problem sources no waves); (iii) the ground state is time-independent -- its static exterior tail sources no waves (radiation needs time-dependent multipoles); the superseded pure-gauge premise of the first execution was corrected by attempt 0012. R2 BLOCKED with the missing construction named: the renormalized zero-point self-energy delta-E = (1/2)*sum_i omega_i feeding M requires certified omega_i across the FULL band (~10% quadrature sensitivity recorded at stage-2 G2, 9.9%) and an unobstructed complete-spectrum refinement ladder (cross-order mechanism obstructs it, 52% stiff-band drift). MISSING CONSTRUCTION: a certified complete kinetic-normalized spectrum table with independent-discretization agreement at a declared scale-relative tolerance across the full band.",
+ "checks": [
+  {
+   "name": "C1_grid_artifact_record",
+   "artifact_count": 6,
+   "lambda0_ladder": [
+    5.273531800250659e-07,
+    4.945872382691154e-08,
+    8.644979672269492e-09
+   ],
+   "ladder_decreasing": true,
+   "passed": true
+  },
+  {
+   "name": "C2_positive_generalized_omegas",
+   "n_values": 8,
+   "min": 0.00015459806449519801,
+   "passed": true
+  },
+  {
+   "name": "C3_exterior_record_premise_corrected_chain",
+   "shear_0010_tally": "7/7 CHECKS PASS",
+   "repair_0012_tally": "4/4 CHECKS PASS",
+   "note": "premise (iii) rests on time-independence, not on the superseded pure-gauge lemma",
+   "passed": true
+  },
+  {
+   "name": "C4_soft_omega_quadrature_drift",
+   "path": ".checks[1].max_rel_drift",
+   "value": 0.09897338795580601,
+   "expected_near": 0.099,
+   "passed": true
+  },
+  {
+   "name": "C5_cross_order_drift",
+   "path": ".rows[0].stiff_band_max_rel_drift",
+   "value": 0.5189032861699523,
+   "expected_near": 0.52,
+   "passed": true
+  }
+ ],
+ "tally": "5/5 CHECKS PASS",
+ "erratum": "First execution used a fuzzy value matcher that misattributed the C5 match to base_reference.bottom_block[4] (an eigenvalue, not a drift). Re-anchored to exact paths per review; this file supersedes that record.",
+ "runtime_seconds": 0.0,
+ "thread_pin": "not numerically loaded; env pinned regardless",
+ "outputs": [
+  "attempts/0011/radiative_stability.py",
+  "attempts/0011/stdout.txt",
+  "attempts/0011/radiative-verdict.json"
+ ]
+}

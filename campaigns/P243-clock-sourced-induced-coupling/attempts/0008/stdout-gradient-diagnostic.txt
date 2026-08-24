@@ -1,0 +1,8 @@
+|grad| = 2.7156e+00   |E| ~ 55.117 -> relgrad 0.05
+channel q: |smooth|=3.342e-01  |grid-scale resid|=1.830e+00  |total|=1.860e+00
+channel t: |smooth|=2.123e-01  |grid-scale resid|=1.957e+00  |total|=1.968e+00
+channel d: |smooth|=6.701e-02  |grid-scale resid|=1.931e-01  |total|=2.044e-01
+row gradient norms (first 5): [0.281 0.37  0.581 0.199 0.584]
+row gradient norms (last 5):  [0.08  0.162 0.049 0.088 0.025]
+row gradient max location: cell 7 of 48
+interior median: 0.3436207495938738

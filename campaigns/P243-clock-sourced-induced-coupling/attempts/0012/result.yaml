@@ -1,0 +1,47 @@
+attempt: "0012"
+campaign: P243-clock-sourced-induced-coupling
+title: shear-channel repair -- committed-functional verdict superseding the
+  0010 surrogate lemma
+question: >
+  Repair of attempt 0010 per RevC008 blocking findings; corrected answer
+  to issue #163 criterion 4.
+status: COMPLETE -- criterion D verdict CORRECTED TO POSITIVE
+preregistration: module docstring (pre-computation); append-only erratum
+  chain 0010 -> 0012 (0010's record stands as history, untouched)
+method:
+  - symbolic evaluation of ||[B_n, A]||_F^2 for the committed 3D frame --
+    exactly 2 sin^2(Theta), giving exterior density
+    rho_ext = 8 sin^2(Theta) (grad Theta)^2 / (r^2 sin^2 theta_p) >= 0
+    under the committed three-pair functional (azimuthal channel included)
+  - numeric reproduction at the reviewer probe point (rho=12, z=3,
+    clocks z=+-10) -- 4.8299e-05 vs formula, rel deviation 1.4e-11
+  - exterior scan -- max 4.3e-03, median 1.1e-04 over 120 points,
+    decisively nonzero
+  - record grounding -- P240 0043 result.yaml carries the repulsive fit
+checks: ALL 4 PASS
+verdict:
+  corrected_criterion_d:
+    POSITIVE: >
+      A long-range mediated interaction between two confined clocks
+      EXISTS -- repulsive, E_int(d) = +456.6 * d^(-1.696) (fit residual
+      3.5%; P240 attempt 0043 boxed pair oracle; separations d = 18..32
+      with disjoint supports). Mechanism: the summed-angle winding
+      composition Theta_1 + Theta_2 modifies static integrands inside
+      each clock's support at any separation; the exterior projector
+      texture carries nonzero gradient density under the committed
+      three-pair functional.
+    force_sector: >
+      Two long-range channels exist: (1) attractive induced Newton
+      pairing F = G_total M1 M2 / d^2 (C-M5S-005); (2) repulsive winding
+      pairing +456.6 d^-1.696 with slower decay. Within the measured
+      window the Newton channel dominates in magnitude.
+    erratum_for_0010: >
+      The zero-density lemma held only for a meridian-restricted
+      surrogate (no phi-channel, two-directional density) absent from
+      every committed artifact. Its 'pure gauge' and 'pairing integral
+      zero for d > 2 R_box' conclusions are false under the committed
+      convention; the boxed repulsive channel was measured at
+      non-overlapping separations.
+outputs:
+  - attempts/0012/shear_channel_repair.py (+ stdout.txt,
+    shear-repair-verdict.json)

@@ -1,0 +1,52 @@
+attempt: "0009"
+campaign: P243-clock-sourced-induced-coupling
+title: baseline settlement -- irreducible within the composition + quantitative
+  weak-field bound
+question: >
+  Issue #163 criterion 1, third clause -- promote B from free symbol to
+  derived/bounded status, or show it irreducible.
+status: COMPLETE -- irreducibility shown and quantitative bound derived
+preregistration: module docstring (pre-computation); canon read first from
+  total_gravitational_coupling.py authority note and C-M5S-003 baseline
+  statement
+method:
+  - symbolic demonstration through the canonical API with b a free real
+    symbol (unit b-coefficient under every usable regulator, regulator
+    difference of totals free of b, induced shift proportional to
+    N Lambda^2 J(z) / (12 pi) with no additive constant)
+  - house-discipline mutations (negative-b sign flip must break C-GRV-002
+    attraction; field_count = 0 must raise)
+  - new quantitative bound -- weak-field validity epsilon = (M/R)/(B+Delta)
+    <= eps* requires B >= (M/R)/eps* - Delta, with M/R fixed by the
+    committed B=0 consumer verdict (eps_0 = 213.396523069221,
+    M/R = eps_0 * Delta)
+checks: ALL 5 PASS
+verdict:
+  irreducibility: >
+    B is IRREDUCIBLE within the accepted composition. It enters only as
+    C-GRV-001's declared additive-ledger premise; neither cutoff leg nor
+    scheme choice generates or moves it (b-coefficient exactly 1 under
+    both usable regulators, regulator differences b-free, shift carrying
+    no additive constant). This is the shown-irreducible decisive-result
+    option of the issue letter, resting on accepted canon (C-M5S-003
+    baseline statement) plus this attempt's API-level demonstration.
+  quantitative_bound:
+    - "eps* = 1    -> B_min =   4.5377  =    212.4 x Delta"
+    - "eps* = 0.1  -> B_min =  45.5694  =   2133.0 x Delta"
+    - "eps* = 0.01 -> B_min = 455.8859  =  21338.7 x Delta"
+  consequence_for_criterion_3: >
+    Any escape from the strong-coupling wall (G_total M / R = 213.4 >> 1
+    at B=0) via a positive B is necessarily BARE-DOMINATED -- B would
+    exceed the induced term by 2e2 to 2e4 times. The sector's gravity
+    would then be mostly bare Newton coupling rather than induced
+    coupling. The purely-induced reading B = 0 is self-consistent but
+    sits in the strong-coupling regime; there is no intermediate regime
+    in which the coupling is both mostly induced AND weak-field valid.
+significance: >
+  Resolves criterion-1 clause three decisively and converts criterion-3's
+  escape list into a sharp dichotomy -- strongly coupled and induced
+  (B ~ 0), or weak-field valid and bare-dominated (B >> Delta). The
+  middle ground is empty by exact arithmetic.
+outputs:
+  - attempts/0009/baseline_settlement.py (+ stdout.txt,
+    baseline-verdict.json)

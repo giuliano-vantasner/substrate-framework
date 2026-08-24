@@ -1,0 +1,54 @@
+{
+ "attempt": "0010",
+ "title": "np/na shear-channel pairing verdict",
+ "preregistration": "module docstring (pre-computation; includes the refuted first-draft lemma verbatim)",
+ "verdict": "STRUCTURAL REFUTATION with mechanism: the np/na (transverse shear) channels mediate NO long-range interaction between confined clocks. (i) Exterior factorization: with VACUUM_Q=1 and compact-support pinning, the two-clock field outside both supports is the exact rank-1 projector n n^T(Theta_1+Theta_2); every spatial derivative of such a pure projector-angle texture is a scalar times the single generator A = m n^T + n m^T, so every commutator pair in the static density vanishes identically -- zero energy density at ANY separation, vanishing internal multipole moments, and an exactly zero direct pairing integral for d > 2*max(R_box) (L1: symbolic C1a/C1b + numeric probe C1c). The residual global winding is pure gauge within the vacuum manifold. The boxed repulsive channel (+457 d^-1.70, P240) necessarily lived inside the overlap region and was already dropped as a static-frame category mismatch. (ii) No protected flat direction exists on the physical confined background -- aligned-vacuum flatness does not transfer (0041: delta==0 non-stationary, ~1e12 force) and the 0008 soft modes are grid artifacts, leaving no massless internal channel to carry a power-law tail (L2). (iii) Within the accepted induced composition the unique long-range kernel is the universal Newton one, whose pairing attempt 0007 delivered (attractive xi<1/6, cancellation at xi=1/6); shear excitations enter only as subleading stress multipoles of that same interaction, never as an independent channel with its own sign or power law (L3).",
+ "checks": [
+  {
+   "name": "C1a_exterior_is_projector",
+   "passed": true
+  },
+  {
+   "name": "C1b_single_generator_identity",
+   "note": "every d_i X is scalar*A so [d_i X, d_j X] = scalar*[A,A] = 0 identically",
+   "passed": true
+  },
+  {
+   "name": "C1c_exterior_density_probe",
+   "max_density": 1.415198100534463e-23,
+   "n_points": 150,
+   "passed": true
+  },
+  {
+   "name": "C3_interior_not_projector",
+   "XX_minus_X_absnorm": 2.90908286845069,
+   "abs_det": 0.07520907068357455,
+   "passed": true
+  },
+  {
+   "name": "C2_mutation_split_tail_nonzero_density",
+   "max_mutated_density": 1.936079562309219e-05,
+   "max_unmutated_density": 1.415198100534463e-23,
+   "contrast": 1.3680625783613194e+18,
+   "n_points": 60,
+   "passed": true
+  },
+  {
+   "name": "C4_fd_grid_artifact_verdicts",
+   "count": 6,
+   "passed": true
+  },
+  {
+   "name": "C5_delta_zero_nonstationarity_recorded",
+   "passed": true
+  }
+ ],
+ "tally": "7/7 CHECKS PASS",
+ "runtime_seconds": 0.3,
+ "thread_pin": "BLAS threads pinned via env at launch",
+ "outputs": [
+  "attempts/0010/shear_channel_verdict.py",
+  "attempts/0010/stdout.txt",
+  "attempts/0010/shear-verdict.json"
+ ]
+}

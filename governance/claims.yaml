@@ -12668,3 +12668,250 @@ claims:
     accepted_in: v0.164.0
     challenges: []
     supersedes: []
+  - id: C-M5S-006
+    statement: >-
+      C-M5S-006 (numeric_evidence): Window-background soft-mode adjudication for the confined-clock
+      sector. About the committed R=12 family-S window root (order-16 basis, radial nodes 48), the
+      bottom block of the potential-stiffness spectrum is {7.450258186e-05, 1.901708285e-02,
+      8.557937373e-02, 3.493412697e-01, 5.968956361e-01, 1.536387123e+00, 1.993536290e+00,
+      2.982251210e+00} with block scale s_b = 2.982251210281484; the kinetic metric built from the
+      curvature time-sector commutators is positive on every reported mode, and the pure tangent
+      velocity tdot(r)*Identity is an exact kinetic null (Rayleigh ~2e-26). VERDICT: every
+      ultra-light candidate mode in this block is a spectral-resolution artifact, not near-flat
+      physics — under an independent radial finite-difference discretization (transfer check passed
+      at 2.0e-04 relative) the softest eigenvalue collapses monotonically 5.27e-07 -> 4.95e-08 ->
+      8.64e-09 across radial nodes 48/72/96, the candidate light modes carry nodal counts comparable
+      to the basis order, the box trend lambda_0(R) rises with R (5.71e-05 at R=10, 7.45e-05 at
+      R=12, 1.01e-04 at R=14), and order-enrichment about window roots is systematically obstructed
+      (a seeded order-18 solve converges to a different stationary point with 52% stiff-band drift).
+      Consequently P240's marginal plateau carries no ultra-light physical window mode: no fourth
+      light species exists in the confined sector, and the census multiplicity N=3 (C-M5S-001) is
+      unaffected by the window background at adjudicable resolution. Scope: one root (R=12,
+      family S, order 16) plus the recorded R=10 ladder divergence; the soft omega^2 values remain
+      uncertified at ~10% quadrature sensitivity (declared), which bounds but does not overturn the
+      artifact verdict since the softest candidate falls 61x across the FD
+      ladder (5.27e-07 -> 8.64e-09, ~1.8 orders) and about four orders of
+      magnitude from the modal soft eigenvalue 7.450258186e-05 to the
+      finest-grid value 8.6449797e-09.
+    provenance: campaigns/P243-clock-sourced-induced-coupling/adjudication.yaml
+    verification: numeric_evidence
+    review: accepted
+    compatibility: native
+    epistemic: active
+    category: synthesized
+    exclusions:
+      - "Adjudicates the recorded window roots only; it derives no new stationary points."
+      - "Soft omega^2 values stay uncertified (quadrature sensitivity ~10%, gate G2 failure recorded); the artifact verdict rests on the collapse trend, not on any absolute soft value."
+      - "The tangent-channel kinetic null concerns the constraint direction only; no propagating-tensor rescaling is claimed (Route-2 no-go respected)."
+    composition:
+      dependencies:
+        - C-M5S-001
+        - C-M5S-002
+      structural_gap: "Extends C-M5S-001's aligned-vacuum census to the confined window background, closing the reviewer-rescoped gap that left criterion 1 of issue #163 open."
+      glue:
+        method: sympy
+        artifact: campaigns/P243-clock-sourced-induced-coupling/attempts/0008/fd_route.py
+        entrypoint: run_ladder
+    dependencies:
+      - C-M5S-001
+      - C-M5S-002
+    evidence:
+      - campaigns/P243-clock-sourced-induced-coupling/attempts/0008/result.yaml
+      - campaigns/P243-clock-sourced-induced-coupling/attempts/0008/window_census.py
+      - campaigns/P243-clock-sourced-induced-coupling/attempts/0008/census-v3.json
+      - campaigns/P243-clock-sourced-induced-coupling/attempts/0008/fd_route.py
+      - campaigns/P243-clock-sourced-induced-coupling/attempts/0008/fd-verdict.json
+      - campaigns/P243-clock-sourced-induced-coupling/attempts/0008/cross_order.py
+      - campaigns/P243-clock-sourced-induced-coupling/attempts/0008/cross-order.json
+      - campaigns/P243-clock-sourced-induced-coupling/attempts/0008/kinetic_stage2.py
+      - campaigns/P243-clock-sourced-induced-coupling/attempts/0008/kinetic-stage2.json
+    assumptions:
+      - "The FD route validates against the modal energy at 2.0e-04 relative transfer before its ladders are trusted; that gate is preregistered and passed."
+      - "Discretization tests are evaluated at frozen field values per the small-ratio discipline; no re-solved roots enter the verdict."
+    comparators: []
+    accepted_in: v0.165.0
+    challenges: []
+    supersedes: []
+
+  - id: C-M5S-007
+    statement: >-
+      C-M5S-007 (symbolic_verified): Baseline settlement within the accepted induced-gravity
+      composition. The additive baseline B is IRREDUCIBLE: through the canonical API
+      total_inverse_gravity_coupling, the coefficient of a free real symbol b in the total inverse
+      coupling is exactly 1 under EVERY usable regulator, the regulator difference of totals is
+      free of b, and the induced shift is exactly proportional to N*(1-6*xi)*Lambda^2*J(z)/(12*pi)
+      with no additive constant — so neither cutoff leg nor scheme choice generates or moves B,
+      which enters only as C-GRV-001's declared additive-ledger premise (consistent with C-M5S-003's
+      baseline clause). NEW QUANTITATIVE RESULT: weak-field validity of the sourced consumer at
+      field level epsilon* requires B >= (M/R)/epsilon* - Delta(1/G), with M/R fixed by the
+      committed B=0 consumer verdict (the numerically solved boundary magnitude
+      |Phi(R)| = 213.396523069221 recorded by C-M5S-004 at its declared 1e-3 gate -- equal
+      to the exact product G_total*M/R = 46.80699908016004 * M to 2.4e-6 relative -- and
+      Delta(1/G)|_{xi=0,N=3} = 0.02136432626854447, so M/R = |Phi(R)| * Delta): B_min = 4.537709
+      (marginal, 212.4 Delta) at epsilon* = 1, 45.569365 (2133.0 Delta) at epsilon* = 0.1, and
+      455.885930 (21338.7 Delta) at epsilon* = 0.01. Consequence: the strong-coupling escape list
+      collapses to an exact dichotomy — gravity in this sector is either induced and strongly
+      coupled (B near 0, the declared reading) or weak-field valid and bare-dominated
+      (B >> Delta); no regime is both mostly induced and weak-field valid.
+    provenance: campaigns/P243-clock-sourced-induced-coupling/adjudication.yaml
+    verification: symbolic_verified
+    review: accepted
+    compatibility: native
+    epistemic: active
+    category: synthesized
+    exclusions:
+      - "Irreducibility is shown within the accepted composition; it excludes no UV completion in which B is generated by physics outside the frozen scheme set."
+      - "The bound uses the committed consumer verdict's M/R; it derives no new consumer solution."
+    composition:
+      dependencies:
+        - C-GRV-001
+        - C-GRV-002
+        - C-IGR-004
+        - C-M5S-003
+        - C-M5S-004
+      structural_gap: "Promotes B from silently-declared reading to settled status (irreducible + bounded), closing the third clause of issue #163 criterion 1 and sharpening criterion 3 into a decidable dichotomy."
+      glue:
+        method: sympy
+        artifact: campaigns/P243-clock-sourced-induced-coupling/attempts/0009/baseline_settlement.py
+        entrypoint: main
+    dependencies:
+      - C-GRV-001
+      - C-GRV-002
+      - C-IGR-004
+      - C-M5S-003
+      - C-M5S-004
+    evidence:
+      - campaigns/P243-clock-sourced-induced-coupling/attempts/0009/result.yaml
+      - campaigns/P243-clock-sourced-induced-coupling/attempts/0009/baseline_settlement.py
+      - campaigns/P243-clock-sourced-induced-coupling/attempts/0009/baseline-verdict.json
+      - src/substrate_framework/total_gravitational_coupling.py
+      - tests/test_total_gravitational_coupling.py
+    assumptions:
+      - "Exact rational arithmetic throughout; float appearances in outputs are reporting only."
+      - "Mutations: b = -10*Delta breaks attraction per C-GRV-002 and field_count = 0 raises; both verified."
+    comparators: []
+    accepted_in: v0.165.0
+    challenges: []
+    supersedes: []
+
+  - id: C-M5S-008
+    statement: >-
+      C-M5S-008 (numeric_evidence; corrected by review erratum 0010 -> 0012): A long-range mediated
+      interaction between two stable confined clocks EXISTS and is REPULSIVE with algebraic decay:
+      E_int(d) = +456.6 * d^(-1.696) (fit residual 3.5%; P240 attempt 0043 boxed pair oracle;
+      separations d = 18..32, disjoint supports, G4 quadrature passed except the d = 32 tail at
+      12%). The interaction is carried by the summed-angle winding composition Theta_1 + Theta_2,
+      which modifies the static integrands inside each clock's support at ANY separation. Under
+      the committed three-pair functional (azimuthal rotation channel included, cpu_energy.py
+      L106-119; 3D director (st*sp, st*cp, ct), pair_oracle.py evaluate_pair_3d L293), the
+      exterior projector texture n n^T(Theta_1 + Theta_2) carries static density rho_ext =
+      8 sin^2(Theta) * (grad Theta)^2 / (r^2 sin^2 theta_p), strictly positive almost everywhere
+      off-axis: the single-generator norm ||[B_n, A]||_F^2 = 2 sin^2(Theta) holds exactly
+      (symbolic), the committed functional reproduces the formula to 1.4e-11 relative at an
+      independent probe point (rho = 12, z = 3), and a 120-point exterior scan gives max 4.3e-03,
+      median 1.1e-04. ERRATUM HISTORY (append-only): attempt 0010 first claimed a structural
+      refutation -- zero exterior density, vanishing multipoles, zero pairing beyond overlap,
+      'pure gauge' winding -- from a meridian-restricted two-directional surrogate absent from
+      every committed artifact; RevC008's review refuted that lemma at source and attempt 0012
+      superseded it; superseded clauses live only in the attempt records, not here. With
+      C-M5S-005's attractive induced Newton pairing, the force sector carries TWO long-range
+      channels: gravitational attraction F = G_total M1 M2 / d^2 and repulsive winding
+      interaction ~ +456.6 d^-1.696 with slower decay; within the measured window the Newton
+      channel dominates in magnitude.
+    provenance: campaigns/P243-clock-sourced-induced-coupling/adjudication.yaml
+    verification: numeric_evidence
+    review: accepted
+    compatibility: native
+    epistemic: active
+    category: synthesized
+    exclusions:
+      - "The power law is measured over d = 18..32 in the boxed fixed-J oracle; extrapolation beyond that window is not claimed."
+      - "The boxed static channel remains a different observable class from the induced far-field force per C-M5S-005's accepted review; no mapping between them is constructed here."
+      - "The labels np/na and H_split = diag(5,3,3,0,0,6)/2 originate in issue prose with no repository derivation site; this claim is stated over the repo-real channel objects (q, tangent, split; polar/azimuthal pair t +/- delta)."
+    composition:
+      dependencies:
+        - C-M5S-005
+        - C-M5S-006
+      structural_gap: "Answers the co-equal force objective of issue #163 (criterion 4) positively: the force sector carries TWO long-range channels -- the delivered induced Newton attraction (C-M5S-005) and the measured repulsive winding pairing -- replacing the earlier one-channel negative reading."
+      glue:
+        method: sympy
+        artifact: campaigns/P243-clock-sourced-induced-coupling/attempts/0012/shear_channel_repair.py
+        entrypoint: main
+    dependencies:
+      - C-M5S-005
+      - C-M5S-006
+    evidence:
+      - campaigns/P243-clock-sourced-induced-coupling/attempts/0012/result.yaml
+      - campaigns/P243-clock-sourced-induced-coupling/attempts/0012/shear_channel_repair.py
+      - campaigns/P243-clock-sourced-induced-coupling/attempts/0012/shear-repair-verdict.json
+      - campaigns/P243-clock-sourced-induced-coupling/attempts/0010/result.yaml
+      - campaigns/P243-clock-sourced-induced-coupling/attempts/0010/shear_channel_verdict.py
+      - campaigns/P243-clock-sourced-induced-coupling/attempts/0010/shear-verdict.json
+      - proposals/P240-m5-kinetic-axis/attempts/0041/cpu_energy.py
+      - proposals/P240-m5-kinetic-axis/attempts/0041/result.yaml
+      - proposals/P240-m5-kinetic-axis/attempts/0043/pair_oracle.py
+      - proposals/P240-m5-kinetic-axis/attempts/0043/result.yaml
+    assumptions:
+      - "Erratum chain 0010 -> 0012 preserved append-only; the superseded lemma and its refutation-by-review are part of the claim's recorded history."
+      - "Numeric probes use central differences at h = 1e-5 with BLAS threads pinned; the symbolic identity ||[B_n,A]||_F^2 = 2 sin^2(Theta) carries the density formula."
+    comparators: []
+    accepted_in: v0.165.0
+    challenges: []
+    supersedes: []
+
+  - id: C-M5S-009
+    statement: >-
+      C-M5S-009 (numeric_evidence): Radiative verdict for the confined clock — decay stability
+      completed, quantitative prediction blocked with the missing construction named. STABILITY
+      (completed): the confined clock ground state is radiatively stable within the model class,
+      by composition of three premises: (i) no internal decay channel — the physical bound
+      spectrum is strictly positive-frequency with positive kinetic metric and every ultra-light
+      candidate is a proven resolution artifact (C-M5S-006); (ii) no classical radiation — the
+      clock is a stationary point of an elliptic variational problem, hence time-independent;
+      (iii) the ground state is time-independent — its exterior tail, though carrying nonzero
+      static gradient energy under the committed functional (C-M5S-008 correction), is itself
+      stationary and sources no waves; radiation requires time-dependent multipoles, which the
+      ground state lacks. PREDICTION (blocked): the renormalized zero-point self-energy
+      delta-E = (1/2)*sum_i omega_i, a genuine one-loop radiative correction to M in the weak-field
+      consumer, is NOT computable to registry standard because soft-mode omega^2 carries ~10%
+      quadrature sensitivity (recorded stage-2 gate G2 failure at 9.9%) and the complete-spectrum
+      refinement ladder is obstructed (C-M5S-006's cross-order mechanism, 52% stiff-band drift).
+      Missing construction: a certified complete kinetic-normalized spectrum table with
+      independent-discretization agreement at a declared scale-relative tolerance across the full
+      band. This satisfies issue #163 criterion 3's radiative clause as attempted-and-recorded.
+    provenance: campaigns/P243-clock-sourced-induced-coupling/adjudication.yaml
+    verification: numeric_evidence
+    review: accepted
+    compatibility: native
+    epistemic: active
+    category: synthesized
+    exclusions:
+      - "Stability is established within the committed model class; no claim about decay channels opened by physics outside the frozen action."
+      - "No zero-point number is reported; the blocked half names its missing construction instead of producing an uncertified value."
+    composition:
+      dependencies:
+        - C-M5S-006
+        - C-M5S-008
+      structural_gap: "Closes the radiative clause of issue #163 criterion 3, converting 'never attempted' into a decided stability theorem plus an honestly blocked quantitative prediction."
+      glue:
+        method: sympy
+        artifact: campaigns/P243-clock-sourced-induced-coupling/attempts/0011/radiative_stability.py
+        entrypoint: main
+    dependencies:
+      - C-M5S-006
+      - C-M5S-008
+    evidence:
+      - campaigns/P243-clock-sourced-induced-coupling/attempts/0011/result.yaml
+      - campaigns/P243-clock-sourced-induced-coupling/attempts/0011/radiative_stability.py
+      - campaigns/P243-clock-sourced-induced-coupling/attempts/0011/radiative-verdict.json
+      - campaigns/P243-clock-sourced-induced-coupling/attempts/0011/stdout.txt
+      - campaigns/P243-clock-sourced-induced-coupling/attempts/0008/fd-verdict.json
+      - campaigns/P243-clock-sourced-induced-coupling/attempts/0008/kinetic-stage2.json
+      - campaigns/P243-clock-sourced-induced-coupling/attempts/0008/cross-order.json
+      - campaigns/P243-clock-sourced-induced-coupling/attempts/0010/shear-verdict.json
+    assumptions:
+      - "All premise records loaded read-only from committed attempt artifacts; expected contents fixed ex ante in the verifier docstring."
+    comparators: []
+    accepted_in: v0.165.0
+    challenges: []
+    supersedes: []

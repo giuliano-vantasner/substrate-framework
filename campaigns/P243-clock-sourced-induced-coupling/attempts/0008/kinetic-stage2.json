@@ -1,0 +1,95 @@
+{
+ "attempt": "0008-stage2",
+ "preregistration": "module docstring (pre-computation)",
+ "excluded_surface": "kappa projector-current term (bias toward STATIC classification)",
+ "checks": [
+  {
+   "name": "M_symmetry_psd",
+   "asymmetry": 7.891486495701338e-17,
+   "psd_defect": 1.0957949027842559e-17,
+   "passed": true
+  },
+  {
+   "name": "omega_sq_refinement_stability",
+   "max_rel_drift": 0.09897338795580601,
+   "gate": 0.05,
+   "note": "",
+   "passed": false
+  },
+  {
+   "name": "mutations",
+   "r10_frob_rel_diff": 0.055522180039435966,
+   "gate_a": 0.1,
+   "channel_rayleigh_q_t_d": {
+    "q": 92200.0895287193,
+    "t": 2.0340184524076546e-26,
+    "d": 16755.075844765168
+   },
+   "channels_distinct": true,
+   "passed": false
+  }
+ ],
+ "generalized_omega_sq_low": [
+  0.00015459806449519801,
+  0.00018100160330139392,
+  0.0005559811603608475,
+  0.000882463392296406,
+  0.0011211659978543186,
+  0.0015153351479709574,
+  0.0021429877627977,
+  0.0033146119835487024
+ ],
+ "modes": [
+  {
+   "mode": 0,
+   "stiffness": 7.450258177933971e-05,
+   "kinetic_rayleigh": 0.3706871182464838,
+   "classification": "PROPAGATING"
+  },
+  {
+   "mode": 1,
+   "stiffness": 0.019017082852772312,
+   "kinetic_rayleigh": 24.882761695361488,
+   "classification": "PROPAGATING"
+  },
+  {
+   "mode": 2,
+   "stiffness": 0.08557937373518441,
+   "kinetic_rayleigh": 608.3275437742449,
+   "classification": "PROPAGATING"
+  },
+  {
+   "mode": 3,
+   "stiffness": 0.3493412697494381,
+   "kinetic_rayleigh": 290.9937302853616,
+   "classification": "PROPAGATING"
+  },
+  {
+   "mode": 4,
+   "stiffness": 0.5968956360713037,
+   "kinetic_rayleigh": 8.277762788520494,
+   "classification": "PROPAGATING"
+  },
+  {
+   "mode": 5,
+   "stiffness": 1.5363871228369597,
+   "kinetic_rayleigh": 72.42630348585675,
+   "classification": "PROPAGATING"
+  },
+  {
+   "mode": 6,
+   "stiffness": 1.9935362898703763,
+   "kinetic_rayleigh": 1417.551654791692,
+   "classification": "PROPAGATING"
+  },
+  {
+   "mode": 7,
+   "stiffness": 2.982251210281597,
+   "kinetic_rayleigh": 238.8444844065822,
+   "classification": "PROPAGATING"
+  }
+ ],
+ "tally": "1/3 CHECKS PASS",
+ "runtime_seconds": 1.9,
+ "thread_pin": "torch.set_num_threads(1)"
+}

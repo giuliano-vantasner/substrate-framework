@@ -1,0 +1,193 @@
+attempt: "0008"
+campaign: P243-clock-sourced-induced-coupling
+title: window-background bound-channel stiffness census (stage 1)
+question: >
+  What is the low-lying second-variation spectrum about the confined-clock
+  window background itself (issue #163 criterion 1), as distinct from the
+  aligned-vacuum census that C-M5S-001 delivered?
+status: stage_1_complete_stage_2_pending
+preregistration: v3 (runs 1-2 verifier-gate failures archived; see module
+  docstring and stdout-run1-gates-failed.txt / stdout-v2.txt)
+method:
+  - exact autograd Hessian of the radial energy on the frozen R=12 order-16
+    S-family window root (largeR-roots.json R12; provenance re-verified in
+    attempt 0006), bottom block of 8 eigenvalues with per-channel nodal
+    census
+  - frozen-field quadrature ladder (48x16) -> (64x24) -> (80x32)
+  - centered-FD cross-route on the stiff band only, un-normalized by
+    max(1,|E|), two steps {3e-4, 1e-4} with step agreement gate
+  - banded scale-relative error model (soft | stiff) with preregistered
+    gates; mutations M1 continuity / M2 R10 swap / M3 split-zeroing
+checks: ALL 5 PASS (census-v3.json; tally 5/5)
+verdict:
+  block_scale_s_b: 2.982251210281484
+  soft_band: two modes below 1e-2*s_b
+  modes:
+    - {index: 0, stiffness: 7.450258186e-05, band: soft, dominant: split,
+       nodes_q_t_d: [14, 11, 13]}
+    - {index: 1, stiffness: 1.901708285e-02, band: soft, dominant: split,
+       nodes_q_t_d: [12, 12, 15]}
+    - {index: 2, stiffness: 8.557937373e-02, band: stiff, dominant: q,
+       nodes_q_t_d: [15, 12, 13]}
+    - {index: 3, stiffness: 3.493412697e-01, band: stiff, dominant: split,
+       nodes_q_t_d: [13, 12, 15]}
+    - {index: 4, stiffness: 5.968956361e-01, band: stiff, dominant: tangent,
+       nodes_q_t_d: [11, 15, 15]}
+    - {index: 5, stiffness: 1.536387123e+00, band: stiff, dominant: split,
+       nodes_q_t_d: [13, 11, 12]}
+    - {index: 6, stiffness: 1.993536290e+00, band: stiff, dominant: split,
+       nodes_q_t_d: [13, 11, 14]}
+    - {index: 7, stiffness: 2.982251210e+00, band: stiff, dominant: q,
+       nodes_q_t_d: [13, 12, 15]}
+  route_b_worst_residual: "~3.5e-7 relative (mode 7); all six stiff modes pass"
+  refinement: refined pair mutually converged <=5.1e-12; base (48x16)
+    carries declared per-mode bias <=8.9e-6 (< 1e-5 s_b bound)
+interpretation_guards:
+  - static stiffness eigenvalues are NOT frequencies; propagating-vs-static
+    classification needs the fluctuation kinetic metric (projector-current
+    term; curvature commutators vanish for co-diagonal fluctuations).
+    Stage 2 pending.
+  - GRID-MODE SUSPICION (recorded, not yet adjudicated) -- the softest
+    mode is split-dominant with 13-14 radial nodes at order 16 -- nodal
+    count near the order is the classic spectral grid-scale-artifact
+    signature.
+    family-S lambda_min halving across orders (4.5e-5 -> 2.0e-5 -> 9.7e-6,
+    P240 phase1 R=8 ladder) is consistent with a resolution artifact rather
+    than physical near-flatness. Formal adjudication requires the pending
+    cross-order leg (continuation re-solves at N=18/20 with family guards).
+pending_rows:
+  - stage-2 kinetic-metric construction and propagating-vs-static
+    classification of both soft modes (EXECUTED -- see stage2 section)
+  - cross-order structural leg -- EXECUTED and TERMINATED at a named
+    obstruction (see cross_order section below)
+cross_order:
+  preregistration: v2 amendment inside cross_order.py docstring (declared
+    before any N>=18 spectrum was read; run-1 stdout preserved as
+    stdout-cross-order.txt)
+  executed:
+    - "N=18 continuation-seeded solve (zero-pad from N16): converges to a
+      genuine stationary point (relgrad 1.83e-14, E=54.9483034233) but
+      FAILS the structural branch-identity gate -- stiff-band relative
+      drift 51.9% >> 25% gate"
+    - "branch probe (stdout-branch-probe.txt): the truncated N=18 root is
+      NOT near-stationary on the N16 functional (relgrad 7.3e-01, E +5%)"
+  verdict: >
+    Order-enrichment re-solves about the R=12 S-family window root do not
+    stay on branch: the seeded N=18 solve lands on a DIFFERENT stationary
+    configuration. Consistent with three independent precedents (R=10
+    ladder divergence at N>=18; 0005's order-18 obstruction; frozen-field
+    order-change impossibility). The grid-mode suspicion on the two soft
+    modes therefore CANNOT be adjudicated by cross-order comparison in this
+    model family at R=12 and remains OPEN as a named obstruction.
+  queued_constructions:
+    - stage-2 kinetic metric: EXECUTED (see stage2 section below)
+    - independent-discretization route (finite-difference radial Hessian at
+      high resolution; a soft eigenvalue reproducing with FIXED nodal
+      structure would certify physicality)
+fd_route:
+  status: G0 PASSED after root-cause fix; ladder EXECUTED; verdicts
+    delivered with one reliability flag
+  bugs_fixed_en_route:
+    - shared (1,N_mu) mu-grid made autograd sum d_mu over all radial rows
+      (fixed by committed-style repeated grid + Gauss nodes)
+    - missing -sine/r factors in theta/phi derivatives (inflated ~600x)
+    - "ROOT CAUSE of the transfer failure: the FD grid variable x=(r/R)^2
+      was fed into committed formulas expecting r/R, double-squaring the
+      Chebyshev argument and corrupting all envelope factors; corrected to
+      2*x_c-1 with xn=r/R-based envelopes"
+  g0_transfer_rel: 2.0e-04 (E_fd=55.1169 vs modal 55.1042) PASS
+  ladder_bottom_lambda0:
+    - {n_r: 48, value: 5.2735e-07}
+    - {n_r: 72, value: 4.9459e-08}
+    - {n_r: 96, value: 8.6450e-09}
+  preregistered_verdicts: "GRID ARTIFACT for all six bottom-block modes"
+  reliability_flag: >
+    RESOLVED (was: relgrad 46-58). The earlier number was a reporting bug
+    -- jac.norm() is the HESSIAN OPERATOR NORM over |E|, not a gradient.
+    True background gradient decomposes as healthy discretization
+    mismatch: |grad|/E = 0.049/0.042/0.037 across N_r=48/72/96, dominated
+    by grid-scale components while the smooth modal-representable part is
+    0.07-0.33 (near-stationary). Verdicts confirmed on the corrected run;
+    stdout-fd-route.txt now reports both quantities separately.
+  confidence: solid pending independent review (pre-declared rule, clean
+    transfer, converging ladder, resolved diagnostics)
+  interpretation: >
+    Three independent lines now point the same way: mesh refinement
+    collapses the soft eigenvalues (this route), box growth does NOT
+    rescue them into bound structure (box-trend diagnostic), and the
+    family-S lambda_min halving across orders matches the grid-mode
+    signature. Working hypothesis for the next session: P240's marginal
+    plateau is a spectral-resolution artifact; the window background's
+    propagating content is carried by the stiffer block, not by the two
+    ultra-soft modes.
+  queued: diagnose the relgrad~50 inconsistency, rerun the ladder, then
+    write the soft-mode adjudication claim.
+box_trend_diagnostic:
+  source: small-ratio-numerics skill (finite-domain-gift test), run on
+    already-committed order-16 window roots, no new solves
+  data:
+    - {R: 10, lambda0: 5.705042e-05, lambda1: 1.187097e-02,
+       ratio: 4.806e-03, dominant_nodes: 13}
+    - {R: 12, lambda0: 7.450258e-05, lambda1: 1.901708e-02,
+       ratio: 3.918e-03, dominant_nodes: 13}
+    - {R: 14, lambda0: 1.013732e-04, lambda2_ratio_ref: 3.498e-03,
+       dominant_nodes: 15}
+  reading: >
+    lambda0 does NOT collapse as the box grows -- it rises modestly with
+    stable nodal count. The finite-domain-gift hypothesis is DISFAVORED.
+    Combined with positive kinetic metric (stage 2), the soft modes now
+    lean PHYSICAL; the nodal-count-near-order signature remains the one
+    unexplained suspicious datum and keeps the question open pending the
+    FD route (after its factor-2 fix) or a symmetry-adapted analytic
+    classification.
+  reporting_habit_adopted: quote lambda_min/lambda_2 alongside every
+    soft-mode claim (values above; ~4e-3, i.e. inside the regime the
+    skill flags as truncation-dominated on any single mesh).
+outputs:
+  - attempts/0008/fd_route.py (+ stdout-fd-route.txt, fd-verdict.json)
+  - attempts/0008/window_census.py (+ stdout-run1-gates-failed.txt,
+    stdout-v2.txt, stdout-v3.txt, census-v3.json)
+  - attempts/0008/cross_order.py (+ stdout-cross-order.txt,
+    stdout-cross-order-v2.txt, stdout-branch-probe.txt, cross-order.json)
+  - attempts/0008/kinetic_stage2.py (+ stdout-stage2-run1-Mzero-bug.txt,
+    stdout-stage2.txt, kinetic-stage2.json)
+stage2_kinetic_metric:
+  construction: >
+    T(v) = 4 * sum_i integral || [Vdot, d_i S_bg] ||_F^2 over the same
+    quadrature/weight conventions as the committed static reduction;
+    velocity modals pass through the same shape factors as coefficient
+    modals; directors held fixed. M = d2T/dv2 exact via Jacobian-of-
+    gradient. Kappa projector term EXCLUDED (bias toward STATIC stated).
+  verifier_defects_before_result:
+    - run with detached coordinate grids gave M == 0 exactly
+      (stdout-stage2-run1-Mzero-bug.txt); fixed by the energy_radial
+      requires_grad pattern, gradients now nonzero (norms 4.5/8.2/8.4)
+    - inner autograd.grad lacked create_graph=True -> jacobian of a
+      constant; caught by direct T-probe before trusting any output
+  gates: "1/3 PASS"
+  results:
+    all_eight_modes_propagating_candidates:
+      rayleigh_quotients: all positive (see kinetic-stage2.json modes)
+      generalized_omega_sq_lowest: [1.5460e-04, 1.8100e-04, 5.5598e-04,
+        8.8246e-04, 1.1212e-03]
+    tangent_channel_structural_null:
+      unit-tangent Rayleigh quotient 2.0e-26 == 0 exactly; the pure
+      tangent velocity is tdot(r)*Identity, which commutes with every
+      background gradient -- the trace/constraint direction carries no
+      propagating kinetics under this construction
+    mixed_mode_caveat: >
+      mode 4 is 98.9% tangent yet reads PROPAGATING through a ~1%
+      q-admixture scaled by the large q-channel metric weight; per-mode
+      Rayleigh labels mislead for admixed modes -- classification should
+      use constrained-subspace projection weights, queued refinement.
+  gate_failures_honest:
+    G2_refinement: soft omega^2 drift up to 9.9% between quadratures
+      (48x24)->(64x32), above the declared 5%; the ultra-light values are
+      resolution-sensitive at that level and are NOT certified numbers.
+    G3_r10: M Frobenius difference across roots 5.6% < the guessed 10%;
+      recorded, gate not silently widened.
+  interpretation_guard: >
+    PROPAGATING here means positive kinetic metric under the declared
+    Frobenius convention with the kappa term excluded; it WEAKENS but does
+    not kill the grid-artifact suspicion on the ultra-light modes, whose
+    final adjudication remains with the independent-discretization route.

@@ -1,0 +1,38 @@
+{
+ "attempt": "0008-cross-order",
+ "preregistration": "this module docstring (pre-solve)",
+ "base_reference": {
+  "N": 16,
+  "energy": 55.10418278043526,
+  "bottom_block": [
+   7.450258185508209e-05,
+   0.019017082852805664,
+   0.08557937373413628,
+   0.3493412697494313,
+   0.5968956360697012,
+   1.5363871228369566,
+   1.99353628987039,
+   2.982251210281484
+  ]
+ },
+ "rows": [
+  {
+   "order": 18,
+   "solver_success": false,
+   "relative_gradient": 1.8275805052842444e-14,
+   "energy": 54.948303423322095,
+   "energy_continuity_rel": 0.0028288117026301213,
+   "energy_anomaly": false,
+   "stiff_band_max_rel_drift": 0.5189032861699523,
+   "family_guard_passed": false,
+   "minutes": 0.5,
+   "disposition": "family-guard failure -- named obstruction; INCONCLUSIVE by this route"
+  }
+ ],
+ "verdicts": {
+  "mode_0": "INCONCLUSIVE (no guarded solve)",
+  "mode_1": "INCONCLUSIVE (no guarded solve)"
+ },
+ "runtime_seconds": 32.9,
+ "thread_pin": "torch.set_num_threads(1)"
+}

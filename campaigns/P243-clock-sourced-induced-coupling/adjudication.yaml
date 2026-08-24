@@ -1,5 +1,6 @@
 campaign: P243
-title: Clock-sourced induced coupling — derived N and Lambda drive a numeric Delta(1/G), a weak-field consumer verdict, and a force-pairing sign
+title: Clock-sourced induced coupling — derived N and Lambda drive a numeric Delta(1/G), a weak-field
+  consumer verdict, and a force-pairing sign
 base_release: v0.163.0
 accepted_release: v0.164.0
 base_commit: fda76ef
@@ -7,61 +8,135 @@ head_commit: c2efa38
 adjudicated_at: '2026-08-23T12:30:00+00:00'
 status: in_progress
 selected_candidates:
-  - {id: F, reason: Lambda_squared_is_the_U_S_stationary_family_energy_splitting_a_sector_intrinsic_same_order_scale_with_3.23pct_box_independence_under_the_frozen_5pct_gate_and_quadrature_carried_refinement}
+- id: F
+  reason: Lambda_squared_is_the_U_S_stationary_family_energy_splitting_a_sector_intrinsic_same_order_scale_with_3.23pct_box_independence_under_the_frozen_5pct_gate_and_quadrature_carried_refinement
 rejected_candidates:
-  - {id: A, reason: Gradient_energy_centroid_is_domain_filling_L_grad_scales_like_R_to_the_half_so_box_independence_fails_at_every_declared_thresholding_variant_11_to_13pct_drift_vs_5pct_gate}
-  - {id: B, reason: Box_quantization_scale_is_infrared_by_construction}
-  - {id: C, reason: Max_pinned_spectral_target_supplies_no_length_ontology}
-  - {id: D, reason: Single_branch_Morse_index_crossing_does_not_exist_two_stationary_point_families_U_and_S_coexist_near_R_6_the_bisection_flip_was_seed_history}
-  - {id: E, reason: Family_U_has_no_stabilization_within_R_le_14_lambda_1_rises_only_to_minus_1.42e_minus_3_with_geometrically_decaying_increments_bounding_all_future_rise_below_the_R_14_value_negative_asymptote_no_crossing}
+- id: A
+  reason: Gradient_energy_centroid_is_domain_filling_L_grad_scales_like_R_to_the_half_so_box_independence_fails_at_every_declared_thresholding_variant_11_to_13pct_drift_vs_5pct_gate
+- id: B
+  reason: Box_quantization_scale_is_infrared_by_construction
+- id: C
+  reason: Max_pinned_spectral_target_supplies_no_length_ontology
+- id: D
+  reason: Single_branch_Morse_index_crossing_does_not_exist_two_stationary_point_families_U_and_S_coexist_near_R_6_the_bisection_flip_was_seed_history
+- id: E
+  reason: Family_U_has_no_stabilization_within_R_le_14_lambda_1_rises_only_to_minus_1.42e_minus_3_with_geometrically_decaying_increments_bounding_all_future_rise_below_the_R_14_value_negative_asymptote_no_crossing
 selection: substrate_internal_cutoff_under_frozen_criteria_not_regulator_or_comparator_choice
 claims:
-  - {id: C-M5S-001, decision: accepted_with_minimum_correction_scope_restated_to_aligned_vacuum, verification: symbolic_verified, review: accepted, compatibility: native, epistemic: active}
-  - {id: C-M5S-002, decision: accepted_with_minimum_correction_deviation_and_attestation_basis_recorded, verification: numeric_evidence, review: accepted, compatibility: native, epistemic: active}
-  - {id: C-M5S-003, decision: accepted_as_drafted_synthesized, verification: symbolic_verified, review: accepted, compatibility: native, epistemic: active}
-  - {id: C-M5S-004, decision: accepted_as_drafted_applicability_bounded_strong_coupling_verdict, verification: numeric_evidence, review: accepted, compatibility: native, epistemic: active}
-  - {id: C-M5S-005, decision: accepted_with_minimum_correction_boxed_static_crosscheck_dropped_flat_channel_clause_scoped, verification: symbolic_verified, review: accepted, compatibility: native, epistemic: active}
+- id: C-M5S-001
+  decision: accepted_with_minimum_correction_scope_restated_to_aligned_vacuum
+  verification: symbolic_verified
+  review: accepted
+  compatibility: native
+  epistemic: active
+- id: C-M5S-002
+  decision: accepted_with_minimum_correction_deviation_and_attestation_basis_recorded
+  verification: numeric_evidence
+  review: accepted
+  compatibility: native
+  epistemic: active
+- id: C-M5S-003
+  decision: accepted_as_drafted_synthesized
+  verification: symbolic_verified
+  review: accepted
+  compatibility: native
+  epistemic: active
+- id: C-M5S-004
+  decision: accepted_as_drafted_applicability_bounded_strong_coupling_verdict
+  verification: numeric_evidence
+  review: accepted
+  compatibility: native
+  epistemic: active
+- id: C-M5S-005
+  decision: accepted_with_minimum_correction_boxed_static_crosscheck_dropped_flat_channel_clause_scoped
+  verification: symbolic_verified
+  review: accepted
+  compatibility: native
+  epistemic: active
+- id: C-M5S-006
+  decision: accepted_with_correction_scope_sentence_precision_ladder_spans_1.8_orders_four_orders_from_modal_start
+  verification: numeric_evidence
+  review: accepted
+  compatibility: native
+  epistemic: active
+- id: C-M5S-007
+  decision: accepted_with_correction_bound_constant_attributed_to_C_M5S_004_boundary_magnitude_Phi_R_distinct_from_exact_product_by_2.4e-6
+  verification: symbolic_verified
+  review: accepted
+  compatibility: native
+  epistemic: active
+- id: C-M5S-008
+  decision: accepted_after_erratum_chain_0010_surrogate_lemma_refuted_by_review_corrected_positive_two_channel_verdict_repulsive_winding_power_law_measured_at_disjoint_supports
+  verification: numeric_evidence
+  review: accepted
+  compatibility: native
+  epistemic: active
+- id: C-M5S-009
+  decision: accepted_with_corrections_exact_path_check_anchors_premise_iii_restated_on_time_independence_evidence_block_completed
+  verification: numeric_evidence
+  review: accepted
+  compatibility: native
+  epistemic: active
 unchanged_dependencies:
-  - {id: C-GRV-001, decision: unchanged_cutoff_ontology_standard_and_baseline_ledger}
-  - {id: C-GRV-002, decision: unchanged_sign_structure_instantiated_at_N_3_z_0_selected_Lambda}
-  - {id: C-IGR-001, decision: unchanged_sharp_coefficient_family_reused}
-  - {id: C-IGR-002, decision: unchanged_smooth_coefficient_family_reused}
-  - {id: C-IGR-003, decision: unchanged_power_subtracted_family_outside_usable_set}
-  - {id: C-IGR-004, decision: unchanged_renormalization_condition_extended_by_additivity}
-  - {id: C-STG-001, decision: unchanged_stationary_field_setting}
+- id: C-GRV-001
+  decision: unchanged_cutoff_ontology_standard_and_baseline_ledger
+- id: C-GRV-002
+  decision: unchanged_sign_structure_instantiated_at_N_3_z_0_selected_Lambda
+- id: C-IGR-001
+  decision: unchanged_sharp_coefficient_family_reused
+- id: C-IGR-002
+  decision: unchanged_smooth_coefficient_family_reused
+- id: C-IGR-003
+  decision: unchanged_power_subtracted_family_outside_usable_set
+- id: C-IGR-004
+  decision: unchanged_renormalization_condition_extended_by_additivity
+- id: C-STG-001
+  decision: unchanged_stationary_field_setting
 unpromoted_surfaces:
-  - {id: window_background_spectrum_census, reason: Aligned_vacuum_census_delivered_bound_channel_window_background_census_remains_open_campaign_work_upgrade_path_nodal_census_plus_refinement_about_a_committed_window_root}
-  - {id: order_18_refinement_row, reason: Coefficient_vector_length_IS_the_order_every_U_leaning_order_18_solve_lands_in_S18_or_diverges_named_obstruction_quadrature_rows_carry_criterion_3}
-  - {id: radiative_attempt, reason: Correctly_absent_from_C_M5S_004_statement_open_frontier}
-  - {id: candidate_E_R_above_14, reason: Stabilization_loophole_declared_residual_hypothesis}
-  - {id: static_frame_pairing_map, reason: No_construction_maps_P240_static_frame_coupling_to_far_field_induced_channel_force_category_mismatch_cross_check_dropped}
+- id: order_18_refinement_row
+  reason: Coefficient_vector_length_IS_the_order_every_U_leaning_order_18_solve_lands_in_S18_or_diverges_named_obstruction_quadrature_rows_carry_criterion_3
+- id: candidate_E_R_above_14
+  reason: Stabilization_loophole_declared_residual_hypothesis
+- id: static_frame_pairing_map
+  reason: No_construction_maps_P240_static_frame_coupling_to_far_field_induced_channel_force_category_mismatch_cross_check_dropped
+- id: certified_full_band_spectrum_table
+  reason: Zero_point_self_energy_prediction_blocked_soft_omega2_quadrature_sensitivity_9.9pct_and_cross_order_stationary_point_jump_52pct_missing_construction_named_in_C_M5S_009
 evidence:
   proposal: proposal.yaml
   attempts: attempts/
   claim_reviews:
-    - memory/vantasner/decisions/C-M5S-001-review.md
-    - memory/vantasner/decisions/C-M5S-002-review.md
-    - memory/vantasner/decisions/C-M5S-003-review.md
-    - memory/vantasner/decisions/C-M5S-004-review.md
-    - memory/vantasner/decisions/C-M5S-005-review.md
+  - memory/vantasner/decisions/C-M5S-001-review.md
+  - memory/vantasner/decisions/C-M5S-002-review.md
+  - memory/vantasner/decisions/C-M5S-003-review.md
+  - memory/vantasner/decisions/C-M5S-004-review.md
+  - memory/vantasner/decisions/C-M5S-005-review.md
+  - memory/vantasner/decisions/C-M5S-006-review.md
+  - memory/vantasner/decisions/C-M5S-007-review.md
+  - memory/vantasner/decisions/C-M5S-008-review.md
+  - memory/vantasner/decisions/C-M5S-009-review.md
   canonical_modules:
-    - src/substrate_framework/m5_fluctuation_spectrum.py
-    - src/substrate_framework/m5_induced_coupling.py
+  - src/substrate_framework/m5_fluctuation_spectrum.py
+  - src/substrate_framework/m5_induced_coupling.py
 validation_commands:
-  - PYTHONPATH=src python -m pytest tests/test_m5_fluctuation_spectrum.py tests/test_m5_induced_coupling.py
-  - scripts/validate_changed.py scope selection at the promotion boundary
-  - PYTHONPATH=src python scripts/render_docs.py
-  - git diff --check separately
+- PYTHONPATH=src python -m pytest tests/test_m5_fluctuation_spectrum.py tests/test_m5_induced_coupling.py
+- scripts/validate_changed.py scope selection at the promotion boundary
+- PYTHONPATH=src python scripts/render_docs.py
+- git diff --check separately
 integrated_gate:
   status: passed
-  boundary: campaign stack head c2efa38 plus this promotion commit's registry,
-    release, tests, adjudication, docs, and memory regeneration
+  boundary: campaign stack head c2efa38 plus this promotion commit's registry, release, tests, adjudication,
+    docs, and memory regeneration
   repository_workflow: ALL_REPOSITORY_WORKFLOW_CHECKS_PASS
   full_pytest: 2440_passed_in_349.54s
-  new_module_tests: 22_passed (tests/test_m5_fluctuation_spectrum.py,
-    tests/test_m5_induced_coupling.py)
+  new_module_tests: 22_passed (tests/test_m5_fluctuation_spectrum.py, tests/test_m5_induced_coupling.py)
   registry_validation: WORKFLOW_VALID 227 claims 227 accepted 8 proposals
   generated_state: render_docs.py and render_memory.py current at gate time
   claim_reviews: five individual distinct-reviewer files, zero blocking findings
   git_diff_check: passed
 debt: []
+continuation:
+  base_release: v0.164.0
+  accepted_release: v0.165.0
+  adjudicated_at: '2026-08-23T23:20:00+00:00'
+  scope: 'issue #163 reopened-letter items: window-background soft-mode adjudication, baseline settlement,
+    np/na shear-channel verdict, radiative attempt'

@@ -1,0 +1,48 @@
+{
+ "attempt": "0012",
+ "title": "shear-channel repair -- committed-functional verdict (supersedes 0010's surrogate lemma)",
+ "preregistration": "module docstring (pre-computation); erratum chain 0010 -> 0012 per RevC008 blocking findings",
+ "verdict": "CORRECTED CRITERION-D VERDICT: POSITIVE. A long-range mediated interaction between two confined clocks EXISTS: repulsive, E_int(d) = +456.6 * d^(-1.696) (fit residual 3.5%; P240 attempt 0043 boxed pair oracle; separations d = 18..32 with disjoint supports; G4 quadrature passed except the d=32 tail at 12%). Mechanism: the summed-angle winding composition Theta_1 + Theta_2 modifies the static integrands inside each clock's support at ANY separation; under the committed three-pair functional (azimuthal channel included, cpu_energy.py L106-119; 3D director (st*sp, st*cp, ct), pair_oracle.py L293) the exterior projector texture carries density rho_ext = 8 sin^2(Theta) * (grad Theta)^2 / (r^2 sin^2 theta_p) >= 0, strictly positive off-axis (C1 symbolic ||[B_n,A]||^2 = 2 sin^2; C2 committed-functional reproduction; C3 scan max O(1e-4)). Attempt 0010's zero-density lemma held only for a meridian-restricted surrogate absent from every committed artifact and is hereby superseded; its own record stands as erratum history. THE FORCE SECTOR CARRIES TWO LONG-RANGE CHANNELS: (1) attractive induced Newton pairing F = G_total*M1*M2/d^2 (C-M5S-005, xi<1/6 attractive, cancellation at xi=1/6); (2) repulsive winding pairing +456.6*d^(-1.696) with slower decay; within the measured window the Newton channel dominates in magnitude.",
+ "checks": [
+  {
+   "name": "C1_symbolic_frobenius",
+   "norm_BA_squared": "2*sin(Theta)**2",
+   "expected": "2*sin(Theta)^2",
+   "passed": true
+  },
+  {
+   "name": "C2_committed_vs_analytic",
+   "point": [
+    12.0,
+    3.0,
+    0.7
+   ],
+   "density_numeric": 4.82992755590662e-05,
+   "density_formula": 4.8299275559746224e-05,
+   "rel_deviation": 1.4079406931660352e-11,
+   "passed": true
+  },
+  {
+   "name": "C3_exterior_scan_nonzero",
+   "max": 0.0042667873450905934,
+   "median": 0.00011304575307392329,
+   "n_points": 120,
+   "passed": true
+  },
+  {
+   "name": "C4_boxed_channel_record",
+   "fit_recorded": true,
+   "disjoint_note": true,
+   "range_includes_beyond_overlap": true,
+   "passed": true
+  }
+ ],
+ "tally": "4/4 CHECKS PASS",
+ "runtime_seconds": 1.1,
+ "thread_pin": "BLAS threads pinned via env at launch",
+ "outputs": [
+  "attempts/0012/shear_channel_repair.py",
+  "attempts/0012/stdout.txt",
+  "attempts/0012/shear-repair-verdict.json"
+ ]
+}
