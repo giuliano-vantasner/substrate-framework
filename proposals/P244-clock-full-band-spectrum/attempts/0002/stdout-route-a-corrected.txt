@@ -1,0 +1,9 @@
+[rung 48x24] E=55.104182780435 etrans=0.00e+00 kept=32 dH=None dM=None
+[rung 64x32] E=55.104182780024 etrans=7.47e-12 kept=32 dH=1.4197517018189472e-07 dM=1.3669525057231701e-09
+[rung 80x40] E=55.104182780024 etrans=7.47e-12 kept=32 dH=2.049616200102563e-15 dM=2.3708162767710657e-15
+[rung 96x48] E=55.104182780024 etrans=7.47e-12 kept=32 dH=1.434731340071792e-15 dM=1.5410305799011903e-15
+[mp] high-precision projected solve starting...
+[mp] done 0.7s
+[zero-point] n=0 dE=0.00000000 sig_rss=nan sig_lin=nan
+5/7 CHECKS PASS
+[DONE] route-a-corrected-verdict.json written

@@ -12915,3 +12915,101 @@ claims:
     accepted_in: v0.165.0
     challenges: []
     supersedes: []
+
+  - id: C-M5S-010
+    statement: >-
+      Certified full-band kinetic-normalized spectrum table for the confined-clock
+      sector. About the frozen committed R=12 family-S window root (order-16 basis;
+      coefficients read read-only from proposals/P240-m5-kinetic-axis/attempts/0042/
+      largeR-roots.json), the kinetic-normalized fluctuation pencil (H, M) -- H the
+      autograd-exact static energy Hessian and M the exact-quadratic kinetic metric
+      built with the corrected per-cell reduction -- is certified across all 32
+      kinetically non-singular modes (48 modal directions minus the 16-dimensional
+      exact tangent-null family) by two independent quadrature families applied to
+      the verbatim committed constructions: Gauss-Legendre nodes at resolution
+      96x48 versus interior second-kind Chebyshev nodes with solved
+      polynomial-exactness weights at 160x80. Cross-family agreement: H entries at
+      or below 4.6e-07 relative, M entries at or below 3.2e-14 relative, pencil
+      frequencies at or below 1.04e-07 relative. Gates: Gauss-Legendre route-A
+      ladder energy transfer at or below 7.47e-12 relative against the committed
+      energy at every rung; matrix symmetry below 1e-12 relative and M PSD defect
+      below 1e-11; per-band scale-relative omega agreement inside soft 5 percent,
+      mid 2 percent and stiff 1 percent tolerances; load-bearing input mutations
+      move certified frequencies (single-coefficient mutation shifts the pencil;
+      the R10-root change moves some mode relatively more than 10 percent);
+      certification margin omega at least ten sigma with sigma from measured
+      float64 jitter and cross-family spread. Result: every certified frequency is
+      O(1) or larger -- omega_min = 1.046406 with per-mode budget sigma_omega of
+      mode 0 equal to 2.12027173596141e-09 -- so no infrared propagating
+      fluctuation exists about the window root at adjudicable resolution, and the
+      census multiplicity N=3 of C-M5S-001 is unaffected by the window background
+      at frequency level.
+    provenance: proposals/P244-clock-full-band-spectrum/proposal.yaml
+    verification: numeric_evidence
+    review: accepted
+    compatibility: native
+    epistemic: active
+    exclusions:
+      - "Committed order-16 sector about this one root; no other root or de-boxed realization is adjudicated."
+      - "Kappa projector-current term excluded from the kinetic metric with its recorded bias toward STATIC classification."
+      - "The Chebyshev family's internal G0B energy-transfer check measured 3.912e-06 relative against its strict preregistered gate; algebraic pole content of H-channel densities floors cross-family entry agreement near 1e-7 relative (mechanism recorded in attempt 0007)."
+    dependencies:
+      - C-M5S-006
+    evidence:
+      - proposals/P244-clock-full-band-spectrum/attempts/0008/final_table.py
+      - proposals/P244-clock-full-band-spectrum/attempts/0008/spectrum-table-final.json
+      - proposals/P244-clock-full-band-spectrum/attempts/0008/final-verdict.json
+      - proposals/P244-clock-full-band-spectrum/attempts/0007/g6_final.py
+      - proposals/P244-clock-full-band-spectrum/attempts/0007/stdout-g6-final.txt
+      - proposals/P244-clock-full-band-spectrum/attempts/0007/final-certified-result.json
+      - proposals/P244-clock-full-band-spectrum/attempts/0003/route_final.py
+      - proposals/P244-clock-full-band-spectrum/attempts/0003/certified-table-verdict.json
+      - proposals/P244-clock-full-band-spectrum/attempts/0004/final_table.py
+      - proposals/P244-clock-full-band-spectrum/attempts/0004/spectrum-table.json
+      - proposals/P244-clock-full-band-spectrum/attempts/0001/stdout-route-a.txt
+      - proposals/P244-clock-full-band-spectrum/attempts/0001/diag-bugid.txt
+    assumptions:
+      - "Frozen background coefficients read read-only from committed P240 attempt data; no background re-solve anywhere in the ladder."
+    comparators: []
+    accepted_in: v0.166.0
+    challenges: []
+    supersedes: []
+
+  - id: C-M5S-011
+    statement: >-
+      Renormalized zero-point mass shift of the confined clock within the committed
+      model class: delta-E = (1/2)*sum_i omega_i = 72.58859645998888 with budget
+      sigma(delta-E) at most 9.226127551942298e-07 linear bound and
+      3.8507623645951665e-07 RSS, summed over the 32 certified positive-frequency
+      modes of C-M5S-010 about the frozen R=12 family-S root with compensated
+      summation. This discharges the missing construction named in C-M5S-009's
+      blocked prediction at its stated standard: a certified complete
+      kinetic-normalized spectrum table with independent-discretization agreement
+      at declared scale-relative tolerance across the full band. The correction
+      exceeds this root's classical energy 55.10418278043526 by the ratio 1.3173,
+      so radiative repair cannot weaken the recorded strong-coupling verdict of
+      the B=0 reading. Scope: the committed order-16 sector about that root;
+      whether a genuinely de-boxed realization exists remains campaign frontier.
+    provenance: proposals/P244-clock-full-band-spectrum/proposal.yaml
+    verification: numeric_evidence
+    review: accepted
+    compatibility: native
+    epistemic: active
+    exclusions:
+      - "Budget covers quadrature, float64 jitter and cross-family spread within the committed model class; physics beyond the model class stays declared frontier."
+      - "The de-boxed limit question of issue #170 item 3 is out of scope."
+    dependencies:
+      - C-M5S-010
+      - C-M5S-009
+    evidence:
+      - proposals/P244-clock-full-band-spectrum/attempts/0008/final_table.py
+      - proposals/P244-clock-full-band-spectrum/attempts/0008/final-verdict.json
+      - proposals/P244-clock-full-band-spectrum/attempts/0008/spectrum-table-final.json
+      - proposals/P244-clock-full-band-spectrum/attempts/0007/final-certified-result.json
+      - proposals/P244-clock-full-band-spectrum/attempts/0002/route_a_corrected.py
+    assumptions:
+      - "Sum restricted to certified positive-frequency propagating modes; tangent-null family deflated analytically."
+    comparators: []
+    accepted_in: v0.166.0
+    challenges: []
+    supersedes: []

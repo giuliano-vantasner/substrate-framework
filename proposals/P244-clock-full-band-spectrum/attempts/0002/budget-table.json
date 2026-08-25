@@ -1,0 +1,322 @@
+[
+ {
+  "mode": 0,
+  "stiffness": 7.450261005614342e-05,
+  "band": "soft",
+  "omega_sq_mp": 0.00012812839531615758,
+  "omega": 0.011319381401656082,
+  "sigma_omega_sq": 1.0948373546293577,
+  "sigma_over_omega2": 8544.84559747931,
+  "certified_margin_ok": false
+ },
+ {
+  "mode": 1,
+  "stiffness": 0.019017107636567342,
+  "band": "mid",
+  "omega_sq_mp": 0.07268476316400209,
+  "omega": 0.26960111862527963,
+  "sigma_omega_sq": 2.124904690260192,
+  "sigma_over_omega2": 29.234527262139775,
+  "certified_margin_ok": false
+ },
+ {
+  "mode": 2,
+  "stiffness": 0.08557937444201842,
+  "band": "mid",
+  "omega_sq_mp": 0.45077230384107175,
+  "omega": 0.6713957877742992,
+  "sigma_omega_sq": 1.8736801312063,
+  "sigma_over_omega2": 4.156599940237014,
+  "certified_margin_ok": false
+ },
+ {
+  "mode": 3,
+  "stiffness": 0.3493416264521771,
+  "band": "stiff",
+  "omega_sq_mp": 1.709404488698692,
+  "omega": 1.307441963797511,
+  "sigma_omega_sq": 1.6475567843831553,
+  "sigma_over_omega2": 0.9638191518014445,
+  "certified_margin_ok": false
+ },
+ {
+  "mode": 4,
+  "stiffness": 0.5968956657259125,
+  "band": "stiff",
+  "omega_sq_mp": 6.507936698845947,
+  "omega": 2.5510657966516557,
+  "sigma_omega_sq": 2.6190797571012925,
+  "sigma_over_omega2": 0.40244395087090107,
+  "certified_margin_ok": false
+ },
+ {
+  "mode": 5,
+  "stiffness": 1.5363781860943133,
+  "band": "stiff",
+  "omega_sq_mp": 21.559995724542414,
+  "omega": 4.643274246105049,
+  "sigma_omega_sq": 16.982822444370186,
+  "sigma_over_omega2": 0.7877006406377952,
+  "certified_margin_ok": false
+ },
+ {
+  "mode": 6,
+  "stiffness": 1.993539365840892,
+  "band": "stiff",
+  "omega_sq_mp": 47.96164258162298,
+  "omega": 6.925434468798545,
+  "sigma_omega_sq": 42.53388903185663,
+  "sigma_over_omega2": 0.8868313665335963,
+  "certified_margin_ok": false
+ },
+ {
+  "mode": 7,
+  "stiffness": 2.9822513374769297,
+  "band": "stiff",
+  "omega_sq_mp": 170.60220457757123,
+  "omega": 13.061477886425074,
+  "sigma_omega_sq": 165.11326214094962,
+  "sigma_over_omega2": 0.9678260755761462,
+  "certified_margin_ok": false
+ },
+ {
+  "mode": 8,
+  "stiffness": 3.6779751861296806,
+  "band": "stiff",
+  "omega_sq_mp": 213.9335447703596,
+  "omega": 14.626467268973721,
+  "sigma_omega_sq": 208.04248136772534,
+  "sigma_over_omega2": 0.9724631150810976,
+  "certified_margin_ok": false
+ },
+ {
+  "mode": 9,
+  "stiffness": 11.473304120319431,
+  "band": "stiff",
+  "omega_sq_mp": 240.03010565150888,
+  "omega": 15.49290501008474,
+  "sigma_omega_sq": 232.88899669432192,
+  "sigma_over_omega2": 0.9702491113029177,
+  "certified_margin_ok": false
+ },
+ {
+  "mode": 10,
+  "stiffness": 17.28369925197026,
+  "band": "stiff",
+  "omega_sq_mp": 545.6843597044569,
+  "omega": 23.359887835870637,
+  "sigma_omega_sq": 538.3952768167218,
+  "sigma_over_omega2": 0.986642309316538,
+  "certified_margin_ok": false
+ },
+ {
+  "mode": 11,
+  "stiffness": 19.226361693617,
+  "band": "stiff",
+  "omega_sq_mp": 761.0956359936356,
+  "omega": 27.587961794841526,
+  "sigma_omega_sq": 752.3212959527707,
+  "sigma_over_omega2": 0.9884714356174048,
+  "certified_margin_ok": false
+ },
+ {
+  "mode": 12,
+  "stiffness": 30.436838811869688,
+  "band": "stiff",
+  "omega_sq_mp": 939.2434910001207,
+  "omega": 30.647079648803746,
+  "sigma_omega_sq": 930.3543945751483,
+  "sigma_over_omega2": 0.9905358977622436,
+  "certified_margin_ok": false
+ },
+ {
+  "mode": 13,
+  "stiffness": 41.21750556103278,
+  "band": "stiff",
+  "omega_sq_mp": 1136.5739276118481,
+  "omega": 33.71311210214578,
+  "sigma_omega_sq": 1126.241492785305,
+  "sigma_over_omega2": 0.9909091396736035,
+  "certified_margin_ok": false
+ },
+ {
+  "mode": 14,
+  "stiffness": 45.9253122655659,
+  "band": "stiff",
+  "omega_sq_mp": 2149.5638752439654,
+  "omega": 46.36338938477174,
+  "sigma_omega_sq": 2138.755182470162,
+  "sigma_over_omega2": 0.9949716810473581,
+  "certified_margin_ok": false
+ },
+ {
+  "mode": 15,
+  "stiffness": 76.65380150588406,
+  "band": "stiff",
+  "omega_sq_mp": 2294.683062649444,
+  "omega": 47.90285025600715,
+  "sigma_omega_sq": 2282.663634180894,
+  "sigma_over_omega2": 0.9947620529108397,
+  "certified_margin_ok": false
+ },
+ {
+  "mode": 16,
+  "stiffness": 103.46022876944095,
+  "band": "stiff",
+  "omega_sq_mp": 2595.6924166686103,
+  "omega": 50.94793829654553,
+  "sigma_omega_sq": 2582.780765436455,
+  "sigma_over_omega2": 0.9950257391248511,
+  "certified_margin_ok": false
+ },
+ {
+  "mode": 17,
+  "stiffness": 131.96647344442817,
+  "band": "stiff",
+  "omega_sq_mp": 3951.479135608531,
+  "omega": 62.860791719549084,
+  "sigma_omega_sq": 3937.3336302260304,
+  "sigma_over_omega2": 0.9964201999056431,
+  "certified_margin_ok": false
+ },
+ {
+  "mode": 18,
+  "stiffness": 132.86655793641404,
+  "band": "stiff",
+  "omega_sq_mp": 4260.213375877418,
+  "omega": 65.27031006420468,
+  "sigma_omega_sq": 4244.985550902441,
+  "sigma_over_omega2": 0.996425572235137,
+  "certified_margin_ok": false
+ },
+ {
+  "mode": 19,
+  "stiffness": 199.96506964919317,
+  "band": "stiff",
+  "omega_sq_mp": 4548.657728044285,
+  "omega": 67.44373750055883,
+  "sigma_omega_sq": 4531.411245236043,
+  "sigma_over_omega2": 0.9962084456911517,
+  "certified_margin_ok": false
+ },
+ {
+  "mode": 20,
+  "stiffness": 252.7707133175763,
+  "band": "stiff",
+  "omega_sq_mp": 5563.400848158884,
+  "omega": 74.58820850616326,
+  "sigma_omega_sq": 5545.699854090559,
+  "sigma_over_omega2": 0.9968183140939443,
+  "certified_margin_ok": false
+ },
+ {
+  "mode": 21,
+  "stiffness": 284.23430913393497,
+  "band": "stiff",
+  "omega_sq_mp": 8468.972119499493,
+  "omega": 92.02701842121961,
+  "sigma_omega_sq": 8448.56497560867,
+  "sigma_over_omega2": 0.9975903635526399,
+  "certified_margin_ok": false
+ },
+ {
+  "mode": 22,
+  "stiffness": 314.6785709154443,
+  "band": "stiff",
+  "omega_sq_mp": 9616.540280968526,
+  "omega": 98.06396015340461,
+  "sigma_omega_sq": 9594.211080270054,
+  "sigma_over_omega2": 0.9976780422016572,
+  "certified_margin_ok": false
+ },
+ {
+  "mode": 23,
+  "stiffness": 351.8533661928868,
+  "band": "stiff",
+  "omega_sq_mp": 10745.347599161187,
+  "omega": 103.65976846955229,
+  "sigma_omega_sq": 10721.593002895075,
+  "sigma_over_omega2": 0.9977893133705636,
+  "certified_margin_ok": false
+ },
+ {
+  "mode": 24,
+  "stiffness": 364.103175961902,
+  "band": "stiff",
+  "omega_sq_mp": 11827.65054378019,
+  "omega": 108.75500238508658,
+  "sigma_omega_sq": 11799.042497042954,
+  "sigma_over_omega2": 0.9975812570187678,
+  "certified_margin_ok": false
+ },
+ {
+  "mode": 25,
+  "stiffness": 390.5640817102547,
+  "band": "stiff",
+  "omega_sq_mp": 19191.126672314094,
+  "omega": 138.53204204195538,
+  "sigma_omega_sq": 19158.916919394647,
+  "sigma_over_omega2": 0.9983216330406534,
+  "certified_margin_ok": false
+ },
+ {
+  "mode": 26,
+  "stiffness": 455.9081801750281,
+  "band": "stiff",
+  "omega_sq_mp": 21212.149472537014,
+  "omega": 145.64391326978622,
+  "sigma_omega_sq": 21175.634970589625,
+  "sigma_over_omega2": 0.9982786043444271,
+  "certified_margin_ok": false
+ },
+ {
+  "mode": 27,
+  "stiffness": 549.3778664680423,
+  "band": "stiff",
+  "omega_sq_mp": 30431.905565600802,
+  "omega": 174.44742923184853,
+  "sigma_omega_sq": 30380.083226562758,
+  "sigma_over_omega2": 0.9982971050259626,
+  "certified_margin_ok": false
+ },
+ {
+  "mode": 28,
+  "stiffness": 590.648400877138,
+  "band": "stiff",
+  "omega_sq_mp": 34647.07260364715,
+  "omega": 186.13724131308908,
+  "sigma_omega_sq": 34588.47243162126,
+  "sigma_over_omega2": 0.9983086544512356,
+  "certified_margin_ok": false
+ },
+ {
+  "mode": 29,
+  "stiffness": 643.0941685920303,
+  "band": "stiff",
+  "omega_sq_mp": 40631.43012708587,
+  "omega": 201.57239425845464,
+  "sigma_omega_sq": 40538.940396153295,
+  "sigma_over_omega2": 0.9977236899945857,
+  "certified_margin_ok": false
+ },
+ {
+  "mode": 30,
+  "stiffness": 711.3486560752258,
+  "band": "stiff",
+  "omega_sq_mp": 65349.48709491389,
+  "omega": 255.63545742896054,
+  "sigma_omega_sq": 65152.22655599187,
+  "sigma_over_omega2": 0.9969814523771927,
+  "certified_margin_ok": false
+ },
+ {
+  "mode": 31,
+  "stiffness": 1029.8225885033398,
+  "band": "stiff",
+  "omega_sq_mp": 76848.78944077723,
+  "omega": 277.2161420999456,
+  "sigma_omega_sq": 76543.25588661457,
+  "sigma_over_omega2": 0.9960242242410583,
+  "certified_margin_ok": false
+ }
+]

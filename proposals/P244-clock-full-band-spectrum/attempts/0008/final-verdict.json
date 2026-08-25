@@ -1,0 +1,66 @@
+{
+ "attempt": "0008-final-certified-table",
+ "preregistration": "module docstring (pre-computation)",
+ "thread_pin": "torch.set_num_threads(1)",
+ "zero_point": {
+  "certified_mode_count": 32,
+  "kept_mode_count": 32,
+  "dropped_null_modes": 16,
+  "delta_E_fsum_half": 72.58859645998888,
+  "sigma_quadrature_rss_half": 3.8507623645951665e-07,
+  "sigma_linear_bound_half": 9.226127551942298e-07,
+  "min_certified_omega": 1.04640598384407,
+  "soft_band_count": 0,
+  "scope": "committed order-16 sector about the frozen R12 family-S root"
+ },
+ "checks": [
+  {
+   "name": "G2_band_agreement_incl_family",
+   "rows": [
+    {
+     "band": "stiff",
+     "modes": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+     ],
+     "rel_cross_family": 1.0313168885494435e-07,
+     "tol": 0.01,
+     "passed": true
+    }
+   ],
+   "passed": true
+  },
+  {
+   "name": "G5_certification_margins",
+   "margin_factor": 10.0,
+   "uncertified_modes": [],
+   "passed": true
+  },
+  {
+   "name": "G3_coefficient_mutation",
+   "delta_E_abs": 3.6305144206494333e-06,
+   "max_pencil_shift": 0.0004434773796333502,
+   "passed": true
+  },
+  {
+   "name": "G3_sensitivity_scalefree",
+   "channel_rays": {
+    "q": 119.88153493324675,
+    "t": 4.5423986350886716e-30,
+    "d": 29.834082363788955
+   },
+   "channels_distinct": true,
+   "r10_max_relative_shift": 0.25277461353548986,
+   "modes_beyond_10pct": 4,
+   "passed": true
+  }
+ ],
+ "tally": "4/4 CHECKS PASS",
+ "runtime_seconds": 22.6
+}

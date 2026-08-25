@@ -1,0 +1,133 @@
+{
+ "attempt": "0004-certified-table-final",
+ "preregistration": "module docstring (pre-computation)",
+ "thread_pin": "torch.set_num_threads(1)",
+ "rungs": [
+  {
+   "rung": [
+    48,
+    24
+   ],
+   "energy_transfer_rel": 0.0,
+   "entry_drift_H": null,
+   "entry_drift_M": null
+  },
+  {
+   "rung": [
+    64,
+    32
+   ],
+   "energy_transfer_rel": 7.466321784074212e-12,
+   "entry_drift_H": 1.4197517018189472e-07,
+   "entry_drift_M": 1.3669525057231701e-09
+  },
+  {
+   "rung": [
+    80,
+    40
+   ],
+   "energy_transfer_rel": 7.469416472135586e-12,
+   "entry_drift_H": 2.049616200102563e-15,
+   "entry_drift_M": 2.3708162767710657e-15
+  },
+  {
+   "rung": [
+    96,
+    48
+   ],
+   "energy_transfer_rel": 7.467482292097226e-12,
+   "entry_drift_H": 1.434731340071792e-15,
+   "entry_drift_M": 1.5410305799011903e-15
+  }
+ ],
+ "checks": [
+  {
+   "name": "G0G1_48x24",
+   "passed": true
+  },
+  {
+   "name": "G0G1_64x32",
+   "passed": true
+  },
+  {
+   "name": "G0G1_80x40",
+   "passed": true
+  },
+  {
+   "name": "G0G1_96x48",
+   "passed": true
+  },
+  {
+   "name": "G2_repaired_band_agreement",
+   "rows": [
+    {
+     "band": "stiff",
+     "modes": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+     ],
+     "rel_vs_mp": 2.078634278437859e-11,
+     "tol": 0.01,
+     "passed": true
+    }
+   ],
+   "passed": true
+  },
+  {
+   "name": "G3_coefficient_mutation",
+   "delta_E_abs": 3.6305144206494333e-06,
+   "max_pencil_shift": 0.0004434773796333502,
+   "passed": true
+  },
+  {
+   "name": "G3_sensitivity_scalefree",
+   "channel_rays": {
+    "q": 119.88153493324675,
+    "t": 4.5423986350886716e-30,
+    "d": 29.834082363788955
+   },
+   "channels_distinct": true,
+   "r10_max_relative_shift": 0.25277461353548986,
+   "modes_beyond_10pct": 4,
+   "threshold": 0.1,
+   "passed": true
+  }
+ ],
+ "g2_repaired": [
+  {
+   "band": "stiff",
+   "modes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "rel_vs_mp": 2.078634278437859e-11,
+   "tol": 0.01,
+   "passed": true
+  }
+ ],
+ "zero_point": {
+  "certified_mode_count": 32,
+  "kept_mode_count": 32,
+  "dropped_null_modes": 16,
+  "delta_E_fsum_half": 72.58859645982876,
+  "sigma_quadrature_rss_half": 3.7418131941327755e-08,
+  "sigma_linear_bound_half": 9.739833575107844e-08,
+  "min_certified_omega": 1.0464059838207138,
+  "soft_band_count": 0,
+  "scope": "committed order-16 sector about frozen R12 family-S root"
+ },
+ "tally": "7/7 CHECKS PASS",
+ "runtime_seconds": 20.4
+}

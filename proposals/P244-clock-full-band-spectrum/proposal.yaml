@@ -1,0 +1,99 @@
+id: P244
+base_release: v0.165.0
+source_baseline: substrate-framework@dbf44fa
+canonical_issue: "170"
+candidate_source_issue: "170"
+question: >-
+  Can the complete kinetic-normalized fluctuation spectrum about the committed
+  R=12 family-S window root be certified to declared scale-relative tolerances
+  by independent discretizations, thereby discharging the missing construction
+  C-M5S-009 names and yielding the blocked zero-point mass shift with an
+  honest error budget?
+positive_objective: >-
+  One certified full-band spectrum table (stiffness, kinetic normalization,
+  omega^2, omega, classification, budget per mode) about the frozen R=12
+  order-16 family-S root; certified fluctuation frequencies replacing the
+  recorded ~10 percent quadrature sensitivity; and delta-E = (1/2)*sum_i
+  omega_i over certified propagating modes within the committed model class,
+  individually reviewed as C-M5S-010 and C-M5S-011, release-pinned, docs and
+  memory synced.
+coordination_boundary: >-
+  P244 works from merged main dbf44fa on a fresh branch. The adjudicated P243
+  campaign directory is append-only provenance and is not rewritten; new
+  attempt directories live under proposals/P244-clock-full-band-spectrum/.
+  Canonical modules are consumed, not modified, unless package extraction is
+  separately justified at promotion. Frontier items 1, 3, and 4 of issue #170
+  stay outside this campaign except that item 4 was quantified from accepted
+  canon without opening claims inside P244.
+source_inventory:
+  - source: governance/claims.yaml C-M5S-001..009 and C-IGR/C-GRV dependencies
+    access: in-hand repository source
+    extracted: >-
+      Root provenance and bottom stiffness block with s_b =
+      2.982251210281484 (C-M5S-006); missing-construction wording for the
+      full-band table (C-M5S-009); J(z)=1 and spread ratio 1 at z=0 structure
+      (C-IGR-004).
+  - source: campaigns/P243-clock-sourced-induced-coupling/attempts/0008/
+    access: in-hand repository source
+    extracted: >-
+      kinetic_stage2.py construction of M via exact-quadratic Jacobian, G2
+      failure mode 0.09897 against gate 0.05; fd_route.py independent radial
+      discretization with transfer 2.3e-4 and six grid-artifact verdicts;
+      cross_order.json 52 percent stiff-band drift obstruction.
+  - source: proposals/P240-m5-kinetic-axis/attempts/0041 cpu_energy.py solve_radial_1d.py and attempts/0042 largeR-roots.json
+    access: in-hand repository source
+    extracted: >-
+      Committed shape factors, gauss_grid, chebyshev_stack,
+      elementwise_derivative, commutator, frobenius_squared, Oracle Hessian
+      API; R12 and R10 root coefficient arrays.
+invariants:
+  - background frozen once at the committed R12 family-S root and never re-solved
+  - committed functional conventions preserved verbatim including envelope factors, potential, measure, Frobenius product, fixed director frames
+  - tangent channel deflated analytically as an exact kinetic null
+  - kappa projector-current term stays excluded with recorded bias direction
+  - no fitted constants; Route-2 no-go respected
+  - numerics follow the hardened small-ratio-numerics skill including pinned threads, compensated reductions, observed-order extrapolation, per-quantity budgets, zero-mode gauges
+allowed_imports:
+  - C-M5S-001 and C-M5S-002 as census and scale context
+  - C-M5S-006 for root provenance and the artifact-adjudication protocol
+  - C-M5S-009 for the named missing construction this campaign discharges
+  - P240 attempts 0041/0042 helper APIs and roots as committed source-audited infrastructure
+  - canonical src/substrate_framework modules read-only
+candidates:
+  - id: A_modal_gauss
+    description: >-
+      Committed modal machinery with autograd derivatives and Gauss-Legendre
+      nodes in r and mu, refined by a quadrature ladder.
+  - id: B_independent_family
+    description: >-
+      Independent-family confirmation. FD radial ladders (attempts 0005/0006)
+      were measured and demoted to supplementary consistency; the load-bearing
+      second family became interior second-kind Chebyshev nodes with solved
+      weights injected into the verbatim committed machinery (attempt 0007).
+uniqueness_evidence: null
+selection_criteria:
+  - independence of node sets, weight rules, and derivative mechanisms
+  - soft-band resolution below the float64 second-difference floor
+  - committed-convention fidelity
+  - implementability within float64 torch and numpy on the pinned host
+claims_proposed:
+  - C-M5S-010
+  - C-M5S-011
+comparators_blinded_until: >-
+  Gates G0-G6 and band tolerances (soft 5 percent, mid 2 percent, stiff 1
+  percent of band-local maximum omega) were frozen in the prose contract and
+  this manifest before any route-B number existed. Committed prior values are
+  public canon and are transfer references, not comparators.
+status: active
+phase: claims_proposed_review_pending
+revisions:
+  - date: '2026-08-25'
+    after_attempt: '0008'
+    change: >-
+      Discovered and repaired the P243-0008 kinetic-reduction defect
+      (weight-sum-times-density-sum instead of per-cell weighting); certified
+      all 32 kept modes by cross-family quadrature agreement with itemized
+      budgets; computed delta-E = 72.58859646 within 3.9e-7 RSS; FD route
+      demoted to supplementary consistency after measured truncation floors;
+      scheme-spread frontier item quantified from accepted canon without a new
+      claim.

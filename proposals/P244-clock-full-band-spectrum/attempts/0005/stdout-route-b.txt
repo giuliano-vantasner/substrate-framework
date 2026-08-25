@@ -1,0 +1,7 @@
+[routeA] omega[0..7] = [1.09496548 2.19758945 2.32445244 3.35696127 3.88885694 4.57717328
+ 5.42775355 5.48894244]
+[routeB 96] etrans=4.860e-03 maxrel=0.6422 med=0.0494 (1.4s)
+[routeB 144] etrans=7.546e-04 maxrel=0.5520 med=0.0546 (1.9s)
+[routeB 192] etrans=1.933e-03 maxrel=0.4631 med=0.0353 (2.5s)
+[extrap] max_rel=0.37606 within1pct=6/32
+3/4 CHECKS PASS

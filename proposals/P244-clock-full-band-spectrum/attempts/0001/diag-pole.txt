@@ -1,0 +1,14 @@
+--- support q ---
+  (48,24): T(v_probe)=2.042913e+05  max|M_sub|=9.220009e+04
+  (96,48): T(v_probe)=8.129113e+05  max|M_sub|=3.668800e+05 rel_d_vs_prev=2.979e+00
+  (192,96): T(v_probe)=3.243179e+06  max|M_sub|=1.463698e+06 rel_d_vs_prev=2.990e+00
+--- support d ---
+  (48,24): T(v_probe)=4.435901e+04  max|M_sub|=1.675508e+04
+  (96,48): T(v_probe)=1.765103e+05  max|M_sub|=6.667001e+04 rel_d_vs_prev=2.979e+00
+  (192,96): T(v_probe)=7.042006e+05  max|M_sub|=2.659843e+05 rel_d_vs_prev=2.990e+00
+--- support qd ---
+Traceback (most recent call last):
+  File "<stdin>", line 48, in <module>
+  File "<stdin>", line 33, in hess
+  File "<stdin>", line 20, in T
+RuntimeError: The expanded size of the tensor (16) must match the existing size (32) at non-singleton dimension 0.  Target sizes: [16].  Tensor sizes: [32]

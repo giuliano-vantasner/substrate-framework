@@ -1,0 +1,42 @@
+{
+ "attempt": "0007-g6-exactness-and-final",
+ "preregistration": "module docstring (pre-computation)",
+ "thread_pin": "torch.set_num_threads(1)",
+ "checks": [
+  {
+   "name": "G0B_energy_transfer",
+   "rel": 3.9116092988926275e-06,
+   "passed": false
+  },
+  {
+   "name": "G6_H_entry_exactness",
+   "max_entry_rel_diff": 4.508430649983332e-07,
+   "tol": 1e-13,
+   "passed": false
+  },
+  {
+   "name": "G6_M_entry_exactness",
+   "max_entry_rel_diff": 3.1472586074135847e-14,
+   "tol": 1e-13,
+   "passed": true
+  },
+  {
+   "name": "G6_pencil_agreement",
+   "max_rel_omega_diff": 1.0371137873931903e-07,
+   "tol": 1e-09,
+   "passed": false
+  },
+  {
+   "name": "zero_point_independent_route",
+   "delta_E_routeA": 72.58859645982876,
+   "delta_E_routeB2": 72.58859652558507,
+   "rel_diff": 9.058765953020049e-10,
+   "passed": true
+  }
+ ],
+ "energy_transfer_rel": 3.9116092988926275e-06,
+ "delta_E_routeA": 72.58859645982876,
+ "delta_E_routeB2": 72.58859652558507,
+ "tally": "2/5 CHECKS PASS",
+ "runtime_seconds": 14.7
+}
