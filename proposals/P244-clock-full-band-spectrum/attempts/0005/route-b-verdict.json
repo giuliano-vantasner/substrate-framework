@@ -1,0 +1,64 @@
+{
+ "attempt": "0005-route-b-fd-pencil",
+ "preregistration": "module docstring (pre-computation)",
+ "thread_pin": "torch.set_num_threads(1)",
+ "grids": [
+  96,
+  144,
+  192
+ ],
+ "rows": [
+  {
+   "n_r": 96,
+   "energy_transfer_rel": 0.004859775923503847,
+   "max_rel_omega_diff": 0.6422228869207408,
+   "median_rel_omega_diff": 0.04937572628931893,
+   "runtime_s": 1.4
+  },
+  {
+   "n_r": 144,
+   "energy_transfer_rel": 0.0007545819558013496,
+   "max_rel_omega_diff": 0.5519680220216115,
+   "median_rel_omega_diff": 0.05456570854338928,
+   "runtime_s": 1.9,
+   "observed_order_ratio_median": 0.236548799273438
+  },
+  {
+   "n_r": 192,
+   "energy_transfer_rel": 0.0019333612023323214,
+   "max_rel_omega_diff": 0.46307104849527436,
+   "median_rel_omega_diff": 0.035317176853952664,
+   "runtime_s": 2.5,
+   "observed_order_ratio_median": 0.0630679892884427
+  }
+ ],
+ "checks": [
+  {
+   "name": "G0B_96",
+   "passed": true,
+   "energy_transfer_rel": 0.004859775923503847
+  },
+  {
+   "name": "G0B_144",
+   "passed": true,
+   "energy_transfer_rel": 0.0007545819558013496
+  },
+  {
+   "name": "G0B_192",
+   "passed": true,
+   "energy_transfer_rel": 0.0019333612023323214
+  },
+  {
+   "name": "G2B_route_agreement",
+   "finest_max_rel": 0.46307104849527436,
+   "richardson_max_rel": 0.37606267281160843,
+   "tol_stiff": 0.01,
+   "passed": false
+  }
+ ],
+ "richardson_max_rel": 0.37606267281160843,
+ "richardson_within_1pct_modes": 6,
+ "compared_modes": 32,
+ "tally": "3/4 CHECKS PASS",
+ "runtime_seconds": 10.2
+}

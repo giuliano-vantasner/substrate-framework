@@ -1,0 +1,8 @@
+[rung 48x24] etrans=0.00e+00 dH=None dM=None
+[rung 64x32] etrans=7.47e-12 dH=1.4197517018189472e-07 dM=1.3669525057231701e-09
+[rung 80x40] etrans=7.47e-12 dH=2.049616200102563e-15 dM=2.3708162767710657e-15
+[rung 96x48] etrans=7.47e-12 dH=1.434731340071792e-15 dM=1.5410305799011903e-15
+[mp] done 0.8s
+[zero-point] n=32 dE=72.58859646 sig_rss=3.742e-08
+7/7 CHECKS PASS
+[DONE] final-verdict.json + spectrum-table.json written

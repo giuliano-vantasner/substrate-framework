@@ -1,0 +1,10 @@
+[rung 48x24] E=55.104182780435 etrans=0.00e+00 kept=32 kM=8.179e+06 dH=None dM=None
+[rung 64x32] E=55.104182780024 etrans=7.47e-12 kept=32 kM=8.179e+06 dH=1.4197517018189472e-07 dM=1.3669525057231701e-09
+[rung 80x40] E=55.104182780024 etrans=7.47e-12 kept=32 kM=8.179e+06 dH=2.049616200102563e-15 dM=2.3708162767710657e-15
+[rung 96x48] E=55.104182780024 etrans=7.47e-12 kept=32 kM=8.179e+06 dH=1.434731340071792e-15 dM=1.5410305799011903e-15
+[mp] high-precision projected solve...
+[mp] done 0.8s
+[zero-point] n=32 dE=72.58859646 sig_rss=3.742e-08 sig_lin=9.740e-08
+[bands] soft: []  uncertified: []
+6/7 CHECKS PASS
+[DONE] certified-table-verdict.json written

@@ -1,0 +1,73 @@
+{
+ "attempt": "0009",
+ "preregistration": "proposal.yaml next_loop (frozen pre-execution)",
+ "clock_certified_count": 32,
+ "empty_certified_count": 0,
+ "empty_kept_modes": 32,
+ "classical_energy_committed": 55.10418278043526,
+ "subtraction": {
+  "N24": {
+   "status": "blocked",
+   "missing_construction": "fewer than 24 certified positive modes on one side (clock 32, empty 0)"
+  },
+  "N32": {
+   "status": "blocked",
+   "missing_construction": "fewer than 32 certified positive modes on one side (clock 32, empty 0)"
+  },
+  "N40": {
+   "status": "blocked",
+   "missing_construction": "fewer than 40 certified positive modes on one side (clock 32, empty 0)"
+  }
+ },
+ "primary_interpretation": "BLOCKED: see missing construction.",
+ "checks": [
+  {
+   "check": "clock_S32_reproduces_CM5S_011",
+   "passed": true,
+   "detail": {
+    "s32_clock": 145.17719291997776,
+    "expected": 145.17719291997776,
+    "abs_diff": 0.0,
+    "certified_count": 32,
+    "kept_modes": 32
+   }
+  },
+  {
+   "check": "empty_side_not_degenerate",
+   "passed": true,
+   "detail": {
+    "max_relative_frequency_shift": 4.459413369114769e+29,
+    "gate_min": 1e-07,
+    "perturbed_coefficient_index": 7,
+    "perturbation_relative": 0.0001
+   }
+  }
+ ],
+ "elapsed_seconds": 32.9,
+ "mechanism_soft_plateau": {
+  "note": "Empty-window kinetic metric carries a converged extended soft direction: M eigenvalue index 16 sits orders of magnitude below the propagating band and far below the clock side, so the kinetic-normalized pencil about the trivial background has no certified positive-frequency spectrum under the C-M5S-010 gates.",
+  "M_eigenvalues_14_to_19_clock": [
+   2.436489579406688e-15,
+   5.624898477770068e-15,
+   2.503482972232918e-05,
+   0.0036643562018835348,
+   0.009040231082359611,
+   0.010134071928931818
+  ],
+  "M_eigenvalues_14_to_19_empty": [
+   2.3480289347335093e-16,
+   2.7521108114729637e-16,
+   1.910065614111176e-07,
+   4.5560182853082886e-05,
+   5.6158021056606335e-05,
+   0.0016166978956024152
+  ],
+  "resolution_stability": {
+   "48x24_index16_empty": 1.91e-07,
+   "96x48_index16_empty": 1.910065614111176e-07
+  },
+  "empty_raw_abs_omega_min": 4.432179606062334e+41,
+  "empty_certified_rows": 0,
+  "clock_certified_rows": 32
+ }
+}

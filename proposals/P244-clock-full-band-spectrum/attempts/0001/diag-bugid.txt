@@ -1,0 +1,5 @@
+committed            = 2.3421812502e+04
+4*(sum w)*(sum rho)  = 2.3421812502e+04
+4*sum_ij w_ij rho_ij = 2.9918291132e+01
+identity match: True
+weight sum = 7238.229474

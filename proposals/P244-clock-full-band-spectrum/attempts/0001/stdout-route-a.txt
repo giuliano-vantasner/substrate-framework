@@ -1,0 +1,20 @@
+[rung 48x24] E=55.104182780435 etrans=0.00e+00 kM=1.422e+305 kept=32 t_ray=2.03e-26 dH=None dM=None
+[rung 64x32] E=55.104182780024 etrans=7.47e-12 kM=2.521e+305 kept=32 t_ray=3.11e-26 dH=1.4197517018189472e-07 dM=0.4360292885185621
+[rung 80x40] E=55.104182780024 etrans=7.47e-12 kM=3.933e+305 kept=32 t_ray=1.88e-26 dH=2.049616200102563e-15 dM=0.3589970617831119
+[rung 96x48] E=55.104182780024 etrans=7.47e-12 kM=5.657e+305 kept=32 t_ray=5.67e-26 dH=1.434731340071792e-15 dM=0.30483049606338775
+[mp] high-precision pencil solve starting (dps=60, this can take minutes)...
+Traceback (most recent call last):
+  File "/home/dan/substrate-framework/proposals/P244-clock-full-band-spectrum/attempts/0001/route_a_ladder.py", line 370, in <module>
+    main()
+  File "/home/dan/substrate-framework/proposals/P244-clock-full-band-spectrum/attempts/0001/route_a_ladder.py", line 233, in main
+    omega_mp, kept_mp = mp_spectrum(m_fin, h_fin)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dan/substrate-framework/proposals/P244-clock-full-band-spectrum/attempts/0001/route_a_ladder.py", line 120, in mp_spectrum
+    pairs = sorted(
+            ^^^^^^^
+  File "/home/dan/substrate-framework/proposals/P244-clock-full-band-spectrum/attempts/0001/route_a_ladder.py", line 121, in <genexpr>
+    ((mp.re(v), [evecs[r][c] for r in range(len(evals))])
+                 ~~~~~^^^
+  File "/home/dan/anaconda3/lib/python3.12/site-packages/mpmath/matrices/matrices.py", line 447, in __getitem__
+    raise IndexError('insufficient indices for matrix')
+IndexError: insufficient indices for matrix

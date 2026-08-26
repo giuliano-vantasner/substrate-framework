@@ -1,0 +1,12 @@
+axis separation, unit q-modal velocity:
+  (  48, 24): dr=+2.103859e-30 dth=+3.736796e+00 dph=+3.742777e+00 sum=7.479573e+00
+  (  96, 24): dr=+2.563516e-30 dth=+3.736796e+00 dph=+3.742777e+00 sum=7.479573e+00
+  ( 192, 24): dr=+2.565965e-30 dth=+3.736796e+00 dph=+3.742777e+00 sum=7.479573e+00
+  (  96, 48): dr=+2.488033e-30 dth=+3.736796e+00 dph=+3.742777e+00 sum=7.479573e+00
+  (  96, 96): dr=+2.903719e-30 dth=+3.736796e+00 dph=+3.742777e+00 sum=7.479573e+00
+  (  48, 96): dr=+2.896908e-30 dth=+3.736796e+00 dph=+3.742777e+00 sum=7.479573e+00
+
+angular density profile at radial row 4
+  dr: max|dens|=2.7740e-33 at mu=-0.47085582; at mu_max=-0.99998197 dens=+2.9057e-39; mid dens=+5.7397e-38
+  dth: max|dens|=1.2717e-03 at mu=-0.00392208; at mu_max=-0.99998197 dens=+1.2709e-03; mid dens=+1.2717e-03
+  dph: max|dens|=1.2709e-03 at mu=-0.99998197; at mu_max=-0.99998197 dens=+1.2709e-03; mid dens=+1.2700e-03

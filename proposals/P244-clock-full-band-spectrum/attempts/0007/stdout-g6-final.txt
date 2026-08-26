@@ -1,0 +1,8 @@
+[routeB'] building Chebyshev-family matrices...
+[routeB'] done (10.4s)
+[G0B] energy transfer rel = 3.912e-06
+[G6 H] max entry rel diff = 4.508e-07
+[G6 M] max entry rel diff = 3.147e-14
+[G6 pencil] max rel omega diff = 1.037e-07
+[zero-point] A=72.5885964598 B'=72.5885965256 rel=9.06e-10
+2/5 CHECKS PASS
