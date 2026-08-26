@@ -93,7 +93,7 @@ captured into the attempt directory on first execution.
 
 ## Attempts (2026-08-25 session)
 
-Eight append-only attempts separate defect discovery from repair and each
+Nine append-only attempts separate defect discovery from repair and each
 verdict below is backed by captured stdout and JSON artifacts in its directory.
 
 | Attempt | Content | Verdict |
@@ -105,12 +105,17 @@ verdict below is backed by captured stdout and JSON artifacts in its directory.
 | 0005/0006 | FD radial-discretization pencil ladders, second and fourth order stencils | cross-route agreement floors near median 4 percent because pointwise channel oscillation limits grid derivative accuracy regardless of stencil order; FD route demoted to supplementary consistency |
 | 0007 | G6 quadrature-exactness by rule injection into the verbatim committed machinery using interior second-kind Chebyshev nodes with solved weights: M entries machine-exact at 3.1e-14; H entries floor at 4.5e-7 from algebraic pole content in the azimuthal channel; pencil 1.04e-7; delta-E replicates to 9.1e-10 | mechanism named; family floor folded into budgets |
 | 0008 | Final certified table with cross-family budgets | 4 of 4 CHECKS PASS; all 32 kept modes certified; dE = 72.58859646 plus minus 3.9e-7 RSS and 9.2e-7 linear; the soft band is EMPTY and every certified frequency is O(1) or above with omega_min = 1.0464, independently reinforcing the C-M5S-006 no-fourth-species verdict at frequency level |
+| 0009 | PR-172 review repairs (erratum exclusions for the preregistered 0007 pencil-gate miss, reviewer-session identifiers, corrected full-mode validation receipt) plus the preregistered Casimir-style empty-window subtraction: verbatim machinery at the all-zero 48-coefficient background, both quadrature families, pairing-free level sums at N=24/32/40 | BLOCKED WITH MECHANISM: clock side reproduces C-M5S-011 bit-exactly (S32 = 145.17719291997776, diff 0.0) and the mutation gate passes (shift 4.5e+29 relative), but the empty window certifies 0 of 32 kept modes -- its kinetic metric carries a resolution-stable soft direction M[16] = 1.910066e-07 (130x softer than the clock's first propagating kinetic eigenvalue 2.503e-05), so raw pencil frequencies are roundoff junk near 4e41 and no certified empty spectrum exists to subtract. The bare delta-E = 72.58859645998888 stands as the defined zero-point quantity within the committed model class; a renormalized comparison needs a construction that does not rely on kinetic normalization of window-only directions (next candidate, not yet designed) |
 
 The scheme-spread frontier item of issue #170 was quantified from accepted canon with
 no new claim: R(z) = J_smooth/J_sharp equals one exactly at z=0 with leading
 difference EulerGamma*z; the unit-mass value is 2 e K_1(2)/(1 - e E_1(1)) =
 1.8837726; R(4) = 15.61; regulator dependence for massive species reopens gradually
 and is unbounded.
+
+The PR-172 review also confirmed every headline number digit-exactly and the
+full pytest suite (2440 passed); its three governance findings are repaired
+in this session's commits.
 
 ## Debt Ledger
 

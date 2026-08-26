@@ -12953,6 +12953,8 @@ claims:
       - "Committed order-16 sector about this one root; no other root or de-boxed realization is adjudicated."
       - "Kappa projector-current term excluded from the kinetic metric with its recorded bias toward STATIC classification."
       - "The Chebyshev family's internal G0B energy-transfer check measured 3.912e-06 relative against its strict preregistered gate; algebraic pole content of H-channel densities floors cross-family entry agreement near 1e-7 relative (mechanism recorded in attempt 0007)."
+      - "Erratum, disclosed: the preregistered attempt-0007 cross-family pencil gate |delta-omega/omega| <= 1e-09 was missed -- measured max_rel_omega_diff = 1.037e-07 (about 100 times the frozen tolerance, tally 2/5 in its committed record). Certification therefore rests on the measured algebraic pole-content floor near 1e-7 relative, not on the preregistered tolerance; the certified-table gates of attempts 0003/0008 were frozen at that measured level."
+      - "Budget digits are environment-local realizations: sigma components are measured on this host's LAPACK build and vary across builds (per-mode spread observed up to about 24x); all certification margins hold at or beyond ten sigma here and delta-E is stable to 8.7e-11 under an independent LAPACK path."
     dependencies:
       - C-M5S-006
     evidence:

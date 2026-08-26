@@ -85,7 +85,7 @@ comparators_blinded_until: >-
   this manifest before any route-B number existed. Committed prior values are
   public canon and are transfer references, not comparators.
 status: active
-phase: claims_proposed_review_pending
+phase: claims_accepted_v0166_erratum_repair_and_empty_box_subtraction_loop_active
 revisions:
   - date: '2026-08-25'
     after_attempt: '0008'
@@ -97,3 +97,63 @@ revisions:
       demoted to supplementary consistency after measured truncation floors;
       scheme-spread frontier item quantified from accepted canon without a new
       claim.
+  - date: '2026-08-25'
+    after_attempt: '0008'
+    change: >-
+      PR-172 review corrections applied: preregistered attempt-0007 pencil
+      gate miss (1.037e-07 vs frozen 1e-09) disclosed as a registry erratum
+      exclusion with the pole-content mechanism; budget digits declared
+      environment-local; reviewer-session identifiers recorded in both claim
+      review records; validation receipt corrected from fixed-only to the
+      true full-mode run (the two-claim combined promotion cannot satisfy
+      the additive-leaf predicate because C-M5S-011 depends on newly added
+      C-M5S-010). Next loop preregistered below: empty-window reference
+      spectrum subtraction (Casimir-style baseline) as attempt 0009.
+  - date: '2026-08-25'
+    after_attempt: '0009'
+    change: >-
+      Empty-window subtraction executed as preregistered and BLOCKED WITH
+      MECHANISM: the empty window certifies zero of 32 kept modes (converged
+      soft kinetic direction M[16] = 1.910066e-07; raw pencil frequencies are
+      roundoff junk near 4e41), so no certified empty spectrum exists for a
+      Casimir-style subtraction. Clock side reproduced C-M5S-011 bit-exactly
+      and both frozen gates passed. The bare delta-E stands as the defined
+      quantity within the committed model class; a renormalized comparison
+      requires a construction independent of kinetic normalization of
+      window-only directions -- registered as the next candidate, not yet
+      designed.
+next_loop:
+  attempt: '0009'
+  question: >-
+    Is the certified bare zero-point shift delta-E_bare = 72.58859645998888 a
+    property of the clock or of the confining window? Compute the Casimir-style
+    box-baseline-subtracted shift about the same root.
+  construction: >-
+    Identical verbatim committed machinery (Oracle static Hessian +
+    corrected_kinetic_hessian kinetic metric + pencil_float64) evaluated at
+    the all-zero order-16 background coefficient vector -- the empty window,
+    no clock -- at the same resolutions (Gauss-Legendre 96x48 primary,
+    interior second-kind Chebyshev 160x80 cross-family) and the same
+    certification gates as C-M5S-010 (entry floors, ten-sigma margins,
+    stiffness-band tolerances), each side deflating its own exact
+    tangent-null family.
+  preregistered_quantity: >-
+    Pairing-free level sums: S_N(side) = fsum of the N smallest positive
+    certified omega on that side; delta-E_ren(N) = (S_N(clock) -
+    S_N(empty))/2 reported at N = 32 (primary), 24 and 40 (sensitivity).
+    No pairwise mode matching is asserted; crossings are not identified.
+  budget_rule: sigma_delta(N) = half the quadrature-composed budget of the
+    two sums, RSS and linear bounds, composed from the same per-mode budgets
+    as C-M5S-011.
+  interpretation_frozen_before_execution:
+    - '|delta-E_ren| <= budget: the bare shift is window-dominated; the wall narrative must be restated against the subtracted number.'
+    - 'delta-E_ren < -budget: vacuum baseline aids confinement; the B=0 wall narrative flips sign.'
+    - 'delta-E_ren > +budget: radiative worsening survives subtraction and stands.'
+  mutation_gate: >-
+    A single-coefficient perturbation of the empty side must move some
+    certified frequency relatively more than the budget; otherwise the
+    empty computation is degenerate and no verdict may be drawn.
+  scope_note: >-
+    This is a box-baseline REGULARIZATION comparison inside the committed
+    model class, not a continuum renormalization theorem; de-boxing remains
+    campaign frontier (#170 item 3).
