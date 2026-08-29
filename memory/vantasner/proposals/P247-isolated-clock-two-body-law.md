@@ -56,7 +56,241 @@ Attempts are append-only under `proposals/P247-isolated-clock-two-body-law/attem
 
 Attempt 0001 (milestone 0, 2026-08-28) reached a MIXED verdict with the full adjudication materialized in `proposals/P247-isolated-clock-two-body-law/attempts/0001/result.yaml`. Established exactly: the potential second variation about the rank-1 projector background is diag(5,3,3,0,0,6)/2 with exactly flat np/na shear channels; the de-boxed energy grows monotonically without plateau along the clean aliasing-gated ladder R=12..18 (55.1042 to 59.2462, fitted 0.685 per unit R, R^2=0.9984), so the branch has no finite-energy isolated limit; the free-wall R=8 endpoint reproduces (E=50.5233, wall value 0.99631736, index 0, clock sector invariant). Not reproduced, each with a named mechanism: the reported persistent negative split-channel mode (actual: lambda_min(A) = -1.8751e-06 at R=12 and -7.8309e-07 at R=13 with q-channel-dominated negative directions, then the positive +-1.7e-8 resolution floor with index 0 from R=14); the bounded stability window (actual: lower edges rise with background radius, upper edges unbounded for R>=14); the 0.33 slope (actual 0.685); and the pinned 60.17 reference (actual 50.52966035 from every committed seed path; pinning costs 0.012 percent, not 16 percent).
 
-The strongest supported milestone-0 statement: the binding obstruction to an isolated clock in the committed model class is the without-plateau energy growth, not stability; the exactly flat shear channels are the near-null directions of the de-boxed backgrounds and the natural long-range sector for candidate A. The reported 0044 artifacts must not be cited; this materialized reproduction is the citable record.
+Attempt 0002 (milestone 1, 2026-08-28, branch campaign/p247-attempt-0002-two-body-law,
+no PR per owner direction) verdict DECISIVE_NO_GO_WITH_STABILITY_RESTORATION.
+Milestone 1 closed on the frozen PERSISTENT_GROWTH band: C[c] 461 -> 1197
+through R=30 without resolved saturation (saturating fit loses by dAICc 7.6),
+E(R) slope steepens to 0.855 - scoped isolation no-go for the radial de-boxed
+family, route to candidate B. The preregistered basis-order cross-check (16/20/24,
+Richardson with budgets, jitter sign tests) VOIDED attempt 0001's order-16 floor
+claims at every rung: the refined lambda_min(A) is negative above budget everywhere
+(R=14 -8.6e-7, R=16 -3.4e-7, R=18 -1.5e-7, R=12 -8.7e-6 with index 2), restoring
+the reported 0044 magnitude (-5+-2)e-7 while refuting its split-channel attribution
+(the negative mode is q-channel at fraction >= 0.99; the split channel is the
+near-null positive direction converging to +0). G3 window reopens (order-24 pencil
+recomputation = attempt-0003 gate W1); candidate-B term enumeration on paper is
+gate W2. Shear probe (direct projector construction; the projector is not
+representable in the modal ansatz): G1 potential-flatness and the
+gradient-only-stiffness premise confirmed at the projector (static a2 +11.9/+8.9
+np/na, potential ~0); on the branch the shear channels stay statically stable
+(+9.2 to +3.8) while softening toward marginality. C-M5S-015 promotion postponed
+to issue completion per owner direction; its flatness-to-floor draft wording is
+superseded by attempt 0002 (draft never accepted, no registry change).
+
+Attempt 0003 (W1/W2/W3, 2026-08-28, same branch, no PR) verdict
+DECISIVE_PER_GATE. W3 SIGN_CHANGE: at order 24 the q-channel static instability
+is confined - lambda_min(A) = -2.08e-9 at R=20 (q-dominated), zero crossing in
+(20,22), then +5e-10 split-channel floor through R=30 with Morse index 0; the
+de-boxed family is statically stable for R >= 20 at refined resolution. W1
+REFUTED_ORDER24 for the universal band: order-24 windows are background-relative
+(lower edge 0.77-0.80 x R_own, finite upper edges for R <= 18; every background
+stable at its own radius), self-consistent band [19.20, 29.96] fails the frozen
+[8,34]+-20 percent gate at the lower edge while the reported upper edge is
+rehabilitated in-gate. Refined roots carry order-improvement 0.7-12.7 percent
+growing with R (order-16 roots have ~1e-2 stationary error); E(R) stays monotone
+so the isolation no-go survives. W2 SELECTED candidate B: the boost-alignment
+mass s_m = (m^2/2)((u^T eta xi)^2 - 1), m^2 = Lambda^2 (C-M5S-002 scale, no
+fitted parameter) - masses the C-M5S-001 massless boost orbit (the named
+isolation-failure mechanism), vanishes exactly on the static 3x3 sector,
+isorotation-invariant (clock map unchanged); declared cost: explicit internal
+boost-symmetry breaking. Execution honesty: a spurious divergent R=24 basin
+(E=6.9e516) passed the relative alias gate at 3e-8; two preregistered
+amendments (root-continuity gate 0.25 after measuring legitimate
+order-improvement; R-continuation reseeding) plus one in-place band correction
+(tag leak) are recorded in manifest and result. Attempt-0004 gates C1-C4
+preregistered: reduced functional derivation, crossing bisection, one-clock
+existence with Yukawa tail, pencil stability.
+
+Strongest supported statement (after attempt 0003): the radial de-boxed branch
+of the committed model class fails isolation (curvature class grows without
+saturating; E monotone at refined roots through R=30) while its static
+instability is confined to R <~ 20-21 and heals at refined resolution;
+stability windows are background-relative, not universal. The accepted action's
+massless boost orbit (C-M5S-001) is the named isolation mechanism, and the
+selected candidate-B repair is the boost-alignment mass with m^2 = Lambda^2 -
+zero new continuous parameters, exact static-sector survival, isorotation
+invariance. The reported 0044 artifacts must still not be cited as accepted
+evidence; the materialized reproduction remains the citable record (0044
+magnitude and bounded-window-per-background claims rehabilitated, universal
+band and split-channel attribution refuted).
+
+Attempt 0004 (candidate-B construction, 2026-08-28, same branch, no PR)
+verdict DECISIVE_PER_GATE. C1 IDENTIFIED: the boost sector is structurally
+wired to the clock - the clock velocity sources the boost field (F_{01} mixed
+term), the chi=0 regression against the committed functional is exact (diffs
+0.0), and C1b pinned the normalization with zero new parameters (boost
+projector-current metric entry exactly 1/16, accepted census eigenvalues
+reproduced; mass m^2 = Lambda^2). C2 MEASURED: crossing bracket [20.0, 20.25]
+- the static instability is confined to R <= 20.0(1). C3 NO_LOCALIZED_ROOT by
+co-aligned source cancellation: the director-aligned boost field is a
+spectator for the radial clock - grad E_J at chi=0 is exactly zero (boost
+axis = director = rotation axis kills the contraction; the C1-r3 structural
+note promoted to the full contraction). C4 not applicable (no new stationary
+point). Successors registered from the mechanism: D_tilted_boost (fixed-axis
+boost; breaks isorotation covariance - clock map rebuilt) and
+E_localized_core (localized wall-core object; no new breaking, heavier
+existence problem). Attempt-0005 gate D1: sympy full-contraction survival of
+the linear source under non-co-aligned axes decides the routing.
+
+Attempt 0005 (D1 routing, 2026-08-28, same branch, no PR) verdict
+DECISIVE_D1_VANISHES: the linear boost source vanishes EXACTLY for both
+co-aligned and fixed-axis boosts on the symmetric one-clock root (machine
+precision; graph connectivity and numeric central derivative cross-checked;
+finite-chi graph check confirms the functional is live). Mechanism: the
+one-clock source is parity-odd on mu-symmetric roots, so the chi EOM about
+chi = 0 is homogeneous - the boost-alignment mass cannot localize the
+symmetric fixed-J clock at any order. One-clock no-go for the B-family
+reduction, mechanism named. Reduction defect recorded: the truncated sigma
+Hamiltonian evaluates negative at finite chi (not the positive Legendre
+density). Redirect: F_pair_exchange (a parity-broken CLOCK PAIR sources the
+gapped boost field - the interaction-law milestone has a live Yukawa route)
+and G_fixed_axis_rotor (one-clock symmetry breaking by a fixed-axis rotor;
+needs a non-spherical solver). Attempt-0006 gates F1 (pairing derivation) /
+F2 (numeric check) / G1 (rotor specification) preregistered.
+
+Attempt 0006 partial (D1', 2026-08-28): the one-clock no-go is COMPLETE -
+the linear boost source vanishes exactly in EVERY angular channel (odd mu
+1/3, even 0/2, combined) on the symmetric fixed-J root, not only the radial
+channel probed in 0005. The boost-alignment mass cannot localize the
+one-clock in the single-centered reduced class. Remaining extended-class
+routes: F_pair_exchange (two-centered machinery) and route G (non-spherical
+rotor solver, specified in attempts/0006/f1-g1-specification.md). The
+extended functional gained a chi-angular-degrees parameter; the C3-0 exact
+regression re-verified after the change.
+
+Attempt 0006 CLOSED (2026-08-28): Yukawa/pair-exchange route REFUTED by two
+independent mechanisms. (1) Exact Z2 evenness of the extended functional -
+E[+chi] = E[-chi] at machine precision on symmetric AND randomized
+backgrounds, all angular channels - so chi = 0 is the exact classical
+minimum for EVERY configuration: no static pair exchanges through the boost
+channel at any order (F_pair_exchange dead; route G's boost-tail dead). (2)
+Box-growth channel-attributed to the S-potential sector (accelerating:
+increments 0.29 -> 0.73 per DeltaR = 2 over R = 20..30; curvature
+saturating; boost sector exactly 0 at chi = 0) - candidate B masses a
+classically inert channel and cannot cure the static isolation no-go. (3)
+No S row fits a massive tail in the accessible box (exp_resid 0.35-0.64) -
+the Yukawa pairing premise fails; the committed-class two-clock law is the
+slowly-decaying S-overlap (confined anchor +456.6 d^-1.696, C-M5S-008).
+Remaining routes: de-boxed S-overlap law exponent (two-centered solver),
+S-potential-localizing isolation construction, route E localized core,
+route G as one-clock existence only. Artifacts: attempts/0006/
+f1-routing-z2.json, f1-law-measurement.json, f1-derivation.md, result.yaml.
+
+Attempt 0007 CLOSED (2026-08-28): de-boxed two-clock interaction law
+MEASURED. Machinery: exact V(S) = -0.5 trS^2 - trS^3 + (trS^2)^2 + 0.5
+extracted from the functional, pointwise-validated to 8.5e-13 (an initial
+0.5-quartic transcription error was caught by the validation gate before
+any law was fitted). V(P) = 0 exactly on the radial-projector family.
+Superposing deviations phi_i = S_i - P_i on the common background and
+telescoping gives an attractive saturating law Delta E(d) = -A exp(-gamma d),
+A ~ 6.3 +- 0.2, gamma ~ 0.25 +- 0.03 (box/refinement stable), no repulsive
+core down to d = 6; the confined C-M5S-008 power law is a different regime.
+Projector Hessian: NO moduli - physical masses m^2 = 5, 3, 3, 6; gauge tilts
+exactly flat in V only. Isolation mechanism sharpened: box-growth = branch
+spreading (V-support widens linearly with R on the V zero set; core density
+falls 0.0615 -> 0.0313 over R = 20 -> 30) - the committed-class branch has
+no fixed-width member; obstruction is branch/EOM structure, not a flat
+potential. next_loop 0008: full quadratic-operator spectrum (identify the
+gamma mode), fixed-width branch probe, route E. Artifacts:
+attempts/0007/v-law-measurement.json, v_law.py, manifest, result.yaml.
+
+Attempt 0008 CLOSED (2026-08-28): GHOST DIAGNOSIS. The full fixed-R
+Hessian of the extended fixed-J energy at the R=24 root has 21 negative
+directions of 96; lambda_min = -1.9471e4 (FD-verified at three step
+sizes) is a PURE chi-row direction: the sigma-truncated boost kinetic
+term has the wrong sign in the reduced functional - the attempt-0005
+reduction defect is the measured leading instability. Block spectra:
+A_pot has exact zero modes (gauge orbits + the marginal W3 structure),
+D_curv positive, D_fixedj min -185. Method lesson: zero-VALUED terms at
+chi=0 carry nonzero cross-Hessians - block-sum Hessians that omit them
+are wrong (caught by FD cross-checks); W3's A-only stability ladder is
+an incomplete criterion for the extended class. The candidate-B class
+cannot deliver stable one-clock or pair-law claims until the chi sector
+is reconstructed from the accepted positive Legendre density.
+next_loop 0009: chi-sector kinetic reconstruction (claim-level repair),
+S-sector gamma-mode identification, fixed-width probe, route E.
+Artifacts: attempts/0008/ghost-diagnosis.json, width-mode.json,
+H_*.npy, width_mode.py, result.yaml.
+
+Attempt 0009 CLOSED (2026-08-28): chi-sector repair VERIFIED, dependency
+challenge answered. Repair: sigma_density = +KAPPA eta(du,du) (positive
+Legendre density; census-grounded by C-M5S-001's positive 1/16 boost
+entry). Five gates: (R1) S-sector regression exact at chi=0 - committed
+roots remain exact stationary points; (R2) sigma positive at finite chi
+(both channels, quadratic growth); (R3) Z2 evenness SURVIVES the repair
+exactly (root + randomized, all channels); (R4) ghost REPAIRED - Morse
+index 0, min +1.38e-5, 0/96 negative (was -1.9e4, 21/96); (R5) source
+closure survives exactly. Dependency table: every defect-dependent
+conclusion survives; the 0008 saddle was the truncation's artifact; the
+repaired class is a valid dynamical sector with the clock root a genuine
+local minimum. ISOLATION OBSTRUCTION COMPLETE: softest mode = width mode
+(pure split-row, stiffness 1.382e-5, 86 percent family-drift overlap) -
+the clock width is a quasi-moduli; the accepted model has no width-mass
+term, so de-boxed box-growth is unavoidable. Resolution paths: winding/
+topological width stabilization (confined-class mechanism), confined-
+class realization (C-M5S-008/009), claim-level S-law exponent derivation
+(aligned-vacuum operator, registered). Debt: chi-coefficient
+normalization vs census 1/16 placement. Artifacts:
+attempts/0009/repair-battery.json, repair_battery.py, result.yaml.
+
+Attempt 0010 CLOSED (2026-08-28): fixed-width existence probe DECISIVE
+NO-GO. (1) Width stiffness ladder (repaired class, 0 negative at every
+rung): 8.35e-6 (R20) -> 1.38e-5 (R24) -> 2.85e-5 (R30) - the softest
+mode STIFFENS with box; drift overlap 0.86 at R24 confirms it is the
+family-drift direction. The minimum branch is parametrically
+box-proportional: core width box-stable (~1.9-2.1 over R24..R30), tail
+dilutes, E(R) grows with accelerating increments - no finite-energy
+isolation limit. (2) Narrow branch: quadratic-tail reprojection of the
+R24 root into bigger boxes; R26 relaxation non-converged (relgrad
+5.6e-2, maxfev cap - no conclusion); R28 CONVERGED stationary narrow
+configuration (relgrad 1.799e-13, E=65.705 vs family-R26 minimum 60.94)
+is a HIGH-ORDER SADDLE of the repaired functional: Morse 14,
+lambda_min -2591.3021, FD-confirmed (-2579.4 at eps=1e-3 in the solver
+functional, 0.5 percent agreement, chi-row weight exactly 0; large-eps
+drift = anharmonicity). (3) Reprojection fidelity gate aborts R30/R36
+(E(seed) 551.9/12129.6 > 100): order-24 ansatz cannot reproject narrow
+profiles much deeper - larger-box narrow rungs need a different
+parametrization. VERDICT: no stable fixed-width member exists; the
+isolated de-boxed fixed-J clock is REFUTED in the extended class; the
+clock sector is realized ONLY in the confined (window-assisted) class.
+Winding channel note: the committed functional already contains the
+azimuthal winding (derivative_phi via rotation_z), so the confined
+mechanism is present de-boxed and does NOT mass the width mode.
+Completion program registered: claims C-M5S-016 (Z2 evenness theorem),
+017 (sigma reduction-defect repair record), 018 (width quasi-moduli /
+box-proportionality obstruction), 019 (narrow-saddle refutation), 020
+(de-boxed attractive exponential law), plus C-M5S-015 promotion;
+release v0.169.0; completion PR.
+Artifacts: attempts/0010/manifest.yaml, result.yaml,
+fixed-width-probe.json, narrow-branch.json, fd-arbitration.json,
+narrow26.npy, narrow28.npy, width-stiffness-vs-R.json.
+
+PR 182 REVIEW CORRECTIONS (2026-08-29, scope repairs on the promoted
+claims; attempt history above preserves its original wording). The
+independent PR review requested changes on two scientific scope
+blockers, and both repairs narrow wording to what the artifacts
+support - they do not change any measurement. (1) C-M5S-015/C-M5S-018
+no longer state asymptotic nonexistence ("de-boxed limit is not
+finite-energy", "realized ONLY in the confined class", "no
+box-independent member exists"): the ladders cover R = 12..30 /
+R = 20..30, attempt-0002 itself records the saturating asymptote as
+unresolved, and the accepted statements now say monotone growth
+without plateau on the tested ladders, isolation-gate failure on the
+tested branch, and no box-independent member found on the tested
+minimum branch, with deeper-box and non-spherical existence open and
+missing constructions named. (2) C-M5S-020 is rescoped to the measured
+frozen-superposition potential cross-term (two frozen R24 profiles,
+common projector background, finite cylindrical box, d = 6..28,
+attractive saturating exponential); the relaxed two-centered
+construction (full kinetic/fixed-J energy, independent phases, inertia
+sector) stays the preregistered open objective
+(attempts/0006/f1-g1-specification.md). (3) C-M5S-016 is restricted to
+odd-order (single-exchange, linearly sourced) classical static
+sourcing on the measured backgrounds - even-order static responses are
+not excluded - and its hidden C-M5S-017 sign assumption is removed
+(sign irrelevant to evenness; dependency graph acyclic again).
+Correction check: reviews/correction-check-0182.md; receipt:
+evidence/validation-receipt.yaml.
 
 ## Debt Ledger
 The milestone-0 reproduction inherits the reported verdict's numbers only as transfer references; any gate that fails is recorded as MIXED with the named mechanism rather than silently narrowed. Open frontier (not debt): the full-action scope beyond the tested radial branch, the isolated-existence question for candidates A-C, the two-clock sector, and the interaction law. The absent 0044 source artifacts are external provenance facts, recorded here and in the attempt record, not hidden assumptions inside any proposed claim.
