@@ -73,3 +73,33 @@ across two decades of k) + the M_eff(w) structure consistency; the symbolic
 series proof of the identity (all k^2 coefficients cancelling between
 interior, exterior, and v_z sectors) is owed to the frozen verifier, where
 it becomes a mutation-sensitive check rather than a hand-assembled claim.
+## Scope correction (append-only, attempt 0012 reground)
+
+The energy-functional identification in this attempt is RECEIPT-PENDING.
+Re-derivation while opening the m=1 block surfaced the second-order
+mean-flow sector (the integral rho v0 . v'' and the axisymmetrized
+second-order field v''_0): the displaced-vortex translation-invariance test
+(Delta E = 0 exactly for m=1, k=0) FAILS for the plain perturbation-kinetic
+functional (rho/2) int |v'|^2 and is restored only when the v'' sector is
+included. Concretely: inside the core v0 . v' = -Om^2 r . xi with
+int r . xi dA = 0, so the cancellation must come from the O(eta^2) field
+piece — proving (rho/2) int |v'|^2 alone is not the conserved mode energy.
+
+Status of this attempt's claims under the correction:
+- STAND (dynamics, energy-functional independent): the dispersion
+  omega = Om(m-1) - Om(ka)^2/12 (three-route); M_eff DEFINED as the
+  perturbation-kinetic inertia, M_eff(k) = pi rho a^2 (1-(ka)^2/12)^-2;
+  T_max(k) k-independence as an IDENTITY of the perturbation-kinetic
+  functional.
+- RECEIPT-PENDING (interpretation, not the identities): "E_mode =
+  T_max = Delta V_static", the virial-closure reading, and consequently
+  C_tw = 0 as a MODULUS claim. The canonical wave-action receipt
+  (A = action from the exact fields, E_canon = wt A) is the licensed
+  functional; C_tw and the m=1 c_inner extraction resume only on it.
+  This is the same functional trap 0008 hit, now identified at the
+  receipt level rather than via a sign anomaly.
+
+Next route (0012): derive the canonical action for the corrected modes
+from the exact fields (Lagrangian displacement xi via D_t xi = v', then
+A = (1/4) int rho (xi* . v - xi . v*) dV, E_canon = wt A); re-derive
+C_tw and the m=1 branch structure on the receipt.
