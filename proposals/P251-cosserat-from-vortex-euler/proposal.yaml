@@ -68,7 +68,7 @@ obligation_graph:
       maximum_verdict: established
       failure_scope: filament-triad route family only
       unlocks: [N3, N5]
-      status: active
+      status: established
       license_chain:
         object: >-
           transported orthonormal triad (t, q1, q2) along a smooth centerline;
@@ -466,14 +466,15 @@ comparators_blinded_until: >-
   (N3/N4 contracts), after which no numerical value may alter any candidate
   or criterion.
 route_frontier:
-  active_obligation: N1
+  active_obligation: N2
   considered:
     - A (Bishop-triad affine transport)
     - B (core-polarization patch)
     - ergodic no-topology closure (contrast side, feeds N6)
-  tried: []
+  tried:
+    - "N1 frame-transport kinematics: attempts 0001 (symbol-identity defect), 0002 (brute-simplification explosion), 0003 composed route ESTABLISHED (verify_cst001.py 12/12, exit 0); N2 block B1 straight-tube energy derived two-route: E0/L = rho G^2/(4pi) ln(R/a) + rho G^2/(16pi) top-hat (matches harvested straight_line_tension log coefficient)"
   failure_generated: []
-  remaining: [N1, N2, N3, N4, N5, N6, N7]
+  remaining: [N2, N3, N4, N5, N6, N7]
 execution_state: active
 objective_state: active
 exhaustion_certificate:
