@@ -47,3 +47,31 @@ Saffman-level source), per the cited-not-recalled discipline.
   complete, so the frozen verifier covers BOTH branches and the m=2
   channel with mutations m1-m6 plus (m7) the untilted transport must
   FAIL to produce the k^2 ln branch.
+
+## Sharpening (same attempt, post-record check)
+
+Re-examination of the omega = 0.35k structure: its residuals at the F
+minimum are 2.2e-6 at k=1e-3 — SMALL BUT NONZERO, decaying as a power
+(~k^2.4), and no exact common zero of r1 and r2 exists anywhere on the
+scanned domain (1e-9 < w < 2). Both the linear-inertial structure and the
+LIA-scale structure are therefore ASYMPTOTIC-ONLY in the current pose:
+the linear problem as matched (kin pair + pressure continuity with
+advected Bernoulli + frozen tangential condition) is STILL MISSING a
+sector — the m=1 eigenbranch has no exact realization in it, while the
+m=2 channel closes exactly (F ~ 4e-29).
+
+Candidate missing sectors, to be adjudicated by 0014 in order:
+1. The O(k eta) tilt correction of the sheet-strength transport
+   (carried over from the 0013 diagnosis).
+2. The exterior homogeneous sector at k != 0 beyond the decaying
+   K_m harmonic (the uniform-translation sector exists only at k = 0;
+   something must carry the impulse structure of the displaced
+   filament at k != 0).
+3. The interior regularity structure at the omega -> 0 degeneracy
+   (mu -> infinity-limit of the Poincare coefficient: the r-linear
+   pressure is approached only logarithmically; the matched interior
+   may require the finite-mu treatment rather than either limit).
+
+Route verdict for the m=1 finite-k pose: blocked, missing construction
+named at the sector level (1)-(3). The m=2 channel and the receipt are
+unaffected. N2 remains active.
