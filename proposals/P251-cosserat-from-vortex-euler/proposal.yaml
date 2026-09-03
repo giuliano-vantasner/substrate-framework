@@ -473,6 +473,7 @@ route_frontier:
     - ergodic no-topology closure (contrast side, feeds N6)
   tried:
     - "N1 frame-transport kinematics: attempts 0001 (symbol-identity defect), 0002 (brute-simplification explosion), 0003 composed route ESTABLISHED (verify_cst001.py 12/12, exit 0); N2 block B1 straight-tube energy derived two-route: E0/L = rho G^2/(4pi) ln(R/a) + rho G^2/(16pi) top-hat (matches harvested straight_line_tension log coefficient)"
+    - "N2/B2 attempt 0004 axisymmetric twist redistribution REFUTED (negative Delta E = -rho G^2 chi'^2 a^2/(96pi)): mechanism named -- axisymmetric reduction is an inward z-flux redistribution sector, not the twist DOF; the twist energy lives in the theta-dependent polarization sector; next route 0005 = coaxial-helix bundle kernel (declared long-wave regime), both moduli expected log-running in the declared window"
   failure_generated: []
   remaining: [N2, N3, N4, N5, N6, N7]
 execution_state: active
