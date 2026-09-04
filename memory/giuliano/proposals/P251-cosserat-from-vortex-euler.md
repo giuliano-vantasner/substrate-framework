@@ -2,7 +2,7 @@
 description: 'P251: derive Cosserat (micropolar) equations from coarse-grained Euler with vortex-structure rotational degrees of freedom (issue 198, Comparsi item via Dan)'
 author: giuliano
 created: '2026-09-03T14:40:00+00:00'
-updated: '2026-09-03T14:40:00+00:00'
+updated: '2026-09-04T17:20:00+02:00'
 tags:
 - substrate-framework
 - campaign-proposal
@@ -83,3 +83,31 @@ The campaign PR gate opens only on complete positive success (all success-contra
 ## Intake Amendment 2026-09-03
 
 Federico Comparsi (@Splinterrone) posted the item's derivation sketch on #198 (comment 5526924549) at 14:00 UTC, before any attempt ran. The sketch pins the structural target: his equations (1) and (2) are the standard linear micropolar system with coupling modulus alpha, couple moduli beta/gamma/epsilon, and microinertia J_i; N4 identification now targets that form, with Rudge 2103.14458 as the consistent secondary statement. His micro-decomposition v = V_macro + Phi x r + v' weighs toward the core-polarization family but does not change the frozen candidate set or criteria. The manifest source_inventory carries the full entry; notation register: our derivation writes skew(sigma) and epsilon_c to avoid the Levi-Civita collision present in the sketch's prose.
+
+## Independent Review Correction 2026-09-04
+
+PR #199 remains an active campaign rather than a terminal-success record. N1
+is established, while N2 is the active obligation and licenses L1--L5 remain
+unearned. The exact N3/N4/N5 algebra is retained as a useful conditional model,
+but the Euler-to-Cosserat dependency edge is still open: exact relative
+Green--Lagrange line stretch is invariant under a free frame rotation, so the
+claimed `alpha = L_v T/6` term cannot be obtained by truncating the relative
+rotation at first order and then retaining its quadratic norm. The next
+construction is an Euler-derived core-polarization or inter-tube Biot--Savart
+interaction whose exact second variation locks macro- and micro-rotation.
+
+Bounded defects have been repaired in attempt 0025. The transverse determinant
+now follows directly from the N4 operator and contains `4 alpha^2 k^2`; its
+SciPy DOP853 refinement is executed. The structure-free limit removes the spin
+coordinate when all of its action weights vanish, and the longitudinal branch
+is labelled as a formal unrestricted micropolar extension rather than a
+physical incompressible-Euler mode. N6 now establishes only zero coherent
+signed response under its explicit ergodic closure, while retaining nonzero
+quadratic frame fluctuations. N7 imports the hash-pinned EPS vortex-tube
+existence statements and uses the elementary periodic Beltrami field only as a
+steady-Euler equation regression, not as a localized or knotted tube.
+
+The earlier empty-debt and terminal-completion statements are superseded by
+this correction. The campaign frontier is a scientific construction, not a
+refutation: close N2 and derive the missing frame-locking interaction, then
+replay the conditional N3--N7 ladder and individual claim reviews.

@@ -1,16 +1,18 @@
-"""C-CST-006 verifier: no-Cosserat contrast side (node N6).
+"""C-CST-006 verifier: orientation-ergodic contrast closure.
 
-Claim. For the orientation-ergodic ensemble (no triad locking; independent
-isotropic frame distribution) the joint tangent-triad moments factorize,
-    <n_i t_j> = <n_i><t_j> = 0,
-the phase-averaged frame map vanishes, <L(phi)> = 0, and therefore the net
-couple stress and the couple moduli (c_tr, c_s, c_a) and spin stiffness are
-identically zero: the effective medium is the Navier-Cauchy sector.
-A simulated decorrelated ensemble (N = 200000) confirms the net couple stress
-within the declared 5 sigma/sqrt(N) tolerance. The locked (N3) counterpart
-carries nonzero couple moduli -- the contrast is the couple operator itself.
-Mutations must fail.
+The exact result is about the *coherent signed response*: under an independent
+uniform frame phase, the first-order frame map and hence any response linear in
+that map average to zero. The quadratic fluctuation energy does not average to
+zero, because ``<L.T L> = I``. Keeping both facts explicit prevents a vanishing
+mean from being misreported as vanishing microscopic fluctuation energy.
+
+The no-Cosserat macroscopic limit therefore additionally assumes the declared
+ergodic closure: no coherent microrotation field is retained after the signed
+response is averaged. Under that explicit closure the remaining constitutive
+state is the translational Navier--Cauchy sector. The Monte Carlo check measures
+the same signed first-moment observable as the exact calculation.
 """
+
 import sys
 
 import numpy as np
@@ -19,73 +21,138 @@ import sympy as sp
 from substrate_framework.verification import CheckLedger
 
 
-def check_phase_average(ledger):
+def phase_rotation(phi: sp.Expr) -> sp.Matrix:
+    return sp.Matrix([[sp.cos(phi), sp.sin(phi)], [-sp.sin(phi), sp.cos(phi)]])
+
+
+def check_phase_average(ledger: CheckLedger) -> None:
     phi = sp.Symbol("phi", real=True)
-    L = sp.Matrix([[sp.cos(phi), sp.sin(phi)], [-sp.sin(phi), sp.cos(phi)]])
-    L_avg = sp.simplify(sp.integrate(L, (phi, 0, 2 * sp.pi)) / (2 * sp.pi))
-    ledger.check("phase-averaged frame map <L(phi)> = 0",
-                 L_avg == sp.zeros(2, 2), "uniform-phase circle average")
-    ledger.check("locked counterpart: L = I (nonzero, N3 couple operator survives)",
-                 sp.eye(2) != sp.zeros(2, 2), "full locking keeps the couple sector")
+    rotation = phase_rotation(phi)
+    average = sp.simplify(sp.integrate(rotation, (phi, 0, 2 * sp.pi)) / (2 * sp.pi))
+    average_gram = sp.simplify(
+        sp.integrate(rotation.T * rotation, (phi, 0, 2 * sp.pi)) / (2 * sp.pi)
+    )
+    ledger.check(
+        "uniform phase has zero coherent frame map",
+        average == sp.zeros(2, 2),
+        "<L(phi)> = 0",
+    )
+    ledger.check(
+        "uniform phase retains quadratic frame fluctuations",
+        average_gram == sp.eye(2),
+        "<L(phi).T L(phi)> = I, so zero mean alone does not erase energy",
+    )
 
 
-def check_factorization(ledger):
-    # decorrelation premise: independent isotropy factorizes joint moments
-    ni_avg, tj_avg = sp.Symbol("n_i"), sp.Symbol("t_j")
-    joint = ni_avg * tj_avg
-    ledger.check("joint moment factorization <n_i t_j> = <n_i><t_j>",
-                 sp.simplify(joint - ni_avg * tj_avg) == 0, "product measure")
-    ledger.check("independent isotropy: <n_i> = <t_j> = 0",
-                 True, "both distributions centered on the sphere")
-    ledger.check("=> couple moduli and spin stiffness identically zero", True,
-                 "no coherent kappa coupling: Navier-Cauchy sector only")
+def check_factorization(ledger: CheckLedger) -> None:
+    theta, phi = sp.symbols("theta phi", real=True)
+    n = sp.Matrix(
+        [sp.sin(theta) * sp.cos(phi), sp.sin(theta) * sp.sin(phi), sp.cos(theta)]
+    )
+    mean_n = sp.Matrix(
+        [
+            sp.simplify(
+                sp.integrate(
+                    sp.integrate(component * sp.sin(theta), (phi, 0, 2 * sp.pi)),
+                    (theta, 0, sp.pi),
+                )
+                / (4 * sp.pi)
+            )
+            for component in n
+        ]
+    )
+    mean_t = mean_n.copy()
+    joint_independent = sp.simplify(mean_n * mean_t.T)
+    ledger.check(
+        "isotropic vector means vanish by exact sphere integration",
+        mean_n == sp.zeros(3, 1) and mean_t == sp.zeros(3, 1),
+        "<n> = <t> = 0",
+    )
+    ledger.check(
+        "independent joint first moment factorizes to zero",
+        joint_independent == sp.zeros(3, 3),
+        "<n_i t_j> = <n_i><t_j> = 0",
+    )
 
 
-def check_simulation(ledger):
-    rng = np.random.default_rng(20260904)
-    N = 200000
-    g = rng.standard_normal((N, 3))
-    n = g / np.linalg.norm(g, axis=1, keepdims=True)
-    phi = rng.uniform(0, 2 * np.pi, N)
-    w = n[:, 0] ** 2 - n[:, 1] ** 2
-    m1 = w * np.cos(phi)
-    m2 = w * np.sin(phi)
-    ok1 = abs(float(np.mean(m1))) <= 5 * float(np.std(m1)) / np.sqrt(N)
-    ok2 = abs(float(np.mean(m2))) <= 5 * float(np.std(m2)) / np.sqrt(N)
-    ledger.check("simulated decorrelated ensemble: net couple stress within "
-                 "declared 5 sigma/sqrt(N) tolerance (both components)",
-                 ok1 and ok2, f"N = {N}, seed = 20260904")
+def check_coherent_response_closure(ledger: CheckLedger) -> None:
+    phi = sp.Symbol("phi", real=True)
+    response = sp.Matrix(sp.symbols("r1:3", real=True))
+    average_map = sp.simplify(
+        sp.integrate(phase_rotation(phi), (phi, 0, 2 * sp.pi)) / (2 * sp.pi)
+    )
+    mean_response = sp.simplify(average_map * response)
+    ledger.check(
+        "ergodic signed-response closure has zero coherent couple response",
+        mean_response == sp.zeros(2, 1),
+        "the macroscopic closure retains no coherent Phi response",
+    )
 
 
-def check_mutations(ledger):
-    # M1: biased sample must violate the tolerance (verifier sensitivity)
-    rng = np.random.default_rng(20260904)
-    N = 200000
-    g = rng.standard_normal((N, 3))
-    n = g / np.linalg.norm(g, axis=1, keepdims=True)
-    phi = rng.uniform(0, 2 * np.pi, N)
-    w = n[:, 0] ** 2 - n[:, 1] ** 2
-    bias = 7 * float(np.std(w * np.cos(phi))) / np.sqrt(N)
-    m1_biased = w * np.cos(phi) + bias          # deliberate offset above tolerance
-    viol = abs(float(np.mean(m1_biased))) > 5 * float(np.std(m1_biased)) / np.sqrt(N)
-    ledger.check("M1 tolerance violation detected for biased sample", viol,
-                 "verifier sensitivity confirmed")
-
-    # M2: correlated-frames claim (nonzero joint moment) contradicts independence
-    ni, tj = sp.Symbol("n_i"), sp.Symbol("t_j")
-    bad_joint = sp.Rational(1, 3)               # claimed <n_i t_j> = 1/3
-    factorized = ni * tj
-    ledger.check("M2 correlated-frames joint moment rejected",
-                 sp.simplify(bad_joint - factorized) != 0,
-                 "delta/3 joint moment is not a product measure")
+def sample_signed_response(
+    seed: int, count: int, bias: float = 0.0
+) -> tuple[np.ndarray, np.ndarray]:
+    rng = np.random.default_rng(seed)
+    gaussian = rng.standard_normal((count, 3))
+    directions = gaussian / np.linalg.norm(gaussian, axis=1, keepdims=True)
+    phase = rng.uniform(0.0, 2.0 * np.pi, count)
+    weight = directions[:, 0] ** 2 - directions[:, 1] ** 2
+    samples = np.column_stack((weight * np.cos(phase) + bias, weight * np.sin(phase)))
+    return samples, weight
 
 
-def main():
+def check_simulation(ledger: CheckLedger) -> None:
+    count = 200_000
+    samples, _weight = sample_signed_response(20260904, count)
+    means = np.mean(samples, axis=0)
+    standard_errors = np.std(samples, axis=0, ddof=1) / np.sqrt(count)
+    z_scores = np.abs(means) / standard_errors
+    print(
+        "MC_EVIDENCE "
+        f"N={count} seed=20260904 means={means.tolist()} "
+        f"standard_errors={standard_errors.tolist()} z_scores={z_scores.tolist()}"
+    )
+    ledger.check(
+        "Monte Carlo signed response agrees with the zero first moment",
+        bool(np.all(z_scores <= 5.0)),
+        f"N={count}, seed=20260904, z_scores={z_scores.tolist()}, float64",
+    )
+
+
+def check_mutations(ledger: CheckLedger) -> None:
+    count = 200_000
+    baseline, _weight = sample_signed_response(20260904, count)
+    standard_error = float(np.std(baseline[:, 0], ddof=1) / np.sqrt(count))
+    biased, _weight = sample_signed_response(20260904, count, bias=7.0 * standard_error)
+    biased_z = abs(float(np.mean(biased[:, 0]))) / float(
+        np.std(biased[:, 0], ddof=1) / np.sqrt(count)
+    )
+    ledger.check(
+        "M1 biased signed response is rejected",
+        biased_z > 5.0,
+        f"biased z-score={biased_z:.6f}",
+    )
+
+    phi, epsilon = sp.symbols("phi epsilon", real=True)
+    density = (1 + 2 * epsilon * sp.cos(phi)) / (2 * sp.pi)
+    biased_map = sp.simplify(
+        sp.integrate(phase_rotation(phi) * density, (phi, 0, 2 * sp.pi))
+    )
+    ledger.check(
+        "M2 phase-locked distribution produces a nonzero coherent map",
+        biased_map != sp.zeros(2, 2),
+        f"<L>_biased = {biased_map}",
+    )
+
+
+def main() -> int:
     ledger = CheckLedger("C-CST-006")
     check_phase_average(ledger)
     check_factorization(ledger)
+    check_coherent_response_closure(ledger)
+    check_simulation(ledger)
     check_mutations(ledger)
-    return ledger.finish()
+    return int(ledger.finish())
 
 
 if __name__ == "__main__":
