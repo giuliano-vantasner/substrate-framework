@@ -174,7 +174,7 @@ obligation_graph:
       maximum_verdict: established
       failure_scope: selected candidate route (A or B)
       unlocks: [N5, N6]
-      status: active
+      status: established
       license_chain:
         object: >-
           sigma = dW/d(eps_gamma), m = dW/d(kappa_gamma), j(Gamma, rho, R, a);
@@ -209,7 +209,7 @@ obligation_graph:
       maximum_verdict: established
       failure_scope: selected candidate route (A or B)
       unlocks: [N7]
-      status: pending
+      status: active
       license_chain:
         object: dispersion relation omega_+(k), omega_-(k) and phase speeds
         symmetry_or_conservation: rotational invariance; energy conservation
@@ -324,9 +324,14 @@ license_registry:
       The balance-law identification (linear + angular momentum with couple
       stress and microinertia) is an exact consequence of the averaged action
       (earned by N4)
-    status: unearned
-    evidence: null
-    earned_by: null
+    status: earned
+    evidence: >-
+      attempts/0021 + verify_cst004.py (8 checks PASS, exit 0): div sigma =
+      (lam+mu-alpha) grad div u + (mu+alpha) lap u + 2 alpha rot Phi;
+      eps:sigma = +2 alpha rot u - 4 alpha Phi; div m = (c_s+c_a) lap Phi +
+      (2 c_tr - c_a + c_s) grad div Phi; j = L_v M_eff a^2/3 with M_eff =
+      pi rho a^2. Mutations M1/M2/M3 rejected.
+    earned_by: N4
   - id: L4
     proposition: >-
       Symbolic two-branch dispersion fixes the production IVP observable
@@ -473,7 +478,7 @@ comparators_blinded_until: >-
   (N3/N4 contracts), after which no numerical value may alter any candidate
   or criterion.
 route_frontier:
-  active_obligation: N4
+  active_obligation: N5
   considered:
     - A (Bishop-triad affine transport)
     - B (core-polarization patch)
