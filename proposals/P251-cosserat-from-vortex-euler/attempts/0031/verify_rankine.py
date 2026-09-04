@@ -1,41 +1,13 @@
-"""C-CST-002: conditional Rankine Euler mode equations and branch asymptotics.
-
-Cartesian-derived velocity forms, Poincare pressure reduction and exact Bessel
-boundary equation use exp(i*(m theta+k z-omega t)). At x=|k|a -> 0:
-m=1: omega/Omega = -x^2/2*(log(2/x)+1/4-EulerGamma)+o(x^2);
-m=2: omega/Omega = 1-x^2/6+O(x^4 log x).
-The logarithmic m=2 remainder is not a constant times x^4.
-
-Attempt 0029 restores the original velocity signs: 0019's alleged correction
-reversed Coriolis terms. Attempt 0031 differentiates K1 exactly, removing
-the spurious 1/4 in the old bending constant. Signed roots and 40/60-digit
-refinement replace coarse grid minima. Analytic specification and error
-budget: attempts/0031/README.md. These modes do not establish rod bend/twist
-energy, inertia, or an Euler-to-Cosserat action.
-"""
+"""Derivative repair and precision-refined root check; design in README.md."""
 import mpmath as mp
 import sympy as s
 
-from substrate_framework.rankine_modes import boundary_determinant, core_velocity, rankine_residual
+from substrate_framework.rankine_modes import boundary_determinant, rankine_residual
 from substrate_framework.verification import CheckLedger
 
 
 def main():
-    ledger = CheckLedger("C-CST-002")
-    r = s.Symbol("r", positive=True)
-    Om, rho, wt, axial_k = s.symbols("Omega rho wt k", nonzero=True)
-    azimuthal_m, lam2 = s.symbols("m lambda_squared")
-    pressure = s.Function("P")(r)
-    vr, vt, vz = core_velocity(pressure, r, axial_k, azimuthal_m, wt, Om, rho)
-    divergence = s.diff(r*vr, r)/r+s.I*azimuthal_m*vt/r+s.I*axial_k*vz
-    reduced = s.simplify(divergence.subs(
-        s.diff(pressure, r, 2),
-        -s.diff(pressure, r)/r+(azimuthal_m**2/r**2-lam2)*pressure))
-    ledger.check("Poincare reduction from solved Euler velocity",
-                 s.simplify(reduced.subs(lam2, axial_k**2*(4*Om**2-wt**2)/wt**2)) == 0)
-    wrong_reduced = reduced.subs(lam2, -axial_k**2*(4*Om**2-wt**2)/wt**2)
-    ledger.check("wrong pressure species breaks incompressibility",
-                 s.simplify(wrong_reduced) != 0)
+    ledger = CheckLedger("P251-0031-Rankine")
     x = s.Symbol("x", positive=True)
     ell, gamma, c = s.symbols("L gamma c", real=True)
     K1 = 1/x+x/2*(s.log(x/2)+gamma-s.Rational(1, 2))

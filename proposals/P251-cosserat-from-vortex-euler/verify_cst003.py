@@ -1,41 +1,19 @@
-"""C-CST-003 audit: conditional ensemble identities and the open N2->N3 bridge.
+"""C-CST-003: exact conditional sphere moments and micropolar energy matching.
 
-The sphere-moment contractions and coefficient matching below are exact once
-the relative micropolar energy is supplied. They do not by themselves derive
-that energy from straight-tube Biot--Savart tension. In particular, exact
-Green--Lagrange line stretch is independent of a separately chosen frame
-rotation. Replacing the exact relative deformation by its first-order part
-``h - skew(Phi)`` while retaining its quadratic norm creates the proposed
-``alpha`` term unless a microscopic frame-locking interaction is supplied.
+The supplied elastic energy is
+W = lambda/2*(tr sym grad u)^2 + mu*|sym grad u|^2
+  + alpha/2*|curl u - 2 Phi|^2
+  + c_tr*(tr grad Phi)^2 + c_s*|sym grad Phi|^2 + c_a*|skew grad Phi|^2.
+Phi is a dimensionless rotation ANGLE; alpha has pressure units. B and C_tw
+have force*length^2 units when used as curvature-energy coefficients.
 
-The strongest supported conditional energy is
-
-  W2 = lam/2 (tr es)^2 + mu es:es                 (stretch sector, es = sym)
-     + alpha |rot u / 2 - Phi|^2                  (microrotation coupling)
-     + c_tr (tr kappa)^2 + c_s |sym kappa|^2 + c_a |skew kappa|^2   (wryness)
-
-with every modulus a moment-exact expression in (rho, Gamma, a, R, L_v) and
-no fitted constant:
-
-  [RETIRED] alpha = L_v T / 6 (refuted derivation; see 0028):
-  alpha_energy = L_v pi rho a^2 <eta^2>/4, alpha_gap = j (Om_i-Om_o)^2/4,
-  (lam, mu) from the P242 affine matching applied to T (both L_v T / 15),
-  c_tr = -B L_v / 30,  c_s = B L_v / 10,  c_a = B L_v / 6  at C_tw^tube = 0,
-
-where T = straight_line_tension(rho, Gamma, R, a) and B is the tube bend
-stiffness (log-running, declared N2 remainder: B = rho Gamma^2/(4 pi)
-[ln(R/a) + c1], c1 = 1/2 - EulerGamma).  The dW/dPhi coupling reproduces the
-Comparsi intake pair  -2 alpha rot u + 4 alpha Phi  structure exactly.
-
-All checks are SymPy-exact. Attempt 0028 supplies the frame-locking
-construction the guard demanded: the Euler-derived interaction
-E_lock/L = (pi rho/2) (Om_i - Om_o)^2 a^2 eta^2 (frozen-vorticity energy of
-a displaced, circulation-pinned core in an ambient; exact contour-dynamic
-composition, objective by construction, positive second variation). The
-alpha sector is REPLACED: alpha_energy = L_v pi rho a^2 <eta^2>/4 (declared
-polarization-intensity moment) and the gap-form alpha_gap = j (Om_i-Om_o)^2/4
-(contrast-set Doppler gap) are distinct ensemble data. The retired
-tension-based constant alpha = L_v T/6 is rejected by mutation below.
+Moment and coefficient identities are exact once these microscopic energies
+are supplied. Line tension alone does not derive relative-angle locking.
+Attempt 0029 shows that 0028's rate-quadratic coefficient has microinertia
+units, so it cannot replace alpha in this action. A Doppler frequency alone
+does not supply the missing action or kinetic coordinate map. The P242 axial
+stiffness premise remains an explicit conditional import. Historical attempts
+are preserved; the Euler-derived closure of N2/N3 remains active.
 """
 
 import sys
@@ -148,93 +126,35 @@ def check_stretch_sector(ledger):
     )
     ledger.check(
         "pre-stress identification: W_1 = (L_v T/3) tr(es)",
-        sp.simplify(sp.Rational(1, 3) - sp.Rational(1, 3)) == 0
-        and sp.simplify(Lv * T_expr / 3 / (Lv * T_expr / 3)) == 1,
+        sp.simplify(sum(sphere_second_moment()[i, i] for i in range(3)) / 3 - sp.Rational(1, 3)) == 0,
         "isotropic pre-stress P = L_v T/3 (recorded for N4 tangent operator)",
     )
 
 
 def check_locking_sector(ledger):
-    """Attempt 0028: exact Euler-derived frame-locking interaction.
-
-    E_lock/L = (pi rho/2) (Om_i - Om_o)^2 a^2 eta^2 (frozen-vorticity
-    energy of a displaced, circulation-pinned core in an ambient).
-    Exactly relative (objective by construction), positive second
-    variation, and two distinct effective couplings (energy-form and
-    gap-form).
-    """
-    Omi, Omo, a, eta, rho = sp.symbols("Omega_i Omega_o a eta rho", positive=True)
-    L_v, eta2, j = sp.symbols("L_v eta2 j", positive=True)
-
-    E_lock = sp.pi * sp.Rational(1, 2) * rho * (Omi - Omo) ** 2 * a**2 * eta**2
+    """Type the 0028 coefficient before using it in an angle action."""
+    rho, Lv, a, eta = sp.symbols("rho L_v a eta", positive=True)
+    mass, length, time = sp.symbols("M L T", positive=True)
+    coefficient = Lv * sp.pi * rho * a**2 * eta**2 / 4
+    scaling = {rho: rho * mass / length**3, Lv: Lv / length**2,
+               a: a * length, eta: eta * length}
+    units = sp.simplify(coefficient.xreplace(scaling) / coefficient)
+    ledger.check("0028 rate coefficient has inertia units M/L", units == mass / length)
     ledger.check(
-        "locking energy exactly relative: coherent rotation (Om_o = Om_i) nulls it",
-        sp.simplify(E_lock.subs(Omo, Omi)) == 0,
-        "no strain-measure truncation anywhere in the derivation (0028)",
+        "0028 rate coefficient cannot be an angle stiffness",
+        sp.simplify(units / (mass / (length * time**2))) == time**2,
+        "alpha in N4 has pressure units; attempt 0029 derives this mismatch",
     )
+    t = sp.Symbol("t", real=True)
+    q = sp.Function("q")(t)
+    J = sp.Symbol("J", positive=True)
+    kinetic = J * sp.diff(q, t)**2 / 2
+    residual = sp.diff(sp.diff(kinetic, sp.diff(q, t)), t) - sp.diff(kinetic, q)
     ledger.check(
-        "locking second variation positive: d2E/dOm_rel^2 = pi rho a^2 eta^2",
-        sp.simplify(sp.diff(E_lock, Omi, 2) - sp.pi * rho * a**2 * eta**2) == 0,
-        "> 0 per unit length",
+        "relative-rate quadratic energy contributes inertia, not static torque",
+        sp.simplify(residual - J * sp.diff(q, t, 2)) == 0
+        and residual.subs(q, sp.Symbol("q0")).doit() == 0,
     )
-
-    # (A) energy-form coupling: alpha_E = L_v pi rho a^2 <eta^2> / 4
-    alpha_E = L_v * sp.pi * rho * a**2 * eta2 / 4
-    ledger.check(
-        "energy-form alpha_E = L_v pi rho a^2 <eta^2>/4 (declared moment)",
-        sp.simplify(sp.diff(alpha_E * sp.Rational(1, 2), eta2) * 0) == 0
-        and alpha_E.coeff(L_v) == sp.pi * rho * a**2 * eta2 / 4,
-        "polarization-intensity moment <eta^2> is a declared ensemble premise",
-    )
-
-    # (B) gap-form coupling: composed branch w = Om_i + Om_o; transport 2 Om_o
-    w_opt_lab = Omi + Omo
-    w_gap = sp.simplify(w_opt_lab - 2 * Omo)
-    ledger.check(
-        "optical gap is contrast-set: w_gap = Om_i - Om_o (Doppler, exact)",
-        w_gap == Omi - Omo,
-        "single-tube limit Om_o -> 0: w_gap = Om_i (recorded); co-rotation: 0",
-    )
-    alpha_gap = j * (Omi - Omo) ** 2 / 4
-    ledger.check(
-        "gap-form coupling: 4 alpha_gap / j = (Om_i - Om_o)^2",
-        sp.simplify(4 * alpha_gap / j - (Omi - Omo) ** 2) == 0,
-        "replaces the material constant 4 alpha / j of the retired receipt",
-    )
-
-    # F3: the two couplings are distinct ensemble data
-    probe = {L_v: 3, sp.pi: sp.pi, rho: 5, a: 7, eta2: sp.Rational(1, 11),
-             j: 13, Omi: 17, Omo: 19}
-    ledger.check(
-        "F3: energy-form and gap-form couplings are independent data",
-        sp.simplify(alpha_E.subs(probe) - alpha_gap.subs(probe)) != 0,
-        "coincidence would impose <eta^2> = a^2 (Om_i-Om_o)^2/3: not derivable",
-    )
-
-    # Mutations
-    E_wrong = sp.pi * sp.Rational(1, 2) * rho * (Omi + Omo) ** 2 * a**2 * eta**2
-    ledger.check(
-        "M4 wrong-contrast form (Om_i + Om_o) rejected",
-        sp.simplify(E_wrong - E_lock) != 0
-        and sp.simplify(E_wrong.subs(Omo, Omi)) != 0,
-        "violates coherent-rotation cancellation",
-    )
-    conflated = sp.simplify(alpha_E.subs(probe) - alpha_gap.subs(probe))
-    ledger.check(
-        "M5 conflation of energy-form with gap-form rejected",
-        conflated != 0,
-        "they are independent ensemble data (F3), not one constant",
-    )
-    T = sp.Symbol("T", positive=True)
-    alpha_retired = L_v * T / 6
-    T_probe = {L_v: 3, T: 23, sp.pi: sp.pi, rho: 5, a: 7, eta2: sp.Rational(1, 11)}
-    ledger.check(
-        "M6 retired tension-based alpha = L_v T/6 rejected",
-        sp.simplify(alpha_retired.subs(T_probe) - alpha_E.subs(T_probe)) != 0
-        and sp.simplify(alpha_retired.subs(T_probe) - alpha_gap.subs(T_probe)) != 0,
-        "neither a function of <eta^2> nor of the contrast; not Euler-derived",
-    )
-
 
 def check_wryness_sector(ledger):
     """(c_tr, c_s, c_a) from the projected bend energy with joint moments."""
@@ -303,118 +223,37 @@ def check_wryness_sector(ledger):
         f"c_a = {sp.simplify(s0[c_a])}",
     )
     ledger.check(
-        "tube twist channel vanishes: C_tw^tube = 0 carried from 0005/0011",
+        "conditional zero-twist specialization of the matched curvature energy",
         sp.simplify(s0[c_s].subs(Ctw, 0) - B * Lv / 10) == 0,
-        "C_tw^tube = 0 (gauge identity + virial closure, frontier 0011)",
+        "this substitution checks the coefficient map; N2 must supply the microscopic value",
     )
 
 
 def check_matching_residual_and_mutations(ledger):
-    """General asymmetric probe: exact match; mutations must break it."""
-    h = sp.Matrix(3, 3, lambda i, j: sp.Symbol(f"h_{i}{j}"))
+    """General angle probe of the supplied micropolar energy, not line tension."""
+    h = sp.Matrix(3, 3, lambda i, j: sp.Symbol(f"h{i}{j}"))
     Phi = sp.Matrix(sp.symbols("Phi1:4"))
-    S = sp.Matrix(
-        3, 3, lambda i, j: -sum(sp.LeviCivita(i, j, c) * Phi[c] for c in range(3))
-    )
-    eg = h - S
-    es = sp.simplify((eg + eg.T) / 2)
-    Lv, T = sp.symbols("L_v T", positive=True)
-    P2 = sphere_second_moment()
-    P4 = sphere_fourth_moment_isotropic()
-    tr_es = sp.simplify(sum(es[i, i] for i in range(3)))
-    tr_es2 = sp.simplify(sum(es[i, j] * es[i, j] for i in range(3) for j in range(3)))
-    tr_eg2 = sp.simplify(sum((eg.T * eg)[i, i] for i in range(3)))
-
-    es_c = sp.Matrix(3, 3, lambda i, j: sp.Symbol(f"es_{i}{j}"))
-    lin = sp.expand(
-        sum(es_c[i, j] * P2[i, j] for i in range(3) for j in range(3))
-        + sp.Rational(1, 6) * tr_eg2
-    )
-    quad = sum(
-        es_c[i, j] * es_c[k, ell] * P4[i, j, k, ell]
-        for i in range(3)
-        for j in range(3)
-        for k in range(3)
-        for ell in range(3)
-    )
-    W_ens = sp.expand(Lv * T * (lin - quad / 2))
-    quad_sym = ((tr_es) ** 2 + 2 * tr_es2) / 15
-    W_match = sp.expand(Lv * T * (tr_es / 3 + tr_eg2 / 6 - quad_sym / 2))
-    W_sub = W_ens.subs({es_c[i, j]: es[i, j] for i in range(3) for j in range(3)})
-    ledger.check(
-        "general asymmetric probe: ensemble energy == matched form (residual 0)",
-        sp.simplify(sp.expand(W_sub - W_match)) == 0,
-        "coefficient matching residual vanishes exactly",
-    )
-
-    has_Phi = sp.expand(W_match).coeff(sp.Symbol("Phi1"), 1) != 0
-    ledger.check(
-        "alpha sector present: W carries linear Phi coupling",
-        has_Phi,
-        f"dW/dPhi1 = {sp.simplify(sp.expand(W_match).coeff(sp.Symbol('Phi1'), 1))}",
-    )
-
-    # M1: wrong second moment
-    P2_bad = sp.eye(3) / 4
-    lin_m1 = sp.expand(
-        sum(es_c[i, j] * P2_bad[i, j] for i in range(3) for j in range(3))
-        + sp.Rational(1, 6) * tr_eg2
-    )
-    W_m1 = sp.expand(Lv * T * (lin_m1 - quad / 2))
-    d1 = sp.simplify(
-        sp.expand(
-            W_m1.subs({es_c[i, j]: es[i, j] for i in range(3) for j in range(3)})
-            - W_match
-        )
-    )
-    ledger.check(
-        "M1 wrong second moment (delta/4) rejected", d1 != 0, "residual nonzero"
-    )
-
-    # M2: wrong fourth moment
-    d = sp.eye(3)
-    P4_bad = sp.MutableDenseNDimArray([0] * 81, (3, 3, 3, 3))
-    for i in range(3):
-        for j in range(3):
-            for k in range(3):
-                for ell in range(3):
-                    P4_bad[i, j, k, ell] = (
-                        d[i, j] * d[k, ell] + d[i, k] * d[j, ell] + d[i, ell] * d[j, k]
-                    ) / 21
-    quad_m2 = sum(
-        es_c[i, j] * es_c[k, ell] * P4_bad[i, j, k, ell]
-        for i in range(3)
-        for j in range(3)
-        for k in range(3)
-        for ell in range(3)
-    )
-    W_m2 = sp.expand(Lv * T * (lin - quad_m2 / 2))
-    d2 = sp.simplify(
-        sp.expand(
-            W_m2.subs({es_c[i, j]: es[i, j] for i in range(3) for j in range(3)})
-            - W_match
-        )
-    )
-    ledger.check("M2 wrong fourth moment (1/21) rejected", d2 != 0, "residual nonzero")
-
-    # M3: no MFD subtraction
-    tr_egn2 = sp.simplify(sum((h.T * h)[i, i] for i in range(3)))
-    W_nomfd = sp.expand(Lv * T * (tr_es / 3 + tr_egn2 / 6 - quad_sym / 2))
-    Phi_probe = [sp.Rational(1, 5), sp.Rational(-2, 5), sp.Rational(1, 10)]
-    h_probe = {
-        (i, j): sp.Rational(i + 2 * j + 1, 10) for i in range(3) for j in range(3)
-    }
-    sub_probe = {
-        **{h[i, j]: h_probe[(i, j)] for i in range(3) for j in range(3)},
-        **{Phi[a]: Phi_probe[a] for a in range(3)},
-    }
-    d3 = sp.simplify(W_nomfd.subs(sub_probe) - W_match.subs(sub_probe))
-    ledger.check(
-        "M3 no MFD subtraction rejected (energies differ at nonzero Phi)",
-        d3 != 0,
-        f"probe difference = {d3}",
-    )
-
+    S = sp.Matrix(3, 3, lambda i, j:
+                  -sum(sp.LeviCivita(i, j, c) * Phi[c] for c in range(3)))
+    es = (h + h.T) / 2
+    ea = (h - h.T) / 2 - S
+    lam, mu, alpha = sp.symbols("lambda mu alpha", positive=True)
+    tensor_energy = (lam * sp.trace(es)**2 / 2
+                     + mu * sum(x**2 for x in es) + alpha * sum(x**2 for x in ea))
+    curl = sp.Matrix([h[2, 1] - h[1, 2], h[0, 2] - h[2, 0], h[1, 0] - h[0, 1]])
+    vector_energy = (lam * sp.trace(es)**2 / 2 + mu * sum(x**2 for x in es)
+                     + alpha / 2 * (curl - 2 * Phi).dot(curl - 2 * Phi))
+    ledger.check("general tensor and axial-vector angle energies agree",
+                 sp.simplify(tensor_energy - vector_energy) == 0)
+    rigid = {h[i, j]: S[i, j] for i in range(3) for j in range(3)}
+    ledger.check("supplied relative-angle energy vanishes for coherent rigid rotation",
+                 sp.simplify(tensor_energy.subs(rigid)) == 0)
+    wrong = vector_energy.subs(dict(zip(Phi, -Phi)), simultaneous=True)
+    ledger.check("wrong relative-angle sign breaks rigid-rotation cancellation",
+                 sp.simplify(wrong.subs(rigid)) != 0)
+    ledger.check("doubled angle coefficient changes the physical torque",
+                 sp.simplify(sp.diff(vector_energy.subs(alpha, 2 * alpha)
+                                     - vector_energy, Phi[0])) != 0)
 
 def main():
     ledger = CheckLedger("C-CST-003")

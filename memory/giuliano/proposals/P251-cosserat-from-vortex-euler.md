@@ -111,3 +111,26 @@ The earlier empty-debt and terminal-completion statements are superseded by
 this correction. The campaign frontier is a scientific construction, not a
 refutation: close N2 and derive the missing frame-locking interaction, then
 replay the conditional N3--N7 ladder and individual claim reviews.
+
+## Completion continuation 0029–0034
+
+The new exact Cartesian audit (0029) corrects the earlier review's reliance on
+0019: original N2 velocity formulas have the correct Coriolis signs; 0019's
+replacement operator reverses them. Exact differentiation of K1 in 0031 gives
+the bending-branch constant 1/4-EulerGamma and preserves the m=2 coefficient
+-1/6; signed Bessel roots replace the previous coarse residual scan.
+
+Attempt 0028's rate coefficient has inertia units and is not an elastic alpha.
+The repaired N3 verifier preserves the conditional angle-energy and moment
+identities. Genuine angle dynamics now exists in 0030 (elliptic Euler patch
+with prescribed ambient flow) and 0032 (closed six-vortex collective action).
+0033 corrects the energy/helicity confusion in the crossing route, and 0034
+derives a consistent collective field map plus a conditional long-wave
+continuum correspondence with cell density L_cell=L_v/6.
+
+The original exact smooth-Euler/EPS continuum objective remains active. Its
+next construction is the finite-core, reaction-bearing affine-cell action
+whose translation, orientation and spatial coefficients share the derived
+Euler symplectic structure. Neither a green local oscillator nor an unbounded
+ambient-flow model closes that objective; the new constructions are preserved
+as executable progress on the campaign branch.

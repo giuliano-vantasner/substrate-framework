@@ -52,7 +52,14 @@ candidate_universe:
     - filament-triad affine transport (rotational DOF = centerline-frame bend/twist)
     - core-polarization patch (rotational DOF = cross-section vorticity-polarization rotation)
     - ergodic no-topology closure (no-Cosserat contrast side; degenerate limit)
-  append_only_expansions: []
+  append_only_expansions:
+    - >-
+      2026-09-04 PR199 completion, attempts 0029-0034: repair the Cartesian
+      Euler operator correspondence, derive angle-dependent elliptic-patch
+      and closed vortex-cluster actions, and use the kinetic-energy
+      tangent-dot-tangent Biot-Savart kernel for mutual interactions.
+      Motivated by 0028's rate/angle dimensional mismatch and 0026's use of
+      a helicity integrand as energy. Existing candidate families remain.
 obligation_graph:
   nodes:
     - id: N1
@@ -492,6 +499,34 @@ route_frontier:
     - "Review-directed attempt 0026 (post-PR199-review): inter-tube Biot-Savart crossing route BLOCKED WITH MECHANISM for the quadratic locking sector -- exact crossing energy E_int(theta) = -(rho Gamma^2/2) tan(theta) (symbolic reduction + 30-digit mpmath, attempts/0026/parts/crossing_energy.py) is PARITY-ODD (E_int(-theta) = -E_int(theta), E'' nonzero pointwise but odd), so a parity-symmetric isotropic ensemble has <E''> = 0: no quadratic |rot u - 2 Phi|² locking from crossings; objectivity itself is structural (relative geometry only). Core-polarization route SPECIFIED: candidate exact locking energy E_lock/L = (pi rho/2)(Omega_amb - Omega_self)^2 a^2 eta^2 (frozen-vorticity/Cauchy construction, two-frame sheet jump gamma' = 2(Omega_amb - Omega_self)eta), exactly relative and objective by construction; execution requires the 0027 momentum-residual-correct two-frame replay (attempt 0019 forms) before claiming."
     - "Attempt 0028 (parts 1-2): Euler-derived frame-locking interaction CONSTRUCTED — contour-dynamics composition exact (w = m Om_o + w_Love(Om_i-Om_o); m=2 k->0 = Om_i + Om_o, both limits exact); cross-term selection rule (m=1 background x m=2 mode angular orthogonality) => E_lock/L = (pi rho/2)(Om_i-Om_o)^2 a^2 eta^2 EXACTLY relative, objective by construction (no rotation-measure truncation; review's R^TR=I cancellation inapplicable), positive stiffness pi rho a^2 eta^2; couplings split: alpha_energy = L_v pi rho a^2 <eta^2>/4 (declared polarization-intensity moment) vs alpha_gap = j (Om_i-Om_o)^2/4 (contrast-set Doppler gap w_gap = Om_i-Om_o replaces material 4 alpha/j); verify_cst003 rebuilt 30 checks PASS (M4 wrong-contrast, M5 conflation, M6 retired tension-alpha all rejected); N4 balance form alpha-generic (verify_cst004 8/8 unchanged); N5 symbolic model checks hold (17/17) with physical gap evaluation corrected to contrast-set; N6/N7 unaffected (N6 strengthens: zero polarization intensity => no locking sector)."
   failure_generated:
+    - >-
+      Completion attempts 0030/0032/0034 construct actual angle actions:
+      prescribed-flow elliptic Euler patch, closed six-point-vortex
+      collective action, and a covariant field map with conditional
+      local-induction gradients. The latter supplies one consistent alpha/j
+      pair and standard transverse dispersion through k^2, with molecule
+      density L_cell=L_v/6. The exact smooth-Euler campaign remains active:
+      finite-core spectral continuation, joint translation/affine-cage action
+      and stationary EPS compatibility are distinct remaining constructions.
+    - >-
+      Completion attempt 0029: original verify_cst002 velocity forms satisfy
+      Cartesian-derived Euler exactly; attempt 0019's alternative residual
+      reverses Coriolis signs. The prior review's reliance on 0019 is
+      corrected. Rate-quadratic alpha_E in 0028 has inertia units and cannot
+      enter the angle potential in N4. Finite-k contrast-only composition
+      omits ambient Coriolis; the planar k=0 identity remains valid.
+    - >-
+      Completion attempt 0031: symbolic differentiation of K1 supplies the
+      omitted 1/4 derivative term; the corrected m=1 dispersion constant is
+      1/4-EulerGamma, while m=2 retains -1/6. Signed Bessel roots at 40/60
+      digits corroborate these expansions. Earlier contrary constants in
+      the append-only tried ledger are superseded by this exact receipt.
+    - >-
+      Completion attempt 0033: mutual kinetic energy uses t1.dot(t2)/R,
+      not the velocity-circulation/helicity kernel used in 0026. Correct
+      geometry and even angular parity reopen the inter-tube energy route;
+      finite opposite-circulation segments have positive relative-tilt
+      Hessian, with closed-vorticity completion still required.
     - >-
       Review correction 0025: exact relative Green-Lagrange line stretch is
       independent of a free frame rotation. The N3 alpha term therefore needs
