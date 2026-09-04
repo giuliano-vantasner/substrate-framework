@@ -54,3 +54,15 @@ pi rho a^2), the optical gap is
 - evidence_scope: EXACT (sympy)
 - Next unlocked: N6 no-Cosserat contrast side (orientation-ergodic ensemble
   yields vanishing couple moduli), then N7 EPS bridge.
+
+## Erratum (2026-09-04, post-record re-derivation)
+
+The inline closed-form simplification of the optical gap above contains an
+arithmetic slip. From this record's own stated values
+(alpha = L_v rho Gamma^2 ln(R/a)/(24 pi), j = L_v pi rho a^4 / 3):
+
+    w_gap^2 = 4 alpha / j = Gamma^2 ln(R/a) / (2 pi^2 a^4),
+
+NOT 2 Gamma^2 ln(R/a)/(3 pi^3 a^4) as written above. The verifier is
+unaffected: verify_cst005 checks w^2_+(0) = 4 alpha / j symbolically in
+(alpha, j) and never uses the slipped closed form.
