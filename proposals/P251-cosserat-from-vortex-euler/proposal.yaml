@@ -131,7 +131,7 @@ obligation_graph:
       maximum_verdict: established
       failure_scope: selected candidate route (A or B)
       unlocks: [N4]
-      status: pending
+      status: established
       license_chain:
         object: >-
           W(eps_gamma, kappa_gamma) isotropic micropolar energy density with
@@ -157,6 +157,7 @@ obligation_graph:
           under general asymmetric strain/curvature probes
         numerical_representation: blocked (exact claim; SymPy moments + matching)
         permitted_verdict: established
+      status: established
     - id: N4
       positive_intent: >-
         Balance-law identification: the Euler-Lagrange equations of the
@@ -173,7 +174,7 @@ obligation_graph:
       maximum_verdict: established
       failure_scope: selected candidate route (A or B)
       unlocks: [N5, N6]
-      status: pending
+      status: active
       license_chain:
         object: >-
           sigma = dW/d(eps_gamma), m = dW/d(kappa_gamma), j(Gamma, rho, R, a);
@@ -309,9 +310,15 @@ license_registry:
       Ensemble moduli (lambda, mu, kappa, alpha, beta, gamma)_eff are exact
       coefficient-matching consequences of the declared affine triad transport
       (earned by N3)
-    status: unearned
-    evidence: null
-    earned_by: null
+    status: earned
+    evidence: >-
+      attempts/0020 + verify_cst003.py (21 checks PASS, exit 0): alpha_eff =
+      L_v rho Gamma^2/(24 pi) ln(R/a) with the exact Comparsi coupling pair;
+      lam_eff = mu_eff = L_v T/15 (P242 affine matching on T = straight
+      _line_tension); c_tr = -B L_v/30, c_s = B L_v/10, c_a = B L_v/6 at
+      C_tw^tube = 0; general asymmetric-probe residual zero; mutations
+      M1/M2/M3 rejected
+    earned_by: N3
   - id: L3
     proposition: >-
       The balance-law identification (linear + angular momentum with couple
@@ -466,7 +473,7 @@ comparators_blinded_until: >-
   (N3/N4 contracts), after which no numerical value may alter any candidate
   or criterion.
 route_frontier:
-  active_obligation: N2
+  active_obligation: N4
   considered:
     - A (Bishop-triad affine transport)
     - B (core-polarization patch)
