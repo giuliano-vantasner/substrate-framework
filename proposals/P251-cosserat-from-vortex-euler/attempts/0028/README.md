@@ -91,3 +91,35 @@ exact) composed with the exact advection/orthogonality structure.
   part-2 verifier formalization pending before any claim-status change.
 - evidence_scope: EXACT (sympy identities; the Love branch composition rests
   on the recorded three-route-validated dispersion of attempts 0009/0010/0016).
+
+## Part 2 (opening) — corrected spin-sector correspondence (`parts/correspondence.py`, exit 0)
+
+The exact E_lock is RATE-quadratic. The correspondence to the Comparsi
+elastic form therefore splits into two distinct, separately-declared
+couplings (verified identities):
+
+- **(A) energy-form alpha** (static match, participation):
+  alpha_E = L_v pi rho a^2 <eta^2> / 4 — carries the declared
+  polarization-intensity moment <eta^2>.
+- **(B) gap-form alpha** (dynamic): the composed dispersion puts the m=2
+  optical branch at w = Om_i + Om_o (lab); relative to the macro transport
+  m Om_o the Doppler gap is **w_gap = Om_i - Om_o** — the rotation CONTRAST,
+  exact and eta-independent. Matching the elastic-form 4 alpha / j gives
+  alpha_gap = j (Om_i - Om_o)^2 / 4.
+
+Structural findings:
+- F1: the corrected optical gap is CONTRAST-SET (Doppler/fluid), not
+  stiffness-set: it replaces the material constant 4 alpha / j of the
+  defective elastic receipt.
+- F2: the gap vanishes iff the contrast vanishes; the spin DOF itself
+  disappears with L_v -> 0 (fluid limit preserved).
+- F3: the two alphas coincide only for <eta^2> = a^2 (Om_i - Om_o)^2 / 3 —
+  independent ensemble data in general; the N3 rebuild must carry both as
+  separately named quantities.
+
+Consequence for the rebuild: verify_cst003 v2 = stretch sector (unchanged,
+P242 objective measure) + wryness sector (unchanged, B-based) + locking
+sector (E_lock exact, both alpha objects, mutations: wrong contrast,
+non-objective form, conflation of (A) with (B)). N4's balance FORM is
+alpha-generic and survives; N5's gap check must be rebuilt to the
+contrast-set form.
