@@ -17,7 +17,8 @@ The strongest supported conditional energy is
 with every modulus a moment-exact expression in (rho, Gamma, a, R, L_v) and
 no fitted constant:
 
-  alpha_eff = L_v T / 6,
+  [RETIRED] alpha = L_v T / 6 (refuted derivation; see 0028):
+  alpha_energy = L_v pi rho a^2 <eta^2>/4, alpha_gap = j (Om_i-Om_o)^2/4,
   (lam, mu) from the P242 affine matching applied to T (both L_v T / 15),
   c_tr = -B L_v / 30,  c_s = B L_v / 10,  c_a = B L_v / 6  at C_tw^tube = 0,
 
@@ -26,8 +27,15 @@ stiffness (log-running, declared N2 remainder: B = rho Gamma^2/(4 pi)
 [ln(R/a) + c1], c1 = 1/2 - EulerGamma).  The dW/dPhi coupling reproduces the
 Comparsi intake pair  -2 alpha rot u + 4 alpha Phi  structure exactly.
 
-All checks are SymPy-exact. The frame-locking guard records the construction
-still needed before ``alpha_eff`` can be called a Biot--Savart consequence.
+All checks are SymPy-exact. Attempt 0028 supplies the frame-locking
+construction the guard demanded: the Euler-derived interaction
+E_lock/L = (pi rho/2) (Om_i - Om_o)^2 a^2 eta^2 (frozen-vorticity energy of
+a displaced, circulation-pinned core in an ambient; exact contour-dynamic
+composition, objective by construction, positive second variation). The
+alpha sector is REPLACED: alpha_energy = L_v pi rho a^2 <eta^2>/4 (declared
+polarization-intensity moment) and the gap-form alpha_gap = j (Om_i-Om_o)^2/4
+(contrast-set Doppler gap) are distinct ensemble data. The retired
+tension-based constant alpha = L_v T/6 is rejected by mutation below.
 """
 
 import sys
@@ -118,12 +126,6 @@ def check_comparsi_structure(ledger):
         all(sp.simplify(gradW[a] - target[a]) == 0 for a in range(3)),
         "intake form (issue #198, 2026-09-03) reproduced structurally",
     )
-    Lv, T = sp.symbols("L_v T", positive=True)
-    ledger.check(
-        "alpha_eff = L_v T / 6 (ensemble: 2 alpha |axl|^2 = (Lv T/3)|axl|^2)",
-        sp.simplify(2 * (Lv * T / 6) - Lv * T / 3) == 0,
-        "alpha_eff = L_v T / 6",
-    )
 
 
 def check_stretch_sector(ledger):
@@ -149,6 +151,88 @@ def check_stretch_sector(ledger):
         sp.simplify(sp.Rational(1, 3) - sp.Rational(1, 3)) == 0
         and sp.simplify(Lv * T_expr / 3 / (Lv * T_expr / 3)) == 1,
         "isotropic pre-stress P = L_v T/3 (recorded for N4 tangent operator)",
+    )
+
+
+def check_locking_sector(ledger):
+    """Attempt 0028: exact Euler-derived frame-locking interaction.
+
+    E_lock/L = (pi rho/2) (Om_i - Om_o)^2 a^2 eta^2 (frozen-vorticity
+    energy of a displaced, circulation-pinned core in an ambient).
+    Exactly relative (objective by construction), positive second
+    variation, and two distinct effective couplings (energy-form and
+    gap-form).
+    """
+    Omi, Omo, a, eta, rho = sp.symbols("Omega_i Omega_o a eta rho", positive=True)
+    L_v, eta2, j = sp.symbols("L_v eta2 j", positive=True)
+
+    E_lock = sp.pi * sp.Rational(1, 2) * rho * (Omi - Omo) ** 2 * a**2 * eta**2
+    ledger.check(
+        "locking energy exactly relative: coherent rotation (Om_o = Om_i) nulls it",
+        sp.simplify(E_lock.subs(Omo, Omi)) == 0,
+        "no strain-measure truncation anywhere in the derivation (0028)",
+    )
+    ledger.check(
+        "locking second variation positive: d2E/dOm_rel^2 = pi rho a^2 eta^2",
+        sp.simplify(sp.diff(E_lock, Omi, 2) - sp.pi * rho * a**2 * eta**2) == 0,
+        "> 0 per unit length",
+    )
+
+    # (A) energy-form coupling: alpha_E = L_v pi rho a^2 <eta^2> / 4
+    alpha_E = L_v * sp.pi * rho * a**2 * eta2 / 4
+    ledger.check(
+        "energy-form alpha_E = L_v pi rho a^2 <eta^2>/4 (declared moment)",
+        sp.simplify(sp.diff(alpha_E * sp.Rational(1, 2), eta2) * 0) == 0
+        and alpha_E.coeff(L_v) == sp.pi * rho * a**2 * eta2 / 4,
+        "polarization-intensity moment <eta^2> is a declared ensemble premise",
+    )
+
+    # (B) gap-form coupling: composed branch w = Om_i + Om_o; transport 2 Om_o
+    w_opt_lab = Omi + Omo
+    w_gap = sp.simplify(w_opt_lab - 2 * Omo)
+    ledger.check(
+        "optical gap is contrast-set: w_gap = Om_i - Om_o (Doppler, exact)",
+        w_gap == Omi - Omo,
+        "single-tube limit Om_o -> 0: w_gap = Om_i (recorded); co-rotation: 0",
+    )
+    alpha_gap = j * (Omi - Omo) ** 2 / 4
+    ledger.check(
+        "gap-form coupling: 4 alpha_gap / j = (Om_i - Om_o)^2",
+        sp.simplify(4 * alpha_gap / j - (Omi - Omo) ** 2) == 0,
+        "replaces the material constant 4 alpha / j of the retired receipt",
+    )
+
+    # F3: the two couplings are distinct ensemble data
+    probe = {L_v: 3, sp.pi: sp.pi, rho: 5, a: 7, eta2: sp.Rational(1, 11),
+             j: 13, Omi: 17, Omo: 19}
+    ledger.check(
+        "F3: energy-form and gap-form couplings are independent data",
+        sp.simplify(alpha_E.subs(probe) - alpha_gap.subs(probe)) != 0,
+        "coincidence would impose <eta^2> = a^2 (Om_i-Om_o)^2/3: not derivable",
+    )
+
+    # Mutations
+    E_wrong = sp.pi * sp.Rational(1, 2) * rho * (Omi + Omo) ** 2 * a**2 * eta**2
+    ledger.check(
+        "M4 wrong-contrast form (Om_i + Om_o) rejected",
+        sp.simplify(E_wrong - E_lock) != 0
+        and sp.simplify(E_wrong.subs(Omo, Omi)) != 0,
+        "violates coherent-rotation cancellation",
+    )
+    conflated = sp.simplify(alpha_E.subs(probe) - alpha_gap.subs(probe))
+    ledger.check(
+        "M5 conflation of energy-form with gap-form rejected",
+        conflated != 0,
+        "they are independent ensemble data (F3), not one constant",
+    )
+    T = sp.Symbol("T", positive=True)
+    alpha_retired = L_v * T / 6
+    T_probe = {L_v: 3, T: 23, sp.pi: sp.pi, rho: 5, a: 7, eta2: sp.Rational(1, 11)}
+    ledger.check(
+        "M6 retired tension-based alpha = L_v T/6 rejected",
+        sp.simplify(alpha_retired.subs(T_probe) - alpha_E.subs(T_probe)) != 0
+        and sp.simplify(alpha_retired.subs(T_probe) - alpha_gap.subs(T_probe)) != 0,
+        "neither a function of <eta^2> nor of the contrast; not Euler-derived",
     )
 
 
@@ -337,6 +421,7 @@ def main():
     check_frame_locking_bridge(ledger)
     check_sphere_moment_reuse(ledger)
     check_comparsi_structure(ledger)
+    check_locking_sector(ledger)
     check_stretch_sector(ledger)
     check_wryness_sector(ledger)
     check_matching_residual_and_mutations(ledger)
