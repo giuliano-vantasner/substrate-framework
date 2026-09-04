@@ -87,3 +87,16 @@ the dispersion-c4d coefficient is +3456/2304 = 3/2 per |c4d|.
 - evidence_scope: EXACT (symbolic) with numeric cross-validation
 - Next: N3 ensemble half (Cauchy-Born moduli via triad moments), then N4
   balance-law identification (fixes the absolute C_tw convention).
+
+## Addendum (post-0020): forms arbitration against verify_cst002
+
+`parts/forms_arbitration.py` — verify_cst002's check_poincare_reduction records
+v_r = +i(wt p' - 2 Om m p/r)/(rho(4 Om^2 - wt^2)), v_t = (2 Om p' - m wt p/r)/(rho D).
+Run against the linearized momentum residuals these FAIL (nonzero r- and theta-
+residuals, sympy-exact); the part-1 forms pass all three residuals. Mechanism
+named for the 0018 supersession: the 0018-lineage energy assemblies used the
+wrong-signed velocity forms, which (with truncation) produced the spurious
+k^2 coefficient; 0019's e2 = 0 stands on the residual-verified forms. The
+verifier's own branch-structure conclusions (Poincare form, lam^2, c1 = 1/2 -
+gamma, c2 = -1/6) are unaffected — they were corroborated independently by the
+Kelvin-96 roots (attempt 0016/0019a).
