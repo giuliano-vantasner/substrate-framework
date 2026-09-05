@@ -11,6 +11,13 @@ status: active
 
 ## Goal and Success Contract
 
+2026-09-05 owner-directed scope separation: the bounded repaired PR199 is
+authorized for merge. The unfinished actual smooth-Euler continuum and all
+later research are preserved separately in issue200 and the branch
+research/pr199-completion. This historical effort record does not imply
+scientific completion; see the proposal README and issue200 for current
+status. No new research is being merged through this bounded PR.
+
 Meet the full positive objective of issue #198 and PR #199, preserving the
 seven-node objective and explicit Euler, isotropy, and ensemble premises in
 P251/proposal.yaml. Completion includes the microscopic action construction,
