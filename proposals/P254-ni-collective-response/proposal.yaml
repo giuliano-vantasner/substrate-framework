@@ -27,6 +27,9 @@ source_inventory:
 - source: Catalyst campaign3 actual QE inputs and geometry/recovery code
   access: /home/administrator/projects/catalyst-dft/runs/campaign3; source-backed scout handoffs preserved before execution
   extracted: Historical GBRV40/480Ry protocol and conventional-coordinate geometry; old vacancy structures have frozen Ni and are not full stationary backgrounds; single serial controller is essential.
+- source: Exact finite quadratic building-block oracle, P254 attempt0001 (2026-10-19)
+  access: attempts/0001/derive_blocks.py, receipt.json and first-run-failure.txt; reusable src/substrate_framework/material_matter_field.py
+  extracted: Verified complete-square energy, static bath subtraction and direct/reduced retarded resolvent with exposing mutations; finite conditional identities only, not material calibration or a coherence phase.
 invariants:
 - Preserve Dan's Ni-lattice discovery objective and electron-versus-nuclear mechanism alternatives; no universal negative conclusion from one numerical model.
 - Use actual host/loaded structures, mobile local Ni and H, and material-derived coupling/loss; no arbitrary gain, all-to-all coupling or pre-aligned phase as evidence.
