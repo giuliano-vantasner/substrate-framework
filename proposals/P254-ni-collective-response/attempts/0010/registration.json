@@ -14,6 +14,7 @@
     "check_algebra.py": "Exact operator and isolated-energy derivative blocks with exposing mutants.",
     "check_projection.py": "Complex perturbation and unitary-basis covariance blocks with exposing mutants.",
     "check_consumer.py": "Actual frozen DFT consumer against independent exact fixtures and branch/index boundaries.",
+    "oracle_evidence.py": "Small check-ledger, atomic-publication and live-runtime helpers reused by the dispatch and check blocks; no scientific model.",
     "run.py": "Source-guarded dispatch, atomic receipts and actual runtime evidence only."
   },
   "wave_order": [
