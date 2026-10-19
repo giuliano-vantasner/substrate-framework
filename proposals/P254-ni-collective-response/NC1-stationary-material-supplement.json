@@ -297,7 +297,9 @@
       "/home/administrator/projects/catalyst-nc-operator/runs/2026-10-19_collective-response/nc-material/runtime/attempt_evidence.py",
       "/home/administrator/projects/catalyst-nc-operator/runs/2026-10-19_collective-response/nc-material/source-references/pidfd_open.2.html",
       "/home/administrator/projects/catalyst-nc-operator/runs/2026-10-19_collective-response/nc-material/source-references/pidfd_send_signal.2.html",
-      "/home/administrator/projects/substrate-ni-collective/proposals/P254-ni-collective-response/NC1-runtime-prelaunch-amendment-01.json"
+      "/home/administrator/projects/substrate-ni-collective/proposals/P254-ni-collective-response/NC1-runtime-prelaunch-amendment-01.json",
+      "/home/administrator/projects/catalyst-nc-operator/runs/2026-10-19_collective-response/nc-material/runtime/native_evidence.py",
+      "/home/administrator/projects/substrate-ni-collective/proposals/P254-ni-collective-response/NC1-runtime-layout-addendum-01.json"
     ]
   },
   "runtime_source_amendments": [
@@ -306,6 +308,11 @@
       "plan": "/home/administrator/projects/substrate-ni-collective/proposals/P254-ni-collective-response/NC1-runtime-prelaunch-amendment-01.json",
       "original_source_bank": "catalyst-dft@e9e9421",
       "scope": "Four complete prelaunch source review findings; stable process/task identity, every durable new/cached attempt's runtime evidence and frozen MPI-launcher identity. No physical parameter, native executable or live GBRV change; no NC1 native execution or grant."
+    },
+    {
+      "id": "NC1-runtime-layout-addendum-01",
+      "plan": "/home/administrator/projects/substrate-ni-collective/proposals/P254-ni-collective-response/NC1-runtime-layout-addendum-01.json",
+      "scope": "Separate durable attempt reconciliation from raw snapshot proof before testing and freezing; migrate JSON helpers without aliases; retain task/event gaps without silently licensing them. No physical or native executable change."
     }
   ],
   "bank_policy": "Bank all scientific outputs and failed-attempt evidence; existing native WFC/save/mixing/GPW scratch exclusions remain. No forced-add of ignored checkpoints. Bank is persistence, not scientific admission; no early support PR or merged-delivery claim."
