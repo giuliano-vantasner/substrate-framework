@@ -60,6 +60,15 @@ source_inventory:
 - source: Settled NC source and installed-backend audits, P254 W2-nc-readiness-plan.json
   access: Complete sources/nc-source-applicability.json and sources/nc-backend-capabilities.json; original image gate sources/oncv-equation-evidence/verification.json
   extracted: Same-engine QE bare/screened complex-vertex candidate and its ensemble, screening, loss and missing-output obligations are explicit. W2-nc-native-proof-plan.json preregisters isolated engineering/oracle proofs and preserves G1-G5; no NC material license is yet earned.
+- source: Exact finite-fermion building-block oracle, P254 attempt0007, substrate-framework@dc47c199
+  access: attempts/0007/receipt.json, source manifests and interpretation; attempts/0007/reviews/independent-finite-fermion-review.json records complete source-bound87-check proof review with no findings
+  extracted: Finite-state, retarded-response, ensemble/free-energy and bath identities with independent CAR/Fock, Lehmann, quadrature and matrix-exponential checks; conditional Gaussian two-point representation is not a universal higher-cumulant theorem or a material bath/lifetime license.
+- source: Kim and Zubarev, Ground state of charged bosons confined in a harmonic trap, Physical Review A64 013603 (2001), DOI10.1103/PhysRevA.64.013603
+  access: sources/kim-zubarev2001-charged-bosons.pdf and complete15-page arXiv text; sources/kim-zubarev2001-charged-bosons-published.pdf and complete6-page typeset text; byte/edition evidence in sources/kim-zubarev-primary-source-intake.json
+  extracted: Original primary editions acquired and provenance-audited; source-specific equations/assumptions still require the declared G5 review/oracles before use. Mirror-sourced journal bytes are not direct publisher authentication and do not replace the mixtures chapter.
+- source: Kim and Zubarev, Mixtures of charged bosons confined in harmonic traps, archival manuscript converted2005; corresponding2006 chapter metadata DOI10.1142/9789812774354_0058 pp711-717
+  access: sources/kim-zubarev2006-iccf11-mixtures.pdf and complete7-page text; original equation-page images and exact published metadata retained. Publisher chapter bytes unavailable; sources/kim-mixtures-source-scope-decision.json records explicit user authorization to assess the identified archive and move on without the published edition.
+  extracted: Acquisition/edition scope only; blank archival Eq11 is not reconstructed, archive is not asserted publisher-identical, and no nuclear consequence is licensed by source acquisition. Loaded publisher table-of-contents No Access classification is corrected against actual saved DOM in sources/provenance-correction-receipt.json.
 invariants:
 - Preserve Dan's Ni-lattice discovery objective and electron-versus-nuclear mechanism alternatives; no universal negative conclusion from one numerical model.
 - Use actual host/loaded structures, mobile local Ni and H, and material-derived coupling/loss; no arbitrary gain, all-to-all coupling or pre-aligned phase as evidence.
