@@ -1,0 +1,205 @@
+id: P254
+schema_version: 2
+base_release: v0.183.0
+source_baseline: substrate-framework@14e0b08f6099698b6d117840e65f86cbe70d4efb
+canonical_issue: '225'
+campaign_type: discovery
+target_kind: mechanism_selection
+question: Which hydrogen-loaded Ni lattice arrangements support a material-calibrated collective response that survives physical losses, and what additional construction connects it to a nuclear process?
+positive_objective: Deliver coupled material inputs, actual many-region dynamics and a lattice-design comparison; retain the full LENR parent and its nuclear transition/energy-disposal obligations without substituting phonons or imposed phase locking.
+coordination_boundary: Parent owns physical approach, manifest, integration and commits; engineering workers own explicitly assigned disjoint files. Mathematical code and oracles live here; DFT and durable execution live in catalyst-dft issue12.
+source_inventory:
+- source: Del Giudice, Preparata and Vitiello, Water as a Free Electric Dipole Laser, PRL61 1085 (1988), DOI10.1103/PhysRevLett.61.1085
+  access: Local original PDF/text in /home/administrator/sources/coherence; text snapshot in sources/delgiudice-preparata-vitiello-1988-prl.txt
+  extracted: Matter plus quantized EM, water dipoles, long-wavelength approximation and rotational-state truncation; these are not Ni material parameters.
+- source: Bressani, Del Giudice and Preparata, First Steps Toward an Understanding of Cold Nuclear Fusion (1989), DOI10.1007/BF02844877
+  access: Local original PDF/text; snapshot sources/bressani-delgiudice-preparata-1989-nuovo-cimento.txt
+  extracted: Proposed charged-species collective oscillations, screened entrance potential and nuclear-to-electronic transfer; hypotheses requiring material and nuclear bridge verification.
+- source: Kim, Generalized Theory of Bose-Einstein Condensation Nuclear Fusion for Hydrogen-Metal System (2011)
+  access: Local original PDF/text; sources/kim-generalized-bec.txt; https://lenr-canr.org/acrobat/KimYEgeneralize.pdf
+  extracted: Nuclear condensation is assumed and the paper notes incomplete experimental information; distinct from classical vibration or electronic polarization.
+- source: GPAW official dielectric and electron-phonon documentation
+  access: Complete accessed method snapshots in sources/gpaw-*.txt, official URLs retained in headers
+  extracted: RPA density response, optical-limit versus finite-q longitudinal distinction, artificial broadening, PAW electron-phonon vertices and convergence requirements.
+- source: Installed GPAW26.7 and configured QE7.5 source
+  access: /home/administrator/projects/catalyst-dft/.venv/lib/python3.12/site-packages/gpaw and /opt/qebuild/q-e-qe-7.5
+  extracted: Collinear spin/RPA supported; ALDA density kernels one-spin only; response nblocks1 avoids missing BLACS; QE PHonon LSDA/USPP supported but unbuilt; EPW LSDA e-ph rejected; physical e-ph linewidth machinery distinct from eta.
+- source: Catalyst campaign3 actual QE inputs and geometry/recovery code
+  access: /home/administrator/projects/catalyst-dft/runs/campaign3; source-backed scout handoffs preserved before execution
+  extracted: Historical GBRV40/480Ry protocol and conventional-coordinate geometry; old vacancy structures have frozen Ni and are not full stationary backgrounds; single serial controller is essential.
+invariants:
+- Preserve Dan's Ni-lattice discovery objective and electron-versus-nuclear mechanism alternatives; no universal negative conclusion from one numerical model.
+- Use actual host/loaded structures, mobile local Ni and H, and material-derived coupling/loss; no arbitrary gain, all-to-all coupling or pre-aligned phase as evidence.
+- Ordinary extended vibrations, linear response and synchronized driving do not establish spontaneous quantum coherence or enhanced nuclear rates.
+- Derive the full operator, static-screening bookkeeping, observables and their units before production dynamics; validate reduction against an independent small-system response.
+- Every simulation launches through a labeled herdr tab, with durable systemd ownership, atomic checkpoints, exact input binding and demonstrated crash recovery.
+- Existing VM only; benchmark runtime, keep BLAS threads pinned, preserve archives and unrelated edits, and record protocol deviations before consuming their outputs.
+allowed_imports:
+- Standard spin-polarized PBE Born-Oppenheimer DFT and source-verified PAW/USPP response implementations, at their approximated physical scope.
+- Primary coherence proposals as candidate mechanisms, not accepted Ni or LENR facts.
+- Existing substrate_framework.numerics and exact linear retained-memory APIs after applicability review; no Euler-to-Ni physical identification.
+- SymPy exact finite-matrix identities and SciPy convergence-bounded simulation evidence; no arbitrary phenomenological rate promoted to measured physics.
+candidates:
+- id: E
+  description: Material-specific electronic/electromagnetic collective response coupled to H/Ni motion, screened and dissipative.
+- id: N
+  description: Quantum-nuclear collective response on the material potential, with explicit nuclear state, isotope/statistics and environmental coupling.
+- id: V
+  description: Ordinary coupled H/Ni vibrations and host-mediated transport as the explicit null/comparator.
+selection_criteria:
+- Preserve physical material, symmetries, conservation, passivity, units and consistent screening.
+- Determine coupling and loss from calculated or explicitly sourced inputs rather than desired output.
+- Validate reduction on a small system before extending object count; vary size independently of density and numerical resolution.
+- Generate a discriminating configuration/isotope consequence with uncertainty; do not rank by loading alone.
+- Keep the nuclear transition and energy-disposal bridge explicit, without attaching rates to coherence metrics.
+claims_proposed: []
+comparators_blinded_until: Historical campaigns1-4 and source proposals were already exposed. Their values remain prior/calibration evidence; new design supplements freeze before their own production outputs. No blinding is claimed.
+candidate_universe:
+  scope: Electronic/EM, quantum-nuclear and ordinary-vibration routes for collective response in loaded Ni; full LENR parent remains explicit.
+  frozen_from: [Dan chat authorization2026-10-19, primary source inventory, material and survival invariants, permitted DFT and exact-matrix imports]
+  route_families: [E, N, V]
+  append_only_expansions: []
+license_registry:
+- {id: L0, proposition: Source access and the numerical/model protocol are explicit before the corresponding execution wave, status: unearned, evidence: null, earned_by: null}
+- {id: L1, proposition: Convergence-scoped stationary material structures and coupled force constants exist with geometry and sensitivity evidence, status: unearned, evidence: null, earned_by: null}
+- {id: L2, proposition: Electronic response, actual inter-region coupling and defensible physical loss inputs are available at their declared scopes, status: unearned, evidence: null, earned_by: null}
+- {id: L3, proposition: A validated material-calibrated collective dynamics calculation measures local-excitation propagation and correlations with energy and convergence controls, status: unearned, evidence: null, earned_by: null}
+- {id: L4, proposition: Candidate lattice designs are compared using computed collective observables and their uncertainties, status: unearned, evidence: null, earned_by: null}
+- {id: L5, proposition: The nuclear transition and energy-disposal bridge is assessed at exact sourced/operator scope with remaining inputs explicit, status: unearned, evidence: null, earned_by: null}
+obligation_graph:
+  nodes:
+  - id: G0
+    positive_intent: Freeze primary sources, material/model licenses, recovery protocol and numerical wave supplements before production.
+    requires: []
+    pass_licenses: [L0]
+    does_not_license: [No new material or coherence result]
+    maximum_verdict: protocol_and_source_evidence
+    failure_scope: The unavailable source/backend or protocol element only
+    unlocks: [G1, G2]
+    status: active
+    license_chain:
+      object: Source-backed candidate universe and executable calculation/recovery protocol
+      symmetry_or_conservation: Definitions record the physical invariants but establish no new conservation theorem
+      ensemble: Preregistration and software recovery pilot; not material inference
+      variational_functional: Physical functionals are obligations of downstream model construction
+      admissible_space: Existing VM, loaded Ni candidates and explicit engineering ownership
+      representation_coverage: Electron/EM and nuclear alternatives retained; no phase selected by analogy
+      observable: Source accessibility, actual backend behavior and completed-stage survival after crash
+      numerical_representation: W0 pilot measures performance and recovery only; no physics interpretation from pilot sampling
+      permitted_verdict: Source/protocol/recovery evidence
+  - id: G1
+    positive_intent: Calculate full-host stationary structures and coupled H/Ni modes with resolved numerical sensitivity.
+    requires: [L0]
+    pass_licenses: [L1]
+    does_not_license: [Quantum coherence, nuclear enhancement, isolated-pair law from one periodic cell]
+    maximum_verdict: numeric_evidence
+    failure_scope: The computed candidate and represented periodic geometry only
+    unlocks: [G2]
+    status: pending
+    license_chain:
+      object: Fixed-cell Born-Oppenheimer stationary material and its full H/Ni second variation
+      symmetry_or_conservation: Translation/acoustic symmetry and reciprocal force constants; raw residuals before correction
+      ensemble: Statics and harmonic modes at stated cell, loading, magnetic state and electronic sampling
+      variational_functional: Spin-polarized PBE Born-Oppenheimer energy with all atomic positions admitted
+      admissible_space: Periodic Ni32 host, empty vacancy, Ni31H6 shell and Ni32H6 octahedral controls initially; global translation is a gauge
+      representation_coverage: Full atomic tangent in each declared cell; cell strain and larger domains require separate supplements
+      observable: Stationarity, force constants, mode frequencies/eigenvectors and isotope dependence
+      numerical_representation: QE DFPT or symmetry-verified central differences, cutoff/k/smearing/displacement refinement and small-ratio error budget
+      permitted_verdict: Convergence-scoped material and mode evidence, not a phase or universal no-go
+  - id: G2
+    positive_intent: Determine electronic response, actual inter-region coupling and physical loss channels for the settled material.
+    requires: [L0, L1]
+    pass_licenses: [L2]
+    does_not_license: [Numerical eta as lifetime, arbitrary finite-q transverse tensor from longitudinal response, enhanced nuclear rate]
+    maximum_verdict: numeric_evidence
+    failure_scope: The calculated response approximation and physical channels actually included
+    unlocks: [G3]
+    status: pending
+    license_chain:
+      object: Retarded material response and inter-region coupling including declared loss channels
+      symmetry_or_conservation: Causality, passivity, reciprocal response where applicable and consistent static screening
+      ensemble: Linear response about the same material state; electronic smearing distinguished from physical temperature
+      variational_functional: Source-defined TDDFT/RPA response plus material electron-phonon vertices and the downstream effective action before combination
+      admissible_space: Collinear spin-PBE/PW RPA and source-supported LSDA/USPP DFPT; commensurate q and explicit optical-limit assumptions
+      representation_coverage: Finite-q longitudinal and optical tensor channels remain distinct; omitted damping channels are named
+      observable: Susceptibility/dielectric loss, mode couplings and independently converged physical linewidth or retained bath spectrum
+      numerical_representation: Empty-band, k/q, response cutoff and eta convergence; no Drude input rate relabeled as output
+      permitted_verdict: Approximation- and channel-scoped response/coupling/loss evidence
+  - id: G3
+    positive_intent: Evolve the material-calibrated many-region system and measure genuine local-to-extended response.
+    requires: [L1, L2]
+    pass_licenses: [L3]
+    does_not_license: [Spontaneous phase from a harmonic mode, condensation from classical motion, LENR heat from correlations]
+    maximum_verdict: simulation_evidence
+    failure_scope: The derived dynamical model, state, boundary and parameter class only
+    unlocks: [G4, G5]
+    status: pending
+    license_chain:
+      object: Explicit coupled matter/field or equivalent retarded-response operator and state/covariance dynamics
+      symmetry_or_conservation: Full energy balance, gauge/static-screening consistency and equilibrium noise/loss relation in the chosen representation
+      ensemble: Local excitation and thermal or quantum initial state; common-drive locking is a separate comparator
+      variational_functional: Complete quadratic or justified nonlinear effective action derived and verified before production integration
+      admissible_space: Physically calibrated region array with stated boundaries and disorder; no imposed common phase or gain
+      representation_coverage: Reduction validated on a small unreduced system; linear Gaussian response is not nuclear exchange or a nonlinear phase
+      observable: Connected space/time correlations, participation, propagation, energy flow and convergence-scoped decay
+      numerical_representation: Independent size/density/resolution variations, small-system/soluble cross-check, boundary-return control and meaningful mutations
+      permitted_verdict: Material-calibrated collective-response simulation evidence
+  - id: G4
+    positive_intent: Compare candidate lattice designs using collective response and loss rather than inventory alone.
+    requires: [L3]
+    pass_licenses: [L4]
+    does_not_license: [Global optimum from finite representatives, experimental LENR improvement from model ranking]
+    maximum_verdict: simulation_evidence
+    failure_scope: The explicitly compared representatives with their uncertainty
+    unlocks: [G5]
+    status: pending
+    license_chain:
+      object: Matched-loading and stated-density design comparison
+      symmetry_or_conservation: Same normalization and physical channels across the compared models
+      ensemble: Registered lattice/strain/arrangement/isotope comparisons
+      variational_functional: The same calibrated effective model with configuration-specific computed inputs
+      admissible_space: Registered representatives; additional candidates expand append-only
+      representation_coverage: Finite comparison, not exhaustive optimization
+      observable: Computed coupling/loss/correlation observables with numerical and model uncertainty
+      numerical_representation: Common error budget and convergence controls; no prediction credit for fitted calibration observables
+      permitted_verdict: Ranking or unresolved comparison of these representatives only
+  - id: G5
+    positive_intent: Resolve the sourced nuclear-transition and energy-disposal bridge at the strongest earned scope and name every remaining physical construction.
+    requires: [L3, L4]
+    pass_licenses: [L5]
+    does_not_license: [An enhanced rate without its nuclear operator and medium map, heat without energy/product accounting]
+    maximum_verdict: source_and_operator_scoped_assessment
+    failure_scope: The inspected nuclear mechanism and its supplied assumptions only; full LENR parent remains explicit
+    unlocks: []
+    status: pending
+    license_chain:
+      object: Candidate nuclear transition operator, medium coupling and energy/product channel map
+      symmetry_or_conservation: Charge, energy and appropriate nuclear quantum-number accounting
+      ensemble: Explicit candidate nuclear process in the calibrated material; no rate assigned to a coherence metric
+      variational_functional: Source-specific nuclear-plus-medium Hamiltonian only if its parameters and applicability are established
+      admissible_space: Primary-source mechanisms and actual material inputs; absent nuclear matrix elements are explicit missing constructions
+      representation_coverage: Assessment does not promote a hypothetical operator or material response into established nuclear physics
+      observable: Licensed transition/rate/product consequences or exact missing prerequisite
+      numerical_representation: SymPy/SciPy oracle and mutation for each quantitative bridge claim; no invented nuclear coupling
+      permitted_verdict: Exact sourced/operator assessment; nuclear-rate evidence only with complete licensed inputs
+route_frontier:
+  active_obligation: G0
+  considered: [E, N, V]
+  tried: []
+  failure_generated: []
+  remaining: [E, N, V]
+execution_state: active
+objective_state: active
+exhaustion_certificate:
+  historical_routes: []
+  external_routes: []
+  failure_generated_routes: []
+  equivalence_partition: []
+  adversarial_generation_artifact: null
+  adversarial_reviewer: null
+  adversarial_reviewer_role: null
+  infinite_class_coverage: []
+  route_verdicts: []
+  routes_remaining: null
+  review: null
+status: active
