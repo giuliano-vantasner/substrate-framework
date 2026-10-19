@@ -2,9 +2,7 @@
 """Run exact convention oracles and native raw-matrix comparisons; no simulations."""
 
 import argparse
-import hashlib
 import json
-import os
 from pathlib import Path
 import platform
 import time
@@ -17,15 +15,15 @@ from substrate_framework import material_force_lattice, material_modes
 from substrate_framework.verification import CheckLedger
 from force_lattice_oracle import force_lattice_block
 from native_pilot_oracle import native_pilot_block
-from units_modes_oracle import unit_block, mixed_mass_block
+from units_modes_oracle import unit_block, mixed_mass_block, native_rounding_block
+from native_qe_replay import replay_serialized_operators
+from oracle_artifacts import sha256, save_receipt
 
 HERE = Path(__file__).resolve().parent
 PROPOSAL = HERE.parents[1]
 SOURCES = PROPOSAL / "sources/qe75-phonon-operator"
 
 
-def sha256(path):
-    return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 
 
 def source_hashes(ledger):
@@ -41,15 +39,6 @@ def source_hashes(ledger):
     return hashes
 
 
-def save_receipt(path, payload):
-    path = Path(path)
-    temporary = path.with_suffix(path.suffix+".tmp")
-    with temporary.open("w") as handle:
-        json.dump(payload,handle,indent=2,allow_nan=False)
-        handle.write("\n")
-        handle.flush()
-        os.fsync(handle.fileno())
-    os.replace(temporary,path)
 
 
 def main():
@@ -67,7 +56,7 @@ def main():
                "python":platform.python_version(),"numpy":np.__version__,"sympy":sp.__version__}
     try:
         receipt["source_sha256"] = source_hashes(ledger)
-        for block in (unit_block,mixed_mass_block,force_lattice_block):
+        for block in (unit_block,mixed_mass_block,native_rounding_block,force_lattice_block):
             receipt["blocks"][block.__name__] = block(ledger)
             print(f"BLOCK_COMPLETE {block.__name__}",flush=True)
         receipt["native_input_sha256"] = {str(args.result):sha256(args.result)}
@@ -75,7 +64,8 @@ def main():
         for record in data["dynamical_matrices"]:
             path = args.native_directory/Path(record["artifact"]).name
             receipt["native_input_sha256"][str(path)] = sha256(path)
-        receipt["blocks"]["native_pilot_block"] = native_pilot_block(ledger,args.result,args.native_directory)
+        receipt["native_replay"] = replay_serialized_operators(args.result,args.native_directory)
+        receipt["blocks"]["native_pilot_block"] = native_pilot_block(ledger,args.result,args.native_directory,receipt["native_replay"])
         ledger.finish()
         receipt["status"] = "complete"
     except Exception:
@@ -86,6 +76,8 @@ def main():
         receipt["passed_checks"] = ledger.passed
         receipt["elapsed_seconds"] = time.monotonic()-started
         save_receipt(args.receipt,receipt)
+        if receipt["status"] == "failed":
+            print(f"P254_RAW_PHONON_OPERATOR_FAILED {args.receipt}",flush=True)
     print(f"P254_RAW_PHONON_OPERATOR_COMPLETE {args.receipt}",flush=True)
     return 0
 

@@ -4,6 +4,7 @@ import numpy as np
 import sympy as sp
 
 from substrate_framework import material_modes as modes
+from native_pilot_oracle import frequency_interval_qe
 
 
 def unit_block(ledger):
@@ -83,3 +84,37 @@ def mixed_mass_block(ledger):
     return {"masses_amu": masses.tolist(), "spring_ry_per_bohr2": spring.tolist(),
             "raw_asymmetric_operator_residuals_si": diagnostics,
             "scope": "Synthetic mixed-mass harmonic convention fixture, not Ni parameters or stability evidence."}
+
+
+def native_rounding_block(ledger):
+    x = sp.symbols("x", real=True)
+    t = sp.symbols("t", positive=True)
+    ledger.check("signed-square inverse monotone on both branches",
+                 sp.diff(x**2,x).subs(x,t) == 2*t and sp.diff(-x**2,x).subs(x,-t) == 2*t)
+    ledger.check("signed-square branches continuous at zero",
+                 sp.limit(x**2,x,0,dir="+") == sp.limit(-x**2,x,0,dir="-") == 0)
+    cases = []
+    unsigned_exposed = False
+    for f,d in [(sp.Rational(0),sp.Rational(1,10)),
+                (sp.Rational(1,20),sp.Rational(1,10)),
+                (sp.Rational(-1,20),sp.Rational(1,10)),
+                (sp.Rational(2),sp.Rational(1,10)),
+                (sp.Rational(-2),sp.Rational(1,10))]:
+        exact = np.array([float(v*abs(v)) for v in (f-d,f+d)])
+        actual = np.array(frequency_interval_qe(float(f)*modes.RY_TO_THZ,float(d)*modes.RY_TO_THZ))
+        allowance = 64*np.finfo(float).eps*max(1,float(np.max(np.abs(exact))))
+        ledger.check(f"native signed rounding interval f={f}", np.max(np.abs(actual-exact)) <= allowance)
+        unsigned = np.array([float(v**2) for v in (f-d,f+d)])
+        unsigned_exposed |= np.max(np.abs(unsigned-exact)) > allowance
+        cases.append({"frequency_over_RY_TO_THZ":str(f),"half_width_over_RY_TO_THZ":str(d),
+                      "exact_signed_squared_interval":exact.tolist()})
+    ledger.check("unsigned native inverse mutation exposed",bool(unsigned_exposed))
+    f,d = 0.05,0.1
+    low,high = frequency_interval_qe(f*modes.RY_TO_THZ,d*modes.RY_TO_THZ)
+    omitted_low,omitted_high = frequency_interval_qe(f*modes.RY_TO_THZ,0)
+    witness = (f+0.9*d)**2
+    ledger.check("omitted print quantum mutation exposed",
+                 low <= witness <= high and not omitted_low <= witness <= omitted_high)
+    return {"inverse":"sign(f)*(f/RY_TO_THZ)^2 is continuous and monotone, so endpoint inversion encloses a printed-frequency interval even across zero",
+            "native_print_half_width_cm_1":"(1/2)*10^-4 from matdyn (6f10.4), before an independent engineering eigensolver allowance",
+            "cases":cases,"scope":"Signed interval propagation, not a physical error bar or a certified floating-point enclosure."}

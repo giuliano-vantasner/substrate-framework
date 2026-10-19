@@ -3,6 +3,16 @@
   "upstream": "Quantum ESPRESSO 7.5 local native source",
   "files": [
     {
+      "path": "sources/qe75-phonon-operator/Modules/has_xml.f90",
+      "original": "/opt/qebuild/q-e-qe-7.5/Modules/has_xml.f90",
+      "sha256": "7ac602e1c0f93f35f7799270377b301c4ac65dfa683b4c41a0a5b94a89dcbfe9"
+    },
+    {
+      "path": "sources/qe75-phonon-operator/PHonon/PH/q2qstar_ph.f90",
+      "original": "/opt/qebuild/q-e-qe-7.5/PHonon/PH/q2qstar_ph.f90",
+      "sha256": "f7b4bdf09f3f9e8d57387ef6c7353f84edf7e5459daad4b4dd1ce977bd685467"
+    },
+    {
       "path": "sources/qe75-phonon-operator/Modules/constants.f90",
       "original": "/opt/qebuild/q-e-qe-7.5/Modules/constants.f90",
       "sha256": "56c39e90c6f0592aff13972cd090292024a3d4e9e86d0ce4fdfdb5643f1ac1c0"
