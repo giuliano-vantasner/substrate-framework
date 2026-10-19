@@ -100,6 +100,16 @@ def replay_serialized_operators(result_path, native_directory):
         receipt = json.loads(receipt_path.read_text())
         if receipt["input_sha256"] != inputs or receipt["status"] != "complete":
             raise ValueError("native replay receipt is not bound to these complete inputs")
+        directory = Path(receipt["frequency_file"]).parent
+        required = {"q2r.in", "q2r.stdout", "q2r.stderr", "q2r-command.json",
+                    "matdyn.in", "matdyn.stdout", "matdyn.stderr", "matdyn-command.json",
+                    "ifc.xml", "sampled.freq"}
+        actual = {str(path) for path in directory.rglob("*") if path.is_file()}
+        if (directory.parent != root or Path(receipt["frequency_file"]).name != "sampled.freq"
+                or not required <= {Path(path).name for path in actual}
+                or actual != set(receipt["artifact_sha256"])
+                or receipt["grid"] != grid or receipt["number_of_atoms"] != nat):
+            raise ValueError("native replay cache has incomplete or displaced artifacts/metadata")
         for path, digest in receipt["artifact_sha256"].items():
             if sha256(path) != digest:
                 raise ValueError(f"native replay artifact changed: {path}")

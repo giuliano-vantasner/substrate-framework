@@ -18,6 +18,7 @@ from native_pilot_oracle import native_pilot_block
 from units_modes_oracle import unit_block, mixed_mass_block, native_rounding_block
 from native_qe_replay import replay_serialized_operators
 from oracle_artifacts import sha256, save_receipt
+from cache_reuse_oracle import cache_reuse_block
 
 HERE = Path(__file__).resolve().parent
 PROPOSAL = HERE.parents[1]
@@ -66,6 +67,7 @@ def main():
             receipt["native_input_sha256"][str(path)] = sha256(path)
         receipt["native_replay"] = replay_serialized_operators(args.result,args.native_directory)
         receipt["blocks"]["native_pilot_block"] = native_pilot_block(ledger,args.result,args.native_directory,receipt["native_replay"])
+        receipt["blocks"]["cache_reuse_block"] = cache_reuse_block(ledger,args.result,args.native_directory,receipt["native_replay"])
         ledger.finish()
         receipt["status"] = "complete"
     except Exception:

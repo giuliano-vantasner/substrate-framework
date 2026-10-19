@@ -2,7 +2,7 @@
   "schema_version": 1,
   "attempt": "0003",
   "positive_intent": "Turn settled raw QE PH outputs into explicit mass-weighted physical harmonic operators without silently altering their matrices, and settle the native finite-grid phase convention.",
-  "execution_state": "First root run passed synthetic convention blocks and failed the original PH-frequency identification. first-run-failure.json is retained. Corrected serialized-grid replay is preregistered below and has not yet been executed.",
+  "execution_state": "Actual corrected q2r/matdyn serialized-grid replay and completed-cache recovery passed in dft-c5-phonon-operator.service, labeled herdr w1:p9. receipt.json is complete with 127 passed checks over all eight native q-star members. first-run-failure.json preserves the original failed PH-reference identification.",
   "claim_delta": "No new material claim. Source-backed definitions and exposing oracles only until executed and reviewed.",
   "command": "env PYTHONPATH=/home/administrator/projects/substrate-ni-collective/src OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 /home/administrator/projects/substrate-framework/.venv/bin/python /home/administrator/projects/substrate-ni-collective/proposals/P254-ni-collective-response/attempts/0003/run_oracles.py",
   "production_command_template": "env PYTHONPATH=/home/administrator/projects/substrate-ni-collective/src OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 /home/administrator/projects/substrate-framework/.venv/bin/python /home/administrator/projects/substrate-ni-collective/proposals/P254-ni-collective-response/attempts/0003/run_oracles.py --result /absolute/W1/stage/result.json --native-directory /absolute/W1/stage/native --receipt /absolute/new-receipt.json",
@@ -35,10 +35,11 @@
     "force_lattice_oracle.py": "Exact 3x1x1 two-basis-atom fixture, nonzero rational tau and nonsymmetric oriented Cartesian couplings. Independent exact positive/negative phase sums versus NumPy FFT, reconstruction, reciprocity, translation and q-star completeness. Mutations: Fourier sign, erroneous tau phase, broken complex reciprocity, missing/duplicate q members.",
     "native_pilot_oracle.py": "Independently decode every native XML force matrix. Compare each explicitly Hermitian-processed q-star operator to q2r/matdyn replay at the same sampled q. Invert source-derived print intervals monotonically, with an independently declared full-grid-scale roundoff allowance. Original PH OMEGA tags remain separate diagnostics rather than an invalid exact serialized-operator reference.",
     "native_qe_replay.py": "Run the registered QE7.5 q2r and matdyn binaries through the labeled durable herdr service, with no ASR or polar corrections. Hash all raw inputs, helper code, binaries and replay artifacts; preserve interrupted attempts and deeply validate completed cache reuse.",
+    "cache_reuse_oracle.py": "Call the actual completed native replay cache again and verify every raw replay artifact plus its receipt retains SHA256 and nanosecond mtime. No mock, native rerun or replacement attempt is accepted on cache reuse.",
     "run_oracles.py": "Verify source/pilot snapshot hashes, run synthetic and actual native linear-operator blocks, and atomically publish complete or raw-exception failed receipts. Native replay is not an electronic DFT calculation."
   },
   "remaining_risks": [
-    "Corrected native replay remains unexecuted; first-run failure is preserved, not overwritten or reinterpreted as a pass.",
+    "This settles conventions and actual cache recovery for the native engineering fixture, not a stationary material spectrum or physical convergence.",
     "256*n*machine-epsilon times the maximum local/reference/sum-of-grid-operator-norm scale is a preregistered engineering roundoff allowance, not a certified LAPACK enclosure or material convergence evidence. Print quantization is propagated separately without fitting a tolerance to the failed PH comparison.",
     "Pilot Ni1 2x2x2 outputs are only a native engineering/unit fixture; acoustic residuals, signed instabilities and raw errors retain their source values.",
     "No mode or lattice inference licenses phase/BEC, a compact charge, phonon lifetime from eta, nuclear enhancement or a material stability conclusion.",

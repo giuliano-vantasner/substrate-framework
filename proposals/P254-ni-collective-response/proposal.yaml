@@ -36,6 +36,18 @@ source_inventory:
 - source: Actual W0 native recovery proofs and W1 preregistration, catalyst-dft@3138edc
   access: https://github.com/giuliano-vantasner/catalyst-dft/tree/3138edc/runs/2026-10-19_collective-response
   extracted: SCF completed-boundary survival, PH native irrep skip and GPAW all-wavefunction recovery are exercised; W1-stationary-inputs.md freezes fully mobile candidate seeds and force/mode sensitivity gates before W1 engine outputs. Pilot Ni1 response remains engineering evidence only.
+- source: QE7.5 serialized harmonic-operator oracle, P254 attempt0003
+  access: attempts/0003/record.json and complete receipt.json; sources/qe75-phonon-operator/manifest.json; original failed comparison retained in first-run-failure.json
+  extracted: Explicit mass weighting, signed modes, weighted translations and finite-grid phase conventions pass exposing oracles; actual q2r/matdyn replay covers all eight native pilot q members and completed-cache reuse preserves hashes/mtimes. Original PH OMEGA tags and its additionally averaged serialized operator are distinct finite-precision objects. No material spectrum is licensed.
+- source: Feliciano Giustino, Electron-phonon interactions from first principles, RMP89 015003 (2017), DOI10.1103/RevModPhys.89.015003
+  access: sources/giustino2017-electron-phonon.pdf and full text sidecar; metadata and MD5SUMS; verified author manuscript dated January31,2017 from arXiv1603.06965
+  extracted: Complete review acquired; force-vertex and phonon-self-energy sections must be read and their applicable identities verified before W2 use.
+- source: Andrea Dal Corso, Density-functional perturbation theory with ultrasoft pseudopotentials, PRB64 235118 (2001), DOI10.1103/PhysRevB.64.235118
+  access: sources/dal-corso2001-prb64-235118.pdf and full seventeen-page text; sources/dal-corso2001-provenance.json; prior blocked access history retained separately
+  extracted: Original journal paper acquired after the user's exact-page robot-check approval. Static USPP density/overlap/force derivatives and AppendixB are available; no off-shell dynamical Hamiltonian is licensed merely by acquisition.
+- source: Actual GBRV UPF headers and installed GPAW PAW atom metadata
+  access: /home/administrator/projects/catalyst-dft/pseudos/ni_pbe_v1.4.uspp.F.UPF and h_pbe_v1.4.uspp.F.UPF; installed gpaw_data/setups/Ni.10.PBE.gz and Ni.PBE.gz; sources/electronic-model-source-correction.json
+  extracted: GBRV Ni has Z-valence18 and H1, while the GPAW pilot Ni.10 has valence10 and the installed default Ni has valence16. The supplied Ni10 description in the raw density audit is not the actual QE model. Do not identify these response spaces or rescale one into another without a validated mapping.
 invariants:
 - Preserve Dan's Ni-lattice discovery objective and electron-versus-nuclear mechanism alternatives; no universal negative conclusion from one numerical model.
 - Use actual host/loaded structures, mobile local Ni and H, and material-derived coupling/loss; no arbitrary gain, all-to-all coupling or pre-aligned phase as evidence.

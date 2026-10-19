@@ -120,6 +120,8 @@ def project_gamma_translations(operator, masses_amu, *, q_fractional):
 
     Caller records raw residuals first. This finite-matrix projection changes the
     model; it neither clips eigenvalues nor projects rotational sum rules.
+    Exactly Hermitian inputs retain that invariant after multiplication roundoff;
+    asymmetric inputs are not silently Hermitian-projected.
     """
     q = np.asarray(q_fractional, dtype=float)
     if q.shape != (3,) or not np.all(np.isfinite(q)) or np.any(q != np.rint(q)):
@@ -129,7 +131,10 @@ def project_gamma_translations(operator, masses_amu, *, q_fractional):
     if matrix.shape[0] != translations.shape[0]:
         raise ValueError("operator and masses disagree")
     projector = np.eye(matrix.shape[0]) - translations @ translations.T
-    return projector @ matrix @ projector
+    projected = projector @ matrix @ projector
+    if np.array_equal(matrix, matrix.conj().T):
+        return project_hermitian(projected)
+    return projected
 
 
 @dataclass(frozen=True)
