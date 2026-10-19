@@ -48,6 +48,18 @@ source_inventory:
 - source: Actual GBRV UPF headers and installed GPAW PAW atom metadata
   access: /home/administrator/projects/catalyst-dft/pseudos/ni_pbe_v1.4.uspp.F.UPF and h_pbe_v1.4.uspp.F.UPF; installed gpaw_data/setups/Ni.10.PBE.gz and Ni.PBE.gz; sources/electronic-model-source-correction.json
   extracted: GBRV Ni has Z-valence18 and H1, while the GPAW pilot Ni.10 has valence10 and the installed default Ni has valence16. The supplied Ni10 description in the raw density audit is not the actual QE model. Do not identify these response spaces or rescale one into another without a validated mapping.
+- source: Xiaofeng Qian, Ju Li, Xi Lin and Sidney Yip, Time-dependent density functional theory with ultrasoft pseudopotentials - Real-time electron propagation across a molecular junction, PRB73 035408 (2006), DOI10.1103/PhysRevB.73.035408
+  access: sources/qian2006-prb73-035408.pdf and complete sidecar; exact bibliographic metadata and full source applicability audit
+  extracted: The moving-ion transformation route requires embedding/connection information not supplied by the actual GBRV UPFs; sources/uspp-moving-ion-source-extension.txt and attempt0005 delimit the off-shell shortcut. No replacement Hamiltonian is thereby identified with GBRV.
+- source: D. R. Hamann, Optimized norm-conserving Vanderbilt pseudopotentials, PRB88 085117 (2013), DOI10.1103/PhysRevB.88.085117
+  access: sources/hamann2013-oncv.pdf, complete21-page author manuscript/text/metadata; original equation images and verification in sources/oncv-equation-evidence/
+  extracted: Inverse-overlap separable nonlocal operator, norm constraints and scalar-relativistic qualifications are source-accessible; this is an ordinary pseudo-Hilbert-space candidate, not an all-electron embedding.
+- source: Martin Schlipf and Francois Gygi, Optimization algorithm for the generation of ONCV pseudopotentials, CPC196 36-44 (2015), DOI10.1016/j.cpc.2015.05.011, and official SG15-2020 distribution
+  access: Complete11-page sources/schlipf-gygi2015-oncv.pdf/text/metadata; exact selected Ni/H UPFs and byte-verified original archive provenance in sources/sg15-2020/
+  extracted: Exact selected NC Ni18/H1 files are available. Equal valence to GBRV is not Hamiltonian identity or NiH cutoff convergence.
+- source: Settled NC source and installed-backend audits, P254 W2-nc-readiness-plan.json
+  access: Complete sources/nc-source-applicability.json and sources/nc-backend-capabilities.json; original image gate sources/oncv-equation-evidence/verification.json
+  extracted: Same-engine QE bare/screened complex-vertex candidate and its ensemble, screening, loss and missing-output obligations are explicit. W2-nc-native-proof-plan.json preregisters isolated engineering/oracle proofs and preserves G1-G5; no NC material license is yet earned.
 invariants:
 - Preserve Dan's Ni-lattice discovery objective and electron-versus-nuclear mechanism alternatives; no universal negative conclusion from one numerical model.
 - Use actual host/loaded structures, mobile local Ni and H, and material-derived coupling/loss; no arbitrary gain, all-to-all coupling or pre-aligned phase as evidence.
@@ -144,8 +156,8 @@ obligation_graph:
       object: Retarded material response and inter-region coupling including declared loss channels
       symmetry_or_conservation: Causality, passivity, reciprocal response where applicable and consistent static screening
       ensemble: Linear response about the same material state; electronic smearing distinguished from physical temperature
-      variational_functional: Source-defined TDDFT/RPA response plus material electron-phonon vertices and the downstream effective action before combination
-      admissible_space: Collinear spin-PBE/PW RPA and source-supported LSDA/USPP DFPT; commensurate q and explicit optical-limit assumptions
+      variational_functional: Source-defined TDDFT/RPA response plus material electron-phonon vertices and the downstream effective action before combination; any independent-KS transition-bath approximation requires its own verified ensemble/action and comparison boundary
+      admissible_space: Collinear spin-PBE/PW RPA and source-supported LSDA/USPP DFPT; separately declared SG15 NC ordinary-space candidate under W2-nc-native-proof-plan.json; commensurate q and explicit optical-limit assumptions; no cross-Hamiltonian identification
       representation_coverage: Finite-q longitudinal and optical tensor channels remain distinct; omitted damping channels are named
       observable: Susceptibility/dielectric loss, mode couplings and independently converged physical linewidth or retained bath spectrum
       numerical_representation: Empty-band, k/q, response cutoff and eta convergence; no Drude input rate relabeled as output
