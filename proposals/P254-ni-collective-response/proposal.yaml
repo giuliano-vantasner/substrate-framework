@@ -23,13 +23,19 @@ source_inventory:
   extracted: RPA density response, optical-limit versus finite-q longitudinal distinction, artificial broadening, PAW electron-phonon vertices and convergence requirements.
 - source: Installed GPAW26.7 and configured QE7.5 source
   access: /home/administrator/projects/catalyst-dft/.venv/lib/python3.12/site-packages/gpaw and /opt/qebuild/q-e-qe-7.5
-  extracted: Collinear spin/RPA supported; ALDA density kernels one-spin only; response nblocks1 avoids missing BLACS; QE PHonon LSDA/USPP supported but unbuilt; EPW LSDA e-ph rejected; physical e-ph linewidth machinery distinct from eta.
+  extracted: Collinear spin/RPA supported; ALDA density kernels one-spin only; response nblocks1 avoids missing BLACS; QE PHonon LSDA/USPP native build and irrep-recovery pilot completed; EPW LSDA e-ph rejected; physical e-ph linewidth machinery distinct from eta.
 - source: Catalyst campaign3 actual QE inputs and geometry/recovery code
   access: /home/administrator/projects/catalyst-dft/runs/campaign3; source-backed scout handoffs preserved before execution
   extracted: Historical GBRV40/480Ry protocol and conventional-coordinate geometry; old vacancy structures have frozen Ni and are not full stationary backgrounds; single serial controller is essential.
 - source: Exact finite quadratic building-block oracle, P254 attempt0001 (2026-10-19)
   access: attempts/0001/derive_blocks.py, receipt.json and first-run-failure.txt; reusable src/substrate_framework/material_matter_field.py
   extracted: Verified complete-square energy, static bath subtraction and direct/reduced retarded resolvent with exposing mutations; finite conditional identities only, not material calibration or a coherence phase.
+- source: NIST Atomic Weights and Isotopic Compositions for Hydrogen
+  access: sources/nist-hydrogen-isotopes.txt, complete accessed primary NIST page with URL
+  extracted: Neutral H-1 and H-2 atomic masses are explicit model inputs; a mass substitution alone does not model nuclear exchange.
+- source: Actual W0 native recovery proofs and W1 preregistration, catalyst-dft@3138edc
+  access: https://github.com/giuliano-vantasner/catalyst-dft/tree/3138edc/runs/2026-10-19_collective-response
+  extracted: SCF completed-boundary survival, PH native irrep skip and GPAW all-wavefunction recovery are exercised; W1-stationary-inputs.md freezes fully mobile candidate seeds and force/mode sensitivity gates before W1 engine outputs. Pilot Ni1 response remains engineering evidence only.
 invariants:
 - Preserve Dan's Ni-lattice discovery objective and electron-versus-nuclear mechanism alternatives; no universal negative conclusion from one numerical model.
 - Use actual host/loaded structures, mobile local Ni and H, and material-derived coupling/loss; no arbitrary gain, all-to-all coupling or pre-aligned phase as evidence.
@@ -63,7 +69,11 @@ candidate_universe:
   route_families: [E, N, V]
   append_only_expansions: []
 license_registry:
-- {id: L0, proposition: Source access and the numerical/model protocol are explicit before the corresponding execution wave, status: unearned, evidence: null, earned_by: null}
+- id: L0
+  proposition: Source access and the numerical/model protocol are explicit before the corresponding execution wave
+  status: earned
+  evidence: 'P254 source inventory and attempt0001; catalyst-dft@3138edc PLAN.md, W1-stationary-inputs.md and actual SCF/PH/GPAW crash receipts. Earned for W0/W1 only; W2/W3 supplements remain mandatory before their own material execution.'
+  earned_by: G0
 - {id: L1, proposition: Convergence-scoped stationary material structures and coupled force constants exist with geometry and sensitivity evidence, status: unearned, evidence: null, earned_by: null}
 - {id: L2, proposition: Electronic response, actual inter-region coupling and defensible physical loss inputs are available at their declared scopes, status: unearned, evidence: null, earned_by: null}
 - {id: L3, proposition: A validated material-calibrated collective dynamics calculation measures local-excitation propagation and correlations with energy and convergence controls, status: unearned, evidence: null, earned_by: null}
@@ -79,7 +89,7 @@ obligation_graph:
     maximum_verdict: protocol_and_source_evidence
     failure_scope: The unavailable source/backend or protocol element only
     unlocks: [G1, G2]
-    status: active
+    status: established
     license_chain:
       object: Source-backed candidate universe and executable calculation/recovery protocol
       symmetry_or_conservation: Definitions record the physical invariants but establish no new conservation theorem
@@ -98,7 +108,7 @@ obligation_graph:
     maximum_verdict: numeric_evidence
     failure_scope: The computed candidate and represented periodic geometry only
     unlocks: [G2]
-    status: pending
+    status: active
     license_chain:
       object: Fixed-cell Born-Oppenheimer stationary material and its full H/Ni second variation
       symmetry_or_conservation: Translation/acoustic symmetry and reciprocal force constants; raw residuals before correction
@@ -186,7 +196,7 @@ obligation_graph:
       numerical_representation: SymPy/SciPy oracle and mutation for each quantitative bridge claim; no invented nuclear coupling
       permitted_verdict: Exact sourced/operator assessment; nuclear-rate evidence only with complete licensed inputs
 route_frontier:
-  active_obligation: G0
+  active_obligation: G1
   considered: [E, N, V]
   tried: []
   failure_generated: []
