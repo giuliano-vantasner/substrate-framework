@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "recorded_at": "2026-10-20T03:10:19.460Z",
-  "scope": "Complete current scientific intake for full NC1 source/input/IO/ownership prelaunch review after actual failed deployment and focused inherited-user-manager correction. Not review admission, Native permission, force/recovery or physical evidence.",
+  "recorded_at": "2026-10-20T03:32:13.065Z",
+  "scope": "Complete current scientific intake for full NC1 source/input/IO/ownership prelaunch review after actual failed deployment and focused inherited-user-manager correction. Not review admission, Native permission, force/recovery or physical evidence. Earlier a018/aebd subject is explicitly superseded for evidence completeness after rendered-output capture defect, preserved8b88c94. This complete replacement contains actual original bytes, not a delta-only addendum. No service/physics or original publication tuple changes.",
   "scientific_registration": {
     "path": "/home/administrator/projects/substrate-ni-collective/proposals/P254-ni-collective-response/NC1-stationary-material-supplement.json",
     "sha256": "97d6b8941ff4f5b3e3841ec16ec796b12e92ea6e563c60e94691fe86fbc6703c",
@@ -387,21 +387,21 @@
     ],
     "scope": "Only actual five affected software suites; no broad unchanged science rerun."
   },
-  "source_runtime_scope": "Full58 raw-source snapshot captures all registered current runtime/control sources, actual frozen local catdft sources, selected ASE parser primaries and affected tests/docs; every present runtime-publication binding matches. Actual907 producer input identities do not claim every future lazy import or Native mapping. Exact two service User removals preserve every other source-unit byte and all physical/nonpath fields. Actual non-Native UID/GID/groups/env/kernel-cap context passes8e3c9a3c; no permission grant. Original W1 missing lazy-source and mutable-IPC findings remain historical, not retrospectively repaired.",
+  "source_runtime_scope": "Complete58-source snapshot02 captures current registered control/runtime, actual frozen local catdft sources, selected ASE primaries and affected tests/docs;907 runtime inputs and six original tuples unchanged. User-only actual002 context raw role receipts remain df62e0ca/6ee5ebcd. Corrected wrappercb25b8df/complete journal968e0c38 use original raw SHAa9da37fd/106797B/71 JSON events, consumed by actual byte/count-integrity checker d2c61ddd with independent refusals. Earlier8e3/9130/4611 capture labels and old a018 subject are preserved as incomplete rendered evidence, not current full-output authority. Original W1 missing-lazy-source and mutable-IPC qualifications remain historical, not repaired by NC1.",
   "prelaunch_review_package": {
     "path": "/home/administrator/projects/catalyst-nc-operator/runs/2026-10-19_collective-response/nc-material/verification/prelaunch-review-package.json",
-    "sha256": "a018f983d7a99b7f23aa144b818c4656ceb40087aa46006ccc8dde747e1fcfd1",
-    "bytes": 95410,
-    "status": "Complete current full-source subject frozen; both new complete independent reviews required before admission. Earlier R5 reviews apply only to preserved old subject.",
+    "sha256": "d2b9b0c0280ff21df8334d8dcf19990510cfd491f46ed2b9fffda96bcbb76ccd",
+    "bytes": 103445,
+    "status": "Complete corrected whole subject settled for both independent complete final reviews. Earlier authority verdict on a018 is superseded and NOT admission.",
     "source_snapshot": {
-      "path": "/home/administrator/projects/catalyst-nc-operator/runs/2026-10-19_collective-response/nc-material/verification/source-snapshot-user-context-01.json",
-      "sha256": "346a3cf9c9e1cc8a806ac701b02254d8b5a157ae4edb7373e1f26450787273ab",
-      "bytes": 706881
+      "path": "/home/administrator/projects/catalyst-nc-operator/runs/2026-10-19_collective-response/nc-material/verification/source-snapshot-user-context-02.json",
+      "sha256": "4ad3e19aaafe3269c4f2821253cc79214a8080a96b6b7ad57935a3a3941459ff",
+      "bytes": 708164
     },
     "actual_reference_closure": {
       "path": "/home/administrator/projects/catalyst-nc-operator/runs/2026-10-19_collective-response/nc-material/verification/user-unit-context-full-subject-reference-closure.json",
-      "sha256": "545744915dfe8102b75a441775ac18ab9dee011a97620fbedabacacdc0d70ae5",
-      "bytes": 24467
+      "sha256": "60b3fa6d4b55ba27b1aaa782ae353302b519094947c3fc0634bc397ab480e681",
+      "bytes": 29510
     }
   },
   "original_rejected_intake": "nc1-input-publication-intake-rejected-prelaunch-001.json",
@@ -410,7 +410,7 @@
   "repaired01_rejected_generation": "/home/administrator/projects/catalyst-nc-operator/runs/2026-10-19_collective-response/nc-material/initial-failures/prelaunch-review-repair01",
   "no_native_grant": true,
   "limitations": [
-    "This immutable intake records the current complete source/input review subject, not later independent review decisions.",
+    "This complete replacement intake records the whole corrected evidence/source/input subject, not later independent review decisions. Old a018 source verdict is superseded for capture completeness and never admission.",
     "Actual old owned units were installed and attempted under now-unusable50fc2bf; full pre-Python216/GROUP failure is preserved, targets stopped. Successful current real derived metadata contexts are not an NC1 Native execution or new grant. Fresh actual resource release/full reviews/new grant and exact installation precede relaunch.",
     "No stationary or converged NC material outputs, real5-rank/ELF/cgroup, first-force days-scale benchmark, force-kill/restart or downstream G1–G5 admission yet.",
     "No forced kernel PID/TID reuse; discrete metadata/task samples are not continuous coverage or hard-cpuset exclusion. Actual metadata memory caps are not a future memory reservation; bank asserts only its own declared context.",
@@ -446,8 +446,8 @@
   },
   "actual_user_manager_context_verification": {
     "path": "/home/administrator/projects/catalyst-nc-operator/runs/2026-10-19_collective-response/nc-material/verification/user-unit-context-smoke.json",
-    "sha256": "8e3c9a3c347e25391c1b3a3d05afb3895d1b31520b080577d32f6cc74c1fe251",
-    "bytes": 5287
+    "sha256": "cb25b8dfaf7b0c4e35fe8123b9ea257147a882630096ff125ed93740bb60ee72",
+    "bytes": 7186
   },
   "previous_source_reviewed_but_deployment_failed": {
     "intake": {
@@ -469,5 +469,35 @@
     "complete_source_reviews_bank": "df48a6a",
     "old_grant_bank": "50fc2bf",
     "scope": "Both full R5 source reviews correct for their old source subject; actual installed deployment fails216/GROUP before Python, stopped/empty. Old grant explicitly not reusable, no source or physics upgrade."
+  },
+  "evidence_capture_correction": {
+    "bad_generation_archive": {
+      "path": "/home/administrator/projects/catalyst-nc-operator/runs/2026-10-19_collective-response/nc-material/initial-failures/user-context-journal-capture-001/failure.json",
+      "sha256": "5e0506af1faedb3e93330c1c8ead22d7692e85d28446e1ed0d962a84408addeb",
+      "bytes": 7610
+    },
+    "archive_bank": "8b88c94",
+    "recorder_bank": "8564d35",
+    "complete_original_journal": {
+      "path": "/home/administrator/projects/catalyst-nc-operator/runs/2026-10-19_collective-response/nc-material/verification/user-unit-context-smoke-001/full-journal.json",
+      "sha256": "968e0c384af3a8787c7d7ad073b130dfb95efaef5d16a0361f5adb6c8407bca0",
+      "bytes": 129297
+    },
+    "actual_original_output_consumer": {
+      "path": "/home/administrator/projects/catalyst-nc-operator/runs/2026-10-19_collective-response/nc-material/verification/user-unit-context-raw-output-recovery-consumer.json",
+      "sha256": "d2c61dddfed1eb8835b7cea24fbd5c9e2474aea997c77f49fe2f1dea21cdd228",
+      "bytes": 2847
+    },
+    "actual_recorder_consumer": {
+      "path": "/home/administrator/projects/catalyst-collective/runs/2026-10-19_collective-response/owner-frontiers/command-recorder-actual-raw-output-consumer-001.json",
+      "sha256": "83e8d69eab9ac966a0c6f0dfd79018a2bc931e2208ead3662bd3a9100def1030",
+      "bytes": 2607
+    },
+    "superseded_complete_authority_review": {
+      "path": "/home/administrator/projects/catalyst-nc-operator/runs/2026-10-19_collective-response/nc-material/initial-failures/user-context-journal-capture-001/complete-authority-review-a018.json",
+      "sha256": "e84bd590e7eb4ec58713742964c599efc5f8459899dacf60a9aa97cf105c721f",
+      "bytes": 3289
+    },
+    "scope": "All9 old subject files plus complete old authority verdict and failure retained exactly. No Native/grant. Original71-event output recovered from retained raw artifact, no failed service/consumer rerun or mutation replay. Each future bounded command now persists original raw output before dependent action."
   }
 }
