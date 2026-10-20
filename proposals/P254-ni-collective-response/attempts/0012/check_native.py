@@ -1,42 +1,43 @@
 """Bind all five complete native vectors to the registered model and geometry."""
 import copy
-from pathlib import Path
 import numpy as np
 from check_intervals import rejects
 from native_model import frame,envelope_valid,artifacts_valid,input_matches,command_valid
 from native_text import input_text,stdout_text,number
-from source_graph import load,fingerprint,digest
+from source_graph import fingerprint
 import native_metadata
 
 
 def one_native(ledger,context,name,result_path,expected,top_spec=None):
-    result=load(result_path); data=result['data']; artifacts=data['artifacts']
-    spec=load(artifacts['spec.json']['path']); command=load(artifacts['command.json']['path'])
+    sources=context['sources']
+    result=sources.json(result_path); data=result['data']; artifacts=data['artifacts']
+    spec=sources.json(artifacts['spec.json']['path'],artifacts['spec.json']['sha256'])
+    command=sources.json(artifacts['command.json']['path'],artifacts['command.json']['sha256'])
     bad=copy.deepcopy(result); bad['input_sha256']='0'*64
     incomplete=copy.deepcopy(result); incomplete['data']['scf_converged']=False
     missing_source=copy.deepcopy(result); missing_source['data']['input_files_sha256'].pop(next(iter(missing_source['data']['input_files_sha256'])))
     ledger.mutation_sensitive(name+' canonical complete envelope',lambda x:envelope_valid(x,spec),result,[bad,incomplete,missing_source])
     altered=copy.deepcopy(artifacts); altered['pw.stdout']['sha256']='0'*64
-    ledger.mutation_sensitive(name+' canonical artifact links',lambda x:artifacts_valid(x,spec),artifacts,[altered])
+    ledger.mutation_sensitive(name+' canonical artifact links',lambda x:artifacts_valid(x,spec,sources),artifacts,[altered])
     if top_spec:
-        ledger.check(name+' top/attempt spec identical physical canonical object',spec==load(top_spec))
+        ledger.check(name+' top/attempt spec identical physical canonical object',spec==sources.json(top_spec))
     ledger.check(name+' exact individually registered settings/execution',
                  spec['settings']==expected and spec['execution']==context['probe_plan']['baseline_execution'])
-    ledger.check(name+' exact command rank/pool/environment publication',command_valid(command,result,spec))
-    geometry=frame(Path(spec['structure']['path']).read_text())
+    ledger.check(name+' exact command rank/pool/environment publication',command_valid(command,result,spec,sources))
+    geometry=frame(sources.text(spec['structure']['path']))
     ledger.check(name+' exact same ordered physical geometry with masses and no constraints',
                  geometry['symbols']==context['geometry']['symbols'] and
                  np.array_equal(geometry['positions'],context['geometry']['positions']) and
                  np.array_equal(geometry['cell'],context['geometry']['cell']) and
                  np.array_equal(geometry['masses'],context['geometry']['masses']) and
                  geometry['pbc']==['T']*3 and geometry['properties']=={'species','pos','masses'})
-    native=input_text(Path(artifacts['pw.in']['path']).read_text())
+    native=input_text(sources.text(artifacts['pw.in']['path'],artifacts['pw.in']['sha256']))
     predicate=lambda x:input_matches(x,geometry,expected,spec['execution'])
     wrong_order=copy.deepcopy(native); wrong_order['positions'][[0,1]]=wrong_order['positions'][[1,0]]
     wrong_k=copy.deepcopy(native); wrong_k['kpoints'][0]+=1
     wrong_mobile=copy.deepcopy(native); wrong_mobile['values']['input_dft']='LDA'
     ledger.mutation_sensitive(name+' native exact geometry/order/model',predicate,native,[wrong_order,wrong_k,wrong_mobile])
-    raw=Path(artifacts['pw.stdout']['path']).read_text()
+    raw=sources.text(artifacts['pw.stdout']['path'],artifacts['pw.stdout']['sha256'])
     parsed=stdout_text(raw,37,native['symbols'])
     force_mutants=[raw.replace('atom    1 type', 'atom    2 type',1),
                    raw.replace('JOB DONE.','JOB NOT DONE.',1)]
@@ -50,7 +51,7 @@ def one_native(ledger,context,name,result_path,expected,top_spec=None):
     for i,mutant in enumerate(force_mutants):
         ledger.check(name+f' raw malformed/incomplete/order mutation {i} rejected',
                      rejects(lambda:stdout_text(mutant,37,native['symbols'])))
-    metadata=native_metadata.run(ledger,name,raw,expected,spec['execution'],native['symbols'])
+    metadata=native_metadata.run(ledger,name,raw,expected,spec['execution'],native['symbols'],sources)
     factor=float(context['units']['force']); bohr=float(context['units']['bohr'])
     forces=np.array([[number(x) for x in row] for row in parsed['force_tokens']])*factor
     source=context['espresso']; lines=raw.splitlines()
@@ -67,7 +68,7 @@ def one_native(ledger,context,name,result_path,expected,top_spec=None):
     displayed_cell=parsed['axes']*number(parsed['alat_bohr'])*bohr
     position_delta=float(np.max(np.abs(displayed_positions-geometry['positions'])))
     cell_delta=float(np.max(np.abs(displayed_cell-geometry['cell'])))
-    published=frame(Path(artifacts['final.extxyz']['path']).read_text())
+    published=frame(sources.text(artifacts['final.extxyz']['path'],artifacts['final.extxyz']['sha256']))
     ledger.check(name+' stdout/final/public geometry consistent within registered native display tolerance',
                  data['geometry_tolerance_angstrom']==2e-6 and position_delta<2e-6 and cell_delta<2e-6 and
                  published['symbols']==geometry['symbols'] and data['symbols']==geometry['symbols'] and
@@ -77,7 +78,7 @@ def one_native(ledger,context,name,result_path,expected,top_spec=None):
                  np.max(np.abs(published['forces']-forces))<=5.1e-9)
     ledger.check(name+' final convergence/version native publication',parsed['job_done'] and
                  parsed['iterations']>0 and parsed['version']==data['qe_version'])
-    return {'name':name,'result_path':result_path,'result_sha256':digest(result_path),
+    return {'name':name,'result_path':result_path,'result_sha256':sources.record(result_path)['sha256'],
             'spec_fingerprint':fingerprint(spec),'settings':spec['settings'],'execution':spec['execution'],
             'artifacts':artifacts,'native_input_position_tokens':native['position_tokens'],
             'native_stdout_metadata':metadata,
@@ -92,9 +93,11 @@ def one_native(ledger,context,name,result_path,expected,top_spec=None):
 
 
 def run(ledger,context):
-    plan=load(context['plan']['native_wave']['original_probe_plan']['path'])
+    plan=context['sources'].json(context['plan']['native_wave']['original_probe_plan']['path'],
+                                 context['plan']['native_wave']['original_probe_plan']['sha256'])
     context['probe_plan']=plan
-    context['geometry']=frame(Path(plan['upstream']['geometry']['path']).read_text())
+    context['geometry']=frame(context['sources'].text(plan['upstream']['geometry']['path'],
+                                                   plan['upstream']['geometry']['sha256']))
     cases={}
     cases['baseline']=one_native(ledger,context,'baseline',plan['upstream']['force_result']['path'],plan['baseline_settings'],plan['upstream']['force_spec']['path'])
     probes={p['id']:p for p in context['native_report']['probes']}

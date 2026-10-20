@@ -8,6 +8,7 @@ import time
 import traceback
 from receipts import save
 from source_graph import HERE,closed_graph,own_sources,digest
+from verified_sources import read_bound_bytes
 
 
 def prepare(generation):
@@ -21,7 +22,7 @@ def prepare(generation):
             target=snapshot/sha
             if not target.exists():
                 with target.open('xb') as stream:
-                    stream.write(Path(path).read_bytes());stream.flush();os.fsync(stream.fileno())
+                    stream.write(read_bound_bytes(path,sha));stream.flush();os.fsync(stream.fileno())
         import numpy,scipy,sympy
         dependencies={module.__name__:{'version':module.__version__,'path':module.__file__,
                       'sha256':digest(module.__file__)} for module in (numpy,scipy,sympy)}

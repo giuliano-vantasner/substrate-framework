@@ -17,7 +17,7 @@ def extract(text):
     return fields,pseudos
 
 
-def run(ledger,name,text,settings,execution,symbols):
+def run(ledger,name,text,settings,execution,symbols,sources):
     fields,pseudos=extract(text)
     for key in ('ecutwfc_ry','ecutrho_ry','conv_thr_ry','degauss_ry','starting_magnetization_ni'):
         expected=sp.Rational(str(settings[key]))
@@ -32,7 +32,7 @@ def run(ledger,name,text,settings,execution,symbols):
     valences={}
     for _,symbol,path,md5,zval in pseudos:
         expected_path=Path(execution['pseudo_dir'])/execution['pseudopotentials'][symbol]
-        raw=expected_path.read_bytes()
+        raw=sources.read_bytes(expected_path)
         header=singleton(r'<PP_HEADER>([\s\S]*?)</PP_HEADER>',raw.decode())
         source_z=sp.Rational(singleton(r'^\s*('+NUMBER+r')\s+Z valence\s*$',header))
         ledger.check(name+' '+symbol+' stdout pseudo path/MD5/valence bound to actual UPF bytes',

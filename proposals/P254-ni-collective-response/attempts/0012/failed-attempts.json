@@ -51,6 +51,22 @@
       "preserved_source_snapshot": "generation-004/oracle-source-snapshot"
     }
   ],
+  "whole_rung_rejections": [
+    {
+      "generation": "generation-006",
+      "execution_status": "complete; exit 0; 583 checks",
+      "admission_status": "REJECTED",
+      "cause": "P2: snapshot-backed closure verified consumed_path but downstream scientific readers reopened unchecked original paths; units.py and espresso.py were not independently resolved.",
+      "evidence": "initial-failures/source-review-generation-006/rejection.json",
+      "mathematical_review": "correct; no numerical discrepancy alleged",
+      "repair_generation": "generation-007",
+      "repair": "Shared original-path plus expected-SHA resolver supplies same verified in-memory bytes to every scientific JSON/text/UPF and executable-source consumer; independent ASE source resolution; unchanged scientific helper modules executed from verified own snapshots; isolated real snapshot-to-consumer mutations.",
+      "repair_execution_status": "generation-007 complete; exit 0; 595 checks; independently reviewed admission still reserved to parent",
+      "repair_report_sha256": "013e9a346e9b8739e5d137ac2c02044b8eab5481cd1321653a31d0be381a1608",
+      "repair_source_consumer_proof_sha256": "79bba04c38fc47be0f621da24b2ba02043f1691d5e8b69d2f37af8592dcaedce",
+      "historical_preservation": "All generation-001 through generation-006 raw outputs/source snapshots and source-review-generation-006 archive remain immutable. Earlier complete generation-005 is superseded, not admitted."
+    }
+  ],
   "observation_failures": [
     {
       "command": "herdr pane wait-output w1:pF --match SENSITIVITY_OWNER_TERMINAL --source recent-unwrapped --lines 160 --timeout 120000",

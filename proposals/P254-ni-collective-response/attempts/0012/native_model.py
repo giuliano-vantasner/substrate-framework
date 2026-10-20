@@ -3,7 +3,7 @@ import re
 from pathlib import Path
 import numpy as np
 from native_text import number
-from source_graph import digest,fingerprint
+from source_graph import fingerprint
 
 
 def frame(text):
@@ -38,10 +38,10 @@ def envelope_valid(result,spec):
             source_links)
 
 
-def artifacts_valid(artifacts,spec):
+def artifacts_valid(artifacts,spec,sources):
     expected={'command.json','final.extxyz','pw.in','pw.stdout','pw.stderr','spec.json'}
     return (set(artifacts)==expected and all(Path(row['path']).is_relative_to(spec['directory'])
-            and Path(row['path']).name==name and digest(row['path'])==row['sha256']
+            and Path(row['path']).name==name and sources.matches(row['path'],row['sha256'])
             for name,row in artifacts.items()))
 
 
@@ -67,7 +67,7 @@ def input_matches(native,geometry,settings,execution):
                             for s in native['symbols']]),geometry['masses']))
 
 
-def command_valid(command,result,spec):
+def command_valid(command,result,spec,sources):
     execution=spec['execution']; argv=command['argv']
     expected=['/usr/bin/mpirun','-np',str(execution['mpi_ranks']),'--bind-to','core',
               execution['pw_executable'],'-nk',str(execution['kpoint_pools']),'-in','pw.in']
@@ -75,4 +75,4 @@ def command_valid(command,result,spec):
             command['cwd']==result['data']['attempt_directory'] and
             command['environment']==result['data']['environment'] and
             all(command['environment'][k]=='1' for k in ('OMP_NUM_THREADS','OPENBLAS_NUM_THREADS','MKL_NUM_THREADS')) and
-            command['mpi_launcher_sha256']==digest(Path(argv[0]).resolve()))
+            sources.matches(Path(argv[0]).resolve(),command['mpi_launcher_sha256']))

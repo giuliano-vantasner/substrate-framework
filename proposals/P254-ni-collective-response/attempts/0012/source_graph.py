@@ -2,6 +2,7 @@
 import hashlib
 import json
 from pathlib import Path
+from verified_sources import read_bound_bytes,close_source_records,SourceBindingError
 
 PLAN=Path('/home/administrator/projects/substrate-ni-collective/proposals/P254-ni-collective-response/W1-loaded-force-sensitivity-plan.json')
 PLAN_SHA='81d7f2b69ada5cda84900b64a1e833b0be6a87c2e97d1970f7521b90843f67be'
@@ -18,13 +19,22 @@ def load(path):
     return json.loads(Path(path).read_bytes())
 
 
+def bound_json(path,expected,snapshots=None):
+    actual=snapshots.get((str(path),expected),path) if snapshots is not None else path
+    return json.loads(read_bound_bytes(actual,expected))
+
+
 def fingerprint(value):
     return hashlib.sha256(json.dumps(value,sort_keys=True,separators=(',',':'),allow_nan=False).encode()).hexdigest()
 
 
 def source_binding_valid(binding):
     path,expected=binding
-    return digest(path)==expected
+    try:
+        read_bound_bytes(path,expected)
+    except SourceBindingError:
+        return False
+    return True
 
 
 def records(value):
@@ -41,19 +51,17 @@ def records(value):
 
 
 def closed_graph():
-    if digest(PLAN)!=PLAN_SHA:
-        raise ValueError('Registration bytes changed')
-    plan=load(PLAN); access=Path(plan['source_access']['path'])
-    if digest(access)!=plan['source_access']['sha256']:
-        raise ValueError('Source access inventory changed')
-    inventory=load(access); report=load(plan['native_wave']['report']['path'])
-    references={(str(PLAN),PLAN_SHA),(str(access),digest(access))}
+    plan=bound_json(PLAN,PLAN_SHA); access=Path(plan['source_access']['path'])
+    inventory=bound_json(access,plan['source_access']['sha256'])
+    report_ref=plan['native_wave']['report']
+    report=bound_json(report_ref['path'],report_ref['sha256'])
+    references={(str(PLAN),PLAN_SHA),(str(access),plan['source_access']['sha256'])}
     references.update(records(inventory)); references.update(records(report))
     snapshots={}; packages=[]
     for package in report['generation_packages']:
-        package_data=load(package['package']['path']); packages.append(package_data)
+        package_data=bound_json(package['package']['path'],package['package']['sha256']); packages.append(package_data)
         references.update(records(package_data))
-        snapshot=load(package['source_snapshot']['path'])
+        snapshot=bound_json(package['source_snapshot']['path'],package['source_snapshot']['sha256'])
         for original,item in snapshot.items():
             saved=Path(item['snapshot'])
             references.add((str(saved),item['sha256']))
@@ -62,16 +70,13 @@ def closed_graph():
     specs=[]
     for row in inventory['raw_registered_sources']:
         if row['path'].endswith('/scf/result.json'):
-            result=load(row['path']); spec=load(result['data']['artifacts']['spec.json']['path'])
+            result=bound_json(row['path'],row['sha256'],snapshots)
+            spec_ref=result['data']['artifacts']['spec.json']
+            spec=bound_json(spec_ref['path'],spec_ref['sha256'],snapshots)
             specs.append(spec)
             for original,sha in spec['input_files_sha256'].items():
                 references.add((original,sha))
-    verified=[]
-    for path,sha in sorted(references):
-        actual=snapshots.get((path,sha),path)
-        if not source_binding_valid((actual,sha)):
-            raise ValueError('Raw source graph byte mismatch: '+path+' via '+actual)
-        verified.append({'path':path,'sha256':sha,'consumed_path':actual,'bytes':Path(actual).stat().st_size})
+    verified=close_source_records(references,snapshots)
     for row in inventory['current_method_sources'][:2]:
         copied=ROOT/'src/substrate_framework'/Path(row['path']).name
         if not source_binding_valid((copied,row['sha256'])):
