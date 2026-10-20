@@ -308,7 +308,8 @@
       "/home/administrator/projects/substrate-ni-collective/proposals/P254-ni-collective-response/NC1-runtime-review-repair-03.json",
       "/home/administrator/projects/catalyst-nc-operator/runs/2026-10-19_collective-response/nc-material/source-references/linux-v6.8-kernel-exit.c",
       "/home/administrator/projects/catalyst-nc-operator/runs/2026-10-19_collective-response/nc-material/source-references/linux-v6.8-kernel-sys.c",
-      "/home/administrator/projects/substrate-ni-collective/proposals/P254-ni-collective-response/NC1-selected-parser-source-closure-addendum-01.json"
+      "/home/administrator/projects/substrate-ni-collective/proposals/P254-ni-collective-response/NC1-selected-parser-source-closure-addendum-01.json",
+      "/home/administrator/projects/substrate-ni-collective/proposals/P254-ni-collective-response/NC1-user-unit-context-amendment-01.json"
     ]
   },
   "runtime_source_amendments": [
@@ -342,6 +343,13 @@
       "issue": "https://github.com/giuliano-vantasner/catalyst-dft/issues/15",
       "source_bank_before_change": "catalyst-dft@faf1278",
       "scope": "Actual selected ASE espresso-out parser and its namelist package were absent from original prelaunch hash maps despite a reachable scientific output consumer. Primary implementations and settled raw parser witness are in hand before this plan. Load the actual selected format through ASE's existing API before the existing producer inventory; actual before/after producer/parser and integrity-refusal smoke precede immutable refreeze and complete reviews. No physics, original installed environment, live W1 or native grant change."
+    },
+    {
+      "id": "NC1-user-unit-context-amendment-01",
+      "plan": "/home/administrator/projects/substrate-ni-collective/proposals/P254-ni-collective-response/NC1-user-unit-context-amendment-01.json",
+      "issue": "https://github.com/giuliano-vantasner/catalyst-dft/issues/16",
+      "source_bank_before_change": "catalyst-dft@a467db4",
+      "scope": "Actual source-reviewed units fail before Python at supplementary-group setup,216/GROUP. Full failure journal and existing running user-unit identity pattern are in hand before this plan. Remove only redundant explicit User from the two user-manager source units, inheriting existing manager identity without privileges or account changes. Actual non-Native UID/GID/environment/affinity/kernel-cap context proof precedes fresh immutable inputs, complete reviews and new resource grant. Every physical/nonpath model value and other service directive is unchanged; old grant50fc2bf is not reusable."
     }
   ],
   "bank_policy": "Bank all scientific outputs and failed-attempt evidence; existing native WFC/save/mixing/GPW scratch exclusions remain. No forced-add of ignored checkpoints. Bank is persistence, not scientific admission; no early support PR or merged-delivery claim."
