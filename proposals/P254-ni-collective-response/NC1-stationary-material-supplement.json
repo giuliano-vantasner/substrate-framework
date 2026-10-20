@@ -303,7 +303,11 @@
       "/home/administrator/projects/catalyst-nc-operator/src/catdft/process_shutdown.py",
       "/home/administrator/projects/catalyst-nc-operator/src/catdft/job_queue.py",
       "/home/administrator/projects/catalyst-nc-operator/runs/2026-10-19_collective-response/nc-material/runtime/completed_boundaries.py",
-      "/home/administrator/projects/substrate-ni-collective/proposals/P254-ni-collective-response/NC1-runtime-review-repair-02.json"
+      "/home/administrator/projects/substrate-ni-collective/proposals/P254-ni-collective-response/NC1-runtime-review-repair-02.json",
+      "/home/administrator/projects/catalyst-nc-operator/src/catdft/process_ownership.py",
+      "/home/administrator/projects/substrate-ni-collective/proposals/P254-ni-collective-response/NC1-runtime-review-repair-03.json",
+      "/home/administrator/projects/catalyst-nc-operator/runs/2026-10-19_collective-response/nc-material/source-references/linux-v6.8-kernel-exit.c",
+      "/home/administrator/projects/catalyst-nc-operator/runs/2026-10-19_collective-response/nc-material/source-references/linux-v6.8-kernel-sys.c"
     ]
   },
   "runtime_source_amendments": [
@@ -323,6 +327,13 @@
       "plan": "/home/administrator/projects/substrate-ni-collective/proposals/P254-ni-collective-response/NC1-runtime-review-repair-02.json",
       "original_source_bank": "catalyst-dft@10c53b3",
       "scope": "Complete repaired01 reviews reject live snapshot handle shadowing, sample-after-reap lifetime and lost completed-relaxation force obligations. Parent traced the still-reachable inner-queue numeric group stop; share retained ownership and bounded shutdown across both consumers, with no obsolete aliases. Actual snapshot, cache-skip and both supervisor APIs must be exercised before fresh immutable inputs and complete independent review. No physical or live GBRV change and no native grant."
+    },
+    {
+      "id": "NC1-runtime-review-repair-03",
+      "plan": "/home/administrator/projects/substrate-ni-collective/proposals/P254-ni-collective-response/NC1-runtime-review-repair-03.json",
+      "original_source_bank": "catalyst-dft@049da5f",
+      "issue": "https://github.com/giuliano-vantasner/catalyst-dft/issues/14",
+      "scope": "Complete repair02 ownership review rejects undiscovered already-dead adopted-child collection and the live-only pre-existing-child guard. Separate retained dead-child collection from live signaling, preserve Popen wait ownership, require fresh dead/live drain and refuse pre-existing wait status without consuming it. Split ownership into its own module, migrate every caller, demonstrate actual still-live caller before/after and refreeze/re-review before resource release. Physical/nonpath execution values and live W1 unchanged; no native grant."
     }
   ],
   "bank_policy": "Bank all scientific outputs and failed-attempt evidence; existing native WFC/save/mixing/GPW scratch exclusions remain. No forced-add of ignored checkpoints. Bank is persistence, not scientific admission; no early support PR or merged-delivery claim."
