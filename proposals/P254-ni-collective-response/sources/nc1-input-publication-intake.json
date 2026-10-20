@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "recorded_at": "2026-10-20T03:32:13.065Z",
-  "scope": "Complete current scientific intake for full NC1 source/input/IO/ownership prelaunch review after actual failed deployment and focused inherited-user-manager correction. Not review admission, Native permission, force/recovery or physical evidence. Earlier a018/aebd subject is explicitly superseded for evidence completeness after rendered-output capture defect, preserved8b88c94. This complete replacement contains actual original bytes, not a delta-only addendum. No service/physics or original publication tuple changes.",
+  "recorded_at": "2026-10-20T04:41:15.623Z",
+  "scope": "Complete current59-source/current908-input operator and scientific-input handoff after issue17 declared-affinity correction. Native first epoch is preserved and unadmitted; corrected full original-data replay is retrospective. No current Native grant or force/mode/benchmark/recovery/physical acceptance; both fresh complete reviews required.",
   "scientific_registration": {
     "path": "/home/administrator/projects/substrate-ni-collective/proposals/P254-ni-collective-response/NC1-stationary-material-supplement.json",
-    "sha256": "97d6b8941ff4f5b3e3841ec16ec796b12e92ea6e563c60e94691fe86fbc6703c",
-    "bytes": 24025,
+    "sha256": "893bb0de37c7e7460b16afae1e3602bd98844bc716027a6d97c1f82cf75fabf0",
+    "bytes": 25475,
     "original_bank": "0592cfd8",
     "repair_preregistration_banks": [
       "2f32b258",
@@ -13,7 +13,9 @@
       "464504ff",
       "f03adacd",
       "0716ca05",
-      "51d61ab0"
+      "51d61ab0",
+      "28d5fbbb",
+      "f62c463c"
     ],
     "physical_and_nonpath_execution_invariants": [
       {
@@ -40,17 +42,28 @@
         "path": "/home/administrator/projects/catalyst-nc-operator/runs/2026-10-19_collective-response/nc-material/verification/user-unit-context-final-model-invariants.json",
         "sha256": "ec4479589f3e5e07e9ac0992e8f48cdf4b797a2457e1df73b9d0771bf6369cae",
         "bytes": 4641
+      },
+      {
+        "path": "/home/administrator/projects/catalyst-nc-operator/runs/2026-10-19_collective-response/nc-material/verification/affinity-only-kernel-scientific-invariants-001.json",
+        "sha256": "b0c2d9c3c223638159e80587b7cd2d9c13edc4e7c7e84fa39654dff7e9bef03b",
+        "bytes": 2075
+      },
+      {
+        "path": "/home/administrator/projects/catalyst-nc-operator/runs/2026-10-19_collective-response/nc-material/verification/affinity-only-kernel-four-case-nonhash-invariants-001.json",
+        "sha256": "2efd5ff6cc8325dfc4bda1ed26bb4ab8c903e59853f392aacd5ec80ee28352cd",
+        "bytes": 3718
       }
     ]
   },
   "dft_source_reference": {
     "repository": "https://github.com/giuliano-vantasner/catalyst-dft",
     "branch": "campaign5-nc-operator",
-    "source_bank": "e93178a",
+    "source_bank": "dd0c202",
     "implementation_banks": [
       "faf1278",
       "6576702",
-      "e93178a"
+      "e93178a",
+      "dd0c202"
     ],
     "prior_rejected_banks": [
       "e9e9421",
@@ -59,41 +72,42 @@
     ],
     "prior_rejection_archive_bank": "f4b1d4c",
     "frozen_publication_receipt": {
-      "bytes": "298997",
-      "mtime_ns": "1792465024450984931",
-      "sha256": "81048a8e5c26bbd513b17404a3aa1c5555eb597b84ca8381fb7130e6b9e8aae4"
+      "path": "/home/administrator/projects/catalyst-nc-operator/runs/2026-10-19_collective-response/nc-material/primary/publication-receipt.json",
+      "sha256": "0c4cd28bc27a514a4c116f37904472ec7a7d148c8b3235f8a68416dd63acc9a2",
+      "bytes": 299204,
+      "mtime_ns": "1792470154980751215"
     }
   },
   "publication": {
     "/home/administrator/projects/catalyst-nc-operator/runs/2026-10-19_collective-response/nc-material/primary/dispersed-ni32h6.json": {
-      "bytes": "152153",
-      "mtime_ns": "1792465033532847668",
-      "sha256": "17285e2b20312324d3118058367937a0846fc379a3e1805751ced8b89342794b"
+      "sha256": "186d2c88152cdcbf623777836efd1015cd4c9155f51e93c79b3abba5224ba430",
+      "bytes": 152360,
+      "mtime_ns": "1792470163223628505"
     },
     "/home/administrator/projects/catalyst-nc-operator/runs/2026-10-19_collective-response/nc-material/primary/empty-vacancy-ni31.json": {
-      "bytes": "152159",
-      "mtime_ns": "1792465031188883093",
-      "sha256": "75dfb2e928254348d7a5e8d142bd8edbb7268968cae6a4f1d7335a0933652645"
+      "sha256": "92a011ab9bdde5dd577c60d309060d61b7d088c8258d15896990e390d875a739",
+      "bytes": 152366,
+      "mtime_ns": "1792470160870663534"
     },
     "/home/administrator/projects/catalyst-nc-operator/runs/2026-10-19_collective-response/nc-material/primary/loaded-ni31h6.json": {
-      "bytes": "152144",
-      "mtime_ns": "1792465025722965706",
-      "sha256": "1cba90c372ceb0cb48d3c90abdcdb155b75fa3ba76a4fa9ba50f201df0370d47"
+      "sha256": "9fdfc14aeb0b725f95db1e951418991ac6579c520b9bebd1d00c4ea140aad62a",
+      "bytes": 152351,
+      "mtime_ns": "1792470156160733649"
     },
     "/home/administrator/projects/catalyst-nc-operator/runs/2026-10-19_collective-response/nc-material/primary/manifest.json": {
-      "bytes": "607826",
-      "mtime_ns": "1792465040208746776",
-      "sha256": "337bf67e94016a3b50ce8fd129912113a13c16c8635081214bfafb5963d85331"
+      "sha256": "01264654f284cd1ce2e731321c14fc26d593ca6a299df7d8102c130fe964334c",
+      "bytes": 608654,
+      "mtime_ns": "1792470169844529937"
     },
     "/home/administrator/projects/catalyst-nc-operator/runs/2026-10-19_collective-response/nc-material/primary/pristine-ni32.json": {
-      "bytes": "152144",
-      "mtime_ns": "1792465028668921179",
-      "sha256": "a3e4b5567760e2b97855c462a1f7f59580679e2cf13b06250bc64355c22cb300"
+      "sha256": "f87964ade429848f37c2c7503077a27fbe00523e0462a56b8f783b8f4ea55ba1",
+      "bytes": 152351,
+      "mtime_ns": "1792470158527698412"
     },
     "/home/administrator/projects/catalyst-nc-operator/runs/2026-10-19_collective-response/nc-material/primary/publication-receipt.json": {
-      "bytes": "298997",
-      "mtime_ns": "1792465024450984931",
-      "sha256": "81048a8e5c26bbd513b17404a3aa1c5555eb597b84ca8381fb7130e6b9e8aae4"
+      "sha256": "0c4cd28bc27a514a4c116f37904472ec7a7d148c8b3235f8a68416dd63acc9a2",
+      "bytes": 299204,
+      "mtime_ns": "1792470154980751215"
     }
   },
   "observed_inputs": {
@@ -119,9 +133,9 @@
     }
   },
   "actual_input_verification": {
-    "path": "/home/administrator/projects/catalyst-nc-operator/runs/2026-10-19_collective-response/nc-material/verification/input-consumer-smoke.json",
-    "sha256": "184f128a56a9175aba6097255419db393bf45bcec3e97b0c70912da1e045a34d",
-    "bytes": 12025,
+    "path": "/home/administrator/projects/catalyst-nc-operator/runs/2026-10-19_collective-response/nc-material/verification/affinity-only-kernel-input-consumer-001.json",
+    "sha256": "1086137627d86dd4c83162180c0fe4efddab923f2900e3abd00e8f2e1f22cbfa",
+    "bytes": 12044,
     "status": "complete",
     "observed_inputs": {
       "dispersed-ni32h6": {
@@ -379,29 +393,33 @@
   "actual_affected_regressions": {
     "receipts": [
       {
-        "path": "/home/administrator/projects/catalyst-nc-operator/runs/2026-10-19_collective-response/nc-material/verification/repair03-affected-regressions.json",
-        "sha256": "353d8d0425ee4d107f506d8340701efe2694b5399006807b81595450ed22cbc5",
-        "bytes": 821,
-        "observed": "47 passed in11.24s across the five affected queue/ownership/attempt/launcher files; both new real-kernel regressions fail before repair03. No unchanged scientific-suite rerun."
+        "path": "/home/administrator/projects/catalyst-collective/runs/2026-10-19_collective-response/owner-frontiers/nc1-cpuset-complete-consumer-regression-before-fix-2026-10-20T04-03-53.878Z.json",
+        "sha256": "63554fce20d2f5e0fb2fb4d22b9acb5223bd45f023145852c13a8023740bfd61",
+        "bytes": 6891
+      },
+      {
+        "path": "/home/administrator/projects/catalyst-collective/runs/2026-10-19_collective-response/owner-frontiers/nc1-cpuset-affected-complete-evidence-module-after-fix-2026-10-20T04-06-05.225Z.json",
+        "sha256": "d5dad6ae017899d722b3994c5347864b1decf5c23178039fbd95b7aee5b597cb",
+        "bytes": 825
       }
     ],
-    "scope": "Only actual five affected software suites; no broad unchanged science rerun."
+    "scope": "New full five-rank optional-cpuset regression fails before correction, then existing affected complete-attempt evidence module passes13. Historical other suites not rerun and retain original source scopes."
   },
-  "source_runtime_scope": "Complete58-source snapshot02 captures current registered control/runtime, actual frozen local catdft sources, selected ASE primaries and affected tests/docs;907 runtime inputs and six original tuples unchanged. User-only actual002 context raw role receipts remain df62e0ca/6ee5ebcd. Corrected wrappercb25b8df/complete journal968e0c38 use original raw SHAa9da37fd/106797B/71 JSON events, consumed by actual byte/count-integrity checker d2c61ddd with independent refusals. Earlier8e3/9130/4611 capture labels and old a018 subject are preserved as incomplete rendered evidence, not current full-output authority. Original W1 missing-lazy-source and mutable-IPC qualifications remain historical, not repaired by NC1.",
+  "source_runtime_scope": "All59 full current source files and908 frozen runtime inputs are the subject, not a delta-only review. Required Native task affinity/memory/native-input/banner/ELF authorities remain, optional undelegated cpuset stays raw telemetry. Original c95 complete NativeProof replay preceded archive; accb original-epoch byte consumer verifies explicit post-archive mappings. Neither is execution of corrected code by original ranks. No completed original force. Actual current saved-output consumer binds645 observed parser/controller modules; no new Native since correction.",
   "prelaunch_review_package": {
     "path": "/home/administrator/projects/catalyst-nc-operator/runs/2026-10-19_collective-response/nc-material/verification/prelaunch-review-package.json",
-    "sha256": "d2b9b0c0280ff21df8334d8dcf19990510cfd491f46ed2b9fffda96bcbb76ccd",
-    "bytes": 103445,
-    "status": "Complete corrected whole subject settled for both independent complete final reviews. Earlier authority verdict on a018 is superseded and NOT admission.",
+    "sha256": "c2a4a3c69d6c8878992701619f00186d2a22af051fab76ad1384f7670085b398",
+    "bytes": 185156,
+    "status": "Complete settled current subject; pending BOTH independent full new review verdicts, not admitted by prior R6 verdicts.",
     "source_snapshot": {
-      "path": "/home/administrator/projects/catalyst-nc-operator/runs/2026-10-19_collective-response/nc-material/verification/source-snapshot-user-context-02.json",
-      "sha256": "4ad3e19aaafe3269c4f2821253cc79214a8080a96b6b7ad57935a3a3941459ff",
-      "bytes": 708164
+      "path": "/home/administrator/projects/catalyst-nc-operator/runs/2026-10-19_collective-response/nc-material/verification/source-snapshot-affinity-kernel-01.json",
+      "sha256": "67170acd6ad342b00ea57423dcb0b549ec4ff86d51216787a43b093f8a976a12",
+      "bytes": 737695
     },
     "actual_reference_closure": {
-      "path": "/home/administrator/projects/catalyst-nc-operator/runs/2026-10-19_collective-response/nc-material/verification/user-unit-context-full-subject-reference-closure.json",
-      "sha256": "60b3fa6d4b55ba27b1aaa782ae353302b519094947c3fc0634bc397ab480e681",
-      "bytes": 29510
+      "path": "/home/administrator/projects/catalyst-nc-operator/runs/2026-10-19_collective-response/nc-material/verification/affinity-kernel-full-subject-reference-closure.json",
+      "sha256": "8c020ba7ef2775d63435ae0c90561ab6468ea666e2ac017089535439d89b1678",
+      "bytes": 44111
     }
   },
   "original_rejected_intake": "nc1-input-publication-intake-rejected-prelaunch-001.json",
@@ -414,7 +432,9 @@
     "Actual old owned units were installed and attempted under now-unusable50fc2bf; full pre-Python216/GROUP failure is preserved, targets stopped. Successful current real derived metadata contexts are not an NC1 Native execution or new grant. Fresh actual resource release/full reviews/new grant and exact installation precede relaunch.",
     "No stationary or converged NC material outputs, real5-rank/ELF/cgroup, first-force days-scale benchmark, force-kill/restart or downstream G1–G5 admission yet.",
     "No forced kernel PID/TID reuse; discrete metadata/task samples are not continuous coverage or hard-cpuset exclusion. Actual metadata memory caps are not a future memory reservation; bank asserts only its own declared context.",
-    "Numerical smearing is not a physical bath. No coherence, nuclear enhancement or energy-disposal bridge is established."
+    "Numerical smearing is not a physical bath. No coherence, nuclear enhancement or energy-disposal bridge is established.",
+    "Original first Native source0e404e9 was stopped by parent after real full consumer refused missing undeclared cpuset. Failed/exit2 preserved; no completed force. All original raw bytes/corrected retrospective verification are separately qualified.",
+    "Both new complete reviews, fresh actual ownership/task/memory release and a new exact grant003 precede another Native operation. Grant002 is not reusable after source change."
   ],
   "actual_selected_parser_source_verification": {
     "before": {
@@ -428,11 +448,16 @@
       "bytes": 499711
     },
     "final_consumers": {
+      "path": "/home/administrator/projects/catalyst-nc-operator/runs/2026-10-19_collective-response/nc-material/verification/affinity-only-kernel-selected-parser-consumer-001.json",
+      "sha256": "5d74fa8525913880d5b88ff6db94c0fdb643c4d810678b5f20db7bdb7e892bae",
+      "bytes": 107888
+    },
+    "observed": "Actual current four strict consumers and four independent parser-digest refusals; actual saved-output parse unchanged,645 observed modules,0 unbound/changed. Historical before/after captures retain original source epochs. No corrected-source Native run.",
+    "prior_final_consumers": {
       "path": "/home/administrator/projects/catalyst-nc-operator/runs/2026-10-19_collective-response/nc-material/verification/selected-parser-final-consumer-smoke.json",
       "sha256": "3f2af2c10b7222a13e874000cadd9e23957b56d9b6c4bc78ad0bab254a2c35c6",
       "bytes": 107674
-    },
-    "observed": "Same actual read-only producer/parser driver before/after; all four selected package files bound before actual parse after, all parsed values unchanged. All four real final strict consumers accept and each independently changed parser digest refuses. Observed post-parse loaded-module source coverage has no missing or changed binding. No Native run."
+    }
   },
   "repaired02_rejected_intake": {
     "path": "/home/administrator/projects/substrate-ni-collective/proposals/P254-ni-collective-response/sources/nc1-input-publication-intake-rejected-repair02.json",
@@ -499,5 +524,44 @@
       "bytes": 3289
     },
     "scope": "All9 old subject files plus complete old authority verdict and failure retained exactly. No Native/grant. Original71-event output recovered from retained raw artifact, no failed service/consumer rerun or mutation replay. Each future bounded command now persists original raw output before dependent action."
+  },
+  "affinity_only_kernel_correction": {
+    "issue": "https://github.com/giuliano-vantasner/catalyst-dft/issues/17",
+    "preregistration": {
+      "path": "/home/administrator/projects/substrate-ni-collective/proposals/P254-ni-collective-response/NC1-affinity-only-kernel-proof-supplement.json",
+      "sha256": "9e17b5449d02338f75ef48622a566a7ecc1462316bebfda72b39c45fc986bcc3",
+      "bytes": 22371
+    },
+    "actual_complete_failure": {
+      "path": "/home/administrator/projects/catalyst-nc-operator/runs/2026-10-19_collective-response/nc-material/initial-failures/undelegated-cpuset-001/failure.json",
+      "sha256": "17c3837983aad6558995a7861a9900c2608195bd3fcf3a62512b728bbe10cab9",
+      "bytes": 19965
+    },
+    "complete_original_raw_journal": {
+      "path": "/home/administrator/projects/catalyst-nc-operator/runs/2026-10-19_collective-response/nc-material/initial-failures/undelegated-cpuset-001/full-original-native-journal.json",
+      "sha256": "38b4dd1a913dbcafc09287f6205f2157626d6a97361cc9a1398766173289c2ef",
+      "bytes": 22263
+    },
+    "original_epoch_mapping": {
+      "path": "/home/administrator/projects/catalyst-nc-operator/runs/2026-10-19_collective-response/nc-material/initial-failures/undelegated-cpuset-001/original-artifact-resolution.json",
+      "sha256": "bcd3fe798212e0948ccbc8bfd64f9defaf3894a8710791890a3f6e5eaee7976d",
+      "bytes": 8565
+    },
+    "complete_original_epoch_consumer": {
+      "path": "/home/administrator/projects/catalyst-nc-operator/runs/2026-10-19_collective-response/nc-material/verification/affinity-only-kernel-original-epoch-consumer-001.json",
+      "sha256": "accb621540879c122864376a533cfb96990f8674c597d2ac02367c5495ea42de",
+      "bytes": 395597
+    },
+    "scope": "Original first Native operation was real but unadmitted; required memory caps and actual task affinity are verified retrospectively on original snapshots. Optional missing cpuset is retained, not suppressed or claimed delegated. Old full R6 verdicts are historical only, not current admission."
+  },
+  "prior_complete_intake": {
+    "path": "/home/administrator/projects/catalyst-nc-operator/runs/2026-10-19_collective-response/nc-material/initial-failures/undelegated-cpuset-001/original-input-subject/nc1-input-publication-intake.json",
+    "sha256": "2e3630202fcdbe96855f61aca0635a7598adfea32f8bc3665cd3ced3fb26884e",
+    "bytes": 24928
+  },
+  "prior_complete_packet": {
+    "path": "/home/administrator/projects/catalyst-nc-operator/runs/2026-10-19_collective-response/nc-material/initial-failures/undelegated-cpuset-001/original-input-subject/prelaunch-review-package.json",
+    "sha256": "d2b9b0c0280ff21df8334d8dcf19990510cfd491f46ed2b9fffda96bcbb76ccd",
+    "bytes": 103445
   }
 }
