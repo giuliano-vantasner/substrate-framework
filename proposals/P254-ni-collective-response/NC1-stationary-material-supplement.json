@@ -2,7 +2,7 @@
   "schema_version": 1,
   "id": "P254-NC1-stationary-material-2026-10-19",
   "registered_at": "2026-10-19T22:19:01.673Z",
-  "status": "RUNTIME SOURCE REPAIR-01 PREREGISTERED BEFORE REPAIR IMPLEMENTATION OR ANY NC1 NATIVE OUTPUT; ORIGINAL PHYSICAL MODEL UNCHANGED",
+  "status": "RUNTIME SOURCE REPAIR-02 PREREGISTERED BEFORE ITS IMPLEMENTATION OR ANY NC1 NATIVE OUTPUT; REPAIRED01 REJECTED; ORIGINAL PHYSICAL MODEL UNCHANGED",
   "objective": "Obtain independently converged fully mobile stationary SG15 Ni32, Ni31, Ni31H6 and Ni32H6 coupled-mode material inputs, compare like observables with the separately converged GBRV material, and hand off only admitted same-model data to the registered downstream G2-G5 arc.",
   "issue": "https://github.com/giuliano-vantasner/catalyst-dft/issues/12",
   "parent_arc": "/home/administrator/projects/substrate-ni-collective/proposals/P254-ni-collective-response/W2-nc-native-proof-plan.json",
@@ -293,13 +293,17 @@
       "/home/administrator/projects/catalyst-nc-operator/runs/2026-10-19_collective-response/nc-material/runtime/dft-c5-nc1-material.service",
       "/home/administrator/projects/catalyst-nc-operator/runs/2026-10-19_collective-response/nc-material/runtime/dft-c5-nc1-bank.service",
       "/home/administrator/projects/catalyst-nc-operator/runs/2026-10-19_collective-response/nc-material/runtime/evidence_io.py",
-      "/home/administrator/projects/catalyst-nc-operator/runs/2026-10-19_collective-response/nc-material/runtime/process_handles.py",
+      "/home/administrator/projects/catalyst-nc-operator/src/catdft/process_handles.py",
       "/home/administrator/projects/catalyst-nc-operator/runs/2026-10-19_collective-response/nc-material/runtime/attempt_evidence.py",
       "/home/administrator/projects/catalyst-nc-operator/runs/2026-10-19_collective-response/nc-material/source-references/pidfd_open.2.html",
       "/home/administrator/projects/catalyst-nc-operator/runs/2026-10-19_collective-response/nc-material/source-references/pidfd_send_signal.2.html",
       "/home/administrator/projects/substrate-ni-collective/proposals/P254-ni-collective-response/NC1-runtime-prelaunch-amendment-01.json",
       "/home/administrator/projects/catalyst-nc-operator/runs/2026-10-19_collective-response/nc-material/runtime/native_evidence.py",
-      "/home/administrator/projects/substrate-ni-collective/proposals/P254-ni-collective-response/NC1-runtime-layout-addendum-01.json"
+      "/home/administrator/projects/substrate-ni-collective/proposals/P254-ni-collective-response/NC1-runtime-layout-addendum-01.json",
+      "/home/administrator/projects/catalyst-nc-operator/src/catdft/process_shutdown.py",
+      "/home/administrator/projects/catalyst-nc-operator/src/catdft/job_queue.py",
+      "/home/administrator/projects/catalyst-nc-operator/runs/2026-10-19_collective-response/nc-material/runtime/completed_boundaries.py",
+      "/home/administrator/projects/substrate-ni-collective/proposals/P254-ni-collective-response/NC1-runtime-review-repair-02.json"
     ]
   },
   "runtime_source_amendments": [
@@ -313,6 +317,12 @@
       "id": "NC1-runtime-layout-addendum-01",
       "plan": "/home/administrator/projects/substrate-ni-collective/proposals/P254-ni-collective-response/NC1-runtime-layout-addendum-01.json",
       "scope": "Separate durable attempt reconciliation from raw snapshot proof before testing and freezing; migrate JSON helpers without aliases; retain task/event gaps without silently licensing them. No physical or native executable change."
+    },
+    {
+      "id": "NC1-runtime-review-repair-02",
+      "plan": "/home/administrator/projects/substrate-ni-collective/proposals/P254-ni-collective-response/NC1-runtime-review-repair-02.json",
+      "original_source_bank": "catalyst-dft@10c53b3",
+      "scope": "Complete repaired01 reviews reject live snapshot handle shadowing, sample-after-reap lifetime and lost completed-relaxation force obligations. Parent traced the still-reachable inner-queue numeric group stop; share retained ownership and bounded shutdown across both consumers, with no obsolete aliases. Actual snapshot, cache-skip and both supervisor APIs must be exercised before fresh immutable inputs and complete independent review. No physical or live GBRV change and no native grant."
     }
   ],
   "bank_policy": "Bank all scientific outputs and failed-attempt evidence; existing native WFC/save/mixing/GPW scratch exclusions remain. No forced-add of ignored checkpoints. Bank is persistence, not scientific admission; no early support PR or merged-delivery claim."
