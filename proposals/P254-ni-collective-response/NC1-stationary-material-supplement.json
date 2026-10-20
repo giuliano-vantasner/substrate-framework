@@ -2,7 +2,7 @@
   "schema_version": 1,
   "id": "P254-NC1-stationary-material-2026-10-19",
   "registered_at": "2026-10-19T22:19:01.673Z",
-  "status": "RUNTIME SOURCE REPAIR-02 PREREGISTERED BEFORE ITS IMPLEMENTATION OR ANY NC1 NATIVE OUTPUT; REPAIRED01 REJECTED; ORIGINAL PHYSICAL MODEL UNCHANGED",
+  "status": "AFFINITY-ONLY KERNEL PROOF CORRECTION VERIFIED RETROSPECTIVELY ON ORIGINAL ACTUAL NATIVE SNAPSHOTS; BOTH OWNED UNITS STOPPED; FRESH PUBLICATION, COMPLETE REVIEWS AND NEW GRANT REQUIRED; ORIGINAL PHYSICAL MODEL UNCHANGED",
   "objective": "Obtain independently converged fully mobile stationary SG15 Ni32, Ni31, Ni31H6 and Ni32H6 coupled-mode material inputs, compare like observables with the separately converged GBRV material, and hand off only admitted same-model data to the registered downstream G2-G5 arc.",
   "issue": "https://github.com/giuliano-vantasner/catalyst-dft/issues/12",
   "parent_arc": "/home/administrator/projects/substrate-ni-collective/proposals/P254-ni-collective-response/W2-nc-native-proof-plan.json",
@@ -309,7 +309,8 @@
       "/home/administrator/projects/catalyst-nc-operator/runs/2026-10-19_collective-response/nc-material/source-references/linux-v6.8-kernel-exit.c",
       "/home/administrator/projects/catalyst-nc-operator/runs/2026-10-19_collective-response/nc-material/source-references/linux-v6.8-kernel-sys.c",
       "/home/administrator/projects/substrate-ni-collective/proposals/P254-ni-collective-response/NC1-selected-parser-source-closure-addendum-01.json",
-      "/home/administrator/projects/substrate-ni-collective/proposals/P254-ni-collective-response/NC1-user-unit-context-amendment-01.json"
+      "/home/administrator/projects/substrate-ni-collective/proposals/P254-ni-collective-response/NC1-user-unit-context-amendment-01.json",
+      "/home/administrator/projects/substrate-ni-collective/proposals/P254-ni-collective-response/NC1-affinity-only-kernel-proof-supplement.json"
     ]
   },
   "runtime_source_amendments": [
@@ -350,6 +351,14 @@
       "issue": "https://github.com/giuliano-vantasner/catalyst-dft/issues/16",
       "source_bank_before_change": "catalyst-dft@a467db4",
       "scope": "Actual source-reviewed units fail before Python at supplementary-group setup,216/GROUP. Full failure journal and existing running user-unit identity pattern are in hand before this plan. Remove only redundant explicit User from the two user-manager source units, inheriting existing manager identity without privileges or account changes. Actual non-Native UID/GID/environment/affinity/kernel-cap context proof precedes fresh immutable inputs, complete reviews and new resource grant. Every physical/nonpath model value and other service directive is unchanged; old grant50fc2bf is not reusable."
+    },
+    {
+      "id": "NC1-affinity-only-kernel-proof-supplement",
+      "plan": "/home/administrator/projects/substrate-ni-collective/proposals/P254-ni-collective-response/NC1-affinity-only-kernel-proof-supplement.json",
+      "issue": "https://github.com/giuliano-vantasner/catalyst-dft/issues/17",
+      "preregistration_bank": "substrate-framework@28d5fbbb",
+      "source_subject_before_change": "catalyst-dft@0e404e9",
+      "scope": "Actual first Native evidence consumer rejects correctly captured absent optional cpuset interface despite a scheduling-affinity-only contract. Preserve the complete stopped original generation and verified original authority; require only declared memory interfaces while retaining exact all-task affinity/incarnation, environment, unit, rank, native-input and frozen ELF gates. Raw unavailable cpuset remains factual telemetry, not hard-cpuset evidence. New complete-consumer regression fails before and affected module13 passes after; full corrected five-rank saved-data replay and actual CPU/memory refusals are explicitly retrospective. Fresh publication/full reviews/new grant precede relaunch. Physical/nonpath execution parameters and live W1 unchanged; grant002 not reusable."
     }
   ],
   "bank_policy": "Bank all scientific outputs and failed-attempt evidence; existing native WFC/save/mixing/GPW scratch exclusions remain. No forced-add of ignored checkpoints. Bank is persistence, not scientific admission; no early support PR or merged-delivery claim."
