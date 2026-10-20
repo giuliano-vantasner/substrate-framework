@@ -307,7 +307,8 @@
       "/home/administrator/projects/catalyst-nc-operator/src/catdft/process_ownership.py",
       "/home/administrator/projects/substrate-ni-collective/proposals/P254-ni-collective-response/NC1-runtime-review-repair-03.json",
       "/home/administrator/projects/catalyst-nc-operator/runs/2026-10-19_collective-response/nc-material/source-references/linux-v6.8-kernel-exit.c",
-      "/home/administrator/projects/catalyst-nc-operator/runs/2026-10-19_collective-response/nc-material/source-references/linux-v6.8-kernel-sys.c"
+      "/home/administrator/projects/catalyst-nc-operator/runs/2026-10-19_collective-response/nc-material/source-references/linux-v6.8-kernel-sys.c",
+      "/home/administrator/projects/substrate-ni-collective/proposals/P254-ni-collective-response/NC1-selected-parser-source-closure-addendum-01.json"
     ]
   },
   "runtime_source_amendments": [
@@ -334,6 +335,13 @@
       "original_source_bank": "catalyst-dft@049da5f",
       "issue": "https://github.com/giuliano-vantasner/catalyst-dft/issues/14",
       "scope": "Complete repair02 ownership review rejects undiscovered already-dead adopted-child collection and the live-only pre-existing-child guard. Separate retained dead-child collection from live signaling, preserve Popen wait ownership, require fresh dead/live drain and refuse pre-existing wait status without consuming it. Split ownership into its own module, migrate every caller, demonstrate actual still-live caller before/after and refreeze/re-review before resource release. Physical/nonpath execution values and live W1 unchanged; no native grant."
+    },
+    {
+      "id": "NC1-selected-parser-source-closure-addendum-01",
+      "plan": "/home/administrator/projects/substrate-ni-collective/proposals/P254-ni-collective-response/NC1-selected-parser-source-closure-addendum-01.json",
+      "issue": "https://github.com/giuliano-vantasner/catalyst-dft/issues/15",
+      "source_bank_before_change": "catalyst-dft@faf1278",
+      "scope": "Actual selected ASE espresso-out parser and its namelist package were absent from original prelaunch hash maps despite a reachable scientific output consumer. Primary implementations and settled raw parser witness are in hand before this plan. Load the actual selected format through ASE's existing API before the existing producer inventory; actual before/after producer/parser and integrity-refusal smoke precede immutable refreeze and complete reviews. No physics, original installed environment, live W1 or native grant change."
     }
   ],
   "bank_policy": "Bank all scientific outputs and failed-attempt evidence; existing native WFC/save/mixing/GPW scratch exclusions remain. No forced-add of ignored checkpoints. Bank is persistence, not scientific admission; no early support PR or merged-delivery claim."
