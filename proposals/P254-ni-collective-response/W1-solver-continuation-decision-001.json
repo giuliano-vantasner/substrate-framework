@@ -1,0 +1,176 @@
+{
+  "schema_version": 1,
+  "kind": "P254-W1-prospective-solver-continuation-decision",
+  "decision_id": "W1-solver-continuation-decision-001",
+  "prepared_on": "2026-10-21",
+  "status": "Prospective scientific intent conditionally approved by root; preparation only, no execution/publication/resource authorization or new scientific result",
+  "campaign": "P254 / issue225 / research/P254-ni-collective-response",
+  "parent_decision": {
+    "source": "/home/administrator/projects/catalyst-nc-operator/runs/2026-10-19_collective-response/nc-material/verification/campaign-science-decision-synthesis-20261021.json",
+    "sections": ["recommended_decision", "decisions_needed[D1]", "decisions_needed[D2]", "source_pointers"],
+    "effective_now": "D1 remains selected: preserve both running dispersed attempts. Root conditionally approves the scientific intent of the single prospective W1 beta0.30/plain-Broyden cold-start option only after the current same-geometry attempt genuinely terminally fails. No new Native launch, restart, reused grant, input publication or NC gate waiver follows.",
+    "scientific_motivation": "One source-defined solver-only comparison can be informative after genuine W1 terminal nonconvergence, unlike another identical automatic cold retry. No claim is made that beta0.30 remedies W1 or identifies its failure mechanism."
+    ,
+    "root_decision_record": {
+      "authority": "Direct Main instruction to W1SolverContinuation on2026-10-21; recorded here without a new live observation",
+      "scientific_intent": "Conditionally approved: ONE beta0.30/plain-Broyden cold-start continuation at the current SAME geometry only after genuine terminal failure, unchanged physical settings,1e-10Ry convergence target,200-step cap and zero automatic retries.",
+      "retained_decision": "D1 now; no change to running W1 or NC.",
+      "not_authorized": ["Execution", "Input publication", "Resource allocation or grant reuse", "Source/input/unit/service changes", "Interruption or restart of live work"],
+      "remaining_prerequisites": "Distinct frozen generation and released owned resource choice remain unset until CampaignProgressSteward reports the real boundary; execution authorization is still separate.",
+      "expiry_condition": "If the current attempt succeeds or its geometry changes, this conditional option does not apply."
+    }
+  },
+  "recorded_state_not_live_observation": {
+    "source": "local://p254-live-orchestration-board-20261021.json#running_calculations.w1",
+    "frontier_source": "/home/administrator/projects/catalyst-collective/runs/2026-10-19_collective-response/owner-frontiers/actual-dft-frontier-w1-20261021T120635985083Z.json",
+    "prior_invocation": "95dbd76bc45c478eb58589a56565d680",
+    "prior_outcome": "Reached SCF200; JOB DONE did not establish convergence. Recorded RELAX_FAILED and UNIT_EXIT exit1.",
+    "current_invocation_at_recording": "3bdfec8e3bd44c95af3b41a31fc6b666",
+    "unit_at_recording": "dft-c5-material.service",
+    "recorded_automatic_restarts": 1,
+    "observed_beta": 0.70,
+    "progress": "Frontier recorded 2026-10-21T12:06:35.984984+00:00 includes SCF56 at12:00:58Z; synthesis/board summarizes56/57. Neither establishes a terminal outcome.",
+    "current_outcome": "Unknown; no new journal/process observation was commissioned or performed.",
+    "not_a_trigger": ["An SCF iteration, including iteration200 without the terminal disposition", "An optimizer checkpoint alone", "Long wall time or a stale viewer", "A prior invocation's failure while the current retry is still running", "JOB DONE without electronic convergence"]
+  },
+  "case_and_identity_binding": {
+    "relaxation_spec": "/home/administrator/projects/catalyst-collective/runs/2026-10-19_collective-response/material/dispersed-ni32h6.json",
+    "force_spec": "/home/administrator/projects/catalyst-collective/runs/2026-10-19_collective-response/material/dispersed-ni32h6/forces/135dc6d7afe2834f320c85462f0f24da9ae54322ac54777d67a1b08a19ab7423/spec.json",
+    "force_id": "dispersed-ni32h6-force-135dc6d7afe2834f320c85462f0f24da9ae54322ac54777d67a1b08a19ab7423",
+    "geometry_key": "135dc6d7afe2834f320c85462f0f24da9ae54322ac54777d67a1b08a19ab7423",
+    "exact_geometry_source": "/home/administrator/projects/catalyst-collective/runs/2026-10-19_collective-response/material/dispersed-ni32h6/forces/135dc6d7afe2834f320c85462f0f24da9ae54322ac54777d67a1b08a19ab7423/input.extxyz",
+    "geometry_sha256_recorded_in_force_spec": "96affb020f22b646af101259ad8e8f2029070c54063de49dac4687e1b1c00bb6",
+    "geometry_scope": "Use all coordinates, cell, atom order, species, masses and periodicity of this exact force seed, not a regenerated or newly relaxed geometry. Its recorded file identity also matches the primary dispersed starting structure; no new geometry computation is asserted.",
+    "actual_w1_emitter": "/home/administrator/projects/catalyst-collective/src/catdft/qe_io.py#espresso_input",
+    "w1_emitter_sha256_recorded_in_force_spec": "c8abdb9b7473ebf5b2f857daf29ce73b1b7723818db4fdc0f350540236435cf7",
+    "actual_w1_force_adapter": "/home/administrator/projects/catalyst-collective/src/catdft/qe_force_calculator.py:25-48",
+    "identity_status": "Existing identities transcribed from the registered force spec only; no hashes recomputed and no claim of a fresh source-integrity admission. Future amended generation does not yet exist."
+  },
+  "candidate": {
+    "attempt_count": 1,
+    "calculation": "One fixed-geometry native W1 SCF/force evaluation at the bound failed force geometry, not an entire new relaxation queue",
+    "numerical_change": {"field": "ELECTRONS.mixing_beta", "baseline": 0.70, "candidate": 0.30},
+    "mixing_mode": {"baseline": "plain (QE7.5 default, omitted by W1 emitter)", "candidate": "plain", "meaning": "Charge-density Broyden mixing; no TF or local-TF screening added"},
+    "mixing_ndim": {"baseline": "QE7.5 default8", "candidate": 8},
+    "explicit_effective_policy": {
+      "CONTROL.restart_mode": "from_scratch",
+      "ELECTRONS.startingpot": "atomic",
+      "ELECTRONS.startingwfc": "atomic+random",
+      "ELECTRONS.mixing_beta": 0.30,
+      "ELECTRONS.mixing_mode": "plain",
+      "ELECTRONS.mixing_ndim": 8,
+      "ELECTRONS.conv_thr": 1e-10,
+      "ELECTRONS.electron_maxstep": 200,
+      "ELECTRONS.scf_must_converge": true
+    },
+    "initialization_decision": {
+      "choice": "Independent cold atomic start, retaining current W1 initialization semantics; do not warm-start from failed or converged densities, wavefunctions or mixing histories.",
+      "source_basis": "W1 espresso_input emits from_scratch and omits startingpot/startingwfc; qe_stage creates a fresh UUID attempt scratch directory. QE7.5 defines atomic potential for SCF and atomic+random wavefunctions as defaults. The W1 force-probe plan also explicitly registers independent cold atomic starts and prohibits undocumented warm-start interpolation.",
+      "why": "Keeps initialization policy fixed so beta is the only intended numerical-method change. Importing the NC initial_state/file path would add another change and has no W1 permission.",
+      "explicitization": "Writing plain, ndim8, atomic and atomic+random explicitly in a future separately frozen generation documents the same effective defaults, not extra parameter experiments. No such input or source change is made now.",
+      "stochastic_limit": "Atomic+random is the same initialization policy, not a promise of an identical random wavefunction realization. No undocumented seed control or bitwise paired-start claim is introduced."
+    },
+    "hypothesis_limit": "Lower beta is a bounded solver experiment only. It may fail within200 iterations. Historical NC beta0.30 plain also failed on a different two-atom model; neither that failure nor later local-TF work establishes W1 causality or predicts this outcome."
+  },
+  "unchanged_versus_changed_contract": {
+    "intended_numerical_method_changes": ["mixing_beta0.70 to0.30 only"],
+    "unchanged_hamiltonian_and_geometry": {
+      "composition": "Ni32H6, original ordered species and positions from exact_geometry_source",
+      "cell": "Fixed7.048 Angstrom cubic cell; no volume, strain, vacancy, isotope, coordinate or constraint modification",
+      "exchange_correlation": "PBE",
+      "spin": "Collinear nspin2; initial Ni magnetization fraction0.06 and H0.0; no nonmagnetic, high-moment0.6, fixed-total-moment, spin-orbit or noncollinear substitution",
+      "physical_branch": "Same registered low-initial-moment W1 dispersed branch policy. Equal seed policy does not prove identical converged magnetic basin; record final moments and do not claim a ground-state branch ranking. A newly distinct magnetic state is not silently admitted as the historical branch.",
+      "pseudopotential_directory": "/home/administrator/projects/catalyst-dft/pseudos",
+      "pseudopotentials": {
+        "Ni": {"file": "ni_pbe_v1.4.uspp.F.UPF", "recorded_sha256": "f76b86ce60cde3d83dfcc8df79ba05478db573d158289f1b226919442d977d25"},
+        "H": {"file": "h_pbe_v1.4.uspp.F.UPF", "recorded_sha256": "897f39441a8f0feb1f504af4cebce9dcf95c9cdc16858a7498991c74f1ad127b"}
+      },
+      "ecutwfc_ry": 40.0,
+      "ecutrho_ry": 480.0,
+      "occupations": "smearing",
+      "smearing": "mv",
+      "degauss_ry": 0.02,
+      "automatic_k_grid": [4, 4, 4],
+      "automatic_k_offsets": [0, 0, 0],
+      "band_and_symmetry_policy": "Retain W1's omitted nbnd, nosym and noinv under the same QE7.5 executable: native metallic band-count default and native symmetry/time-reversal policies, not the NC emitter's explicit full-mesh/band policy. No band-count or symmetry change is bundled.",
+      "calculation": "scf with forces and stress printed, unchanged prefix scf and ibrav0"
+    },
+    "unchanged_solver_and_execution": {
+      "conv_thr_ry": 1e-10,
+      "convergence_meaning": "QE estimated self-consistent energy error below conv_thr; this is not a measured physical accuracy or stationarity certificate",
+      "electron_maxstep": 200,
+      "diagonalization_and_other_controls": "Same QE7.5 defaults for all other unmodified W1 electronic controls; no local-TF, extra diagonalization choice, loosened target or cap increase",
+      "pw_executable": "/opt/qebuild/q-e-qe-7.5/bin/pw.x",
+      "resolved_executable_identity_in_registered_spec": {"path": "/opt/qebuild/q-e-qe-7.5/PW/src/pw.x", "recorded_sha256": "1dc2787bdbeca3399ecbd303fcec993b47d38ff89f860c35e0497c8a5af6c2eb"},
+      "mpi_ranks": 5,
+      "kpoint_pools": 1,
+      "grant_status": "No new or reused grant is authorized by these values"
+    },
+    "administrative_changes_required_before_execution": ["Distinct prospective generation, attempt ID, output directory and fresh owned scratch", "Separately frozen W1-specific amended emitter/input identity; preserve the historical registered identity", "A bounded owner/controller disposition with zero automatic retries for this new attempt"],
+    "optimizer_boundary": "No optimizer move occurs in this one-attempt experiment. Original serial BFGS policy stays70eV/Angstrom^2, maximum step0.1Angstrom, maximum120 steps and raw force-norm target0.005eV/Angstrom for any separately authorized continuation; nothing resets its history or step budget.",
+    "out_of_scope": ["The registered60/720Ry, k888 and MV0.005 failed-refinement ladders", "New branch searches or magnetic ranking", "NC launch/restart or all-four-primary gate changes", "DFPT, response, physical loss, collective dynamics or nuclear-rate calculation"]
+  },
+  "safe_boundary_and_generation_prerequisites": {
+    "only_selected_trigger": "The recorded current W1 retry reaches a genuine terminal electronic nonconvergence at the bound geometry, with native failure/absence of convergence and terminal controller disposition recorded. Only after its owned Native child/MPI ranks have exited and the owner cannot launch another automatic retry may the candidate become eligible.",
+    "if_current_succeeds": "Do not run this candidate, interrupt it, or move back to the failed geometry merely to collect a beta comparison. Preserve the successful force and existing relaxation continuation. If a later geometry fails, this exact-geometry registration does not automatically cover it.",
+    "if_current_still_runs": "Leave it and NC untouched. No signal, stop, exit-file injection, unit edit or restart is authorized.",
+    "if_automatic_retry_wins_race": "An already running successor is another running attempt to preserve, not permission to stop it. Root must separately choose a controlled boundary; this artifact provides no race-based intervention authority.",
+    "if_other_failure": "Resource, parser, launcher or I/O failure does not establish the targeted electronic nonconvergence. Retain its failure evidence; no automatic beta trial or retry is licensed.",
+    "new_generation": [
+      "Root accepts this W1-specific prospective registration before any amended native output, then separately authorizes creation of a distinct source/input generation without mutating live or historical W1 sources, units, specs, inputs, attempts or receipts.",
+      "Bind the new generation to this exact force seed, the recorded GBRV/binary identities, all unchanged effective settings, explicit initialization/mixing policy and a unique empty scratch/output namespace. No historical receipt is re-pinned and no old cache is admitted under the new solver identity.",
+      "Use a generation-specific owner that cannot automatically replay a failed solve. Preserve the original attempts and optimizer state byte-for-byte; do not overwrite or resume their electronic scratch."
+    ],
+    "owned_resources": [
+      "Root explicitly assigns an available five-rank production allocation and its owner, CPU set, memory/swap policy and release condition after a genuine released boundary. An observation of idle CPUs is not a grant.",
+      "Do not overlap the existing W1 or NC ownership or borrow NC CPUs6-10. Do not infer free resources or reuse old probe/execution grants.",
+      "Recorded W1 has SwapMax=infinity on a host without swap; do not relabel it swap0. No new allocation's exact CPU/memory/swap values are established here."
+    ]
+  },
+  "one_attempt_terminal_disposition": {
+    "maximum_native_scf_attempts": 1,
+    "maximum_electronic_iterations": 200,
+    "automatic_restarts": 0,
+    "success": "Require actual QE7.5 convergence at1e-10Ry followed by complete successful termination, unchanged geometry/species and finite energy/raw forces under the existing W1 parser contract. Preserve the raw attempt and expose the force as this new generation's result only. Then stop this experiment; no automatic optimizer move, second SCF or downstream launch is granted by it.",
+    "nonconvergence": "Preserve native output, input, command, scratch and terminal failure with no accepted force/result. Exit terminally nonzero and release the generation's owned resources. Do not increase200, loosen1e-10Ry, reuse a partial force, add local-TF or cold-replay the same generation. Root must choose a separately specified materially different scientific/solver action or stop.",
+    "interruption_or_other_error": "Preserve the incomplete attempt and terminal error. Do not automatically restart or convert it into another commissioned solve; any recovery needs a new explicit disposition.",
+    "successful_force_is_not": ["An optimizer-stationary dispersed primary", "A resolution of the three admitted failed W1 force refinements", "Joint force-and-mode calibration", "An all-four NC gate admission", "A material spectrum, physical loss mechanism, collective response or nuclear result"],
+    "failure_budget_scope": "One launched native SCF consumes the allowance even if interrupted; no hidden second attempt. No new numerical execution, tests, review reruns or validation campaign is commissioned in preparing this decision."
+  },
+  "decisions_needed": [
+    {
+      "id": "D2-W1-BOUNDARY-AND-ATTEMPT",
+      "choice": "After CampaignProgressSteward reports genuine terminal failure of the current SAME-geometry attempt and a safe no-replay boundary, explicitly authorize or decline execution/publication of the already conditionally endorsed scientific option: exactly one new-generation cold-start plain-Broyden beta0.30 SCF with1e-10Ry,200 iterations and zero automatic restarts, stopping terminally on either outcome.",
+      "recommended": "Root has approved scientific intent only. Keep execution/publication permission unset now; conditional intent lapses if the current attempt succeeds or geometry changes.",
+      "minimum_scope": "Separate future permission for this specific one-attempt W1 execution/publication only; no NC permission, existing-grant extension, optimizer queue or broader solver search."
+    },
+    {
+      "id": "D2-W1-GENERATION-AND-RESOURCE",
+      "choice": "After the real boundary is reported by CampaignProgressSteward, select and separately authorize the distinct frozen W1 source/input generation and explicit released five-rank owner/resource envelope, including CPU set, memory/swap values, no-retry policy and terminal release.",
+      "recommended": "Root explicitly leaves generation and resource choice unset until that report; retain rank/pool topology and the registered executable/pseudos. Conditional scientific intent is not implementation, publication, execution or resource authorization."
+    }
+  ],
+  "source_dependency_matrix": [
+    {"id": "S1", "citation": "/home/administrator/projects/catalyst-nc-operator/runs/2026-10-19_collective-response/nc-material/verification/campaign-science-decision-synthesis-20261021.json:21-39,139-156,191-207", "supports": "D1 selected; prospective D2 scope, missing W1 registration/resource permissions and limitations", "scope": "Accepted campaign decision, not a new observation"},
+    {"id": "S2", "citation": "/home/administrator/projects/catalyst-collective/runs/2026-10-19_collective-response/material/dispersed-ni32h6.json", "supports": "Actual scientific case location, scf_settings, topology, optimizer and recorded input identities", "scope": "Existing preregistration, unchanged"},
+    {"id": "S3", "citation": "/home/administrator/projects/catalyst-collective/runs/2026-10-19_collective-response/material/dispersed-ni32h6/forces/135dc6d7afe2834f320c85462f0f24da9ae54322ac54777d67a1b08a19ab7423/spec.json", "supports": "Exact force seed/source/pseudo/binary identities transcribed in this artifact", "scope": "Existing force spec; no evidence rehash"},
+    {"id": "S4", "citation": "/home/administrator/projects/catalyst-collective/src/catdft/qe_io.py:136-175,187-210", "supports": "Actual W1 emitter: PBE/MV, spin seed, from_scratch, omitted mixing/init defaults, unshifted automatic k grid and existing converged-output contract", "scope": "Relevant source-defined policy read only, not a review or source-integrity rerun"},
+    {"id": "S5", "citation": "/home/administrator/projects/catalyst-collective/src/catdft/qe_force_calculator.py:25-48; /home/administrator/projects/catalyst-collective/src/catdft/qe_stage.py:109-115", "supports": "Relaxation-to-force settings adapter, geometry-keyed force spec and fresh UUID scratch preserving prior attempts", "scope": "Existing initialization/identity policy"},
+    {"id": "S6", "citation": "/opt/qebuild/q-e-qe-7.5/PW/Doc/INPUT_PW.def:193-211,764-774,920-921,962-965,2083-2116,2145-2175,2328-2372", "public_reference": "https://www.quantum-espresso.org/Doc/INPUT_PW.html#mixing_beta", "supports": "Version-specific plain Broyden, beta default0.7, ndim default8, restart and atomic/atomic+random semantics, native band/symmetry defaults and energy-error convergence meaning", "scope": "Local QE7.5 definitions control; public rolling documentation is a navigation reference, not a substitute version claim"},
+    {"id": "S7", "citation": "/home/administrator/projects/catalyst-collective/runs/2026-10-19_collective-response/W1-stationary-inputs.md:5-18,20-29; /home/administrator/projects/substrate-ni-collective/proposals/P254-ni-collective-response/W1-loaded-force-probes-plan.json:24-46,79", "supports": "Fixed cell, all-mobile physical branch, stationarity and unresolved calibration gates; explicit cold-start W1 precedent", "scope": "Model choices and thresholds, not measured properties or transferable probe grants"},
+    {"id": "S8", "citation": "local://p254-live-orchestration-board-20261021.json#running_calculations.w1; /home/administrator/projects/catalyst-collective/runs/2026-10-19_collective-response/owner-frontiers/actual-dft-frontier-w1-20261021T120635985083Z.json", "supports": "Recorded failed prior invocation, unfinished automatic retry, observed beta0.70, geometry and W1 swap caveat", "scope": "Recorded state only; later outcome unknown"},
+    {"id": "S9", "citation": "/home/administrator/projects/catalyst-nc-operator/src/catdft/qe_io.py:14-17,152-174; /home/administrator/projects/substrate-ni-collective/proposals/P254-ni-collective-response/W2-nc-native-proof-amendment-04.json:5-29", "supports": "Supplied NC emitter uses beta0.3/local-TF and optional file initialization; it is not the actual W1 emitter. Historical NC plain beta0.3 failed and later NC amendment explicitly excludes live W1 changes.", "scope": "Nontransferable precedent and boundary, not W1 authorization or remedy evidence"}
+  ],
+  "known_gaps_and_dependencies": [
+    {"gap": "Current retry's genuine terminal outcome and actual release boundary are not known", "consequence": "Execution ineligible now; no polling or intervention performed"},
+    {"gap": "No new-generation emitter/input identity, unique execution directory or bounded owner has been created", "consequence": "This is a decision artifact, not runnable input or permission to mutate historical/live state"},
+    {"gap": "No newly assigned production CPU set, memory/swap envelope or owner/resource grant exists", "consequence": "No launch or silent extension/reuse; root must bind these at a released boundary"},
+    {"gap": "Same cold-start policy does not establish the converged magnetic basin, lower-beta efficacy, convergence mechanism or cost", "consequence": "No promised remedy, speedup or branch-ranking inference"}
+  ],
+  "preparation_actions_and_limits": {
+    "only_file_written": "/home/administrator/projects/substrate-ni-collective/proposals/P254-ni-collective-response/W1-solver-continuation-decision-001.json",
+    "actions": "Read the latest synthesis first, then only mapped case/policy/version-documentation sections needed to prepare the decision. Existing results and identities were accepted at recorded scope.",
+    "not_performed": ["Native or mathematical execution", "Source/input/unit/grant/service changes", "Signals, stops, restarts or permission changes", "Input publication or new generation creation", "Git mutation or early PR", "Builds, tests, lint, formatters, gates, source sweeps, numerical/oracle runs or review reruns", "Historical evidence rehash"],
+    "capture_only": "The21759-byte original preparation revision and its SHA108b341c8ddd1fa2bded3b83367e93f188c3970a840e4c203a3186f6d23c2ac1 were reported separately for capture only. They do not identify this root-decision amendment; no rehash was performed."
+  }
+}
