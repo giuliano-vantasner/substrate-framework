@@ -16,6 +16,8 @@ sys.path.insert(0, str(HERE.parent/'0020'))
 from pilot_inputs import binding, load_inputs
 from pilot_checkpoints import save_json
 from substrate_framework.qe_frozen_curvature import verify_buffer
+# load_bundle selects this validator lazily; bind it before input consumption.
+import substrate_framework.qe_response_schema
 
 
 def bound_registration():
