@@ -16,11 +16,7 @@ from numpy.typing import NDArray
 from .pw_response_data import PWResponseChannel, PWResponseModel, PWResponseValue
 
 
-def _finite_array(value, shape: tuple[int, ...], name: str) -> NDArray:
-    array = np.asarray(value)
-    if array.shape != shape or not np.all(np.isfinite(array)):
-        raise ValueError(f"{name} must be finite with shape {shape}")
-    return array
+from .pw_transition_space import PWTransitionSpace, finite_array
 
 
 class PWIndependentResponse:
@@ -37,67 +33,7 @@ class PWIndependentResponse:
         self.z = complex(z)
         if not np.isfinite(self.z) or self.z.imag <= 0:
             raise ValueError("z must be finite with strictly positive imaginary part")
-        fft = model.fft
-        if not np.isfinite(fft.omega) or fft.omega <= 0:
-            raise ValueError("FFT volume must be finite and positive")
-        if len(fft.physical) != 3 or len(fft.storage) != 3 or any(
-                p < 1 or s < p for p, s in zip(fft.physical, fft.storage)):
-            raise ValueError("FFT physical/storage dimensions are inconsistent")
-        if fft.nnr != int(np.prod(fft.storage)):
-            raise ValueError("FFT nnr must equal the storage size")
-        _finite_array(model.q_cart_2pi_alat, (3,), "q")
-        self._maps = tuple(self._validate_channel(channel) for channel in model.channels)
-
-    def _coordinates(self, slots, count: int, name: str) -> tuple[NDArray, ...]:
-        slots = np.asarray(slots)
-        fft = self.model.fft
-        if slots.shape != (count,) or slots.dtype.kind not in "iu":
-            raise ValueError(f"{name} must contain {count} integer FFT offsets")
-        if np.any(slots < 0) or np.any(slots >= fft.nnr) or np.unique(slots).size != count:
-            raise ValueError(f"{name} contains invalid or duplicated FFT offsets")
-        coordinates = np.unravel_index(slots, fft.storage, order="F")
-        if any(np.any(c >= n) for c, n in zip(coordinates, fft.physical)):
-            raise ValueError(f"{name} maps into FFT padding")
-        return coordinates
-
-    def _validate_channel(self, channel: PWResponseChannel):
-        if channel.spin not in (0, 1):
-            raise ValueError("channel spin must be zero-based 0 or 1")
-        energies = np.asarray(channel.source_energies)
-        if energies.ndim != 1 or energies.dtype.kind not in "fiu":
-            raise ValueError("source energies must be a real vector")
-        count = energies.size
-        _finite_array(energies, (count,), "source energies")
-        weights = _finite_array(channel.weighted_occupations, (count,), "occupations")
-        if weights.dtype.kind not in "fiu" or np.any(weights < 0):
-            raise ValueError("weighted occupations must be real and nonnegative")
-        _finite_array(channel.source_grid, (self.model.fft.nnr, count), "source grid")
-        maps = []
-        for branch in ("plus", "minus"):
-            target = np.asarray(getattr(channel, f"{branch}_energies"))
-            if target.ndim != 1 or target.dtype.kind not in "fiu":
-                raise ValueError(f"{branch} target energies must be a real vector")
-            size = target.size
-            _finite_array(target, (size,), f"{branch} energies")
-            _finite_array(getattr(channel, f"{branch}_vectors"), (size, size),
-                          f"{branch} full target eigenvectors")
-            _finite_array(getattr(channel, f"g_{branch}"), (6, size, count),
-                          f"{branch} ionic operators")
-            maps.append(self._coordinates(getattr(channel, f"{branch}_slots"),
-                                          size, f"{branch} slots"))
-        return tuple(maps)
-
-    def _to_pw(self, grid: NDArray, coordinates: tuple[NDArray, ...]) -> NDArray:
-        spectrum = np.fft.fftn(self.model.fft.physical_view(grid),
-                               axes=(0, 1, 2), norm="forward")
-        return spectrum[coordinates]
-
-    def _to_grid(self, coefficients: NDArray, coordinates: tuple[NDArray, ...]) -> NDArray:
-        fft = self.model.fft
-        spectrum = np.zeros((*fft.physical, coefficients.shape[1]), dtype=np.complex128)
-        spectrum[coordinates] = coefficients
-        physical = np.fft.ifftn(spectrum, axes=(0, 1, 2), norm="forward")
-        return fft._embed(physical)
+        self._space = PWTransitionSpace(model)
 
     def _ket(self, channel: PWResponseChannel, branch: str, potential: NDArray,
              displacement: NDArray, coordinates: tuple[NDArray, ...]) -> NDArray:
@@ -105,7 +41,7 @@ class PWIndependentResponse:
         energies = getattr(channel, f"{branch}_energies")
         drive = np.einsum("atn,a->tn", getattr(channel, f"g_{branch}"), displacement,
                           dtype=np.complex128)
-        drive += self._to_pw(potential[:, None] * channel.source_grid, coordinates)
+        drive += self._space.to_pw(potential[:, None] * channel.source_grid, coordinates)
         shift = self.z if branch == "plus" else -self.z.conjugate()
         denominator = channel.source_energies[None, :] + shift - energies[:, None]
         return vectors @ ((vectors.conj().T @ drive) / denominator)
@@ -118,21 +54,21 @@ class PWIndependentResponse:
         Padding is not physical volume and contributes no density integral.
         """
         fft = self.model.fft
-        potential = _finite_array(local_potential, (fft.nnr, 2), "local potential")
-        u = _finite_array(displacement, (6,), "displacement")
+        potential = finite_array(local_potential, (fft.nnr, 2), "local potential")
+        u = finite_array(displacement, (6,), "displacement")
         density = np.zeros((fft.nnr, 2), dtype=np.complex128)
         gradient = np.zeros(6, dtype=np.complex128)
-        for channel, (plus_map, minus_map) in zip(self.model.channels, self._maps):
+        for channel, (plus_map, minus_map) in zip(self.model.channels, self._space.maps):
             v = potential[:, channel.spin]
             weights = channel.weighted_occupations
             plus = self._ket(channel, "plus", v, u, plus_map)
             density[:, channel.spin] += np.einsum(
                 "rn,rn,n->r", channel.source_grid.conj(),
-                self._to_grid(plus, plus_map), weights) / fft.omega
+                self._space.to_grid(plus, plus_map), weights) / fft.omega
             gradient += np.einsum("atn,tn,n->a", channel.g_plus.conj(), plus, weights)
             minus = self._ket(channel, "minus", v.conj(), u.conj(), minus_map)
             density[:, channel.spin] += np.einsum(
-                "rn,rn,n->r", self._to_grid(minus, minus_map).conj(),
+                "rn,rn,n->r", self._space.to_grid(minus, minus_map).conj(),
                 channel.source_grid, weights) / fft.omega
             gradient += np.einsum("tn,atn,n->a", minus.conj(), channel.g_minus, weights)
         return PWResponseValue(density, gradient)
