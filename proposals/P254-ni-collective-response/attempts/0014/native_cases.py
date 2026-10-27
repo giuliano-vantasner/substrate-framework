@@ -64,13 +64,15 @@ def prepare(template, primitive, bindings, q, name, amplitudes, seed=None):
     if copies == 2:
         spec['settings'].update(kpts=[1, 2, 2], nbnd=40)
     if seed:
-        spec['initial_state'] = {'kind': 'qe75-collinear-dat-save-v1', 'directory': str(seed)}
+        spec['initial_state'] = (dict(seed) if isinstance(seed, dict) else
+                                {'kind': 'qe75-collinear-dat-save-v1', 'directory': str(seed)})
     inputs = dict(bindings)
     inputs[str(geometry)] = hashlib.sha256(geometry.read_bytes()).hexdigest()
-    if seed:
-        for path in sorted(Path(seed).iterdir()):
-            inputs[str(path.resolve())] = hashlib.sha256(path.read_bytes()).hexdigest()
     spec['input_files_sha256'] = inputs
+    if seed:
+        from catdft import qe_scf_seed
+        for path in qe_scf_seed.input_files(spec, atoms):
+            inputs[str(path.resolve())] = hashlib.sha256(path.read_bytes()).hexdigest()
     path = directory / 'case.json'
     save(path, spec)
     return path, signs
@@ -96,7 +98,9 @@ def _sample_native(pid, stop, records):
 def run_case(path, signs):
     argv = [PYTHON, '-u', '-m', 'catdft.qe_stage', '--spec', str(path)]
     directory = path.parent
-    save(directory / 'invoke.json', {'argv': argv, 'started_ns': str(time.time_ns()),
+    invocation = directory / 'invocations' / f'{time.time_ns()}-{os.getpid()}'
+    invocation.mkdir(parents=True, exist_ok=False)
+    save(invocation / 'invoke.json', {'argv': argv, 'started_ns': str(time.time_ns()),
                                      'timeout_seconds': 90})
     started = time.monotonic()
     process = subprocess.Popen(argv, env=os.environ.copy(), stdout=subprocess.PIPE,
@@ -107,16 +111,16 @@ def run_case(path, signs):
     try:
         stdout, stderr = process.communicate(timeout=90)
     except subprocess.TimeoutExpired as exc:
-        (directory / 'wrapper.stdout').write_bytes(exc.stdout or b'')
-        (directory / 'wrapper.stderr').write_bytes(exc.stderr or b'')
-        save(directory / 'execution.json', {'status': 'case_timeout', 'native_affinity': affinity})
+        (invocation / 'wrapper.stdout').write_bytes(exc.stdout or b'')
+        (invocation / 'wrapper.stderr').write_bytes(exc.stderr or b'')
+        save(invocation / 'execution.json', {'status': 'case_timeout', 'native_affinity': affinity})
         raise SystemExit('Case budget reached; owner exit lets systemd stop its whole cgroup.')
     finally:
         stop.set()
         sampler.join()
-    (directory / 'wrapper.stdout').write_bytes(stdout)
-    (directory / 'wrapper.stderr').write_bytes(stderr)
-    save(directory / 'execution.json', {'returncode': process.returncode,
+    (invocation / 'wrapper.stdout').write_bytes(stdout)
+    (invocation / 'wrapper.stderr').write_bytes(stderr)
+    save(invocation / 'execution.json', {'returncode': process.returncode,
         'wall_seconds': time.monotonic()-started, 'native_affinity': affinity})
     print(stdout.decode(), end='', flush=True)
     if process.returncode:

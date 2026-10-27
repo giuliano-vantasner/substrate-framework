@@ -44,13 +44,16 @@ def baseline_consistency(gamma, half):
     old_energy = Decimal(old.findtext('output/total_energy/etot').strip()) * 2
     checks = {
         'new_gamma_minus_saved_ry': float(Decimal(gamma['energy_ry_per_primitive'])-old_energy),
-        'folded_minus_gamma_ry': float(Decimal(half['energy_ry_per_primitive'])
-                                     -Decimal(gamma['energy_ry_per_primitive'])),
-        'folded_minus_gamma_magnetization': half['magnetization_per_primitive']
-                                           -gamma['magnetization_per_primitive']}
-    checks['matched'] = (abs(checks['new_gamma_minus_saved_ry']) <= 1e-7
-        and abs(checks['folded_minus_gamma_ry']) <= 1e-7
-        and abs(checks['folded_minus_gamma_magnetization']) <= 1e-3)
+        'scope': 'Gamma reference matching' if half is None else 'Gamma and folded-supercell matching'}
+    checks['matched'] = abs(checks['new_gamma_minus_saved_ry']) <= 1e-7
+    if half is not None:
+        checks.update(
+            folded_minus_gamma_ry=float(Decimal(half['energy_ry_per_primitive'])
+                                       -Decimal(gamma['energy_ry_per_primitive'])),
+            folded_minus_gamma_magnetization=half['magnetization_per_primitive']
+                                             -gamma['magnetization_per_primitive'])
+        checks['matched'] = (checks['matched'] and abs(checks['folded_minus_gamma_ry']) <= 1e-7
+                            and abs(checks['folded_minus_gamma_magnetization']) <= 1e-3)
     save(WORK / 'baseline-consistency.json', checks)
     if not checks['matched']:
         raise RuntimeError('Repair branch/folding before displacement wave: ' + json.dumps(checks))
@@ -94,24 +97,46 @@ def main():
     started = time.time()
     analytic = stencil_identity()
     template, primitive, bindings = setup()
+    # Independently useful Gamma work does not wait for supercell initialization.
+    import os
+    phase = os.environ.get('ACTION14_PHASE', 'all')
+    if phase not in ('all', 'gamma', 'half-b1'):
+        raise ValueError('Unregistered action phase')
+    selected = ('gamma', 'half-b1') if phase == 'all' else (phase,)
     centers = {}
-    for q in ('gamma', 'half-b1'):
-        seed = REG['inputs']['existing_primitive_seed'] if q == 'gamma' else None
-        path, signs = prepare(template, primitive, bindings, q, 'center', [0, 0], seed)
+    if phase == 'half-b1':
+        centers['gamma'] = json.loads((WORK / 'gamma/center/action-observables.json').read_text())
+    for q in selected:
+        if q == 'gamma':
+            seed, center_name = REG['inputs']['existing_primitive_seed'], 'center'
+        else:
+            initializer = os.environ.get('ACTION14_INITIALIZER_SPEC')
+            if not initializer:
+                raise ValueError('Nonzero-q continuation requires its registered derived initializer')
+            seed = json.loads(Path(initializer).read_text())
+            center_name = 'center-folded-density-001'
+        path, signs = prepare(template, primitive, bindings, q, center_name, [0, 0], seed)
         centers[q] = run_case(path, signs)
-    baseline = baseline_consistency(centers['gamma'], centers['half-b1'])
-    rows = {q: curvature_rows(template, primitive, bindings, q, centers[q])
-            for q in ('gamma', 'half-b1')}
+    baseline = baseline_consistency(centers['gamma'], centers.get('half-b1'))
+    rows = {q: curvature_rows(template, primitive, bindings, q, centers[q]) for q in selected}
+    if phase == 'half-b1':
+        completed_gamma = json.loads((WORK / 'gamma-result.json').read_text())
+        rows['gamma'] = completed_gamma['curvatures']['gamma']
+    complete = set(rows) == {'gamma', 'half-b1'}
     result = {'status': 'native_static_bridge_constructed' if all(r['agrees'] for v in rows.values() for r in v)
               else 'native_bridge_requires_numerical_or_mapping_repair',
+              'phase': phase, 'full_registered_bridge_complete': complete,
               'elapsed_seconds': time.time()-started, 'analytic_stencil': analytic,
               'baseline_consistency': baseline, 'centers': centers, 'curvatures': rows,
-              'scientific_scope': 'Actual nonstationary small SG15/FD spin-PBE constrained static action. '
-                'Not Ni31H6 calibration, projected dynamic HXC, physical loss, coherence domain or nuclear rates.',
-              'next_construction': 'Transfer matched static action to retarded coupled response and material observables; '
-                'resolve any discrepancy at its source, not by manufacturing a model rejection.'}
-    save(WORK / 'result.json', result)
-    print('ACTION14_COMPLETE ' + result['status'], flush=True)
+              'scientific_scope': 'Actual nonstationary small SG15/FD spin-PBE constrained static action '
+                'at the q members explicitly present in curvatures. Not Ni31H6 calibration, '
+                'projected dynamic HXC, physical loss, coherence domain or nuclear rates.',
+              'next_construction': 'Transfer the native static action and actual spatial spin-PBE kernel '
+                'into the retarded coupled response; repair discrepancies rather than manufacture rejection.'}
+    save(WORK / ('result.json' if phase == 'all' else phase + '-result.json'), result)
+    if complete and phase != 'all':
+        save(WORK / 'result.json', result)
+    print('ACTION14_COMPLETE ' + phase + ' ' + result['status'], flush=True)
 
 
 if __name__ == '__main__':
