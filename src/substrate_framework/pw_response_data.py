@@ -19,12 +19,14 @@ class PWResponseChannel:
     weighted_occupations: NDArray[Any]
     source_grid: NDArray[Any]  # (nnr,nactive), unnormalised periodic sums
     plus_energies: NDArray[Any]  # complete target PW spectrum
-    plus_vectors: NDArray[Any]
+    plus_vectors: NDArray[Any]  # target PW rows, energy-eigenstate columns
     plus_slots: NDArray[Any]  # zero-based Native FFT storage slots
     minus_energies: NDArray[Any]
-    minus_vectors: NDArray[Any]
+    minus_vectors: NDArray[Any]  # independent reverse-sector PW/eigenstate basis
     minus_slots: NDArray[Any]
-    g_plus: NDArray[Any]  # (6,ntarget_plus,nactive)
+    # Bare action coefficients: target PW rows, source eigenstate columns.
+    # Spectral consumers must apply the corresponding target_vectors.conj().T.
+    g_plus: NDArray[Any]  # (6,ntarget_plus,nactive), not target-spectral rows
     g_minus: NDArray[Any]  # (6,ntarget_minus,nactive), actual reverse sector
 
 @dataclass(frozen=True)
