@@ -59,6 +59,7 @@ def prepare_point(target, point, model, reciprocal_basis, times, budget, event, 
                        'number_covariance_maxabs_error':error,
                        'number_commutator_maxabs':number_commutator,
                        'allowance':1e-10,'scope':'Auxiliary finite grandcanonical preparation, not material accuracy.'}
+        save_json(target/(point+'-diagnostics.json'),diagnostics)
         if error > 1e-10 or number_commutator > 1e-10:
             raise ValueError('actual Gamma preparation violates independent spin-number fluctuation/conservation identity')
     output = save_arrays(target,point+'-correlations',{'times_tau_ry':times,
@@ -71,6 +72,7 @@ def prepare_point(target, point, model, reciprocal_basis, times, budget, event, 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output-dir',type=Path,required=True)
+    parser.add_argument('--admission',type=Path,required=True)
     args = parser.parse_args()
     target = args.output_dir.resolve()
     target.mkdir(parents=True,exist_ok=False)
@@ -89,7 +91,7 @@ def main():
     def budget():
         elapsed = time.monotonic()-BOOT
         if elapsed >= settings['actual_preparation_cap_seconds']:
-            raise TimeoutError('registered120s preparation allocation exhausted')
+            raise TimeoutError('registered per-generation preparation allocation exhausted')
         if not records and elapsed >= settings['actual_first_preparation_due_seconds']:
             raise TimeoutError('no committed useful preparation within60s')
     def interrupted(signum,_):
@@ -98,13 +100,14 @@ def main():
         signal.signal(signum,interrupted)
     try:
         registration, report['registration'] = bound_registration()
-        settings = registration['allocation']
-        signal.setitimer(signal.ITIMER_REAL,max(0.001,settings['actual_preparation_cap_seconds']-(time.monotonic()-BOOT)))
-        launch_raw = (HERE/'actual-launch-admission-001.json').read_bytes()
+        settings = dict(registration['allocation'])
+        launch_raw = args.admission.read_bytes()
         launch = json.loads(launch_raw)
+        settings['actual_preparation_cap_seconds'] = launch['scientific_cap_seconds']
+        signal.setitimer(signal.ITIMER_REAL,max(0.001,settings['actual_preparation_cap_seconds']-(time.monotonic()-BOOT)))
         for record in launch['source_and_oracle_bindings']:
             verify_buffer(Path(record['path']).read_bytes(),record)
-        report['launch_admission'] = binding(HERE/'actual-launch-admission-001.json',launch_raw)
+        report['launch_admission'] = binding(args.admission,launch_raw)
         report['implementation'] = implementation()
         report['runtime_context'] = runtime_context()
         context = report['runtime_context']

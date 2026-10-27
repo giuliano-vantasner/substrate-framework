@@ -78,7 +78,8 @@ def prepare_pw_noise(model: PWResponseModel, reciprocal_basis, mesh=(2, 2, 2)):
     arguments except times. Source model arrays must remain immutable during use;
     this adapter neither changes their flags nor modifies their contents. Existing
     representably-zero FD source omissions are inherited; no further cutoff is
-    introduced. Both target spectra and both actual gradient arrays are retained.
+    introduced. Both target spectra and both actual gradient actions are retained,
+    with their target plane-wave rows projected into the target energy eigenbasis.
     """
     space = PWTransitionSpace(model)
     dimensions, cells, q_fractional, records = _finite_bvk(model, reciprocal_basis, mesh)
@@ -93,11 +94,13 @@ def prepare_pw_noise(model: PWResponseModel, reciprocal_basis, mesh=(2, 2, 2)):
         for branch, coordinates in zip(("plus", "minus"), maps):
             energies = getattr(channel, f"{branch}_energies")
             vectors = getattr(channel, f"{branch}_vectors")
+            adjoint = vectors.conj().T
             operators = np.zeros((8, energies.size, raw_source.size), dtype=np.complex128)
-            operators[:6] = getattr(channel, f"g_{branch}")
+            # Channel g stores PW action coefficients, not target spectral rows.
+            operators[:6] = adjoint @ getattr(channel, f"g_{branch}")
             # Unit-cell average of u_target* u_source. No omega or spin factor.
             # Only source-supported grids are FFT'd; no full target grid exists.
-            operators[6 + channel.spin] = vectors.conj().T @ space.to_pw(
+            operators[6 + channel.spin] = adjoint @ space.to_pw(
                 channel.source_grid, coordinates)
             branches[branch].append({
                 "identity": channel.identity,

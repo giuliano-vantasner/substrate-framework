@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Independent finite real-space proof for the new PW preparation adapter only.
 
-No Native/material calculation, frame reconstruction, or peer correlation module
-is used. Plane waves and finite BvK matrix elements are summed explicitly in real
-space; production uses FFT source projection. Run with --output receipt.json.
+No Native/material calculation or frame reconstruction is used. Plane waves and
+finite BvK matrix elements are summed explicitly in real space. The already-proved
+correlation kernel exercises physical target-eigenvector phase invariance.
 """
 from __future__ import annotations
 
@@ -24,6 +24,7 @@ sys.path.insert(0, str(ROOT / "src"))
 from substrate_framework.pw_prepared_noise import prepare_pw_noise
 from substrate_framework.pw_response_data import PWResponseChannel, PWResponseModel
 from substrate_framework.qe_response_fft import NativeRhoFFT
+from substrate_framework.quasifree_spectral_noise import ordered_transition_correlation
 
 
 def _waves(points, miller, coefficients):
@@ -85,7 +86,7 @@ def _fixture():
     metadata = {"source_channels": records[::-1], "common_mu_Ry": 0., "actual_degauss_Ry": 1.,
                 "branch": "finite independent oracle"}
     model = PWResponseModel(fft, basis @ np.array([0.5, 0., 0.]), tuple(channels), metadata)
-    return model, basis, points, periodic_source, target_grid, raw
+    return model, basis, points, periodic_source, target_grid, raw, miller
 
 
 def _cell_overlap(source, target):
@@ -125,7 +126,7 @@ def _expect_rejected(model, basis, label):
 
 
 def run():
-    model, basis, points, source, targets, expected_raw = _fixture()
+    model, basis, points, source, targets, expected_raw, miller = _fixture()
     branches, metadata = prepare_pw_noise(model, basis)
     errors = {}
     for name, sign in (("plus", 1), ("minus", -1)):
@@ -137,7 +138,12 @@ def run():
         for channel, block in zip(model.channels, branches[name]):
             assert block["identity"] == channel.identity
             assert block["weight"] == 0.125
-            assert np.array_equal(block["operators"][:6], getattr(channel, f"g_{name}"))
+            for axis, action_pw in enumerate(getattr(channel, f"g_{name}")):
+                action_grid = _waves(points, miller[name], action_pw)
+                projected = _cell_overlap(action_grid, targets[name])
+                np.testing.assert_allclose(block["operators"][axis], projected, rtol=0, atol=2e-14)
+                key = f"{name}_ionic_action_projection"
+                errors[key] = max(errors.get(key, 0.), float(np.max(np.abs(block["operators"][axis] - projected))))
             assert np.count_nonzero(block["operators"][7 - channel.spin]) == 0
             np.testing.assert_allclose(block["operators"][6 + channel.spin], expected, rtol=0, atol=2e-14)
             np.testing.assert_allclose(block["source_occupations"][:2], expected_raw[:2], rtol=0, atol=1e-16)
@@ -165,6 +171,33 @@ def run():
                                  * model.channels[0].weighted_occupations[None, :]
                                  * (1 - block["target_occupations"][:, None])))
     assert good_variance > 0 and abs(good_variance - wrong_variance) > 1e-4
+    # Physical correlations cannot depend on independent target-eigenvector phases.
+    rotated_channels = []
+    for channel in model.channels:
+        changes = {}
+        for name in ("plus", "minus"):
+            vectors = getattr(channel, f"{name}_vectors")
+            phases = np.exp(0.71j * np.arange(1, vectors.shape[1] + 1))
+            changes[f"{name}_vectors"] = vectors * phases[None, :]
+        rotated_channels.append(replace(channel, **changes))
+    rotated, _ = prepare_pw_noise(replace(model, channels=tuple(rotated_channels)), basis)
+    def correlation(block, operators=None):
+        return ordered_transition_correlation(
+            block["source_energies"], block["target_energies"],
+            block["source_occupations"], block["target_occupations"],
+            block["operators"] if operators is None else operators,
+            np.array([0., 0.4]), weight=block["weight"])
+    mutation_differences = {}
+    for name in ("plus", "minus"):
+        original = branches[name][0]
+        expected_correlation = correlation(original)
+        invariant = correlation(rotated[name][0])
+        errors[f"{name}_physical_phase_invariance"] = float(np.max(np.abs(invariant - expected_correlation)))
+        np.testing.assert_allclose(invariant, expected_correlation, rtol=0, atol=2e-14)
+        unprojected = original["operators"].copy()
+        unprojected[:6] = getattr(model.channels[0], f"g_{name}")
+        mutation_differences[name] = float(np.max(np.abs(correlation(original, unprojected) - expected_correlation)))
+        assert mutation_differences[name] > 1e-4
     # Missing mesh cannot be rescued by renormalizing remaining weights to sum one.
     incomplete_metadata = deepcopy(model.metadata)
     missing = model.channels[0].identity
@@ -189,10 +222,12 @@ def run():
     rejected.append(_expect_rejected(model, np.zeros((3, 3)), "singular reciprocal basis"))
     paths = [Path(__file__).resolve(), ROOT / "src/substrate_framework/pw_prepared_noise.py",
              ROOT / "src/substrate_framework/pw_transition_space.py",
-             ROOT / "src/substrate_framework/qe_pw_response_frames.py"]
+             ROOT / "src/substrate_framework/qe_pw_response_frames.py",
+             ROOT / "src/substrate_framework/quasifree_spectral_noise.py"]
     return {"status": "pass", "scope": "new finite PW preparation adapter only; no actual frame or material calculation",
             "maxabs_errors": errors, "raw_tail": float(expected_raw[-1]), "weighted_tail": 0.,
             "raw_probability_density_variance": good_variance, "wrong_weighted_probability_variance": wrong_variance,
+            "unprojected_ionic_noise_mutation_difference": mutation_differences,
             "rejected": rejected, "metadata": metadata,
             "sources": [{"path": str(path.relative_to(ROOT)), "sha256": hashlib.sha256(path.read_bytes()).hexdigest()}
                         for path in paths]}
