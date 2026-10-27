@@ -15,7 +15,7 @@ from pilot_checkpoints import save_json
 def implementation():
     records = {}
     for name, module in list(sys.modules.items()):
-        if name.startswith(('substrate_framework', 'catdft')) or name in ('pilot_inputs', 'pilot_checkpoints'):
+        if name.startswith(('substrate_framework', 'catdft')) or name in ('pilot_inputs', 'pilot_checkpoints', 'time_pilot_resume'):
             filename = getattr(module, '__file__', None)
             if filename and Path(filename).suffix == '.py':
                 path = Path(filename).resolve()

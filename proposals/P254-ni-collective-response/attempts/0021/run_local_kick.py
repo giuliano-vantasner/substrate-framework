@@ -22,6 +22,7 @@ from substrate_framework.spin_pbe_kernel import apply_spin_pbe_kernel
 from time_pilot_checkpoints import (HERE, binding, save_json, implementation, save_sample,
                                     recover_samples, cell_trajectory)
 from pilot_inputs import load_inputs
+from time_pilot_resume import saved_reference, admit_coordinates, reserved_actions, reserve_action
 
 
 def now():
@@ -84,7 +85,7 @@ def main():
                 raise ValueError('source/input/scales differ; original result remains untouched')
             allocation = json.loads((target/'allocation.json').read_bytes())
             records = recover_samples(target, fingerprint, times)
-            report['reference'] = json.loads((target/'result.json').read_bytes()).get('reference')
+            report['reference'] = saved_reference(target)
         else:
             save_json(target/'identity.json', {'fingerprint': fingerprint, **identity})
             save_json(target/'allocation.json', allocation)
@@ -123,12 +124,12 @@ def main():
                 save_json(target/'allocation.json', allocation)
             budget(point)
             electronic = PWElectronicDynamics(models[point])
+            admit_coordinates(target, point, fingerprint, electronic, committed=bool(present))
             coupled = PWCoupledDynamics(electronic, lambda n: apply_spin_pbe_kernel(bundles[point], n),
                                         frozen[point].cartesian_matrix, masses)
-            actions = 0
-            action_path = target/(point+'-rhs-actions.jsonl')
-            if action_path.exists():
-                actions = max((int(json.loads(line)['action']) for line in action_path.read_text().splitlines()), default=0)
+            action_path = target/(point+'-rhs-reservations.json')
+            actions = reserved_actions(action_path, required=bool(present and present[-1] > 0),
+                record_audit=lambda recovery: event('ambiguous_action_charged', point=point, **recovery))
             if present:
                 index = present[-1]
                 with np.load(records[f'{point}-t{index:02d}']['archive']['path'], allow_pickle=False) as stored:
@@ -148,9 +149,7 @@ def main():
                 if actions >= settings['max_rhs_actions_per_sector']:
                     raise TimeoutError('400 cumulative RHS action cap reached: '+point)
                 actions += 1
-                with action_path.open('a') as stream:
-                    stream.write(json.dumps({'action': str(actions), 'tau_ry': float(tau), 'at': now()})+'\n')
-                    stream.flush()
+                reserve_action(action_path, actions)
                 return coupled.derivative_real(tau, y)
             for next_index in range(index+1, len(times)):
                 solution = solve_ivp(rhs, (times[next_index-1], times[next_index]), state.view(float),
