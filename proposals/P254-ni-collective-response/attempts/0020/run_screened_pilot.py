@@ -21,18 +21,11 @@ from substrate_framework.pw_screened_response import solve_screened_response
 from substrate_framework.qe_pw_response_frames import build_pw_response_models
 from substrate_framework.spin_pbe_kernel import apply_spin_pbe_kernel
 from pilot_inputs import HERE, binding, load_inputs, loaded_sources
+from pilot_checkpoints import checkpoint_report, column_keys, recover_columns, save_json
 
 
 def now() -> str:
     return datetime.now(timezone.utc).isoformat()
-
-
-def save_json(path: Path, value: dict) -> None:
-    temporary = path.with_suffix(path.suffix + ".tmp")
-    temporary.write_text(json.dumps(value, indent=2, allow_nan=False) + "\n")
-    if path.exists():
-        os.replace(path, path.with_suffix(path.suffix + ".prev"))
-    os.replace(temporary, path)
 
 
 def interrupted(signum, _frame) -> None:
@@ -59,6 +52,9 @@ def main() -> int:
     started = time.monotonic()
     registration = json.loads((HERE / "registration.json").read_bytes())
     settings = registration["actual_pilot"]
+    recovered = {}
+    admitted = False
+    allocation_deadline = time.time() + settings["total_wall_cap_seconds"]
     report = {"started_at": now(), "status": "running", "completed_columns": [],
               "registration": binding(HERE / "registration.json"),
               "preregistration_commit": "eacf18e0", "scope": registration["scientific_scope"],
@@ -78,15 +74,13 @@ def main() -> int:
 
     def check_budget() -> None:
         elapsed = prior_elapsed + time.monotonic() - started
-        if elapsed > settings["total_wall_cap_seconds"]:
+        if elapsed > settings["total_wall_cap_seconds"] or time.time() >= allocation_deadline:
             raise TimeoutError("registered cumulative 600s pilot allocation exhausted")
         if not prior_completed and not report["completed_columns"] and elapsed > settings["first_completed_column_due_seconds_from_launch"]:
             raise TimeoutError("no useful completed column within registered 150s; Root method decision required")
 
     def checkpoint() -> None:
-        report["elapsed_seconds"] = time.monotonic() - started
-        report["cumulative_elapsed_seconds"] = prior_elapsed + report["elapsed_seconds"]
-        save_json(target / "result.json", report)
+        checkpoint_report(target, report, recovered, time.monotonic() - started, prior_elapsed)
 
     try:
         event("pilot_started", output_dir=str(target))
@@ -99,42 +93,53 @@ def main() -> int:
             previous = json.loads(identity_path.read_bytes())
             if previous["fingerprint"] != fingerprint:
                 raise ValueError("resume source/input/settings identity differs; no mismatched column reuse")
+            allocation_deadline = float(previous["allocation_deadline_unix"])
+            if not np.isfinite(allocation_deadline):
+                raise ValueError("invalid original allocation deadline")
+            recovered = recover_columns(target, fingerprint, settings)
+            prior_completed = bool(recovered)
         else:
-            save_json(identity_path, {"fingerprint": fingerprint, **identity})
+            save_json(identity_path, {"fingerprint": fingerprint,
+                                     "allocation_deadline_unix": allocation_deadline, **identity})
+        admitted = True
         bundles, frozen, receipts = load_inputs()
         report["actual_inputs"] = receipts
         # The XML consumer was imported before source inventory, not lazily after it.
         event("actual_inputs_bound")
-        build_started = time.monotonic()
-        models = build_pw_response_models(bundles["gamma"], bundles["half"], bundles["minus"])
-        report["frame_build_seconds"] = time.monotonic() - build_started
-        report["reference"] = models["gamma"].metadata
-        event("frames_constructed", seconds=report["frame_build_seconds"])
+        models = None
+        if len(recovered) != len(column_keys(settings)):
+            check_budget()
+            build_started = time.monotonic()
+            models = build_pw_response_models(bundles["gamma"], bundles["half"], bundles["minus"])
+            report["frame_build_seconds"] = time.monotonic() - build_started
+            report["reference"] = models["gamma"].metadata
+            event("frames_constructed", seconds=report["frame_build_seconds"])
+        else:
+            report["reference"] = prior_result["reference"]
+            report["frame_build_seconds"] = 0.
         checkpoint()
         matrices = {}
         for point in settings["q"]:
             kernel = lambda density, point=point: apply_spin_pbe_kernel(bundles[point], density)
             for frequency_index, (real, imaginary) in enumerate(settings["frequency_ry"]):
-                response = PWIndependentResponse(models[point], complex(real, imaginary))
+                response = (PWIndependentResponse(models[point], complex(real, imaginary))
+                            if models is not None else None)
                 columns = []
                 key = f"{point}-z{frequency_index}"
                 for axis in range(6):
-                    check_budget()
                     name = f"{key}-column{axis}"
                     receipt_path, archive_path = target / (name + ".json"), target / (name + ".npz")
-                    if args.resume and receipt_path.exists():
-                        receipt = json.loads(receipt_path.read_bytes())
-                        if receipt["fingerprint"] != fingerprint or receipt["archive"] != binding(archive_path):
-                            raise ValueError(f"column checkpoint identity/bytes differ: {name}")
-                        with np.load(archive_path, allow_pickle=False) as stored:
-                            columns.append(stored["coupled_curvature_column"].copy())
-                        report["completed_columns"].append(receipt)
+                    if name in recovered:
+                        _, column = recovered[name]
+                        columns.append(column)
                         event("matched_column_reused", name=name)
                         continue
+                    check_budget()
                     event("column_started", name=name)
                     displacement = np.eye(6, dtype=complex)[axis]
                     column_started = time.monotonic()
-                    remaining = settings["total_wall_cap_seconds"] - (prior_elapsed + column_started - started)
+                    remaining = min(allocation_deadline - time.time(),
+                                    settings["total_wall_cap_seconds"] - (prior_elapsed + column_started - started))
                     value = solve_screened_response(response, kernel, displacement,
                         rtol=settings["rtol"], max_matvec=settings["max_matvec_per_column"],
                         wall_seconds=min(settings["column_wall_cap_seconds"], remaining))
@@ -180,12 +185,15 @@ def main() -> int:
                              "diagnostics": getattr(error, "diagnostics", None)}
     finally:
         report["finished_at"] = now()
-        checkpoint()
+        if admitted:
+            checkpoint()
+        else:
+            save_json(target / "resume-refusal.json", report)
         if report["status"] == "complete":
             (target / ".gate_done_screened_response").write_text(report["finished_at"] + "\n")
         event("pilot_finished", status=report["status"], completed=str(len(report["completed_columns"])))
         print("[dft-done]" if report["status"] == "complete" else "[dft-fail]",
-              "p254-screened-pilot-0020", str(target / "result.json"), flush=True)
+              "p254-screened-pilot-0020", str(target / ("result.json" if admitted else "resume-refusal.json")), flush=True)
     return 0 if report["status"] == "complete" else 1
 
 

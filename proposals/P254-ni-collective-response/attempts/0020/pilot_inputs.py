@@ -73,6 +73,6 @@ def loaded_sources() -> list[dict]:
             if filename and Path(filename).suffix == ".py":
                 path = Path(filename).resolve()
                 records[str(path)] = binding(path)
-    for path in (Path(__file__).resolve(), HERE / "run_screened_pilot.py"):
+    for path in (Path(__file__).resolve(), HERE / "run_screened_pilot.py", HERE / "pilot_checkpoints.py"):
         records[str(path)] = binding(path)
     return list(records.values())
