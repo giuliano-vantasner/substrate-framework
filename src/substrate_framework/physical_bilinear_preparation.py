@@ -34,7 +34,14 @@ class IonicPreparation:
             raise ValueError("ordered Hermitian-coordinate covariance must be Hermitian")
         if not np.allclose(value-value.T, canonical_commutator(len(value)//2), atol=1e-12):
             raise ValueError("ionic antisymmetric part must be the canonical commutator")
-        if np.linalg.eigvalsh(value).min() < -1e-12:
+        variances = value.diagonal().real
+        if np.any(variances <= 0):
+            raise ValueError("canonical ionic coordinates require positive variances")
+        # Positive diagonal congruence preserves PSD without mixing u/p units.
+        # An absolute eigenvalue check on raw squeezed covariances is unstable.
+        scales = np.sqrt(variances)
+        normalized = value / scales[:, None] / scales[None, :]
+        if np.linalg.eigvalsh(normalized).min() < -1e-12:
             raise ValueError("ionic ordered covariance must be positive semidefinite")
         value = value.copy()
         value.flags.writeable = False

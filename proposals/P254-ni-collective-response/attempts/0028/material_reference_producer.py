@@ -16,6 +16,7 @@ from substrate_framework.qe_material_hamiltonian import MaterialHamiltonian
 from substrate_framework.material_reference_state import (
     prepare_source, restore_source, source_population_indices,
     sector_density_moments, sector_hamiltonian_moments)
+from substrate_framework.material_frozen_state_curvature import conditional_minus_mv
 
 
 def produce(run, recipe, paths):
@@ -47,7 +48,17 @@ def produce(run, recipe, paths):
         original_basis_identity=frame.basis.identity, all_raw_columns=True,
         scope='conditional source state; not H0 equilibrium or a full weighted material total')
     previous = recipe['inputs'].get('prepared_source_receipt')
-    if previous is None:
+    reuse_gamma = recipe['inputs'].get('reuse_selected_gamma', False)
+    if reuse_gamma:
+        if previous is not None or settings['spin'] != 1 or representative[1].mesh_index != (0, 0, 0):
+            raise ValueError('selected Gamma cache belongs only to its original spin1 sector')
+        restored = {key: saved.selected_gamma[key] for key in
+                    ('gram', 'populations', 'density_coefficients', 'density_eigenvalues')}
+        if not np.array_equal(restored['populations'], populations):
+            raise ValueError('selected Gamma cache populations differ')
+        state = restore_source(restored, source_identity=source.source['sha256'])
+        run.summary['source_state_reused_from'] = recipe['inputs']['preparation_terminal']
+    elif previous is None:
         state = prepare_source(frame.coefficients, populations, source_identity=source.source['sha256'],
                                basis_identity=frame.basis.identity, authority=authority)
     else:
@@ -61,7 +72,7 @@ def produce(run, recipe, paths):
             raise ValueError('completed source state belongs to different populations')
         state = restore_source(restored, source_identity=source.source['sha256'])
         run.summary['source_state_reused_from'] = previous
-    if previous is None:
+    if previous is None and not reuse_gamma:
         source_arrays = dict(gram=state.gram, density_coefficients=state.density_coefficients,
             populations=state.populations,
             density_eigenvalues=np.asarray(state.admissibility['density_eigenvalues']))
@@ -94,6 +105,7 @@ def produce(run, recipe, paths):
             if actual != expected:
                 raise ValueError('completed density/gradient differs from its bound receipt')
             run.summary.setdefault('density_gradient_reused_from', {})[key] = previous_moments
+            source_density = load_arrays(actual)['density_bohr3']
             run.event('slot_density_gradient_reused', mesh_index=list(slot.mesh_index))
         else:
             run.event('slot_density_gradient_start', mesh_index=list(slot.mesh_index))
@@ -108,13 +120,21 @@ def produce(run, recipe, paths):
                 if abs(left-right) > 1e-8*(1+abs(right)):
                     raise ValueError('actual full-column trace pairing failed: '+name)
             run.commit(key+'-density-gradient', arrays, slot_metadata)
+            source_density = arrays['density_bohr3']
             del arrays
         run.event('slot_hamiltonian_start', mesh_index=list(slot.mesh_index))
         arrays = sector_hamiltonian_moments(frame, state, hamiltonian)
         run.commit(key+'-hamiltonian', arrays, dict(slot_metadata,
             stationarity='actual full-row commutator norm retained; not imposed'))
+        run.event('slot_frozen_curvature_start', mesh_index=list(slot.mesh_index))
+        arrays = conditional_minus_mv(frame.coefficients, state, coupling,
+            frame.raw_occupations, conditional_density=source_density)
+        run.commit(key+'-frozen-curvature', arrays, dict(slot_metadata,
+            boundary='full-column-source-frozen-electronic-curvature',
+            units=dict(slot_metadata['units'], curvature='Ry/bohr^2'),
+            curvature_scope='conditional and original numerical-MV nonlocal blocks separate; orbital local difference is diagnostic'))
         run.summary.setdefault('slot_seconds', {})[key] = time.monotonic()-began
-        del coupling, hamiltonian, arrays
+        del coupling, hamiltonian, arrays, source_density
         run.check()
     run.summary.update(status='complete', selected_slots=len(selected),
         full_material_total=False, final_implementation_sources=implementation(paths))

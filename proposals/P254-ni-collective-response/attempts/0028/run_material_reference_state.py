@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Bound actual prepared-source consumer using the established material runtime.
 
-Kind material-neutral-preparation; A28 settings identify the new construction.
+Kind material-reference; A28 settings identify the common-state construction.
 --context-only opens no material. Existing immutable block/readback, source
 inventory, own-manager context and publication APIs remain unchanged.
 """
@@ -49,7 +49,7 @@ def main():
         target = args.output.resolve()
         target.mkdir(parents=True, exist_ok=True)
         run = OutputRun(target, summary, BOOT)
-        grant, recipe, identity = admit(args.admission, 'material-neutral-preparation', sources,
+        grant, recipe, identity = admit(args.admission, 'material-reference', sources,
                                         context, args.context_only)
         run.publisher = Publication(target, summary, BOOT, grant, context_only=args.context_only)
         run.publisher.arm()
