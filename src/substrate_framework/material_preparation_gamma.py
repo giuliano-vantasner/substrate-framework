@@ -55,8 +55,11 @@ def gamma_metadata(inputs, settings, coverage, terminal):
     reference_reciprocal = source_arrays['reference_reciprocal_bohr_inv']
     if array_record(coordinate_arrays['reciprocal_bohr_inv']) != reference_reciprocal:
         raise ValueError('historical coordinate reciprocal record differs from admitted XML reference')
+    # Native int32 rows and canonical int64 transport have distinct byte records.
+    # Identity transport preserves their exact integer values and ordering.
+    target_miller = coordinate_arrays['pw_miller'].astype(np.int64, copy=False)
     if (array_record(coordinate_arrays['pw_miller']) != record.source_miller_record
-            or record.source_miller_record != record.target_miller_record
+            or array_record(target_miller) != record.target_miller_record
             or not np.array_equal(coordinate_arrays['cell_bohr'], coverage.grid.reference.cell_bohr)
             or not np.array_equal(coordinate_arrays['reciprocal_bohr_inv'], coverage.grid.reference.reciprocal_bohr_inv)):
         raise ValueError('original coordinate order/cell/reciprocal identity does not join')
@@ -65,6 +68,8 @@ def gamma_metadata(inputs, settings, coverage, terminal):
         original_coordinates=coordinates['archive'], original_source=record.source_binding,
         source_coefficients_record=record.source_coefficients_record,
         source_miller_record=record.source_miller_record, original_representative=True,
+        target_miller_record=record.target_miller_record,
+        miller_scope='distinct Native int32 and canonical int64 records; exact ordered integer identity',
         binary_reciprocal_record=source_arrays['reciprocal_bohr_inv'],
         reference_reciprocal_record=reference_reciprocal,
         reciprocal_scope='historical basis uses XML reference; binary B separately admitted at atol=2e-13, not asserted equal',
