@@ -63,7 +63,7 @@ class Report:
                                 actual=encoded(actual), expected=encoded(expected)))
         if not passed:
             self.failures.append(name)
-        # Accumulate independent failures rather than stopping after the first.
+            raise AssertionError(name + ": failed prerequisite; dependent comparisons stopped")
         return passed
 
     def require(self, name, condition):
@@ -71,6 +71,7 @@ class Report:
         self.checks.append(dict(name=name, kind="assertion", passed=passed))
         if not passed:
             self.failures.append(name)
+            raise AssertionError(name + ": failed prerequisite; dependent comparisons stopped")
 
     def rejects(self, name, action):
         try:

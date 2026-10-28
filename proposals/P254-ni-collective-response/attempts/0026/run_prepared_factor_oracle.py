@@ -33,8 +33,9 @@ def exact(name, difference):
 def compare(name, actual, expected):
     import numpy as np
     a, b = np.asarray(actual), np.asarray(expected)
-    residual = float(np.max(np.abs(a - b), initial=0))
-    ok = bool(np.allclose(a, b, rtol=1e-10, atol=1e-12))
+    compatible = a.shape == b.shape and np.isfinite(a).all() and np.isfinite(b).all()
+    residual = float(np.max(np.abs(a - b), initial=0)) if compatible else None
+    ok = bool(compatible and np.allclose(a, b, rtol=1e-10, atol=1e-12))
     CHECKS.append(dict(name=name, passed=ok, max_abs_residual=residual,
                        rtol=1e-10, atol=1e-12))
     if not ok:
@@ -43,8 +44,10 @@ def compare(name, actual, expected):
 
 def mutation(name, wrong, expected):
     import numpy as np
-    residual = float(np.max(np.abs(np.asarray(wrong) - np.asarray(expected)), initial=0))
-    ok = not np.allclose(wrong, expected, rtol=1e-10, atol=1e-12)
+    a, b = np.asarray(wrong), np.asarray(expected)
+    compatible = a.shape == b.shape and np.isfinite(a).all() and np.isfinite(b).all()
+    residual = float(np.max(np.abs(a - b), initial=0)) if compatible else None
+    ok = bool(compatible and not np.allclose(a, b, rtol=1e-10, atol=1e-12))
     CHECKS.append(dict(name='mutation_' + name, passed=bool(ok), detected=bool(ok),
                        max_abs_residual=residual))
     if not ok:
