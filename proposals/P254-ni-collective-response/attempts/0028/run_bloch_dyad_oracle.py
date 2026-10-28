@@ -124,6 +124,13 @@ def one_frame(report, inputs, frame, label, rng):
     reverse_density, reverse_gradient = c.moments(right, left, coefficient.conj().T)
     compare(report, label+":adjoint_dyad_density", reverse_density, density.conj())
     compare(report, label+":adjoint_dyad_gradient", reverse_gradient, gradient.conj())
+    # Wide source contraction must reproduce the same literal full dyad.
+    square = rng.normal(size=(3, 3)) + 1j*rng.normal(size=(3, 3))
+    wide_density, wide_gradient = c.prepared_moments(left, square)
+    wide_dyad = left @ square @ left.conj().T
+    expected_wide_density = np.sum((waves @ left @ square)*(waves @ left).conj(), axis=1)/c.cell_volume_bohr3
+    compare(report, label+":wide_source_density", wide_density, expected_wide_density)
+    compare(report, label+":wide_source_gradient", wide_gradient, np.einsum("aij,ji->a", matrices, wide_dyad))
     report["frames"].append(dict(label=label, spin=str(frame.ispin), npw=str(n),
                                   k_bohr_inv=frame.basis.k_cart_bohr_inv.tolist(),
                                   fold=frame.basis.slot.reciprocal_shift.tolist()))

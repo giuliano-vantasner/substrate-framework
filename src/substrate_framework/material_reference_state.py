@@ -20,12 +20,9 @@ from .physical_factor_preparation import (
 class SourceState:
     gram: np.ndarray
     populations: np.ndarray
-    preparation: FactorPreparation
+    density_coefficients: np.ndarray
+    admissibility: object
     source_identity: str
-
-    @property
-    def density_coefficients(self):
-        return self.preparation.density_coefficients
 
 
 def prepare_source(coefficients, populations, *, source_identity, basis_identity, authority):
@@ -47,7 +44,28 @@ def prepare_source(coefficients, populations, *, source_identity, basis_identity
     preparation = FactorPreparation(functional, d, authority)
     populations = np.array(populations, dtype=float, copy=True)
     populations.flags.writeable = False
-    return SourceState(gram, populations, preparation, source_identity)
+    return SourceState(gram, populations, preparation.density_coefficients,
+                       MappingProxyType(preparation.admissibility), source_identity)
+
+
+def restore_source(arrays, *, source_identity):
+    """Restore authenticated completed state arrays, without refilling.
+
+    The producer first authenticates the original receipt, source/frame
+    metadata, and exact current populations. Old diagnostics are retained.
+    """
+    if set(arrays) != {"gram", "populations", "density_coefficients", "density_eigenvalues"}:
+        raise ValueError("complete authenticated source-state arrays required")
+    n = len(arrays["populations"])
+    if (not source_identity or arrays["gram"].shape != (n, n)
+            or arrays["density_coefficients"].shape != (n, n)
+            or arrays["density_eigenvalues"].shape != (n,)):
+        raise ValueError("restored source-state dimensions or identity differ")
+    for value in arrays.values():
+        value.flags.writeable = False
+    return SourceState(arrays["gram"], arrays["populations"], arrays["density_coefficients"],
+                       MappingProxyType({"density_eigenvalues": arrays["density_eigenvalues"]}),
+                       source_identity)
 
 
 def source_population_indices(grid, ledger, spin, source_ik):
@@ -89,23 +107,34 @@ def hamiltonian_state_moments(psi, state, hpsi):
         projected_density_drift_ry=projected_drift)
 
 
-def sector_moments(frame, state, coupling, hamiltonian, *, check_direction=None):
-    """Actual unweighted density/positive gradient/H0 data for one full slot."""
+def sector_density_moments(frame, state, coupling, *, check_direction=None):
+    """Unweighted density/positive gradient, independently checkpointable."""
     psi = frame.coefficients
     if (frame.basis.slot.source_binding["sha256"] != state.source_identity
             or psi.shape[1] != len(state.populations)
             or coupling.npw != psi.shape[0]):
         raise ValueError("raw frame, prepared source and checked coupling differ")
-    density, gradient = coupling.moments(psi, psi, state.density_coefficients)
-    hpsi = hamiltonian.apply(psi)
-    arrays = hamiltonian_state_moments(psi, state, hpsi)
-    arrays.update(density_bohr3=density, positive_gradient_ry_bohr=gradient,
+    density, gradient = coupling.prepared_moments(psi, state.density_coefficients)
+    arrays = dict(density_bohr3=density, positive_gradient_ry_bohr=gradient,
         number_pair=np.asarray([coupling.grid_measure_bohr3*np.sum(density),
-                                np.einsum("ij,ji->", state.density_coefficients, state.gram)]),
-        saved_label_residual_norm_ry=np.linalg.norm(hpsi-psi*frame.eigenvalues_ry[None, :], axis=0))
+                                np.einsum("ij,ji->", state.density_coefficients, state.gram)]))
     if check_direction is not None:
         action = coupling.ionic_action(check_direction, psi)
         projected = zgemm(1., psi, action, trans_a=2)
         arrays["gradient_action_pair"] = np.asarray([
             check_direction @ gradient, np.einsum("ij,ji->", state.density_coefficients, projected)])
+    return arrays
+
+
+def sector_hamiltonian_moments(frame, state, hamiltonian):
+    """Full-row H0 moments/drift, separate from the density/force reduction."""
+    if (frame.basis.slot.source_binding["sha256"] != state.source_identity
+            or hamiltonian.ispin != frame.ispin
+            or hamiltonian.factors.sources[-1].get("identity") != frame.basis.identity):
+        raise ValueError("prepared source, spin and full-row Hamiltonian basis differ")
+    psi = frame.coefficients
+    hpsi = hamiltonian.apply(psi)
+    arrays = hamiltonian_state_moments(psi, state, hpsi)
+    arrays["saved_label_residual_norm_ry"] = np.linalg.norm(
+        hpsi-psi*frame.eigenvalues_ry[None, :], axis=0)
     return arrays

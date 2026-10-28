@@ -11,6 +11,8 @@ Spin/full-grid measure and physical preparation belong to the caller. This
 is not a rectangular finite-q map or a stationarity assertion.
 """
 from types import SimpleNamespace
+import numpy as np
+from scipy.linalg.blas import zgemm
 
 from .qe_bloch_ionic_action import BlochIonicAction
 from .qe_material_dyads import GammaDyadCoupling
@@ -44,3 +46,25 @@ class BlochDyadCoupling(GammaDyadCoupling):
             local_indices=tuple(inputs.density.miller[i] % fft.physical[i] for i in range(3)),
         )
         self._gradient = GammaGradientReduction(self.factors, geometry)
+
+    def prepared_moments(self, psi, coefficient):
+        """Same raw dyad, with wide BLAS and only the FFTs column-blocked.
+
+        One full-row weighted frame trades bounded extra memory for fewer
+        skinny GEMMs. No rank truncation, Hermitization or changed pairing.
+        """
+        psi = self._matrix(psi, "raw frame")
+        coefficient = np.asarray(coefficient)
+        if coefficient.shape != (psi.shape[1], psi.shape[1]) or not np.isfinite(coefficient).all():
+            raise ValueError("finite raw-frame coefficient matrix required")
+        weighted = zgemm(1., psi, coefficient)
+        gradient = self._gradient.nonlocal_block(weighted, psi)
+        density = np.zeros(self.nr, dtype=np.complex128)
+        fft = self.factors.fft
+        for start in range(0, psi.shape[1], self.block_size):
+            stop = min(start + self.block_size, psi.shape[1])
+            left = fft.from_g(weighted[:, start:stop])
+            right = fft.from_g(psi[:, start:stop])
+            density += np.sum(left * right.conj(), axis=1) / self.cell_volume_bohr3
+        gradient += self._gradient.local(density)
+        return density, gradient

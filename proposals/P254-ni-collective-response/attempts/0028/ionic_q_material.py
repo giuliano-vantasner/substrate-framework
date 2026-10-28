@@ -16,6 +16,7 @@ from substrate_framework.material_frozen_lattice import load_material_frozen_lat
 from substrate_framework.material_force_lattice import (
     q_grid_to_force_lattice, force_lattice_to_q_grid, lattice_residuals)
 from substrate_framework.qe_saved_native import read_bound_bytes
+from material_run_contract import runtime_context, implementation
 
 
 def main():
@@ -26,6 +27,9 @@ def main():
     args = parser.parse_args()
     # New output only; this is not an overwrite/resume or allocation system.
     args.output.mkdir(parents=True, exist_ok=False)
+    context = runtime_context()
+    with (args.output/'runtime-context.json').open('x') as stream:
+        json.dump(context, stream, indent=2)
     manifest_raw=args.sources.read_bytes()
     manifest=json.loads(manifest_raw)
     for source in manifest['producer_sources'].values():
@@ -69,6 +73,8 @@ def main():
         term_norms={prefix:{field.name:float(np.linalg.norm(getattr(terms,field.name))) for field in fields(terms)}
                     for prefix,terms in (('gamma',gamma_terms),('q',qterms))},
         limitations=manifest['limitations'])
+    report['runtime_context'] = context
+    report['implementation_sources'] = implementation((Path(__file__),))
     if args.complete_grid:
         mesh=ref.monkhorst_pack
         if any(mesh['k'+str(i)] != 0 for i in (1,2,3)):

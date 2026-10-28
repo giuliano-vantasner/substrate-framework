@@ -21,6 +21,7 @@ for directory in (ROOT / 'src', HERE.parent / '0025'):
 
 import numpy as np
 from substrate_framework.qe_material_current import MaterialOpticalCurrent
+from material_run_contract import runtime_context, implementation
 
 
 def consume(hamiltonian, vectors, *, direction, step_bohr_inv):
@@ -88,6 +89,10 @@ def main():
     args = parser.parse_args()
     if args.first_column < 0 or not 1 <= args.columns <= 8:
         parser.error('nonnegative first column and 1..8 columns required')
+    args.output.mkdir(parents=True, exist_ok=False)
+    context = runtime_context()
+    with (args.output/'runtime-context.json').open('x') as stream:
+        json.dump(context, stream, indent=2)
     from substrate_framework.qe_saved_native import read_bound_bytes, load_wavefunctions
     from substrate_framework.qe_material_reference import load_material_inputs
     from substrate_framework.qe_material_hamiltonian import build_pw_factors, MaterialHamiltonian
@@ -115,7 +120,8 @@ def main():
     summary.update(original_wavefunction=dict(wave.source),
                    selected_columns_zero_based=list(range(args.first_column, stop)),
                    accepted_background_metadata=binding['background_metadata'])
-    args.output.mkdir(parents=True, exist_ok=True)
+    summary['runtime_context'] = context
+    summary['implementation_sources'] = implementation((Path(__file__),))
     # Exclusive publication avoids silently overwriting a previous numerical run.
     with (args.output/'optical-current.npz').open('xb') as stream:
         np.savez(stream, **arrays)
