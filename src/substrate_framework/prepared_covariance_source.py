@@ -196,6 +196,6 @@ def total_force_probe(model, direction, *, identity):
                     for s in model.sectors)
     adjoints = tuple((lambda vectors, c=s.coupling: -c.ionic_action(direction.conj(), vectors))
                      for s in model.sectors)
-    constant = direction @ (r.fbar + r.support_force + r.gbar - r.held_gradient)
+    constant = direction @ (r.ionic_force + r.support_force - r.held_gradient)
     return PreparedProbe(actions, adjoints, -r.curvature.T @ direction, np.zeros(r.ndof),
                          complex(constant), identity, 'Ry/bohr')

@@ -45,7 +45,7 @@ def boundary_diagnostics(model, state):
     delta = density + r.held_density - r.nbar
     field = r.kernel(delta)
     energy += (model.measure*np.sum(delta*field)/2
-               + state.u @ (gradient+r.held_gradient-r.gbar-r.fbar-r.support_force)
+               + state.u @ (gradient+r.held_gradient-r.ionic_force-r.support_force)
                + state.u @ r.curvature @ state.u/2 + np.sum(state.p*state.p/r.masses)/2)
     return dict(energy=complex(energy), traces=model.traces(state), grams=tuple(grams))
 

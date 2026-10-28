@@ -50,13 +50,13 @@ def fixture():
         sectors.append(PreparedSector(prep, psi, Coupling(spin), lambda x, a=h[spin]: a@x,
                                       spin, f.weight, label, 'explicit finite Hermitian physical matrices'))
     f.reference = PreparedReference(
-        nbar=np.array([[.31,.23],[.18,.36]]), gbar=np.array([.12,-.09,.03]),
-        fbar=np.array([.07,-.04,.02]), held_density=np.array([[.04,.02],[.03,.06]]),
+        nbar=np.array([[.31,.23],[.18,.36]]), ionic_force=np.array([.19,-.13,.05]),
+        held_density=np.array([[.04,.02],[.03,.06]]),
         held_gradient=np.array([-.03,.05,.01]), curvature=np.array([[1.3,.21,.07],[.21,.85,-.09],[.07,-.09,1.1]]),
         masses=np.array([2.7,5.1,3.6]), support_force=np.array([.02,.01,-.01]),
         kernel=lambda n:(kernel@n.ravel()).reshape(2,2), ncells=4,
         expansion_authority='explicit finite joint-second-order scalar',
-        offset_authority='synthetic nonzero force and density offsets, not Ni/H',
+        ionic_authority='explicit synthetic linear ionic scalar; not Ni/H or equilibrium',
         coverage_authority='two mixed-feedback spins, complete original complement and held remainder',
         support_authority='explicit constant conservative synthetic support',
         coordinate_identity='one synthetic ion, all three canonical Ry coordinates',
@@ -163,7 +163,7 @@ def original_rhs(f, vector, *, frozen_connection=False):
     rho,u,p = unpack(rows[0])
     h, gradient, _ = fields(f,rho,u)
     r = f.reference
-    force = r.fbar+r.support_force+r.gbar-r.held_gradient-gradient-r.curvature@u
+    force = r.ionic_force+r.support_force-r.held_gradient-gradient-r.curvature@u
     result = [pack(-1j*(h@rho-rho@h),p/r.masses,force)]
     for row in rows[1:]:
         dr,du,dp = unpack(row)
@@ -181,7 +181,7 @@ def original_energy(f, row):
     _,gradient,delta = fields(f,rho,u)
     r = f.reference
     return (f.weight*np.einsum('sij,sji->',f.h,rho)+f.dv*delta.ravel()@f.kernel@delta.ravel()/2
-            +u@(gradient+r.held_gradient-r.gbar-r.fbar-r.support_force)
+            +u@(gradient+r.held_gradient-r.ionic_force-r.support_force)
             +u@r.curvature@u/2+np.sum(p*p/r.masses)/2)
 
 
@@ -191,7 +191,7 @@ def original_probe(f, row, name, *, connected=False):
         direction = np.array([1.,-.3,.2])
         value = -direction@(f.weight*np.einsum('saij,sji->a',f.g,rho)+f.reference.curvature@u)
         if not connected:
-            value += direction@(f.reference.fbar+f.reference.support_force+f.reference.gbar-f.reference.held_gradient)
+            value += direction@(f.reference.ionic_force+f.reference.support_force-f.reference.held_gradient)
         return value
     region = np.array([1.,.3])
     density = f.weight*np.einsum('srij,sji->rs',f.density,rho)

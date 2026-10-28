@@ -59,24 +59,24 @@ def symbolic_scalar_first():
     n1, n2, b1, b2, h1, h2 = s.symbols('n1 n2 b1 b2 h1 h2', real=True)
     u, v, p, q, m, mass = s.symbols('u v p q m mass', real=True)
     k, l, mix, c, d, off = s.symbols('k l mix c d off', real=True)
-    g, j, gb, jb, f, z, support, t = s.symbols('g j gb jb f z support t', real=True)
+    g, j, f, z, support, t = s.symbols('g j f z support t', real=True)
     gh, jh, dv = s.symbols('gh jh dv', real=True)
     x, y = n1 + h1 - b1, n2 + h2 - b2
     # One scalar, written without importing any production derivative.
     energy = (dv * (k*x*x + 2*mix*x*y + l*y*y)/2
-              + u*(g+gh-gb-f-support) + v*(j+jh-jb-z-t)
+              + u*(g+gh-f-support) + v*(j+jh-z-t)
               + (c*u*u+2*off*u*v+d*v*v)/2 + p*p/(2*m)+q*q/(2*mass))
     exact('scalar_mixed_spin_density_1', s.diff(energy, n1) - dv*(k*x+mix*y))
     exact('scalar_mixed_spin_density_2', s.diff(energy, n2) - dv*(mix*x+l*y))
-    exact('scalar_nonzero_force_offsets', -s.diff(energy, u) - (f+support-g-gh+gb-c*u-off*v))
-    exact('scalar_second_ionic_coordinate', -s.diff(energy, v) - (z+t-j-jh+jb-off*u-d*v))
+    exact('scalar_nonzero_ionic_baseline', -s.diff(energy, u) - (f+support-g-gh-c*u-off*v))
+    exact('scalar_second_ionic_coordinate', -s.diff(energy, v) - (z+t-j-jh-off*u-d*v))
     exact('scalar_distinct_mass_1', s.diff(energy, p)-p/m)
     exact('scalar_distinct_mass_2', s.diff(energy, q)-q/mass)
     exact('scalar_mixed_density_hessian', s.diff(energy, n1, n2)-dv*mix)
     exact('scalar_fixed_curvature', s.diff(energy, u, v)-off)
     a, b = s.symbols('origin_a origin_b', real=True)
     shifted = energy.subs({u:u+a, v:v+b}, simultaneous=True)
-    expected = (energy + a*(g+gh-gb-f-support) + b*(j+jh-jb-z-t)
+    expected = (energy + a*(g+gh-f-support) + b*(j+jh-z-t)
                 + u*(c*a+off*b)+v*(off*a+d*b)+(c*a*a+2*off*a*b+d*b*b)/2)
     exact('scalar_coordinate_origin_identity', shifted-expected)
 
@@ -148,12 +148,12 @@ def finite_blocks():
 
     sectors = tuple(sector(i, t) for i,t in enumerate(transforms))
     reference = PreparedReference(
-        nbar=np.array([[.31,.23],[.18,.36]]), gbar=np.array([.12,-.09]),
-        fbar=np.array([.07,-.04]), held_density=np.array([[.04,.02],[.03,.06]]),
+        nbar=np.array([[.31,.23],[.18,.36]]), ionic_force=np.array([.19,-.13]),
+        held_density=np.array([[.04,.02],[.03,.06]]),
         held_gradient=np.array([-.03,.05]), curvature=curvature, masses=masses,
         support_force=np.array([.02,.01]), kernel=lambda n:(ks@n.ravel()).reshape(nr,2), ncells=ncells,
         expansion_authority='explicit synthetic joint-second-order scalar, fixed coefficients',
-        offset_authority='synthetic nonzero nbar/Gbar/Fbar; no Native force interpretation',
+        ionic_authority='synthetic linear ionic scalar; no Native force interpretation',
         coverage_authority='two independent active sectors, explicit held remainder, N=4 convention',
         support_authority='declared synthetic constant conservative force, not a centering counterterm',
         coordinate_identity='two complete synthetic coordinates in Ry convention',
@@ -170,11 +170,11 @@ def finite_blocks():
         field = (ks@delta.ravel()).reshape(nr,2)
         h = tuple(hbase+dv*np.einsum('r,rij->ij', field[:,i], density_ops[i])
                   + np.einsum('a,aij->ij',u,gs[i]) for i,hbase in enumerate(h0))
-        force = ref.fbar + ref.support_force + ref.gbar-ref.held_gradient-grad-curvature@u
+        force = ref.ionic_force + ref.support_force-ref.held_gradient-grad-curvature@u
         drho = tuple(-1j*(a@x-x@a) for a,x in zip(h,rho))
         energy = (sum(weight*np.trace(a@x) for a,x in zip(h0,rho))
                   +dv*delta.ravel()@ks@delta.ravel()/2
-                  +u@(grad+ref.held_gradient-ref.gbar-ref.fbar-ref.support_force)
+                  +u@(grad+ref.held_gradient-ref.ionic_force-ref.support_force)
                   +u@curvature@u/2+np.sum(p*p/masses)/2)
         return h, drho, force, energy, density, grad
 
@@ -189,21 +189,21 @@ def finite_blocks():
         psi, dot = state.frames[i],ev.rhs.frames[i]
         compare('mean_full_space_commutator_'+str(i),dot@s.d@psi.conj().T+psi@s.d@dot.conj().T,drho[i])
         mutation('missing_complement_'+str(i), np.pad(drho[i][:2,:2],((0,1),(0,1))),drho[i])
-    mutation('missing_force_offsets', -grad-curvature@state.u,force)
+    mutation('missing_ionic_baseline_and_support', -grad-curvature@state.u,force)
     mutation('missing_density_offset', density,ev.delta_density)
-    mutation('force_sign', grad+reference.fbar+reference.support_force+reference.gbar-reference.held_gradient-curvature@state.u,force)
+    mutation('force_sign', grad+reference.ionic_force+reference.support_force-reference.held_gradient-curvature@state.u,force)
 
     # Coordinate origin shift changes scalar constant, never physical drift.
     shift = np.array([.08,-.03])
     shifted_h0 = tuple(a+np.einsum('j,jab->ab',shift,g) for a,g in zip(hs,gs))
     shifted_sectors = tuple(replace(s,h0=lambda x,a=a:a@x) for s,a in zip(sectors,shifted_h0))
-    shifted_ref = replace(reference,fbar=reference.fbar-curvature@shift)
+    shifted_ref = replace(reference,ionic_force=reference.ionic_force-curvature@shift)
     shifted_model = PreparedFactorDynamics(shifted_ref,shifted_sectors)
     shifted_ev = shifted_model.evaluate_mean(shifted_model.initial_mean(state.u-shift,state.p))
     compare('coordinate_origin_force',shifted_ev.rhs.p,force)
     for i in range(2):
         compare('coordinate_origin_hframe_'+str(i),shifted_ev.h_frames[i],ev.h_frames[i])
-    constant = shift@(reference.held_gradient-reference.gbar-reference.fbar-reference.support_force)+shift@curvature@shift/2
+    constant = shift@(reference.held_gradient-reference.ionic_force-reference.support_force)+shift@curvature@shift/2
     compare('coordinate_origin_energy_constant',ev.energy-shifted_ev.energy,constant)
 
     left = tuple(rng.normal(size=(size,rank))+1j*rng.normal(size=(size,rank)) for _ in sectors)

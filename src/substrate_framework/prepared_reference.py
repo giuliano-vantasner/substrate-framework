@@ -1,13 +1,14 @@
 """Declared joint-second-order effective scalar, not new-state full PBE.
 
 E = sum_s w_s Tr(H0_s rho_s) + dv/2 sum(delta_n * K delta_n)
-    + u.(G_active + G_held - Gbar - Fbar - Fsupport)
+    + u.(G_active + G_held - F_II - Fsupport)
     + u.C.u/2 + sum(p*p/M)/2,
 delta_n = n_active + n_held - nbar.  All pairings are bilinear.
 The optional additive energy constant is irrelevant and is fixed to zero.
-C is the supplied unmassweighted, fixed expansion coefficient. In particular
-W*delta_rho*u*u is omitted at this declared joint Taylor order, not physically
-zero. No Native processed force, temperature, support or density is inferred.
+C is the supplied unmassweighted, fixed joint-second-order coefficient, already
+including ionic curvature. Only the ionic LINEAR term enters here; adding a
+displaced Ewald scalar would double count curvature. W*delta_rho*u*u is omitted
+at this Taylor order, not physically zero. No processed force or support is inferred.
 """
 from __future__ import annotations
 
@@ -92,17 +93,19 @@ Its complement is initially empty, not excluded from subsequent actions.
 
 @dataclass(frozen=True)
 class PreparedReference:
-    """Mandatory offsets and identities of ONE conservative effective model.
+    """Mandatory ionic baseline and identities of ONE conservative effective model.
 
 K must be complex-linear and real/self-transpose in the physical dv pairing;
 H0 and the real-field g/V actions must be Hermitian. These are source-bound
 operator contracts, not established by sampling or by repairing coefficients.
 Fsupport is an explicitly supplied CONSTANT conservative force (-Fsupport.u).
 More general time-dependent drives/constraints are not represented here.
+ionic_force is the single unprocessed F_II=-dU_II/dR, in Ry/bohr and the
+declared coordinate order; ionic_authority binds its scalar/source/sum contract.
+Held electronic density/gradient and physical support remain separate inputs.
 """
     nbar: np.ndarray
-    gbar: np.ndarray
-    fbar: np.ndarray
+    ionic_force: np.ndarray
     held_density: np.ndarray
     held_gradient: np.ndarray
     curvature: np.ndarray
@@ -111,14 +114,14 @@ More general time-dependent drives/constraints are not represented here.
     kernel: Callable
     ncells: int
     expansion_authority: str
-    offset_authority: str
+    ionic_authority: str
     coverage_authority: str
     support_authority: str
     coordinate_identity: str
     state_authority: str
 
     def __post_init__(self):
-        for name in ('expansion_authority', 'offset_authority', 'coverage_authority',
+        for name in ('expansion_authority', 'ionic_authority', 'coverage_authority',
                      'support_authority', 'coordinate_identity', 'state_authority'):
             authority(getattr(self, name), name)
         nbar = np.asarray(self.nbar)
@@ -127,7 +130,7 @@ More general time-dependent drives/constraints are not represented here.
             raise ValueError('nonempty grid/component density and full-coordinate masses required')
         for name in ('nbar', 'held_density'):
             object.__setattr__(self, name, frozen(array(getattr(self, name), nbar.shape, name, real=True)))
-        for name in ('gbar', 'fbar', 'held_gradient', 'masses', 'support_force'):
+        for name in ('ionic_force', 'held_gradient', 'masses', 'support_force'):
             object.__setattr__(self, name, frozen(array(getattr(self, name), mass.shape, name, real=True)))
         c = array(self.curvature, (len(mass), len(mass)), 'unmassweighted C', real=True)
         if not np.allclose(c, c.T, atol=1e-12, rtol=1e-12) or np.any(self.masses <= 0):

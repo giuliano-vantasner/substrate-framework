@@ -15,6 +15,7 @@ import xml.etree.ElementTree as ET
 import numpy as np
 
 from .qe_saved_native import read_bound_bytes
+from .qe_saved_symmetry import SavedSymmetries, parse_saved_symmetries
 
 
 def _node(parent, name):
@@ -116,6 +117,7 @@ class SavedReference:
     ecutwfc_ha: float
     ecutrho_ha: float
     monkhorst_pack: Mapping[str, int]
+    saved_symmetries: SavedSymmetries | None = None
 
     def select(self, ik: int, ispin: int) -> tuple[SavedKPoint, np.ndarray, np.ndarray]:
         """Return k record, Ry energies, raw occupations for exact local k/spin."""
@@ -197,4 +199,5 @@ def load_saved_reference(binding: Mapping[str, Any]) -> SavedReference:
         MappingProxyType(totals), MappingProxyType({k: 2 * v for k, v in totals.items()}),
         float(_text(basis, "ecutwfc")), float(_text(basis, "ecutrho")),
         MappingProxyType({k: int(v) for k, v in mesh.attrib.items()} if mesh is not None else {}),
+        parse_saved_symmetries(root, source, nat, noncolin=noncolin),
     )

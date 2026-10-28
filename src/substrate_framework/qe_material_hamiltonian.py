@@ -36,7 +36,7 @@ class PWFactors:
     kinetic_ry: np.ndarray
     species: tuple[SpeciesProjectors, ...]
     k_bohr_inv: np.ndarray
-    ik: int
+    ik: int | None                   # None for reconstructed full-grid basis
     sources: tuple
 
     def matches(self, wfc):
@@ -54,21 +54,45 @@ def build_pw_factors(inputs, wfc) -> PWFactors:
             or not np.allclose(wfc.k_cart_bohr_inv, point.k_cart_bohr_inv, atol=2e-13, rtol=0)
             or not np.allclose(wfc.reciprocal_bohr_inv, ref.reciprocal_bohr_inv, atol=2e-13, rtol=0)):
         raise ValueError("WFC/reference identity, row count or physical units disagree")
+    return _build_basis_factors(inputs, wfc.miller, wfc.k_cart_bohr_inv,
+                               wfc.reciprocal_bohr_inv, wfc.ik, dict(wfc.source))
+
+
+def build_pw_factors_for_basis(inputs, basis) -> PWFactors:
+    """Checked reconstructed basis; never invent a saved XML ik record."""
+    from .qe_bloch_frame import BlochBasis
+    if not isinstance(basis, BlochBasis):
+        raise ValueError("a checked BlochBasis is required")
+    basis.validate(inputs.reference)
+    provenance = dict(kind="unitary-reconstructed-basis", identity=basis.identity,
+                      source=dict(basis.slot.source_binding),
+                      xml_source=dict(basis.reference_source),
+                      ispin=basis.slot.ispin, mesh_index=basis.slot.mesh_index,
+                      source_ik=basis.slot.source_ik,
+                      operation=basis.slot.operation.index,
+                      gauge_policy=basis.slot.gauge_policy)
+    return _build_basis_factors(inputs, basis.miller, basis.k_cart_bohr_inv,
+                               basis.reciprocal_bohr_inv, None, provenance)
+
+
+def _build_basis_factors(inputs, miller, k, reciprocal, ik, provenance):
+    """Shared physical k+G algebra, independent of saved/reconstructed identity."""
+    ref = inputs.reference
     volume = abs(float(np.linalg.det(ref.cell_bohr)))
-    fft = PhysicalRhoFFT.create(ref.fft_smooth, wfc.miller, wfc.reciprocal_bohr_inv, volume)
-    momenta = (wfc.reciprocal_bohr_inv @ wfc.miller + wfc.k_cart_bohr_inv[:, None]).T
+    fft = PhysicalRhoFFT.create(ref.fft_smooth, miller, reciprocal, volume)
+    momenta = (reciprocal @ miller + k[:, None]).T
     factors = []
     for species in ref.species:
         tables = inputs.tables[species.name]
         centered = centered_projectors(tables, momenta)
         atoms = tuple(i for i, name in enumerate(ref.atom_names) if name == species.name)
-        beta = np.empty((wfc.igwx, len(atoms)*tables.upf.nh), dtype=np.complex128, order="F")
+        beta = np.empty((miller.shape[1], len(atoms)*tables.upf.nh), dtype=np.complex128, order="F")
         for slot, atom in enumerate(atoms):
             beta[:, slot*tables.upf.nh:(slot+1)*tables.upf.nh] = place_projectors(
                 centered, momenta, ref.positions_bohr[:, atom])
         factors.append(SpeciesProjectors(species.name, tuple(a+1 for a in atoms), beta, tables.upf.expanded_d))
     return PWFactors(fft, np.sum(momenta**2, axis=1), tuple(factors),
-                     wfc.k_cart_bohr_inv, wfc.ik, inputs.sources + (dict(wfc.source),))
+                     k, ik, inputs.sources + (provenance,))
 
 
 @dataclass(frozen=True)

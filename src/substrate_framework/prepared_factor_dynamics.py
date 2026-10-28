@@ -112,12 +112,12 @@ Mean and collective covariance normalizations must not be interchanged.
         hframes = tuple(h0psi + s.coupling.potential_action(potential[:, s.density_component], psi)
                         + s.coupling.ionic_action(state.u, psi)
                         for s, psi, h0psi in zip(self.sectors, state.frames, h0_frames))
-        force = r.fbar + r.support_force - (gradient + r.held_gradient - r.gbar) - r.curvature @ state.u
+        force = r.ionic_force + r.support_force - gradient - r.held_gradient - r.curvature @ state.u
         # Imaginary roundoff is retained in evaluated forces/energy; no physical
         # coefficient is Hermitized. A later real mean stepper owns its checks.
         rhs = FactorMean(tuple(-1j * h for h in hframes), state.p / r.masses, force)
         energy = (one_body_energy + self.measure * np.sum(delta * potential) / 2
-                  + state.u @ (gradient + r.held_gradient - r.gbar - r.fbar - r.support_force)
+                  + state.u @ (gradient + r.held_gradient - r.ionic_force - r.support_force)
                   + state.u @ r.curvature @ state.u / 2 + np.sum(state.p * state.p / r.masses) / 2)
         return MeanEvaluation(self, state, density, gradient, delta, potential,
                               hframes, rhs, force / r.masses, complex(energy))
