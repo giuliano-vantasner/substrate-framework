@@ -19,7 +19,7 @@ import json
 from material_publication import BUSCTL, manager_runtime_limit
 
 HERE = Path(__file__).resolve().parent
-CAPS = {"material-reference": 300, "physical-factors": 180}
+CAPS = {"material-reference": 300, "physical-factors": 180, "material-dyad-maps": 90}
 
 
 def runtime_context():
