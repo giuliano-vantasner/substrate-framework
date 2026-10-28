@@ -6,18 +6,26 @@ module inventories are checked against it before/after the new computation.
 This is protocol-immutable source provenance, not whole-OS attestation.
 """
 from pathlib import Path
-import sys
+from decimal import Decimal
 
 from substrate_framework.qe_saved_native import read_bound_bytes
 from material_pilot_io import (
-    binding, canonical, commit_block, recover_block, runtime_context, save_json,
+    binding, canonical, commit_block, recover_block,
+    runtime_context as previous_runtime_context,
     implementation as previous_implementation,
 )
 import hashlib
 import json
+from material_publication import BUSCTL, manager_runtime_limit
 
 HERE = Path(__file__).resolve().parent
 CAPS = {"material-reference": 300, "physical-factors": 180}
+
+
+def runtime_context():
+    context = previous_runtime_context()
+    context['manager_runtime_max_usec'] = manager_runtime_limit(context)
+    return context
 
 
 def bound_json(record):
@@ -27,7 +35,7 @@ def bound_json(record):
 
 def implementation(extra_paths=()):
     records = {item["path"]: item for item in previous_implementation()}
-    for path in (Path(__file__), *extra_paths):
+    for path in (Path(__file__), BUSCTL, *extra_paths):
         item = binding(path)
         records[item["path"]] = item
     return [records[key] for key in sorted(records)]
@@ -62,6 +70,11 @@ def _context(grant, context):
         if field["availability"] != "available" or not field["value"].isdigit() or int(field["value"]) > cap:
             raise ValueError("unadmitted kernel resource: " + key)
     # cpuset.cpus.effective is optional and stays explicitly typed unavailable.
+    runtime = context['manager_runtime_max_usec']
+    exact_us = int(Decimal(str(grant['remaining_seconds'])) * 1000000)
+    if (runtime['availability'] != 'available'
+            or not 0 < int(runtime['value']) <= exact_us):
+        raise ValueError('own manager deadline exceeds exact invocation allowance')
 
 
 def admit(path, kind, sources, context, context_only=False):

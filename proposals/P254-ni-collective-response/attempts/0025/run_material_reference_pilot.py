@@ -203,18 +203,6 @@ def produce(run, grant, summary):
     run.check()
 
 
-def emergency_terminal(target, summary, error):
-    """Last-resort stdlib receipt if runtime import or normal publication fails."""
-    import os
-    summary.update(status='failed', exit_code=1, elapsed_seconds=time.monotonic()-BOOT,
-                   terminal_failure=repr(error))
-    path = target/('terminal-'+summary['run_id']+'-emergency-'+uuid.uuid4().hex+'.json')
-    with path.open('x') as stream:
-        json.dump(summary, stream, allow_nan=False, sort_keys=True)
-        stream.write('\n')
-        stream.flush()
-        os.fsync(stream.fileno())
-    return path
 
 
 def main():
@@ -233,8 +221,9 @@ def main():
         args = parser.parse_args()
         target = args.output.resolve()
         target.mkdir(parents=True, exist_ok=True)
-        from material_run_contract import admit, implementation, runtime_context, save_json, binding
+        from material_run_contract import admit, implementation, runtime_context, binding
         from material_reference_output import OutputRun
+        from material_publication import Publication
         run = OutputRun(target, summary, BOOT)
         def interrupted(signum, frame):
             raise InterruptedError(f'signal {signum}; only immutable completed checkpoints recover')
@@ -245,19 +234,20 @@ def main():
         context_path = target/('context-'+summary['run_id']+'.json')
         context = dict(generation=summary['generation'], run_id=summary['run_id'],
                        context=summary['context'], implementation_sources=summary['implementation_sources'])
-        save_json(context_path, context)
-        if args.context_only:
-            print(json.dumps(dict(event='material_reference_context', **context), allow_nan=False), flush=True)
-        else:
-            run.event('material_reference_context', path=str(context_path), context=summary['context'])
         grant, recipe, identity = admit(args.admission, 'material-reference',
                                       summary['implementation_sources'], summary['context'], args.context_only)
-        if args.context_only:
-            summary['status'] = 'context-only'
-        else:
+        run.publisher = Publication(target, summary, BOOT, grant, context_only=args.context_only)
+        run.publisher.arm()
+        if not args.context_only:
             summary.update(recipe=recipe, recipe_sha256=identity, admission=binding(args.admission),
                            remaining_seconds_granted=grant['remaining_seconds'], resume=grant['resume'])
             run.configure(grant, identity)
+        run.publisher.write(context_path, context)
+        if args.context_only:
+            print(json.dumps(dict(event='material_reference_context', **context), allow_nan=False), flush=True)
+            summary['status'] = 'context-only'
+        else:
+            run.event('material_reference_context', path=str(context_path), context=summary['context'])
             produce(run, grant, summary)
             summary['status'] = 'complete'
         code = 0
@@ -266,28 +256,12 @@ def main():
         if isinstance(error, SystemExit) and error.code == 0:
             code = 0
     finally:
-        signal.setitimer(signal.ITIMER_REAL, 0)
         if run is not None:
-            try:
-                code = run.finish(code)
-            except BaseException as error:
-                code = 1
-                try:
-                    path = emergency_terminal(target, summary, error)
-                    detail = dict(path=str(path))
-                except BaseException as terminal_error:
-                    detail = dict(error=repr(terminal_error))
-                print(json.dumps(dict(event='terminal_write_failure', generation=summary['generation'],
-                                      run_id=summary['run_id'], **detail)), flush=True)
-        else:
-            detail = dict(failure=summary.get('failure'))
-            if target is not None:
-                try:
-                    detail['path'] = str(emergency_terminal(target, summary, summary.get('failure')))
-                except BaseException as error:
-                    detail['terminal_write_failure'] = repr(error)
-            print(json.dumps(dict(event='pre_output_failure', generation=summary['generation'],
-                                  run_id=summary['run_id'], **detail)), flush=True)
+            code = run.finish(code)
+        elif code:
+            # No admitted authority: journal only, never an unbounded file fallback.
+            print(json.dumps({'event': 'pre_output_failure', 'run_id': summary['run_id'],
+                              'exit_code': code, 'error': str(summary.get('failure'))[:240]}), flush=True)
     return code
 
 

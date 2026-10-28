@@ -7,13 +7,13 @@ Only completed background, whole-spin and individual-probe boundaries recover;
 no unfinished spin blocks, setup, native history or power-loss recovery is claimed.
 """
 import json
-import os
 import signal
 import time
 from types import MappingProxyType
 
 import numpy as np
-from material_run_contract import canonical, commit_block, recover_block, save_json
+from material_run_contract import commit_block, recover_block
+from material_publication import Publication, refusal
 from substrate_framework.qe_material_grid import PhysicalRhoFFT
 from substrate_framework.qe_material_reference import MaterialReference, COEFFICIENT_NAMES
 
@@ -79,21 +79,18 @@ class OutputRun:
     def __init__(self, target, summary, boot):
         self.target, self.summary, self.boot = target, summary, boot
         self.grant = None
+        self.publisher = None
 
     def elapsed(self):
         return time.monotonic() - self.boot
 
     def event(self, event, **fields):
-        record = dict(event=event, generation=self.summary['generation'],
-                      run_id=self.summary['run_id'], elapsed_seconds=self.elapsed(), **fields)
-        with (self.target/'telemetry.jsonl').open('a') as stream:
-            stream.write(canonical(record).decode()+'\n')
-            stream.flush()
-            os.fsync(stream.fileno())
-        print(json.dumps(record, allow_nan=False), flush=True)
+        self.publisher.event(event, **fields)
 
     def configure(self, grant, identity):
         self.grant, self.identity = grant, identity
+        if self.publisher is None:
+            self.publisher = Publication(self.target, self.summary, self.boot, grant)
         self.check()
         self.arm()
 
@@ -144,26 +141,13 @@ class OutputRun:
             self.arm()
         self.event('useful_checkpoint', key=key, disposition=disposition,
                    archive=receipt['archive'], recipe_sha256=self.identity)
-        save_json(self.target/'summary.json', self.summary, rotate=True)
+        self.publisher.write(self.target/'summary.json', self.summary, rotate=True)
         if first and elapsed >= self.grant['first_block_seconds']:
             raise TimeoutError('completed first checkpoint exceeded hard allowance')
         self.check()
 
     def finish(self, code):
-        signal.setitimer(signal.ITIMER_REAL, 0)
-        self.summary.update(elapsed_seconds=self.elapsed(), exit_code=code)
-        terminal = self.target/('terminal-'+self.summary['run_id']+'.json')
-        # Include failed runs as unique documents; never overwrite their evidence.
-        if terminal.exists():
-            raise FileExistsError('terminal run identity collision')
-        size = len(canonical(self.summary))+1
-        if self.grant is not None:
-            used = sum(p.stat().st_size for p in self.target.iterdir() if p.is_file())
-            if used + 3*size > self.grant['output_max_bytes']:
-                self.summary['status'] = 'failed'
-                self.summary['terminal_output_cap_exceeded'] = True
-                self.summary['exit_code'] = code = 1
-        save_json(terminal, self.summary)
-        save_json(self.target/'summary.json', self.summary, rotate=True)
-        self.event('terminal', status=self.summary['status'], exit_code=code, path=str(terminal))
-        return code
+        if self.publisher is None:
+            refusal(self.summary, RuntimeError('publication authority was not admitted'))
+            return 1
+        return self.publisher.finish(code)

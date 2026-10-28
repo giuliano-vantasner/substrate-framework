@@ -12,14 +12,13 @@ The grant also requires resume_receipts: {} for fresh execution, or a mapping
 from completed spinN-functional keys to exact prior receipt {path,bytes,sha256}
 bindings for resume. This invocation authority is outside the scientific recipe.
 All input verification, source inventory, loading, grid setup, readback and
-serialization are charged to the current grant, including cache-only runs.
-Eight MiB of the output grant is reserved for receipt/summary/terminal metadata.
+publication obey the current grant. Terminal time is a pre-publication snapshot;
+successful post-exit manager outcome is also required for completion authority.
 """
 import time
 BOOT = time.monotonic()
 import argparse
 import json
-import os
 from pathlib import Path
 import signal
 import sys
@@ -27,19 +26,11 @@ import traceback
 import uuid
 
 
-def emit(target, summary, event, **fields):
-    record = {'event': event, 'generation': '0025', 'run_id': summary['run_id'],
-              'elapsed_seconds': time.monotonic()-BOOT, **fields}
-    with (target/'telemetry.jsonl').open('a') as stream:
-        stream.write(json.dumps(record, allow_nan=False, separators=(',', ':'))+'\n')
-        stream.flush()
-        os.fsync(stream.fileno())
-    print(json.dumps(record, allow_nan=False, separators=(',', ':')), flush=True)
 
 
-def run_production(args, target, summary, grant, recipe, identity):
+def run_production(args, target, summary, grant, recipe, identity, publisher):
     from material_run_contract import (implementation, verify_consumers, bound_json, binding,
-                                       commit_block, save_json)
+                                       commit_block)
     from material_factor_output import (load_original, spin_receipts, load_spin,
         factor_provenance, load_saved_functional)
     from substrate_framework.physical_factor_preparation import FactorFunctional
@@ -144,9 +135,9 @@ def run_production(args, target, summary, grant, recipe, identity):
             summary['first_useful_target_met'] = summary['first_useful_block_seconds'] <= 30
             arm_deadline()
         summary['elapsed_seconds'] = time.monotonic()-BOOT
-        save_json(target/'summary.json', summary, rotate=True)
-        emit(target, summary, 'useful_checkpoint', key=key, reuse=output['reuse'],
-             receipt=output['receipt_binding'], archive=receipt['archive'])
+        publisher.write(target/'summary.json', summary, rotate=True)
+        publisher.event('useful_checkpoint', key=key, reuse=output['reuse'],
+                        receipt=output['receipt_binding'], archive=receipt['archive'])
     final_sources = implementation(paths)
     verify_consumers(grant, final_sources)
     summary['final_implementation_sources'] = final_sources
@@ -155,14 +146,14 @@ def run_production(args, target, summary, grant, recipe, identity):
 
 
 def main():
-    target, save_json = None, None
+    target, publisher = None, None
     summary = {'status': 'failed', 'generation': '0025', 'run_id': uuid.uuid4().hex,
                'outputs': [], 'first_useful_block_seconds': None, 'first_useful_target_seconds': 30,
                'scope': 'selected k=q=Gamma; separate spin1/spin2; NOT complete BvK',
                'state': None, 'D': None, 'density_coefficients': None, 'temperature': None,
                'ionic': None, 'cross': None, 'total': None,
                'recovery_boundary': 'completed spin functional only; no unfinished-step recovery',
-               'time_accounting': 'BOOT through exit, including imports, source hashing, old input readback and setup'}
+               'time_accounting': 'Pre-publication snapshot; successful post-exit manager outcome also required.'}
     code = 1
     try:
         parser = argparse.ArgumentParser(description=__doc__)
@@ -174,20 +165,21 @@ def main():
         target.mkdir(parents=True, exist_ok=True)
         def interrupted(signum, frame):
             raise InterruptedError('signal '+str(signum)+'; no automatic retries')
-        for signum in (signal.SIGTERM, signal.SIGINT):
+        for signum in (signal.SIGTERM, signal.SIGINT, signal.SIGALRM):
             signal.signal(signum, interrupted)
-        from material_run_contract import (runtime_context, implementation, admit, binding,
-                                           save_json as save_document)
-        save_json = save_document
+        from material_run_contract import runtime_context, implementation, admit, binding
+        from material_publication import Publication
         import material_factor_output
         paths = (Path(__file__), Path(material_factor_output.__file__))
         context, sources = runtime_context(), implementation(paths)
         summary.update(context=context, implementation_sources=sources)
         context_path = target/('context-'+summary['run_id']+'.json')
-        save_json(context_path, {'generation': '0025', 'run_id': summary['run_id'],
-                                'context': context, 'implementation_sources': sources})
-        emit(target, summary, 'material_factor_context', context=binding(context_path))
         grant, recipe, identity = admit(args.admission, 'physical-factors', sources, context, args.context_only)
+        publisher = Publication(target, summary, BOOT, grant, context_only=args.context_only)
+        publisher.arm()
+        publisher.write(context_path, {'generation': '0025', 'run_id': summary['run_id'],
+                                       'context': context, 'implementation_sources': sources})
+        publisher.event('material_factor_context', context=binding(context_path))
         if args.context_only:
             summary['status'] = 'context-only'
         else:
@@ -195,7 +187,7 @@ def main():
                            remaining_seconds_granted=grant['remaining_seconds'],
                            first_block_seconds_granted=grant['first_block_seconds'],
                            mode='explicit-resume' if grant['resume'] else 'new')
-            run_production(args, target, summary, grant, recipe, identity)
+            run_production(args, target, summary, grant, recipe, identity, publisher)
         code = 0
     except BaseException as error:
         summary['status'] = 'failed'
@@ -204,29 +196,11 @@ def main():
         if isinstance(error, SystemExit):
             code = int(error.code or 0)
     finally:
-        signal.setitimer(signal.ITIMER_REAL, 0)
-        summary.update(elapsed_seconds=time.monotonic()-BOOT, exit_code=code)
-        if target is not None:
-            terminal = target/('terminal-'+summary['run_id']+'.json')
-            try:
-                if save_json is None:
-                    # Import failures still get a unique exclusive terminal receipt.
-                    with terminal.open('x') as stream:
-                        json.dump(summary, stream, allow_nan=False)
-                        stream.write('\n')
-                        stream.flush()
-                        os.fsync(stream.fileno())
-                else:
-                    save_json(terminal, summary)
-                    save_json(target/'summary.json', summary, rotate=True)
-                emit(target, summary, 'terminal', status=summary['status'], exit_code=code, path=str(terminal))
-            except BaseException as error:
-                print(json.dumps({'event': 'terminal_write_failure', 'generation': '0025',
-                    'run_id': summary['run_id'], 'error': repr(error)}), flush=True)
-                code = 1
-        else:
-            print(json.dumps({'event': 'no_output_directory', 'generation': '0025',
-                'run_id': summary['run_id'], 'exit_code': code}), flush=True)
+        if publisher is not None:
+            code = publisher.finish(code)
+        elif code:
+            print(json.dumps({'event': 'publication_not_admitted', 'run_id': summary['run_id'],
+                              'exit_code': code, 'error': str(summary.get('failure'))[:240]}), flush=True)
     return code
 
 
