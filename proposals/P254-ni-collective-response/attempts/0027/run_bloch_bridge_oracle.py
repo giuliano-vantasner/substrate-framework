@@ -228,7 +228,7 @@ def action_oracle(inputs, frame):
     literal_density_c = np.sum((waves @ left)*(waves @ right).conj()*c,axis=1)*weight/np.linalg.det(ref.cell_bohr)
     expected_density = literal_density_c.reshape(ref.fft_smooth).ravel(order='F')
     close(density[:, frame.ispin-1], expected_density)
-    close(density[:, 2-frame.ispin], 0)
+    close(density[:, 2-frame.ispin], np.zeros(density.shape[0], dtype=complex))
     sensitive(density[:, frame.ispin-1], expected_density*np.linalg.det(ref.cell_bohr))
     sensitive(density[:, frame.ispin-1], density[:, 2-frame.ispin])
     pairing = ref.cell_bohr[0,0]**3/len(x)*np.sum(density[:,frame.ispin-1]*field)
