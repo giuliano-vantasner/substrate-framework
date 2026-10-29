@@ -12,6 +12,7 @@ import json
 import numpy as np
 
 from .streamed_material_state import authenticate, file_binding
+from .partitioned_q_storage import sync_file, sync_directory
 
 
 NAMES = ('u', 'p', 'coordinate', 'momentum')
@@ -20,6 +21,7 @@ NAMES = ('u', 'p', 'coordinate', 'momentum')
 class MappedResponse:
     def __init__(self, response, directory, budget, *, create=False):
         self.response, self.path = response, Path(directory).resolve()
+        self.budget = budget
         if create:
             self.path.mkdir(parents=True, exist_ok=False)
         self.ket, self.bra = [], []
@@ -43,9 +45,14 @@ class MappedResponse:
             setattr(self, name, np.zeros(size, complex))
 
     def zero(self):
+        self._record_write()
         for value in self.values():
             value[:] = 0
         return self
+
+    def _record_write(self):
+        if hasattr(self.budget, 'record_write'):
+            self.budget.record_write(sum(value.nbytes for value in self.ket+self.bra))
 
     def values(self):
         yield from self.ket
@@ -54,6 +61,7 @@ class MappedResponse:
             yield getattr(self, name)
 
     def combine(self, *terms):
+        self._record_write()
         for index, target in enumerate(self.values()):
             # One edge-sized temporary, including when target aliases an input.
             value = sum(a*tuple(x.values())[index] for a, x in terms)
@@ -72,12 +80,19 @@ class MappedResponse:
                 raise ValueError('nonfinite response is not an adoptable checkpoint')
         for value in self.ket+self.bra:
             value.flush()
+        for i in range(2*len(self.ket)):
+            sync_file(self.path/('leg-%04d.npy' % i))
+        sync_directory(self.path)
         record = dict(schema='streamed-joint-response-v1', complete=True, time=float(time),
                       identity=identity, kind=kind, provenance=provenance, q=self.response.q_fractional.tolist(),
                       legs=[file_binding(self.path/('leg-%04d.npy' % i))
                             for i in range(2*len(self.ket))],
                       small={name: [[float(z.real), float(z.imag)] for z in getattr(self, name)] for name in NAMES})
-        return budget.json(self.path/'checkpoint.json', record)
+        binding = budget.json(self.path/'checkpoint.json', record)
+        sync_file(binding['path'])
+        for parent in (self.path, *self.path.parents):
+            sync_directory(parent)
+        return binding
 
     @classmethod
     def restore(cls, response, binding, budget, identity):
@@ -110,14 +125,15 @@ class StreamedJointResponse:
     measure is supplied explicitly, not inferred from scalar equality.
     """
     def __init__(self, response, edge_stage, *, kernel_adjoint, grid_measure, budget,
-                 directory, identity, dynamics='screened-joint'):
+                 directory, identity, dynamics='screened-joint', scratch_states=2):
         if dynamics not in ('screened-joint', 'bare-electronic') or grid_measure <= 0:
             raise ValueError('explicit physical measure and dynamics label required')
         self.r, self.edge_stage, self.ka = response, edge_stage, kernel_adjoint
         self.measure, self.budget, self.identity, self.dynamics = grid_measure, budget, identity, dynamics
         self.directory = Path(directory).resolve()
         self.directory.mkdir(parents=True, exist_ok=False)
-        self.work = [MappedResponse(response, self.directory/('scratch-%d' % i), budget, create=True) for i in range(2)]
+        self.work = [MappedResponse(response, self.directory/('scratch-%d' % i), budget, create=True)
+                     for i in range(scratch_states)]
 
     def _field_moments(self, axes, left, right):
         return np.asarray([np.vdot(a.apply(right), left) for a in axes])
@@ -169,6 +185,11 @@ class StreamedJointResponse:
                 else:
                     out.ket[i][:] = -1j*(ht(x.ket[i])+drive @ s.d)
                     out.bra[i][:] = 1j*(hsa(x.bra[i].conj().T).conj().T+t.d @ adj.conj().T)
+        return self.small_rhs(x, out, g, ell, dual=dual)
+
+    def small_rhs(self, x, out, g, ell, *, dual=False):
+        r = self.r
+        coupled = self.dynamics == 'screened-joint'
         for name in NAMES:
             getattr(out, name)[:] = 0
         if not coupled:

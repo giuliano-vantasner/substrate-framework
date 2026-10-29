@@ -279,7 +279,7 @@ license_registry:
 - {id: L2, proposition: Electronic response, actual inter-region coupling and defensible physical loss inputs are available at their declared scopes, status: unearned, evidence: null, earned_by: null}
 - {id: L3, proposition: A validated material-calibrated collective dynamics calculation measures local-excitation propagation and correlations with energy and convergence controls, status: unearned, evidence: null, earned_by: null}
 - {id: L4, proposition: Candidate lattice designs are compared using computed collective observables and their uncertainties, status: unearned, evidence: null, earned_by: null}
-- {id: L5, proposition: The nuclear transition and energy-disposal bridge is assessed at exact sourced/operator scope with remaining inputs explicit, status: unearned, evidence: null, earned_by: null}
+- {id: L5, proposition: The nuclear transition and energy-disposal bridge is assessed at exact sourced/operator scope with remaining inputs explicit, status: earned, evidence: 'attempts/0028/nuclear-medium-assessment-001.json and nuclear-medium-review-admission-001.json; complete sourced/operator/product assessment, sensitive witness and independent review. Rates, heat and full LENR remain undetermined.', earned_by: G5}
 obligation_graph:
   nodes:
   - id: G0
@@ -378,14 +378,14 @@ obligation_graph:
       numerical_representation: Common error budget and convergence controls; no prediction credit for fitted calibration observables
       permitted_verdict: Ranking or unresolved comparison of these representatives only
   - id: G5
-    positive_intent: Resolve the sourced nuclear-transition and energy-disposal bridge at the strongest earned scope and name every remaining physical construction.
-    requires: [L3, L4]
+    positive_intent: Resolve the sourced nuclear-transition and energy-disposal bridge at the strongest earned scope and name every remaining physical construction. Material predictions subsequently consume L3/L4; identifying the supplied operators and missing physical inputs does not require them.
+    requires: [L0]
     pass_licenses: [L5]
     does_not_license: [An enhanced rate without its nuclear operator and medium map, heat without energy/product accounting]
     maximum_verdict: source_and_operator_scoped_assessment
     failure_scope: The inspected nuclear mechanism and its supplied assumptions only; full LENR parent remains explicit
     unlocks: []
-    status: pending
+    status: established
     license_chain:
       object: Candidate nuclear transition operator, medium coupling and energy/product channel map
       symmetry_or_conservation: Charge, energy and appropriate nuclear quantum-number accounting

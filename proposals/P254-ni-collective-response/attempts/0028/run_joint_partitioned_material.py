@@ -1,19 +1,12 @@
 #!/usr/bin/env python3
-"""Bounded resumable all-slot physical joint mean; no MPI, CPU allocation explicit.
+"""Case-selected physical joint mean with bounded original-column propagation.
 
-Use --mode initialize/reduce/evolve/refine with the SAME --output to resume.
-Each invocation has a new explicitly granted action/time allocation; all existing
-output (including abandoned attempts) consumes --max-output-bytes. --cpus names
-only currently allocated cores in 6..10, never an implicit request for all five.
-Example after the source-bound oracle passes:
-  python run_joint_partitioned_material.py --mode reduce --output /var/tmp/joint-partitioned \
-    --oracle /var/tmp/joint-partitioned-oracle.json --cpus 6 7 \
-    --max-actions 1000000 --max-seconds 7200 --max-output-bytes 4000000000 \
-    --max-memory-bytes 28000000000 --worker-memory-bytes 7000000000
-Then --mode refine --interval .001 --max-steps 2 with a new sufficient storage
-allocation (three complete new frame sets alone require about 39.4 GB).
-Completed per-slot contractions are inspectable below work/<request>/slot-*/;
-only complete.json receipts are reusable. History is the serial joint interface.
+Use an actual run_matched_joint_case.py initialization, its exact digest, the
+retained partitioned-midpoint oracle and the new column-controller oracle.
+Resume reduce/evolve/refine with the SAME output and unchanged solver limits.
+Completed per-slot work is retained; incomplete Arnoldi bases are not resumable.
+The existing scalar/midpoint equations and full raw frame/D interface are used.
+No legacy loaded-scalar fallback or positive-time symmetry is permitted.
 """
 import argparse
 import fcntl
@@ -30,23 +23,26 @@ sys.path[:0] = [str(ROOT/'src'), str(HERE)]
 for variable in ('OMP_NUM_THREADS', 'OPENBLAS_NUM_THREADS', 'MKL_NUM_THREADS', 'BLIS_NUM_THREADS', 'NUMEXPR_NUM_THREADS'):
     os.environ[variable] = '1'
 import numpy as np
-import run_joint_streamed_material as settled
+from matched_joint_case import load_case
+from matched_joint_sources import registration as matched_registration
+from joint_column_mean import ColumnLimits, ColumnPartitionedMean
+from run_joint_column_mean_oracle import sources as column_sources
+from matched_joint_initial_reuse import import_initial_contractions
 from substrate_framework.partitioned_joint_budget import PartitionBudget
-from substrate_framework.partitioned_joint_mean import PartitionedJointMean, save_stage
+from substrate_framework.partitioned_joint_mean import save_stage
 from substrate_framework.partitioned_joint_slots import publish
 from substrate_framework.streamed_joint_state import DiskJointMean
-from substrate_framework.streamed_material_state import file_binding
+from substrate_framework.streamed_material_state import authenticate, file_binding
 
 
 def implementation_bindings():
-    paths = [Path(__file__), HERE/'run_joint_partitioned_oracle.py', HERE/'joint-partitioned-registration.json']
+    paths = [Path(__file__), HERE/'joint_column_mean.py', HERE/'matched_joint_initial_reuse.py']
     paths += [ROOT/'src/substrate_framework'/name for name in (
         'partitioned_joint_budget.py', 'partitioned_joint_slots.py', 'partitioned_joint_mean.py',
-        'prepared_reference.py', 'physical_field_environment.py', 'qe_bloch_frame.py',
-        'qe_real_bloch_grid.py', 'qe_bloch_dyads.py', 'qe_bloch_finiteq_ionic.py',
-        'qe_material_grid.py', 'qe_material_hamiltonian.py', 'qe_material_field_derivatives.py',
-        'qe_nc_projectors.py', 'material_mixed_field_ionic.py', 'material_frozen_action.py')]
-    bindings = {b['path']: b for b in settled.implementation_bindings()}
+        'streamed_joint_mean.py', 'streamed_joint_reduction.py', 'streamed_joint_state.py',
+        'streamed_material_state.py', 'streamed_material_evolution.py')]
+    bindings = {b['path']: file_binding(b['path']) for b in matched_registration()[2]}
+    bindings.update({b['path']: b for b in column_sources()})
     for path in paths:
         b = file_binding(path)
         bindings[b['path']] = b
@@ -89,6 +85,15 @@ def main():
     p.add_argument('--output', type=Path, required=True)
     p.add_argument('--oracle', type=Path, required=True)
     p.add_argument('--checkpoint', type=Path)
+    p.add_argument('--case', required=True)
+    p.add_argument('--initialization', type=Path, required=True)
+    p.add_argument('--initialization-sha256', required=True)
+    p.add_argument('--column-oracle', type=Path, required=True)
+    p.add_argument('--column-dimension', type=int, required=True)
+    p.add_argument('--column-workspace-bytes', type=int, required=True)
+    p.add_argument('--column-error-target', type=float, required=True)
+    p.add_argument('--reuse-initial-contractions', type=Path)
+    p.add_argument('--reuse-initial-sha256')
     p.add_argument('--checkpoint-sha256')
     p.add_argument('--cpus', type=int, nargs='+', choices=range(6,11), required=True)
     p.add_argument('--max-actions', type=int, required=True)
@@ -124,40 +129,49 @@ def main():
         oracle = json.loads(args.oracle.read_text())
         if oracle.get('schema') != 'P254-joint-partitioned-oracle-v1' or oracle.get('status') != 'passed':
             raise ValueError('executed partitioned saved-output oracle required')
-        expected = {b['path']: b['sha256'] for b in oracle['source_bindings']}
-        if any(expected.get(b['path']) != b['sha256'] for b in bindings):
-            raise ValueError('partitioned oracle does not bind the current complete implementation')
-        result['oracle'] = file_binding(args.oracle)
-        restored, original, ions, joint, coefficients, field, spec, identity = settled.load_settled()
-        budget.check_processes(os.getpid(), [])
-        source = source_identity(bindings)
-        model_record = dict(identity=identity, specification=spec, implementation=bindings,
-                            source_identity=source, block_size=args.block_size,
-                            reality_tolerance=args.reality_tolerance)
-        persistent_json(args.output/'model.json', model_record, budget)
+        # The unchanged numerical midpoint/partitioning proof is not a proof of
+        # a former CLI or scalar constructor. Current case I/O is exercised below.
+        for binding in oracle['source_bindings']:
+            if Path(binding['path']).parent == ROOT/'src/substrate_framework':
+                authenticate(binding)
+        column_oracle = json.loads(args.column_oracle.read_text())
+        if (column_oracle.get('schema') != 'P254-joint-column-controller-oracle-v1'
+                or column_oracle.get('status') != 'passed'
+                or column_oracle['source_bindings'] != column_sources()):
+            raise ValueError('current changed column-controller/field-bound proof required')
+        initialization_binding = file_binding(args.initialization)
+        if initialization_binding['sha256'] != args.initialization_sha256:
+            raise ValueError('explicit actual case initialization differs')
+        initialization = json.loads(args.initialization.read_text())
+        context = load_case(args.case, reality_tolerance=args.reality_tolerance)
+        saved = initialization.get('saved', {})
+        if (initialization.get('status') != 'complete' or initialization.get('mode') != 'initialize'
+                or initialization.get('case') != args.case or saved.get('model_identity') != context.identity):
+            raise ValueError('complete initialization of this exact current case required')
+        initial = DiskJointMean(authenticate(saved['joint_boundary']), expected_identity=context.identity)
+        if initial.time != 0 or initial.origin != saved['original_boundary']:
+            raise ValueError('original case state/preparation differs')
+        state = initial
         if args.checkpoint:
             binding = file_binding(args.checkpoint)
             if binding['sha256'] != args.checkpoint_sha256:
                 raise ValueError('checkpoint requires exact explicit digest')
-            state = DiskJointMean(args.checkpoint, expected_identity=identity)
-        elif list(args.output.glob('initial*/boundary.json')):
-            state = DiskJointMean(sorted(args.output.glob('initial*/boundary.json'))[0], expected_identity=identity)
-        else:
-            # Incomplete wrapper directories contain no electronic arrays. Keep
-            # them as evidence and create a new wrapper generation on retry.
-            initial_dir = args.output/'initial'
-            if initial_dir.exists():
-                initial_dir = args.output/('initial-'+uuid4().hex)
-            state = DiskJointMean.wrap_original(original, initial_dir, identity=identity,
-                coordinate=joint['field_preparation']['coordinate_mean'],
-                momentum=joint['field_preparation']['momentum_mean'],
-                expected_slots=tuple(settled.slot_identity(s) for s in restored[6]),
-                evidence=dict(new_scalar=spec, field_preparation=spec['joint']), budget=budget)
-        if state.time == 0 and (not np.array_equal(state.u, ions['u_bohr']) or not np.array_equal(state.p, ions['p_canonical'])):
-            raise ValueError('initial ionic preparation changed')
-        result['initial_boundary'] = file_binding(state.path)
+            state = DiskJointMean(args.checkpoint, expected_identity=context.identity)
+            if (state.origin != initial.origin or (state.time > 0 and
+                    state.history[0]['prior_boundary_binding'] != file_binding(initial.path))):
+                raise ValueError('checkpoint does not continue this actual case initialization')
+        limits = ColumnLimits(args.column_dimension, args.column_workspace_bytes, args.column_error_target)
+        source = sha256((source_identity(bindings)+json.dumps(limits.__dict__, sort_keys=True)).encode()).hexdigest()
+        budget.check_processes(os.getpid(), [])
+        persistent_json(args.output/'model.json', dict(identity=context.identity,
+            specification=context.specification, implementation=bindings, source_identity=source,
+            initialization=initialization_binding, column_limits=limits.__dict__,
+            block_size=args.block_size, reality_tolerance=args.reality_tolerance), budget)
+        result.update(case=args.case, oracle=file_binding(args.oracle), column_oracle=file_binding(args.column_oracle),
+            initialization=initialization_binding, initial_boundary=file_binding(state.path),
+            coefficient_defect_upper_bound=None, positive_time_symmetry=False)
         frame_sets = 3 if args.mode == 'refine' else args.steps if args.mode == 'evolve' else 0
-        nr = restored[0]['saved_density_bohr3'].shape[0]
+        nr = context.reference.nbar.shape[0]
         contraction_payload = len(state.slots)*16*(nr+len(state.u)+5)
         result['resource_plan'] = dict(workers=len(args.cpus), simultaneous_slots=len(args.cpus),
             original_frame_bytes=sum(int(s.frame['bytes']) for s in state.slots),
@@ -170,17 +184,20 @@ def main():
             output_accounting='all incomplete and complete files retained; hard cumulative invocation reservation',
             memory='mmap original frames/D; one operator/slot per worker; aggregate RSS watchdog')
         if args.mode != 'initialize':
-            serial = settled.build_model(restored, ions, joint, coefficients, field, identity, args, budget)
-            model = PartitionedJointMean.from_serial(serial, directory=args.output/'work',
-                cpus=args.cpus, source_identity=source)
+            serial = context.make_mean(budget, block_size=args.block_size)
+            model = ColumnPartitionedMean.from_serial(serial, directory=args.output/'work',
+                cpus=args.cpus, source_identity=source, limits=limits)
+            if args.reuse_initial_contractions:
+                reused = file_binding(args.reuse_initial_contractions)
+                if reused['sha256'] != args.reuse_initial_sha256:
+                    raise ValueError('explicit initial contraction reuse proof differs')
+                result['initial_contraction_reuse'] = import_initial_contractions(
+                    model, state, reused, block_size=args.block_size)
             initial = model.reduce(state)
             initial_record = save_stage(initial, args.output/('initial-reduction-'+file_binding(state.path)['sha256']), budget,
                 metadata=dict(kind='full-initial-reduction', boundary=str(state.path), time_ry_inverse=state.time))
             result.update(initial_reduction=initial_record, initial_energy_total_ry=initial.energy,
                           initial_number_per_cell=initial.number)
-            if state.time == 0:
-                result['initial_force_aggregate_difference_max'] = float(np.max(np.abs(initial.force-np.asarray(joint['initial_join']['force_per_cell_ry_bohr']).reshape(-1))))
-                result['initial_field_rhs_aggregate_difference_max'] = float(np.max(np.abs(initial.field_force-joint['initial_join']['field_momentum_rhs'])))
             if args.mode in ('evolve','refine'):
                 branches = (1,2) if args.mode == 'refine' else (args.steps,)
                 results = []

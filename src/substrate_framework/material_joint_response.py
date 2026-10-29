@@ -20,8 +20,9 @@ from .material_physical_operators import (physical_hamiltonian, physical_couplin
 from .joint_bloch_response import JointBlochResponse, JointSector, JointStage, CartesianFieldActions
 from .streamed_joint_state import DiskJointMean
 from .streamed_joint_reduction import JointStage as MeanStage
-from .streamed_material_state import authenticate, DiskMean
+from .streamed_material_state import authenticate, DiskMean, file_binding
 from .streamed_material_evolution import exponential_action
+from .qe_bloch_finiteq import BlochFiniteQBridge
 
 
 class RealBlochEdge(BlochEdge):
@@ -172,6 +173,72 @@ class MaterialJointHistory:
             self.bases.append(frame.basis)
             del frame
         self.active = None
+        self.frame_work = None
+        self.frame_records = {}
+
+    def stage_identity(self, time):
+        index = self._index(time)
+        saved = self._saved_frames(time)
+        boundary = self.priors[index] if saved is None else saved
+        return dict(time=float(time), interval=index, stage=self.records[index],
+                    baseline_boundary=file_binding(boundary.path), model=self.final.identity,
+                    origin=self.initial.origin, block_size=self.block_size)
+
+    def _stage(self, time):
+        index = self._index(time)
+        if self.cached_index != index:
+            self.cached_stage = MeanStage.restore(self.records[index])
+            self.cached_index = index
+        return index, self.priors[index], self.cached_stage
+
+    def _saved_frames(self, time):
+        index, prior, _ = self._stage(time)
+        endpoint = self.priors[index+1] if index+1 < len(self.priors) else self.final
+        return prior if time == prior.time else endpoint if time == endpoint.time else None
+
+    def prepare_time(self, time):
+        """One actual exponential per slot/time, not two per incident edge/pass."""
+        if self.frame_work is None or self._saved_frames(time) is not None:
+            return
+        identity = self.stage_identity(time)
+        records = self.frame_work.execute('actual-baseline-frames', identity, len(self.bases),
+                                          lambda index: dict(frame=self._frame(index, time)))
+        self.frame_records[(self._index(time), float(time))] = records
+
+    def _frame(self, index, time):
+        _, prior, stage = self._stage(time)
+        saved = self._saved_frames(time)
+        if saved is not None:
+            return saved.arrays(saved.slots[index])[0]
+        h0 = physical_hamiltonian(self.background, self.bases[index],
+                                  self.bases[index].slot.ispin, self.block_size)
+        coupling = physical_coupling(self.background.inputs, self.bases[index], h0.factors, self.block_size)
+        action = PhysicalFrozenAction(h0, coupling, potential=stage.potential[:, self.bases[index].slot.ispin-1],
+                                      direction=stage.u, shift=stage.shift)
+        return exponential_action(self.counted(action.apply), prior.arrays(prior.slots[index])[0], time-prior.time)
+
+    def frame(self, index, time):
+        saved = self._saved_frames(time)
+        if saved is not None:
+            return saved.arrays(saved.slots[index])[0]
+        if self.frame_work is None:
+            return self._frame(index, time)
+        records = self.frame_records.get((self._index(time), float(time)))
+        if records is None:
+            raise ValueError('complete authenticated per-time baseline frame barrier required')
+        binding = records[index]['arrays']['frame']
+        self.frame_work.verify(binding)
+        value = np.load(binding['path'], mmap_mode='r', allow_pickle=False)
+        if value.shape != self.initial.slots[index].shape or value.dtype != np.complex128:
+            raise ValueError('cached actual baseline frame dimensions differ')
+        return value
+
+    @contextmanager
+    def feedback(self, index, time):
+        """Local potential only: no H0, ionic g, or projector factor rebuild."""
+        link = self.response.edges[index]
+        bridge = BlochFiniteQBridge(self.background.inputs, link.coupling.edge, block_size=self.block_size)
+        yield self.frame(link.source, time), self.frame(link.target, time), bridge
 
     def clear_interval(self):
         self.active = None
@@ -226,11 +293,7 @@ class MaterialJointHistory:
 
     @contextmanager
     def __call__(self, index, time):
-        i = self._index(time)
-        if self.cached_index != i:
-            self.cached_stage = MeanStage.restore(self.records[i])
-            self.cached_index = i
-        prior, stage = self.priors[i], self.cached_stage
+        i, prior, stage = self._stage(time)
         link = self.response.edges[index]
         source, target = link.source, link.target
         edge = link.coupling.edge
@@ -242,16 +305,8 @@ class MaterialJointHistory:
         ht = hs if source == target else PhysicalFrozenAction(h0t, ct, potential=stage.potential[:, edge.ispin-1], direction=stage.u, shift=stage.shift)
         sa, sad = self.counted(hs.apply), self.counted(hs.adjoint_apply)
         ta, tad = self.counted(ht.apply), self.counted(ht.adjoint_apply)
-        offset = time-prior.time
-        ps = prior.arrays(prior.slots[source])[0]
-        pt = ps if source == target else prior.arrays(prior.slots[target])[0]
-        endpoint = self.priors[i+1] if i+1 < len(self.priors) else self.final
-        if time == endpoint.time:
-            ps = endpoint.arrays(endpoint.slots[source])[0]
-            pt = ps if source == target else endpoint.arrays(endpoint.slots[target])[0]
-        elif offset:
-            ps = exponential_action(sa, ps, offset)
-            pt = ps if source == target else exponential_action(ta, pt, offset)
+        ps = self.frame(source, time)
+        pt = ps if source == target else self.frame(target, time)
         coupling = physical_finiteq(self.background.inputs, edge, h0s.factors, h0t.factors, self.block_size)
         axes = CartesianFieldActions.from_vertex(PhysicalFieldVertices(h0s)).axes if self.response.gamma else ()
         yield ps, pt, sa, sad, ta, tad, coupling, axes
