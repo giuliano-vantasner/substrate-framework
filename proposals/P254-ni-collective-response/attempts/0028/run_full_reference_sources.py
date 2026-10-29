@@ -63,8 +63,17 @@ def worker(cases, began, cap, stopped):
         if code == 0:
             summary = json.loads(Path(case['summary_path']).read_bytes())
             outcome['science_status'] = summary['status']
-            outcome['completed_keys'] = [item['key'] for item in summary['outputs']]
-            outcome['first_useful_block_seconds'] = summary['first_useful_block_seconds']
+            if case.get('summary_kind') in ('field-moments', 'mixed-field'):
+                schema = {'field-moments': 'P254-full-field-moments-material-v1',
+                          'mixed-field': 'P254-joint-field-material-v1'}[case['summary_kind']]
+                if (summary['schema'] != schema or summary['mode'] != 'source'
+                        or [summary['spin'], summary['source_ik']] != case['source_key']):
+                    raise ValueError('field checkpoint differs from allocated original source')
+                outcome['completed_keys'] = [case['key']]
+                outcome['first_useful_block_seconds'] = summary['elapsed_seconds']
+            else:
+                outcome['completed_keys'] = [item['key'] for item in summary['outputs']]
+                outcome['first_useful_block_seconds'] = summary['first_useful_block_seconds']
         if code != 0 or outcome.get('science_status') != 'complete':
             stopped.set()
         outcomes.append(outcome)

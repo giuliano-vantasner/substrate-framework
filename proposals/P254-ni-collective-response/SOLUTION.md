@@ -2,7 +2,7 @@
 status: active
 owner: giuliano
 canonical_issue: https://github.com/vantasnerdan/substrate-framework/issues/225
-updated: '2026-10-28'
+updated: '2026-10-29'
 ---
 
 # Ni/H collective-response solution map
@@ -11,7 +11,7 @@ The objective is a material-calibrated many-region simulation, a defensible latt
 
 ## Core scientific work
 
-Solid arrows identify material inputs needed by a result. The nuclear mechanism can be investigated now; its material predictions eventually consume the calculated response. No open node is marked complete merely because a helper or a finite example works.
+Solid arrows identify material inputs needed by a result. Dashed arrows identify future material-prediction inputs, not prerequisites for identifying the nuclear mechanism's missing operator/data. The nuclear source/operator assessment is complete at that exact scope; no other node is marked complete merely because a helper or finite example works.
 
 ```mermaid
 flowchart TD
@@ -20,26 +20,26 @@ flowchart TD
     E["E · Material field, environment and fluctuations\nIN PROGRESS"]
     D["D · Actual many-region dynamics and correlations\nIN PROGRESS"]
     C["C · Controlled lattice comparison\nIN PROGRESS"]
-    N["N · Nuclear transition and energy disposal\nIN PROGRESS"]
+    N["N · Nuclear source/operator and energy-disposal assessment\nCOMPLETE · rates remain undetermined"]
     R --> S
     R --> E
     R --> D
     S --> D
     E --> D
     D --> C
-    E --> N
-    D --> N
-    C --> N
+    E -. "material predictions" .-> N
+    D -. "material predictions" .-> N
+    C -. "material predictions" .-> N
 ```
 
 | Node | Required scientific output | Current work |
 | --- | --- | --- |
 | R | A declared full-material state with consistent density, force and curvature accounting; reference drift and approximation error remain visible. | **Complete conditional electronic reference and prepared initial state:** all20 sources/all128 slots, weighted density/force/kernel shift and conditional-state curvature; all raw electronic frames and explicit zero ionic means. The conditional ionic trap-vacuum covariance is now calculated across the64-cell grid. Nonzero initial force is retained; full electronic drift remains open. [Reference](attempts/0028/full-common-reference-004/summary.json), [electronic state](attempts/0028/full-state-initialization-intake-001.json), [ionic preparation](attempts/0028/ionic-gaussian-material-002/result.json). |
 | S | Material-derived finite-wavevector and inter-region operators, with the actual ionic/electronic spatial coverage. | **Calculated:** complete frozen4×4×4 q-grid/force lattice, now also converted to the conditional state. Rectangular finite-q operators ran on actual material wavefunctions. This is not screened phonon response or an executed regional trajectory. [Finite-q material](attempts/0028/finiteq-material-001/result.json), [common lattice](attempts/0028/full-common-reference-004/summary.json). |
-| E | A physical material/field/environment construction with its corresponding fluctuations and energy transfer. | **Calculated:** selected full-column ordered force noise, physical-UPF optical current/contact refinement, and actual stored-noise/Maxwell normalization. Two-time kernels and conservative field coupling pass independent finite oracles. Whole-material current/contact, the same-scalar field join and propagated noise remain open; no fitted damping. [Noise](attempts/0028/material-force-noise-001/summary.json), [optical](attempts/0028/field-derivatives-material-001/field-derivatives.json), [environment](attempts/0028/physical-environment-material-001/summary.json). |
-| D | Actual material trajectories after local excitation, baseline motion, connected space/time correlations and energy accounting. | Moving-reference finite-q response and streamed full-PW exponential-midpoint evolution pass independent finite oracles. Actual full-material intake and128-slot initialization pass. **No time-evolved material or many-region coherence result yet.** Bound useful rollout work before execution; retain all rows/columns. [Evolution oracle](attempts/0028/streamed-evolution-oracle-001.json), [actual inventory](attempts/0028/streamed-material-inventory-002/inventory.json). |
-| C | Matched lattice comparisons whose conclusions survive relevant numerical, size and physical controls. | **Restored all four original primary cases:** pristine, vacancy, loaded and dispersed. Complete source/mesh/population ledgers and selected full-column states exist, including the dispersed orbital-conjugation case. Comparative response/convergence and lattice ranking remain open; the primary loaded case is not silently replaced by Gamma continuation. |
-| N | A sourced transition operator and medium coupling with explicit energy/product disposal. | **Calculated:** evaluated reaction/product energies, primary measured ordinary Ni capture/Cu59(p,alpha) inputs, and original NIST photon/charged transport tables with a verified conditional energy ledger. These do not supply the proposed correlated-two-proton amplitude, a cold-lattice entrance distribution, exclusive emission spectra or external sample geometry. Kerma/stopping are not deposited heat. [Measured reactions](attempts/0028/measured-nuclear-channels-001.json), [transport and exact missing inputs](attempts/0028/nuclear-energy-transport-001.json). |
+| E | A physical material/field/environment construction with its corresponding fluctuations and energy transfer. | **Calculated:** whole-material physical-UPF current/contact, zero-field corrections and mixed ionic/field coefficients from all20 original sources/all128 slots. These now join in one verified scalar with canonical ionic coupling and an explicitly conditional q0 field Gaussian. Selected ordered force noise and stored-noise/Maxwell normalization are retained. Propagated noise remains open; no fitted damping. [Joint material scalar and field state](attempts/0028/joint-field-aggregate-001/result.json), [noise](attempts/0028/material-force-noise-001/summary.json), [independent scalar oracle](attempts/0028/joint-field-scalar-oracle-001.json). |
+| D | Actual material trajectories after local excitation, baseline motion, connected space/time correlations and energy accounting. | Actual128-slot initialization exists. Exact fusion passes real full-PW saved/complement comparisons and shared work-cap checks; one full346-column action took24.337s versus the earlier73.438s sample. A full346-column **single-sector frozen-stage** exponential is retained after197.173s. The measured block-basis trial took295.408s and meets its estimated1e-8 frame-error envelope only at t=.001, not .01 or .1; no useful whole-model speedup is inferred. **No full-material self-consistent trajectory or many-region coherence result yet.** [Retained propagation](attempts/0028/streamed-sector-exponential-001/result.json), [bounded basis result](attempts/0028/block-krylov-material-003/result.json), [actual integration](attempts/0028/streamed-fusion-material-002/result.json). |
+| C | Matched lattice comparisons whose conclusions survive relevant numerical, size and physical controls. | **Available for all four original primary cases:** complete source/population ledgers, selected full-column states and now case-specific saved-density H0/K backgrounds. Actual saved-output restoration and full-PW/complement H0 plus complex-spin K probes pass; loaded reuses its original A25 background. Comparative response/convergence and ranking remain open. [Pristine](attempts/0028/control-reference-pristine-ni32-001/result.json), [vacancy](attempts/0028/control-reference-empty-vacancy-ni31-001/result.json), [loaded](attempts/0028/control-reference-loaded-ni31h6-001/result.json), [dispersed](attempts/0028/control-reference-dispersed-ni32h6-001/result.json). |
+| N | A sourced transition/operator assessment and medium map with explicit energy/product disposal and exact missing physical inputs. | **Source/operator assessment complete:** DPV1988, BDP1989 and Kim2011 are mapped to their actual operators and physical prerequisites. Evaluated reaction/product energies, ordinary measured channels and conditional NIST transport are consumed. The actual sensitive SymPy witness proves why material coherence alone cannot determine a nuclear rate. Pair preparation, normalized channel/receiver amplitudes, nuclear-frequency matching, exclusive spectra and finite-specimen transport remain missing physical inputs—not invented rates or a universal no-go. [Complete assessment](attempts/0028/nuclear-medium-assessment.md), [executed consumer/oracle](attempts/0028/nuclear-medium-assessment-001.json). |
 
 The integrated result receives one complete scientific review and its necessary corrections, then the required distinct-authorized merge. These are delivery work, not extra scientific nodes.
 
@@ -80,10 +80,11 @@ flowchart LR
 | Measured ordinary nuclear channels | Primary measured cross sections and conditional capture/second-proton/decay bookkeeping, with source energy domains and upper limits retained. | [Actual table consumer](attempts/0028/measured-nuclear-channels-001.json), [independent oracle](attempts/0028/measured-nuclear-oracle-001.json). The printed Simon Ni58 Q discrepancy is documented against the original page and evaluated masses; no measured table is silently altered. |
 | Conditional full ionic quantum preparation | Independent positive clamped-site trap vacua, exact ordered/symmetric covariance and64-cell real/q-space replication; explicit electronic/ionic tensor product. | [Actual material covariance](attempts/0028/ionic-gaussian-material-002/result.json), [independent oscillator/Fock/Fourier and scaling oracle](attempts/0028/ionic-gaussian-oracle-002.json). Sudden-release hypothesis, not measured cooling or equilibrium. Dynamical curvature is unchanged. |
 | Original product-transport data and conditional energy ledger | NIST Ni/H photon attenuation and energy absorption, electron stopping in Ni/H, and proton/alpha stopping in H; explicit external paths and supplied spectra. | [Actual original-table consumer](attempts/0028/nuclear-energy-transport-001.json), [independent transfer oracle](attempts/0028/nuclear-transport-oracle-002.json). Ni proton/alpha tables remain unavailable; mixed-material absorption is not fabricated from elemental coefficients; actual heat/power remain unspecified. |
+| Complete physical field coefficients and exact frozen-action fusion | Full128-slot current/contact and unanchored-UPF reference corrections; one FFT pair and wide nonlocal products for the unchanged frozen electronic action. | [Field aggregate](attempts/0028/full-field-aggregate-001/result.json), [independent fusion oracle](attempts/0028/fused-action-oracle-001/result.json), [actual full-PW comparison/timing](attempts/0028/fused-action-material-001/result.json). Probe equality and one full-column timing do not establish a propagated material result or whole-run performance. |
 
 ## Current focus
 
-The critical path is **useful material evolution**. The complete conditional reference, raw electronic state and conditional ionic covariance are available. Bounded actual full-frame evolution-cost and physical-field source pilots now determine the next whole-material allocation; they are not themselves a trajectory or full-field result. [Current allocation](attempts/0028/root-allocation-decision-009.json), [pilot commands](attempts/0028/wave014-execution-registration.json). New computation uses only CPUs6–10. Core nodes remain open until their scientific outputs exist; no lattice ranking, material nuclear rate or heat is claimed.
+The critical path is **useful material evolution**, not more input inventory. Reference and initial states, the full physical field scalar, and all four control backgrounds are available; the nuclear source/operator assessment has [completed independent review](attempts/0028/nuclear-medium-review-admission-001.json). The first measured block-basis route is insufficient at its longer requested times, so it is not being scaled into production. Actual nonidentity operator probes are small, but the unaligned angular upper bound is loose; declared original-channel intertwiners are being checked. Independent work constructs the full periodic clamped-electron quantum **control** and complete matched-case coefficients, without substituting either for coupled electronic dynamics. Full trajectories/correlations and matched responses remain open. [Measured covariance](attempts/0028/operator-covariance-legacy-001/result.json), [current allocation](attempts/0028/root-allocation-decision-016.json). New computation uses only CPUs6–10.
 
 Source and result details stay in the linked attempts. This document changes when a core result changes, not for every administrative action.
 

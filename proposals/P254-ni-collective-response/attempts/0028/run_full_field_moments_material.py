@@ -7,6 +7,7 @@ explicitly retains the declared saved-geometry approximation for 128 slots.
 Estimate reads admitted metadata/background, but applies no PW operator.
 """
 import argparse
+from collections.abc import Mapping
 import json
 from pathlib import Path
 import sys
@@ -35,7 +36,7 @@ from substrate_framework import material_reference_transport as transport_module
 
 
 def pack(value):
-    if isinstance(value, dict):
+    if isinstance(value, Mapping):
         return {k: pack(v) for k, v in value.items()}
     if isinstance(value, (list, tuple)):
         return [pack(v) for v in value]

@@ -11,6 +11,7 @@ from run_streamed_material_evolution import (
     build_evolution_model, slot_identity, publish, implementation, authenticate,
     DiskMean, physical_identity)
 from substrate_framework.streamed_material_evolution import exponential_action
+from substrate_framework.streamed_material_state import save_array
 from substrate_framework.streamed_sector_executor import (
     SectorExecutor, physical_specification, KNOWN_T0_SHA256, KNOWN_T0_IDENTITY)
 from threadpoolctl import threadpool_limits, threadpool_info
@@ -37,6 +38,7 @@ def main():
     parser.add_argument('--cpu', type=int, required=True)
     parser.add_argument('--physical-interval-ry-inverse', type=float, required=True)
     parser.add_argument('--max-h0-actions', type=int, required=True)
+    parser.add_argument('--phase', choices=('action', 'moments', 'exponential', 'all'), default='all')
     parser.add_argument('--block-size', type=int, default=8)
     parser.add_argument('--reality-tolerance', type=float, default=1e-10)
     args = parser.parse_args()
@@ -94,43 +96,56 @@ def main():
         observations = {}
         def timed(name, function):
             before, started = model.counts, perf_counter()
+            publish(args.output/('started-'+name+'.json'),
+                    dict(phase=name, counts=before, worker_pid=os.getpid()))
             try:
                 return function()
             finally:
                 after = model.counts
                 observations[name] = dict(seconds=perf_counter()-started,
                     work_counts={key: after[key]-before[key] for key in after}, memory=memory())
+                publish(args.output/('measured-'+name+'.json'), observations[name])
         started = perf_counter()
         psi, d = state.arrays(slot)
         observations['frame_mmap'] = dict(seconds=perf_counter()-started, memory=memory())
+        publish(args.output/'measured-frame-mmap.json', observations['frame_mmap'])
         started = perf_counter()
+        publish(args.output/'started-operator-construction.json', dict(worker_pid=os.getpid()))
+        action_norm = moment_summary = exponential_norm = None
+        exponential_frame = None
+        status, failure = 'completed', None
         with model.operators(slot) as (coupling, h0):
             observations['operator_construction'] = dict(seconds=perf_counter()-started, memory=memory())
-            action = lambda value: model.action(coupling, h0, slot, stage, value)
-            applied = timed('full_frame_action', lambda: action(psi))
-            action_norm = float(np.linalg.norm(applied))
-            del applied
-            def moments():
-                result = coupling.prepared_moments(psi, d)
-                model._counts.add('moment_reductions')
-                return result
-            density, gradient = timed('full_frame_moments', moments)
-            moment_summary = dict(density_norm=float(np.linalg.norm(density)),
-                                  positive_gradient_norm=float(np.linalg.norm(gradient)))
-            del density, gradient
-            status, failure, exponential_norm = 'completed', None, None
-            try:
-                evolved = timed('full_frame_exponential', lambda: exponential_action(
-                    action, psi, args.physical_interval_ry_inverse))
-                exponential_norm = float(np.linalg.norm(evolved))
-                del evolved
-            except RuntimeError as error:
-                if 'H0 action cap exhausted' not in str(error):
-                    raise
-                status, failure = 'workload-cap-exhausted', str(error)
-        return dict(status=status, failure=failure, measurements=observations,
+            publish(args.output/'measured-operator-construction.json', observations['operator_construction'])
+            action = model.frozen_action(coupling, h0, slot, stage)
+            if args.phase in ('action', 'all'):
+                applied = timed('full_frame_action', lambda: action(psi))
+                action_norm = float(np.linalg.norm(applied))
+                del applied
+            if args.phase in ('moments', 'all'):
+                def moments():
+                    result = coupling.prepared_moments(psi, d)
+                    model._counts.add('moment_reductions')
+                    return result
+                density, gradient = timed('full_frame_moments', moments)
+                moment_summary = dict(density_norm=float(np.linalg.norm(density)),
+                                      positive_gradient_norm=float(np.linalg.norm(gradient)))
+                del density, gradient
+            if args.phase in ('exponential', 'all'):
+                try:
+                    evolved = timed('full_frame_exponential', lambda: exponential_action(
+                        action, psi, args.physical_interval_ry_inverse))
+                    exponential_norm = float(np.linalg.norm(evolved))
+                    exponential_frame = save_array(args.output/'exponential-frame.npy', evolved)
+                    del evolved
+                except RuntimeError as error:
+                    if 'H0 action cap exhausted' not in str(error):
+                        raise
+                    status, failure = 'workload-cap-exhausted', str(error)
+        return dict(status=status, failure=failure, measurements=observations, phase=args.phase,
             full_frame_action_norm=action_norm, moments=moment_summary,
-            exponential_frame_norm=exponential_norm, worker_pid=os.getpid(),
+            exponential_frame_norm=exponential_norm, exponential_frame=exponential_frame,
+            worker_pid=os.getpid(),
             worker_affinity=sorted(os.sched_getaffinity(0)), native_threadpools=threadpool_info())
 
     result, = list(executor.map(work, (None,)))

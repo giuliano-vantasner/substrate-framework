@@ -14,6 +14,32 @@ from scipy.sparse.linalg import LinearOperator, expm_multiply
 
 from .prepared_reference import PreparedReference
 from .streamed_sector_executor import WorkCounts
+from .qe_material_hamiltonian import MaterialHamiltonian
+from .material_frozen_action import FrozenMaterialAction
+
+
+class _CountedHamiltonian:
+    """Reserve shared work before either the bare or once-frozen action."""
+    def __init__(self, h0, counts, maximum):
+        owner = getattr(h0, '__self__', None)
+        self.material = owner if isinstance(owner, MaterialHamiltonian) else None
+        self.h0 = FrozenMaterialAction(owner).apply if self.material is not None else h0
+        self.counts, self.maximum = counts, maximum
+
+    def _apply(self, action, vectors):
+        self.counts.reserve_h0(1 if vectors.ndim == 1 else vectors.shape[1], self.maximum)
+        return action(vectors)
+
+    def __call__(self, vectors):
+        return self._apply(self.h0, vectors)
+
+    def freeze(self, coupling, potential, displacement):
+        if self.material is not None:
+            action = FrozenMaterialAction(self.material, coupling,
+                potential=potential, direction=displacement)
+            return lambda vectors: self._apply(action.apply, vectors)
+        return lambda vectors: (self(vectors) + coupling.potential_action(potential, vectors)
+                                + coupling.ionic_action(displacement, vectors))
 
 
 @dataclass(frozen=True)
@@ -116,11 +142,7 @@ class StreamedMeanEvolution:
                     or coupling.grid_measure_bohr3 != self.measure):
                 raise ValueError('actual operator differs from complete slot/grid coordinates')
             self._counts.add('operator_constructions')
-            def counted_h0(vectors):
-                self._counts.reserve_h0(1 if vectors.ndim == 1 else vectors.shape[1],
-                                        self.max_h0_actions)
-                return h0(vectors)
-            yield coupling, counted_h0
+            yield coupling, _CountedHamiltonian(h0, self._counts, self.max_h0_actions)
 
     def force(self, gradient, u):
         r = self.reference
@@ -130,7 +152,8 @@ class StreamedMeanEvolution:
         r = self.reference
         density = real_physical(density, 'global density', self.reality_tolerance)
         gradient = real_physical(gradient, 'positive electronic gradient', self.reality_tolerance)
-        potential = real_physical(r.kernel(density - r.nbar), 'K delta n', self.reality_tolerance)
+        delta_density = np.asarray(density - r.nbar, dtype=complex)
+        potential = real_physical(r.kernel(delta_density), 'K delta n', self.reality_tolerance)
         if potential.shape != r.nbar.shape:
             raise ValueError('kernel returned wrong spin/grid shape')
         energy = None
@@ -144,9 +167,8 @@ class StreamedMeanEvolution:
                      self.force(gradient, u), energy, complex(number))
 
     @staticmethod
-    def action(coupling, h0, slot, stage, vectors):
-        return (h0(vectors) + coupling.potential_action(stage.potential[:, slot.component], vectors)
-                + coupling.ionic_action(stage.u, vectors))
+    def frozen_action(coupling, h0, slot, stage):
+        return h0.freeze(coupling, stage.potential[:, slot.component], stage.u)
 
     def reduce(self, state, *, frozen_stage=None, interval=0., u=None, energy=False):
         self.validate(state)
@@ -157,7 +179,8 @@ class StreamedMeanEvolution:
             psi, d = state.arrays(slot)
             with self.operators(slot) as (coupling, h0):
                 if frozen_stage is not None:
-                    psi = exponential_action(lambda v: self.action(coupling, h0, slot, frozen_stage, v), psi, interval)
+                    action = self.frozen_action(coupling, h0, slot, frozen_stage)
+                    psi = exponential_action(action, psi, interval)
                 if hasattr(coupling, 'prepared_moments'):
                     n, g = coupling.prepared_moments(psi, d)
                 else:
@@ -185,7 +208,7 @@ class StreamedMeanEvolution:
             index, slot = item
             psi, _ = state.arrays(slot)
             with self.operators(slot) as (coupling, h0):
-                value = -1j*self.action(coupling, h0, slot, stage, psi)
+                value = -1j*self.frozen_action(coupling, h0, slot, stage)(psi)
                 return dict(slot=slot.metadata(), derivative=save_array(
                     directory / ('dpsi-%04d.npy' % index), value))
         bindings = list(self.sector_map(sector, enumerate(state.slots)))
@@ -220,7 +243,7 @@ class StreamedMeanEvolution:
         def frame(slot):
             psi, _ = state.arrays(slot)
             with self.operators(slot) as (coupling, h0):
-                return exponential_action(lambda v: self.action(coupling, h0, slot, stage, v), psi, dt)
+                return exponential_action(self.frozen_action(coupling, h0, slot, stage), psi, dt)
         def frames():
             for slot in state.slots:
                 yield frame(slot)
