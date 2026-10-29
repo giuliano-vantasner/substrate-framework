@@ -77,7 +77,7 @@ def _same(left, right):
 
 def _bound_json(binding):
     value, actual = _snapshot(binding['path'])
-    if actual['sha256'] != binding['sha256'] or actual['bytes'] != binding['bytes']:
+    if actual['sha256'] != binding['sha256'] or actual['bytes'] != int(binding['bytes']):
         raise ValueError('metadata differs from its original expected SHA/size')
     return value
 
@@ -118,8 +118,8 @@ def _mkdir(path):
 
 
 def _checked_binding(binding):
-    if (set(binding) != {'path', 'bytes', 'sha256'} or type(binding['bytes']) is not int
-            or binding['bytes'] <= 0 or not isinstance(binding['sha256'], str)
+    if (set(binding) != {'path', 'bytes', 'sha256'} or type(binding['bytes']) not in (int, str)
+            or int(binding['bytes']) <= 0 or not isinstance(binding['sha256'], str)
             or len(binding['sha256']) != 64
             or any(c not in '0123456789abcdef' for c in binding['sha256'])):
         raise ValueError('explicit regular file SHA256/size binding required')
