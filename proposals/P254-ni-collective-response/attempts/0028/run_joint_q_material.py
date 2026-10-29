@@ -14,6 +14,11 @@ receipts survive. Frames are retired only after their last scheduled use across
 BOTH legs; genuine history endpoints alias original frames. --static-plan reads actual t0
 metadata, with proposed grids explicitly NOT constituting moving history.
 No material accuracy license is invented: every result requires refinement.
+Default --observable total-force retains the original force-grid contract.
+At --q 0 0 0, --observable field-coordinate or field-momentum requires an
+independent --field-axis x/y/z. --atom/--axis still select the ionic kick.
+These are global canonical a (bohr^-1) and Pi (bohr), with no cell multiplier;
+ordered electron/ion/field components name initial origins, not energy transfer.
 """
 import argparse
 from functools import partial
@@ -43,6 +48,7 @@ from substrate_framework.partitioned_q_response import (
     PartitionedQResponse, PartitionedTwoSidedCovariance, partition_plan, initial_partition_plan, frame_times)
 from substrate_framework.joint_ordered_sources import JointProductPreparation
 from substrate_framework.joint_response_observables import total_force_probe
+from substrate_framework.joint_field_probes import OBSERVABLES, global_field_probe, validate_selection
 
 
 MODULES = ('partitioned_q_response.py', 'partitioned_q_work.py', 'partitioned_q_storage.py', 'partitioned_joint_budget.py',
@@ -55,13 +61,14 @@ MODULES = ('partitioned_q_response.py', 'partitioned_q_work.py', 'partitioned_q_
            'qe_bloch_edge.py', 'qe_bloch_frame.py', 'qe_bloch_dyads.py',
            'qe_material_hamiltonian.py', 'material_frozen_action.py',
            'streamed_material_evolution.py', 'streamed_material_state.py',
-           'material_joint_field_scalar.py')
+           'material_joint_field_scalar.py', 'joint_field_probes.py', 'physical_field_environment.py')
 
 
 def bindings():
     sources = [file_binding(p) for p in [HERE/'run_joint_q_material.py', HERE/'run_joint_q_oracle.py',
         HERE/'run_joint_partitioned_q_oracle.py', HERE/'joint-partitioned-q-registration.json',
-        HERE/'joint-q-registration.json', HERE/'run_joint_response_oracle.py']
+        HERE/'joint-q-registration.json', HERE/'run_joint_response_oracle.py',
+        HERE/'run_joint_field_readout_oracle.py', HERE/'joint-field-readout-registration-001.json']
         +[ROOT/'src/substrate_framework'/name for name in MODULES]]
     _, _, matched = matched_registration()
     return list({binding['path']: binding for binding in sources+matched}.values())
@@ -80,6 +87,27 @@ def encode(value):
         return value.item()
     return value
 
+
+
+def producer_identity(model, q, dynamics, source_bindings, observable_metadata=None):
+    payload = dict(model=model, q=q, dynamics=dynamics, sources=source_bindings)
+    if observable_metadata is not None:
+        payload['observable_metadata'] = observable_metadata
+    return sha256(json.dumps(payload, sort_keys=True).encode()).hexdigest()
+
+
+def admit_oracle(oracle, source_bindings, observable='total-force'):
+    expected = {x['path']: x['sha256'] for x in oracle['source_bindings']}
+    if oracle['schema'] != 'P254-joint-partitioned-q-oracle-v1' or oracle['status'] != 'passed':
+        raise ValueError('executed source-bound pinned q forward/dual/Fock/recovery oracle required')
+    if any(expected.get(x['path']) != x['sha256'] for x in source_bindings):
+        raise ValueError('oracle does not bind current q implementation')
+    if observable != 'total-force':
+        checks = oracle.get('checks', [])
+        if (oracle.get('extension') != 'physical-global-field-readouts' or not checks
+                or oracle.get('new_check_count') != len(checks)
+                or any(c.get('passed') is not True for c in checks)):
+            raise ValueError('executed current-source field propagation/covariance extension required')
 
 def selected_readout(executor, state, probe, time):
     if hasattr(executor.edge_stage, 'clear_interval'):
@@ -171,6 +199,9 @@ def main():
     p.add_argument('--subdivisions', type=int, required=True)
     p.add_argument('--atom', type=int, default=37)
     p.add_argument('--axis', choices=('x','y','z'), default='x')
+    p.add_argument('--observable', choices=OBSERVABLES, default='total-force')
+    p.add_argument('--field-axis', choices=('x','y','z'),
+                   help='Cartesian global field readout axis, independent of ionic --atom/--axis seed')
     p.add_argument('--cell', nargs=3, type=int, default=(0,0,0))
     p.add_argument('--amplitude', type=float, default=1.)
     p.add_argument('--dynamics', choices=('screened-joint','bare-electronic'), default='screened-joint')
@@ -181,6 +212,7 @@ def main():
         p.add_argument('--'+side+'-checkpoint', type=Path)
         p.add_argument('--'+side+'-checkpoint-sha256')
     args = p.parse_args()
+    validate_selection(args.observable, args.field_axis, args.q)
     if len(set(args.cpus)) != len(args.cpus):
         raise ValueError('allocated CPUs must be unique')
     os.sched_setaffinity(0, {args.cpus[0]})
@@ -201,11 +233,7 @@ def main():
             raise ValueError('forward restart uses --mode forward; covariance always pulls both probes to original t0')
         source_bindings = bindings()
         oracle = bound_json(file_binding(args.oracle))
-        expected = {x['path']: x['sha256'] for x in oracle['source_bindings']}
-        if oracle['schema'] != 'P254-joint-partitioned-q-oracle-v1' or oracle['status'] != 'passed':
-            raise ValueError('executed source-bound pinned q forward/dual/Fock/recovery oracle required')
-        if any(expected.get(x['path']) != x['sha256'] for x in source_bindings):
-            raise ValueError('oracle does not bind current q implementation')
+        admit_oracle(oracle, source_bindings, args.observable)
         hb = file_binding(args.history)
         if hb['sha256'] != args.history_sha256:
             raise ValueError('explicit completed mean history digest differs')
@@ -239,7 +267,13 @@ def main():
             raise ValueError('original H37 authority differs')
         direction = np.zeros(ndof)
         direction[3*(args.atom-1)+'xyz'.index(args.axis)] = 1
-        probe = total_force_probe(r, direction, identity='original-%s%d%s-total-force' % (grid.reference.atom_names[args.atom-1],args.atom,args.axis))
+        observable_metadata = None
+        if args.observable == 'total-force':
+            probe = total_force_probe(r, direction, identity='original-%s%d%s-total-force' % (grid.reference.atom_names[args.atom-1],args.atom,args.axis))
+        else:
+            probe, observable_metadata = global_field_probe(r, context.field,
+                observable=args.observable, axis=args.field_axis)
+            result['observable_metadata'] = observable_metadata
         result.update(source_bindings=source_bindings, baseline=hb, model_identity=model_identity,
             case=args.case, initialization=initialization_binding, scalar=context.specification['scalar'],
             matched_aggregate=context.aggregate_binding,
@@ -250,8 +284,8 @@ def main():
             observable=probe.identity, all_explicit_edges=len(r.edges), fixed_original_D=True,
             mean_history_method='authenticated actual midpoint stages; full-PW exponential frame reconstruction')
         if args.mode != 'plan':
-            identity = sha256(json.dumps(dict(model=model_identity,q=args.q,dynamics=args.dynamics,
-                sources=source_bindings),sort_keys=True).encode()).hexdigest()
+            identity = producer_identity(model_identity, args.q, args.dynamics, source_bindings,
+                                         observable_metadata)
             request = dict(identity=identity, baseline=hb, q=args.q, mode=args.mode,
                 case=args.case, initialization=initialization_binding,
                 times=times.tolist(), second_times=second_times.tolist(), atom=args.atom, axis=args.axis,
@@ -259,6 +293,8 @@ def main():
                 block_size=args.block_size, checkpoint=str(args.checkpoint), checkpoint_sha256=args.checkpoint_sha256,
                 left_checkpoint=str(args.left_checkpoint), left_checkpoint_sha256=args.left_checkpoint_sha256,
                 right_checkpoint=str(args.right_checkpoint), right_checkpoint_sha256=args.right_checkpoint_sha256)
+            if observable_metadata is not None:
+                request['observable_metadata'] = observable_metadata
             request_path = args.output/'request.json'
             if request_path.exists():
                 if json.loads(request_path.read_text()) != request:

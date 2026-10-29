@@ -10,10 +10,15 @@ import json
 import time
 from pathlib import Path
 
-from material_run_contract import binding, bound_json
+from material_run_contract import binding, bound_json, read_bound_bytes
 from matched_reference_io import save_json
 from run_matched_representative_batch import execute
 
+
+def load_result(record):
+    """Authenticate scientific output, not a source document (16MiB limit)."""
+    raw, _ = read_bound_bytes(record, max_bytes=256 << 20)
+    return json.loads(raw)
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
@@ -42,7 +47,7 @@ def main():
             print(json.dumps(dict(event='case-start', key=job['key'])), flush=True)
             try:
                 outcome = execute(job, args.output/f'command-{index:03d}', timeout)
-                result = bound_json(outcome['receipt'])
+                result = load_result(outcome['receipt'])
                 if result['status'] != 'complete':
                     raise ValueError('producer did not complete: '+result['status'])
                 completed[job['key']] = outcome
