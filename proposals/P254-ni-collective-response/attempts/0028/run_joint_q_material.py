@@ -56,6 +56,7 @@ MODULES = ('partitioned_q_response.py', 'partitioned_q_work.py', 'partitioned_q_
            'partitioned_joint_slots.py', 'streamed_joint_response.py', 'streamed_joint_covariance.py', 'material_joint_response.py',
            'joint_kernel_adjoint.py', 'joint_bloch_response.py', 'joint_ordered_sources.py',
            'joint_response_observables.py', 'material_physical_operators.py',
+           'paired_finiteq_moments.py', 'paired_field_moments.py',
            'qe_bloch_finiteq.py', 'qe_bloch_finiteq_ionic.py', 'qe_real_bloch_grid.py', 'qe_saved_native.py',
            'spin_pbe_kernel.py', 'streamed_joint_state.py', 'streamed_joint_reduction.py',
            'streamed_joint_mean.py', 'qe_material_grid.py', 'qe_material_reference.py',
@@ -69,7 +70,9 @@ def bindings():
     sources = [file_binding(p) for p in [HERE/'run_joint_q_material.py', HERE/'run_joint_q_oracle.py',
         HERE/'run_joint_partitioned_q_oracle.py', HERE/'joint-partitioned-q-registration.json',
         HERE/'joint-q-registration.json', HERE/'run_joint_response_oracle.py',
-        HERE/'run_joint_field_readout_oracle.py', HERE/'joint-field-readout-registration-001.json']
+        HERE/'run_joint_field_readout_oracle.py', HERE/'joint-field-readout-registration-001.json',
+        HERE/'run_paired_finiteq_moments_check.py', HERE/'run_paired_field_moments_check.py',
+        HERE/'run_paired_contraction_consumer_check.py', HERE/'paired_contraction_continuation.py']
         +[ROOT/'src/substrate_framework'/name for name in MODULES]]
     _, _, matched = matched_registration()
     return list({binding['path']: binding for binding in sources+matched}.values())
@@ -164,11 +167,11 @@ def static_plan_main(arguments):
 
 
 def bind_saved_model(context, saved, continuation):
-    """Keep the original scalar authority across a proven metadata-only repair.
+    """Keep the original scalar authority across a proven execution-only change.
 
-    The q oracle binds the current executable separately. Its source continuation
-    must prove this one history-owner change preserves all numerical code/data;
-    every other saved constructor, physical input and preparation stays exact.
+    The q oracle binds the current executable and its numerical comparison.
+    Only the declared history-owner source may differ; every other constructor,
+    physical input and preparation stays exact.
     """
     specification = saved['specification']
     identity = saved['model_identity']
@@ -178,7 +181,7 @@ def bind_saved_model(context, saved, continuation):
         return context
     path = str(ROOT/'src/substrate_framework/material_joint_response.py')
     if (not isinstance(continuation, dict)
-            or continuation.get('kind') != 'unchanged-numerics-metadata-lifetime-only'
+            or continuation.get('kind') != 'same-physical-scalar-new-execution'
             or continuation.get('before', {}).get('path') != path
             or continuation.get('after', {}).get('path') != path):
         raise ValueError('exact history-owner source continuation required')

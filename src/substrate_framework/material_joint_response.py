@@ -23,6 +23,9 @@ from .streamed_joint_reduction import JointStage as MeanStage
 from .streamed_material_state import authenticate, DiskMean, file_binding
 from .streamed_material_evolution import exponential_action
 from .qe_bloch_finiteq import BlochFiniteQBridge
+from .paired_finiteq_moments import paired_moments_and_drive as paired_matter_terms
+from .paired_field_moments import (CartesianPhysicalFieldAxes,
+    paired_field_moments_and_drive as paired_field_terms)
 
 
 def _detached_basis(basis):
@@ -301,6 +304,14 @@ class MaterialJointHistory:
             coverage_identity=coverage_identity)
         return self.response
 
+    @staticmethod
+    def paired_moments_and_drive(coupling, left, right, left2, right2, direction, *, weight):
+        return paired_matter_terms(coupling, left, right, left2, right2, direction, weight=weight)
+
+    @staticmethod
+    def paired_field_moments_and_drive(axes, left, right, left2, right2, field, *, weight):
+        return paired_field_terms(axes.vertex, left, right, left2, right2, field, weight=weight)
+
     @contextmanager
     def __call__(self, index, time):
         i, prior, stage = self._stage(time)
@@ -318,7 +329,7 @@ class MaterialJointHistory:
         ps = self.frame(source, time)
         pt = ps if source == target else self.frame(target, time)
         coupling = physical_finiteq(self.background.inputs, edge, h0s.factors, h0t.factors, self.block_size)
-        axes = CartesianFieldActions.from_vertex(PhysicalFieldVertices(h0s)).axes if self.response.gamma else ()
+        axes = CartesianPhysicalFieldAxes(PhysicalFieldVertices(h0s)) if self.response.gamma else ()
         yield ps, pt, sa, sad, ta, tad, coupling, axes
 
     def initial_stage(self):

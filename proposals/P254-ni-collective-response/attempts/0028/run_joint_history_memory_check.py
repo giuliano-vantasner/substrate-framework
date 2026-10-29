@@ -181,7 +181,7 @@ def execute(args, budget):
           unchanged_numerics(args.prior_history_source.read_bytes(), history_path.read_bytes(), 'history'))
     check('q_numerics_unchanged_outside_saved_model_continuation_and_reader_inventory',
           unchanged_numerics(args.prior_q_source.read_bytes(), q_path.read_bytes(), 'q-consumer'))
-    continuation = dict(kind='unchanged-numerics-metadata-lifetime-only',
+    continuation = dict(kind='same-physical-scalar-new-execution',
         before=old_sources[str(history_path)],
         after=next(source for source in current_sources if source['path'] == str(history_path)))
     initialization, saved = selected_initialization(args)

@@ -82,7 +82,7 @@ class PartitionedQResponse(StreamedJointResponse):
         with self.edge_stage(index, time) as (ps, pt, hs, hsa, ht, hta, c, axes):
             if dual:
                 left, right = 1j*x.ket[index] @ s.d, ps
-                left2, right2 = -1j*pt @ t.d, x.bra[index].conj().T
+                left2, right2 = pt, 1j*x.bra[index].conj().T @ t.d.conj().T
                 weight = 1.
                 direction = -x.p
                 field = -r.sqrt_n*r.polarizations.T @ x.momentum if r.gamma else np.zeros(3)
@@ -92,17 +92,29 @@ class PartitionedQResponse(StreamedJointResponse):
                 direction = x.u
                 field = r.sqrt_n*r.polarizations.T @ x.coordinate if r.gamma else np.zeros(3)
             if coupled:
-                n1, g1 = c.moments(left, right, weight=weight)
-                n2, g2 = c.moments(left2, right2, weight=weight)
-                n, g = n1+n2, g1+g2
+                paired = getattr(self.edge_stage, 'paired_moments_and_drive', None)
+                if paired is None:
+                    n1, g1 = c.moments(left, right, weight=weight)
+                    n2, g2 = c.moments(left2, right2, weight=weight)
+                    n, g = n1+n2, g1+g2
+                    op = c.prepare(direction.reshape(-1, 3))
+                    drive, adj = op.apply(ps), op.adjoint_apply(pt)
+                else:
+                    n, g, drive, adj = paired(c, left, right, left2, right2,
+                                              direction.reshape(-1, 3), weight=weight)
                 if r.gamma:
-                    ell = weight*(self._field_moments(axes, left, right)
-                                  +self._field_moments(axes, left2, right2))
-                op = c.prepare(direction.reshape(-1, 3))
-                drive, adj = op.apply(ps), op.adjoint_apply(pt)
-                for coefficient, axis in zip(field, axes):
-                    drive += coefficient*axis.apply(ps)
-                    adj += coefficient.conjugate()*axis.adjoint_apply(pt)
+                    paired_field = getattr(self.edge_stage, 'paired_field_moments_and_drive', None)
+                    if paired_field is None:
+                        ell = weight*(self._field_moments(axes, left, right)
+                                      +self._field_moments(axes, left2, right2))
+                        for coefficient, axis in zip(field, axes):
+                            drive += coefficient*axis.apply(ps)
+                            adj += coefficient.conjugate()*axis.adjoint_apply(pt)
+                    else:
+                        ell, field_drive, field_adj = paired_field(
+                            axes, left, right, left2, right2, field, weight=weight)
+                        drive += field_drive
+                        adj += field_adj
             else:
                 drive = np.zeros_like(x.ket[index])
                 adj = np.zeros_like(x.bra[index].conj().T)
