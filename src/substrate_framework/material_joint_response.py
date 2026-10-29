@@ -6,7 +6,7 @@ checked. It does not pretend RealBlochBasis is BlochBasis, conjugate a positive
 -time state, or change the saved physical factor provenance.
 """
 from contextlib import contextmanager
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 from pathlib import Path
 
 import numpy as np
@@ -23,6 +23,16 @@ from .streamed_joint_reduction import JointStage as MeanStage
 from .streamed_material_state import authenticate, DiskMean, file_binding
 from .streamed_material_evolution import exponential_action
 from .qe_bloch_finiteq import BlochFiniteQBridge
+
+
+def _detached_basis(basis):
+    """Retain metadata without retaining its entire native WFC byte buffer."""
+    metadata = {}
+    for name in ('reciprocal_bohr_inv', 'source_miller'):
+        value = getattr(basis, name).copy(order='K')
+        value.setflags(write=False)
+        metadata[name] = value
+    return replace(basis, **metadata)
 
 
 class RealBlochEdge(BlochEdge):
@@ -170,7 +180,7 @@ class MaterialJointHistory:
             if (frame.basis.identity != record.basis_identity or frame.gauge_identity != record.gauge_identity
                     or frame.coefficients.shape != record.shape or slot.source_binding['sha256'] != record.source_identity):
                 raise ValueError('original basis/gauge/frame source differs')
-            self.bases.append(frame.basis)
+            self.bases.append(_detached_basis(frame.basis))
             del frame
         self.active = None
         self.frame_work = None

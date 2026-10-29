@@ -14,9 +14,10 @@ import numpy as np
 
 from .streamed_joint_response import StreamedJointResponse, MappedResponse, NAMES, resource_plan
 from .streamed_joint_covariance import StreamedTwoSidedCovariance
-from .partitioned_joint_slots import array_identity, digest
+from .partitioned_joint_slots import digest
 from .partitioned_q_work import QWork, arrays
-from .partitioned_q_storage import QBudget, durable_publish, retire_payloads, sync_file
+from .partitioned_q_storage import (QBudget, durable_publish, retire_payloads, sync_file,
+                                   bounded_array_identity, release_mapped_pages)
 from .streamed_material_state import authenticate, file_binding
 
 
@@ -69,8 +70,8 @@ class PartitionedQResponse(StreamedJointResponse):
         r = self.r
         return dict(stage=self.edge_stage.stage_identity(time), dual=dual,
             dynamics=self.dynamics, q=r.q_fractional.tolist(), sqrt_n=float(r.sqrt_n),
-            input=[array_identity(value) for value in x.values()],
-            sectors=[dict(d=array_identity(s.d), weight=float(s.weight), component=s.density_component)
+            input=[bounded_array_identity(value) for value in x.values()],
+            sectors=[dict(d=bounded_array_identity(s.d), weight=float(s.weight), component=s.density_component)
                      for s in r.sectors])
 
     def independent_edge(self, index, time, x, dual):
@@ -164,13 +165,13 @@ class PartitionedQResponse(StreamedJointResponse):
                 g += value['g']
                 ell += value['ell']
             if self.dynamics == 'screened-joint':
-                kernel_identity = dict(input=identity, complete_density=array_identity(n),
+                kernel_identity = dict(input=identity, complete_density=bounded_array_identity(n),
                                        completed=[item['arrays'] for item in records])
                 kernel_records = self.edge_work.execute('complete-global-kernel', kernel_identity, 1,
                     lambda index: dict(potential=(self.ka if dual else self.r.kernel)(n, q_bohr_inv=self.r.q_bohr_inv)))
                 free.append(str(self.edge_work.last[1]))
                 potential = arrays(kernel_records[0])['potential']
-                feedback_identity = dict(input=identity, potential=array_identity(potential),
+                feedback_identity = dict(input=identity, potential=bounded_array_identity(potential),
                                          completed=[item['arrays'] for item in records])
                 records = self.edge_work.execute('edge-local-feedback', feedback_identity, len(self.r.edges),
                             lambda index: self.feedback_edge(index, time, potential, records, dual))
@@ -249,7 +250,7 @@ class PartitionedQResponse(StreamedJointResponse):
             value._mmap.close()
 
     def step(self, x, out, time, dt, *, dual=False):
-        request = dict(identity=self.identity, input=[array_identity(v) for v in x.values()],
+        request = dict(identity=self.identity, input=[bounded_array_identity(v) for v in x.values()],
             time=float(time), dt=float(dt), dual=dual, dynamics=self.dynamics,
             provenance=getattr(self, 'provenance', None))
         result, _ = self._bounded_step(x, time, dt, self.storage/'single-steps'/digest(request), dual=dual)
@@ -349,7 +350,7 @@ class PartitionedQResponse(StreamedJointResponse):
         """Exact existing RK4 graph with per-edge durable accumulator replacement."""
         directory.mkdir(parents=True, exist_ok=True)
         request_path = directory/'request.json'
-        request = dict(input=[array_identity(v) for v in x.values()], time=float(time), dt=float(dt),
+        request = dict(input=[bounded_array_identity(v) for v in x.values()], time=float(time), dt=float(dt),
                        dual=dual, identity=self.identity, provenance=getattr(self, 'provenance', None))
         if not request_path.exists():
             durable_publish(request_path, request, self.budget)
@@ -399,6 +400,8 @@ class PartitionedQResponse(StreamedJointResponse):
             else:
                 stage_input = x if not previous else MappedResponse.restore(
                     self.r, previous[-1], self.budget, self.identity)[0]
+                for value in x.values():
+                    release_mapped_pages(value)
                 rhs = self.rhs(stage_time, stage_input, dual=dual)
                 rhs_binding = self.last_rhs
                 durable_publish(rhs_path, dict(rhs=rhs_binding), self.budget)
@@ -523,7 +526,7 @@ class PartitionedQResponse(StreamedJointResponse):
         times = np.asarray(times, float)
         if len(times) < 2 or not np.isfinite(times).all() or np.any(np.diff(times) <= 0):
             raise ValueError('strictly increasing explicit history-covered integration grid required')
-        request = dict(identity=self.identity, initial=[array_identity(v) for v in initial.values()],
+        request = dict(identity=self.identity, initial=[bounded_array_identity(v) for v in initial.values()],
             seed_key=getattr(initial, 'seed_key', None), times=times.tolist(), dual=dual,
             dynamics=self.dynamics, provenance=getattr(self, 'provenance', None))
         root = self.storage/'propagation'/digest(request)
@@ -627,7 +630,7 @@ class PartitionedTwoSidedCovariance(StreamedTwoSidedCovariance):
         executor.provenance = dict(previous or {}, pullback=dict(probe=probe.identity, units=probe.units,
             terminal_time=float(times[-1]), grid=times.tolist()))
         key = dict(probe=probe.identity, units=probe.units,
-                   small={name: array_identity(getattr(probe, name)) for name in NAMES})
+                   small={name: bounded_array_identity(getattr(probe, name)) for name in NAMES})
         try:
             if len(times) > 1:
                 resumed = executor.resume_propagation(times, key, time=times[-1], kind='terminal-cotangent', dual=True)

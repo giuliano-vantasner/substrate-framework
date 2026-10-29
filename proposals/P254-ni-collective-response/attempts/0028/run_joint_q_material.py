@@ -22,6 +22,7 @@ ordered electron/ion/field components name initial origins, not energy transfer.
 """
 import argparse
 from functools import partial
+from dataclasses import replace
 from hashlib import sha256
 import json
 import os
@@ -35,7 +36,7 @@ sys.path[:0] = [str(ROOT/'src'), str(HERE), str(HERE.parent/'0025'), str(HERE.pa
 for key in ('OMP_NUM_THREADS', 'OPENBLAS_NUM_THREADS', 'MKL_NUM_THREADS', 'BLIS_NUM_THREADS', 'NUMEXPR_NUM_THREADS'):
     os.environ[key] = '1'
 import numpy as np
-from matched_joint_case import load_case
+from matched_joint_case import load_case, joint_blocks, model_identity as matched_model_identity
 from matched_joint_state import preparation_arrays
 from matched_joint_sources import registration as matched_registration
 from substrate_framework.material_control_reference import bound_json, bound_arrays
@@ -55,7 +56,7 @@ MODULES = ('partitioned_q_response.py', 'partitioned_q_work.py', 'partitioned_q_
            'partitioned_joint_slots.py', 'streamed_joint_response.py', 'streamed_joint_covariance.py', 'material_joint_response.py',
            'joint_kernel_adjoint.py', 'joint_bloch_response.py', 'joint_ordered_sources.py',
            'joint_response_observables.py', 'material_physical_operators.py',
-           'qe_bloch_finiteq.py', 'qe_bloch_finiteq_ionic.py', 'qe_real_bloch_grid.py',
+           'qe_bloch_finiteq.py', 'qe_bloch_finiteq_ionic.py', 'qe_real_bloch_grid.py', 'qe_saved_native.py',
            'spin_pbe_kernel.py', 'streamed_joint_state.py', 'streamed_joint_reduction.py',
            'streamed_joint_mean.py', 'qe_material_grid.py', 'qe_material_reference.py',
            'qe_bloch_edge.py', 'qe_bloch_frame.py', 'qe_bloch_dyads.py',
@@ -162,6 +163,43 @@ def static_plan_main(arguments):
         stream.write('\n')
 
 
+def bind_saved_model(context, saved, continuation):
+    """Keep the original scalar authority across a proven metadata-only repair.
+
+    The q oracle binds the current executable separately. Its source continuation
+    must prove this one history-owner change preserves all numerical code/data;
+    every other saved constructor, physical input and preparation stays exact.
+    """
+    specification = saved['specification']
+    identity = saved['model_identity']
+    if identity != matched_model_identity(specification):
+        raise ValueError('saved model identity does not bind its specification')
+    if context.specification == specification and context.identity == identity:
+        return context
+    path = str(ROOT/'src/substrate_framework/material_joint_response.py')
+    if (not isinstance(continuation, dict)
+            or continuation.get('kind') != 'unchanged-numerics-metadata-lifetime-only'
+            or continuation.get('before', {}).get('path') != path
+            or continuation.get('after', {}).get('path') != path):
+        raise ValueError('exact history-owner source continuation required')
+    current = dict(context.specification)
+    sources = list(current['implementation'])
+    matches = [i for i, source in enumerate(sources) if source['path'] == path]
+    if len(matches) != 1 or sources[matches[0]] != continuation['after']:
+        raise ValueError('current constructor differs from proven history owner')
+    sources[matches[0]] = continuation['before']
+    current['implementation'] = sources
+    if current != specification:
+        raise ValueError('saved physical model/preparation or other constructor sources differ')
+    coefficients, field, ionic, photon, masses, charges = joint_blocks(
+        context.arrays, authority=identity, reality_tolerance=context.reality_tolerance)
+    if not np.array_equal(masses, context.reference.masses) or not np.array_equal(charges, context.charges):
+        raise ValueError('original material masses/charges differ')
+    return replace(context, specification=specification, identity=identity,
+        coefficients=coefficients, field=field, ionic_preparation=ionic,
+        field_preparation=photon, charges=charges)
+
+
 def selected_initialization(args):
     binding = file_binding(args.initialization)
     if binding['sha256'] != args.initialization_sha256:
@@ -238,7 +276,7 @@ def main():
         if hb['sha256'] != args.history_sha256:
             raise ValueError('explicit completed mean history digest differs')
         initialization_binding, saved = selected_initialization(args)
-        context = load_case(args.case)
+        context = bind_saved_model(load_case(args.case), saved, oracle.get('source_compatibility'))
         model_identity = context.identity
         if saved['model_identity'] != model_identity or saved['specification'] != context.specification:
             raise ValueError('saved initialization is not this exact matched scalar/preparation')

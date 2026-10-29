@@ -5,12 +5,15 @@ checkpoints are never treated as mutable scratch. Existing scientific artifacts
 outside the explicitly owned work requests are not eligible for retirement.
 """
 import json
+import mmap
 import multiprocessing as mp
 import os
 from pathlib import Path
 
+import numpy as np
+
 from .partitioned_joint_budget import PartitionBudget
-from .partitioned_joint_slots import publish
+from .partitioned_joint_slots import array_identity, publish
 from .streamed_joint_state import JointBudgetExceeded
 from .streamed_material_state import authenticate, file_binding
 
@@ -35,6 +38,23 @@ def durable_publish(path, value, budget):
     for parent in Path(path).resolve().parents:
         sync_directory(parent)
     return binding
+
+
+def release_mapped_pages(value):
+    """Release resident file pages, never private copy-on-write state or data."""
+    if (not isinstance(value, np.memmap) or value._mmap is None
+            or value.mode not in ('r', 'r+', 'w+')):
+        return
+    if value.flags.writeable:
+        value.flush()
+    value._mmap.madvise(mmap.MADV_DONTNEED)
+
+
+def bounded_array_identity(value):
+    """Keep the exact content identity without retaining a whole mapped state."""
+    result = array_identity(value)
+    release_mapped_pages(value)
+    return result
 
 
 class QBudget(PartitionBudget):
