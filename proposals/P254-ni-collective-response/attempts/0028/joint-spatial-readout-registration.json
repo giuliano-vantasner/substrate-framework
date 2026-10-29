@@ -1,0 +1,33 @@
+{
+  "schema": "P254-joint-spatial-readout-registration-v1",
+  "status": "preregistered-unexecuted",
+  "scope": "New read-only consumer, no propagator or edits to current dynamics. One selected original atom/axis force at every original BvK cell; all64 explicit q, one case, initialization, scalar, baseline, product preparation, dynamics and time pair.",
+  "source_bindings": [
+    {"path":"/home/administrator/projects/substrate-ni-collective/proposals/P254-ni-collective-response/attempts/0028/run_joint_q_material.py","bytes":21691,"sha256":"29ae04f643731b9514a693c09b98688241353a11d2cf41d7455744488c67c550"},
+    {"path":"/home/administrator/projects/substrate-ni-collective/src/substrate_framework/joint_response_observables.py","bytes":6170,"sha256":"8cf17725507a993d873f01d25cd215c47103704b8925be766a02cd040fb380e6"},
+    {"path":"/home/administrator/projects/substrate-ni-collective/src/substrate_framework/streamed_joint_covariance.py","bytes":5319,"sha256":"b9f8242b1bb8ef349b9f21f1c25ba29bda57dc68c498e6fbb2a9e55965984a94"},
+    {"path":"/home/administrator/projects/substrate-ni-collective/src/substrate_framework/material_clamped_array.py","bytes":11098,"sha256":"5c415e660242ec065c198a76c7eaf31bf172388e4f8851108bab959283001f34"},
+    {"path":"/home/administrator/projects/substrate-ni-collective/proposals/P254-ni-collective-response/attempts/0028/matched-loaded-joint-initialize-002.json","bytes":25705,"sha256":"04ce58ae98afdf47ae31e35337201bf953701b6a284ce95a9e3a2c5be2581713"},
+    {"path":"/home/administrator/projects/substrate-ni-collective/proposals/P254-ni-collective-response/attempts/0028/clamped-array-material-001/result.json","bytes":4535,"sha256":"9205a56bd0af909851bd401a3afdf006a3ce86b182a1c6842e1f10f0e94c77a4"}
+  ],
+  "implementation_files": ["src/substrate_framework/joint_spatial_readout.py", "src/substrate_framework/spatial_readout_metrics.py", "joint_spatial_receipts.py", "run_joint_spatial_readout.py", "run_joint_spatial_readout_oracle.py"],
+  "input_manifest": {"schema":"P254-joint-spatial-input-v1", "initialization":"path/bytes/sha256 binding", "selected_q":"Exactly64 entries. Each is EITHER {result:binding,request:binding} for one genuine mode=all run OR {forward:{result:binding,request:binding},pair:{result:binding,request:binding}} for genuine mode=forward and mode=pair runs of the same q. Binding is {path,bytes,sha256}. The two entry forms may coexist; no combined producer receipt is manufactured.", "split_join":"Both successful receipts and requests retain their original bindings. Exact original case/model/scalar/aggregate/initialization/baseline/source set/q/dynamics/time grids/observable and request seed atom/axis/amplitude/cell/subdivisions/block_size must match. Pair preparation must match the authenticated initialization. Mode and independent dual restart checkpoint paths may differ; external forward restart remains unsupported.", "mean_diagnostics":"optional authenticated run_joint_partitioned_material.py successful result with exactly one branch boundary equal to q baseline"},
+  "definitions": {
+    "coherent": "F(R,t)=sum_q exp(+2*pi*i*q.R) Fq(t)/sqrt(N); Fq already includes amplitude*exp(-2*pi*i*q.kick_cell)/sqrt(N). No second kick phase or amplitude multiplication. Units Ry/bohr.",
+    "connected": "Reuse spatial_pair: C_order(R,Rref;t,s)=sum_q exp(+2*pi*i*q.(R-Rref))*Cq_order/N. AB and BA kept independently with each electronic/ionic/field initial-origin and total. Sym=(AB+BA)/2; comm=AB-BA. Units (Ry/bohr)^2.",
+    "participation": "For an explicitly named selected scalar array z_R, w_R=|z_R|^2 and P=(sum w)^2/sum(w^2), effective cells, P/N dimensionless. Not atom participation, energy, full-state localization or entanglement. Zero sum is undefined (null), not localized.",
+    "distance": "Exact minimum Euclidean distance between selected identical atom sites over BvK image translations using original lattice vectors in bohr. Geometry offsets cancel for the same selected original atom. Distance-resolved per-cell |C|^2 and normalized weights; RMS radius sqrt(sum w*r^2/sum w) in bohr. Not fitted exponential correlation length. Expose periodic outer-distance weight and finite boundary ambiguity.",
+    "reality": "Retain all complex values. Report coherent/sym imaginary norm and commutator real norm, AB-conj(BA), origin sums, and q conjugacy defects. No clipping or symmetrization repair.",
+    "energy": "Only existing mean diagnostics attached at an exactly authenticated matching q baseline boundary; no force-derived local energy density/current. No entanglement, lifetime, infinite-volume or late-time inference. Accuracy not certified."
+  },
+  "oracle_cases": [
+    "Independent SymPy exact 4-cell Fourier transform and real-space coupled canonical oscillator evolution, unequal t/s, nonzero kick/reference cell: coherent sqrtN, AB/BA 1/N, plus q sign and opposite q dagger convention.",
+    "Three independent original product-origin covariances propagated by one real-space transition: origin sum and sym/comm identities, nonzero field-origin.",
+    "Delta support gives participation1, uniform support gives4, all-zero gives undefined; original skew-cell closest-image distances independently bounded.",
+    "Executable-only temporary actual-schema receipts: accept complete4-q finite fixture with explicit nonproduction mesh; reject missing, duplicate and off-grid q, mixed baseline/preparation/dynamics/time/observable/source, changed bytes, missing origins and inconsistent totals. Production CLI requires64 original cells.",
+    "Authenticate split forward+pair files separately and require readout equality with all-mode finite inputs, including a mixed-form grid; reject inconsistent split producer sources, baseline, time grids, original seed metadata, preparation, q, scalar, observable and mode. Preserve both original bindings without generating a combined receipt."
+  ],
+  "execution": "Parent only, explicit allocated CPU; run_joint_spatial_readout_oracle.py --output PATH. No execution in this implementation slice.",
+  "material_limit": "No complete64-q successful actual selected-q material receipt set is available at implementation time. No material spatial result or ranking is emitted by this registration. Existing clamped result is a different scalar/control and cannot be silently compared.",
+  "skills": "Requested quantitative-verification and code-structure skills are unavailable in the mounted skill inventory; both reads attempted."
+}
