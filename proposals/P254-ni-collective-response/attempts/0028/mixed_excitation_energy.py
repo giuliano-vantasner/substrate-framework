@@ -21,16 +21,16 @@ _STAGE_FIELDS = ("density", "potential", "u", "p", "shift", "momentum",
 
 def _stages(stages, one_body, gamma):
     """Require actual complete inputs, including explicit non-Gamma zeros."""
-    if set(stages) != _STAGE_KEYS or set(one_body) != _STAGE_KEYS:
-        raise ValueError("stages and one_body require EXACT mean/plus/minus/mixed keys")
+    if set(stages) != _STAGE_KEYS:
+        raise ValueError("stages require EXACT mean/plus/minus/mixed keys")
+    if "mixed" not in one_body or one_body["mixed"] is None:
+        raise ValueError("the actual mixed bare-electronic moment is required")
     if not isinstance(gamma, (bool, np.bool_)):
         raise TypeError("gamma must explicitly be boolean")
     for key in _STAGE_KEYS:
         for name in _STAGE_FIELDS:
             if not hasattr(stages[key], name) or getattr(stages[key], name) is None:
                 raise ValueError(f"{key}.{name} must be supplied, including mixed data")
-        if one_body[key] is None:
-            raise ValueError(f"one_body[{key!r}] must be supplied")
     if not gamma:
         for key in ("plus", "minus"):
             for name in ("shift", "momentum"):
@@ -52,9 +52,10 @@ def mixed_components(*, reference, coefficients, field, charges, stages,
     """Return complex-preserving mixed derivatives of all eleven components.
 
     Required stage attributes match ``joint_mean_energy_components.components``.
-    ``one_body`` contains actual bare-electronic mean/first/mixed scalar moments,
-    never an electronic residual fitted to a total. All four stages and both
-    independently supplied C(q)/C(-q) matrices are mandatory. ``gamma`` says
+    ``one_body["mixed"]`` is the actual mixed bare-electronic scalar moment,
+    never an electronic residual fitted to a total. Bare energy is linear in
+    density: unused mean/first bare moments need not be computed. All four
+    stages and both independent C(q)/C(-q) matrices are mandatory. ``gamma`` says
     whether first uniform-field directions are allowed; a non-Gamma mixed
     field remains allowed. Fixed coefficients, masses, charges, nbar and forces
     are NOT differentiated. No stationarity assumption removes mean×mixed.

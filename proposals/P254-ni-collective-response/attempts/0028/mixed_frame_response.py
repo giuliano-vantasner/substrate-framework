@@ -60,28 +60,39 @@ def _action(action, index, vectors, expected):
     return result
 
 
-def _rhs_at(i, psi, plus, minus, mixed, p, m, h0, hplus, hminus, hmixed):
-    return (
-        -1j * (_action(h0, p[i], plus[i], plus[i].shape)
-               + _action(hplus, i, psi[i], plus[i].shape)),
-        -1j * (_action(h0, m[i], minus[i], minus[i].shape)
-               + _action(hminus, i, psi[i], minus[i].shape)),
-        -1j * (_action(h0, i, mixed[i], mixed[i].shape)
-               + _action(hplus, m[i], minus[i], mixed[i].shape)
-               + _action(hminus, p[i], plus[i], mixed[i].shape)
-               + _action(hmixed, i, psi[i], mixed[i].shape)))
+def frame_rhs_item(index, psi, plus, minus, mixed, *, plus_endpoint,
+                   minus_endpoint, h0: Action, hplus: Action, hminus: Action,
+                   hmixed: Action):
+    """Evaluate ONE source's arrays; never open another derivative payload.
 
-
-def frame_rhs_at(index, psi, plus, minus, mixed, *, target_plus, target_minus,
-                 h0: Action, hplus: Action, hminus: Action, hmixed: Action):
-    """Evaluate one endpoint without allocating other endpoints' RHS arrays."""
-    p, m = _layout(psi, plus, minus, mixed, target_plus, target_minus)
-    if (not isinstance(index, (int, np.integer)) or isinstance(index, (bool, np.bool_))
-            or not 0 <= index < len(psi)):
-        raise ValueError("an explicit in-range endpoint index is required")
+    The owner validates the complete geometric permutation/checkpoint before
+    dispatch. Already committed other source edges may have been retired;
+    this local API deliberately needs no array or stand-in for them.
+    Callbacks still select genuine full-row endpoint actions explicitly.
+    """
+    for value in (index, plus_endpoint, minus_endpoint):
+        if (not isinstance(value, (int, np.integer))
+                or isinstance(value, (bool, np.bool_)) or value < 0):
+            raise ValueError("explicit nonnegative source/target indices required")
+    if not isinstance(psi, np.ndarray) or psi.ndim != 2 or min(psi.shape) < 1:
+        raise ValueError("the original full-row source frame is required")
+    for value in (plus, minus, mixed):
+        if (not isinstance(value, np.ndarray) or value.ndim != 2
+                or min(value.shape) < 1 or value.shape[1] != psi.shape[1]):
+            raise ValueError("each local derivative must retain the source columns")
+    if mixed.shape != psi.shape:
+        raise ValueError("mixed Gamma rows must match the source frame")
     if not all(callable(h) for h in (h0, hplus, hminus, hmixed)):
         raise TypeError("all four physical Hamiltonian callbacks are required")
-    return _rhs_at(index, psi, plus, minus, mixed, p, m, h0, hplus, hminus, hmixed)
+    return (
+        -1j * (_action(h0, plus_endpoint, plus, plus.shape)
+               + _action(hplus, index, psi, plus.shape)),
+        -1j * (_action(h0, minus_endpoint, minus, minus.shape)
+               + _action(hminus, index, psi, minus.shape)),
+        -1j * (_action(h0, index, mixed, mixed.shape)
+               + _action(hplus, minus_endpoint, minus, mixed.shape)
+               + _action(hminus, plus_endpoint, plus, mixed.shape)
+               + _action(hmixed, index, psi, mixed.shape)))
 
 
 def frame_rhs(psi, plus, minus, mixed, *, target_plus, target_minus,
@@ -99,7 +110,9 @@ def frame_rhs(psi, plus, minus, mixed, *, target_plus, target_minus,
     p, m = _layout(psi, plus, minus, mixed, target_plus, target_minus)
     if not all(callable(h) for h in (h0, hplus, hminus, hmixed)):
         raise TypeError("all four physical Hamiltonian callbacks are required")
-    rows = tuple(_rhs_at(i, psi, plus, minus, mixed, p, m, h0, hplus, hminus, hmixed)
+    rows = tuple(frame_rhs_item(i, psi[i], plus[i], minus[i], mixed[i],
+                               plus_endpoint=p[i], minus_endpoint=m[i],
+                               h0=h0, hplus=hplus, hminus=hminus, hmixed=hmixed)
                  for i in range(len(psi)))
     return tuple(tuple(row[j] for row in rows) for j in range(3))
 
@@ -127,45 +140,78 @@ class DensityBlock:
     dyads: tuple[DensityDyad, ...]
 
 
+def density_dyads_item(index, psi, plus, minus, mixed, D, *, target_plus,
+                       target_minus, source_weights):
+    """Borrow one endpoint's blocks, reading only its incident source jets.
+
+    Sequences may be lazy authenticated readers. Only mixed[index],
+    plus[index], minus[index], plus[target_minus[index]] and
+    minus[target_plus[index]] are requested. Incoming norm dyads retain the
+    incoming source's raw rank, D and weight, even when ranks differ.
+    """
+    count = len(psi)
+    p, m = _permutations(count, target_plus, target_minus)
+    if (not isinstance(index, (int, np.integer))
+            or isinstance(index, (bool, np.bool_)) or not 0 <= index < count):
+        raise ValueError("explicit original source index required")
+    if any(len(x) != count for x in (plus, minus, mixed, D, source_weights)):
+        raise ValueError("complete source-ordered readers required")
+    i = int(index)
+    sources = set((i, p[i], m[i]))
+    frames = {s: psi[s] for s in sources}
+    for s, frame in frames.items():
+        if not isinstance(frame, np.ndarray) or frame.ndim != 2 or min(frame.shape) < 1:
+            raise ValueError("original full-row mean frame required")
+    coefficients = {s: D[s] for s in sources}
+    weights = {s: source_weights[s] for s in sources}
+    for s in sources:
+        d, weight = coefficients[s], weights[s]
+        rank = frames[s].shape[1]
+        if not isinstance(d, np.ndarray) or d.shape != (rank, rank):
+            raise ValueError(f"D[{s}] must retain original rank {rank}")
+        if not np.isfinite(d).all() or not np.allclose(d, d.conj().T, atol=1e-12, rtol=1e-12):
+            raise ValueError("finite Hermitian fixed D required; no repair is made")
+        if not np.isscalar(weight) or not np.isreal(weight) or not np.isfinite(weight) or weight <= 0:
+            raise ValueError("explicit finite positive real source weights required")
+    local_plus, local_minus, local_mixed = plus[i], minus[i], mixed[i]
+    incoming_plus = local_plus if m[i] == i else plus[m[i]]
+    incoming_minus = local_minus if p[i] == i else minus[p[i]]
+    for name, value, shape in (
+            ("plus", local_plus, (frames[p[i]].shape[0], frames[i].shape[1])),
+            ("minus", local_minus, (frames[m[i]].shape[0], frames[i].shape[1])),
+            ("mixed", local_mixed, frames[i].shape),
+            ("incoming plus", incoming_plus, (frames[i].shape[0], frames[m[i]].shape[1])),
+            ("incoming minus", incoming_minus, (frames[i].shape[0], frames[p[i]].shape[1]))):
+        if not isinstance(value, np.ndarray) or value.shape != shape:
+            raise ValueError(f"{name} must retain original-source shape {shape}")
+
+    def dyad(left, right, source):
+        return DensityDyad(left, coefficients[source], right, source, float(weights[source]))
+
+    return dict(
+        mean=DensityBlock(i, i, (dyad(frames[i], frames[i], i),)),
+        plus=DensityBlock(p[i], i, (
+            dyad(local_plus, frames[i], i),
+            dyad(frames[p[i]], incoming_minus, p[i]))),
+        minus=DensityBlock(m[i], i, (
+            dyad(local_minus, frames[i], i),
+            dyad(frames[m[i]], incoming_plus, m[i]))),
+        mixed=DensityBlock(i, i, (
+            dyad(local_mixed, frames[i], i), dyad(frames[i], local_mixed, i),
+            dyad(incoming_plus, incoming_plus, m[i]),
+            dyad(incoming_minus, incoming_minus, p[i]))))
+
+
 def density_dyads(psi, plus, minus, mixed, D, *, target_plus, target_minus,
                   source_weights):
     """Return mean/plus/minus/mixed tuples of copy-free DensityBlock records.
 
-    D[i] is the original fixed complex Hermitian (possibly singular) r_i×r_i
-    matrix; source_weights[i] is its explicit positive quadrature weight.
-    Weights are NOT averaged across endpoints or absorbed into another D.
-    Descriptors retain input array identity.  Consumers contract each dyad
-    with their real physical density/moment provider; a dense materialization
-    is deliberately absent.  The two mixed cross terms are ket-plus ×
-    bra-minus and ket-minus × bra-plus: the swapped bra convention makes
-    these plus D plus† and minus D minus† at the appropriate incoming sources.
+    Physical eta=lambda* swaps bra directions before dagger. Mixed denotes
+    d²/(dλ dη), without a half. Every original D and weight occurs once.
     """
     p, m = _layout(psi, plus, minus, mixed, target_plus, target_minus)
-    count = len(psi)
-    if len(D) != count or len(source_weights) != count:
-        raise ValueError("one original D and explicit weight per source required")
-    for i, (d, weight) in enumerate(zip(D, source_weights)):
-        rank = psi[i].shape[1]
-        if not isinstance(d, np.ndarray) or d.shape != (rank, rank):
-            raise ValueError(f"D[{i}] must retain original rank {rank}")
-        if not np.all(np.isfinite(d)) or not np.allclose(d, d.conj().T, atol=1e-12, rtol=1e-12):
-            raise ValueError("finite Hermitian fixed D required; no repair is made")
-        if not np.isscalar(weight) or not np.isreal(weight) or not np.isfinite(weight) or weight <= 0:
-            raise ValueError("explicit finite positive real source weights required")
-
-    def dyad(left, right, source):
-        return DensityDyad(left, D[source], right, source, float(source_weights[source]))
-
-    mean_blocks, plus_blocks, minus_blocks, mixed_blocks = [], [], [], []
-    for i in range(count):
-        mean_blocks.append(DensityBlock(i, i, (dyad(psi[i], psi[i], i),)))
-        plus_blocks.append(DensityBlock(p[i], i, (
-            dyad(plus[i], psi[i], i), dyad(psi[p[i]], minus[p[i]], p[i]))))
-        minus_blocks.append(DensityBlock(m[i], i, (
-            dyad(minus[i], psi[i], i), dyad(psi[m[i]], plus[m[i]], m[i]))))
-        mixed_blocks.append(DensityBlock(i, i, (
-            dyad(mixed[i], psi[i], i), dyad(psi[i], mixed[i], i),
-            dyad(plus[m[i]], plus[m[i]], m[i]),
-            dyad(minus[p[i]], minus[p[i]], p[i]))))
-    return {"mean": tuple(mean_blocks), "plus": tuple(plus_blocks),
-            "minus": tuple(minus_blocks), "mixed": tuple(mixed_blocks)}
+    rows = tuple(density_dyads_item(i, psi, plus, minus, mixed, D,
+                 target_plus=p, target_minus=m, source_weights=source_weights)
+                 for i in range(len(psi)))
+    return {name: tuple(row[name] for row in rows)
+            for name in ("mean", "plus", "minus", "mixed")}

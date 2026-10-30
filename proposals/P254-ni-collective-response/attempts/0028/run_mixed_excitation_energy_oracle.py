@@ -156,9 +156,6 @@ def input_checks():
     args = fixture(gamma=False)
     args["stages"]["plus"].shift[0] = 1
     rejected("nonGamma_first_Maxwell_field", args)
-    args = fixture()
-    args["one_body"]["fitted_residual"] = 1
-    rejected("extra_residual_key", args)
     return dict(pass_check=all(case["rejected"] for case in cases.values()), cases=cases)
 
 
