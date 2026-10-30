@@ -1,13 +1,12 @@
 """Source/input-bound local-pulse seeds, metadata accounting and read-only frames.
 
 These helpers never infer raw jets from old D-weighted response factors. The
-initial electronic arrays are new, genuine sparse complex128 zero NPY files.
+initial electronic variation is exact full-shape complex128 zero metadata.
 Resource forecasts describe logical retention and aliases, not a storage-fit,
 accuracy, whole-q, energy, or production admission. No helper launches physics.
 """
 import ast
 from contextlib import contextmanager
-from io import BytesIO
 import fcntl
 import json
 import math
@@ -21,13 +20,13 @@ from time import monotonic, time
 import numpy as np
 
 from substrate_framework.partitioned_joint_slots import digest
-from substrate_framework.partitioned_q_storage import QBudget, durable_publish, retire_payloads, sync_directory
+from substrate_framework.partitioned_q_storage import QBudget, durable_publish, sync_directory
 from substrate_framework.partitioned_q_work import QWork
 from substrate_framework.streamed_material_state import authenticate, file_binding
 from mixed_response_storage import (
     COMPONENTS, MappedMixedState, publish_checkpoint, publish_edge_barrier, retire_edge)
 from local_pulse_energy import fourier_pulse
-from mixed_payload_output import write_zero_payload
+from mixed_payload_output import exact_zero_payload
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[3]
@@ -344,68 +343,29 @@ def initial_small(initial, *, q, atom, axis, amplitude, cell, ncells=64):
 
 def initialize_raw_zero(directory, *, shapes, small, q, target_plus, target_minus,
                         identity, provenance, budget):
-    """Recoverable sparse authoring; no old response payload is even opened."""
+    """Recoverable exact initial variation without artificial zero payload files."""
     directory = Path(directory)
     directory.mkdir(exist_ok=True)
     request = dict(shapes=shapes, small={c: {k: [[z.real, z.imag] for z in a]
                     for k, a in values.items()} for c, values in small.items()},
                    q=list(q), target_plus=list(target_plus), target_minus=list(target_minus),
                    identity=identity, provenance=provenance)
-    request_binding = exact_publish(directory/'request.json', request, budget)
+    exact_publish(directory/'request.json', request, budget)
+    legs = {c: [exact_zero_payload(tuple(shape)) for shape in shapes[c]] for c in COMPONENTS}
     checkpoint = directory/'checkpoint.json'
     if checkpoint.exists():
         binding = file_binding(checkpoint)
-        record = json.loads(authenticate(binding).read_text())
-        if (record.get('identity') != identity or record.get('provenance') != canonical(provenance)
-                or record.get('small') != canonical(request['small']) or record.get('time') != 0.
-                or record.get('shapes') != canonical(shapes) or record.get('q') != list(q)
-                or record.get('target_plus') != list(target_plus)
-                or record.get('target_minus') != list(target_minus)):
-            raise ValueError('owned initial checkpoint differs from exact physical pulse request')
         with MappedMixedState(binding, budget=budget) as state:
-            for i in range(len(shapes['mixed'])):
-                for c in COMPONENTS:
-                    array = state.leg(c, i)
-                    for row in range(0, array.shape[0], 64):
-                        budget.check()
-                        if np.any(array[row:row+64]):
-                            raise ValueError('raw initial electronic variation is not literal zero')
-                state.release_edge(i)
+            record = state.record
+            if (record.get('identity') != identity
+                    or record.get('provenance') != canonical(provenance)
+                    or record.get('small') != canonical(request['small']) or record.get('time') != 0.
+                    or record.get('shapes') != canonical(shapes) or record.get('q') != list(q)
+                    or record.get('target_plus') != list(target_plus)
+                    or record.get('target_minus') != list(target_minus)
+                    or record.get('legs') != legs):
+                raise ValueError('owned initial checkpoint differs from exact physical pulse request')
         return binding
-    legs = {c: [] for c in COMPONENTS}
-    for c in COMPONENTS:
-        for i, shape in enumerate(shapes[c]):
-            budget.check()
-            path = directory/f'{c}-{i:06d}.npy'
-            header = BytesIO()
-            np.lib.format.write_array_header_1_0(header, dict(descr='<c16', fortran_order=False,
-                                                            shape=tuple(shape)))
-            raw = header.getvalue()
-            size = len(raw)+16*math.prod(shape)
-            created = not path.exists()
-            if created:
-                abandoned = list(directory.glob(path.name+'.*.partial'))
-                if abandoned:
-                    retire_payloads(directory/(path.name+'.abandoned-'+uuid4().hex+'.json'),
-                        request_binding, abandoned, directory.resolve(), budget)
-                temporary = path.with_name(path.name+'.'+uuid4().hex+'.partial')
-                binding = write_zero_payload(temporary, tuple(shape), budget)
-                os.replace(temporary, path)
-                sync_directory(directory)
-                binding = dict(binding, path=str(path.resolve()))
-            with path.open('rb') as stream:
-                if stream.read(len(raw)) != raw or path.stat().st_size != size:
-                    raise ValueError('resumed sparse zero NPY header/logical length differs')
-            if not created:
-                array = np.load(path, mmap_mode='r', allow_pickle=False)
-                try:
-                    for row in range(0, array.shape[0], 64):
-                        budget.check()
-                        if np.any(array[row:row+64]):
-                            raise ValueError('resumed electronic initial NPY is not zero')
-                finally:
-                    array._mmap.close()
-            legs[c].append(binding if created else file_binding(path))
     return publish_checkpoint(checkpoint, legs=legs, small=small, q=q,
         target_plus=target_plus, target_minus=target_minus, time=0., identity=identity,
         kind='physical-local-pulse-raw-electronic-zero', provenance=provenance, budget=budget)
@@ -418,7 +378,7 @@ def retire_previous_endpoint(directory, *, previous, successor, successor_receip
     retirement journal. Only old payloads are unlinked; all checkpoints, small
     states, source identities, action/worker costs and journals survive. Replay
     never opens retired bases, and already-retired successors need not be live.
-    The original sparse initial checkpoint is excluded by the caller.
+    The original exact-zero initial checkpoint is excluded by the caller.
     """
     directory = Path(directory).resolve()
     completed = json.loads(authenticate(successor_receipt).read_text())

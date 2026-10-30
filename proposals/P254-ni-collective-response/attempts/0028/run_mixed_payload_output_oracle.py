@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Real files: full-shape sparse zeros and unthresholded complex128 payloads."""
+"""Exact full-shape zero values and unthresholded real complex128 payloads."""
 import argparse
 import json
 from pathlib import Path
@@ -11,7 +11,8 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[3]
 sys.path.insert(0, str(ROOT/'src'))
 import numpy as np
-from mixed_payload_output import write_payload, write_zero_payload
+from mixed_payload_output import write_payload
+from mixed_response_storage import COMPONENTS, MappedMixedState, publish_checkpoint
 from substrate_framework.partitioned_q_storage import QBudget
 from substrate_framework.streamed_material_state import authenticate, file_binding
 
@@ -36,19 +37,19 @@ def main():
     zero = np.full(shape, complex(-0.,0.), dtype=np.complex128)
     binding = write_payload(work/'computed-zero.npy', zero, budget)
     outputs.append(binding)
-    value = np.load(authenticate(binding), mmap_mode='r', allow_pickle=False)
-    require('entire_computed_zero_matrix_retains_shape_dtype_values',
-            value.shape==shape and value.dtype==np.complex128 and np.array_equal(value,zero))
-    value._mmap.close()
-    stat = Path(binding['path']).stat()
-    require('zero_payload_uses_sparse_allocation_not_dense_write', stat.st_blocks*512 < zero.nbytes//16,
-            logical_bytes=stat.st_size, allocated_bytes=stat.st_blocks*512)
-    require('logical_full_shape_remains_charged', budget.bytes_reserved>=zero.nbytes)
-    authored = write_zero_payload(work/'authored-zero.npy', shape, budget)
-    outputs.append(authored)
-    value = np.load(authenticate(authored), mmap_mode='r', allow_pickle=False)
-    require('authored_sparse_zero_is_actual_full_matrix', np.array_equal(value, zero))
-    value._mmap.close()
+    small = {c: {name: np.zeros(3 if name in ('u', 'p') else 1, complex)
+                 for name in ('u', 'p', 'coordinate', 'momentum')} for c in COMPONENTS}
+    checkpoint = publish_checkpoint(work/'zero-consumer.json',
+        legs={c: [binding] for c in COMPONENTS}, small=small, q=(0., 0., 0.),
+        target_plus=[0], target_minus=[0], time=0., identity='computed-zero-consumer',
+        kind='computed-zero', provenance=dict(operation='payload-output-oracle'), budget=budget)
+    outputs.append(checkpoint)
+    with MappedMixedState(checkpoint, budget=budget) as state:
+        value = state.leg('plus', 0)
+        require('entire_computed_zero_matrix_retains_shape_dtype_values',
+                value.shape==shape and value.dtype==np.complex128
+                and np.array_equal(value,zero) and not value.flags.writeable)
+    require('exact_zero_has_no_fictitious_payload_file', not (work/'computed-zero.npy').exists())
     # A tiny nonzero and complex signs must survive, not take a zero shortcut.
     data = np.zeros((97, 61), dtype=np.complex128, order='F')
     data[31,27] = 1.e-300-2.e-300j
@@ -69,16 +70,17 @@ def main():
             raise AssertionError('accepted '+label)
     before = file_binding(work/'nonzero.npy')
     try:
-        write_zero_payload(work/'nonzero.npy', data.shape, budget)
+        write_payload(work/'nonzero.npy', np.zeros(data.shape, complex), budget)
     except FileExistsError:
         require('existing_original_never_overwritten', file_binding(work/'nonzero.npy')==before)
     else:
         raise AssertionError('overwrote an existing payload')
-    result = dict(schema='P254-real-sparse-computed-payload-oracle-v1',status='PASS',
+    result = dict(schema='P254-exact-zero-computed-payload-oracle-v2',status='PASS',
         scope='actual numeric storage boundaries only; no material propagation',checks=checks,
         outputs=outputs,budget=budget.snapshot(),wall_seconds=perf_counter()-start,
         process_peak_rss_bytes=resource.getrusage(resource.RUSAGE_SELF).ru_maxrss*1024,
-        source_bindings=[file_binding(HERE/'mixed_payload_output.py'),file_binding(__file__)])
+        source_bindings=[file_binding(HERE/'mixed_payload_output.py'),
+                         file_binding(HERE/'mixed_response_storage.py'),file_binding(__file__)])
     with args.output.open('x') as stream:
         json.dump(result,stream,indent=2,allow_nan=False);stream.write('\n')
     print(json.dumps(dict(status='PASS',checks=len(checks),output=str(args.output))))

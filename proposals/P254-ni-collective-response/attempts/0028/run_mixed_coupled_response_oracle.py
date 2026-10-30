@@ -29,7 +29,8 @@ import scipy
 import sympy
 from mixed_finite_coupled_system import (
     CoupledFixture, FiniteDynamics, ENERGIES, ORDERS, small_vector)
-from mixed_response_storage import MappedMixedState, COMPONENTS, SMALL_NAMES
+from mixed_response_storage import (
+    MappedMixedState, COMPONENTS, SMALL_NAMES, payload_path)
 from mixed_response_rk4 import advance_step
 from substrate_framework.partitioned_q_storage import QBudget
 from substrate_framework.partitioned_q_work import QWork
@@ -158,35 +159,47 @@ def replay_and_restore(binding, dynamics, work, calls, budget, evidence):
     first = calls[0]
     dynamics = FiniteDynamics(dynamics.s, dynamics.directory, budget,
                              dynamics.sources, dynamics.mutation)
+    retired = []
+    for path in first['directory'].rglob('*.retired.json'):
+        record = json.loads(path.read_text())
+        actual_paths = [actual for entry in record.get('payloads', [])
+                        if (actual := payload_path(entry)) is not None]
+        if actual_paths and any(not Path(actual).exists() for actual in actual_paths):
+            retired.append(file_binding(path))
+    evidence.require('old_actual_input_payloads_retired_before_replay', bool(retired),
+                     retirement_receipts=retired)
     replay = advance_step(first['initial'], first['dt'], dynamics=dynamics,
         work=work, directory=first['directory'], identity=first['identity'], budget=budget)
     evidence.require('actual_advance_step_completed_replay', replay == binding,
                      final_checkpoint=binding)
-    retired = []
-    for path in first['directory'].rglob('*.retired.json'):
-        record = json.loads(path.read_text())
-        if record.get('payloads') and any(not Path(b['path']).exists() for b in record['payloads']):
-            retired.append(file_binding(path))
-    evidence.require('old_actual_input_payloads_retired_before_replay', bool(retired),
-                     retirement_receipts=retired)
     restored_count = 0
     for path in dynamics.directory.rglob('context.json'):
         record = json.loads(path.read_text())
         old = record['state']
         checkpoint = json.loads(authenticate(old).read_text())
-        if not any(not Path(b['path']).exists() for entries in checkpoint['legs'].values() for b in entries):
+        retired_legs = [(component, index, entry)
+                        for component, entries in checkpoint['legs'].items()
+                        for index, entry in enumerate(entries)
+                        if (actual := payload_path(entry)) is not None
+                        and not Path(actual).exists()]
+        if not retired_legs:
             continue
         with MappedMixedState(old, budget=budget) as state:
             context = dynamics.restore(file_binding(path), state, work)
             evidence.require('retired_stage_context_restore_'+str(restored_count),
                 all(np.isfinite(a).all() for values in context.small_rhs.values() for a in values.values()),
                 context=file_binding(path), retired_checkpoint=old)
-            try:
-                state.leg('mixed', 0)
-            except FileNotFoundError:
-                evidence.require('retired_stage_is_not_zero_substituted_'+str(restored_count), True)
-            else:
-                evidence.require('retired_stage_is_not_zero_substituted_'+str(restored_count), False)
+            for component, index, entry in retired_legs:
+                try:
+                    state.leg(component, index)
+                except FileNotFoundError:
+                    refused = True
+                else:
+                    refused = False
+                evidence.require(
+                    'retired_stage_is_not_zero_substituted_'+str(restored_count)
+                    +'_'+component+'_'+str(index), refused,
+                    component=component, index=index, retired_payload=entry)
             restored_count += 1
     evidence.require('actual_retired_stage_restore_exercised', restored_count > 0,
                      restored_contexts=restored_count)

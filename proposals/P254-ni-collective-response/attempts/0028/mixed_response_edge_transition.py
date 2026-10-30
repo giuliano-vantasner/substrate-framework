@@ -15,14 +15,14 @@ from uuid import uuid4
 import numpy as np
 
 from substrate_framework.partitioned_q_storage import (
-    durable_publish, retire_payloads, sync_directory, sync_file)
+    durable_publish, retire_payloads, sync_directory)
 from substrate_framework.streamed_material_state import authenticate, file_binding
 from mixed_response_storage import (
-    COMPONENTS, _barrier, _binding, _header, _owned, _retirement,
-    publish_edge_barrier, retire_edge)
+    COMPONENTS, _barrier, _owned, _retirement, authenticate_payload,
+    payload_binding, payload_path, publish_edge_barrier, retire_edge)
 from mixed_payload_output import write_payload
 
-SCHEMA = 'P254-mixed-rk4-edge-transition-v1'
+SCHEMA = 'P254-mixed-rk4-edge-transition-v2'
 WEIGHTS = (1/6, 1/3, 1/3, 1/6)
 NODES = (.5, .5, 1.)
 
@@ -65,20 +65,23 @@ def read_transition(path, *, plan, stage, index, base, current, accumulator,
     if not isinstance(successors, dict) or set(successors) != labels:
         raise ValueError('transition replacement labels differ')
     seen = set()
-    old_paths = {entry['path'] for state in (base, current, accumulator) if state is not None
-                 for component in COMPONENTS for entry in state.record['legs'][component]}
+    old_paths = {path for state in (base, current, accumulator) if state is not None
+                 for component in COMPONENTS for entry in state.record['legs'][component]
+                 if (path := payload_path(entry)) is not None}
     for triple in successors.values():
         if not isinstance(triple, dict) or set(triple) != set(COMPONENTS):
             raise ValueError('complete successor triple required')
         for component in COMPONENTS:
-            entry = _binding(triple[component])
-            if entry['path'] in seen or entry['path'] in old_paths:
-                raise ValueError('replacement aliases an original or another replacement')
-            seen.add(entry['path'])
-            if live_successors:
-                authenticate(entry)
-                if _header(entry) != base._shapes[component][index]:
-                    raise ValueError('replacement original geometry differs')
+            entry = payload_binding(triple[component])
+            entry_path = payload_path(entry)
+            if entry_path is not None:
+                if entry_path in seen or entry_path in old_paths:
+                    raise ValueError('replacement aliases an original or another replacement')
+                seen.add(entry_path)
+            # Typed zeros retain full geometry even after later stages retire
+            # the real successor files. Missing real files are never zeros.
+            if live_successors or entry_path is None:
+                authenticate_payload(entry, base._shapes[component][index])
     old = _old_states(base, current, accumulator)
     if not isinstance(record.get('barriers'), dict) or set(record['barriers']) != set(old):
         raise ValueError('separate old-checkpoint barriers required')
@@ -91,7 +94,8 @@ def read_transition(path, *, plan, stage, index, base, current, accumulator,
         if require_retired:
             _retirement(state.binding, state.record, state._shapes, index,
                         expected_barrier=barrier)
-            if any(Path(state.record['legs'][c][index]['path']).exists() for c in COMPONENTS):
+            if any(Path(path).exists() for c in COMPONENTS
+                   if (path := payload_path(state.record['legs'][c][index])) is not None):
                 raise ValueError('completed edge still has unretired owned payloads')
     measured = record.get('observed_execution')
     if not isinstance(measured, dict) or any(name not in measured for name in (

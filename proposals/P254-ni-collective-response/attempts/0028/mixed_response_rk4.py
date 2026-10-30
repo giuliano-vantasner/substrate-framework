@@ -19,9 +19,9 @@ import mixed_response_edge_transition as edge_transition
 import mixed_response_storage as storage
 import mixed_payload_output as payload_output
 
-SCHEMA = 'P254-mixed-rk4-step-v1'
-STAGE_SCHEMA = 'P254-mixed-rk4-stage-plan-v1'
-STAGE_COMPLETE_SCHEMA = 'P254-mixed-rk4-stage-complete-v1'
+SCHEMA = 'P254-mixed-rk4-step-v2'
+STAGE_SCHEMA = 'P254-mixed-rk4-stage-plan-v2'
+STAGE_COMPLETE_SCHEMA = 'P254-mixed-rk4-stage-complete-v2'
 
 
 def _read(path):
@@ -295,8 +295,9 @@ def advance_step(initial_binding, dt, *, dynamics, work, directory, identity, bu
                 durable_publish(complete, value, budget)
         if stage == 3:
             final = outputs['final']
-            # A completed return authenticates the real final values, not just
-            # checkpoint headers or compact transition markers.
+            # A completed return authenticates every full-shape final value:
+            # actual file bytes or an explicit exact-zero descriptor, never
+            # checkpoint headers, compact markers or absent-file inference.
             with storage.MappedMixedState(final, budget=budget) as state:
                 for index in range(len(state._shapes['mixed'])):
                     for component in storage.COMPONENTS:

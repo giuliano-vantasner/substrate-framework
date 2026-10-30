@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Real-file finite storage oracle; no Native/material simulation is launched.
+"""Finite storage oracle for exact-zero metadata and actual nonzero files.
 
 Usage: python run_mixed_response_storage_oracle.py --output /path/report.json
 The report is a verdict only after actual execution. Isolated tiny payloads,
-sparse seeds and retained receipts live in a newly created work namespace next
+typed full-shape zero seeds and retained receipts live in a new namespace next
 to the output. A fresh Python subprocess performs the restart/resume portion.
 No mocks, source-text checks or unchanged-hasher requalification are used.
 """
@@ -24,6 +24,7 @@ ROOT = HERE.parents[3]
 sys.path.insert(0, str(ROOT/'src'))
 
 import mixed_response_storage as storage
+from mixed_payload_output import exact_zero_payload, is_exact_zero_payload, write_payload
 from substrate_framework.partitioned_q_storage import QBudget, durable_publish, sync_file
 from substrate_framework.streamed_material_state import file_binding
 
@@ -99,13 +100,15 @@ def numerical_values(shapes, offset=0):
 
 def write_legs(directory, values, allocation):
     directory.mkdir(parents=True, exist_ok=False)
-    return {c: [allocation.array(directory/f'{c}-{i:06d}.npy', a)
+    return {c: [write_payload(directory/f'{c}-{i:06d}.npy', a, allocation)
                 for i, a in enumerate(values[c])] for c in storage.COMPONENTS}
 
 
-def fixture(directory, allocation, *, offset=0, q=(1/3, 0., 0.)):
+def fixture(directory, allocation, *, offset=0, q=(1/3, 0., 0.), zero_positions=()):
     shapes, plus, minus = geometry()
     values = numerical_values(shapes, offset)
+    for c, i in zero_positions:
+        values[c][i].fill(0)
     legs = write_legs(directory, values, allocation)
     coords = small(np.asarray(q), offset)
     checkpoint = storage.publish_checkpoint(directory/'checkpoint.json', legs=legs,
@@ -126,7 +129,7 @@ def replacements(directory, values, allocation, index, offset=2):
         for j, c in enumerate(storage.COMPONENTS):
             a = np.asarray((1+.125j*(k+1))*values[c][index]
                            +(offset+k+j)*(.125-.0625j), dtype=np.complex128)
-            result[label][c] = allocation.array(directory/f'{label}-{c}.npy', a)
+            result[label][c] = write_payload(directory/f'{label}-{c}.npy', a, allocation)
     return result
 
 
@@ -181,13 +184,159 @@ def child_resume(manifest, output):
                              lambda i=i: state.leg('plus', i), (FileNotFoundError,))
         for c in storage.COMPONENTS:
             evidence.equal(f'resumed-preserves-final-edge-{c}', state.leg(c, 2), expected[c][2])
-    report = dict(schema='P254-mixed-storage-reopen-subprocess-v1', status='pass',
+    typed = spec['typed_restart']
+    typed_expected = pairs_to_arrays(typed['expected'])
+    with storage.MappedMixedState(typed['checkpoint'], budget=allocation) as state:
+        for c in storage.COMPONENTS:
+            evidence.refuses(f'fresh-process-mixed-retired-{c}-not-a-zero-fallback',
+                             lambda c=c: state.leg(c, 0), (FileNotFoundError,))
+            for i in (1, 2):
+                evidence.equal(f'fresh-process-mixed-unaffected-{c}-{i}',
+                               state.leg(c, i), typed_expected[c][i])
+    typed_receipt = storage.retire_edge(typed['checkpoint'], 1, typed['barrier'],
+                                       budget=allocation, owner_root=work)
+    evidence.require('fresh-process-mixed-retirement-replay-idempotent',
+        storage.retire_edge(typed['checkpoint'], 1, typed['barrier'],
+                            budget=allocation, owner_root=work) == typed_receipt)
+    with storage.MappedMixedState(typed['checkpoint'], budget=allocation) as state:
+        for c in storage.COMPONENTS:
+            evidence.refuses(f'fresh-process-mixed-next-retired-{c}',
+                             lambda c=c: state.leg(c, 1), (FileNotFoundError,))
+            evidence.equal(f'fresh-process-mixed-final-source-{c}',
+                           state.leg(c, 2), typed_expected[c][2])
+    with storage.MappedMixedState(typed['empty_checkpoint'], budget=allocation) as state:
+        for c in storage.COMPONENTS:
+            evidence.refuses(f'fresh-process-empty-retired-zero-{c}',
+                             lambda c=c: state.leg(c, 0), (FileNotFoundError,))
+            evidence.equal(f'fresh-process-empty-unaffected-zero-{c}', state.leg(c, 1),
+                           np.zeros(typed['empty_shape'], dtype=np.complex128))
+    storage.retire_edge(typed['empty_checkpoint'], 0, typed['empty_barrier'],
+                        budget=allocation, owner_root=work)
+    report = dict(schema='P254-mixed-storage-reopen-subprocess-v2', status='pass',
                   pid=os.getpid(), checks=evidence.checks, receipt=receipt,
                   budget=allocation.snapshot())
     with output.open('x') as stream:
         json.dump(report, stream, indent=2, allow_nan=False)
         stream.write('\n')
     return report
+
+
+def typed_lifecycle(work, allocation, evidence):
+    """Real mixed/empty-file retirements, retained journals and restart input."""
+    mixed = fixture(work/'typed-mixture', allocation,
+                    zero_positions=(('plus', 0), ('minus', 1), ('mixed', 2)))
+    checkpoint, expected, coords, legs, shapes, plus, minus = mixed
+    with storage.MappedMixedState(checkpoint, budget=allocation) as state:
+        actual = {c: [state.leg(c, i) for i in range(3)] for c in storage.COMPONENTS}
+        for c in storage.COMPONENTS:
+            for i, a in enumerate(actual[c]):
+                evidence.equal(f'typed-mixture-full-value-{c}-{i}', a, expected[c][i])
+                evidence.require(f'typed-mixture-readonly-full-geometry-{c}-{i}',
+                    a.shape == shapes[c][i] and a.dtype == np.complex128 and not a.flags.writeable)
+        evidence.require('typed-mixture-independent-full-row-observable',
+            np.isclose(observable(actual, plus, minus), observable(expected, plus, minus),
+                       rtol=1e-14, atol=1e-12))
+
+    input_zero = {c: exact_zero_payload(shapes[c][0]) for c in storage.COMPONENTS}
+    accumulator = {c: exact_zero_payload(shapes[c][0]) for c in storage.COMPONENTS}
+    tiny = np.zeros(shapes['plus'][0], dtype=np.complex128)
+    tiny[0, 0] = np.nextafter(0., 1.)
+    accumulator['plus'] = write_payload(work/'typed-successor-tiny.npy', tiny, allocation)
+    successors = dict(input=input_zero, accumulator=accumulator)
+    barrier0 = storage.publish_edge_barrier(work/'typed-barrier-0.json',
+        checkpoint=checkpoint, index=0, successors=successors, budget=allocation)
+    evidence.require('mixed-successors-zero-values-not-file-aliases',
+        storage.publish_edge_barrier(work/'typed-barrier-0.json',
+            checkpoint=checkpoint, index=0, successors=successors, budget=allocation) == barrier0)
+    alias = dict(input=dict(input_zero, plus=accumulator['plus']), accumulator=accumulator)
+    evidence.refuses('typed-successors-still-refuse-real-file-alias',
+        lambda: storage.publish_edge_barrier(work/'typed-alias.json', checkpoint=checkpoint,
+            index=0, successors=alias, budget=allocation))
+    old_alias = dict(input=dict(input_zero, minus=legs['minus'][0]), accumulator=accumulator)
+    evidence.refuses('typed-successor-cannot-reuse-any-old-real-file',
+        lambda: storage.publish_edge_barrier(work/'typed-old-alias.json', checkpoint=checkpoint,
+            index=0, successors=old_alias, budget=allocation))
+    wrong = dict(final=dict(input_zero, plus=exact_zero_payload((1, 1))))
+    evidence.refuses('typed-zero-successor-must-preserve-full-target-rows-rank',
+        lambda: storage.publish_edge_barrier(work/'typed-wrong-shape.json', checkpoint=checkpoint,
+            index=0, successors=wrong, budget=allocation))
+    wrong_legs = {c: list(v) for c, v in legs.items()}
+    wrong_legs['plus'][0] = exact_zero_payload((1, 1))
+    evidence.refuses('typed-checkpoint-rejects-wrong-zero-geometry',
+        lambda: storage.publish_checkpoint(work/'typed-wrong-checkpoint.json', legs=wrong_legs,
+            small=coords, q=[1/3, 0., 0.], target_plus=plus, target_minus=minus,
+            time=0., identity='wrong-shape', kind='invalid', provenance=dict(source='invalid'),
+            budget=allocation))
+    uniform_shapes, up, um = geometry(rows=(4, 4, 4), ranks=(2, 2, 2))
+    uniform_legs = write_legs(work/'uniform-real', numerical_values(uniform_shapes), allocation)
+    uniform_legs['plus'][1] = uniform_legs['plus'][0]
+    evidence.refuses('typed-checkpoint-retains-actual-file-alias-refusal',
+        lambda: storage.publish_checkpoint(work/'typed-duplicate-checkpoint.json',
+            legs=uniform_legs, small=coords, q=[1/3, 0., 0.], target_plus=up, target_minus=um,
+            time=0., identity='duplicate', kind='invalid', provenance=dict(source='invalid'),
+            budget=allocation))
+
+    before = allocation.snapshot()['retired_payload_bytes']
+    with storage.MappedMixedState(checkpoint) as state:
+        state.leg('plus', 0)
+        evidence.refuses('borrowed-zero-view-must-be-released-before-retirement',
+            lambda: storage.retire_edge(state, 0, barrier0, budget=allocation, owner_root=work))
+        state.release_edge(0)
+        receipt0 = storage.retire_edge(state, 0, barrier0, budget=allocation, owner_root=work)
+        for c in storage.COMPONENTS:
+            evidence.refuses(f'typed-retired-old-{c}-unreadable',
+                             lambda c=c: state.leg(c, 0), (FileNotFoundError,))
+    receipt_value = json.loads(Path(receipt0['path']).read_text())
+    actual_files = [legs[c][0] for c in storage.COMPONENTS
+                    if storage.payload_path(legs[c][0]) is not None]
+    evidence.require('mixed-retirement-journal-lists-only-actual-original-files',
+                     receipt_value['payloads'] == actual_files)
+    evidence.require('mixed-retirement-credits-only-actual-unlinked-files',
+        allocation.snapshot()['retired_payload_bytes']-before == sum(b['bytes'] for b in actual_files))
+    evidence.require('mixed-retirement-retains-tiny-nonzero-successor',
+        storage.authenticate_payload(accumulator['plus'], tiny.shape) == accumulator['plus'])
+    barrier1 = storage.publish_edge_barrier(work/'typed-barrier-1.json', checkpoint=checkpoint,
+        index=1, successors=dict(final={c: exact_zero_payload(shapes[c][1])
+                                      for c in storage.COMPONENTS}), budget=allocation)
+
+    empty = storage.create_zero_checkpoint(work/'only-zeros', shapes=uniform_shapes,
+        small=coords, q=[1/3, 0., 0.], target_plus=up, target_minus=um, time=0.,
+        identity='empty-file-set', kind='exact-zero', provenance=dict(source='exact zero'),
+        budget=allocation)
+    repeated = {c: exact_zero_payload(uniform_shapes[c][0]) for c in storage.COMPONENTS}
+    empty_barrier = storage.publish_edge_barrier(work/'empty-file-barrier.json',
+        checkpoint=empty, index=0, successors=dict(input=repeated, accumulator=repeated),
+        budget=allocation)
+    before = allocation.snapshot()['retired_payload_bytes']
+    empty_receipt = storage.retire_edge(empty, 0, empty_barrier,
+                                       budget=allocation, owner_root=work)
+    empty_value = json.loads(Path(empty_receipt['path']).read_text())
+    evidence.require('empty-file-retirement-uses-real-shared-journal',
+        empty_value['schema'] == 'q-retirement-v1' and empty_value['payloads'] == []
+        and empty_value['barrier'] == empty_barrier)
+    evidence.require('empty-file-retirement-does-not-credit-imaginary-bytes',
+                     allocation.snapshot()['retired_payload_bytes'] == before)
+    evidence.require('empty-file-retirement-replays-exactly',
+        storage.retire_edge(empty, 0, empty_barrier, budget=allocation, owner_root=work) == empty_receipt)
+    with storage.MappedMixedState(empty) as state:
+        for c in storage.COMPONENTS:
+            evidence.refuses(f'empty-file-retired-zero-is-unreadable-{c}',
+                             lambda c=c: state.leg(c, 0), (FileNotFoundError,))
+            evidence.equal(f'empty-file-other-source-remains-zero-{c}', state.leg(c, 1),
+                           np.zeros(uniform_shapes[c][1], dtype=np.complex128))
+    original_empty_barrier = Path(empty_barrier['path'])
+    saved = original_empty_barrier.with_name(original_empty_barrier.name+'.retained')
+    original_empty_barrier.rename(saved)
+    forged = json.loads(saved.read_text())
+    forged['original_legs']['plus'] = exact_zero_payload((5, 2))
+    durable_publish(original_empty_barrier, forged, allocation)
+    evidence.refuses('empty-file-recovery-still-authenticates-full-descriptor-journal',
+                     lambda: storage.MappedMixedState(empty))
+    original_empty_barrier.rename(original_empty_barrier.with_name(original_empty_barrier.name+'.rejected'))
+    saved.rename(original_empty_barrier)
+    return dict(checkpoint=checkpoint, barrier=barrier1, expected=arrays_to_pairs(expected),
+                empty_checkpoint=empty, empty_barrier=empty_barrier,
+                empty_shape=list(uniform_shapes['mixed'][1]))
 
 
 def run(work, evidence):
@@ -228,34 +377,73 @@ def run(work, evidence):
     evidence.require('publish-did-not-copy-npy-payloads',
                      len(list((work/'stage').glob('*.npy'))) == 9)
 
-    # Real sparse seeds are deliberately larger than one filesystem block but
-    # still tiny enough for exhaustive actual zero reads in an isolated oracle.
     zero_shapes, zp, zm = geometry(rows=(259, 383, 521), ranks=(9, 7, 11))
-    before = allocation.snapshot()['live_bytes_reserved']
-    zero = storage.create_zero_checkpoint(work/'sparse-zero', shapes=zero_shapes,
+    zero = storage.create_zero_checkpoint(work/'exact-zero', shapes=zero_shapes,
         small=small(np.array([1/3, 0., 0.])), q=[1/3, 0., 0.],
-        target_plus=zp, target_minus=zm, time=0., identity='genuine-sparse-full-shapes',
-        kind='caller-controlled-initial', provenance=dict(source='new genuine POSIX sparse zero NPY'),
+        target_plus=zp, target_minus=zm, time=0., identity='typed-full-shape-zero',
+        kind='caller-controlled-initial', provenance=dict(source='exact initial zero'),
         budget=allocation)
-    logical = physical = 0
+    evidence.require('exact-zero-seed-authors-no-NPY-files',
+                     not list((work/'exact-zero').glob('*.npy')))
     with storage.MappedMixedState(zero, budget=allocation) as zeros:
         for c in storage.COMPONENTS:
             for i in range(3):
                 a = zeros.leg(c, i)
                 entry = zeros.leg_binding(c, i)
-                stat = Path(entry['path']).stat()
-                logical += stat.st_size
-                physical += stat.st_blocks*512
-                evidence.require(f'sparse-actual-original-shape-complex-zero-{c}-{i}',
-                                 a.dtype == np.complex128 and a.shape == zero_shapes[c][i]
-                                 and np.count_nonzero(a) == 0 and np.count_nonzero(a.imag) == 0,
-                                 shape=list(a.shape), logical_bytes=stat.st_size,
-                                 allocated_bytes=stat.st_blocks*512)
-    after = allocation.snapshot()['live_bytes_reserved']
-    evidence.require('sparse-growth-not-explicit-full-zero-write', physical < logical//4,
-                     logical_bytes=logical, allocated_bytes=physical)
-    evidence.require('sparse-seeds-charge-full-logical-QBudget', after-before >= logical,
-                     reserved_increase=after-before, logical_payload_bytes=logical)
+                evidence.require(f'exact-zero-full-original-shape-dtype-{c}-{i}',
+                    entry == exact_zero_payload(zero_shapes[c][i])
+                    and storage.payload_path(entry) is None
+                    and storage.payload_header(entry) == zero_shapes[c][i]
+                    and a.dtype == np.complex128 and a.shape == zero_shapes[c][i]
+                    and not a.flags.writeable and np.count_nonzero(a) == 0)
+        evidence.refuses('readonly-exact-zero-write-refused',
+                         lambda: zeros.leg('plus', 0).__setitem__((0, 0), 1))
+        copied = zeros.leg_binding('plus', 0)
+        copied['shape'][0] += 1
+        evidence.require('leg-binding-descriptor-does-not-mutate-checkpoint',
+                         zeros.leg_binding('plus', 0) == exact_zero_payload(zero_shapes['plus'][0]))
+
+    for bad_shape in ([True, 2], [2., 3], [0, 2], [2], [2, 3, 4]):
+        evidence.refuses(f'exact-zero-invalid-integer-geometry-{bad_shape}',
+                         lambda bad_shape=bad_shape: exact_zero_payload(bad_shape))
+    malformed = [
+        dict(kind='exact-zero', shape=[2, 3], dtype='complex64'),
+        dict(kind='exact-zero', shape=[True, 3], dtype='complex128'),
+        dict(kind='exact-zero', shape=[2., 3], dtype='complex128'),
+        dict(exact_zero_payload((2, 3)), path=str(work/'fictitious.npy')),
+        dict(exact_zero_payload((2, 3)), bytes=96, sha256='0'*64)]
+    for i, entry in enumerate(malformed):
+        evidence.require(f'malformed-zero-is-not-valid-descriptor-{i}',
+                         not is_exact_zero_payload(entry))
+        evidence.refuses(f'malformed-zero-payload-binding-refused-{i}',
+                         lambda entry=entry: storage.payload_binding(entry))
+    evidence.refuses('zero-descriptor-is-not-a-checkpoint-file-binding',
+                     lambda: storage.MappedMixedState(exact_zero_payload((2, 3))))
+    evidence.refuses('zero-authentication-requires-exact-full-shape',
+                     lambda: storage.authenticate_payload(exact_zero_payload((2, 3)), (3, 2)))
+
+    signed = np.empty((2, 3), dtype=np.complex128)
+    signed.real.fill(-0.)
+    signed.imag.fill(-0.)
+    zero_target = work/'computed-zero.npy'
+    computed_zero = write_payload(zero_target, signed, allocation)
+    evidence.require('computed-signed-zeros-become-typed-zero-without-file',
+                     computed_zero == exact_zero_payload(signed.shape) and not zero_target.exists())
+    tiny = signed.copy()
+    tiny[0, 0] = complex(np.nextafter(0., 1.), -np.nextafter(0., 1.))
+    tiny_binding = write_payload(work/'tiny-nonzero.npy', tiny, allocation)
+    evidence.require('smallest-nonzero-remains-an-authenticated-actual-file',
+                     storage.payload_path(tiny_binding) is not None
+                     and storage.authenticate_payload(tiny_binding, tiny.shape) == tiny_binding)
+    actual_tiny = np.load(tiny_binding['path'], allow_pickle=False)
+    evidence.equal('tiny-value-no-numerical-threshold-roundtrip', actual_tiny, tiny)
+    evidence.require('nonzero-payload-signed-zero-bytes-not-normalized',
+                     actual_tiny.tobytes() == tiny.tobytes())
+    evidence.refuses('zero-output-never-overwrites-existing-real-target',
+                     lambda: write_payload(tiny_binding['path'], signed, allocation),
+                     (FileExistsError,))
+    evidence.require('existing-tiny-file-survives-zero-output-refusal',
+                     storage.authenticate_payload(tiny_binding, tiny.shape) == tiny_binding)
 
     gamma = fixture(work/'gamma', allocation, q=(0., 0., 0.))
     with storage.MappedMixedState(gamma[0]) as state:
@@ -326,7 +514,7 @@ def run(work, evidence):
                          lambda: mapped.leg('minus', 0), (FileNotFoundError,))
     after = allocation.snapshot()
     retired_bytes = sum(legs[c][0]['bytes'] for c in storage.COMPONENTS)
-    evidence.require('only-three-old-source-zero-legs-retired-post-successor',
+    evidence.require('only-three-old-source-legs-retired-post-successor',
         all(not Path(legs[c][0]['path']).exists() for c in storage.COMPONENTS)
         and all(Path(legs[c][i]['path']).exists() for c in storage.COMPONENTS for i in (1, 2))
         and Path(checkpoint['path']).exists() and Path(receipt0['path']).exists()
@@ -378,10 +566,12 @@ def run(work, evidence):
 
     # Real separate interpreter: recover the existing authenticated transition,
     # preserve remaining values, then continue retiring the next completed edge.
+    typed_restart = typed_lifecycle(work, allocation, evidence)
     manifest = work/'restart-manifest.json'
     manifest_binding = durable_publish(manifest, dict(checkpoint=checkpoint, owner=str(work),
-        barrier=barrier1, expected=arrays_to_pairs(expected)), allocation)
+        barrier=barrier1, expected=arrays_to_pairs(expected), typed_restart=typed_restart), allocation)
     child_output = work/'restart-result.json'
+    parent_before_subprocess = allocation.snapshot()
     completed = subprocess.run([sys.executable, str(Path(__file__).resolve()),
         '--resume-manifest', str(manifest), '--output', str(child_output)],
         capture_output=True, text=True, timeout=90, check=False)
@@ -443,7 +633,7 @@ def run(work, evidence):
     # Metadata admission preserves source rank/target rows and exact dtype.
     wrong_shapes = {c: list(v) for c, v in shapes.items()}
     wrong_shapes['plus'][0] = shapes['mixed'][0]
-    evidence.refuses('sparse-seed-wrong-source-target-geometry-refused',
+    evidence.refuses('zero-seed-wrong-source-target-geometry-refused',
         lambda: storage.create_zero_checkpoint(work/'invalid-zero', shapes=wrong_shapes,
             small=coords, q=[1/3, 0., 0.], target_plus=plus, target_minus=minus,
             time=0., identity='invalid', kind='invalid', provenance=dict(source='invalid'), budget=allocation))
@@ -458,9 +648,9 @@ def run(work, evidence):
             time=0., identity='invalid', kind='invalid', provenance=dict(source='invalid'), budget=allocation))
     # The parent and subprocess have separate reservation ledgers; their
     # snapshots are not misrepresented as one shared accounting measurement.
-    return dict(checkpoint=checkpoint, sparse_zero_checkpoint=zero,
+    return dict(checkpoint=checkpoint, exact_zero_checkpoint=zero,
                 retirement_receipt=receipt0, restart_result=file_binding(child_output),
-                parent_budget_snapshot_before_subprocess=after_replay,
+                parent_budget_snapshot_before_subprocess=parent_before_subprocess,
                 parent_final_ledger=allocation.snapshot(), child_budget=child['budget'],
                 accounting='Parent and fresh subprocess ledgers are independent; child initializes existing logical bytes. No combined peak claimed.')
 
@@ -479,10 +669,11 @@ def main():
         return 0
     work = Path(tempfile.mkdtemp(prefix=output.stem+'-files-', dir=output.parent)).resolve()
     evidence = Evidence()
-    report = dict(schema='P254-mixed-response-storage-oracle-v1', status='failed',
-                  material_result=False, scope='finite actual files and numeric storage only; no Native propagation',
+    report = dict(schema='P254-mixed-response-storage-oracle-v2', status='failed',
+                  material_result=False, scope='finite typed zero/actual file storage only; no Native propagation',
                   started_utc=datetime.now(timezone.utc).isoformat(), work_directory=str(work),
                   source_bindings=[file_binding(Path(__file__)), file_binding(Path(storage.__file__)),
+                                   file_binding(HERE/'mixed_payload_output.py'),
                                    file_binding(ROOT/'src/substrate_framework/partitioned_q_storage.py'),
                                    file_binding(ROOT/'src/substrate_framework/streamed_material_state.py')])
     try:

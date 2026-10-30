@@ -1,8 +1,9 @@
-"""Immutable, source-ordered mixed frames; sparse seeds and owned edge retirement.
+"""Immutable, source-ordered mixed frames; typed zeros and owned edge retirement.
 
-Large NPY payloads are borrowed, never copied. Publication inspects headers, not
-PW values; each first leg access authenticates the original raw bytes. Callers
-own scientific identities/provenance, finite-value admission and base lifetime.
+Real NPY payloads are borrowed, never copied. Exact-zero descriptors retain full
+geometry without files. Publication inspects real headers, not PW values; each
+first real leg access authenticates its raw bytes. Callers own scientific
+identities/provenance, finite-value admission and base lifetime.
 
 A successor barrier is an immutable transition journal, not a whole-state
 checkpoint. ``publish_edge_barrier`` binds one OLD checkpoint/source index and
@@ -26,12 +27,12 @@ import numpy as np
 from substrate_framework.partitioned_q_storage import (
     durable_publish, retire_payloads, sync_directory, sync_file)
 from substrate_framework.streamed_material_state import authenticate, file_binding
-from mixed_payload_output import write_zero_payload
+from mixed_payload_output import exact_zero_payload, is_exact_zero_payload
 
 COMPONENTS = ('plus', 'minus', 'mixed')
 SMALL_NAMES = ('u', 'p', 'coordinate', 'momentum')
-SCHEMA = 'P254-mixed-response-checkpoint-v1'
-BARRIER_SCHEMA = 'P254-mixed-response-edge-successor-v1'
+SCHEMA = 'P254-mixed-response-checkpoint-v2'
+BARRIER_SCHEMA = 'P254-mixed-response-edge-successor-v2'
 CONVENTIONS = dict(
     derivative='d2/(d-lambda d-eta); no half',
     source_order='original source index; columns retain original source rank',
@@ -47,7 +48,8 @@ def _check(budget):
 
 
 def _binding(value):
-    if (not isinstance(value, dict) or not {'path', 'bytes', 'sha256'} <= value.keys()
+    if (not isinstance(value, dict) or value.get('kind') == 'exact-zero'
+            or not {'path', 'bytes', 'sha256'} <= value.keys()
             or not isinstance(value['path'], str)
             or type(value['bytes']) is not int or value['bytes'] < 1
             or not isinstance(value['sha256'], str) or len(value['sha256']) != 64):
@@ -195,6 +197,38 @@ def _header(binding):
     return shape
 
 
+def payload_binding(entry):
+    """Canonical full-shape exact zero or strict original real-file binding."""
+    if isinstance(entry, dict) and entry.get('kind') == 'exact-zero':
+        if not is_exact_zero_payload(entry):
+            raise ValueError('exact-zero requires only kind/full integer shape/complex128 dtype')
+        return exact_zero_payload(entry['shape'])
+    return _binding(entry)
+
+
+def payload_path(entry):
+    """Return an actual resolved file path, or None for a typed exact zero."""
+    entry = payload_binding(entry)
+    return None if is_exact_zero_payload(entry) else entry['path']
+
+
+def payload_header(entry):
+    """Full original geometry; inspect only the header for a real file."""
+    entry = payload_binding(entry)
+    return tuple(entry['shape']) if is_exact_zero_payload(entry) else _header(entry)
+
+
+def authenticate_payload(entry, expected_shape):
+    """Authenticate exact zero geometry, or actual raw bytes and NPY geometry."""
+    entry = payload_binding(entry)
+    expected_shape = _shape(expected_shape)
+    if not is_exact_zero_payload(entry):
+        authenticate(entry)
+    if payload_header(entry) != expected_shape:
+        raise ValueError('payload changed original source/target geometry')
+    return entry
+
+
 def _metadata(binding):
     binding = _binding(binding)
     path = authenticate(binding)
@@ -214,30 +248,40 @@ def _metadata(binding):
     for c in COMPONENTS:
         if len(record['legs'][c]) != len(shapes[c]):
             raise ValueError('full original source binding lists required')
-        for entry in record['legs'][c]:
-            entry = _binding(entry)
-            if entry['path'] in seen:
-                raise ValueError('distinct original leg paths required')
-            seen.add(entry['path'])
+        for i, entry in enumerate(record['legs'][c]):
+            entry = payload_binding(entry)
+            record['legs'][c][i] = entry
+            path = payload_path(entry)
+            if is_exact_zero_payload(entry) and payload_header(entry) != shapes[c][i]:
+                raise ValueError('exact-zero original source/target geometry differs')
+            if path is not None:
+                if path in seen:
+                    raise ValueError('distinct original leg paths required')
+                seen.add(path)
     small = _decode_small(record['small'], q)
     return binding, record, shapes, plus, minus, q, small
 
 
 def publish_checkpoint(path, *, legs, small, q, target_plus, target_minus,
                        time, identity, kind, provenance, budget):
-    """Publish immutable metadata referring to existing full-row NPY bindings.
+    """Publish immutable full-row exact-zero descriptors or real NPY bindings.
 
-    Payload bytes were bound by their producer. No value scan or payload copy
+    Real bytes were bound by their producer. No value scan or payload copy
     happens here; lazy leg() later authenticates the entire original binding.
     Provenance must be a nonempty JSON object binding the original model/sources.
-    Existing payload logical bytes must already be charged to the caller budget.
+    Existing real payload bytes must already be charged to the caller budget.
     """
     _exact(legs, COMPONENTS, 'legs')
     _check(budget)
-    entries = {c: [_binding(b) for b in legs[c]] for c in COMPONENTS}
-    shapes = {c: [_header(b) for b in entries[c]] for c in COMPONENTS}
+    entries = {c: [payload_binding(b) for b in legs[c]] for c in COMPONENTS}
+    shapes = {c: [payload_header(b) for b in entries[c]] for c in COMPONENTS}
     shapes, plus, minus = _geometry(shapes, target_plus, target_minus)
-    paths = [b['path'] for c in COMPONENTS for b in entries[c]]
+    paths = []
+    for c in COMPONENTS:
+        for entry in entries[c]:
+            payload = payload_path(entry)
+            if payload is not None:
+                paths.append(payload)
     if len(set(paths)) != len(paths):
         raise ValueError('distinct original leg paths required')
     q = _q(q)
@@ -256,28 +300,22 @@ def publish_checkpoint(path, *, legs, small, q, target_plus, target_minus,
     for c in COMPONENTS:
         for entry in entries[c]:
             _check(budget)
-            sync_file(entry['path'])
+            payload = payload_path(entry)
+            if payload is not None:
+                sync_file(payload)
     return durable_publish(Path(path), record, budget)
 
 
 def create_zero_checkpoint(directory, *, shapes, small, q, target_plus, target_minus,
                            time, identity, kind, provenance, budget):
-    """Create genuine sparse complex128 NPY zeros, reserving LOGICAL bytes.
-
-    Only headers are written. ftruncate grows brand-new files; POSIX hole reads
-    supply actual zero bytes. Original full dimensions and SHA256 bind those
-    bytes. No explicit zero array or zero-fill traversal is allocated/written.
-    """
+    """Create full-shape typed zeros; only durable checkpoint metadata is charged."""
     shapes, plus, minus = _geometry(shapes, target_plus, target_minus)
     q = _q(q)
     _small_arrays(small, q)
+    _check(budget)
     directory = Path(directory).resolve()
     directory.mkdir(parents=True, exist_ok=False)
-    legs = {c: [] for c in COMPONENTS}
-    for c in COMPONENTS:
-        for index, shape in enumerate(shapes[c]):
-            path = directory/f'{c}-{index:06d}.npy'
-            legs[c].append(write_zero_payload(path, shape, budget))
+    legs = {c: [exact_zero_payload(shape) for shape in shapes[c]] for c in COMPONENTS}
     sync_directory(directory)
     return publish_checkpoint(directory/'checkpoint.json', legs=legs, small=small,
         q=q, target_plus=plus, target_minus=minus, time=time, identity=identity,
@@ -304,21 +342,24 @@ def _barrier(binding, checkpoint, record, shapes, index, *, live_successors):
     if not isinstance(successors, dict) or set(successors) not in (
             {'input', 'accumulator'}, {'final'}):
         raise ValueError('successors require exactly input/accumulator or final')
-    old_paths = {b['path'] for c in COMPONENTS for b in record['legs'][c]}
+    old_paths = {path for c in COMPONENTS for b in record['legs'][c]
+                 if (path := payload_path(b)) is not None}
     successor_paths = set()
     for label, triple in successors.items():
         if not isinstance(label, str) or not label:
             raise ValueError('named successor triple required')
         _exact(triple, COMPONENTS, 'successor triple')
         for c in COMPONENTS:
-            entry = _binding(triple[c])
-            if entry['path'] in old_paths or entry['path'] in successor_paths:
-                raise ValueError('successors must be distinct replacements, not OLD payloads')
-            successor_paths.add(entry['path'])
+            entry = payload_binding(triple[c])
+            path = payload_path(entry)
+            if path is not None:
+                if path in old_paths or path in successor_paths:
+                    raise ValueError('successors must be distinct replacements, not OLD payloads')
+                successor_paths.add(path)
             if live_successors:
-                authenticate(entry)
-                if _header(entry) != shapes[c][index]:
-                    raise ValueError('successor changed original source/target shape')
+                authenticate_payload(entry, shapes[c][index])
+            elif is_exact_zero_payload(entry) and payload_header(entry) != shapes[c][index]:
+                raise ValueError('successor changed original source/target shape')
     return binding, value
 
 
@@ -326,35 +367,42 @@ def publish_edge_barrier(path, *, checkpoint, index, successors, budget):
     """Durably journal authenticated replacement triples for one OLD edge.
 
     ``successors`` is exactly {input, accumulator} or {final}, with each value
-    {plus: binding, minus: binding, mixed: binding}. Each triple has this source
-    index's exact old geometry. All replacements must be durable and distinct
-    from every old leg. Idempotence requires byte-equivalent metadata.
+    {plus: payload, minus: payload, mixed: payload}. Each triple has this source
+    index's exact old geometry. Real replacements must be durable and distinct
+    from every old file. Repeated zero values are not aliases. Idempotence
+    requires byte-equivalent metadata.
     """
     checkpoint, record, shapes, _, _, _, _ = _metadata(checkpoint)
     index = _index(index, len(shapes['mixed']))
-    value = dict(schema=BARRIER_SCHEMA, complete=True, checkpoint=checkpoint, index=index,
-                 original_legs=_edge_legs(record, index), successors=successors)
-    # Validate the journal before publication, using the same read validator.
     if not isinstance(successors, dict) or set(successors) not in (
             {'input', 'accumulator'}, {'final'}):
         raise ValueError('successors require exactly input/accumulator or final')
-    old_paths = {b['path'] for c in COMPONENTS for b in record['legs'][c]}
+    old_paths = set()
+    for c in COMPONENTS:
+        for entry in record['legs'][c]:
+            payload = payload_path(entry)
+            if payload is not None:
+                old_paths.add(payload)
     seen = set()
+    normalized = {}
     for label, triple in successors.items():
         if not isinstance(label, str) or not label:
             raise ValueError('named successor triple required')
         _exact(triple, COMPONENTS, 'successor triple')
+        normalized[label] = {}
         for c in COMPONENTS:
             _check(budget)
-            entry = _binding(triple[c])
-            if entry['path'] in old_paths or entry['path'] in seen:
-                raise ValueError('successors must be distinct from all old legs and each other')
-            seen.add(entry['path'])
-            authenticate(entry)
-            if _header(entry) != shapes[c][index]:
-                raise ValueError('successor changed original source/target geometry')
-            sync_file(entry['path'])
-            sync_directory(Path(entry['path']).parent)
+            entry = authenticate_payload(triple[c], shapes[c][index])
+            normalized[label][c] = entry
+            payload = payload_path(entry)
+            if payload is not None:
+                if payload in old_paths or payload in seen:
+                    raise ValueError('successors must be distinct from all old legs and each other')
+                seen.add(payload)
+                sync_file(payload)
+                sync_directory(Path(payload).parent)
+    value = dict(schema=BARRIER_SCHEMA, complete=True, checkpoint=checkpoint, index=index,
+                 original_legs=_edge_legs(record, index), successors=normalized)
     path = Path(path)
     if path.exists():
         result = file_binding(path)
@@ -393,8 +441,9 @@ def _retirement(checkpoint, record, shapes, index, *, expected_barrier=None, own
     value = json.loads(authenticate(receipt_binding).read_text())
     # The shared primitive stores raw bindings only. Preserve any producer
     # annotation in checkpoint/barrier metadata without weakening byte matching.
-    originals = [{k: record['legs'][c][index][k] for k in ('path', 'bytes', 'sha256')}
-                 for c in COMPONENTS]
+    originals = [{k: entry[k] for k in ('path', 'bytes', 'sha256')}
+                 for c in COMPONENTS
+                 if payload_path(entry := record['legs'][c][index]) is not None]
     if (value.get('schema') != 'q-retirement-v1'
             or value.get('payloads') != originals):
         raise ValueError('retirement receipt does not cover exact original edge bindings')
@@ -417,10 +466,11 @@ def _retirement(checkpoint, record, shapes, index, *, expected_barrier=None, own
 class MappedMixedState:
     """Lazy authenticated readonly full-row legs; never invents missing data.
 
-    Opening inspects metadata/headers and requires an exact durable retirement
-    journal for any missing leg. leg() hashes a payload at its first access,
-    then caches a readonly mmap; files must remain immutable while open. Close
-    all borrowed views before retirement. A closed instance cannot be reused.
+    Opening inspects metadata/headers and validates retained retirement intents.
+    Missing real files require an exact durable journal, never zero inference.
+    leg() caches readonly zero views or first-access-authenticated real mmaps;
+    real files must remain immutable while open. Retired zeros are unreadable
+    too. Close borrowed views before retirement; closed instances cannot reopen.
     """
     def __init__(self, binding, *, budget=None):
         self.budget = budget
@@ -441,12 +491,14 @@ class MappedMixedState:
             missing = False
             for c in COMPONENTS:
                 entry = self.record['legs'][c][i]
-                if Path(entry['path']).exists():
-                    if _header(entry) != self._shapes[c][i]:
+                path = payload_path(entry)
+                if path is None or Path(path).exists():
+                    if payload_header(entry) != self._shapes[c][i]:
                         raise ValueError('original source/target geometry differs')
                 else:
                     missing = True
-            if missing:
+            receipt = _receipt_path(self.binding, i)
+            if missing or receipt.exists() or receipt.is_symlink():
                 _retirement(self.binding, self.record, self._shapes, i)
 
     def leg_binding(self, component, index):
@@ -455,21 +507,31 @@ class MappedMixedState:
         if component not in COMPONENTS:
             raise ValueError('unknown mixed component')
         index = _index(index, len(self._shapes['mixed']))
-        return dict(self.record['legs'][component][index])
+        return payload_binding(self.record['legs'][component][index])
 
     def leg(self, component, index):
         entry = self.leg_binding(component, index)
         key = (component, int(index))
-        # Even a cached mapping must not disguise an explicitly retired path.
-        if not Path(entry['path']).exists():
-            raise FileNotFoundError('original mixed leg was retired or is missing: '+entry['path'])
+        path = payload_path(entry)
+        if path is None:
+            receipt = _receipt_path(self.binding, int(index))
+            if receipt.exists() or receipt.is_symlink():
+                _retirement(self.binding, self.record, self._shapes, int(index))
+                raise FileNotFoundError('original exact-zero mixed leg was retired')
+        # Even a cached mapping must not disguise an explicitly retired file.
+        elif not Path(path).exists():
+            raise FileNotFoundError('original mixed leg was retired or is missing: '+path)
         if key not in self._maps:
             _check(self.budget)
-            authenticate(entry)
-            value = np.load(entry['path'], mmap_mode='r', allow_pickle=False)
-            if value.shape != self._shapes[component][index] or value.dtype != np.complex128:
-                value._mmap.close()
-                raise ValueError('authenticated leg original geometry differs')
+            authenticate_payload(entry, self._shapes[component][index])
+            if path is None:
+                scalar = np.frombuffer(bytes(16), dtype=np.complex128).reshape(())
+                value = np.broadcast_to(scalar, self._shapes[component][index])
+            else:
+                value = np.load(path, mmap_mode='r', allow_pickle=False)
+                if value.shape != self._shapes[component][index] or value.dtype != np.complex128:
+                    value._mmap.close()
+                    raise ValueError('authenticated leg original geometry differs')
             self._maps[key] = value
         return self._maps[key]
 
@@ -480,12 +542,13 @@ class MappedMixedState:
         index = _index(index, len(self._shapes['mixed']))
         for component in COMPONENTS:
             value = self._maps.pop((component, index), None)
-            if value is not None:
+            if isinstance(value, np.memmap):
                 value._mmap.close()
 
     def close(self):
         for value in self._maps.values():
-            value._mmap.close()
+            if isinstance(value, np.memmap):
+                value._mmap.close()
         self._maps.clear()
         self._closed = True
 
@@ -497,7 +560,7 @@ class MappedMixedState:
 
 
 def retire_edge(checkpoint, index, barrier, *, budget, owner_root):
-    """Retire exactly three explicitly owned OLD legs after durable successors.
+    """Retire an explicitly owned OLD triple after durable successors.
 
     The immutable checkpoint/compact metadata/barriers survive. Replay credits
     only bytes actually unlinked by the existing QBudget retirement primitive.
@@ -524,7 +587,8 @@ def retire_edge(checkpoint, index, barrier, *, budget, owner_root):
     _owned(checkpoint['path'], owner)
     _owned(receipt, owner)
     entries = [_edge_legs(record, index)[c] for c in COMPONENTS]
-    for entry in entries:
+    files = [entry for entry in entries if payload_path(entry) is not None]
+    for entry in files:
         _owned(entry['path'], owner)
     if receipt.exists():
         # Authenticate exact payload list BEFORE retire_payloads' replay, which
@@ -532,10 +596,10 @@ def retire_edge(checkpoint, index, barrier, *, budget, owner_root):
         _retirement(checkpoint, record, shapes, index, expected_barrier=barrier, owner=owner)
         # Fully completed replay needs only the retained authenticated journal;
         # later successors may already have been retired by a subsequent edge.
-        live = any(Path(entry['path']).exists() for entry in entries)
+        live = any(Path(entry['path']).exists() for entry in files)
     else:
         live = True
-        for entry in entries:
-            authenticate(entry)
+        for c, entry in zip(COMPONENTS, entries):
+            authenticate_payload(entry, shapes[c][index])
     barrier, _ = _barrier(barrier, checkpoint, record, shapes, index, live_successors=live)
-    return retire_payloads(receipt, barrier, [b['path'] for b in entries], owner, budget)
+    return retire_payloads(receipt, barrier, [b['path'] for b in files], owner, budget)
