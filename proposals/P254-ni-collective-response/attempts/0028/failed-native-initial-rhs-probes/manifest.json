@@ -1,7 +1,7 @@
 {
   "schema": "P254-failed-native-probe-source-archive-v1",
   "actual_archival_time": "2026-10-30T05:25:12.486842+00:00",
-  "scope": "inactive historical source evidence, not runnable/importable code",
+  "scope": "inactive exact-byte historical snapshots; not active modules or CLIs",
   "method": "Original actual bytes or exact reverse of observed edits; every recovered version matches the producer prelaunch raw SHA256/byte count before banking",
   "versions": [
     {
