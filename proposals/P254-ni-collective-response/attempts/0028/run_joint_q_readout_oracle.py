@@ -29,6 +29,7 @@ from run_joint_response_oracle import FiniteSystem, MatrixAction, pack_legs
 from run_joint_q_oracle import mapped
 from run_joint_partitioned_q_oracle import DiskFiniteHistory
 from partitioned_material_readout import partitioned_selected_readout
+from run_joint_q_readout import _execution_snapshot, _execution_summary
 from substrate_framework.joint_ordered_sources import (
     JointProbe, JointProductPreparation, linear_combination)
 from substrate_framework.joint_response_observables import total_force_probe
@@ -232,6 +233,8 @@ def exercise(gamma, root, budget, cpus, sources, evidence, findings):
                          all(not value.flags.writeable for value in state.ket+state.bra))
         reference = full_density_reference(response, stage, state, probe, matrices)
         executor.readout_operator_binding = operator_binding(probe, matrices)
+        check_execution_costs = gamma and ordering == 'AB'
+        journals_before = _execution_snapshot(work) if check_execution_costs else None
         actual = partitioned_selected_readout(executor, state, probe, time, work, state_binding=binding)
         evidence.compare(tag+'/'+ordering+'/full_density_trace_and_canonical_scalar', actual, reference['total'])
         evidence.require(tag+'/'+ordering+'/nontrivial_complex_electronic',
@@ -241,6 +244,13 @@ def exercise(gamma, root, budget, cpus, sources, evidence, findings):
             evidence.require(tag+'/'+ordering+'/complex_nonzero_'+key, abs(value.real) > 1e-6 and abs(value.imag) > 1e-6,
                              scalar=value)
         receipt = owned_receipts(work)
+        if check_execution_costs:
+            allocation = _execution_summary(work, journals_before)
+            evidence.require('current_finite_readout_costs_are_actual_new_work',
+                allocation['current_items'] == set(range(len(response.edges)))
+                and allocation['current_completed_worker_cpu_seconds'] > 0,
+                allocated_indices=sorted(allocation['current_items']),
+                current_worker_cpu=allocation['current_completed_worker_cpu_seconds'])
         for index, row in enumerate(receipt['records']):
             values = arrays(row)
             valid = set(values) == {'value'} and values['value'].shape == (1,) and values['value'].dtype == np.complex128
@@ -265,8 +275,17 @@ def exercise(gamma, root, budget, cpus, sources, evidence, findings):
         fresh = executor_for(system, response, root, budget, cpus, sources, 'replay-'+ordering)
         fresh.readout_operator_binding = operator_binding(probe, matrices)
         replay_work = QWork(work.directory, budget, cpus, work.identity)
+        replay_journals_before = _execution_snapshot(replay_work) if check_execution_costs else None
         replay = partitioned_selected_readout(fresh, state, probe, time, replay_work, state_binding=binding)
         evidence.compare(tag+'/'+ordering+'/fresh_object_replay_scalar', replay, actual, tolerance=0.)
+        if check_execution_costs:
+            replay_costs = _execution_summary(replay_work, replay_journals_before)
+            evidence.require('cached_replay_keeps_historical_costs_out_of_current_work',
+                replay_costs['current_items'] == set()
+                and replay_costs['current_completed_worker_cpu_seconds'] == 0
+                and replay_costs['receipt_worker_cpu_seconds'] == allocation['receipt_worker_cpu_seconds'],
+                current_worker_cpu=replay_costs['current_completed_worker_cpu_seconds'],
+                retained_worker_cpu=replay_costs['receipt_worker_cpu_seconds'])
         after = immutable_work_bindings(replay_work)
         evidence.require(tag+'/'+ordering+'/replay_preserves_actual_outputs_and_costs', before == after,
                          prior_bindings=before, replay_bindings=after)

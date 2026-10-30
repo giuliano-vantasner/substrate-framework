@@ -111,6 +111,28 @@ def _caps(args):
         manager_container_limit='external launcher authority; this CLI enforces aggregate parent+workers Q RSS')
 
 
+def _execution_snapshot(work):
+    """Capture actual owned generations before execution, including replay."""
+    return {str(path) for path in work.directory.rglob('execution-*.json')}
+
+
+def _execution_summary(work, before):
+    key, directory, count = work.last
+    receipts = work.collect(directory, key, count)
+    journals = sorted(directory.glob('execution-*.json'))
+    current = [path for path in journals if str(path) not in before]
+    indices = set()
+    for path in current:
+        execution = json.loads(path.read_text())
+        if execution.get('status') == 'allocated':
+            indices.update(execution['items'])
+    return dict(key=key, directory=directory, count=count, receipts=receipts,
+        journals=journals, current_journals=current, current_items=indices,
+        current_completed_worker_cpu_seconds=sum(
+            row['cpu_seconds'] for row in receipts if row['index'] in indices),
+        receipt_worker_cpu_seconds=sum(row['cpu_seconds'] for row in receipts))
+
+
 def _parser():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--case', required=True)
@@ -286,18 +308,13 @@ def main(arguments=None):
             executor.readout_operator_binding = operator_binding
             state, state_record = MappedResponse.restore(r, cb, budget, args.producer_identity)
             work = QWork(args.output/'scalar-work', budget, args.cpus, consumer_identity)
-            journals_before = {str(path) for path in work.directory.glob('*/execution-*.json')}
+            journals_before = _execution_snapshot(work)
             scalar_before = budget.snapshot()
             value = partitioned_selected_readout(executor, state, probe, args.time, work, state_binding=cb)
-            key, directory, count = work.last
-            receipts = work.collect(directory, key, count)
-            journals = sorted(directory.glob('execution-*.json'))
-            current_journals = [path for path in journals if str(path) not in journals_before]
-            current_items = set()
-            for path in current_journals:
-                execution = json.loads(path.read_text())
-                if execution.get('status') == 'allocated':
-                    current_items.update(execution['items'])
+            execution = _execution_summary(work, journals_before)
+            key, directory, count = execution['key'], execution['directory'], execution['count']
+            receipts, journals = execution['receipts'], execution['journals']
+            current_journals, current_items = execution['current_journals'], execution['current_items']
             result.update(status='complete', complete=True, request=request,
                 source_bindings=source_bindings, physical_operator_oracle=ob, readout_oracle=rb,
                 case=args.case, initialization=initialization_binding, baseline=hb,
@@ -321,7 +338,7 @@ def main(arguments=None):
                     current_invocation_allocated_indices=sorted(current_items),
                     receipt_bindings=[file_binding(directory/('item-%04d' % i)/'complete.json') for i in range(count)]),
                 measurements=dict(budget_before=before, budget_before_scalar=scalar_before,
-                    current_completed_worker_cpu_seconds=sum(x['cpu_seconds'] for x in receipts if x['index'] in current_items),
+                    current_completed_worker_cpu_seconds=execution['current_completed_worker_cpu_seconds'],
                     historical_propagation_costs='not re-executed, reset or included in this owned scalar budget; immutable original producer journals remain historical',
                     receipt_worker_cpu_seconds=sum(x['cpu_seconds'] for x in receipts),
                     receipt_worker_hamiltonian_actions=sum(x['hamiltonian_actions'] for x in receipts),

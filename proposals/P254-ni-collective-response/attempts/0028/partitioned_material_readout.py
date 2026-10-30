@@ -13,7 +13,7 @@ from pathlib import Path
 import numpy as np
 
 from substrate_framework.partitioned_q_work import QWork
-from substrate_framework.partitioned_q_storage import bounded_array_identity
+from substrate_framework.partitioned_q_storage import bounded_array_identity, release_mapped_pages
 from substrate_framework.streamed_joint_response import MappedResponse, NAMES
 from substrate_framework.streamed_material_state import authenticate, file_binding
 
@@ -78,6 +78,25 @@ def _committed_state(executor, state, time, binding):
     return record
 
 
+def _edge_scalar(executor, state, probe, time, index):
+    """Contract one source, then release borrowed resident pages, not its data."""
+    executor.budget.check()
+    edge = executor.r.edges[index]
+    source_frame = target_frame = None
+    try:
+        source_frame = executor.edge_stage.frame(edge.source, time)
+        target_frame = executor.edge_stage.frame(edge.target, time)
+        term = executor.r.sectors[edge.source].weight*(
+            np.vdot(probe.actions[index](_readonly(source_frame)), state.ket[index])
+            + np.einsum('ij,ji->', state.bra[index],
+                        probe.adjoints[index](_readonly(target_frame))))
+        return dict(value=np.asarray([term], dtype=np.complex128))
+    finally:
+        # ndarray views hide the memmap type; retain the original frame handles.
+        for value in (state.ket[index], state.bra[index], source_frame, target_frame):
+            release_mapped_pages(value)
+
+
 def partitioned_selected_readout(executor, state, probe, time, work, *, state_binding) -> complex:
     """Evaluate the original weighted complex formula in original index sum order.
 
@@ -123,17 +142,8 @@ def partitioned_selected_readout(executor, state, probe, time, work, *, state_bi
     # as the original implementation. The manager gathers only scalar arrays.
     value = sum(np.vdot(getattr(probe, name), getattr(state, name)) for name in NAMES)
 
-    def edge_value(index):
-        executor.budget.check()
-        edge = r.edges[index]
-        ps = _readonly(executor.edge_stage.frame(edge.source, time))
-        pt = _readonly(executor.edge_stage.frame(edge.target, time))
-        term = r.sectors[edge.source].weight*(
-            np.vdot(probe.actions[index](ps), state.ket[index])
-            + np.einsum('ij,ji->', state.bra[index], probe.adjoints[index](pt)))
-        return dict(value=np.asarray([term], dtype=np.complex128))
-
-    receipts = work.execute(OPERATION, identity, len(r.edges), edge_value)
+    receipts = work.execute(OPERATION, identity, len(r.edges),
+        lambda index: _edge_scalar(executor, state, probe, time, index))
     for index, receipt in enumerate(receipts):
         executor.budget.check()
         if receipt['index'] != index or set(receipt['arrays']) != {'value'}:

@@ -563,10 +563,10 @@ def resource_plan(shapes, steps, borrowed, *, existing, workers, caps, history,
     transition = 2*sum(sorted(edge, reverse=True)[:workers])
     retained = len(steps)+1 if retain_endpoints else min(2, len(steps)+1)
     raw_peak = ((len(steps)+2) if retain_endpoints else min(4, len(steps)+2))*state+transition
-    missing = [value for value in frame_requirements.values() if not value['retained_admission']]
+    missing_frames = [value for value in frame_requirements.values() if not value['retained_admission']]
     frame_set = sum(16*math.prod(shape)+512 for shape in shapes['mixed'])
-    live_sets = len(missing) if retain_endpoints else max((sum(
-        value['first_step'] <= index <= value['last_step'] for value in missing)
+    live_sets = len(missing_frames) if retain_endpoints else max((sum(
+        value['first_step'] <= index <= value['last_step'] for value in missing_frames)
         for index in range(len(steps))), default=0)
     new_frame_peak = live_sets*frame_set
     density_binding = history['history'][0]['arrays']['density']
@@ -584,14 +584,14 @@ def resource_plan(shapes, steps, borrowed, *, existing, workers, caps, history,
     for binding in borrowed:
         paths[binding['path']] = binding['bytes']
     logical = sum(paths.values())
-    inodes, allocated, missing = set(), 0, []
+    inodes, allocated, retired_paths = set(), 0, []
     for path in paths:
         try:
             stat = Path(path).stat()
         except FileNotFoundError:
             # Retired producer aliases remain immutable origin provenance;
             # the admitted cache payload is authenticated by its real consumer.
-            missing.append(path)
+            retired_paths.append(path)
             continue
         inode = stat.st_dev, stat.st_ino
         if inode not in inodes:
@@ -613,18 +613,18 @@ def resource_plan(shapes, steps, borrowed, *, existing, workers, caps, history,
         prepared_context_bytes_per_rk_stage=context,
         retained_prepared_context_bytes=contexts,
         baseline_frame_requirements=frame_requirements,
-        new_missing_baseline_time_count=len(missing),
+        new_missing_baseline_time_count=len(missing_frames),
         new_baseline_frame_set_logical_bytes=frame_set,
         peak_owned_baseline_frame_sets=live_sets,
         peak_owned_baseline_frame_bytes=new_frame_peak,
-        cumulative_new_baseline_frame_payload_bytes=len(missing)*frame_set,
+        cumulative_new_baseline_frame_payload_bytes=len(missing_frames)*frame_set,
         owned_frame_retention='explicit all-endpoint retention' if retain_endpoints else
             'last step/readout consumer only; actual QWork retirement journals preserve all observed costs',
         declared_readonly_and_existing_paths=len(paths),
         declared_readonly_and_existing_logical_alias_bytes=logical,
         current_readonly_and_existing_unique_inodes=len(inodes),
         current_readonly_and_existing_allocated_bytes=allocated,
-        retired_declared_alias_paths=missing,
+        retired_declared_alias_paths=retired_paths,
         existing_owned_output_logical_bytes=sum(existing.values()),
         owned_payload_context_and_moment_forecast_bytes=sum(existing.values())+raw_peak+contexts+moment_peak+new_frame_peak,
         selected_steps=steps, completed_baseline_time=history['time_ry_inverse'], caps=caps,
