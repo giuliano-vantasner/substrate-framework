@@ -3,8 +3,8 @@
 All global n/g/ell are reduced before one K action per direction. Durable
 prepared contexts allow source-local RHS evaluation after other input edges
 have been retired. No bare one-body energy action or baseline moment pass is
-performed by this dynamics adapter. Energy readout remains contract_block's
-separate, genuine contraction.
+performed by this dynamics adapter. Energy uses its separate genuine bare-H0
+contraction; response-only shared factors never substitute a mean-energy fit.
 """
 import json
 import sys
@@ -25,13 +25,17 @@ import mixed_coordinate_response
 import mixed_frame_response
 import mixed_material_edge
 import mixed_material_moments
+import mixed_dyad_grid_moments
+import mixed_dyad_ionic_moments
+import mixed_dyad_projector_moments
+import mixed_moment_terms
 import mixed_physical_field_dyads
 import mixed_response_storage
 import mixed_payload_output
 from mixed_coordinate_response import coordinate_rhs
 from mixed_frame_response import density_dyads_item, frame_rhs_item
 from mixed_material_edge import NativeEdgeOperators
-from mixed_material_moments import response_block
+from mixed_material_moments import response_blocks
 from mixed_response_storage import COMPONENTS, SMALL_NAMES, MappedMixedState
 
 SCHEMA = 'P254-native-mixed-material-prepared-v1'
@@ -210,8 +214,9 @@ class NativeMixedDynamics:
         self.D = tuple(s.d for s in self.baseline.response.sectors)
         self.weights = tuple(s.weight for s in self.baseline.initial.slots)
         modules = (mixed_coordinate_response, mixed_frame_response, mixed_material_edge,
-                   mixed_material_moments, mixed_physical_field_dyads, mixed_response_storage,
-                   mixed_payload_output,
+                   mixed_material_moments, mixed_dyad_grid_moments, mixed_dyad_ionic_moments,
+                   mixed_dyad_projector_moments, mixed_moment_terms,
+                   mixed_physical_field_dyads, mixed_response_storage, mixed_payload_output,
                    native_history, native_operators, native_ionic, native_bridge, native_mean_stage,
                    sys.modules[type(case).__module__], sys.modules[type(case.background).__module__])
         self.sources = dict(adapter=file_binding(__file__),
@@ -267,13 +272,22 @@ class NativeMixedDynamics:
                 self.D, target_plus=self.target_plus, target_minus=self.target_minus,
                 source_weights=self.weights)
             operators = NativeEdgeOperators(self, index, self.baseline._stage(state.time)[2])
-            result = {}
-            for c in COMPONENTS:
-                gamma = self.histories[c].response.gamma
-                values = response_block(blocks[c], coupling=operators.coupling(c, index),
-                    field_moments=operators.field_moments(index) if gamma else None, diagonal=gamma)
-                result.update({c+'-'+name: value for name, value in values.items()})
-            return result
+            if all(self.histories[c].response.gamma for c in COMPONENTS):
+                # At explicit Gamma the three actual endpoint maps coincide.
+                # All ordered plus/minus/mixed contributions stay independent.
+                grouped = response_blocks({c: blocks[c] for c in COMPONENTS},
+                    coupling=operators.coupling('mixed', index),
+                    field_vertex=operators.vertex(index), diagonal=True)
+            else:
+                grouped = {}
+                for c in COMPONENTS:
+                    gamma = self.histories[c].response.gamma
+                    grouped.update(response_blocks({c: blocks[c]},
+                        coupling=operators.coupling(c, index),
+                        field_vertex=operators.vertex(index) if gamma else None,
+                        diagonal=gamma))
+            return {c+'-'+name: value for c, values in grouped.items()
+                    for name, value in values.items()}
         finally:
             frames.close_frames()
             touched = {i for reader in jets.values() for i in reader.cache}

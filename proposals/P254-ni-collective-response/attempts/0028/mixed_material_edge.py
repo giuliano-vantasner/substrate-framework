@@ -4,7 +4,6 @@ Only actual physical H0, finite-q ionic/local vertices and Gamma L are used.
 The mean action is the completed moving history's PhysicalFrozenAction, not
 an eigenvalue, stationary frame or a reconstructed mean density.
 """
-from functools import partial
 
 import numpy as np
 
@@ -12,7 +11,6 @@ from substrate_framework.material_physical_operators import (
     physical_hamiltonian, physical_coupling, physical_finiteq,
     PhysicalFieldVertices, PhysicalFrozenAction)
 
-from mixed_physical_field_dyads import physical_field_dyad_moments
 
 
 class ComplexFieldAction:
@@ -69,8 +67,6 @@ class NativeEdgeOperators:
                 self.bare(link.target).factors, self.owner.block_size)
         return self.couplings[key]
 
-    def field_moments(self, index):
-        return partial(physical_field_dyad_moments, self.vertex(index))
 
     def mean(self, index, vectors):
         if not np.any(vectors):

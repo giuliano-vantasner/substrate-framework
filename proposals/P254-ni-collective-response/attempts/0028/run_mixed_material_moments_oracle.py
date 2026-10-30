@@ -8,7 +8,6 @@ production projector jets/actions. PW-square matrices exist ONLY here.
 No propagation, actual Ni result, or full-material qualification is claimed.
 """
 import argparse
-from functools import partial
 import hashlib
 import json
 from pathlib import Path
@@ -23,7 +22,7 @@ sys.path[:0] = [str(ROOT / 'src'), str(HERE), str(HERE.parent / '0027'),
 
 import numpy as np
 from mixed_frame_response import DensityBlock, DensityDyad, density_dyads
-from mixed_material_moments import contract_block, response_block
+from mixed_material_moments import _one_body, response_blocks
 from mixed_physical_field_dyads import physical_field_dyad_moments
 from run_field_derivative_oracle import literal_integral
 from run_physical_spatial_oracle import model, momenta, dense_ionic
@@ -134,15 +133,14 @@ def block_checks(inputs, grid, background, report, mutations, boundaries, rng):
     hamiltonians = [physical_hamiltonian(background, f.basis, 1, block_size=2) for f in frames]
     endpoints = [literal_endpoint(inputs, background, f.basis) for f in frames]
     ranks, weights = (2, 3, 4, 2), (.13, .29, .37, .21)
-    random = lambda shape: rng.normal(size=shape) + 1j * rng.normal(size=shape)
+    random = lambda shape: rng.normal(size=shape) + 1j*rng.normal(size=shape)
     psi = tuple(random((len(e.p), rank)) for e, rank in zip(endpoints, ranks))
     target_plus, target_minus = (1, 2, 3, 0), (3, 0, 1, 2)
     plus = tuple(random((len(endpoints[target_plus[i]].p), ranks[i])) for i in range(4))
     minus = tuple(random((len(endpoints[target_minus[i]].p), ranks[i])) for i in range(4))
     mixed = tuple(random(a.shape) for a in psi)
-    # Exactly rank-one complex Hermitian D, retaining all original columns.
     vectors = tuple(random((rank, 1)) for rank in ranks)
-    coefficients = tuple(v @ v.conj().T for v in vectors)
+    coefficients = tuple(v@v.conj().T for v in vectors)
     blocks = density_dyads(psi, plus, minus, mixed, coefficients,
                          target_plus=target_plus, target_minus=target_minus,
                          source_weights=weights)
@@ -156,83 +154,94 @@ def block_checks(inputs, grid, background, report, mutations, boundaries, rng):
             coupling = physical_finiteq(inputs, edge, hamiltonians[s].factors,
                                        hamiltonians[t].factors, block_size=2)
             vertex = PhysicalFieldVertices(hamiltonians[s], projector_block_size=2)
-            field = partial(physical_field_dyad_moments, vertex) if diagonal else None
-            actual = contract_block(block, coupling=coupling, field_moments=field,
-                                    bare_action=hamiltonians[s].apply if diagonal else None,
-                                    diagonal=diagonal)
+            actual = response_blocks({component: block}, coupling=coupling,
+                                     field_vertex=vertex if diagonal else None,
+                                     diagonal=diagonal)[component]
+            # Exercise the actual one-body primitive used by material energy,
+            # independently of response-only factor reuse.
+            actual['one_body'] = (sum(_one_body(d, hamiltonians[s].apply, 2)
+                                      for d in block.dyads) if diagonal else 0j)
             expected = dense_block(inputs, edge, block, endpoints, diagonal)
             for key in expected:
                 compare(report, f'{component}/{i}/{key}', actual[key], expected[key])
-            response = response_block(block, coupling=coupling,
-                                      field_moments=field, diagonal=diagonal)
-            for key in ('density', 'gradient', 'field_gradient_electronic'):
-                compare(report, f'response/{component}/{i}/{key}',
-                        response[key], expected[key])
             if diagonal and component == 'mixed' and i == 1:
-                captured = block, coupling, field, hamiltonians[s], expected
+                captured = block, coupling, vertex, hamiltonians[s], expected
             if not diagonal:
-                # Independently embed X_ts in the full endpoint direct sum:
-                # block-diagonal H/L then have zero global trace, even when
-                # this rectangular X is nonzero. No residual is assigned.
                 sizes = [len(e.p) for e in endpoints]
-                offsets = np.cumsum([0] + sizes)
+                offsets = np.cumsum([0]+sizes)
                 full = np.zeros((sum(sizes), sum(sizes)), complex)
-                rho = sum(d.weight * d.left @ d.D @ d.right.conj().T for d in block.dyads)
+                rho = sum(d.weight*d.left@d.D@d.right.conj().T for d in block.dyads)
                 full[offsets[t]:offsets[t+1], offsets[s]:offsets[s+1]] = rho
                 hglobal = np.zeros_like(full)
                 for k, endpoint in enumerate(endpoints):
                     hglobal[offsets[k]:offsets[k+1], offsets[k]:offsets[k+1]] = endpoint.h0
-                compare(report, f'{component}/{i}/global_geometry', np.trace(hglobal @ full), actual['one_body'])
+                compare(report, f'{component}/{i}/global_geometry',
+                        np.trace(hglobal@full), actual['one_body'])
                 global_field = []
                 for axis in range(3):
                     observable = np.zeros_like(full)
                     for k, endpoint in enumerate(endpoints):
                         observable[offsets[k]:offsets[k+1], offsets[k]:offsets[k+1]] = endpoint.field[axis]
-                    global_field.append(np.trace(observable @ full))
+                    global_field.append(np.trace(observable@full))
                 compare(report, f'{component}/{i}/global_field_geometry',
                         global_field, actual['field_gradient_electronic'])
-                refuse(boundaries, f'{component}/{i}/forbidden_field_callback', lambda: contract_block(
-                    block, coupling=coupling, field_moments=partial(
-                        physical_field_dyad_moments, vertex), bare_action=None, diagonal=False))
-                refuse(boundaries, f'{component}/{i}/false_diagonal', lambda: contract_block(
-                    block, coupling=coupling, field_moments=None, bare_action=None, diagonal=True))
-    block, coupling, field, h0, expected = captured
-    kwargs = dict(coupling=coupling, field_moments=field, bare_action=h0.apply, diagonal=True)
-    refuse(boundaries, 'diagonal_missing_field', lambda: contract_block(block, **{**kwargs, 'field_moments': None}))
-    refuse(boundaries, 'diagonal_missing_H0', lambda: contract_block(block, **{**kwargs, 'bare_action': None}))
-    refuse(boundaries, 'diagonal_wrong_geometry', lambda: contract_block(block, **{**kwargs, 'diagonal': False}))
-    refuse(boundaries, 'nonboolean_geometry', lambda: contract_block(block, **{**kwargs, 'diagonal': 1}))
-    refuse(boundaries, 'empty_density_block', lambda: contract_block(
-        DensityBlock(1, 1, ()), **kwargs))
-    rho = sum(d.weight * d.left @ d.D @ d.right.conj().T for d in block.dyads)
+                refuse(boundaries, f'{component}/{i}/forbidden_field_vertex',
+                    lambda: response_blocks({'x': block}, coupling=coupling,
+                                            field_vertex=vertex, diagonal=False))
+                refuse(boundaries, f'{component}/{i}/false_diagonal',
+                    lambda: response_blocks({'x': block}, coupling=coupling,
+                                            field_vertex=None, diagonal=True))
+    block, coupling, vertex, h0, expected = captured
+    kwargs = dict(coupling=coupling, field_vertex=vertex, diagonal=True)
+    refuse(boundaries, 'diagonal_missing_field', lambda: response_blocks(
+        {'x': block}, **{**kwargs, 'field_vertex': None}))
+    refuse(boundaries, 'diagonal_wrong_geometry', lambda: response_blocks(
+        {'x': block}, **{**kwargs, 'diagonal': False}))
+    refuse(boundaries, 'nonboolean_geometry', lambda: response_blocks(
+        {'x': block}, **{**kwargs, 'diagonal': 1}))
+    refuse(boundaries, 'empty_density_block', lambda: response_blocks(
+        {'x': DensityBlock(1, 1, ())}, **kwargs))
+    rho = sum(d.weight*d.left@d.D@d.right.conj().T for d in block.dyads)
     expose(mutations, 'discard_H0_offdiagonal_action',
-           np.trace(np.diag(np.diag(endpoints[1].h0)) @ rho), expected['one_body'])
+           np.trace(np.diag(np.diag(endpoints[1].h0))@rho), expected['one_body'])
     for omitted in range(len(block.dyads)):
         reduced = DensityBlock(block.target_endpoint, block.source_endpoint,
                                tuple(d for j, d in enumerate(block.dyads) if j != omitted))
-        mutant = contract_block(reduced, **kwargs)
-        expose(mutations, 'omit_mixed_dyad_' + str(omitted), mutant['density'], expected['density'])
+        mutant = response_blocks({'x': reduced}, **kwargs)['x']
+        expose(mutations, 'omit_mixed_dyad_'+str(omitted), mutant['density'], expected['density'])
     for name, transform in (
             ('transpose_original_D', lambda d: DensityDyad(d.left, d.D.T, d.right, d.source_index, d.weight)),
             ('population_diagonal_D', lambda d: DensityDyad(d.left, np.diag(np.diag(d.D)), d.right, d.source_index, d.weight)),
             ('weight_twice', lambda d: DensityDyad(d.left, d.D, d.right, d.source_index, d.weight**2)),
             ('weight_omitted', lambda d: DensityDyad(d.left, d.D, d.right, d.source_index, 1.))):
-        changed = DensityBlock(block.target_endpoint, block.source_endpoint, tuple(transform(d) for d in block.dyads))
-        expose(mutations, name, contract_block(changed, **kwargs)['density'], expected['density'])
-    # Gamma first derivatives, unlike nonGamma first derivatives, carry genuine
-    # global field/H0 moments. Use one original endpoint with identity targets.
+        changed = DensityBlock(block.target_endpoint, block.source_endpoint,
+                               tuple(transform(d) for d in block.dyads))
+        expose(mutations, name, response_blocks({'x': changed}, **kwargs)['x']['density'],
+               expected['density'])
     gamma = density_dyads((psi[1],), (random(psi[1].shape),),
                           (random(psi[1].shape),), (mixed[1],),
                           (coefficients[1],), target_plus=(0,), target_minus=(0,),
                           source_weights=(weights[1],))
     gamma_edge = BlochEdge.create(inputs.reference, frames[1].basis, frames[1].basis, (0., 0., 0.))
-    for name, collection in gamma.items():
-        value = contract_block(collection[0], **kwargs)
-        reference = dense_block(inputs, gamma_edge, collection[0], [endpoints[1]], True)
-        for key in reference:
-            compare(report, f'Gamma/{name}/{key}', value[key], reference[key])
-    for i, block in enumerate(blocks['mixed']):
-        for d in block.dyads:
+    grouped = {name: collection[0] for name, collection in gamma.items()}
+    # All four independent groups share physical factors in ONE invocation.
+    actual_groups = response_blocks(grouped, **kwargs)
+    for name, density_block in grouped.items():
+        reference = dense_block(inputs, gamma_edge, density_block, [endpoints[1]], True)
+        for key in ('density', 'gradient', 'field_gradient_electronic'):
+            compare(report, f'Gamma/grouped/{name}/{key}', actual_groups[name][key], reference[key])
+    rectangular = {}
+    for index, (nl, nr, weight) in enumerate(((2, 3, .23), (3, 2, .61))):
+        dyad = DensityDyad(random((len(endpoints[1].p), nl)), random((nl, nr)),
+                           random((len(endpoints[1].p), nr)), 0, weight)
+        rectangular[str(index)] = DensityBlock(0, 0, (dyad,))
+    rect_values = response_blocks(rectangular, **kwargs)
+    for name, density_block in rectangular.items():
+        reference = dense_block(inputs, gamma_edge, density_block, [endpoints[1]], True)
+        for key in ('density', 'gradient', 'field_gradient_electronic'):
+            compare(report, f'Gamma/rectangular/{name}/{key}', rect_values[name][key], reference[key])
+    for density_block in blocks['mixed']:
+        for d in density_block.dyads:
             if d.D is not coefficients[d.source_index] or d.weight != weights[d.source_index]:
                 raise AssertionError('borrowed original coefficient/weight lost')
     return frames[1], hamiltonians[1], endpoints[1], random
@@ -305,7 +314,7 @@ def main():
     report = dict(schema='P254-mixed-material-moments-finite-oracle-v1',
                   scope='finite synthetic independent UPF/Fourier matrices only; no material propagation',
                   production_APIs={
-                      'mixed_material_moments.contract_block': '(block, *, coupling, field_moments, bare_action, diagonal)',
+                      'mixed_material_moments.response_blocks': '(groups, *, coupling, field_vertex, diagonal)',
                       'mixed_physical_field_dyads.physical_field_dyad_moments': '(vertex, left, right, coefficient, *, weight)'},
                   checks={}, mutations={}, boundaries={})
     rng = np.random.default_rng(254280503)

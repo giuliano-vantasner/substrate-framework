@@ -8,11 +8,14 @@ constructed here. DensityDyad's original source D and weight are passed once.
 import numpy as np
 from scipy.linalg.blas import zgemm
 
-from substrate_framework.material_physical_operators import _require_physical
+from substrate_framework.material_physical_operators import PhysicalFieldVertices, _require_physical
 from substrate_framework.qe_bloch_finiteq_ionic import BlochFiniteQIonic
+from mixed_dyad_grid_moments import grid_moments
+from mixed_dyad_projector_moments import field_projector_moments
+from mixed_moment_terms import moment_terms
 
 
-def _geometry(block, coupling, field_moments, bare_action, diagonal, energy):
+def _geometry(block, coupling, field_vertex, diagonal):
     if not isinstance(diagonal, (bool, np.bool_)):
         raise TypeError('diagonal must be an explicit geometry boolean')
     if not isinstance(coupling, BlochFiniteQIonic):
@@ -26,10 +29,12 @@ def _geometry(block, coupling, field_moments, bare_action, diagonal, energy):
     if not block.dyads:
         raise ValueError('at least one borrowed density dyad required')
     if diagonal:
-        if not callable(field_moments) or (energy and not callable(bare_action)):
-            raise TypeError('diagonal Gamma requires physical field moments and energy requires bare H0')
-    elif field_moments is not None:
-        raise ValueError('off-diagonal nonGamma has no global field trace callback')
+        if not isinstance(field_vertex, PhysicalFieldVertices):
+            raise TypeError('diagonal Gamma requires the actual physical field vertex')
+        coupling._check_factors(field_vertex.hamiltonian.factors, coupling.edge.source_basis)
+        coupling._check_factors(field_vertex.hamiltonian.factors, coupling.edge.target_basis)
+    elif field_vertex is not None:
+        raise ValueError('off-diagonal nonGamma has no global field trace')
 
 
 def _one_body(dyad, bare_action, block_size):
@@ -55,51 +60,22 @@ def _one_body(dyad, bare_action, block_size):
     return dyad.weight * value
 
 
-def _contract(block, *, coupling, field_moments, bare_action, diagonal, energy):
-    """One physical dyad loop; bare one-body work is energy-readout only."""
-    _geometry(block, coupling, field_moments, bare_action, diagonal, energy)
-    density = np.zeros((coupling.bridge.source_fft.nnr, 2), complex)
-    gradient = np.zeros(coupling.ndof, complex)
-    field = np.zeros(3, complex)
-    one_body = 0j
-    for dyad in block.dyads:
-        n, g = coupling.moments(dyad.left, dyad.right,
-                                coefficient=dyad.D, weight=dyad.weight)
-        density += n
-        gradient += g
-        if diagonal:
-            ell = np.asarray(field_moments(dyad.left, dyad.right,
-                                          dyad.D, weight=dyad.weight))
-            if ell.shape != (3,) or not np.isfinite(ell).all():
-                raise ValueError('physical field moments must return finite complex Cartesian (3,)')
-            field += ell
-            if energy:
-                one_body += _one_body(dyad, bare_action, coupling.bridge.block_size)
-    result = dict(density=density, gradient=gradient,
-                  field_gradient_electronic=field)
-    if energy:
-        result['one_body'] = one_body
-    return result
+def response_blocks(groups, *, coupling, field_vertex, diagonal):
+    """Contract independent dyad groups sharing ONE actual directed coupling.
 
-
-def response_block(block, *, coupling, field_moments, diagonal):
-    """Density/positive ionic gradient/L traces, with NO bare H0 actions.
-
-    NonGamma global L traces are geometrically absent. No one_body entry is
-    returned: this API does not evaluate or claim a one-body energy.
+    Original coefficient/weight ownership and all ordered terms are retained.
+    Request-local grid/projector factors are shared, never trajectories or
+    conjugate responses. NonGamma directions use separate calls. No H0 action
+    or one-body energy is evaluated by this response-only API.
     """
-    return _contract(block, coupling=coupling, field_moments=field_moments,
-                     bare_action=None, diagonal=diagonal, energy=False)
-
-
-def contract_block(block, *, coupling, field_moments, bare_action, diagonal):
-    """Return genuine density/gradient/field_gradient_electronic/one_body.
-
-    ``coupling`` is the actual directed physical_finiteq, including q=0 for
-    diagonal blocks. ``field_moments`` binds physical_field_dyad_moments to
-    matching PhysicalFieldVertices; ``bare_action`` is actual H0.apply.
-    NonGamma global H0/L traces vanish by endpoint geometry. All complex
-    defects remain; original source D and quadrature weight occur once.
-    """
-    return _contract(block, coupling=coupling, field_moments=field_moments,
-                     bare_action=bare_action, diagonal=diagonal, energy=True)
+    if not groups:
+        raise ValueError('at least one original density block required')
+    for block in groups.values():
+        _geometry(block, coupling, field_vertex, diagonal)
+    terms = moment_terms(coupling, groups)
+    grid, kinetic = grid_moments(coupling, terms,
+                                 field_momenta=field_vertex.momenta if diagonal else None)
+    field = field_projector_moments(field_vertex, terms, kinetic) if diagonal else {}
+    return {name: dict(density=grid[name]['density'], gradient=grid[name]['gradient'],
+                       field_gradient_electronic=field[name] if diagonal else np.zeros(3, complex))
+            for name in groups}
