@@ -4,6 +4,8 @@
 Manifest schema is documented in joint-spatial-readout-registration.json.
 Each selected_q entry binds either one genuine all-mode result/request, or
 separate forward and pair result/request files, all using path/bytes/sha256.
+The forward may be a native committed readout with its historical request;
+its historical producer and readout consumer identities remain distinct.
 Both split originals are preserved in input_bindings, never rewritten as a
 combined producer receipt. No complete actual material set exists at
 implementation; this CLI is not evidence that such a set has been produced.
@@ -39,7 +41,9 @@ LIMITS = [
 
 def sources():
     paths = [HERE/name for name in ('joint-spatial-readout-registration.json',
-        'joint_spatial_receipts.py', 'run_joint_spatial_readout.py', 'run_joint_spatial_readout_oracle.py')]
+        'joint_spatial_receipts.py', 'joint_spatial_provenance.py',
+        'joint_spatial_receipt_oracle.py', 'joint_spatial_committed_oracle.py',
+        'run_joint_spatial_readout.py', 'run_joint_spatial_readout_oracle.py')]
     paths += [ROOT/'src/substrate_framework'/name for name in (
         'joint_spatial_readout.py', 'spatial_readout_metrics.py', 'joint_response_observables.py',
         'material_control_reference.py', 'streamed_material_state.py', 'qe_saved_native.py')]
@@ -80,8 +84,7 @@ def main():
     bindings = sources()
     result = dict(schema='P254-joint-spatial-readout-v1', status='complete',
         input_manifest=binding, input_bindings=data['manifest'], source_bindings=bindings,
-        receipt_assembly_by_q=['all' if 'result' in entry else 'forward+pair'
-                               for entry in data['manifest']['selected_q']],
+        receipt_assembly_by_q=data['receipt_assembly_by_q'],
         source_file_count=len(bindings), case=common['case'], model_identity=common['model_identity'],
         initialization=data['manifest']['initialization'], original_preparation=data['saved']['preparation'],
         scalar=data['saved']['specification']['scalar'], baseline=data['baseline'],

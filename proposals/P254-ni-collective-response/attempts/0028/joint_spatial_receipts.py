@@ -5,7 +5,6 @@ atom/axis and some seed metadata carried by request.json. Never infer them
 from filenames, and never assemble missing q from conjugate symmetry.
 """
 from hashlib import sha256
-import json
 from pathlib import Path
 import re
 
@@ -14,19 +13,10 @@ import numpy as np
 from substrate_framework.material_control_reference import bound_json, bound_arrays
 from substrate_framework.streamed_material_state import file_binding
 from substrate_framework.joint_spatial_readout import ORIGINS, complete_grid
-
-
-def binding_key(binding):
-    return str(Path(binding['path']).resolve()), int(binding['bytes']), binding['sha256']
-
-
-def same_binding(a, b):
-    return binding_key(a) == binding_key(b)
-
-
-def authenticate(binding):
-    if not same_binding(file_binding(Path(binding['path'])), binding):
-        raise ValueError('bound source bytes differ: '+binding['path'])
+from joint_spatial_provenance import (
+    COMMITTED_SCHEMA, authenticate, binding_key, canonical, same_binding, source_key,
+    validate_committed_split,
+)
 
 
 def number(value):
@@ -41,15 +31,6 @@ def number(value):
     return z
 
 
-def canonical(value):
-    return json.dumps(value, sort_keys=True, allow_nan=False)
-
-
-def source_key(bindings):
-    keys = [binding_key(b) for b in bindings]
-    if not keys or len({k[0] for k in keys}) != len(keys):
-        raise ValueError('unique explicit producer source bindings required')
-    return sorted(keys)
 
 
 def read_entries(entries):
@@ -72,6 +53,10 @@ def read_entries(entries):
             pair, pair_request = bound_json(entry['pair']['result']), bound_json(entry['pair']['request'])
             if request.get('mode') != 'forward' or pair_request.get('mode') != 'pair':
                 raise ValueError('split entry requires genuine forward and pair modes')
+            if (r.get('schema') == COMMITTED_SCHEMA
+                    and not same_binding(entry['forward']['request'],
+                                         r['historical_producer_request']['binding'])):
+                raise ValueError('native forward entry must bind its original producer request')
         else:
             raise ValueError('entry must bind either all-mode or separate forward/pair outputs')
         records.append(r)
@@ -83,11 +68,13 @@ def read_entries(entries):
 
 def validate_split(record, request, pair, pair_request):
     """Compare scientific identities BEFORE joining coherent and quantum values."""
+    if record.get('schema') == COMMITTED_SCHEMA:
+        return validate_committed_split(record, request, pair, pair_request)
     mode = request.get('mode')
     if mode == 'all':
         if pair_request != request or pair != record:
             raise ValueError('all-mode roles must refer to the same original receipt/request')
-        return
+        return record['coherent']
     if (mode != 'forward' or pair_request.get('mode') != 'pair'
             or pair.get('status') != 'complete' or 'error' in pair
             or 'quantum' in record or 'coherent' in pair):
@@ -107,6 +94,7 @@ def validate_split(record, request, pair, pair_request):
     if ({key: value for key, value in request.items() if key not in ignored}
             != {key: value for key, value in pair_request.items() if key not in ignored}):
         raise ValueError('split scientific request or original coherent seed differs')
+    return record['coherent']
 
 
 def validate_records(records, requests, saved, initialization, mesh, *,
@@ -123,9 +111,10 @@ def validate_records(records, requests, saved, initialization, mesh, *,
     n = int(np.prod(mesh))
     common, ab, ba, coherent = None, [], [], []
     for r, request, pair, pair_request in zip(records, requests, pair_records, pair_requests):
-        validate_split(r, request, pair, pair_request)
+        seed = validate_split(r, request, pair, pair_request)
+        r, request = pair, pair_request
         if (r.get('schema') != 'P254-joint-q-material-v2' or r.get('status') != 'complete'
-                or request.get('mode') not in ('all', 'forward') or 'error' in r
+                or request.get('mode') not in ('all', 'pair') or 'error' in r
                 or r.get('required_q_for_whole_local') != n
                 or r.get('fixed_original_D') is not True
                 or r.get('all_explicit_edges') != 2*n):
@@ -139,7 +128,7 @@ def validate_records(records, requests, saved, initialization, mesh, *,
                 or not same_binding(request['baseline'], r['baseline'])
                 or request['q'] != r['q']):
             raise ValueError('mixed original case/scalar/initialization/baseline/q')
-        quantum, seed = pair['quantum'], r['coherent']
+        quantum = pair['quantum']
         expected_identity = sha256(canonical(dict(model=r['model_identity'], q=r['q'],
             dynamics=r['dynamics'], sources=r['source_bindings'])).encode()).hexdigest()
         if (request['identity'] != expected_identity or quantum['propagation_identity'] != expected_identity
@@ -231,11 +220,11 @@ def load_material(manifest_binding):
             or not np.array_equal(arrays['atom_indices'], np.arange(1, len(arrays['atom_names'])+1))):
         raise ValueError('selected force is not in original atom order')
     authenticated = set()
-    for record in records:
+    for record in records+pairs:
         for source in record['source_bindings']:
             key = binding_key(source)
             if key not in authenticated:
-                authenticate(source)
+                authenticate(source, manifest.get('source_snapshots', ()))
                 authenticated.add(key)
     producer = Path(__file__).resolve().with_name('run_joint_q_material.py')
     if binding_key(file_binding(producer)) not in authenticated:
@@ -270,6 +259,9 @@ def load_material(manifest_binding):
                     atom_position_bohr=arrays['positions_bohr'][:, atom-1],
                     convention='cell lattice vectors are columns; identical atom offsets cancel in distances')
     return dict(manifest=manifest, common=common, saved=saved, mesh=mesh, geometry=geometry,
+                receipt_assembly_by_q=['all' if 'result' in entry else
+                    ('committed-forward+pair' if record.get('schema') == COMMITTED_SCHEMA else 'forward+pair')
+                    for entry, record in zip(entries, records)],
                 q=np.asarray([r['q'] for r in records]), coherent=coherent, ab=ab, ba=ba,
                 mean_diagnostics=mean, baseline=baseline_binding,
                 baseline_time=baseline['time_ry_inverse'],
