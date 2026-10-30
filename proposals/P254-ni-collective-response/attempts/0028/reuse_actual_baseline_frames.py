@@ -7,6 +7,8 @@ already authenticated items and adds newly completed items; only a full set gets
 cache-complete.json. `adopt` requires complete caches and explicit expected NEW
 QWork requests. Its destination is the future scientific-work/frames directory,
 which must not exist, not an active producer's namespace.
+The physical producer identity may be unchanged: forward/pair modes at the same
+q/observable share that identity. NEW always describes the target namespace.
 
 API: pin(source_request, cache, *, owner, source_identity, expected_input,
          count, history_binding)
@@ -147,9 +149,8 @@ def adopt(caches, target, *, owner, producer_identity, expected_requests):
             descriptor, items = _complete_cache(cache, owner)
             old = descriptor['original_request']
             _disjoint(Path(descriptor['original_request_binding']['path']).parent.parent.parent, target)
-            if (producer_identity == old['source_identity']
-                    or not _same(request['input'], old['input']) or request['count'] != old['count']):
-                raise ValueError('NEW producer and byte-exact input/count equality required')
+            if not _same(request['input'], old['input']) or request['count'] != old['count']:
+                raise ValueError('byte-exact actual input/count equality required')
             key = digest(request)
             if key in keys:
                 raise ValueError('duplicate target scientific request')
@@ -216,7 +217,8 @@ def main():
     adopt_parser.add_argument('--cache', type=Path, action='append', required=True)
     adopt_parser.add_argument('--expected-request', type=Path, action='append', required=True,
         help='Full NEW QWork v2 JSON request, paired in order with --cache; repeat both as needed.')
-    adopt_parser.add_argument('--producer-identity', required=True, help='Explicit NEW q/observable producer identity.')
+    adopt_parser.add_argument('--producer-identity', required=True,
+        help='Explicit physical producer identity; may equal the original identity.')
     adopt_parser.add_argument('--target', type=Path, required=True, help='NEW scientific-work/frames directory; parent must exist.')
     adopt_parser.add_argument('--owner', required=True)
     args = parser.parse_args()
