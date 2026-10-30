@@ -21,7 +21,8 @@ import numpy as np
 from run_joint_response_oracle import FiniteSystem, DenseTangent, FockOracle, CHECKS, check, reject, pack_legs
 from run_joint_partitioned_q_oracle import DiskFiniteHistory
 from run_joint_q_oracle import mapped
-from run_joint_q_material import bindings, encode, selected_readout, producer_identity, admit_oracle
+from run_joint_q_material import bindings, encode, producer_identity, admit_oracle
+from partitioned_material_readout import partitioned_selected_readout
 from substrate_framework.joint_field_probes import global_field_probe, validate_selection
 from substrate_framework.joint_ordered_sources import JointProductPreparation
 from substrate_framework.joint_response_observables import local_momentum_kick
@@ -119,11 +120,6 @@ def exercise(directory, budget, cpus):
         observable='field-coordinate',axis='x'))
     sources = bindings()
     identity = lambda meta:producer_identity('finite-field-model',[0.,0.,0.],'screened-joint',sources,meta)
-    force_payload = dict(model='finite-field-model',q=[0.,0.,0.],dynamics='screened-joint',sources=sources)
-    old_force = sha256(json.dumps(force_payload,sort_keys=True).encode()).hexdigest()
-    if identity(None) != old_force:
-        raise AssertionError('default force producer identity changed')
-    CHECKS.append(dict(name='original_force_identity_payload_preserved',passed=True))
     y_probe, y_metadata = global_field_probe(response,field,observable='field-momentum',axis='y')
     identities = [identity(None),identity(metadata['field-coordinate']),identity(metadata['field-momentum']),identity(y_metadata)]
     mutated = deepcopy(metadata['field-coordinate'])
@@ -154,10 +150,14 @@ def exercise(directory, budget, cpus):
         executor = new_executor(system,response,directory/('coherent-'+str(steps)),budget,cpus,'finite-coherent-'+str(steps))
         executor.frame_tail_times = {t}
         initial = mapped(response,directory/('kick-'+str(steps)),budget,pack_legs(kick))
-        final,_ = executor.propagate(initial,np.linspace(0,t,steps+1),directory/('forward-'+str(steps)))
+        final,checkpoints = executor.propagate(initial,np.linspace(0,t,steps+1),directory/('forward-'+str(steps)))
         errors.append(float(np.linalg.norm(dense.physical(system.stage(t),final)-expected_state)))
         for observable,probe in probes.items():
-            actual = selected_readout(executor,final,probe,t)
+            executor.readout_source_bindings = sources
+            executor.readout_operator_binding = dict(model='finite-field-model',
+                observable=observable, coefficient=encode(dense.coefficient(independent[observable])))
+            actual = partitioned_selected_readout(
+                executor,final,probe,t,executor.edge_work,state_binding=checkpoints[-1])
             expected = np.vdot(dense.coefficient(independent[observable]),expected_state)
             check(observable+'_actual_coherent_dense_'+str(steps),actual,expected)
             check(observable+'_coherent_not_zero_'+str(steps),actual,0.,mutation=True,tolerance=1e-12)

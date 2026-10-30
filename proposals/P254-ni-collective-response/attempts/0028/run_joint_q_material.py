@@ -50,6 +50,7 @@ from substrate_framework.partitioned_q_response import (
 from substrate_framework.joint_ordered_sources import JointProductPreparation
 from substrate_framework.joint_response_observables import total_force_probe
 from substrate_framework.joint_field_probes import OBSERVABLES, global_field_probe, validate_selection
+from partitioned_material_readout import partitioned_selected_readout
 
 
 MODULES = ('partitioned_q_response.py', 'partitioned_q_work.py', 'partitioned_q_storage.py', 'partitioned_joint_budget.py',
@@ -72,7 +73,8 @@ def bindings():
         HERE/'joint-q-registration.json', HERE/'run_joint_response_oracle.py',
         HERE/'run_joint_field_readout_oracle.py', HERE/'joint-field-readout-registration-001.json',
         HERE/'run_paired_finiteq_moments_check.py', HERE/'run_paired_field_moments_check.py',
-        HERE/'run_paired_contraction_consumer_check.py', HERE/'paired_contraction_continuation.py']
+        HERE/'run_paired_contraction_consumer_check.py', HERE/'paired_contraction_continuation.py',
+        HERE/'partitioned_material_readout.py']
         +[ROOT/'src/substrate_framework'/name for name in MODULES]]
     _, _, matched = matched_registration()
     return list({binding['path']: binding for binding in sources+matched}.values())
@@ -113,19 +115,6 @@ def admit_oracle(oracle, source_bindings, observable='total-force'):
                 or any(c.get('passed') is not True for c in checks)):
             raise ValueError('executed current-source field propagation/covariance extension required')
 
-def selected_readout(executor, state, probe, time):
-    if hasattr(executor.edge_stage, 'clear_interval'):
-        executor.edge_stage.clear_interval()
-    if hasattr(executor, 'prepare_time'):
-        executor.prepare_time(time)
-    value = sum(np.vdot(getattr(probe, key), getattr(state, key)) for key in ('u','p','coordinate','momentum'))
-    for i, edge in enumerate(executor.r.edges):
-        executor.budget.check()
-        ps = executor.edge_stage.frame(edge.source, time)
-        pt = executor.edge_stage.frame(edge.target, time)
-        value += executor.r.sectors[edge.source].weight*(np.vdot(probe.actions[i](ps), state.ket[i])
-            +np.einsum('ij,ji->', state.bra[i], probe.adjoints[i](pt)))
-    return complex(value)
 
 
 def static_plan_main(arguments):
@@ -347,6 +336,9 @@ def main():
                 grid_measure=measure, budget=budget, directory=run_directory/'executor', identity=identity,
                 dynamics=args.dynamics, cpus=args.cpus, work_directory=args.output/'scientific-work')
             executor.provenance = dict(baseline=hb, history=history.records)
+            executor.readout_source_bindings = source_bindings
+            executor.readout_operator_binding = dict(request=request, model=model_identity,
+                observable=args.observable, field_axis=args.field_axis, probe_identity=probe.identity)
             if args.mode in ('forward','all'):
                 resumed = None
                 executor.frame_tail_times = {float(args.time)}
@@ -374,7 +366,8 @@ def main():
                         initial = executor.initial_state(seed_key, initialize, time=0., kind='coherent-initial')
                 final, checkpoints = resumed if resumed is not None else executor.propagate(
                     initial,times,run_directory/'forward')
-                result['coherent'] = dict(readout=selected_readout(executor,final,probe,args.time),
+                result['coherent'] = dict(readout=partitioned_selected_readout(
+                    executor,final,probe,args.time,executor.edge_work,state_binding=checkpoints[-1]),
                     checkpoints=checkpoints, amplitude=args.amplitude, cell=args.cell,
                     convention='local canonical momentum kick q component; 1/sqrt(N), not whole local response')
                 executor.retire_frames_except(frame_times(times)|frame_times(second_times) if args.mode == 'all' else (),
