@@ -43,7 +43,7 @@ from mixed_material_driver_support import (
     check_loaded_sources, exact_publish, nested_bindings, owned_directory,
     owned_tree, source_closure)
 from mixed_material_energy import SCHEMA as ENERGY_SCHEMA, TERMS, mixed_energy_readout
-from run_mixed_q_material import watchdog
+from run_mixed_q_material import checked_json, watchdog
 from substrate_framework.streamed_material_state import authenticate, file_binding
 
 
@@ -53,6 +53,8 @@ def parser():
     result.add_argument('--producer-owner-sha256', required=True)
     result.add_argument('--producer-source-archive', type=Path)
     result.add_argument('--producer-source-archive-sha256')
+    result.add_argument('--mean-energy-ledger', type=Path, required=True)
+    result.add_argument('--mean-energy-ledger-sha256', required=True)
     result.add_argument('--state', type=Path, required=True)
     result.add_argument('--state-sha256', required=True)
     result.add_argument('--output', type=Path, required=True,
@@ -74,6 +76,8 @@ def requested_inputs(args):
                    sha256=args.producer_source_archive_sha256))
     return dict(producer_directory=str(args.producer.resolve()),
         producer_owner_sha256=args.producer_owner_sha256,
+        mean_energy_ledger=dict(path=str(args.mean_energy_ledger.resolve()),
+                               sha256=args.mean_energy_ledger_sha256),
         producer_source_archive=archive,
         state=dict(path=str(args.state.resolve()), sha256=args.state_sha256))
 
@@ -137,16 +141,20 @@ def checked_energy_report(binding, admission):
 
 def execute(args, directory, result, budget, sources, stack):
     """Admit first, then assemble the exact isolated runtime and call the real API."""
+    preliminary_state = json.loads(authenticate(state_binding(args)).read_text())
+    result['producer_writer_policy'] = stack.enter_context(
+        producer_exclusion(args.producer.resolve(), preliminary_state))
+    mean_ledger, _ = checked_json(args.mean_energy_ledger, args.mean_energy_ledger_sha256)
     admission, admission_binding = admit_inputs(args, directory, budget)
     result.update(admission=admission_binding, state=admission['state_binding'],
         boundary_kind=admission['boundary_kind'], time_ry_inverse=admission['state']['time'],
         producer_owner=admission['owner_binding'], boundary_authority=admission['authority'])
-    result['producer_writer_policy'] = stack.enter_context(producer_exclusion(admission))
     result['historical_producer_costs'] = producer_cost_snapshot(admission)
     result['scope']['positive_time_material_result'] = admission['boundary_kind'] == 'physical-endpoint'
     budget.check_processes(os.getpid(), [])
     dynamics, work, evidence = build_saved_runtime(admission, budget=budget,
         cpus=args.cpus, work_directory=directory/'work')
+    dynamics.energy_mean_readout = mean_ledger
     result.update(runtime_evidence=evidence, qwork_identity=work.identity)
     if (not Path(work.directory).resolve().is_relative_to(directory/'work')
             or work.budget is not budget or dynamics.budget is not budget):

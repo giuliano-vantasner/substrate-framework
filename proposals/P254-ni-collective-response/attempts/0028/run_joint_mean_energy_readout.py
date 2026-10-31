@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Read original complete128+128 scalar contributions into a mean-energy ledger.
 
-Usage: python run_joint_mean_energy_readout.py --registration PATH --output PATH
+Usage: python run_joint_mean_energy_readout.py --registration PATH --qualification PATH --output PATH
 No trajectory or full-slot contraction is recomputed; admitted parameters and
 original cache/stage values are consumed through the existing restoration APIs.
 Outputs global Ry components, their changes and unfitted saved-total discrepancies.
@@ -47,6 +47,7 @@ def evaluate(model, stage, one_body, evidence, component_function):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--registration', type=Path, required=True)
+    parser.add_argument('--qualification', type=Path, required=True)
     parser.add_argument('--output', type=Path, required=True)
     parser.add_argument('--cpu', type=int, default=10)
     parser.add_argument('--max-seconds', type=float, default=180.)
@@ -75,15 +76,18 @@ def main():
         from threadpoolctl import threadpool_limits
         from substrate_framework.streamed_material_state import file_binding
         from joint_mean_energy_components import components
-        from joint_mean_energy_sources import restore_sources, read_stage
+        from joint_mean_energy_sources import read_stage
+        from joint_mean_energy_authority import restore_current_sources
         # Deliberately runtime-only: the independent module must already exist.
         from joint_mean_energy_oracle import check_components
         with threadpool_limits(limits=1):
-            reg, model, saved, provenance = restore_sources(args.registration)
+            reg, model, saved, provenance = restore_current_sources(
+                file_binding(args.registration), file_binding(args.qualification))
             result['provenance'] = provenance
             result['implementation_sources'] = [file_binding(HERE/name) for name in
                 ('run_joint_mean_energy_readout.py', 'joint_mean_energy_sources.py',
-                 'joint_mean_energy_components.py', 'joint_mean_energy_oracle.py')]
+                 'joint_mean_energy_authority.py', 'joint_mean_energy_components.py',
+                 'joint_mean_energy_oracle.py')]
             result['oracle'] = check_components(components)
             if result['oracle'].get('status') != 'passed':
                 raise ValueError('independent canonical Hamiltonian/mutation oracle did not pass')

@@ -5,7 +5,6 @@ metadata, not reread. Only the 256 one_body scalars, two JointStages and admitte
 case parameter archives are numerical inputs. The one history-owner execution
 change is admitted only by the existing current-source numerical proof.
 """
-from hashlib import sha256
 import json
 from pathlib import Path
 
@@ -13,9 +12,6 @@ import numpy as np
 from substrate_framework.partitioned_joint_slots import array_identity, digest
 from substrate_framework.streamed_joint_reduction import JointStage
 from substrate_framework.streamed_material_state import authenticate, file_binding
-
-HERE = Path(__file__).resolve().parent
-
 
 def bound_json(binding):
     return json.loads(authenticate(binding).read_text())
@@ -35,73 +31,6 @@ def parameter_identities(model):
         polarizations=array_identity(model.field.polarizations), field_mass=model.field.mass,
         field_volume=model.field.volume_bohr3, measure=model.measure, ncells=r.ncells,
         reality_tolerance=model.reality_tolerance)
-
-
-def restore_sources(registration_path):
-    """Restore original physical authority and authenticate the exact source scope."""
-    from matched_joint_case import load_case
-    from run_joint_q_material import bind_saved_model
-    registration_binding = file_binding(registration_path)
-    reg = bound_json(registration_binding)
-    if reg['schema'] != 'P254-saved-coupled-mean-energy-registration-v1':
-        raise ValueError('registered saved coupled mean energy required')
-    original = reg['source_model']
-    mean = bound_json(reg['source_mean'])
-    initialization = bound_json(original['initialization'])
-    saved = initialization['saved']
-    if (mean.get('status') != 'complete' or mean.get('mode') != 'evolve'
-            or initialization.get('status') != 'complete' or initialization.get('mode') != 'initialize'
-            or mean['case'] != initialization['case'] or saved['case'] != mean['case']
-            or not same_binding(mean['initialization'], original['initialization'])
-            or saved['model_identity'] != original['identity']
-            or saved['specification'] != original['specification']):
-        raise ValueError('original complete mean/initialization/model differs')
-    proof_binding = file_binding(HERE/'paired-contraction-consumer-003/result.json')
-    proof = bound_json(proof_binding)
-    if (proof.get('status') != 'passed' or proof.get('schema') != 'P254-joint-partitioned-q-oracle-v1'
-            or proof['model_identity'] != original['identity']
-            or not same_binding(proof['initialization'], original['initialization'])):
-        raise ValueError('admitted current-source same-physical-scalar proof required')
-    for binding in proof['source_bindings']:
-        authenticate(binding)
-    continuation = proof['source_compatibility']
-    before, after = continuation['before'], continuation['after']
-    for binding in original['implementation'] + reg['implementation_sources']:
-        if binding['path'] == before['path']:
-            if not same_binding(binding, before):
-                raise ValueError('registered history-owner scope differs from admitted original')
-            authenticate(after)
-        else:
-            authenticate(binding)
-    source_digest = sha256(json.dumps({b['path']: b['sha256'] for b in
-        original['implementation']}, sort_keys=True).encode()).hexdigest()
-    source_digest = sha256((source_digest+json.dumps(original['column_limits'], sort_keys=True)).encode()).hexdigest()
-    if source_digest != original['source_identity']:
-        raise ValueError('original source identity does not bind implementation and column limits')
-    for binding in reg['archive_sources']:
-        authenticate(binding)
-    context = bind_saved_model(load_case(mean['case'], reality_tolerance=original['reality_tolerance']),
-                               saved, continuation)
-    # make_mean installs a lazy operator factory; it does not open a frame or act.
-    model = context.make_mean(None, block_size=original['block_size'])
-    if model.identity != original['identity']:
-        raise ValueError('restored model authority differs')
-    if len(reg['stages']) != 2 or len(reg['slot_sources']) != 2 or len(mean['branches']) != 1:
-        raise ValueError('exact registered initial/final pair required')
-    if reg['stages'][0] != mean['initial_reduction']:
-        raise ValueError('registered initial stage differs from original mean')
-    if (not same_binding(mean['initial_boundary'], reg['slot_sources'][0]['boundary'])
-            or not same_binding(saved['joint_boundary'], reg['slot_sources'][0]['boundary'])
-            or not same_binding(mean['branches'][0]['boundary'], reg['slot_sources'][1]['boundary'])
-            or not same_binding(proof['history'], reg['slot_sources'][1]['boundary'])
-            or reg['stages'][1]['energy_total_ry'] != mean['branches'][0]['diagnostics']['energy_total_ry']):
-        raise ValueError('original saved mean boundary/energy provenance differs')
-    provenance = dict(registration=registration_binding, source_mean=reg['source_mean'],
-        initialization=original['initialization'], original_model=original,
-        current_source_compatibility_proof=proof_binding, source_compatibility=continuation,
-        authenticated_parameter_archives=reg['archive_sources'],
-        authenticated_scalar_implementation=reg['implementation_sources'])
-    return reg, model, saved, provenance
 
 
 def read_stage(reg, model, saved, index):

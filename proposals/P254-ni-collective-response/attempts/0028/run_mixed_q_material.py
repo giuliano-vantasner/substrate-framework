@@ -88,6 +88,8 @@ def parser():
     p.add_argument('--mode', choices=('plan', 'forward'), required=True)
     p.add_argument('--resume', action='store_true')
     p.add_argument('--energy', action='store_true')
+    p.add_argument('--mean-energy-ledger', type=Path)
+    p.add_argument('--mean-energy-ledger-sha256')
     p.add_argument('--retain-endpoints', action='store_true')
     p.add_argument('--q', nargs=3, type=float, required=True)
     p.add_argument('--atom', type=int, required=True)
@@ -121,6 +123,12 @@ def require_arguments(args):
     if (args.max_memory_bytes > 18*1024**3 or args.worker_memory_bytes > 4*1024**3
             or args.max_output_bytes > 150*1024**3):
         raise ValueError('original aggregate18GiB/worker4GiB/live150GiB ceilings cannot be enlarged')
+    if args.energy != (args.mean_energy_ledger is not None
+                       and args.mean_energy_ledger_sha256 is not None):
+        raise ValueError('--energy requires an explicit --mean-energy-ledger and digest')
+    if not args.energy and (args.mean_energy_ledger is not None
+                            or args.mean_energy_ledger_sha256 is not None):
+        raise ValueError('mean energy ledger is only consumed with --energy')
     q = np.asarray(args.q)
     if not np.isfinite(q).all() or not np.allclose(4*q, np.rint(4*q), atol=1e-10, rtol=0):
         raise ValueError('original commensurate four-cube q required')
@@ -161,6 +169,9 @@ def metadata_inputs(args):
     hb, history = checked_json(args.history, args.history_sha256)
     proof_binding, proof = checked_json(args.execution_proof, args.execution_proof_sha256)
     admit_oracle(proof, existing_dependencies())
+    mean_energy = None
+    if args.energy:
+        mean_energy, _ = checked_json(args.mean_energy_ledger, args.mean_energy_ledger_sha256)
     normalization = dict(source=file_binding(HERE/'local_pulse_energy.py'),
         function='fourier_pulse; physical inverse-DFT coefficient = collective/sqrt(N)',
         convention='physical p_plus=J exp(-2 pi i q.cell)/N; p_minus=conj(p_plus)',
@@ -220,9 +231,9 @@ def metadata_inputs(args):
         prior = json.loads(authenticate(prior_binding).read_text())
         baseline.extend((prior_binding, prior['slots'], record['arrays']))
     borrowed = nested_bindings(initialization, hb, proof_binding, normalization['source'],
-                               baseline, frame_bindings)
+                               baseline, frame_bindings, mean_energy)
     return dict(initialization=initialization, saved=saved, history_binding=hb, history=history,
-        initial=initial, execution_binding=proof_binding, execution=proof,
+        initial=initial, execution_binding=proof_binding, execution=proof, mean_energy=mean_energy,
         normalization=normalization, admissions=admissions, frame_metadata=frame_metadata,
         borrowed=borrowed, shapes=shapes, target_plus=target_plus, target_minus=target_minus,
         steps=steps, small=small, frame_requirements=frame_requirements(
@@ -266,6 +277,8 @@ def execute(args, inputs, sources, budget, directory, result):
     for history in histories.values():
         history.frame_work, history.frame_records = frames, shared_records
     dynamics = NativeMixedDynamics(case, histories, budget=budget, block_size=args.block_size)
+    if args.energy:
+        dynamics.energy_mean_readout = inputs['mean_energy']
     if (list(dynamics.target_plus) != inputs['target_plus']
             or list(dynamics.target_minus) != inputs['target_minus']):
         raise ValueError('metadata target plan differs from genuine full-PW physical geometry')
@@ -449,7 +462,7 @@ def main(argv=None):
                 frame_requirements=inputs['frame_requirements'],
                 amplitude=args.amplitude, cell=args.cell, time=args.time, subdivisions=args.subdivisions,
                 cpus=args.cpus, caps=caps(args), block_size=args.block_size, energy=args.energy,
-                retain_endpoints=args.retain_endpoints,
+                retain_endpoints=args.retain_endpoints, mean_energy_ledger=inputs['mean_energy'],
                 source_bindings=sources, inputs=inputs['borrowed']))
             owner_path = directory/'owner.json'
             if owner_path.exists():

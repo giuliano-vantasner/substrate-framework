@@ -99,19 +99,19 @@ def reserve_terminal_and_ledger(budget):
 
 
 @contextmanager
-def producer_exclusion(admission):
-    """Hold the producer's actual existing exclusive-owner lock for t>0.
+def producer_exclusion(producer_directory, state):
+    """Hold the actual existing producer lock before positive-time admission.
 
     The initial immutable physical boundary is a deliberately read-only smoke:
     it neither takes away the live producer's lock nor borrows its writable work.
     """
-    if admission['boundary_kind'] == 'initial':
+    if state['kind'] == 'physical-local-pulse-raw-electronic-zero' and state['time'] == 0:
         yield dict(policy='isolated read-only initial physical-boundary engineering readout',
                    producer_may_be_running=True, positive_time_claim=False)
         return
-    if admission['boundary_kind'] != 'physical-endpoint' or admission['state']['time'] <= 0:
+    if state['kind'] != 'mixed-rk4-physical-endpoint' or state['time'] <= 0:
         raise ValueError('unrecognized physical-boundary exclusion policy')
-    path = Path(admission['producer_directory'])/'owner.lock'
+    path = Path(producer_directory)/'owner.lock'
     if path.is_symlink() or not path.is_file():
         raise ValueError('existing authentic producer owner.lock required for positive-time readout')
     with path.open('rb') as lock:

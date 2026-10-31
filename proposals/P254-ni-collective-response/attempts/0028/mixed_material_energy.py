@@ -7,9 +7,9 @@ time. Only the mixed bare H0 trace is newly contracted: four borrowed Gamma
 dyads per source, original raw D/weights once, arbitrary full-PW column actions
 counted against the same QBudget and executed through the real QWork barrier.
 
-The default source is saved-mean-energy-readout-001/result.json. A caller may
-set dynamics.energy_mean_readout to another authenticated ledger of the same
-original-source schema. Unsupported saved-mean times return status=unavailable;
+Callers must set dynamics.energy_mean_readout to an explicit authenticated
+saved-mean ledger with current-source authority and separate historical proof.
+Unsupported saved-mean times return status=unavailable;
 authentication/resource/worker failures retain a durable failed attempt and
 raise. A completed result is replayable without repeating physical actions.
 This reports complex d2E/(d lambda d eta), with no half or real projection. It
@@ -29,6 +29,7 @@ import numpy as np
 from substrate_framework.partitioned_q_storage import QBudget, durable_publish, sync_directory
 from substrate_framework.streamed_material_state import authenticate, file_binding
 import joint_mean_energy_sources
+import joint_mean_energy_authority
 import mixed_excitation_energy
 import mixed_material_energy_sources
 from mixed_frame_response import DensityDyad
@@ -76,7 +77,7 @@ def _terminal(path, value):
 
 def _sources(dynamics, work, budget):
     modules = (mixed_excitation_energy, mixed_material_energy_sources,
-        joint_mean_energy_sources, sys.modules[type(work).__module__],
+        joint_mean_energy_sources, joint_mean_energy_authority, sys.modules[type(work).__module__],
         sys.modules[type(budget).__module__])
     sources = dict(dynamics.sources, energy_adapter=file_binding(__file__),
         **{m.__name__: file_binding(m.__file__) for m in modules})

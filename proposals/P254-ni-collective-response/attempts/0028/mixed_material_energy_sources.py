@@ -7,17 +7,14 @@ an endpoint, and canonical means are never interpolated. This adapter restores
 source authority using the existing saved-mean accounting APIs; it performs no
 frame, H0, density, gradient, field-vertex or kernel contraction.
 """
-from pathlib import Path
 from types import SimpleNamespace
 
 import numpy as np
 
 from substrate_framework.streamed_material_state import file_binding
 from joint_mean_energy_sources import (
-    bound_json, parameter_identities, read_stage, restore_sources, same_binding)
-
-HERE = Path(__file__).resolve().parent
-DEFAULT_LEDGER = HERE/'saved-mean-energy-readout-001/result.json'
+    bound_json, parameter_identities, read_stage, same_binding)
+from joint_mean_energy_authority import restore_current_sources
 
 
 class MeanSourceUnavailable(ValueError):
@@ -30,10 +27,10 @@ class MeanSourceUnavailable(ValueError):
 
 
 def ledger_binding(dynamics):
-    """An optional explicit authenticated ledger replaces, not supplements, default."""
+    """Require the explicitly selected authenticated mean ledger."""
     supplied = getattr(dynamics, 'energy_mean_readout', None)
     if supplied is None:
-        return file_binding(DEFAULT_LEDGER)
+        raise ValueError('an explicit authenticated current saved-mean energy ledger is required')
     # Do not silently rebind changed bytes at an explicitly supplied source.
     bound_json(supplied)
     return dict(supplied)
@@ -60,7 +57,8 @@ def saved_mean(state, dynamics, ledger_source):
             or ledger.get('status') != 'complete'):
         raise ValueError('complete original saved-mean energy ledger required')
     registration = ledger['provenance']['registration']
-    reg, model, saved, provenance = restore_sources(registration['path'])
+    reg, model, saved, provenance = restore_current_sources(
+        registration, ledger['provenance']['current_source_compatibility_proof'])
     if (not same_binding(registration, provenance['registration'])
             or ledger['provenance'] != provenance):
         raise ValueError('ledger and restored original model/source digest authority differ')

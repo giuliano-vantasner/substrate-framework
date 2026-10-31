@@ -3,7 +3,6 @@
 Historical physical execution and current source admission remain distinct.
 Original registration, mean, stage, scalar and implementation bindings are never
 rewritten. This module does not load a frame or apply a physical operator.
-The existing live producer's frozen reader is intentionally untouched.
 """
 from hashlib import sha256
 import json
