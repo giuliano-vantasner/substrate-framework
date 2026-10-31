@@ -22,6 +22,7 @@ from substrate_framework.joint_response_observables import spatial_pair
 from substrate_framework.spatial_readout_metrics import periodic_distances, selected_weight
 from run_joint_spatial_readout import encode, sources
 from joint_spatial_receipt_oracle import exercise_receipts
+from joint_spatial_source_local_oracle import exercise_source_local
 
 
 def main():
@@ -146,6 +147,7 @@ def main():
                       cells=cells, t=t, s=s, mesh=mesh,
                       expected_ab=expected_ab, expected_ba=expected_ba,
                       encode=encode, close=close, reject=reject)
+    exercise_source_local(encode=encode, close=close, reject=reject)
     bindings = sources()
     result = dict(schema='P254-joint-spatial-readout-oracle-v1', status='passed',
         source_bindings=bindings, source_file_count=len(bindings), check_count=len(checks), checks=checks,

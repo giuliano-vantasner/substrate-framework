@@ -11,7 +11,7 @@ from joint_spatial_provenance import COMMITTED_SCHEMA, authenticate, canonical
 HERE = Path(__file__).resolve().parent
 
 
-def _native_fixture(save, forward, request_binding, worker, index):
+def _native_fixture(save, forward, request_binding, worker, index, *, physical=None, scalar=None):
     request = bound_json(request_binding)
     sources = forward['source_bindings']+[worker]
     consumer = sha256(canonical(dict(model=forward['model_identity'], q=forward['q'],
@@ -21,10 +21,12 @@ def _native_fixture(save, forward, request_binding, worker, index):
         dict(schema='streamed-joint-response-v1', complete=True, kind='forward',
              identity=request['identity'], q=forward['q'], time=request['times'][-1],
              provenance=provenance))
-    physical = save('native-physical-proof-%d.json' % index,
-        dict(schema='P254-joint-partitioned-q-oracle-v1', status='passed', finite_fixture_only=True))
-    scalar = save('native-readout-proof-%d.json' % index,
-        dict(schema='P254-joint-q-readout-oracle-v1', status='passed', finite_fixture_only=True))
+    if physical is None:
+        physical = save('native-physical-proof-%d.json' % index,
+            dict(schema='P254-joint-partitioned-q-oracle-v1', status='passed', finite_fixture_only=True))
+    if scalar is None:
+        scalar = save('native-readout-proof-%d.json' % index,
+            dict(schema='P254-joint-q-readout-oracle-v1', status='passed', finite_fixture_only=True))
     operator = dict(case=forward['case'], initialization=forward['initialization'],
         model_identity=forward['model_identity'], specification=forward['finite_specification'],
         history=forward['baseline'], q=forward['q'], time=request['times'][-1],

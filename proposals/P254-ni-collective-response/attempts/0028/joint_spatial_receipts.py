@@ -11,12 +11,13 @@ import re
 import numpy as np
 
 from substrate_framework.material_control_reference import bound_json, bound_arrays
-from substrate_framework.streamed_material_state import file_binding
 from substrate_framework.joint_spatial_readout import ORIGINS, complete_grid
 from joint_spatial_provenance import (
     COMMITTED_SCHEMA, authenticate, binding_key, canonical, same_binding, source_key,
     validate_committed_split,
 )
+from joint_spatial_source_local import MATERIAL_SCHEMA, validate_source_local
+from joint_spatial_dual_coherent import SCHEMA as DUAL_SCHEMA
 
 
 def number(value):
@@ -46,13 +47,32 @@ def read_entries(entries):
             if request.get('mode') != 'all':
                 raise ValueError('single-receipt entry requires genuine all-mode output')
             pair, pair_request = r, request
+        elif set(entry) == {'coherent', 'pair'}:
+            if set(entry['coherent']) != {'result', 'seed'} or set(entry['pair']) != {'result', 'owner'}:
+                raise ValueError('native dual coherent entry requires exact result/seed and pair/owner')
+            r, request = bound_json(entry['coherent']['result']), bound_json(entry['coherent']['seed'])
+            pair, pair_request = bound_json(entry['pair']['result']), bound_json(entry['pair']['owner'])
+            if (r.get('schema') != DUAL_SCHEMA or not same_binding(r['seed'], entry['coherent']['seed'])
+                    or not same_binding(r['pair_result'], entry['pair']['result'])
+                    or not same_binding(pair['owner'], entry['pair']['owner'])):
+                raise ValueError('native dual coherent original pair/seed/owner bindings differ')
         elif set(entry) == {'forward', 'pair'}:
-            if any(set(entry[side]) != {'result', 'request'} for side in ('forward', 'pair')):
-                raise ValueError('each split side must bind its result and request')
+            if set(entry['forward']) != {'result', 'request'}:
+                raise ValueError('forward side must bind its original result and request')
             r, request = bound_json(entry['forward']['result']), bound_json(entry['forward']['request'])
-            pair, pair_request = bound_json(entry['pair']['result']), bound_json(entry['pair']['request'])
-            if request.get('mode') != 'forward' or pair_request.get('mode') != 'pair':
-                raise ValueError('split entry requires genuine forward and pair modes')
+            if set(entry['pair']) == {'result', 'owner'}:
+                pair = bound_json(entry['pair']['result'])
+                pair_request = bound_json(entry['pair']['owner'])
+                if pair.get('schema') != MATERIAL_SCHEMA or not same_binding(entry['pair']['owner'], pair['owner']):
+                    raise ValueError('native source-local pair must bind its own original owner')
+            elif set(entry['pair']) == {'result', 'request'}:
+                pair, pair_request = bound_json(entry['pair']['result']), bound_json(entry['pair']['request'])
+                if pair_request.get('mode') != 'pair':
+                    raise ValueError('legacy split pair requires genuine pair mode')
+            else:
+                raise ValueError('pair side must bind result/request or native result/owner')
+            if request.get('mode') != 'forward':
+                raise ValueError('split entry requires genuine forward mode')
             if (r.get('schema') == COMMITTED_SCHEMA
                     and not same_binding(entry['forward']['request'],
                                          r['historical_producer_request']['binding'])):
@@ -98,7 +118,7 @@ def validate_split(record, request, pair, pair_request):
 
 
 def validate_records(records, requests, saved, initialization, mesh, *,
-                     pair_records=None, pair_requests=None):
+                     pair_records=None, pair_requests=None, source_snapshots=()):
     """Join original all-mode or matched split receipts after byte authentication."""
     if not records or len(records) != len(requests):
         raise ValueError('one result and request per q required')
@@ -109,8 +129,24 @@ def validate_records(records, requests, saved, initialization, mesh, *,
         raise ValueError('one independently authenticated pair side per q required')
     complete_grid([r['q'] for r in records], mesh)
     n = int(np.prod(mesh))
-    common, ab, ba, coherent = None, [], [], []
+    common, ab, ba, coherent, source_families = None, [], [], [], {}
     for r, request, pair, pair_request in zip(records, requests, pair_records, pair_requests):
+        family = pair.get('schema')
+        sources = pair['source_bindings']
+        selected_sources = source_key(sources)
+        if family in source_families and source_families[family] != selected_sources:
+            raise ValueError('mixed selected-q producer sources within one algorithm')
+        source_families[family] = selected_sources
+        if family == MATERIAL_SCHEMA:
+            selected, seed, rows = validate_source_local(r, request, pair, pair_request,
+                saved, initialization, mesh, source_snapshots)
+            if common is not None and common != selected:
+                raise ValueError('mixed selected-q scientific request')
+            common = selected
+            coherent.append(number(seed['readout']))
+            ab.append(rows[0])
+            ba.append(rows[1])
+            continue
         seed = validate_split(r, request, pair, pair_request)
         r, request = pair, pair_request
         if (r.get('schema') != 'P254-joint-q-material-v2' or r.get('status') != 'complete'
@@ -156,7 +192,8 @@ def validate_records(records, requests, saved, initialization, mesh, *,
             model_identity=r['model_identity'], initialization=binding_key(initialization),
             preparation=quantum['preparation_identity'], observable=r['observable'],
             dynamics=r['dynamics'], times=r['time_grid'], second_times=r['second_time_grid'],
-            sources=source_key(r['source_bindings']), atom=request['atom'], axis=request['axis'],
+            atom=request['atom'], axis=request['axis'],
+            seed_atom=request['atom'], seed_axis=request['axis'],
             amplitude=request['amplitude'], cell=request['cell'], subdivisions=request['subdivisions'],
             block_size=request['block_size'])
         if common is not None and common != selected:
@@ -213,7 +250,8 @@ def load_material(manifest_binding):
     entries = manifest['selected_q']
     records, requests, pairs, pair_requests = read_entries(entries)
     common, coherent, ab, ba = validate_records(records, requests, saved, ib, mesh,
-                                               pair_records=pairs, pair_requests=pair_requests)
+                                               pair_records=pairs, pair_requests=pair_requests,
+                                               source_snapshots=manifest.get('source_snapshots', ()))
     atom = common['atom']
     if (not 1 <= atom <= len(arrays['atom_names'])
             or common['observable'] != 'original-%s%d%s-total-force' % (arrays['atom_names'][atom-1], atom, common['axis'])
@@ -226,9 +264,12 @@ def load_material(manifest_binding):
             if key not in authenticated:
                 authenticate(source, manifest.get('source_snapshots', ()))
                 authenticated.add(key)
-    producer = Path(__file__).resolve().with_name('run_joint_q_material.py')
-    if binding_key(file_binding(producer)) not in authenticated:
-        raise ValueError('selected-q receipt does not bind the actual material producer')
+    for pair in pairs:
+        producer = Path(__file__).resolve().with_name(
+            'run_source_local_q_material.py' if pair.get('schema') == MATERIAL_SCHEMA
+            else 'run_joint_q_material.py')
+        if not any(Path(source['path']).resolve() == producer for source in pair['source_bindings']):
+            raise ValueError('selected-q receipt does not bind its original material producer')
     baseline_binding = records[0]['baseline']
     baseline = bound_json(baseline_binding)
     if (baseline.get('schema') != 'streamed-joint-mean-v1' or baseline.get('complete') is not True
@@ -260,14 +301,17 @@ def load_material(manifest_binding):
                     convention='cell lattice vectors are columns; identical atom offsets cancel in distances')
     return dict(manifest=manifest, common=common, saved=saved, mesh=mesh, geometry=geometry,
                 receipt_assembly_by_q=['all' if 'result' in entry else
-                    ('committed-forward+pair' if record.get('schema') == COMMITTED_SCHEMA else 'forward+pair')
-                    for entry, record in zip(entries, records)],
+                    ('dual-coherent+source-local-pair' if record.get('schema') == DUAL_SCHEMA else
+                     'committed-forward+source-local-pair' if pair.get('schema') == MATERIAL_SCHEMA else
+                     'committed-forward+pair' if record.get('schema') == COMMITTED_SCHEMA else 'forward+pair')
+                    for entry, record, pair in zip(entries, records, pairs)],
                 q=np.asarray([r['q'] for r in records]), coherent=coherent, ab=ab, ba=ba,
                 mean_diagnostics=mean, baseline=baseline_binding,
                 baseline_time=baseline['time_ry_inverse'],
-                producer_diagnostics=[dict(q=r['q'], numerical_accuracy_certified=r.get('numerical_accuracy_certified'),
+                producer_diagnostics=[dict(q=record['q'], numerical_accuracy_certified=r.get('numerical_accuracy_certified'),
+                    execution_scheme=r.get('covariance', r.get('quantum', {})).get('execution_scheme'),
                     raw_frame_compatibility=dict(
-                        edge_count=len(r['quantum']['raw_frame_compatibility']),
-                        left_max=max(row['left'] for row in r['quantum']['raw_frame_compatibility']),
-                        right_max=max(row['right'] for row in r['quantum']['raw_frame_compatibility'])))
-                    for r in pairs])
+                        edge_count=len(r.get('covariance', r.get('quantum', {}))['raw_frame_compatibility']),
+                        left_max=max(row['left'] for row in r.get('covariance', r.get('quantum', {}))['raw_frame_compatibility']),
+                        right_max=max(row['right'] for row in r.get('covariance', r.get('quantum', {}))['raw_frame_compatibility'])))
+                    for record, r in zip(records, pairs)])

@@ -26,6 +26,7 @@ from substrate_framework.source_local_q_covariance import SourceLocalTwoSidedCov
 from substrate_framework.source_local_q_state import next_coefficients
 from substrate_framework.source_local_q_plan import source_local_plan
 from substrate_framework.streamed_joint_covariance import initial_contraction
+from substrate_framework.source_local_q_edge import dual_moments, dual_free
 from substrate_framework.streamed_material_state import file_binding
 
 
@@ -88,6 +89,78 @@ def exact_dual(response, system, probe, times):
     return unpack_legs(response, value)
 
 
+def split_edge_checks(system, response, executor, probe, budget, tag):
+    """Compare both consumed projections to the unchanged complete generator."""
+    state = terminal(response, system, probe, 0.)
+    executor.prepare_time(0.)
+    for index in range(len(response.edges)):
+        reference = executor.independent_edge(index, 0., state, True)
+        before = budget.snapshot()['hamiltonian_actions']
+        moments = dual_moments(executor, index, 0., state)
+        check(tag+'_moment_only_no_discarded_H0_'+str(index),
+              budget.snapshot()['hamiltonian_actions']-before, 0, tolerance=0.)
+        before = budget.snapshot()['hamiltonian_actions']
+        free = dual_free(executor, index, 0., state)
+        check(tag+'_free_only_original_two_H0_'+str(index),
+              budget.snapshot()['hamiltonian_actions']-before, 2, tolerance=0.)
+        for name in ('n', 'g', 'ell'):
+            check(tag+'_moment_only_'+name+'_'+str(index),
+                  moments[name], reference[name], tolerance=2e-11)
+        for name, value in zip(('ket', 'bra'), free):
+            check(tag+'_free_only_'+name+'_'+str(index),
+                  value, reference[name], tolerance=2e-11)
+
+
+def symbolic_split_cost():
+    count = sp.symbols('count', integer=True, positive=True)
+    previous = sp.symbols('previous', integer=True, nonnegative=True)
+    free = sp.summation(16*previous+6, (previous, 0, count-1))+4*count
+    if sp.simplify(free-(8*count**2+2*count)) != 0:
+        raise AssertionError('exact free-only replay count differs')
+    if sp.simplify(free+1-(8*count**2+2*count)) == 0:
+        raise AssertionError('one discarded H0 operation mutation was not detected')
+    CHECKS.append(dict(name='symbolic_split_replay_cost', passed=True, exact=True,
+        free_generator_calls=str(free), moment_only_calls=str(4*count),
+        one_extra_generator_sensitive=True))
+
+
+def contraction_restart_check(preparation, states, executor, directory, grids, reference):
+    from substrate_framework import source_local_q_contraction as contraction
+    original, cpus = contraction._electronic_source, executor.edge_work.cpus
+    last = len(executor.r.edges)-1
+    def interrupted(*args):
+        value = original(*args)
+        if args[-1] == last:
+            raise RuntimeError('injected interruption after charged final-source computation')
+        return value
+    for state in states:
+        state.release()
+    executor.edge_work.cpus = (cpus[0],)
+    contraction._electronic_source = interrupted
+    try:
+        try:
+            contraction.source_contraction(preparation, *states, executor, directory)
+        except RuntimeError:
+            pass
+        else:
+            raise AssertionError('interrupted final source was published')
+    finally:
+        contraction._electronic_source = original
+        executor.edge_work.cpus = cpus
+    prefix = {path: path.read_bytes() for path in directory.glob('*/generation-*/item-*/complete.json')}
+    check('contraction_interruption_preserves_completed_prefix', len(prefix), last, tolerance=0.)
+    before = executor.budget.snapshot()['hamiltonian_actions']
+    recovered = contraction.source_contraction(preparation, *states, executor, directory)
+    check('contraction_resume_charges_only_uncommitted_source',
+        executor.budget.snapshot()['hamiltonian_actions']-before,
+        8*sum(len(grid)-1 for grid in grids), tolerance=0.)
+    if any(path.read_bytes() != raw for path, raw in prefix.items()):
+        raise AssertionError('contraction resume rewrote completed source receipts')
+    for ordering in ('AB', 'BA'):
+        check('contraction_resume_original_'+ordering,
+              recovered[ordering]['total'], reference[ordering]['total'], tolerance=2e-11)
+
+
 def exercise(system, gamma, unequal, directory, budget, cpus):
     r = system.response(gamma)
     tag = ('Gamma' if gamma else 'directed-rectangular-q')+('-unequal-weights' if unequal else '')
@@ -101,6 +174,7 @@ def exercise(system, gamma, unequal, directory, budget, cpus):
     executor = PartitionedQResponse(r, history, kernel_adjoint=lambda n, **kw: system.k*n,
         grid_measure=1., budget=budget, directory=directory/'executor', identity=tag,
         cpus=cpus, work_directory=directory/'physical-work')
+    split_edge_checks(system, r, executor, left, budget, tag)
     from substrate_framework.joint_ordered_sources import JointProductPreparation
     preparation = JointProductPreparation(r, system.stage(0), ionic_ordered=system.wi,
         ionic_minus_ordered=system.wi, field_ordered=system.wf if gamma else np.zeros((0,0)),
@@ -116,6 +190,9 @@ def exercise(system, gamma, unequal, directory, budget, cpus):
         states.append(state)
         expected.append(reference)
     reference = initial_contraction(preparation, *expected)
+    if gamma and not unequal:
+        contraction_restart_check(preparation, states, executor,
+            directory/'interrupted-contraction', grids, reference)
     covariance = SourceLocalTwoSidedCovariance(preparation, executor)
     actual = covariance.pair(left, right, *grids, directory/'pair')
     for ordering in ('AB', 'BA'):
@@ -163,8 +240,13 @@ def exercise(system, gamma, unequal, directory, budget, cpus):
     finally:
         path.write_bytes(original)
     payloads = list((directory/'pair').glob('**/*.npy'))
-    if any(path.name != 'potential.npy' for path in payloads):
-        raise AssertionError('context-only propagation retained a non-kernel payload')
+    for path in payloads:
+        if path.name == 'potential.npy':
+            continue
+        value = np.load(path, mmap_mode='r', allow_pickle=False)
+        if (path.name not in ('ordered.npy', 'compatibility.npy') or value.shape != (2,)
+                or value.nbytes > 32):
+            raise AssertionError('source-local propagation retained a nonscalar electronic payload')
     CHECKS.append(dict(name=tag+'_actual_payload_inventory', passed=True,
         payloads=[str(p.relative_to(directory)) for p in payloads],
         result_binding=actual['context_pair_binding']))
@@ -239,6 +321,7 @@ def main():
             *[ROOT/'src/substrate_framework'/name for name in (
                 'source_local_q_state.py', 'source_local_q_context.py',
                 'source_local_q_response.py', 'source_local_q_covariance.py', 'source_local_q_plan.py',
+                'source_local_q_edge.py', 'source_local_q_contraction.py',
                 'partitioned_q_response.py', 'streamed_joint_response.py',
                 'streamed_joint_covariance.py', 'partitioned_q_work.py',
                 'partitioned_q_storage.py', 'joint_ordered_sources.py')],
@@ -248,6 +331,7 @@ def main():
         scientific_scope='Finite moving examples only; not an actual material-noise result or a production disk-fit claim')
     try:
         symbolic_reverse()
+        symbolic_split_cost()
         system = FiniteSystem()
         for gamma, unequal, name in ((True, False, 'Gamma'), (False, False, 'directed'), (True, True, 'weighted')):
             exercise(system, gamma, unequal, args.work/name, budget, args.cpus)

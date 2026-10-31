@@ -28,7 +28,8 @@ from source_local_material_owner import (
     finish_receipt, isolated_output, material_budget, material_owner,
     reserve_terminal_and_ledger, terminal_signals)
 from source_local_material_runtime import (
-    build_runtime, material_inputs, material_sources, measure_edge, metadata_plan)
+    build_runtime, material_inputs, material_sources, metadata_plan)
+from source_local_material_probe import measure_edge
 from substrate_framework.joint_field_probes import OBSERVABLES
 from substrate_framework.source_local_q_covariance import SourceLocalTwoSidedCovariance
 from substrate_framework.streamed_material_state import file_binding
@@ -84,7 +85,7 @@ def scientific_request(args, sources, caps):
                                    for path, sha in args.frame_admission]
     return canonical(encode(dict(schema=SCHEMA+'-request', selectors=selectors,
         explicit_inputs=explicit,
-        source_bindings=sources, caps=caps, cpus=args.cpus, blas_threads=1,
+        source_bindings=sources, caps=caps, blas_threads=1,
         scientific_namespace='scientific-work', original_time_origin=0.,
         continuation='owned source-local contexts only; explicit bindings are authenticated restart hints')))
 

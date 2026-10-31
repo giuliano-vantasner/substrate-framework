@@ -17,10 +17,12 @@ def _plan(base, times, second_times, aliases, edges, columns):
     # For reverse interval c, each moment stage replays all 4c previous
     # derivatives, then its own prefix and current free/moment operation.
     # Final source contraction replays four derivatives per interval once.
-    calls = sum(8*count*count+6*count for count in intervals)
+    free_calls = sum(8*count*count+2*count for count in intervals)
+    moment_calls = 4*sum(intervals)
     potentials = 4*sum(intervals)*base['complete_potential_bytes']
     moments = base['independent_moments_bytes'] if sum(intervals) else 0
     frames = len(new_frames)*base['actual_frame_bytes_per_time']
+    source_scalars = 48*edges  # Two complex ordered values and two float64 norms.
     return dict(execution_scheme='source-local-discrete-rk4-v1', mode='pair',
         full_q_state_bytes_by_geometry=base['one_q_state_bytes'],
         retained_full_q_states=0, full_q_payload_bytes_allocated=0,
@@ -29,11 +31,14 @@ def _plan(base, times, second_times, aliases, edges, columns):
         owned_frame_times=sorted(new_frames), frame_payload_upper_bound=frames,
         moment_payload_upper_bound=moments,
         retained_kernel_context_payload_bytes=potentials,
-        successful_peak_payload_upper_bound=frames+moments+potentials,
-        final_payload_upper_bound=potentials,
-        edge_generator_calls=calls*edges,
-        bare_hamiltonian_actions=2*calls*edges,
-        bare_hamiltonian_columns=calls*columns,
+        retained_source_scalar_payload_bytes=source_scalars,
+        successful_peak_payload_upper_bound=frames+moments+potentials+source_scalars,
+        final_payload_upper_bound=potentials+source_scalars,
+        edge_generator_calls=(free_calls+moment_calls)*edges,
+        free_generator_calls=free_calls*edges,
+        moment_calls=moment_calls*edges,
+        bare_hamiltonian_actions=2*free_calls*edges,
+        bare_hamiltonian_columns=free_calls*columns,
         limitations='Payload only: excludes measured JSON/header/reservation slack and failed attempts. Frame reconstruction has additional charged actions. Native memory and runtime require a representative physical measurement; this is not a production grant or an ETA.',
         tradeoff='Recompute full original edge equations from durable global contexts; no Q-sized input, derivative, accumulator, seed or retained left output is written.')
 

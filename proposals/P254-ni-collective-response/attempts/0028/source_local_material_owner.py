@@ -86,7 +86,7 @@ def material_owner(directory, request, *, resume, started_unix):
                 or not math.isfinite(owner['started_unix'])
                 or owner['started_unix'] > time()
                 or not isinstance(owner.get('material_id'), str)):
-            raise ValueError('resume requires identical source-local request, sources, caps and CPUs')
+            raise ValueError('resume requires identical scientific request, sources and caps')
     else:
         owner = dict(schema=SCHEMA+'-owner', material_id=uuid4().hex,
                      request=request, started_unix=started_unix)

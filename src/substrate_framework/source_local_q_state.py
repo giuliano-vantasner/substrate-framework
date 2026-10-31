@@ -8,6 +8,7 @@ from types import SimpleNamespace
 import numpy as np
 
 from .streamed_joint_response import NAMES
+from .source_local_q_edge import dual_free
 
 
 def small_state(response, values=None):
@@ -86,10 +87,10 @@ def replay_interval(executor, index, terminal, interval, *, prefix=None):
         if prefix == stage:
             return current
         small = small_state(executor.r, decode_small(context['record']['input_small']))
-        values = executor.independent_edge(index, context['record']['stage_time'],
-                                           edge_state(index, current, small), True)
+        free = dual_free(executor, index, context['record']['stage_time'],
+                         edge_state(index, current, small))
         derivative = dual_feedback(executor, index, context['record']['stage_time'],
-                                   (values['ket'], values['bra']), context['potential'])
+                                   free, context['potential'])
         out = combine_pair((1, out), (1, derivative))
         if stage < 3:
             a, b = next_coefficients(stage, dt)

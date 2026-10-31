@@ -1,17 +1,13 @@
 """Actual saved-material construction and one-edge measurement for source-local q.
 
 Metadata restoration authenticates receipts, not a newly evolved trajectory. Only
-``build_runtime`` constructs the original physical providers; ``measure_edge``
-executes a terminal probe and one original independent dual edge. Two-sided
-covariance execution belongs to the caller, not this module.
+``build_runtime`` constructs the original physical providers. Two-sided
+covariance and bounded Native measurements are separate consumers.
 """
 from dataclasses import dataclass
 from functools import partial
-import os
 from pathlib import Path
-import resource
 import sys
-from time import perf_counter, process_time
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[3]
@@ -21,25 +17,20 @@ sys.path[:0] = [str(ROOT/'src'), str(HERE), str(HERE.parent/'0025'), str(HERE.pa
 # implementation of its model or executable entry point.
 import run_joint_q_material as physical
 import numpy as np
-from threadpoolctl import threadpool_info
 
 from actual_frame_cache_provenance import _complete_cache, _history_slots, _request
 from mixed_material_driver_support import (
     RetainedFrameWork, checked_json, frame_requirements, nested_bindings, time_steps)
 from substrate_framework.material_control_reference import bound_arrays, bound_json
-from substrate_framework.partitioned_joint_budget import resident_bytes
 from substrate_framework.partitioned_q_response import PartitionedQResponse, frame_times
-from substrate_framework.partitioned_q_storage import bounded_array_identity
 from substrate_framework.source_local_q_plan import source_local_initial_plan, source_local_plan
-from substrate_framework.source_local_q_state import edge_state, small_state, terminal_edge
-from substrate_framework.streamed_joint_response import NAMES
 from substrate_framework.streamed_material_state import authenticate, file_binding
 
 
 SOURCE_LOCAL_MODULES = (
     'source_local_q_state.py', 'source_local_q_context.py',
     'source_local_q_response.py', 'source_local_q_covariance.py',
-    'source_local_q_plan.py')
+    'source_local_q_plan.py', 'source_local_q_edge.py', 'source_local_q_contraction.py')
 
 
 @dataclass(frozen=True)
@@ -56,6 +47,7 @@ class MaterialRuntime:
 def material_sources():
     """Current physical-provider and source-local seed bindings for the owner."""
     paths = [HERE/'source_local_material_runtime.py', HERE/'run_source_local_q_oracle.py',
+             HERE/'source_local_material_probe.py',
              HERE/'mixed_material_driver_support.py', HERE/'actual_frame_cache_provenance.py']
     paths += [ROOT/'src/substrate_framework'/name for name in SOURCE_LOCAL_MODULES]
     sources = physical.bindings()+[file_binding(path) for path in paths]
@@ -79,7 +71,7 @@ def _selectors(args):
     return dict(case=args.case, q=q.tolist(), time=float(args.time),
         second_time=float(args.second_time), subdivisions=args.subdivisions,
         atom=args.atom, axis=args.axis, observable=args.observable, field_axis=args.field_axis,
-        dynamics=args.dynamics, block_size=args.block_size, cpus=cpus)
+        dynamics=args.dynamics, block_size=args.block_size)
 
 
 def _metadata_grid(history, final_time, subdivisions):
@@ -347,81 +339,3 @@ def build_runtime(args, inputs, *, budget, directory, source_bindings):
     return MaterialRuntime(executor, preparation, probe, times, second_times, provenance, plan)
 
 
-def _process_evidence():
-    usage = resource.getrusage(resource.RUSAGE_SELF)
-    return dict(pid=os.getpid(), affinity=sorted(os.sched_getaffinity(0)),
-        current_rss_bytes=resident_bytes(os.getpid()), peak_rss_bytes=int(usage.ru_maxrss)*1024,
-        user_cpu_seconds=usage.ru_utime, system_cpu_seconds=usage.ru_stime,
-        threadpools=threadpool_info())
-
-
-def _array_evidence(value):
-    result = bounded_array_identity(value)
-    result.update(nbytes=int(value.nbytes), finite=bool(np.isfinite(value).all()))
-    if not result['finite']:
-        raise FloatingPointError('non-finite original full-PW edge measurement')
-    return result
-
-
-def _typed_array(value, shape):
-    if not isinstance(value, np.ndarray) or value.shape != tuple(shape) or value.dtype != np.complex128:
-        raise ValueError('original full-shape complex128 edge result required')
-    return _array_evidence(value)
-
-
-def measure_edge(runtime, *, index, time=0.0):
-    """Measure one unreduced terminal/independent edge, never whole noise/RHS."""
-    executor, probe = runtime.executor, runtime.probe
-    response, budget = executor.r, executor.budget
-    if type(index) is not int or not 0 <= index < len(response.edges):
-        raise ValueError('selected original explicit edge index required')
-    time = float(time)
-    if not np.isfinite(time) or not 0 <= time <= executor.edge_stage.final.time:
-        raise ValueError('selected probe time must be covered by actual saved history')
-    probe.validate(response)
-    budget.check_processes(os.getpid(), [])
-    before, process_before = budget.snapshot(), _process_evidence()
-    started, cpu_started = perf_counter(), process_time()
-    executor.prepare_time(time)
-    frames_done = perf_counter()
-    pair = terminal_edge(executor, probe, time, index)
-    terminal_done = perf_counter()
-    small = small_state(response, {name: np.array(getattr(probe, name), copy=True) for name in NAMES})
-    values = executor.independent_edge(index, time, edge_state(index, pair, small), True)
-    independent_done = perf_counter()
-    edge = response.edges[index]
-    source, target = response.sectors[edge.source], response.sectors[edge.target]
-    shapes = dict(ket=(target.shape[0], source.shape[1]),
-                  bra=(target.shape[1], source.shape[0]),
-                  n=response.density_shape, g=(response.ndof,), ell=(3,))
-    if set(values) != set(shapes):
-        raise ValueError('original independent-edge typed output keys changed')
-    terminal = dict(ket=_typed_array(pair[0], shapes['ket']), bra=_typed_array(pair[1], shapes['bra']),
-        small={name: _array_evidence(np.asarray(getattr(small, name))) for name in NAMES})
-    output = {name: _typed_array(value, shapes[name]) for name, value in values.items()}
-    budget.check_processes(os.getpid(), [])
-    after, process_after = budget.snapshot(), _process_evidence()
-    counters = ('hamiltonian_actions', 'action_columns', 'cumulative_write_bytes_reserved',
-                'cumulative_allocation_bytes_reserved', 'mapped_overwrite_bytes_reserved',
-                'retired_payload_bytes', 'live_bytes_reserved')
-    return dict(schema='P254-source-local-material-one-edge-probe-v1', status='complete',
-        measurement='actual terminal_edge followed by original independent_edge(dual=True)',
-        executor_identity=executor.identity, baseline=runtime.provenance['baseline'],
-        source_bindings=runtime.provenance['source_bindings'], stage=executor.edge_stage.stage_identity(time),
-        time=time, index=index, source=edge.source, target=edge.target,
-        source_slot=executor.edge_stage.initial.slots[edge.source].identity,
-        target_slot=executor.edge_stage.initial.slots[edge.target].identity,
-        source_full_shape=list(source.shape), target_full_shape=list(target.shape),
-        original_sector_count=len(response.sectors), original_edge_count=len(response.edges),
-        full_original_pw_and_columns=True, observable=probe.identity, dynamics=executor.dynamics,
-        terminal=terminal, independent_edge=output,
-        budget_before=before, budget_after=after,
-        budget_delta={key: after[key]-before[key] for key in counters},
-        process_before=process_before, process_after=process_after,
-        timing=dict(frame_barrier_seconds=frames_done-started,
-            terminal_probe_seconds=terminal_done-frames_done,
-            independent_edge_seconds=independent_done-terminal_done,
-            total_wall_seconds=perf_counter()-started, parent_cpu_seconds=process_time()-cpu_started),
-        whole_rhs_executed=False, pair_executed=False, whole_noise_result=False,
-        numerical_accuracy_certified=False,
-        limitations='One full original edge and genuine terminal probe only; no complete global moments, feedback barrier, RK4 pullback or two-sided covariance. Interior-time frame preparation may charge all original 128 source exponentials; measured budget deltas include that work. RSS evidence is before/after process residency and OS lifetime peak, not a separately sampled per-operation peak.')

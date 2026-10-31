@@ -6,6 +6,8 @@ Each selected_q entry binds either one genuine all-mode result/request, or
 separate forward and pair result/request files, all using path/bytes/sha256.
 The forward may be a native committed readout with its historical request;
 its historical producer and readout consumer identities remain distinct.
+Source-local pairs bind the native material result and immutable owner instead
+of a legacy request; the original context-pair publication remains authoritative.
 Both split originals are preserved in input_bindings, never rewritten as a
 combined producer receipt. No complete actual material set exists at
 implementation; this CLI is not evidence that such a set has been produced.
@@ -41,12 +43,16 @@ LIMITS = [
 
 def sources():
     paths = [HERE/name for name in ('joint-spatial-readout-registration.json',
-        'joint_spatial_receipts.py', 'joint_spatial_provenance.py',
+        'joint_spatial_receipts.py', 'joint_spatial_provenance.py', 'joint_spatial_source_local.py',
         'joint_spatial_receipt_oracle.py', 'joint_spatial_committed_oracle.py',
+        'joint_spatial_source_local_oracle.py',
+        'joint_spatial_dual_coherent.py',
+        'run_source_local_q_oracle.py', 'run_joint_response_oracle.py', 'run_joint_partitioned_q_oracle.py',
         'run_joint_spatial_readout.py', 'run_joint_spatial_readout_oracle.py')]
     paths += [ROOT/'src/substrate_framework'/name for name in (
         'joint_spatial_readout.py', 'spatial_readout_metrics.py', 'joint_response_observables.py',
-        'material_control_reference.py', 'streamed_material_state.py', 'qe_saved_native.py')]
+        'material_control_reference.py', 'streamed_material_state.py', 'qe_saved_native.py',
+        'partitioned_joint_slots.py')]
     return [file_binding(path) for path in paths]
 
 
@@ -93,7 +99,7 @@ def main():
         second_time_ry_inverse=common['second_times'][-1],
         time_grid_ry_inverse=common['times'], second_time_grid_ry_inverse=common['second_times'],
         coherent_kick=dict(amplitude_canonical_momentum=common['amplitude'],
-                           atom_one_based=common['atom'], axis=common['axis'], cell=common['cell']),
+                           atom_one_based=common['seed_atom'], axis=common['seed_axis'], cell=common['cell']),
         geometry=data['geometry'], q_fractional=data['q'], readout=readout,
         normalization=dict(coherent='sum exp(+2pi i q.R)*Fq/sqrt(N); seed phase/amplitude already included',
             connected='sum exp(+2pi i q.(R-Rref))*Cq/N; AB/BA already opposite-q paired; no extra dagger'),

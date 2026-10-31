@@ -18,6 +18,7 @@ from .source_local_q_state import (small_state, encode_small, decode_small,
     combine_small, next_coefficients, edge_state, terminal_edge, replay_interval)
 from .streamed_joint_response import NAMES
 from .streamed_material_state import authenticate, file_binding
+from .source_local_q_edge import dual_moments
 
 
 def pullback_grid(times):
@@ -101,10 +102,8 @@ class SourceLocalQResponse:
     def _moments(self, probe, times, completed, current, stage, small, index):
         pair = self._input(probe, times, completed, current, stage, index)
         time = rk4_stage_times(current['time'], current['dt'], True)[stage]
-        values = self.executor.independent_edge(index, time, edge_state(index, pair, small), True)
-        # The existing physical operation is intentionally reused literally.
-        # Its local free ket/bra are temporary; only global moments reach disk.
-        return {name: values[name] for name in ('n', 'g', 'ell')}
+        return dual_moments(
+            self.executor, index, time, edge_state(index, pair, small))
 
 
     def pullback(self, probe, times):

@@ -5,7 +5,7 @@ import json
 from .partitioned_q_storage import durable_publish
 from .source_local_q_response import (SourceLocalQResponse, pullback_grid,
                                       prepare_pullback_frames)
-from .streamed_joint_covariance import initial_contraction
+from .source_local_q_contraction import source_contraction
 from .streamed_material_state import file_binding
 
 
@@ -39,7 +39,8 @@ class SourceLocalTwoSidedCovariance:
                 state = (response.pullback(probe, grid) if binding is None
                          else response.restore(probe, grid, binding))
                 states.append(state)
-            result = initial_contraction(self.preparation, *states)
+            result = source_contraction(self.preparation, *states, self.executor,
+                                        directory/'contraction-work')
             result.update(time=float(times[-1]), second_time=float(second_times[-1]),
                 dynamics=self.executor.dynamics, propagation_identity=self.executor.identity,
                 execution_scheme='source-local-discrete-rk4-v1',
