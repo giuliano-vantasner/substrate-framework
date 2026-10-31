@@ -32,7 +32,7 @@ def checked_groups(entries, actions, expected_count):
 
 
 def run(source, plan):
-    moments = checked_groups(source['current_moments'], 0, 25)
+    moments = checked_groups(source['current_moments'], 0, len(source['current_moments']))
     transitions = checked_groups(source['completed_stage2_transitions'], 7, 128)
     cpus = list(range(6, 11))
     totals = schedule.assigned(128, len(cpus))
@@ -78,7 +78,7 @@ def run(source, plan):
     return dict(schema='P254-actual-final-stage-completion-scenarios-v1',
         status='actual-cost-scenarios-exercised-not-runtime-guarantee',
         anchor_utc=source['snapshot_utc'], original_deadline_utc=schedule.timestamp(deadline),
-        observed_final_stage_moment_sources='25/128',
+        observed_final_stage_moment_sources=str(len(source['current_moments']))+'/128',
         observed_previous_seven_action_transition_sources='128/128',
         total_cyclic_assignment=totals,
         favorable_remaining_moment_assignment_ignoring_one_inflight_per_worker=remaining,
